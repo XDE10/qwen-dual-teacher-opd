@@ -2,7 +2,19 @@
 
 所有命令从**项目根目录**执行。默认 `python` 是 Python 3.8，**不可用**；请用 `D:/anaconda3/envs/genai-test/python.exe`（Python 3.12），或先 `conda activate genai-test` 再使用 `python`。
 
-本目录共 **28 个文件**（27 个 `.py` + `colab_bootstrap.sh`），按职责分 6 组。标注「不能直接重跑」的脚本依赖本次重排已删除的原始采集/基准数据，只作**方法与历史记录参考**；删除明细见 [docs/migration/deletion_ledger.json](../docs/migration/deletion_ledger.json)。
+本目录共 **35 个文件**（33 个 `.py` + 2 个 `.sh`），按职责分 7 组；第 0 组是 2026-11-08 新增的 opd-v3 / v5 数据 / 评测 v3 入口。标注「不能直接重跑」的脚本依赖本次重排已删除的原始采集/基准数据，只作**方法与历史记录参考**；删除明细见 [docs/migration/deletion_ledger.json](../docs/migration/deletion_ledger.json)。
+
+## 0. opd-v3 / v5 数据 / 评测 v3（7，当前）
+
+| 文件 | 说明 |
+| --- | --- |
+| `train_project2_opd_v3.py` | opd-v3 训练入口（MOPD 式混合批次双教师）；配置 `configs/project2_opd_v3_*.json`；设计见 `docs/opd_v3_mopd.md` |
+| `generate_eval_v3.py` | 评测协议 v3：vLLM（`--engine hf` 回退）greedy 生成；数学同时用 Math-Verify 和保守判分器评分；代码只写 `*.candidates.jsonl` 交本地 Docker；`--self-check` 测判分器覆盖率 |
+| `restore_official_benchmarks.py` | 从 EvalPlus 官方 release 恢复 HumanEval+ v0.1.10 / MBPP+ v0.2.0，按 `inventory_before_reorg.json` 的 sha256 校验后才写入 |
+| `build_project2_release_v5.py` | 生成 v5 **候选**：重查 prompt 预算、decontamination_v5、去掉重合行、从封存池按同 level 补数学；不批准任何东西 |
+| `approve_project2_release_v5.py` | **仅负责人执行**：绑定候选与审计报告的摘要，生成 `release/`（保留行逐字节不变，永不覆盖） |
+| `prefetch_models_v3.py` | 每个 Colab 会话先按配置下载固定 revision 的学生/教师权重 |
+| `colab_bootstrap_v3.sh` | A100 / G4（sm_120）环境引导：cu128 torch 2.8.0、架构检查、恢复基准、跑 CPU 测试；可选装 vLLM |
 
 ## 1. 训练入口（2）
 

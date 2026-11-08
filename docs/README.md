@@ -9,6 +9,7 @@
 | [plan/](plan/README.md) | 3 篇 2026-10 冻结的项目二历史文档：详细实施方案、OPD 提示词与张量接口契约、共用规范；`plan/sources/` 为上游参考源码快照 | **历史**：内部链接与路径指向重排前目录，可能失效 |
 | [handover/v2/](handover/v2/README.md) | 2026-10-24 v2 本地修订与 Colab 交接记录：CHANGELOG、测试/环境日志、`before/` 实现快照、交付哈希、去重记录 | **历史交付**：不代表 GPU 验收或正式训练完成 |
 | [migration/](migration/reorg_20261108.md) | 2026-11-08 重排说明、迁移清单、`path_mapping.json`、重排前快照 `inventory_before_reorg.json`、退役工具 `legacy_tools/`、删除台账 `deletion_ledger.json` | **当前有效**：查旧路径、旧文件、删除范围先看这里 |
+| [opd_v3_mopd.md](opd_v3_mopd.md) | opd-v3 设计：与 MOPD 的对应、单步流水线、损失与归一化、A100/G4 显存规划、1.5B vs 3B、实验配置矩阵、运行顺序 | **当前有效**（代码 CPU 测试通过，GPU 未验证） |
 
 ## 推荐阅读顺序
 

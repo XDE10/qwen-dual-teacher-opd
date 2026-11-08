@@ -12,7 +12,9 @@
 
 ## 1. 项目范围与身份
 
-- 项目二 = **数学与代码双教师 token-level 在线策略蒸馏（OPD）**：学生在线生成，冻结的领域教师对**同一 token 轨迹**给出分布，学生按 response-token reverse KL 更新；教师按领域分时加载，不是两教师同时驻留、熵融合或多卡实现。
+- 项目二 = **数学与代码双教师 token-level 在线策略蒸馏（OPD）**：学生在线生成，冻结的领域教师对**同一 token 轨迹**给出分布，学生按 response-token reverse KL 更新。不做熵融合，不做多卡。
+  - opd-v2（历史实现，保持不变）：教师按领域分时加载，每个 step 只含一个领域。
+  - **opd-v3（当前，2026-11-08 设计变更）**：参照 MOPD，每个 step 混合两个领域并按领域路由；80/96 GB 卡上两位教师常驻显存，小显存卡用 `cpu_swap`。设计见 [docs/opd_v3_mopd.md](docs/opd_v3_mopd.md)。
 - 固定身份（禁止混用）：
   - 学生 `Qwen/Qwen2.5-1.5B-Instruct` @ `989aa7980e4cf806f80c7fef2b1adb7bc71aa306`
   - 数学教师 `Qwen/Qwen2.5-Math-7B-Instruct` @ `ef9926d75ab1d54532f6a30dd5e760355eb9aa4d`
@@ -27,21 +29,24 @@
 - **GPU 未验收**。真实 Qwen 前向、完整 logits 显存、词表外概率质量、教师切换、checkpoint 恢复都不能称为已验证；历史 CPU 测试与 2 步 smoke 不代表正式训练成功。
 - **数据逐行批准**。范围只认 manifest 的 `approved_training_files` / `approved_evaluation_files` 与逐行 `training_approved`；候选 ≠ 批准，AI 审核 ≠ 人工金标。dev 不得进训练。
 - **不得手改批准字段或哈希**来绕过检查。新数据版本必须独立取证、保留旧发布；不能用批量重算 SHA 的方式"修好"检查。
-- **代码评测必须走 Docker 沙箱**，数据集代码不在宿主执行；无可用 Docker 时停止并报告，不得回退宿主子进程。
+- **代码评测必须走 Docker 沙箱**，数据集代码不在宿主执行；无可用 Docker 时停止并报告，不得回退宿主子进程。Colab 没有 Docker：GPU 端只生成候选 JSONL（`scripts/generate_eval_v3.py`），由本地 Docker 执行。
+- **v5 数据只能由项目负责人批准**：`scripts/build_project2_release_v5.py` 只生成候选，`scripts/approve_project2_release_v5.py --approver <姓名>` 是有记录的负责人决定。AI 协作者不得替负责人运行批准命令，也不得手改候选中的 `training_approved`。
+- **数学主口径用 Math-Verify，同时报保守判分器**：保守判分器对 MATH-500 参考答案自判只认 389/500，不能单独作为主分数。
+- 新增/修改 opd-v3 配置时，必须保持 `tests/test_opd_v3.py::test_experiment_configs_validate_and_differ_only_in_declared_factors` 通过：对照组之间只允许出现声明过的差异。
 - 代码能力看实际源码，状态看 README 与版本化报告；报告必须区分「已实现」「CPU 通过」「真实模型跑通」「能力提升」，未运行的检查保持未验证。
 
 ## 3. 目录职责
 
 | 目录 | 职责 |
 | --- | --- |
-| `configs/` | 5 个执行配置：v1 基线、v4 smoke/math_short/code_short、提示词契约；命令从项目根执行 |
+| `configs/` | v1 基线、v4 smoke/math_short/code_short、提示词契约，以及 9 个 opd-v3 配置（`project2_opd_v3_*.json`）；命令从项目根执行 |
 | `src/data/` | 批准输入加载、哈希/白名单、代码沙箱、数据工程实现 |
 | `src/teachers/` | 学生提示渲染与"原样 token IDs 直传教师"契约、词表审计 |
 | `src/losses/` | 共同支持上的 reverse KL 数值参考与分块实现 |
 | `src/training/` | OPD v2 训练循环、采样、运行时/checkpoint、v1 历史实现 |
 | `src/evaluation/` | 数学验证器、代码比较器/注册表、EvalPlus 接入 |
 | `scripts/` | 训练/评测/数据工程入口 + `colab_bootstrap.sh`（Linux/CUDA 引导，未验证） |
-| `tests/` | 项目二测试（19 个文件）；`python -m pytest -q` |
+| `tests/` | 项目二测试（22 个文件）；`python -m pytest -q` |
 | `tools/` | `verify_code_repair_v4.py`（v4 发布离线验收）、`verify_repository.py`（仓库级布局/映射/镜像校验） |
 | `data/` | 当前 v4 发布、历史 `portable_release`、tokenizer 快照、数学源池/评测集；说明见 [data/README.md](data/README.md) |
 | `reports/` | v4 验收证据、v3 审核记录、当前审核 json/md；说明见 [reports/README.md](reports/README.md) |
@@ -74,6 +79,9 @@ D:/anaconda3/envs/genai-test/python.exe tools/verify_code_repair_v4.py
 
 # 仓库级校验：目标布局、path_mapping、provenance 镜像 sha256（新增）
 D:/anaconda3/envs/genai-test/python.exe tools/verify_repository.py
+
+# v5 数据候选 / 批准后的 release 校验
+D:/anaconda3/envs/genai-test/python.exe tools/verify_project2_release_v5.py
 
 # 语法检查
 D:/anaconda3/envs/genai-test/python.exe -m compileall -q src scripts tests tools
