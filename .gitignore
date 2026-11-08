@@ -27,6 +27,10 @@ checkpoints/
 *.pt
 *.pth
 
+# Third-party benchmark files restored on demand and sha256-verified by
+# scripts/restore_official_benchmarks.py (pinned in inventory_before_reorg.json)
+data/code_benchmarks/official/*.jsonl
+
 # Local logs and OS/editor noise
 *.log
 !reports/**/*.log
