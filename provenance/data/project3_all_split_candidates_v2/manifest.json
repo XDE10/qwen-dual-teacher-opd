@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "source_split_sizes": {
+      "train": 2101,
+      "validation": 300,
+      "test": 601
+    },
+    "unique_matched_split_sizes": {
+      "train": 2096,
+      "validation": 300,
+      "test": 600
+    },
+    "ambiguous_by_split": {
+      "train": 5,
+      "test": 1
+    },
+    "serialized_preview_without_source_radius_ids": 2989,
+    "training_ready_grounded_targets": 0,
+    "serialized_grounding_states": {
+      "pending_image_grounding": 2988,
+      "isolated": 7,
+      "isolated_direction_convention": 1
+    },
+    "rule": "Internal identities retained solely in audit JSON; stripped from diagnostic text. Unknown center/point labels and concentric circle identities require visible grounding; never collapse all circles.",
+    "training_approved": false,
+    "test_annotations_used_for_training": false,
+    "api_calls": 0
+  },
+  "inputs": {
+    "D:\\Users\\Mr.Z\\Desktop\\modern_genai\\data\\project3_audit\\geometry3k_intergps_links.jsonl": "f738dd5517c4d09071389974362b0fd80cc77e41935b40567460c42e66efa422",
+    "D:\\Users\\Mr.Z\\Desktop\\modern_genai\\data\\project3_audit\\intergps_annotations.jsonl": "d83517c40cfb5e864344b0221dcd1698d118e461b16c587822c0b6ee8c67c00b",
+    "D:\\Users\\Mr.Z\\Desktop\\modern_genai\\src\\data\\project3_perception_v2.py": "51b00daf3d9b1363754863ff9f0425e197eaaba5c54707604c378e7a298d3c86",
+    "D:\\Users\\Mr.Z\\Desktop\\modern_genai\\src\\data\\geometry_model_serialization.py": "a5441167fec81eeb0d7ec4e84366af77b9aeabb223dfa42cb0590c5ec0ce2715",
+    "D:\\Users\\Mr.Z\\Desktop\\modern_genai\\scripts\\build_project3_all_split_candidates.py": "0c013fe5089a6fd00e2924f6b99131dfe8cfa910f6bd8b7fb53cbb0b074362d0"
+  },
+  "files": {
+    "ambiguous_links.jsonl": "e6568130d3198aaa400e06695cbc83bc033e0cd8c4e3d344858637c4655e9a0c",
+    "test.jsonl": "69977237cf90cc12ae62b12fcbdd444fb3d31d6dd9b566017dfee13a1ae96b5c",
+    "train.jsonl": "42405289323498eac45f99d2c323f165647f7f42f0f5e2728ac8009e4e0286a6",
+    "validation.jsonl": "be94b7d64de528091c6db43ea7916d9c9f657bff78f423acca2d7975a0dd2549"
+  }
+}

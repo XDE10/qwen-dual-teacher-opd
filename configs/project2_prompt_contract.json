@@ -1,0 +1,21 @@
+{
+  "version": "project2-prompt-v2-20261023",
+  "student_model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "tokenizer_audit": "reports/tokenizer_alignment_report.json",
+  "render_owner": "student",
+  "teacher_input": "student full input_ids and attention_mask; no teacher templating or re-encoding",
+  "math_system": "Please reason step by step, and put your final answer within \\boxed{}.",
+  "code_system": null,
+  "code_system_policy": "Preserve the audited student default template; do not change sealed code-v2 prompts.",
+  "context_limit": 4096,
+  "math_max_new_tokens": 1024,
+  "code_max_new_tokens": 1536,
+  "temperature": 1.0,
+  "common_support": "Read contiguous effective IDs from the pinned tokenizer audit, never min(head sizes).",
+  "eos_policy": "Use student rollout EOS once; do not append, remove or replace EOS for teacher scoring.",
+  "loss_policy": "Response target mask including generated EOS; logits at t-1 predict token t; padding and prompt targets excluded.",
+  "generation_policy": "Mask output rows outside audited common support before sampling.",
+  "kl_policy": "Independently FP32 log_softmax on audited common support, then reverse KL on response prediction positions.",
+  "evaluation_policy": "All D0/student/teacher math comparisons use this version; historical different-prompt scores require a new baseline. No test-driven prompt selection.",
+  "status": "CPU contract; GPU rollout, forward and quality acceptance pending"
+}

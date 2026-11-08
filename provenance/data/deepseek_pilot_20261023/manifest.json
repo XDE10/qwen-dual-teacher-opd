@@ -1,0 +1,36 @@
+{
+  "files": {
+    "anchors.json": "34c270d595ef972ac24bde8bb51361e52ce703a622a49cc88e6aa1f49b1390a6",
+    "blind_requests.json": "97fa8d472650a05da5d7aad95b59e2bee3db4b64be9feb78e64e957bc7e35ec0",
+    "calibration_dev.json": "eb970a3135d1f7300c4f31564780ace7269bf9eacd888df770f297c277f91afa",
+    "frozen_acceptance.json": "7a2a1cf3d2a8b3af6f1a0ca3136aea4f246dc1eb757b7c3dbbab751e93b49956",
+    "policy.json": "dc5d37af85768d34ac0b624d53bd0de2c93acc2110cb6bfd8ec34749c15b52d2",
+    "verifier_references.json": "275a447b14a90aca0cd0e5918def4e922d653ddb8bc2d6b71b23458491ccbdd6"
+  },
+  "input_hashes": {
+    "reports\\project1_sft_v2_plan_20261023\\coverage_proposal.json": "4f7d9e466105594e8c1207f2e0df01ded25c565afbaeaf7d31ea6f5a014207e2",
+    "data\\math\\math_train.jsonl": "abde8c70f51190e1731084b720a19b8e0155f0aa2106a32175dc6270d513a3ea",
+    "data\\math\\math_dev.jsonl": "b5b3c90eeea953ae954cc2aa652caff4bd9c6edcb95f1b896215b84772225023",
+    "data\\project1_sft\\sft_train.jsonl": "3163633d56893aaed4278c538229be6cc7553909146ca367bf0521d08fd6edf5"
+  },
+  "split_counts": {
+    "anchors": 35,
+    "calibration_dev": 50,
+    "frozen_acceptance": 50
+  },
+  "pilot_types": {
+    "Algebra": 15,
+    "Number Theory": 10,
+    "Geometry": 10,
+    "Combinatorics": 8,
+    "Inequalities": 5,
+    "Logic and Puzzles": 2
+  },
+  "pilot_length_bins": {
+    "2201-3000": 17,
+    "500-1600": 14,
+    "1601-2200": 19
+  },
+  "scope": "all API problem inputs from train only; dev/test files used only for existing frozen exclusion evidence",
+  "excluded_unknown_level_rows": 2
+}

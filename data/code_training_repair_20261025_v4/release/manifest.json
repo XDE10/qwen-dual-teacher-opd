@@ -1,0 +1,49 @@
+{
+  "version": "project2-code-training-repair-v4-20261025",
+  "project": 2,
+  "summary": {
+    "project2_math_train": 2500,
+    "project2_math_dev": 256,
+    "project2_code_train": {
+      "function": 1250,
+      "stdin_stdout": 1250
+    },
+    "project2_code_dev": {
+      "function": 100,
+      "stdin_stdout": 100
+    },
+    "replaced_rows": 1,
+    "models_trained": 0,
+    "approval": "Historical delegated AI pass plus current evidence-gated local admission; not human gold"
+  },
+  "approved_training_files": [
+    "project2_math_train.jsonl",
+    "project2_code_train.jsonl"
+  ],
+  "approved_evaluation_files": [
+    "project2_math_dev.jsonl",
+    "project2_code_dev.jsonl"
+  ],
+  "protected_dev_ids_file": "reserved_dev_ids_never_train.json",
+  "files": {
+    "project2_code_dev.jsonl": "c7e111eade71c4482680cb21e89bf3164e6b01fdbd20895ff295ac11f449813f",
+    "project2_code_train.jsonl": "8f9efee32997d8e96d2a93a4de434f95fbbc0f2b7e89e3fa12550cd533c9c45d",
+    "project2_math_dev.jsonl": "a438e79e46893921ec3c14b96deaf2174668902bd0cc234a0345bd51c8c3903c",
+    "project2_math_train.jsonl": "ca9cc409fcd2d43638395431c2fab93f931cfa2969e273174063de9e83316fd4",
+    "reserved_dev_ids_never_train.json": "9faacae140d755542d33fc2da126eb55aed67e9469371164c8896c25bd18af3e"
+  },
+  "inputs": {
+    "data/portable_release/manifest.json": "d76fba24e09244e5f4d02b83a8b60342c466483362c7e08716a5c1836a7ecdd6",
+    "reports/code_training_repair_20261025_v4/admission_decision.json": "cae355de245c3bf407feac048d220b23e6e246a4c50f538cc85d3e2d91d24d45",
+    "reports/handover_20261024_v3/training_exclusions.json": "a6049916a2c758a5587e1061774bd8ea22d5680df1d946027403fba3093bf2cd"
+  },
+  "replacement": {
+    "removed": "code/vfc_121257",
+    "added": "code/vfc_96076",
+    "slot_index_zero_based": 2451,
+    "old_row_survives_in_original_release": true,
+    "other_code_rows_byte_identical": 2499,
+    "evaluation_and_math_files_byte_identical": true
+  },
+  "approval_scope": "Only the listed files/rows. Surplus candidates remain unapproved. No old release, flags or SHA modified."
+}

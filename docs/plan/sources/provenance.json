@@ -1,0 +1,23 @@
+{
+  "retrieved_date": "2026-10-19",
+  "main_sha_at_lookup": null,
+  "note": "Files downloaded from main immediately before commit lookup; hashes record exact bytes; not a pinned runtime environment.",
+  "files": [
+    {
+      "path": "examples__on_policy_distillation_trainer__run_qwen3_8b_mopd_fsdp.sh",
+      "sha256": "b2b0b27f544f1da080bbba69f5cf6d60cd2a1631982e70246f4186307eec2065"
+    },
+    {
+      "path": "verl__experimental__teacher_loop__teacher_manager.py",
+      "sha256": "38164047c772aed920b84449827b77a1e3edd7f3966f869c64893fbfed8bd840"
+    },
+    {
+      "path": "verl__trainer__config__distillation__distillation.yaml",
+      "sha256": "dbb75f2bc215fab502be64d5704bd7cc71e44f3365cb038dace498d9b5977a55"
+    },
+    {
+      "path": "verl__workers__config__distillation.py",
+      "sha256": "d16a900bb32d52774f00e008ce1f50f385e514ca00bea9a0629f8968f076402b"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "version": "code-v3-fresh-dev-completed",
+  "parent_manifest_sha256": "f5c8fc2b3a3b4fb795b7345ff5ea9ef475a0d0f414f036fc6d53d05565ccb820",
+  "fresh_dev_ids": [
+    "ace/oss_117",
+    "ace/oss_5950",
+    "ace/oss_10109"
+  ],
+  "sandbox": {
+    "image_id": "sha256:3b0c23d092b8ff94262fd3518cf8250c4b1d65c014d6090eea3b23383145201e",
+    "worker_sha256": "d298fc461bc1cabab70cf401823f5c88d00c746f9d0dfa4b223c73c93f9a431f",
+    "command": [
+      "docker",
+      "run",
+      "--rm",
+      "-i",
+      "--network",
+      "none",
+      "--read-only",
+      "--cap-drop",
+      "ALL",
+      "--security-opt",
+      "no-new-privileges",
+      "--pids-limit",
+      "64",
+      "--memory",
+      "512m",
+      "--cpus",
+      "1",
+      "--user",
+      "65534:65534",
+      "--tmpfs",
+      "/tmp:rw,noexec,nosuid,size=64m",
+      "--mount",
+      "type=bind,source=D:\\Users\\Mr.Z\\Desktop\\modern_genai\\scripts\\code_sandbox_worker.py,target=/worker.py,readonly",
+      "--entrypoint",
+      "python",
+      "sha256:3b0c23d092b8ff94262fd3518cf8250c4b1d65c014d6090eea3b23383145201e",
+      "-I",
+      "/worker.py"
+    ],
+    "boundary": "No network, no host secrets/workspace mounts; only read-only worker script mounted; input via stdin; per-child CPU/AS/file/process/time bounds."
+  },
+  "train": 2500,
+  "dev": 200,
+  "training_approved": false,
+  "human_review": "pending",
+  "scripts": {
+    "D:\\Users\\Mr.Z\\Desktop\\modern_genai\\scripts\\resume_code_v3_dev.py": "ec1a87898462fb369134e668f9916843dc4d97bed56313e67b163b6fccb9fd9f"
+  },
+  "files": {
+    "dev_metadata.jsonl": {
+      "path": "data/project2_code_v3_dev_verified/dev_metadata.jsonl",
+      "sha256": "cecab0f14e94fb0155679f3fc1a57418d2e52673456e6c51c5cbdcc2bf68f532"
+    },
+    "dev_verification.jsonl": {
+      "path": "data/project2_code_v3_dev_verified/dev_verification.jsonl",
+      "sha256": "e32ab7adc87307d918108794d199e74acbbebd106d58bf23751e5ff4c52e159c"
+    },
+    "train_prompts.jsonl": {
+      "path": "data/project2_code_v3_dev_verified/train_prompts.jsonl",
+      "sha256": "7baa634313ddbee4ba62d719d9ef8693a65e1da66f7d91f0bbdd64e3a151bfdb"
+    }
+  }
+}

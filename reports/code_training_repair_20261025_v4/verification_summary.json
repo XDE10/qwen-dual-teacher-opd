@@ -1,0 +1,31 @@
+{
+  "version": "code-training-repair-v4-20261025",
+  "code_train": 2500,
+  "interfaces": {
+    "function": 1250,
+    "stdin_stdout": 1250
+  },
+  "math_train": 2500,
+  "dev_counts": {
+    "project2_math_dev.jsonl": 256,
+    "project2_code_dev.jsonl": 200
+  },
+  "removed": "code/vfc_121257",
+  "added": "code/vfc_96076",
+  "changed_slots": [
+    2451
+  ],
+  "other_code_rows_byte_identical": 2499,
+  "protected_files_unchanged": 60,
+  "protected_resolution": {
+    "kept": 8,
+    "relocated": 52
+  },
+  "manifest_inputs_resolution": {
+    "kept": 3
+  },
+  "relocation_map": "docs/migration/path_mapping.json",
+  "old_manifests_or_flags_modified": false,
+  "errors": [],
+  "training_started": false
+}

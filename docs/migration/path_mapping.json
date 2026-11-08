@@ -1,0 +1,635 @@
+{
+ "generated": "2026-11-08",
+ "note": "Pinned evidence relocation map. old path -> new location; sha256 content hashes unchanged.",
+ "entries": [
+  {
+   "original": "data/code_benchmarks/source_manifest.json",
+   "new_location": "provenance/data/code_benchmarks/source_manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "53fda2bd0fb1ba47e9ffbd383091417b3eabead8890de9df72855933d27a5485",
+   "actual_sha256": "53fda2bd0fb1ba47e9ffbd383091417b3eabead8890de9df72855933d27a5485",
+   "bytes": 680,
+   "sha_matches": true
+  },
+  {
+   "original": "data/code_v2_sources/ace_manifest.json",
+   "new_location": "provenance/data/code_v2_sources/ace_manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "a3a0c7606e81b04515cd3fa07c71abd181110badc2ab4dc933e4a53f293a2247",
+   "actual_sha256": "a3a0c7606e81b04515cd3fa07c71abd181110badc2ab4dc933e4a53f293a2247",
+   "bytes": 1478,
+   "sha_matches": true
+  },
+  {
+   "original": "data/code_v2_sources/magicoder_manifest.json",
+   "new_location": "provenance/data/code_v2_sources/magicoder_manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "f81e522f1b768fa47fcbf9b688e949cb54fb1133106e643769ae777bf15c93f6",
+   "actual_sha256": "f81e522f1b768fa47fcbf9b688e949cb54fb1133106e643769ae777bf15c93f6",
+   "bytes": 427,
+   "sha_matches": true
+  },
+  {
+   "original": "data/deepseek_pilot_20261023/manifest.json",
+   "new_location": "provenance/data/deepseek_pilot_20261023/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "6042a78988adb37945af4f2e8389dbc2e56e8d3df27eedd55c9e91bc05927760",
+   "actual_sha256": "6042a78988adb37945af4f2e8389dbc2e56e8d3df27eedd55c9e91bc05927760",
+   "bytes": 1605,
+   "sha_matches": true
+  },
+  {
+   "original": "data/delegated_ai_releases_20261024/manifest.json",
+   "new_location": "provenance/data/delegated_ai_releases_20261024/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "742a0a7066c8bce9a34d8fedb0d7531462fbf4ae7997367d305bfd253d493ae1",
+   "actual_sha256": "742a0a7066c8bce9a34d8fedb0d7531462fbf4ae7997367d305bfd253d493ae1",
+   "bytes": 3882,
+   "sha_matches": true
+  },
+  {
+   "original": "data/finalfill_v7_20261024/project1/manifest.json",
+   "new_location": "provenance/data/finalfill_v7_20261024/project1/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "17d4cfac78b1cc2c3241185a2beb462b29eb49088946b7b1f6ed73c765c6f9d6",
+   "actual_sha256": "17d4cfac78b1cc2c3241185a2beb462b29eb49088946b7b1f6ed73c765c6f9d6",
+   "bytes": 2284,
+   "sha_matches": true
+  },
+  {
+   "original": "data/finalfill_v7_20261024/project3/manifest.json",
+   "new_location": "provenance/data/finalfill_v7_20261024/project3/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "862aec4735889a96c0e6856f9ccafa978f6c732854c13f2ff8870b891d33a5dd",
+   "actual_sha256": "862aec4735889a96c0e6856f9ccafa978f6c732854c13f2ff8870b891d33a5dd",
+   "bytes": 376,
+   "sha_matches": true
+  },
+  {
+   "original": "data/math_manifest.json",
+   "new_location": "data/math_manifest.json",
+   "status": "kept",
+   "expected_sha256": "0416b28f855a4ab4568daeec01c433df6ae085e1580a766299b1507d69aa5bda",
+   "actual_sha256": "0416b28f855a4ab4568daeec01c433df6ae085e1580a766299b1507d69aa5bda",
+   "bytes": 3690,
+   "sha_matches": true
+  },
+  {
+   "original": "data/portable_release/manifest.json",
+   "new_location": "data/portable_release/manifest.json",
+   "status": "kept",
+   "expected_sha256": "d76fba24e09244e5f4d02b83a8b60342c466483362c7e08716a5c1836a7ecdd6",
+   "actual_sha256": "d76fba24e09244e5f4d02b83a8b60342c466483362c7e08716a5c1836a7ecdd6",
+   "bytes": 5230,
+   "sha_matches": true
+  },
+  {
+   "original": "data/portable_release/project2_code_dev.jsonl",
+   "new_location": "data/portable_release/project2_code_dev.jsonl",
+   "status": "kept",
+   "expected_sha256": "c7e111eade71c4482680cb21e89bf3164e6b01fdbd20895ff295ac11f449813f",
+   "actual_sha256": "c7e111eade71c4482680cb21e89bf3164e6b01fdbd20895ff295ac11f449813f",
+   "bytes": 1818808,
+   "sha_matches": true
+  },
+  {
+   "original": "data/portable_release/project2_code_train.jsonl",
+   "new_location": "data/portable_release/project2_code_train.jsonl",
+   "status": "kept",
+   "expected_sha256": "b031963ff91f6c5410171f8d4e9e8a6ce633b844c35fcf9b08441d04883f707b",
+   "actual_sha256": "b031963ff91f6c5410171f8d4e9e8a6ce633b844c35fcf9b08441d04883f707b",
+   "bytes": 9671112,
+   "sha_matches": true
+  },
+  {
+   "original": "data/portable_release/project2_math_dev.jsonl",
+   "new_location": "data/portable_release/project2_math_dev.jsonl",
+   "status": "kept",
+   "expected_sha256": "a438e79e46893921ec3c14b96deaf2174668902bd0cc234a0345bd51c8c3903c",
+   "actual_sha256": "a438e79e46893921ec3c14b96deaf2174668902bd0cc234a0345bd51c8c3903c",
+   "bytes": 470892,
+   "sha_matches": true
+  },
+  {
+   "original": "data/portable_release/project2_math_train.jsonl",
+   "new_location": "data/portable_release/project2_math_train.jsonl",
+   "status": "kept",
+   "expected_sha256": "ca9cc409fcd2d43638395431c2fab93f931cfa2969e273174063de9e83316fd4",
+   "actual_sha256": "ca9cc409fcd2d43638395431c2fab93f931cfa2969e273174063de9e83316fd4",
+   "bytes": 2191121,
+   "sha_matches": true
+  },
+  {
+   "original": "data/portable_release/reserved_dev_ids_never_train.json",
+   "new_location": "data/portable_release/reserved_dev_ids_never_train.json",
+   "status": "kept",
+   "expected_sha256": "9faacae140d755542d33fc2da126eb55aed67e9469371164c8896c25bd18af3e",
+   "actual_sha256": "9faacae140d755542d33fc2da126eb55aed67e9469371164c8896c25bd18af3e",
+   "bytes": 33925,
+   "sha_matches": true
+  },
+  {
+   "original": "data/project1_native_v5/manifest.json",
+   "new_location": "provenance/data/project1_native_v5/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "466e56d33e76d9aa619a96c494bbcbaaef4570c5a0917b323e0a81592a115d26",
+   "actual_sha256": "466e56d33e76d9aa619a96c494bbcbaaef4570c5a0917b323e0a81592a115d26",
+   "bytes": 1575,
+   "sha_matches": true
+  },
+  {
+   "original": "data/project2_ai_review_20261024/manifest.json",
+   "new_location": "provenance/data/project2_ai_review_20261024/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "fb3a9881a5483285f8a137fecac781491ded9aad3579516eb4415f91fafa6a42",
+   "actual_sha256": "fb3a9881a5483285f8a137fecac781491ded9aad3579516eb4415f91fafa6a42",
+   "bytes": 3099,
+   "sha_matches": true
+  },
+  {
+   "original": "data/project2_code/manifest.json",
+   "new_location": "provenance/data/project2_code/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "988a8a2844d17087d34800a6d33b6733b158952d590ae6e8eecaaae8055812a0",
+   "actual_sha256": "988a8a2844d17087d34800a6d33b6733b158952d590ae6e8eecaaae8055812a0",
+   "bytes": 4252,
+   "sha_matches": true
+  },
+  {
+   "original": "data/project2_code_v2/manifest.json",
+   "new_location": "provenance/data/project2_code_v2/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "7d8a857f05292fc26c0ef8348ec27bd5e826d0aed4ec3cd14d95e886c8c953a2",
+   "actual_sha256": "7d8a857f05292fc26c0ef8348ec27bd5e826d0aed4ec3cd14d95e886c8c953a2",
+   "bytes": 9399,
+   "sha_matches": true
+  },
+  {
+   "original": "data/project2_code_v3/manifest.json",
+   "new_location": "provenance/data/project2_code_v3/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "f5c8fc2b3a3b4fb795b7345ff5ea9ef475a0d0f414f036fc6d53d05565ccb820",
+   "actual_sha256": "f5c8fc2b3a3b4fb795b7345ff5ea9ef475a0d0f414f036fc6d53d05565ccb820",
+   "bytes": 6332,
+   "sha_matches": true
+  },
+  {
+   "original": "data/project2_code_v3_dev_verified/manifest.json",
+   "new_location": "provenance/data/project2_code_v3_dev_verified/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "9d5153a5d3f1e736fdf075f6e87cd2146a3e88945276c0951fe6f5ecbbcdce1a",
+   "actual_sha256": "9d5153a5d3f1e736fdf075f6e87cd2146a3e88945276c0951fe6f5ecbbcdce1a",
+   "bytes": 2198,
+   "sha_matches": true
+  },
+  {
+   "original": "data/project3_all_split_candidates_v2/manifest.json",
+   "new_location": "provenance/data/project3_all_split_candidates_v2/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "e529f44060f0350c494c5dab44ea279221f539772b7cceeddfcce18d99981422",
+   "actual_sha256": "e529f44060f0350c494c5dab44ea279221f539772b7cceeddfcce18d99981422",
+   "bytes": 2099,
+   "sha_matches": true
+  },
+  {
+   "original": "data/project3_audit/geometry3k_intergps_links.jsonl",
+   "new_location": null,
+   "status": "missing_before_reorg",
+   "expected_sha256": "f738dd5517c4d09071389974362b0fd80cc77e41935b40567460c42e66efa422",
+   "actual_sha256": null,
+   "bytes": null
+  },
+  {
+   "original": "data/screening_sources/code_function_rows.manifest.json",
+   "new_location": "provenance/data/screening_sources/code_function_rows.manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "ff22e201b7487156d7a9dc849c9d6053f10fa61c1f778b6f3265f27fc9d8ce5e",
+   "actual_sha256": "ff22e201b7487156d7a9dc849c9d6053f10fa61c1f778b6f3265f27fc9d8ce5e",
+   "bytes": 296,
+   "sha_matches": true
+  },
+  {
+   "original": "data/strict_v8_20261024/geometry/summary.json",
+   "new_location": "provenance/data/strict_v8_20261024/geometry/summary.json",
+   "status": "mirrored",
+   "expected_sha256": "622010f01ef209b166934142bfb814fc04c7dac6294007d828716e00e358a290",
+   "actual_sha256": "622010f01ef209b166934142bfb814fc04c7dac6294007d828716e00e358a290",
+   "bytes": 1527,
+   "sha_matches": true
+  },
+  {
+   "original": "data/strict_v8_20261024/inequalities/manifest.json",
+   "new_location": "provenance/data/strict_v8_20261024/inequalities/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "12c7b0706cb278f90e8a5de2b1b7311f936948e98bba6c484c1981a7ddc1b1f9",
+   "actual_sha256": "12c7b0706cb278f90e8a5de2b1b7311f936948e98bba6c484c1981a7ddc1b1f9",
+   "bytes": 721,
+   "sha_matches": true
+  },
+  {
+   "original": "data/strict_v8_20261024/inequalities/timeout_recovery_manifest.json",
+   "new_location": "provenance/data/strict_v8_20261024/inequalities/timeout_recovery_manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "77d8782f7cf24aa3960b0b53643d2f400f7d1fc6d73a757176446fb6b8622091",
+   "actual_sha256": "77d8782f7cf24aa3960b0b53643d2f400f7d1fc6d73a757176446fb6b8622091",
+   "bytes": 261,
+   "sha_matches": true
+  },
+  {
+   "original": "data/strict_v8_20261024/other_type_reserves/manifest.json",
+   "new_location": "provenance/data/strict_v8_20261024/other_type_reserves/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "de373d1a3bccc739c1c53370cbb1d78f0ac8e40b9bfc3cdb23c157d61ad47551",
+   "actual_sha256": "de373d1a3bccc739c1c53370cbb1d78f0ac8e40b9bfc3cdb23c157d61ad47551",
+   "bytes": 426,
+   "sha_matches": true
+  },
+  {
+   "original": "data/strict_v8_20261024/release/manifest.json",
+   "new_location": "provenance/data/strict_v8_20261024/release/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "d9f42f6ead10b1ba22977c37de69e158ee1ec92494d2cc2c737425e081b4468c",
+   "actual_sha256": "d9f42f6ead10b1ba22977c37de69e158ee1ec92494d2cc2c737425e081b4468c",
+   "bytes": 3617,
+   "sha_matches": true
+  },
+  {
+   "original": "data/strict_v8_20261024/training_configs/manifest.json",
+   "new_location": "provenance/data/strict_v8_20261024/training_configs/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "3e2b566e1f54dae5bf5df647f2cde95a5a673c0bf06c4412d3d21d971417e5ba",
+   "actual_sha256": "3e2b566e1f54dae5bf5df647f2cde95a5a673c0bf06c4412d3d21d971417e5ba",
+   "bytes": 1113,
+   "sha_matches": true
+  },
+  {
+   "original": "data/topup_v6_20261024/project1/manifest.json",
+   "new_location": "provenance/data/topup_v6_20261024/project1/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "534cbc220f82b3fc6abe0285d4e10e839db99f6be9ab9e85faebfd7700b47690",
+   "actual_sha256": "534cbc220f82b3fc6abe0285d4e10e839db99f6be9ab9e85faebfd7700b47690",
+   "bytes": 2407,
+   "sha_matches": true
+  },
+  {
+   "original": "data/topup_v6_20261024/project1_supplement/manifest.json",
+   "new_location": "provenance/data/topup_v6_20261024/project1_supplement/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "0bb3d0566363b74761a622710893026735256e5ca6af2ef7641a426779755c00",
+   "actual_sha256": "0bb3d0566363b74761a622710893026735256e5ca6af2ef7641a426779755c00",
+   "bytes": 485,
+   "sha_matches": true
+  },
+  {
+   "original": "data/topup_v6_20261024/project2/manifest.json",
+   "new_location": "provenance/data/topup_v6_20261024/project2/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "3f8e885e54ce8567cffbd121a447fa4356651a86bb9c3f987b021a5c7705168c",
+   "actual_sha256": "3f8e885e54ce8567cffbd121a447fa4356651a86bb9c3f987b021a5c7705168c",
+   "bytes": 1127,
+   "sha_matches": true
+  },
+  {
+   "original": "data/topup_v6_20261024/project2_dev_reserve/manifest.json",
+   "new_location": "provenance/data/topup_v6_20261024/project2_dev_reserve/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "7f44f4e042c0fec54d1e295411961b4f308fff7043410589e8cc8bdbad8f9434",
+   "actual_sha256": "7f44f4e042c0fec54d1e295411961b4f308fff7043410589e8cc8bdbad8f9434",
+   "bytes": 429,
+   "sha_matches": true
+  },
+  {
+   "original": "data/topup_v6_20261024/project2_train_reserve/manifest.json",
+   "new_location": "provenance/data/topup_v6_20261024/project2_train_reserve/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "00ba22b86600ad55262c38b4006d1b86ae32b06d37d1dd73eb1928561730dca3",
+   "actual_sha256": "00ba22b86600ad55262c38b4006d1b86ae32b06d37d1dd73eb1928561730dca3",
+   "bytes": 271,
+   "sha_matches": true
+  },
+  {
+   "original": "data/topup_v6_20261024/project3/manifest.json",
+   "new_location": "provenance/data/topup_v6_20261024/project3/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "190698f708f7a0775734bbecc3b35ef5a1cfacd2a88117af086e1edf362b8d1d",
+   "actual_sha256": "190698f708f7a0775734bbecc3b35ef5a1cfacd2a88117af086e1edf362b8d1d",
+   "bytes": 297,
+   "sha_matches": true
+  },
+  {
+   "original": "data/topup_v6_20261024/project3_reserve/manifest.json",
+   "new_location": "provenance/data/topup_v6_20261024/project3_reserve/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "eccc9d429b479272c07c4d19c559f8712afc675a83e0edb2918f8810cfcedd75",
+   "actual_sha256": "eccc9d429b479272c07c4d19c559f8712afc675a83e0edb2918f8810cfcedd75",
+   "bytes": 297,
+   "sha_matches": true
+  },
+  {
+   "original": "data/topup_v6_20261024/release/manifest.json",
+   "new_location": "provenance/data/topup_v6_20261024/release/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "cc313be006e90cbb93c3cc7457fd3701466008c86e5d2dd246b037fc068fdc5e",
+   "actual_sha256": "cc313be006e90cbb93c3cc7457fd3701466008c86e5d2dd246b037fc068fdc5e",
+   "bytes": 3345,
+   "sha_matches": true
+  },
+  {
+   "original": "data/topup_v6_20261024/training_configs/manifest.json",
+   "new_location": "provenance/data/topup_v6_20261024/training_configs/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "d6a57bc55788a7e2f0fad157c065ee3ba20edbfcb75cb26e6f1e15fdee2086b0",
+   "actual_sha256": "d6a57bc55788a7e2f0fad157c065ee3ba20edbfcb75cb26e6f1e15fdee2086b0",
+   "bytes": 1205,
+   "sha_matches": true
+  },
+  {
+   "original": "migration_manifest.json",
+   "new_location": "docs/migration/migration_manifest.json",
+   "status": "moved",
+   "expected_sha256": "86e1cc6eeecd42a703a550cf8bcc3cd918bd7bf77f1ba9757e4fc34dbd078a69",
+   "actual_sha256": "86e1cc6eeecd42a703a550cf8bcc3cd918bd7bf77f1ba9757e4fc34dbd078a69",
+   "bytes": 1395975,
+   "sha_matches": true
+  },
+  {
+   "original": "reports/code_training_repair_20261025_v4/admission_decision.json",
+   "new_location": "reports/code_training_repair_20261025_v4/admission_decision.json",
+   "status": "kept",
+   "expected_sha256": "cae355de245c3bf407feac048d220b23e6e246a4c50f538cc85d3e2d91d24d45",
+   "actual_sha256": "cae355de245c3bf407feac048d220b23e6e246a4c50f538cc85d3e2d91d24d45",
+   "bytes": 2424,
+   "sha_matches": true
+  },
+  {
+   "original": "reports/compact_distillation_v2_20261023/cache_reaudit/manifest.json",
+   "new_location": "provenance/reports/compact_distillation_v2_20261023/cache_reaudit/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "625f0c3f0e256f784c12df56276dd8f427037a9f83ac1e1a3a7542b96b2787da",
+   "actual_sha256": "625f0c3f0e256f784c12df56276dd8f427037a9f83ac1e1a3a7542b96b2787da",
+   "bytes": 1891,
+   "sha_matches": true
+  },
+  {
+   "original": "reports/compact_distillation_v2_20261023/delivery_manifest.json",
+   "new_location": "provenance/reports/compact_distillation_v2_20261023/delivery_manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "23f95fe635f886b26d8c8717c5654f13238e1699f898ffcfe8ea8d74c702ad32",
+   "actual_sha256": "23f95fe635f886b26d8c8717c5654f13238e1699f898ffcfe8ea8d74c702ad32",
+   "bytes": 22044,
+   "sha_matches": true
+  },
+  {
+   "original": "reports/compact_distillation_v2_20261023/final_integrity_manifest.json",
+   "new_location": "provenance/reports/compact_distillation_v2_20261023/final_integrity_manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "448a6ed7a86f6d33296b86ae6578fd4facd24a627b653e716509f4778a6b1f86",
+   "actual_sha256": "448a6ed7a86f6d33296b86ae6578fd4facd24a627b653e716509f4778a6b1f86",
+   "bytes": 24281,
+   "sha_matches": true
+  },
+  {
+   "original": "reports/compact_distillation_v2_20261023/format_robustness_review/manifest.json",
+   "new_location": "provenance/reports/compact_distillation_v2_20261023/format_robustness_review/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "bbee176d1daefd7f8988d88afbe4ad80a2f377bfb81dc4253f7be2d747206635",
+   "actual_sha256": "bbee176d1daefd7f8988d88afbe4ad80a2f377bfb81dc4253f7be2d747206635",
+   "bytes": 947,
+   "sha_matches": true
+  },
+  {
+   "original": "reports/compact_distillation_v3_20261023/final_integrity_manifest.json",
+   "new_location": "provenance/reports/compact_distillation_v3_20261023/final_integrity_manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "3a8e562c28fe680b3c2027c6049ded791da42385eccdb4846705f378ce08b588",
+   "actual_sha256": "3a8e562c28fe680b3c2027c6049ded791da42385eccdb4846705f378ce08b588",
+   "bytes": 6412,
+   "sha_matches": true
+  },
+  {
+   "original": "reports/compact_distillation_v3_20261023/frozen_run_manifest.json",
+   "new_location": "provenance/reports/compact_distillation_v3_20261023/frozen_run_manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "962d20f57a34475ecba4eb95f348fd5c632a875226fe379028387fa623d211c5",
+   "actual_sha256": "962d20f57a34475ecba4eb95f348fd5c632a875226fe379028387fa623d211c5",
+   "bytes": 8377,
+   "sha_matches": true
+  },
+  {
+   "original": "reports/compact_distillation_v4_20261024/frozen_run_manifest.json",
+   "new_location": "provenance/reports/compact_distillation_v4_20261024/frozen_run_manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "2ce310d44c97b2a680a65dd138c82b33a2be05464f6bff5191cb6ff173a17de6",
+   "actual_sha256": "2ce310d44c97b2a680a65dd138c82b33a2be05464f6bff5191cb6ff173a17de6",
+   "bytes": 9105,
+   "sha_matches": true
+  },
+  {
+   "original": "reports/compact_distillation_v4_20261024/predispatch_diagnostic_1/pilot_manifest.json",
+   "new_location": "provenance/reports/compact_distillation_v4_20261024/predispatch_diagnostic_1/pilot_manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "a08188a22688572dd7020328ab202ccfbf2e4b89dbf236d431557fc80048ed9b",
+   "actual_sha256": "a08188a22688572dd7020328ab202ccfbf2e4b89dbf236d431557fc80048ed9b",
+   "bytes": 3044,
+   "sha_matches": true
+  },
+  {
+   "original": "reports/compact_distillation_v4_20261024/predispatch_diagnostic_1/pool_manifest.json",
+   "new_location": "provenance/reports/compact_distillation_v4_20261024/predispatch_diagnostic_1/pool_manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "e5ab840d598a40c5afda55054ddedb7fa052a3b05f68e2b67050ec43f1be616f",
+   "actual_sha256": "e5ab840d598a40c5afda55054ddedb7fa052a3b05f68e2b67050ec43f1be616f",
+   "bytes": 2965,
+   "sha_matches": true
+  },
+  {
+   "original": "reports/data_release_preparation_20261024/delivery_manifest.json",
+   "new_location": "provenance/reports/data_release_preparation_20261024/delivery_manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "90f2e5f09de8d00adecd7952715364d80859350adfc53d67eec47196ce6c8ba4",
+   "actual_sha256": "90f2e5f09de8d00adecd7952715364d80859350adfc53d67eec47196ce6c8ba4",
+   "bytes": 1312731,
+   "sha_matches": true
+  },
+  {
+   "original": "reports/data_revision_v4_20261024/delivery_manifest.json",
+   "new_location": "provenance/reports/data_revision_v4_20261024/delivery_manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "60e80d927e29886d2fb37d9b2231cb9bf7769e5b1ce38d1645a1de8a3118150e",
+   "actual_sha256": "60e80d927e29886d2fb37d9b2231cb9bf7769e5b1ce38d1645a1de8a3118150e",
+   "bytes": 16424,
+   "sha_matches": true
+  },
+  {
+   "original": "reports/deepseek_pilot_20261023/delivery_manifest.json",
+   "new_location": "provenance/reports/deepseek_pilot_20261023/delivery_manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "20af27984960a4942bb2dfdd5b8220370bf034e30a7adb1cfd610534af589305",
+   "actual_sha256": "20af27984960a4942bb2dfdd5b8220370bf034e30a7adb1cfd610534af589305",
+   "bytes": 59744,
+   "sha_matches": true
+  },
+  {
+   "original": "reports/handover_20261024_v1/delivery_manifest.json",
+   "new_location": "provenance/reports/handover_20261024_v1/delivery_manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "42a265728de11e5d47afe4b72c68473a8829315deb00e394c7bbdf4e8c51e6f4",
+   "actual_sha256": "42a265728de11e5d47afe4b72c68473a8829315deb00e394c7bbdf4e8c51e6f4",
+   "bytes": 3786,
+   "sha_matches": true
+  },
+  {
+   "original": "reports/handover_20261024_v3/training_exclusions.json",
+   "new_location": "reports/handover_20261024_v3/training_exclusions.json",
+   "status": "kept",
+   "expected_sha256": "a6049916a2c758a5587e1061774bd8ea22d5680df1d946027403fba3093bf2cd",
+   "actual_sha256": "a6049916a2c758a5587e1061774bd8ea22d5680df1d946027403fba3093bf2cd",
+   "bytes": 723,
+   "sha_matches": true
+  },
+  {
+   "original": "reports/openr1_full_audit_final_20261023/manifest.json",
+   "new_location": "provenance/reports/openr1_full_audit_final_20261023/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "c41c112734cf1479bf4c4c018b5f06ab4033ff60f232e4d4acd2fc067cce18d2",
+   "actual_sha256": "c41c112734cf1479bf4c4c018b5f06ab4033ff60f232e4d4acd2fc067cce18d2",
+   "bytes": 6955,
+   "sha_matches": true
+  },
+  {
+   "original": "reports/project1_sft_v2_plan_20261023/manifest.json",
+   "new_location": "provenance/reports/project1_sft_v2_plan_20261023/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "11c0fc1fa2b9b8a6ba6b973dc3db793702fe0a29e1383d6f208fec358fb53502",
+   "actual_sha256": "11c0fc1fa2b9b8a6ba6b973dc3db793702fe0a29e1383d6f208fec358fb53502",
+   "bytes": 665,
+   "sha_matches": true
+  },
+  {
+   "original": "reports/project2_ai_review_20261024/pre_dispatch_manifest.json",
+   "new_location": "provenance/reports/project2_ai_review_20261024/pre_dispatch_manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "c7c9b5d790428a0bdc5f83df99eafd46ad39c6c48b0ffacf6e2fa2ef029942c0",
+   "actual_sha256": "c7c9b5d790428a0bdc5f83df99eafd46ad39c6c48b0ffacf6e2fa2ef029942c0",
+   "bytes": 2897,
+   "sha_matches": true
+  },
+  {
+   "original": "reports/project3_perception_prototype/manifest.json",
+   "new_location": "provenance/reports/project3_perception_prototype/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "ac9348f5ff0c9766fe973b987db971c983fa9592896c8487c777075b5f3df6d5",
+   "actual_sha256": "ac9348f5ff0c9766fe973b987db971c983fa9592896c8487c777075b5f3df6d5",
+   "bytes": 36323,
+   "sha_matches": true
+  },
+  {
+   "original": "reports/project3_perception_review/manifest.json",
+   "new_location": "provenance/reports/project3_perception_review/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "eb9ccbf45a72d7b7f7877ced7142b90bc755550b50f930275f7615ccbbabb09f",
+   "actual_sha256": "eb9ccbf45a72d7b7f7877ced7142b90bc755550b50f930275f7615ccbbabb09f",
+   "bytes": 1975,
+   "sha_matches": true
+  },
+  {
+   "original": "reports/project3_perception_v2/manifest.json",
+   "new_location": "provenance/reports/project3_perception_v2/manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "267562fe1f6874d018d6c7861f0bb174c438c86db0e31867ee3b102da71b6b6d",
+   "actual_sha256": "267562fe1f6874d018d6c7861f0bb174c438c86db0e31867ee3b102da71b6b6d",
+   "bytes": 1697,
+   "sha_matches": true
+  },
+  {
+   "original": "reports/strict_v8_20261024/approved_extra_pairs.jsonl",
+   "new_location": "provenance/reports/strict_v8_20261024/approved_extra_pairs.jsonl",
+   "status": "mirrored",
+   "expected_sha256": "02aa6fb13a1ede72f8ea1d298bb3da268b83feb32b670c29618778d4996503fe",
+   "actual_sha256": "02aa6fb13a1ede72f8ea1d298bb3da268b83feb32b670c29618778d4996503fe",
+   "bytes": 58197,
+   "sha_matches": true
+  },
+  {
+   "original": "reports/strict_v8_20261024/approved_new_pairs.jsonl",
+   "new_location": "provenance/reports/strict_v8_20261024/approved_new_pairs.jsonl",
+   "status": "mirrored",
+   "expected_sha256": "c05c6bf46fa94fce799e1bcb039d32c683911e6e5d78c40ba00122cfa6e3dc68",
+   "actual_sha256": "c05c6bf46fa94fce799e1bcb039d32c683911e6e5d78c40ba00122cfa6e3dc68",
+   "bytes": 8282754,
+   "sha_matches": true
+  },
+  {
+   "original": "reports/strict_v8_20261024/delivery_manifest.json",
+   "new_location": "provenance/reports/strict_v8_20261024/delivery_manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "631352d0a5d4cbf8923897085c9e92d93a60c05a91711f9bc0f9aae0bb310766",
+   "actual_sha256": "631352d0a5d4cbf8923897085c9e92d93a60c05a91711f9bc0f9aae0bb310766",
+   "bytes": 11612,
+   "sha_matches": true
+  },
+  {
+   "original": "reports/strict_v8_20261024/frozen_protocol.json",
+   "new_location": "provenance/reports/strict_v8_20261024/frozen_protocol.json",
+   "status": "mirrored",
+   "expected_sha256": "1d87c0e7f2bc77e645810a9489a7d6a3c2a952fae392d24e054e180a11aa65ca",
+   "actual_sha256": "1d87c0e7f2bc77e645810a9489a7d6a3c2a952fae392d24e054e180a11aa65ca",
+   "bytes": 2559,
+   "sha_matches": true
+  },
+  {
+   "original": "reports/strict_v8_20261024/frozen_protocol_resume.json",
+   "new_location": "provenance/reports/strict_v8_20261024/frozen_protocol_resume.json",
+   "status": "mirrored",
+   "expected_sha256": "11fce453df41c8b4a187773928061e7b3dc89de7a80e4140785ca147ab952b59",
+   "actual_sha256": "11fce453df41c8b4a187773928061e7b3dc89de7a80e4140785ca147ab952b59",
+   "bytes": 3207,
+   "sha_matches": true
+  },
+  {
+   "original": "reports/strict_v8_20261024/source_profile_quarantine.json",
+   "new_location": "provenance/reports/strict_v8_20261024/source_profile_quarantine.json",
+   "status": "mirrored",
+   "expected_sha256": "8e20870a5bf0b088d85299f5470cc8ceee84dfebfc4696ea17a157daa73b2155",
+   "actual_sha256": "8e20870a5bf0b088d85299f5470cc8ceee84dfebfc4696ea17a157daa73b2155",
+   "bytes": 391,
+   "sha_matches": true
+  },
+  {
+   "original": "reports/topup_v6_20261024/delivery_manifest.json",
+   "new_location": "provenance/reports/topup_v6_20261024/delivery_manifest.json",
+   "status": "mirrored",
+   "expected_sha256": "61a41fd8eeaefbcbae6b31bd28224f1a1fe10d25d0126142289590d7f5524e15",
+   "actual_sha256": "61a41fd8eeaefbcbae6b31bd28224f1a1fe10d25d0126142289590d7f5524e15",
+   "bytes": 321498,
+   "sha_matches": true
+  },
+  {
+   "original": "src/data/geometry_split_guard.py",
+   "new_location": "provenance/src/data/geometry_split_guard.py",
+   "status": "mirrored",
+   "expected_sha256": "d34e3a339780044e3c9f6408e86edf930382155e14c749246b02f32c4730d7b5",
+   "actual_sha256": "d34e3a339780044e3c9f6408e86edf930382155e14c749246b02f32c4730d7b5",
+   "bytes": 1160,
+   "sha_matches": true
+  },
+  {
+   "original": "src/losses/reference.py",
+   "new_location": "src/losses/reference.py",
+   "status": "kept",
+   "expected_sha256": "44f1b36b7d900bc8fc4b114f8aa490ee9b43f1a51f5efe7b28560a6b3f9f20f7",
+   "actual_sha256": "44f1b36b7d900bc8fc4b114f8aa490ee9b43f1a51f5efe7b28560a6b3f9f20f7",
+   "bytes": 4178,
+   "sha_matches": true
+  },
+  {
+   "original": "迁移记录/migration_manifest_交接补充前_20261024.json",
+   "new_location": "docs/migration/迁移记录/migration_manifest_交接补充前_20261024.json",
+   "status": "moved",
+   "expected_sha256": "89fa359aa04b22c14d20ed64336198f6db4673ff55b316afd53d8b2cfbfe90d3",
+   "actual_sha256": "89fa359aa04b22c14d20ed64336198f6db4673ff55b316afd53d8b2cfbfe90d3",
+   "bytes": 1395092,
+   "sha_matches": true
+  }
+ ]
+}

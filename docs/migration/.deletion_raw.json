@@ -1,0 +1,786 @@
+{
+ "total_bytes": 4379316274,
+ "total_files": 4093,
+ "items": [
+  {
+   "path": "data/code_benchmarks",
+   "kind": "dir",
+   "files": 7,
+   "bytes": 26115911
+  },
+  {
+   "path": "data/code_v2_pilot",
+   "kind": "dir",
+   "files": 7,
+   "bytes": 3214969
+  },
+  {
+   "path": "data/code_v2_sources",
+   "kind": "dir",
+   "files": 11,
+   "bytes": 386747599
+  },
+  {
+   "path": "data/deepseek_pilot_20261023",
+   "kind": "dir",
+   "files": 2,
+   "bytes": 13595
+  },
+  {
+   "path": "data/delegated_ai_releases_20261024",
+   "kind": "dir",
+   "files": 10,
+   "bytes": 13936424
+  },
+  {
+   "path": "data/finalfill_v7_20261024",
+   "kind": "dir",
+   "files": 9,
+   "bytes": 20119114
+  },
+  {
+   "path": "data/project1_native_v5",
+   "kind": "dir",
+   "files": 1,
+   "bytes": 1575
+  },
+  {
+   "path": "data/project1_textonly_v3",
+   "kind": "dir",
+   "files": 1,
+   "bytes": 12208775
+  },
+  {
+   "path": "data/project2_ai_review_20261024",
+   "kind": "dir",
+   "files": 3,
+   "bytes": 12462007
+  },
+  {
+   "path": "data/project2_code",
+   "kind": "dir",
+   "files": 8,
+   "bytes": 190793136
+  },
+  {
+   "path": "data/project2_code_v2",
+   "kind": "dir",
+   "files": 15,
+   "bytes": 42683647
+  },
+  {
+   "path": "data/project2_code_v3",
+   "kind": "dir",
+   "files": 7,
+   "bytes": 13129390
+  },
+  {
+   "path": "data/project2_code_v3_dev_verified",
+   "kind": "dir",
+   "files": 4,
+   "bytes": 12202648
+  },
+  {
+   "path": "data/project3_all_split_candidates_v2",
+   "kind": "dir",
+   "files": 1,
+   "bytes": 2099
+  },
+  {
+   "path": "data/project3_perception_prototype",
+   "kind": "dir",
+   "files": 201,
+   "bytes": 6803570
+  },
+  {
+   "path": "data/raw_math_cache",
+   "kind": "dir",
+   "files": 8,
+   "bytes": 14808346
+  },
+  {
+   "path": "data/README.md",
+   "kind": "file",
+   "files": 1,
+   "bytes": 4442
+  },
+  {
+   "path": "data/screening_sources",
+   "kind": "dir",
+   "files": 26,
+   "bytes": 2693465397
+  },
+  {
+   "path": "data/strict_v8_20261024",
+   "kind": "dir",
+   "files": 88,
+   "bytes": 76559658
+  },
+  {
+   "path": "data/synthesis_mock",
+   "kind": "dir",
+   "files": 2,
+   "bytes": 18008
+  },
+  {
+   "path": "data/topup_v6_20261024",
+   "kind": "dir",
+   "files": 2450,
+   "bytes": 277803995
+  },
+  {
+   "path": "reports/artifact_inventory.json",
+   "kind": "file",
+   "files": 1,
+   "bytes": 14720
+  },
+  {
+   "path": "reports/blueprint_data_revision.diff",
+   "kind": "file",
+   "files": 1,
+   "bytes": 143530
+  },
+  {
+   "path": "reports/code_callable_diagnostic.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 258
+  },
+  {
+   "path": "reports/code_function_cache_export.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 63
+  },
+  {
+   "path": "reports/code_function_schema_diagnostic.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 307
+  },
+  {
+   "path": "reports/code_index_equivalence_tests.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 101
+  },
+  {
+   "path": "reports/code_literal_diagnostics_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 121
+  },
+  {
+   "path": "reports/code_screening_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 1025
+  },
+  {
+   "path": "reports/code_screening_unit.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 100
+  },
+  {
+   "path": "reports/code_v2_blueprint_revision.diff",
+   "kind": "file",
+   "files": 1,
+   "bytes": 6831
+  },
+  {
+   "path": "reports/code_v2_build_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 693
+  },
+  {
+   "path": "reports/code_v2_bulk_download.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 287
+  },
+  {
+   "path": "reports/code_v2_docker_recovery.json",
+   "kind": "file",
+   "files": 1,
+   "bytes": 792
+  },
+  {
+   "path": "reports/code_v2_execution_20261023.md",
+   "kind": "file",
+   "files": 1,
+   "bytes": 7701
+  },
+  {
+   "path": "reports/code_v2_input_budget_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 62
+  },
+  {
+   "path": "reports/code_v2_pilot_download.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 520
+  },
+  {
+   "path": "reports/code_v2_pilot_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 2213
+  },
+  {
+   "path": "reports/code_v2_pilot_rule_tests.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 101
+  },
+  {
+   "path": "reports/code_v2_preseal_regression.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 194
+  },
+  {
+   "path": "reports/code_v2_pytest_full.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 184
+  },
+  {
+   "path": "reports/code_v2_sandbox_image_pull.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 259
+  },
+  {
+   "path": "reports/code_v2_script_inventory.json",
+   "kind": "file",
+   "files": 1,
+   "bytes": 1155
+  },
+  {
+   "path": "reports/code_v2_stdio_extension.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 53
+  },
+  {
+   "path": "reports/compact_distillation_v2_20261023",
+   "kind": "dir",
+   "files": 157,
+   "bytes": 5311980
+  },
+  {
+   "path": "reports/compact_distillation_v3_20261023",
+   "kind": "dir",
+   "files": 48,
+   "bytes": 671595
+  },
+  {
+   "path": "reports/compact_distillation_v4_20261024",
+   "kind": "dir",
+   "files": 49,
+   "bytes": 1248778
+  },
+  {
+   "path": "reports/completion_audit.json",
+   "kind": "file",
+   "files": 1,
+   "bytes": 579
+  },
+  {
+   "path": "reports/cpu_demo_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 90
+  },
+  {
+   "path": "reports/data_human_review_pack",
+   "kind": "dir",
+   "files": 3,
+   "bytes": 183361
+  },
+  {
+   "path": "reports/data_release_preparation_20261024",
+   "kind": "dir",
+   "files": 10,
+   "bytes": 108822214
+  },
+  {
+   "path": "reports/data_review_delegated_release.md",
+   "kind": "file",
+   "files": 1,
+   "bytes": 82783
+  },
+  {
+   "path": "reports/data_revision_v4_20261024",
+   "kind": "dir",
+   "files": 9,
+   "bytes": 126459
+  },
+  {
+   "path": "reports/data_screening_20261023.md",
+   "kind": "file",
+   "files": 1,
+   "bytes": 15839
+  },
+  {
+   "path": "reports/data_screening_environment.json",
+   "kind": "file",
+   "files": 1,
+   "bytes": 1264
+  },
+  {
+   "path": "reports/data_screening_pytest_full.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 11203
+  },
+  {
+   "path": "reports/data_screening_unit.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 101
+  },
+  {
+   "path": "reports/data_screening_unit_tests.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 184
+  },
+  {
+   "path": "reports/deepseek_pilot_20261023",
+   "kind": "dir",
+   "files": 317,
+   "bytes": 3167270
+  },
+  {
+   "path": "reports/evalplus_source_inventory.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 255
+  },
+  {
+   "path": "reports/finalfill_v7_20261024",
+   "kind": "dir",
+   "files": 19,
+   "bytes": 14470064
+  },
+  {
+   "path": "reports/handover_20261024_v1",
+   "kind": "dir",
+   "files": 19,
+   "bytes": 77777
+  },
+  {
+   "path": "reports/hardening_pytest.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 101
+  },
+  {
+   "path": "reports/hf_connectivity.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 5
+  },
+  {
+   "path": "reports/math_data_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 352
+  },
+  {
+   "path": "reports/math_pair_delegated_review_20261024",
+   "kind": "dir",
+   "files": 4,
+   "bytes": 537768
+  },
+  {
+   "path": "reports/math_reference_diagnostic.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 689
+  },
+  {
+   "path": "reports/metadata_hardening_pytest.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 100
+  },
+  {
+   "path": "reports/official_code_benchmarks.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 280
+  },
+  {
+   "path": "reports/official_code_overlap_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 91
+  },
+  {
+   "path": "reports/openr1_full_audit_20261023",
+   "kind": "dir",
+   "files": 2,
+   "bytes": 4760621
+  },
+  {
+   "path": "reports/openr1_full_audit_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 104
+  },
+  {
+   "path": "reports/openr1_full_audit_final_20261023",
+   "kind": "dir",
+   "files": 14,
+   "bytes": 321711669
+  },
+  {
+   "path": "reports/openr1_full_audit_final_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 4546
+  },
+  {
+   "path": "reports/openr1_full_audit_v2_20261023",
+   "kind": "dir",
+   "files": 2,
+   "bytes": 4066493
+  },
+  {
+   "path": "reports/openr1_full_audit_v2_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 103
+  },
+  {
+   "path": "reports/openr1_real_acceptance.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 115
+  },
+  {
+   "path": "reports/openr1_screening_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 4720
+  },
+  {
+   "path": "reports/openr1_screening_report.json",
+   "kind": "file",
+   "files": 1,
+   "bytes": 2539
+  },
+  {
+   "path": "reports/openr1_screening_unit.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 100
+  },
+  {
+   "path": "reports/overnight_execution_summary.md",
+   "kind": "file",
+   "files": 1,
+   "bytes": 19793
+  },
+  {
+   "path": "reports/project1_batch500_20261024",
+   "kind": "dir",
+   "files": 5,
+   "bytes": 4024763
+  },
+  {
+   "path": "reports/project1_pretraining_audit_pytest.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 184
+  },
+  {
+   "path": "reports/project1_pretraining_script_inventory.json",
+   "kind": "file",
+   "files": 1,
+   "bytes": 460
+  },
+  {
+   "path": "reports/project1_pretraining_targeted_tests.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 100
+  },
+  {
+   "path": "reports/project1_sft_bias_assessment.json",
+   "kind": "file",
+   "files": 1,
+   "bytes": 2051
+  },
+  {
+   "path": "reports/project1_sft_finalization_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 163
+  },
+  {
+   "path": "reports/project1_sft_pretraining_audit_20261023.md",
+   "kind": "file",
+   "files": 1,
+   "bytes": 6684
+  },
+  {
+   "path": "reports/project1_sft_v2_delivery_checks.json",
+   "kind": "file",
+   "files": 1,
+   "bytes": 415
+  },
+  {
+   "path": "reports/project1_sft_v2_export_20261023",
+   "kind": "dir",
+   "files": 2,
+   "bytes": 4930
+  },
+  {
+   "path": "reports/project1_sft_v2_plan_20261023",
+   "kind": "dir",
+   "files": 6,
+   "bytes": 4573801
+  },
+  {
+   "path": "reports/project1_tokenizer_blueprint_revision.diff",
+   "kind": "file",
+   "files": 1,
+   "bytes": 56795
+  },
+  {
+   "path": "reports/project2_ai_review_20261024",
+   "kind": "dir",
+   "files": 6,
+   "bytes": 16630266
+  },
+  {
+   "path": "reports/project2_code_v3",
+   "kind": "dir",
+   "files": 2,
+   "bytes": 5839
+  },
+  {
+   "path": "reports/project3_all_split_candidates_v2",
+   "kind": "dir",
+   "files": 2,
+   "bytes": 1862
+  },
+  {
+   "path": "reports/project3_cpu_20261023",
+   "kind": "dir",
+   "files": 3,
+   "bytes": 8187
+  },
+  {
+   "path": "reports/project3_grounding_ai_review_20261024",
+   "kind": "dir",
+   "files": 5,
+   "bytes": 1242906
+  },
+  {
+   "path": "reports/project3_perception_prototype",
+   "kind": "dir",
+   "files": 6,
+   "bytes": 587745
+  },
+  {
+   "path": "reports/project3_perception_review",
+   "kind": "dir",
+   "files": 6,
+   "bytes": 146397
+  },
+  {
+   "path": "reports/project3_perception_v2",
+   "kind": "dir",
+   "files": 5,
+   "bytes": 367934
+  },
+  {
+   "path": "reports/prompt_openr1_supplement_tests.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 195
+  },
+  {
+   "path": "reports/pytest_full.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 8887
+  },
+  {
+   "path": "reports/README.md",
+   "kind": "file",
+   "files": 1,
+   "bytes": 4285
+  },
+  {
+   "path": "reports/screening_downloads.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 96
+  },
+  {
+   "path": "reports/screening_io_tests.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 100
+  },
+  {
+   "path": "reports/screening_source_inventory.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 593
+  },
+  {
+   "path": "reports/strict_v8_20261024",
+   "kind": "dir",
+   "files": 41,
+   "bytes": 39756867
+  },
+  {
+   "path": "reports/task1_real_pytest.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 101
+  },
+  {
+   "path": "reports/task1_unit_pytest.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 100
+  },
+  {
+   "path": "reports/task2_real_pytest.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 101
+  },
+  {
+   "path": "reports/task2_source_fix_pytest.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 100
+  },
+  {
+   "path": "reports/task2_unit_pytest.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 101
+  },
+  {
+   "path": "reports/task2_verifier_pytest.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 101
+  },
+  {
+   "path": "reports/task3_pytest.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 101
+  },
+  {
+   "path": "reports/task4_client_pytest.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 100
+  },
+  {
+   "path": "reports/task4_geometry_pytest.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 101
+  },
+  {
+   "path": "reports/tokenizer_alignment_revalidation_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 111
+  },
+  {
+   "path": "reports/tokenizer_audit_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 308
+  },
+  {
+   "path": "reports/topup_v6_20261024",
+   "kind": "dir",
+   "files": 43,
+   "bytes": 36598686
+  },
+  {
+   "path": "reports/training_readiness_20261023_v2.json",
+   "kind": "file",
+   "files": 1,
+   "bytes": 7024
+  },
+  {
+   "path": "reports/training_readiness_20261023_v2.md",
+   "kind": "file",
+   "files": 1,
+   "bytes": 7558
+  },
+  {
+   "path": "agentic_rl",
+   "kind": "dir",
+   "files": 30,
+   "bytes": 736727
+  },
+  {
+   "path": "math",
+   "kind": "dir",
+   "files": 1,
+   "bytes": 108726
+  },
+  {
+   "path": "video_mapping",
+   "kind": "dir",
+   "files": 2,
+   "bytes": 530196
+  },
+  {
+   "path": "tiny_posttrain",
+   "kind": "dir",
+   "files": 25,
+   "bytes": 167869
+  },
+  {
+   "path": "project_blueprints",
+   "kind": "dir",
+   "files": 85,
+   "bytes": 1747457
+  },
+  {
+   "path": ".pilot_deps",
+   "kind": "dir",
+   "files": 221,
+   "bytes": 3360133
+  },
+  {
+   "path": ".pytest_cache",
+   "kind": "dir",
+   "files": 6,
+   "bytes": 28334
+  },
+  {
+   "path": "ARGON_深度审查提示词.md",
+   "kind": "file",
+   "files": 1,
+   "bytes": 7785
+  },
+  {
+   "path": "OVERNIGHT_CPU_README.md",
+   "kind": "file",
+   "files": 1,
+   "bytes": 4389
+  }
+ ]
+}

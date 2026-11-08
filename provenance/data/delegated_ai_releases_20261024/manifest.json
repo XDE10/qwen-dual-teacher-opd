@@ -1,0 +1,62 @@
+{
+  "summary": {
+    "release_kind": "itemwise_delegated_AI_engineering_subsets; not original full-pool or human-gold signoff",
+    "project2_approved_train_counts": {
+      "math": 2380,
+      "code": 1662
+    },
+    "project2_code_interfaces": {
+      "function": 926,
+      "stdin_stdout": 736
+    },
+    "project2_original_dev_ids_preserved": 456,
+    "project2_dev_review_statuses": {
+      "pass": 403,
+      "isolate": 47,
+      "uncertain": 5,
+      "uncertain_independent_reviewer_disagreement": 1
+    },
+    "project2_original_2500_plus2500_full_train_approved": false,
+    "project1_ai_approved_paired_count": 213,
+    "project1_cohorts": {
+      "new_batch500": 203,
+      "prior_v4_10": 10
+    },
+    "whole_native1500_approved": false,
+    "project3_grounded_training_targets_approved": 26,
+    "project3_approval_scope": "perception-only prototypes, not full VL reasoning data or all matched splits",
+    "training_approved": true,
+    "approval_scope": "Only rows in the five *ai_approved.jsonl training files; no other data. Original quotas not silently weakened; train sampling/domain mix needs a versioned config.",
+    "human_review_performed": false,
+    "limitations": "AI process judgments can err; sample counterexample shows reviewer false positive. No benchmark performance, full test coverage, global contamination, or visual-gold claim."
+  },
+  "approved_training_files": [
+    "project2_math_train_ai_approved.jsonl",
+    "project2_code_train_ai_approved.jsonl",
+    "project1_raw_paired_ai_approved.jsonl",
+    "project1_compact_paired_ai_approved.jsonl",
+    "project3_perception_prototype_ai_approved.jsonl"
+  ],
+  "inputs": {
+    "reports/project2_ai_review_20261024/results.jsonl": "40ffa06c71cb3c5e4af5058162f6b85498335b97542d959258e3ff9253f7dbde",
+    "reports/project2_ai_review_20261024/independent_counterexample_checks.json": "6a6628e6a150fb1968c83fc68021473f9906916830d668858234817d9f6c7539",
+    "reports/project2_ai_review_20261024/independent_math_checks.json": "080661cde5640a212bdb8087766f88e6b57f02370e9dea655f3cc8149f383c82",
+    "data/project3_grounding_ai_review_20261024/manifest.json": "50a139d8769f1ac586eba4d3620b4d167648a0b4ee5961a59d4c702476c5d707",
+    "reports/math_pair_delegated_review_20261024/reviews.json": "4891f12be932066ffeb9f58206427df77e7878bab21ef2233ab93c1eab654e0c",
+    "reports/project1_batch500_20261024/common_candidates.json": "85ddad513a183d893d416c9ac9831cbafb1965e9c31c71481f12470770621df7",
+    "data/project2_code_v3_dev_verified/manifest.json": "9d5153a5d3f1e736fdf075f6e87cd2146a3e88945276c0951fe6f5ecbbcdce1a",
+    "data/math_manifest.json": "0416b28f855a4ab4568daeec01c433df6ae085e1580a766299b1507d69aa5bda",
+    "scripts/export_delegated_ai_releases.py": "6bc89a47579b9a4a2443d4dfe3442a09dd3b5ef6a81114f28544708864ade76a"
+  },
+  "files": {
+    "project1_compact_paired_ai_approved.jsonl": "5fe725e9ed86a4c1a0732573bfb0da8e57ff98c24ab568ccce1d38744e2ce7b3",
+    "project1_pair_review_queue.json": "ac5ab68127313d6333ee738e1ceb6a888b6c34a83f91c83c7d9a50388f4350ae",
+    "project1_raw_paired_ai_approved.jsonl": "16e0ff0aa1bc7d54c69d0c411b438d57027394c0643e95849c5cbfa8301dc3ce",
+    "project2_code_train_ai_approved.jsonl": "d98efe7001dbea579a74421f688ee9c27a455f9ebf1fe43e88bbbe27b81fb3ce",
+    "project2_fixed_dev_audit.jsonl": "5d9a990df6930681a48b71eee54c4bec25a7d5b39167cd6d7a90d6fbaa438f86",
+    "project2_math_train_ai_approved.jsonl": "b7114c4587f34f775a66328288acbc672907c7c5a5a86af4671b534edb504a43",
+    "project2_train_review_queue.jsonl": "7834727cc0377e0f0bfb3567bb909a83e5634107a99acc63a987b9e13911a529",
+    "project3_perception_prototype_ai_approved.jsonl": "0946581bc677dc036cb04dc8524fd3faf96fdf59ec17e73d8174358400189e8f",
+    "summary.json": "00db400af35172eea38200a1d67c60ca21f81b4758fc3d345a3c1e2d316841a0"
+  }
+}

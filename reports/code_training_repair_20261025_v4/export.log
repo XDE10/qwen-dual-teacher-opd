@@ -1,0 +1,15 @@
+{
+  "release": "data/code_training_repair_20261025_v4/release",
+  "manifest_sha256": "40197cef309933cc24f7bddb645dba5b73b6491a3a2705225d7a47b5543577db",
+  "code_train": 2500,
+  "interfaces": {
+    "function": 1250,
+    "stdin_stdout": 1250
+  },
+  "removed": "code/vfc_121257",
+  "added": "code/vfc_96076",
+  "replaced_slot": 2451,
+  "dev_unchanged": true,
+  "old_release_unchanged": true,
+  "training_started": false
+}

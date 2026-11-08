@@ -1,0 +1,17 @@
+# Linux/Colab A100 candidate environment, NOT VERIFIED / 未验证.
+# CUDA wheel index and torch version are installed first by colab_bootstrap.sh.
+# torch differs from local CPU snapshot; rerun CPU/tiny contracts on Colab.
+torch==2.8.0
+transformers==4.57.6
+trl==1.16.0
+peft==0.19.0
+datasets==4.7.0
+accelerate==1.10.1
+pytest==8.4.2
+numpy==2.2.6
+sympy==1.14.0
+tokenizers==0.22.2
+pyarrow==21.0.0
+requests==2.34.2
+Pillow==11.2.1
+psutil==7.2.2

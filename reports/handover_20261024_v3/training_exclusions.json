@@ -1,0 +1,17 @@
+{
+  "schema": "training-exclusions-v3",
+  "manifest_sha256": "d76fba24e09244e5f4d02b83a8b60342c466483362c7e08716a5c1836a7ecdd6",
+  "review_overlay": "reports/handover_20261024_v3/decontamination_review_20261025.json",
+  "review_overlay_sha256": "5279fa68fe21032db15fbf740b9f4bbc17140678a0e6e646810f0a6d81ee152d",
+  "excluded_sample_ids": [
+    "code/vfc_121257"
+  ],
+  "reason": "Confirmed current code dev duplicate; subtraction only; no replacement approved",
+  "effective_counts": {
+    "math": 2500,
+    "code": 2499,
+    "function": 1250,
+    "stdin_stdout": 1249
+  },
+  "balance_effect": "stdio减少1；不通过回填未批准候选恢复1250；正式预算和曝光需使用有效池重新冻结"
+}

@@ -1,0 +1,1200 @@
+{
+ "generated": "2026-11-08",
+ "note": "Deletion ledger for the 2026-11-08 standard-layout reorg. Counts are measured, not estimated; use this file for any deleted-bytes/files figure. Relocation of pinned evidence is in path_mapping.json; the pre-reorg snapshot is inventory_before_reorg.json.",
+ "reorg_doc": "docs/migration/reorg_20261108.md",
+ "totals": {
+  "deleted_top_level_items": 130,
+  "deleted_files": 4225,
+  "deleted_bytes": 4380095420,
+  "deleted_megabytes_1e6": 4380.1,
+  "relocated_or_kept_pinned_files": 70
+ },
+ "by_category": {
+  "raw-and-intermediate-data": {
+   "top_level_items": 21,
+   "files": 2862,
+   "bytes": 3803094305
+  },
+  "historical-reports": {
+   "top_level_items": 100,
+   "files": 859,
+   "bytes": 569530353
+  },
+  "reference-materials-and-local-deps": {
+   "top_level_items": 5,
+   "files": 279,
+   "bytes": 4903651
+  },
+  "project-blueprints-and-prose": {
+   "top_level_items": 1,
+   "files": 85,
+   "bytes": 1747457
+  },
+  "repo-hygiene": {
+   "top_level_items": 1,
+   "files": 6,
+   "bytes": 28334
+  },
+  "root-notes": {
+   "top_level_items": 2,
+   "files": 2,
+   "bytes": 12174
+  }
+ },
+ "items": [
+  {
+   "path": "data/code_benchmarks",
+   "kind": "dir",
+   "files": 7,
+   "bytes": 26115911,
+   "category": "raw-and-intermediate-data"
+  },
+  {
+   "path": "data/code_v2_pilot",
+   "kind": "dir",
+   "files": 7,
+   "bytes": 3214969,
+   "category": "raw-and-intermediate-data"
+  },
+  {
+   "path": "data/code_v2_sources",
+   "kind": "dir",
+   "files": 11,
+   "bytes": 386747599,
+   "category": "raw-and-intermediate-data"
+  },
+  {
+   "path": "data/deepseek_pilot_20261023",
+   "kind": "dir",
+   "files": 2,
+   "bytes": 13595,
+   "category": "raw-and-intermediate-data"
+  },
+  {
+   "path": "data/delegated_ai_releases_20261024",
+   "kind": "dir",
+   "files": 10,
+   "bytes": 13936424,
+   "category": "raw-and-intermediate-data"
+  },
+  {
+   "path": "data/finalfill_v7_20261024",
+   "kind": "dir",
+   "files": 9,
+   "bytes": 20119114,
+   "category": "raw-and-intermediate-data"
+  },
+  {
+   "path": "data/project1_native_v5",
+   "kind": "dir",
+   "files": 1,
+   "bytes": 1575,
+   "category": "raw-and-intermediate-data"
+  },
+  {
+   "path": "data/project1_textonly_v3",
+   "kind": "dir",
+   "files": 1,
+   "bytes": 12208775,
+   "category": "raw-and-intermediate-data"
+  },
+  {
+   "path": "data/project2_ai_review_20261024",
+   "kind": "dir",
+   "files": 3,
+   "bytes": 12462007,
+   "category": "raw-and-intermediate-data"
+  },
+  {
+   "path": "data/project2_code",
+   "kind": "dir",
+   "files": 8,
+   "bytes": 190793136,
+   "category": "raw-and-intermediate-data"
+  },
+  {
+   "path": "data/project2_code_v2",
+   "kind": "dir",
+   "files": 15,
+   "bytes": 42683647,
+   "category": "raw-and-intermediate-data"
+  },
+  {
+   "path": "data/project2_code_v3",
+   "kind": "dir",
+   "files": 7,
+   "bytes": 13129390,
+   "category": "raw-and-intermediate-data"
+  },
+  {
+   "path": "data/project2_code_v3_dev_verified",
+   "kind": "dir",
+   "files": 4,
+   "bytes": 12202648,
+   "category": "raw-and-intermediate-data"
+  },
+  {
+   "path": "data/project3_all_split_candidates_v2",
+   "kind": "dir",
+   "files": 1,
+   "bytes": 2099,
+   "category": "raw-and-intermediate-data"
+  },
+  {
+   "path": "data/project3_perception_prototype",
+   "kind": "dir",
+   "files": 201,
+   "bytes": 6803570,
+   "category": "raw-and-intermediate-data"
+  },
+  {
+   "path": "data/raw_math_cache",
+   "kind": "dir",
+   "files": 8,
+   "bytes": 14808346,
+   "category": "raw-and-intermediate-data"
+  },
+  {
+   "path": "data/README.md",
+   "kind": "file",
+   "files": 1,
+   "bytes": 4442,
+   "category": "raw-and-intermediate-data"
+  },
+  {
+   "path": "data/screening_sources",
+   "kind": "dir",
+   "files": 26,
+   "bytes": 2693465397,
+   "category": "raw-and-intermediate-data"
+  },
+  {
+   "path": "data/strict_v8_20261024",
+   "kind": "dir",
+   "files": 88,
+   "bytes": 76559658,
+   "category": "raw-and-intermediate-data"
+  },
+  {
+   "path": "data/synthesis_mock",
+   "kind": "dir",
+   "files": 2,
+   "bytes": 18008,
+   "category": "raw-and-intermediate-data"
+  },
+  {
+   "path": "data/topup_v6_20261024",
+   "kind": "dir",
+   "files": 2450,
+   "bytes": 277803995,
+   "category": "raw-and-intermediate-data"
+  },
+  {
+   "path": "reports/artifact_inventory.json",
+   "kind": "file",
+   "files": 1,
+   "bytes": 14720,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/blueprint_data_revision.diff",
+   "kind": "file",
+   "files": 1,
+   "bytes": 143530,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/code_callable_diagnostic.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 258,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/code_function_cache_export.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 63,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/code_function_schema_diagnostic.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 307,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/code_index_equivalence_tests.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 101,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/code_literal_diagnostics_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 121,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/code_screening_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 1025,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/code_screening_unit.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 100,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/code_v2_blueprint_revision.diff",
+   "kind": "file",
+   "files": 1,
+   "bytes": 6831,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/code_v2_build_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 693,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/code_v2_bulk_download.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 287,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/code_v2_docker_recovery.json",
+   "kind": "file",
+   "files": 1,
+   "bytes": 792,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/code_v2_execution_20261023.md",
+   "kind": "file",
+   "files": 1,
+   "bytes": 7701,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/code_v2_input_budget_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 62,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/code_v2_pilot_download.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 520,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/code_v2_pilot_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 2213,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/code_v2_pilot_rule_tests.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 101,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/code_v2_preseal_regression.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 194,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/code_v2_pytest_full.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 184,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/code_v2_sandbox_image_pull.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 259,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/code_v2_script_inventory.json",
+   "kind": "file",
+   "files": 1,
+   "bytes": 1155,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/code_v2_stdio_extension.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 53,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/compact_distillation_v2_20261023",
+   "kind": "dir",
+   "files": 157,
+   "bytes": 5311980,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/compact_distillation_v3_20261023",
+   "kind": "dir",
+   "files": 48,
+   "bytes": 671595,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/compact_distillation_v4_20261024",
+   "kind": "dir",
+   "files": 49,
+   "bytes": 1248778,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/completion_audit.json",
+   "kind": "file",
+   "files": 1,
+   "bytes": 579,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/cpu_demo_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 90,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/data_human_review_pack",
+   "kind": "dir",
+   "files": 3,
+   "bytes": 183361,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/data_release_preparation_20261024",
+   "kind": "dir",
+   "files": 10,
+   "bytes": 108822214,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/data_review_delegated_release.md",
+   "kind": "file",
+   "files": 1,
+   "bytes": 82783,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/data_revision_v4_20261024",
+   "kind": "dir",
+   "files": 9,
+   "bytes": 126459,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/data_screening_20261023.md",
+   "kind": "file",
+   "files": 1,
+   "bytes": 15839,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/data_screening_environment.json",
+   "kind": "file",
+   "files": 1,
+   "bytes": 1264,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/data_screening_pytest_full.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 11203,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/data_screening_unit.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 101,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/data_screening_unit_tests.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 184,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/deepseek_pilot_20261023",
+   "kind": "dir",
+   "files": 317,
+   "bytes": 3167270,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/evalplus_source_inventory.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 255,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/finalfill_v7_20261024",
+   "kind": "dir",
+   "files": 19,
+   "bytes": 14470064,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/handover_20261024_v1",
+   "kind": "dir",
+   "files": 19,
+   "bytes": 77777,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/hardening_pytest.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 101,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/hf_connectivity.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 5,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/math_data_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 352,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/math_pair_delegated_review_20261024",
+   "kind": "dir",
+   "files": 4,
+   "bytes": 537768,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/math_reference_diagnostic.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 689,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/metadata_hardening_pytest.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 100,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/official_code_benchmarks.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 280,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/official_code_overlap_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 91,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/openr1_full_audit_20261023",
+   "kind": "dir",
+   "files": 2,
+   "bytes": 4760621,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/openr1_full_audit_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 104,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/openr1_full_audit_final_20261023",
+   "kind": "dir",
+   "files": 14,
+   "bytes": 321711669,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/openr1_full_audit_final_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 4546,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/openr1_full_audit_v2_20261023",
+   "kind": "dir",
+   "files": 2,
+   "bytes": 4066493,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/openr1_full_audit_v2_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 103,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/openr1_real_acceptance.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 115,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/openr1_screening_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 4720,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/openr1_screening_report.json",
+   "kind": "file",
+   "files": 1,
+   "bytes": 2539,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/openr1_screening_unit.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 100,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/overnight_execution_summary.md",
+   "kind": "file",
+   "files": 1,
+   "bytes": 19793,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/project1_batch500_20261024",
+   "kind": "dir",
+   "files": 5,
+   "bytes": 4024763,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/project1_pretraining_audit_pytest.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 184,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/project1_pretraining_script_inventory.json",
+   "kind": "file",
+   "files": 1,
+   "bytes": 460,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/project1_pretraining_targeted_tests.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 100,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/project1_sft_bias_assessment.json",
+   "kind": "file",
+   "files": 1,
+   "bytes": 2051,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/project1_sft_finalization_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 163,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/project1_sft_pretraining_audit_20261023.md",
+   "kind": "file",
+   "files": 1,
+   "bytes": 6684,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/project1_sft_v2_delivery_checks.json",
+   "kind": "file",
+   "files": 1,
+   "bytes": 415,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/project1_sft_v2_export_20261023",
+   "kind": "dir",
+   "files": 2,
+   "bytes": 4930,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/project1_sft_v2_plan_20261023",
+   "kind": "dir",
+   "files": 6,
+   "bytes": 4573801,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/project1_tokenizer_blueprint_revision.diff",
+   "kind": "file",
+   "files": 1,
+   "bytes": 56795,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/project2_ai_review_20261024",
+   "kind": "dir",
+   "files": 6,
+   "bytes": 16630266,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/project2_code_v3",
+   "kind": "dir",
+   "files": 2,
+   "bytes": 5839,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/project3_all_split_candidates_v2",
+   "kind": "dir",
+   "files": 2,
+   "bytes": 1862,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/project3_cpu_20261023",
+   "kind": "dir",
+   "files": 3,
+   "bytes": 8187,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/project3_grounding_ai_review_20261024",
+   "kind": "dir",
+   "files": 5,
+   "bytes": 1242906,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/project3_perception_prototype",
+   "kind": "dir",
+   "files": 6,
+   "bytes": 587745,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/project3_perception_review",
+   "kind": "dir",
+   "files": 6,
+   "bytes": 146397,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/project3_perception_v2",
+   "kind": "dir",
+   "files": 5,
+   "bytes": 367934,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/prompt_openr1_supplement_tests.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 195,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/pytest_full.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 8887,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/README.md",
+   "kind": "file",
+   "files": 1,
+   "bytes": 4285,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/screening_downloads.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 96,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/screening_io_tests.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 100,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/screening_source_inventory.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 593,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/strict_v8_20261024",
+   "kind": "dir",
+   "files": 41,
+   "bytes": 39756867,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/task1_real_pytest.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 101,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/task1_unit_pytest.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 100,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/task2_real_pytest.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 101,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/task2_source_fix_pytest.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 100,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/task2_unit_pytest.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 101,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/task2_verifier_pytest.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 101,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/task3_pytest.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 101,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/task4_client_pytest.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 100,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/task4_geometry_pytest.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 101,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/tokenizer_alignment_revalidation_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 111,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/tokenizer_audit_execution.log",
+   "kind": "file",
+   "files": 1,
+   "bytes": 308,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/topup_v6_20261024",
+   "kind": "dir",
+   "files": 43,
+   "bytes": 36598686,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/training_readiness_20261023_v2.json",
+   "kind": "file",
+   "files": 1,
+   "bytes": 7024,
+   "category": "historical-reports"
+  },
+  {
+   "path": "reports/training_readiness_20261023_v2.md",
+   "kind": "file",
+   "files": 1,
+   "bytes": 7558,
+   "category": "historical-reports"
+  },
+  {
+   "path": "agentic_rl",
+   "kind": "dir",
+   "files": 30,
+   "bytes": 736727,
+   "category": "reference-materials-and-local-deps"
+  },
+  {
+   "path": "math",
+   "kind": "dir",
+   "files": 1,
+   "bytes": 108726,
+   "category": "reference-materials-and-local-deps"
+  },
+  {
+   "path": "video_mapping",
+   "kind": "dir",
+   "files": 2,
+   "bytes": 530196,
+   "category": "reference-materials-and-local-deps"
+  },
+  {
+   "path": "tiny_posttrain",
+   "kind": "dir",
+   "files": 25,
+   "bytes": 167869,
+   "category": "reference-materials-and-local-deps"
+  },
+  {
+   "path": "project_blueprints",
+   "kind": "dir",
+   "files": 85,
+   "bytes": 1747457,
+   "category": "project-blueprints-and-prose"
+  },
+  {
+   "path": ".pilot_deps",
+   "kind": "dir",
+   "files": 221,
+   "bytes": 3360133,
+   "category": "reference-materials-and-local-deps"
+  },
+  {
+   "path": ".pytest_cache",
+   "kind": "dir",
+   "files": 6,
+   "bytes": 28334,
+   "category": "repo-hygiene"
+  },
+  {
+   "path": "ARGON_深度审查提示词.md",
+   "kind": "file",
+   "files": 1,
+   "bytes": 7785,
+   "category": "root-notes"
+  },
+  {
+   "path": "OVERNIGHT_CPU_README.md",
+   "kind": "file",
+   "files": 1,
+   "bytes": 4389,
+   "category": "root-notes"
+  }
+ ],
+ "code_deletions": {
+  "note": "Out-of-scope code and tests removed from src/, scripts/, tests/, configs/, tools/, requirements/ (project one/three modules and their tests).",
+  "count": 132,
+  "bytes": 779146,
+  "files": [
+   "scripts/analyze_openr1_candidates.py",
+   "scripts/audit_inequality_exclusions_v7.py",
+   "scripts/audit_project3_overlap.py",
+   "scripts/audit_v3_source_metadata.py",
+   "scripts/build_geometry_funnel_v8.py",
+   "scripts/build_project3_all_split_candidates.py",
+   "scripts/build_project3_perception_preview.py",
+   "scripts/build_project3_perception_prototype.py",
+   "scripts/build_project3_perception_v2.py",
+   "scripts/check_topup_source_integrity.py",
+   "scripts/compact_distillation_v2.py",
+   "scripts/compact_distillation_v3.py",
+   "scripts/compact_distillation_v4.py",
+   "scripts/configure_topup_training.py",
+   "scripts/deliver_topup_v6.py",
+   "scripts/diagnose_project3_vision.py",
+   "scripts/download_project3_train_ranges.py",
+   "scripts/download_screening_sources.py",
+   "scripts/export_delegated_ai_releases.py",
+   "scripts/export_project1_sft_v2.py",
+   "scripts/export_strict_geometry_v8.py",
+   "scripts/export_topup_v6.py",
+   "scripts/finalfill_common.py",
+   "scripts/finalize_delegated_release.py",
+   "scripts/finalize_overnight_report.py",
+   "scripts/finalize_project1_sft.py",
+   "scripts/finalize_topup_v6.py",
+   "scripts/math_verify_pilot_worker.py",
+   "scripts/math_verify_v3_strict_worker.py",
+   "scripts/plan_project1_sft_v2.py",
+   "scripts/preflight_delegated_release.py",
+   "scripts/prepare_deepseek_pilot.py",
+   "scripts/prepare_finalfill_v7.py",
+   "scripts/prepare_internship_migration.py",
+   "scripts/prepare_project3_sources.py",
+   "scripts/prepare_strict_inequalities_v8.py",
+   "scripts/prepare_topup_code_train_reserve.py",
+   "scripts/prepare_topup_geometry_reserve.py",
+   "scripts/prepare_topup_p1.py",
+   "scripts/prepare_topup_p1_supplement.py",
+   "scripts/prepare_topup_p2.py",
+   "scripts/prepare_topup_p2_dev_reserve.py",
+   "scripts/prepare_topup_p3.py",
+   "scripts/prepare_type_reserves_v8.py",
+   "scripts/project1_batch500.py",
+   "scripts/publish_strict_v8_report.py",
+   "scripts/reaudit_typed_inequalities_v8.py",
+   "scripts/recover_bounded_source_v8.py",
+   "scripts/refill_project1_native_v5.py",
+   "scripts/reparse_topup_geometry.py",
+   "scripts/report_compact_v2.py",
+   "scripts/report_compact_v3.py",
+   "scripts/report_data_revision_v4.py",
+   "scripts/report_data_screening.py",
+   "scripts/report_deepseek_pilot.py",
+   "scripts/report_delegated_release.py",
+   "scripts/report_project1_pretraining_audit.py",
+   "scripts/resolve_geometry_uncertain_v7.py",
+   "scripts/review_compact_format.py",
+   "scripts/review_geometry_grounding.py",
+   "scripts/review_math_pairs_release.py",
+   "scripts/review_project2_comparators_v3.py",
+   "scripts/review_project2_decontamination_v3.py",
+   "scripts/review_project2_deepseek.py",
+   "scripts/run_cpu_demo.py",
+   "scripts/run_deepseek_pilot.py",
+   "scripts/run_finalfill_v7.py",
+   "scripts/run_strict_v8.py",
+   "scripts/run_strict_v8_resume.py",
+   "scripts/run_topup_reserves.py",
+   "scripts/run_topup_v6.py",
+   "scripts/seal_strict_v8.py",
+   "scripts/strict_v8_common.py",
+   "scripts/strict_v8_verify_worker.py",
+   "scripts/topup_common.py",
+   "scripts/train_project1_rl.py",
+   "scripts/train_project1_sft.py",
+   "scripts/train_project2_opd_v2.py",
+   "scripts/train_project3.py",
+   "scripts/write_approved_training_configs.py",
+   "src/data/geometry_model_serialization.py",
+   "src/data/geometry_split_guard.py",
+   "src/data/openr1_quality.py",
+   "src/data/perception_text_guards.py",
+   "src/data/perception_v4.py",
+   "src/data/project3_audit.py",
+   "src/data/project3_perception_preview.py",
+   "src/data/project3_perception_prototype.py",
+   "src/data/project3_perception_v2.py",
+   "src/evaluation/geometry_perception_parser.py",
+   "src/synthesis/__init__.py",
+   "src/synthesis/async_client.py",
+   "src/synthesis/compact_format_review.py",
+   "src/synthesis/compact_v2.py",
+   "src/synthesis/compact_v3.py",
+   "src/synthesis/compact_v4.py",
+   "src/synthesis/data_review_contract.py",
+   "src/synthesis/deepseek_pilot.py",
+   "src/synthesis/finalfill_budget.py",
+   "src/synthesis/shared_cost_client.py",
+   "src/synthesis/topup_budget.py",
+   "src/synthesis/typed_answers_v8.py",
+   "src/training/approved_hf.py",
+   "src/training/perception_reward_v4.py",
+   "tests/test_code_v2_outputs.py",
+   "tests/test_compact_v2.py",
+   "tests/test_compact_v3.py",
+   "tests/test_compact_v4.py",
+   "tests/test_deepseek_pilot.py",
+   "tests/test_delegated_review_budget.py",
+   "tests/test_delivery_artifacts.py",
+   "tests/test_export_project1_sft_v2.py",
+   "tests/test_finalfill_budget.py",
+   "tests/test_geometry_ai_review_contract.py",
+   "tests/test_geometry_funnel.py",
+   "tests/test_geometry_model_serialization.py",
+   "tests/test_geometry_parser.py",
+   "tests/test_geometry_split_guard.py",
+   "tests/test_math_verify_v3_type_gate.py",
+   "tests/test_openr1_full_audit.py",
+   "tests/test_openr1_screening.py",
+   "tests/test_perception_v4.py",
+   "tests/test_project1_pretraining_audit.py",
+   "tests/test_project3_audit.py",
+   "tests/test_project3_perception_preview.py",
+   "tests/test_project3_perception_prototype.py",
+   "tests/test_project3_perception_v2.py",
+   "tests/test_screening_outputs.py",
+   "tests/test_strict_source_domain.py",
+   "tests/test_synthesis_client.py",
+   "tests/test_topup_budget.py",
+   "tests/test_typed_answers_v8.py"
+  ]
+ },
+ "relocation_reference": "docs/migration/path_mapping.json",
+ "moves_recorded": [
+  "configs/project2_prompt_contract.json",
+  "docs/handover/v2/CHANGELOG.md",
+  "docs/handover/v2/README.md",
+  "docs/handover/v2/all_cpu_tests.exit.txt",
+  "docs/handover/v2/all_cpu_tests.log",
+  "docs/handover/v2/before/README.md",
+  "docs/handover/v2/before/scripts/code_sandbox_worker.py",
+  "docs/handover/v2/before/scripts/train_project2_opd.py",
+  "docs/handover/v2/before/src/data/code_sandbox.py",
+  "docs/handover/v2/before/src/losses/reference.py",
+  "docs/handover/v2/before/src/training/opd.py",
+  "docs/handover/v2/code_evaluation/comparator_registry_unreviewed.json",
+  "docs/handover/v2/code_evaluation/docker_comparator_fixtures.json",
+  "docs/handover/v2/code_evaluation/reference-selfcheck.json",
+  "docs/handover/v2/code_evaluation/reference-selfcheck_first_199plus1.json",
+  "docs/handover/v2/code_evaluation/runtime_environment_v2.json",
+  "docs/handover/v2/code_reference_selfcheck.log",
+  "docs/handover/v2/code_reference_selfcheck_v2.log",
+  "docs/handover/v2/code_selfcheck_diagnostic.log",
+  "docs/handover/v2/code_v2_tests.exit.txt",
+  "docs/handover/v2/code_v2_tests.log",
+  "docs/handover/v2/compileall.exit.txt",
+  "docs/handover/v2/compileall.log",
+  "docs/handover/v2/decontamination.exit.txt",
+  "docs/handover/v2/decontamination.log",
+  "docs/handover/v2/decontamination_20261024.json",
+  "docs/handover/v2/decontamination_calibration_before_scan.json",
+  "docs/handover/v2/decontamination_final.exit.txt",
+  "docs/handover/v2/decontamination_final.log",
+  "docs/handover/v2/decontamination_final_pytest.exit.txt",
+  "docs/handover/v2/decontamination_final_pytest.log",
+  "docs/handover/v2/decontamination_v2.exit.txt",
+  "docs/handover/v2/decontamination_v2.log",
+  "docs/handover/v2/delivery_hashes.json",
+  "docs/handover/v2/external_sources/mbpp/.cache/huggingface/.gitignore",
+  "docs/handover/v2/external_sources/mbpp/.cache/huggingface/download/full/train-00000-of-00001.parquet.metadata",
+  "docs/handover/v2/external_sources/mbpp/full/train-00000-of-00001.parquet",
+  "docs/handover/v2/final_50_cpu_tests.exit.txt",
+  "docs/handover/v2/final_50_cpu_tests.log",
+  "docs/handover/v2/immutable_verification.json",
+  "docs/handover/v2/legacy_migration_expected_deltas.exit.txt",
+  "docs/handover/v2/legacy_migration_expected_deltas.log",
+  "docs/handover/v2/mbpp_train_current.jsonl",
+  "docs/handover/v2/mbpp_train_source.json",
+  "docs/handover/v2/memory_estimate.json",
+  "docs/handover/v2/memory_estimate.log",
+  "docs/handover/v2/opd_v2_tests.exit.txt",
+  "docs/handover/v2/opd_v2_tests.log",
+  "docs/handover/v2/opd_v2_tests_retry.exit.txt",
+  "docs/handover/v2/opd_v2_tests_retry.log",
+  "docs/handover/v2/pip_check.exit.txt",
+  "docs/handover/v2/pip_check.log",
+  "docs/handover/v2/pip_freeze.txt",
+  "docs/handover/v2/pip_install.exit.txt",
+  "docs/handover/v2/pip_install.log",
+  "docs/handover/v2/pip_install_retry.exit.txt",
+  "docs/handover/v2/pip_install_retry.log",
+  "docs/handover/v2/preregistration_draft.md",
+  "docs/handover/v2/project2_opd_v2_code_short.json",
+  "docs/handover/v2/project2_opd_v2_math_short.json",
+  "docs/handover/v2/project2_opd_v2_smoke.json",
+  "docs/handover/v2/protected_before.json",
+  "docs/handover/v2/readme_cpu_tests.exit.txt",
+  "docs/handover/v2/readme_cpu_tests.log",
+  "docs/handover/v2/requirements-evalplus-docker.txt",
+  "docs/handover/v2/source_locations.txt",
+  "docs/handover/v2/v2_final_tests.exit.txt",
+  "docs/handover/v2/v2_final_tests.log",
+  "docs/handover/v2/verification_summary.json",
+  "docs/migration/legacy_tools/verify_handover_v2.py",
+  "docs/migration/legacy_tools/verify_migration.py",
+  "docs/migration/migration_manifest.json",
+  "docs/migration/迁移记录/README交接补充前_20261024.md",
+  "docs/migration/迁移记录/README交接补充验收_20261024.json",
+  "docs/migration/迁移记录/migration_manifest_交接补充前_20261024.json",
+  "docs/migration/迁移记录/补充验收.json",
+  "docs/migration/迁移记录/迁移汇总.json",
+  "docs/migration/迁移记录/迁移验收.json",
+  "docs/migration/迁移记录/迁移验收.md",
+  "docs/plan/sources/examples__on_policy_distillation_trainer__run_qwen3_8b_mopd_fsdp.sh",
+  "docs/plan/sources/provenance.json",
+  "docs/plan/sources/verl__experimental__teacher_loop__teacher_manager.py",
+  "docs/plan/sources/verl__trainer__config__distillation__distillation.yaml",
+  "docs/plan/sources/verl__workers__config__distillation.py",
+  "docs/plan/共用规范_强模型合成数据与验证.md",
+  "docs/plan/项目二_OPD提示词与张量接口契约.md",
+  "docs/plan/项目二_双教师在线蒸馏_详细实施方案.md",
+  "requirements/cpu.txt",
+  "requirements/linux-cuda.txt",
+  "scripts/colab_bootstrap.sh"
+ ],
+ "recreated_after_deletion": [
+  {
+   "path": "data/README.md",
+   "bytes": 4578,
+   "note": "deleted with the directory pass, rewritten immediately afterwards"
+  },
+  {
+   "path": "reports/README.md",
+   "bytes": 4312,
+   "note": "deleted with the directory pass, rewritten immediately afterwards"
+  }
+ ]
+}

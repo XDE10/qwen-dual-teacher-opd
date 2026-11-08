@@ -1,0 +1,13 @@
+{
+  "schema": "handover-v2-immutable-check",
+  "protected_files": 60,
+  "protected_changes": [],
+  "intentional_tracked_source_deltas": [
+    "README.md",
+    "scripts/train_project2_opd.py",
+    "src/data/code_sandbox.py"
+  ],
+  "unexpected_source_deltas": [],
+  "published_manifests_updated": false,
+  "reference_py_unchanged": true
+}

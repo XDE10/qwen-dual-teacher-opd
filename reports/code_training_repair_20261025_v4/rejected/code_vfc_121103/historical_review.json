@@ -1,0 +1,19 @@
+{
+  "verdict": "pass",
+  "issues": [],
+  "checks": [
+    "Prefix-sum mod M counting: ans += count of prior equal prefix residues; sample 3 2 / 4 1 5 gives residues 0,0,1,0 -> 3 pairs, matches.",
+    "Constraints N<=1e5, M<=1e9, Ai<=1e9; O(N) with dict, Python ints avoid 32-bit overflow.",
+    "Input format N M then A line matches reference reading; output single integer.",
+    "Reference uses stdin/stdout and complete program; no function-only mismatch."
+  ],
+  "requires_visual": false,
+  "answer_leak": false,
+  "valid_schema": true,
+  "request_id": "46ffe61f-ae40-4ef5-ae4c-861617b7fa77",
+  "raw_review": "{\"verdict\": \"pass\", \"issues\": [], \"checks\": [\"Prefix-sum mod M counting: ans += count of prior equal prefix residues; sample 3 2 / 4 1 5 gives residues 0,0,1,0 -> 3 pairs, matches.\", \"Constraints N<=1e5, M<=1e9, Ai<=1e9; O(N) with dict, Python ints avoid 32-bit overflow.\", \"Input format N M then A line matches reference reading; output single integer.\", \"Reference uses stdin/stdout and complete program; no function-only mismatch.\"], \"requires_visual\": false, \"answer_leak\": false}",
+  "domain": "code",
+  "split": "train",
+  "id": "code/train/code/vfc_121103",
+  "sample_id": "code/vfc_121103"
+}

@@ -1,0 +1,23 @@
+{
+  "candidate_count": 80,
+  "source_proposals": 249,
+  "type": "Inequalities",
+  "raw_tokens": [
+    1200,
+    3800
+  ],
+  "full_sft_max": 4096,
+  "compact_tokens": [
+    150,
+    1500
+  ],
+  "already_API_sampled_ids_excluded": true,
+  "prior_native_only_not_API_included": 30,
+  "development_cases": 12,
+  "files": {
+    "candidates.jsonl": "ba84594393b54f3a4ac6d3713f9e3afb2cd1acb8f3a95f9d1c368ddd04afb7eb",
+    "initial_serial_draft.jsonl": "f2a83139d1d30f169a1b0c1264f56775b31f064b1c95961c07376aa4353d5361",
+    "source_audit.jsonl": "14bd964603b1d217e3afba2baec18b83ae3daca1947f2a26df1ca56d57fb141c"
+  },
+  "verifier_sha": "cb93f12e72aabf3a6fe20ff79018b192cbea7820acbd7ca976a2581f676fb2f4"
+}

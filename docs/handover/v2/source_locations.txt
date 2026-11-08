@@ -1,0 +1,80 @@
+src/training/sampling_v2.py:7:class CommonSupportMask(LogitsProcessor):
+src/training/sampling_v2.py:8:    def __init__(self, support):
+src/training/sampling_v2.py:11:    def __call__(self, input_ids, scores):
+src/training/sampling_v2.py:16:def generation_config(eos, pad, max_new_tokens):
+src/training/sampling_v2.py:34:def chain_description(chain):
+src/training/sampling_v2.py:41:def resolved_contract(model, config, support, device):
+src/training/sampling_v2.py:57:def audit_actual_chain(model, expected):
+src/training/sampling_v2.py:60:    def audited(*args, **kwargs):
+src/training/sampling_v2.py:73:def generate_exact(model, ids, attention, config, support, expected, diagnostics=False):
+src/data/decontamination_v2.py:8:def normalize(text):
+src/data/decontamination_v2.py:12:def tokens(text, numeric=False):
+src/data/decontamination_v2.py:17:def grams(text, numeric=False):
+src/data/decontamination_v2.py:22:def similarity(a, b):
+src/data/decontamination_v2.py:26:def containment(a, b):
+src/data/decontamination_v2.py:34:class Index:
+src/data/decontamination_v2.py:35:    def __init__(self, rows):
+src/data/decontamination_v2.py:49:    def query(self, text, threshold):
+src/data/decontamination_v2.py:68:def calibrate(positive_pairs, negative_pairs):
+src/data/decontamination_v2.py:71:    def score(pair):
+src/losses/chunked_opd_v2.py:9:def row_blocks(mask, sequence_chunk, row_chunk):
+src/losses/chunked_opd_v2.py:19:def distributions(student, teacher, b, rows, support):
+src/losses/chunked_opd_v2.py:30:class _ExactKL(torch.autograd.Function):
+src/losses/chunked_opd_v2.py:32:    def forward(ctx, student, teacher, mask, support, sequence_chunk, row_chunk):
+src/losses/chunked_opd_v2.py:52:    def backward(ctx, grad_output):
+src/losses/chunked_opd_v2.py:67:def chunked_reverse_kl(student, teacher, response_mask, support, sequence_chunk=128, row_chunk=16):
+src/losses/chunked_opd_v2.py:74:def removed_mass_values(logits, mask, support, sequence_chunk=128, row_chunk=16):
+src/losses/chunked_opd_v2.py:83:def summarize_mass(values):
+src/losses/chunked_opd_v2.py:90:def gradient_normalizer(mode, response_tokens, microbatches):
+src/evaluation/code_v2.py:10:def extract_code(text):
+src/evaluation/code_v2.py:19:def compare(actual, expected, spec):
+src/evaluation/code_v2.py:51:def make_job(row, candidate, spec):
+src/evaluation/code_v2.py:86:def evaluate(rows, candidates, registry, executor=None):
+src/evaluation/code_v2.py:104:def provisional_registry(rows):
+tests/test_opd_v2.py:16:def tiny():
+tests/test_opd_v2.py:21:def test_actual_sampling_chain_ignores_hostile_model_defaults():
+tests/test_opd_v2.py:41:def test_peft_actual_chain_is_audited():
+tests/test_opd_v2.py:54:def test_exact_chunked_fp64_value_and_gradient(row_chunk, sequence_chunk):
+tests/test_opd_v2.py:71:def test_chunked_gradcheck_and_empty_response():
+tests/test_opd_v2.py:80:def test_long_short_accumulation_matches_merged_token_gradient():
+tests/test_opd_v2.py:97:def test_mass_uses_all_microbatches_token_weighted():
+tests/test_opd_v2.py:111:def test_v2_forward_disables_teacher_cache_and_updates_student():
+tests/test_opd_v2.py:127:def fake_root(tmp_path):
+tests/test_opd_v2.py:142:def test_identity_rejects_contract_tokenizer_and_source_changes(tmp_path, name):
+tests/test_opd_v2.py:159:def test_checkpoint_closed_set_rejection(tmp_path, attack):
+tests/test_opd_v2.py:183:def test_resume_requires_explicit_future_archive_and_no_duplicate_steps(tmp_path):
+tests/test_opd_v2.py:198:def test_same_teacher_identity_reused_across_domains():
+tests/test_opd_v2.py:204:def test_phase_recorder_cpu_reports_no_gpu_claim():
+tests/test_opd_v2.py:212:def test_real_opd_adapter_optimizer_scheduler_rng_resume_cpu(tmp_path):
+tests/test_opd_v2.py:224:    def update(model, opt, sched):
+src/training/runtime_v2.py:16:def sha(path):
+src/training/runtime_v2.py:20:def read(path):
+src/training/runtime_v2.py:24:def write(path, value):
+src/training/runtime_v2.py:28:def file_identity(paths, root):
+src/training/runtime_v2.py:33:def build_identity(config, generation, root):
+src/training/runtime_v2.py:60:def seal_checkpoint(path):
+src/training/runtime_v2.py:68:def validate_checkpoint(path, identity):
+src/training/runtime_v2.py:91:def prepare_output(out, identity, resume_step=None, policy='reject'):
+src/training/runtime_v2.py:119:class PhaseRecorder:
+src/training/runtime_v2.py:120:    def __init__(self):
+src/training/runtime_v2.py:124:    def phase(self, name):
+src/training/runtime_v2.py:148:def teacher_key(spec):
+tests/test_code_evaluation_v2.py:13:def fixture_row():
+tests/test_code_evaluation_v2.py:19:def test_comparators_have_distinct_float_and_stdout_semantics():
+tests/test_code_evaluation_v2.py:32:def test_worker_and_host_comparators_match_without_executing_worker():
+tests/test_code_evaluation_v2.py:43:def test_extraction_signature_and_fail_closed_registry():
+tests/test_code_evaluation_v2.py:55:def test_reference_candidate_pipeline_transport_with_fake_executor():
+tests/test_code_evaluation_v2.py:58:    def fake(jobs):
+tests/test_code_evaluation_v2.py:69:def test_sandbox_relocates_current_worker_and_never_reuses_historical_mount():
+tests/test_code_evaluation_v2.py:79:def test_official_adapter_enforces_task_set_and_official_protocol(tmp_path):
+tests/test_code_evaluation_v2.py:91:def test_readonly_duplicate_detection_original_paraphrase_numeric_replacement():
+tests/test_code_evaluation_v2.py:103:def test_heavy_paraphrase_limit_is_explicit():
+src/evaluation/evalplus_v2.py:7:def convert_predictions(predictions, tasks):
+src/evaluation/evalplus_v2.py:17:def docker_command(image, dataset, samples_dir, official_file, docker='docker'):
+src/training/opd_v2.py:19:def update_loss(student, teacher, ids, attention, prefix, support,
+src/training/opd_v2.py:38:def save_checkpoint(path, student, optimizer, scheduler, state, identity, telemetry):
+src/training/opd_v2.py:52:def run(config_path, output_root=None):
+src/training/opd_v2.py:219:def cli():
+src/data/code_sandbox_v2.py:13:def docker_binary():
+src/data/code_sandbox_v2.py:19:def environment(worker=None, image=None, record_path=None):
+src/data/code_sandbox_v2.py:39:def run_jobs(jobs, worker=None, image=None, record_path=None):

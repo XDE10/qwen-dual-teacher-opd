@@ -1,0 +1,16 @@
+{
+  "evalplus/humanevalplus": {
+    "revision": "d32357cf319e50e9c8d8dab5ea876c72b0fd321b",
+    "rows": 164,
+    "features": {
+      "test": "{'task_id': Value('string'), 'prompt': Value('string'), 'canonical_solution': Value('string'), 'entry_point': Value('string'), 'test': Value('string')}"
+    }
+  },
+  "evalplus/mbppplus": {
+    "revision": "b2d74c91837c3f2a20c1299ae98133cbe7cfa077",
+    "rows": 378,
+    "features": {
+      "test": "{'task_id': Value('int64'), 'code': Value('string'), 'prompt': Value('string'), 'source_file': Value('string'), 'test_imports': List(Value('string')), 'test_list': List(Value('string')), 'test': Value('string')}"
+    }
+  }
+}

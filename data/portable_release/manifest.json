@@ -1,0 +1,105 @@
+{
+  "summary": {
+    "project1_approved_pairs": 1500,
+    "project1_type_counts": {
+      "Algebra": 525,
+      "Geometry": 300,
+      "Number Theory": 300,
+      "Combinatorics": 225,
+      "Inequalities": 100,
+      "Logic and Puzzles": 50
+    },
+    "project1_exact_target_met": true,
+    "project1_new_approved": 523,
+    "project2_math_train": 2500,
+    "project2_math_dev": 256,
+    "project2_code_train": {
+      "function": 1250,
+      "stdin_stdout": 1250
+    },
+    "project2_code_dev": {
+      "function": 100,
+      "stdin_stdout": 100
+    },
+    "project3_train": 609,
+    "project3_validation": 82,
+    "project3_coverage": {
+      "train": 2096,
+      "validation": 300
+    },
+    "rl_priority_excluding_new_dev": 4810,
+    "gpu_runs": 0,
+    "approval": "itemwise delegated AI plus deterministic checks; not human gold"
+  },
+  "approved_training_files": [
+    "project2_math_train.jsonl",
+    "project2_code_train.jsonl"
+  ],
+  "approved_evaluation_files": [
+    "project2_math_dev.jsonl",
+    "project2_code_dev.jsonl"
+  ],
+  "protected_dev_ids_file": "reserved_dev_ids_never_train.json",
+  "files": {
+    "project2_code_dev.jsonl": "c7e111eade71c4482680cb21e89bf3164e6b01fdbd20895ff295ac11f449813f",
+    "project2_code_train.jsonl": "b031963ff91f6c5410171f8d4e9e8a6ce633b844c35fcf9b08441d04883f707b",
+    "project2_math_dev.jsonl": "a438e79e46893921ec3c14b96deaf2174668902bd0cc234a0345bd51c8c3903c",
+    "project2_math_train.jsonl": "ca9cc409fcd2d43638395431c2fab93f931cfa2969e273174063de9e83316fd4",
+    "reserved_dev_ids_never_train.json": "9faacae140d755542d33fc2da126eb55aed67e9469371164c8896c25bd18af3e"
+  },
+  "inputs": {
+    "data\\topup_v6_20261024\\release\\manifest.json": "cc313be006e90cbb93c3cc7457fd3701466008c86e5d2dd246b037fc068fdc5e",
+    "reports\\strict_v8_20261024\\frozen_protocol.json": "1d87c0e7f2bc77e645810a9489a7d6a3c2a952fae392d24e054e180a11aa65ca",
+    "reports\\strict_v8_20261024\\approved_new_pairs.jsonl": "c05c6bf46fa94fce799e1bcb039d32c683911e6e5d78c40ba00122cfa6e3dc68",
+    "data\\strict_v8_20261024\\geometry\\summary.json": "622010f01ef209b166934142bfb814fc04c7dac6294007d828716e00e358a290",
+    "reports\\strict_v8_20261024\\frozen_protocol_resume.json": "11fce453df41c8b4a187773928061e7b3dc89de7a80e4140785ca147ab952b59",
+    "reports\\strict_v8_20261024\\approved_extra_pairs.jsonl": "02aa6fb13a1ede72f8ea1d298bb3da268b83feb32b670c29618778d4996503fe",
+    "reports\\strict_v8_20261024\\source_profile_quarantine.json": "8e20870a5bf0b088d85299f5470cc8ceee84dfebfc4696ea17a157daa73b2155",
+    "src\\data\\geometry_split_guard.py": "d34e3a339780044e3c9f6408e86edf930382155e14c749246b02f32c4730d7b5",
+    "data\\project3_audit\\geometry3k_intergps_links.jsonl": "f738dd5517c4d09071389974362b0fd80cc77e41935b40567460c42e66efa422"
+  },
+  "no_unreviewed_or_short_solution_override": true,
+  "migration": {
+    "source_manifest": "data/strict_v8_20261024/release/manifest.json",
+    "source_manifest_sha256": "d9f42f6ead10b1ba22977c37de69e158ee1ec92494d2cc2c737425e081b4468c",
+    "project": 2,
+    "changes": [
+      {
+        "source": "data/strict_v8_20261024/release/project2_code_dev.jsonl",
+        "source_sha256": "c7e111eade71c4482680cb21e89bf3164e6b01fdbd20895ff295ac11f449813f",
+        "portable": "data/portable_release/project2_code_dev.jsonl",
+        "portable_sha256": "c7e111eade71c4482680cb21e89bf3164e6b01fdbd20895ff295ac11f449813f",
+        "change": "byte_identical"
+      },
+      {
+        "source": "data/strict_v8_20261024/release/project2_code_train.jsonl",
+        "source_sha256": "b031963ff91f6c5410171f8d4e9e8a6ce633b844c35fcf9b08441d04883f707b",
+        "portable": "data/portable_release/project2_code_train.jsonl",
+        "portable_sha256": "b031963ff91f6c5410171f8d4e9e8a6ce633b844c35fcf9b08441d04883f707b",
+        "change": "byte_identical"
+      },
+      {
+        "source": "data/strict_v8_20261024/release/project2_math_dev.jsonl",
+        "source_sha256": "a438e79e46893921ec3c14b96deaf2174668902bd0cc234a0345bd51c8c3903c",
+        "portable": "data/portable_release/project2_math_dev.jsonl",
+        "portable_sha256": "a438e79e46893921ec3c14b96deaf2174668902bd0cc234a0345bd51c8c3903c",
+        "change": "byte_identical"
+      },
+      {
+        "source": "data/strict_v8_20261024/release/project2_math_train.jsonl",
+        "source_sha256": "ca9cc409fcd2d43638395431c2fab93f931cfa2969e273174063de9e83316fd4",
+        "portable": "data/portable_release/project2_math_train.jsonl",
+        "portable_sha256": "ca9cc409fcd2d43638395431c2fab93f931cfa2969e273174063de9e83316fd4",
+        "change": "byte_identical"
+      },
+      {
+        "source": "data/strict_v8_20261024/release/reserved_dev_ids_never_train.json",
+        "source_sha256": "9faacae140d755542d33fc2da126eb55aed67e9469371164c8896c25bd18af3e",
+        "portable": "data/portable_release/reserved_dev_ids_never_train.json",
+        "portable_sha256": "9faacae140d755542d33fc2da126eb55aed67e9469371164c8896c25bd18af3e",
+        "change": "byte_identical"
+      }
+    ],
+    "approval_scope": "Inherited original row approvals; no new approval or content changes"
+  }
+}

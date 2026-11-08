@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environments
+.venv/
+venv/
+env/
+
+# Training / evaluation outputs (never commit runs)
+runs/
+outputs/
+checkpoints/
+*.ckpt
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Local logs and OS/editor noise
+*.log
+!reports/**/*.log
+!docs/handover/**/*.log
+.DS_Store
+Thumbs.db
+desktop.ini
+*:Zone.Identifier
+*.Zone.Identifier
+*.swp
+*.swo
+*~
+.idea/
+.vscode/

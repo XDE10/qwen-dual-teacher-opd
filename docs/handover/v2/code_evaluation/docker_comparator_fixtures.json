@@ -1,0 +1,20 @@
+{
+  "python": "3.8.20 (default, Sep 27 2024, 06:05:23) \n[GCC 12.2.0]",
+  "results": [
+    {
+      "sample_id": "fixture_float_stdio",
+      "status": "passed",
+      "checked": 1
+    },
+    {
+      "sample_id": "fixture_exact_stdio_reject",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "fixture_unordered_function",
+      "status": "passed",
+      "checked": 1
+    }
+  ]
+}

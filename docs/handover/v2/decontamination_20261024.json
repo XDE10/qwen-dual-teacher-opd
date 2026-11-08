@@ -1,0 +1,3421 @@
+{
+  "schema": "decontamination-v2",
+  "status": "read-only candidate audit; no data removal",
+  "sources": {
+    "math_train": {
+      "path": "data/portable_release/project2_math_train.jsonl",
+      "sha256": "ca9cc409fcd2d43638395431c2fab93f931cfa2969e273174063de9e83316fd4",
+      "rows": 2500
+    },
+    "code_train": {
+      "path": "data/portable_release/project2_code_train.jsonl",
+      "sha256": "b031963ff91f6c5410171f8d4e9e8a6ce633b844c35fcf9b08441d04883f707b",
+      "rows": 2500
+    },
+    "math_dev": {
+      "path": "data/portable_release/project2_math_dev.jsonl",
+      "sha256": "a438e79e46893921ec3c14b96deaf2174668902bd0cc234a0345bd51c8c3903c",
+      "rows": 256
+    },
+    "code_dev": {
+      "path": "data/portable_release/project2_code_dev.jsonl",
+      "sha256": "c7e111eade71c4482680cb21e89bf3164e6b01fdbd20895ff295ac11f449813f",
+      "rows": 200
+    },
+    "math500": {
+      "path": "data/math/math500_test.jsonl",
+      "sha256": "4a8ada6bff87e172a59d78467764e781ae92460a4c6a3ec23f11e99ecd97c04e",
+      "rows": 500
+    },
+    "gsm8k": {
+      "path": "data/math/gsm8k_test.jsonl",
+      "sha256": "a70d6a96a1d0db216c5543f044e9dbe3cb1c2a28a26abe4d012b10d669057569",
+      "rows": 1319
+    },
+    "humaneval_plus": {
+      "path": "data/code_benchmarks/official/HumanEvalPlus-v0.1.10.jsonl",
+      "sha256": "42526ec0e7d5f3ee0b06d6ced98f8c8bae3d76519151bfb3d36f79010645bd7f",
+      "rows": 164
+    },
+    "mbpp_plus": {
+      "path": "data/code_benchmarks/official/MbppPlus-v0.2.0.jsonl",
+      "sha256": "b54e762755248ca411b523c917fa9f93c07b5ff2966bf60b3917b853926a3dad",
+      "rows": 378
+    }
+  },
+  "calibration": {
+    "threshold": 0.5,
+    "target_recall": 0.95,
+    "target_reached": false,
+    "selection": "No grid threshold reached 0.95 recall; use lowest grid 0.5 as unvalidated screening threshold before scan",
+    "known_positive_count": 108,
+    "positive_recall": 0.7037037037037037,
+    "negative_count": 108,
+    "negative_false_positive_rate": 0.0,
+    "positive_scores": [
+      1.0,
+      0.18181818181818182,
+      0.21428571428571427,
+      1.0,
+      1.0,
+      0.08333333333333333,
+      1.0,
+      0.08333333333333333,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.25,
+      0.36363636363636365,
+      0.2,
+      0.5454545454545454,
+      0.15384615384615385,
+      0.25,
+      0.5384615384615384,
+      0.6923076923076923,
+      0.6666666666666666,
+      1.0,
+      0.9230769230769231,
+      1.0,
+      0.875,
+      0.0,
+      1.0,
+      0.03571428571428571,
+      1.0,
+      1.0,
+      0.05555555555555555,
+      1.0,
+      0.5,
+      0.11578947368421053,
+      0.01639344262295082,
+      0.08333333333333333,
+      0.7142857142857143,
+      0.4166666666666667,
+      0.0,
+      0.0,
+      1.0,
+      0.8888888888888888,
+      1.0,
+      1.0,
+      0.8,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.7647058823529411,
+      0.9230769230769231,
+      1.0,
+      1.0,
+      1.0,
+      0.4,
+      0.4444444444444444,
+      0.06666666666666667,
+      1.0,
+      1.0,
+      0.045454545454545456,
+      0.3333333333333333,
+      0.5384615384615384,
+      1.0,
+      1.0,
+      0.3333333333333333,
+      0.29411764705882354,
+      0.5,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.8571428571428571,
+      1.0,
+      1.0,
+      0.9,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.14285714285714285,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.0,
+      1.0,
+      1.0,
+      0.8333333333333334,
+      0.4166666666666667,
+      0.6875,
+      1.0,
+      1.0,
+      1.0,
+      0.7058823529411765
+    ],
+    "negative_scores": [
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.2,
+      0.0,
+      0.2,
+      0.2,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.2,
+      0.0,
+      0.2,
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.14285714285714285,
+      0.0,
+      0.0,
+      0.0,
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.13333333333333333,
+      0.0,
+      0.0,
+      0.0,
+      0.2,
+      0.0,
+      0.0,
+      0.2,
+      0.0,
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.06666666666666667,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.2,
+      0.2,
+      0.0,
+      0.03773584905660377,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.0,
+      0.0,
+      0.2222222222222222,
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.0
+    ],
+    "limitation": "Known MBPP identity overlaps do not establish recall for free paraphrases or cross-domain math"
+  },
+  "sensitivity_threshold": 0.8,
+  "sensitivity_0_8": {
+    "finding_pairs": 34,
+    "candidate_pairs": [
+      {
+        "train_id": "math/train/01897",
+        "target_dataset": "math500",
+        "target_id": "math500/test/00032"
+      },
+      {
+        "train_id": "math/train/02233",
+        "target_dataset": "math500",
+        "target_id": "math500/test/00348"
+      },
+      {
+        "train_id": "math/train/05415",
+        "target_dataset": "math500",
+        "target_id": "math500/test/00415"
+      },
+      {
+        "train_id": "math/train/00820",
+        "target_dataset": "math500",
+        "target_id": "math500/test/00183"
+      },
+      {
+        "train_id": "math/train/05076",
+        "target_dataset": "math500",
+        "target_id": "math500/test/00415"
+      },
+      {
+        "train_id": "math/train/06067",
+        "target_dataset": "math500",
+        "target_id": "math500/test/00256"
+      },
+      {
+        "train_id": "math/train/01922",
+        "target_dataset": "math500",
+        "target_id": "math500/test/00226"
+      },
+      {
+        "train_id": "math/train/07136",
+        "target_dataset": "math500",
+        "target_id": "math500/test/00000"
+      },
+      {
+        "train_id": "math/train/02455",
+        "target_dataset": "math500",
+        "target_id": "math500/test/00348"
+      },
+      {
+        "train_id": "math/train/03417",
+        "target_dataset": "math500",
+        "target_id": "math500/test/00120"
+      },
+      {
+        "train_id": "math/train/02355",
+        "target_dataset": "math500",
+        "target_id": "math500/test/00348"
+      },
+      {
+        "train_id": "math/train/06045",
+        "target_dataset": "math500",
+        "target_id": "math500/test/00031"
+      },
+      {
+        "train_id": "math/train/01403",
+        "target_dataset": "math500",
+        "target_id": "math500/test/00336"
+      },
+      {
+        "train_id": "math/train/01081",
+        "target_dataset": "math500",
+        "target_id": "math500/test/00336"
+      },
+      {
+        "train_id": "math/train/01164",
+        "target_dataset": "math500",
+        "target_id": "math500/test/00336"
+      },
+      {
+        "train_id": "math/train/01431",
+        "target_dataset": "math500",
+        "target_id": "math500/test/00336"
+      },
+      {
+        "train_id": "math/train/02215",
+        "target_dataset": "math500",
+        "target_id": "math500/test/00348"
+      },
+      {
+        "train_id": "math/train/06602",
+        "target_dataset": "math500",
+        "target_id": "math500/test/00031"
+      },
+      {
+        "train_id": "math/train/07208",
+        "target_dataset": "math500",
+        "target_id": "math500/test/00255"
+      },
+      {
+        "train_id": "math/train/07068",
+        "target_dataset": "math500",
+        "target_id": "math500/test/00224"
+      },
+      {
+        "train_id": "math/train/07351",
+        "target_dataset": "math500",
+        "target_id": "math500/test/00248"
+      },
+      {
+        "train_id": "math/train/07287",
+        "target_dataset": "math500",
+        "target_id": "math500/test/00000"
+      },
+      {
+        "train_id": "math/train/02044",
+        "target_dataset": "math500",
+        "target_id": "math500/test/00115"
+      },
+      {
+        "train_id": "math/train/04765",
+        "target_dataset": "math500",
+        "target_id": "math500/test/00415"
+      },
+      {
+        "train_id": "math/train/01509",
+        "target_dataset": "math500",
+        "target_id": "math500/test/00237"
+      },
+      {
+        "train_id": "gsm8k/train/01314",
+        "target_dataset": "gsm8k",
+        "target_id": "gsm8k/test/00602"
+      },
+      {
+        "train_id": "math/train/05470",
+        "target_dataset": "math_dev",
+        "target_id": "math/train/04815"
+      },
+      {
+        "train_id": "math/train/05764",
+        "target_dataset": "math_dev",
+        "target_id": "math/train/06506"
+      },
+      {
+        "train_id": "math/train/01922",
+        "target_dataset": "math_dev",
+        "target_id": "math/train/01901"
+      },
+      {
+        "train_id": "math/train/07136",
+        "target_dataset": "math_dev",
+        "target_id": "math/train/07302"
+      },
+      {
+        "train_id": "math/train/01662",
+        "target_dataset": "math_dev",
+        "target_id": "math/train/01611"
+      },
+      {
+        "train_id": "math/train/07287",
+        "target_dataset": "math_dev",
+        "target_id": "math/train/07302"
+      },
+      {
+        "train_id": "math/train/06600",
+        "target_dataset": "math_dev",
+        "target_id": "math/train/05926"
+      },
+      {
+        "train_id": "code/vfc_121257",
+        "target_dataset": "code_dev",
+        "target_id": "code/vfc_119319"
+      }
+    ],
+    "hypothetical_code_removals": {
+      "stdin_stdout": 1
+    }
+  },
+  "mbpp_train_source": {
+    "status": "downloaded dataset only; no model",
+    "repo": "google-research-datasets/mbpp",
+    "revision": "4bb6404fdc6cacfda99d4ac4205087b89d32030c",
+    "file": "full/train-00000-of-00001.parquet",
+    "sha256": "09d125ca31edacb7800be8c67c45abff618faf0214ff551291817d06bdb914ae",
+    "rows": 374
+  },
+  "mbpp_train_plus_id_overlaps": [
+    {
+      "train_id": 602,
+      "plus_id": "Mbpp/602"
+    },
+    {
+      "train_id": 603,
+      "plus_id": "Mbpp/603"
+    },
+    {
+      "train_id": 604,
+      "plus_id": "Mbpp/604"
+    },
+    {
+      "train_id": 605,
+      "plus_id": "Mbpp/605"
+    },
+    {
+      "train_id": 606,
+      "plus_id": "Mbpp/606"
+    },
+    {
+      "train_id": 607,
+      "plus_id": "Mbpp/607"
+    },
+    {
+      "train_id": 608,
+      "plus_id": "Mbpp/608"
+    },
+    {
+      "train_id": 610,
+      "plus_id": "Mbpp/610"
+    },
+    {
+      "train_id": 611,
+      "plus_id": "Mbpp/611"
+    },
+    {
+      "train_id": 612,
+      "plus_id": "Mbpp/612"
+    },
+    {
+      "train_id": 614,
+      "plus_id": "Mbpp/614"
+    },
+    {
+      "train_id": 615,
+      "plus_id": "Mbpp/615"
+    },
+    {
+      "train_id": 616,
+      "plus_id": "Mbpp/616"
+    },
+    {
+      "train_id": 618,
+      "plus_id": "Mbpp/618"
+    },
+    {
+      "train_id": 619,
+      "plus_id": "Mbpp/619"
+    },
+    {
+      "train_id": 620,
+      "plus_id": "Mbpp/620"
+    },
+    {
+      "train_id": 622,
+      "plus_id": "Mbpp/622"
+    },
+    {
+      "train_id": 623,
+      "plus_id": "Mbpp/623"
+    },
+    {
+      "train_id": 624,
+      "plus_id": "Mbpp/624"
+    },
+    {
+      "train_id": 626,
+      "plus_id": "Mbpp/626"
+    },
+    {
+      "train_id": 628,
+      "plus_id": "Mbpp/628"
+    },
+    {
+      "train_id": 629,
+      "plus_id": "Mbpp/629"
+    },
+    {
+      "train_id": 630,
+      "plus_id": "Mbpp/630"
+    },
+    {
+      "train_id": 631,
+      "plus_id": "Mbpp/631"
+    },
+    {
+      "train_id": 632,
+      "plus_id": "Mbpp/632"
+    },
+    {
+      "train_id": 633,
+      "plus_id": "Mbpp/633"
+    },
+    {
+      "train_id": 635,
+      "plus_id": "Mbpp/635"
+    },
+    {
+      "train_id": 637,
+      "plus_id": "Mbpp/637"
+    },
+    {
+      "train_id": 638,
+      "plus_id": "Mbpp/638"
+    },
+    {
+      "train_id": 639,
+      "plus_id": "Mbpp/639"
+    },
+    {
+      "train_id": 641,
+      "plus_id": "Mbpp/641"
+    },
+    {
+      "train_id": 643,
+      "plus_id": "Mbpp/643"
+    },
+    {
+      "train_id": 644,
+      "plus_id": "Mbpp/644"
+    },
+    {
+      "train_id": 720,
+      "plus_id": "Mbpp/720"
+    },
+    {
+      "train_id": 721,
+      "plus_id": "Mbpp/721"
+    },
+    {
+      "train_id": 722,
+      "plus_id": "Mbpp/722"
+    },
+    {
+      "train_id": 723,
+      "plus_id": "Mbpp/723"
+    },
+    {
+      "train_id": 724,
+      "plus_id": "Mbpp/724"
+    },
+    {
+      "train_id": 725,
+      "plus_id": "Mbpp/725"
+    },
+    {
+      "train_id": 726,
+      "plus_id": "Mbpp/726"
+    },
+    {
+      "train_id": 728,
+      "plus_id": "Mbpp/728"
+    },
+    {
+      "train_id": 730,
+      "plus_id": "Mbpp/730"
+    },
+    {
+      "train_id": 731,
+      "plus_id": "Mbpp/731"
+    },
+    {
+      "train_id": 732,
+      "plus_id": "Mbpp/732"
+    },
+    {
+      "train_id": 733,
+      "plus_id": "Mbpp/733"
+    },
+    {
+      "train_id": 734,
+      "plus_id": "Mbpp/734"
+    },
+    {
+      "train_id": 735,
+      "plus_id": "Mbpp/735"
+    },
+    {
+      "train_id": 736,
+      "plus_id": "Mbpp/736"
+    },
+    {
+      "train_id": 737,
+      "plus_id": "Mbpp/737"
+    },
+    {
+      "train_id": 739,
+      "plus_id": "Mbpp/739"
+    },
+    {
+      "train_id": 740,
+      "plus_id": "Mbpp/740"
+    },
+    {
+      "train_id": 741,
+      "plus_id": "Mbpp/741"
+    },
+    {
+      "train_id": 742,
+      "plus_id": "Mbpp/742"
+    },
+    {
+      "train_id": 743,
+      "plus_id": "Mbpp/743"
+    },
+    {
+      "train_id": 744,
+      "plus_id": "Mbpp/744"
+    },
+    {
+      "train_id": 745,
+      "plus_id": "Mbpp/745"
+    },
+    {
+      "train_id": 748,
+      "plus_id": "Mbpp/748"
+    },
+    {
+      "train_id": 749,
+      "plus_id": "Mbpp/749"
+    },
+    {
+      "train_id": 750,
+      "plus_id": "Mbpp/750"
+    },
+    {
+      "train_id": 751,
+      "plus_id": "Mbpp/751"
+    },
+    {
+      "train_id": 752,
+      "plus_id": "Mbpp/752"
+    },
+    {
+      "train_id": 753,
+      "plus_id": "Mbpp/753"
+    },
+    {
+      "train_id": 754,
+      "plus_id": "Mbpp/754"
+    },
+    {
+      "train_id": 755,
+      "plus_id": "Mbpp/755"
+    },
+    {
+      "train_id": 757,
+      "plus_id": "Mbpp/757"
+    },
+    {
+      "train_id": 758,
+      "plus_id": "Mbpp/758"
+    },
+    {
+      "train_id": 759,
+      "plus_id": "Mbpp/759"
+    },
+    {
+      "train_id": 760,
+      "plus_id": "Mbpp/760"
+    },
+    {
+      "train_id": 762,
+      "plus_id": "Mbpp/762"
+    },
+    {
+      "train_id": 763,
+      "plus_id": "Mbpp/763"
+    },
+    {
+      "train_id": 764,
+      "plus_id": "Mbpp/764"
+    },
+    {
+      "train_id": 765,
+      "plus_id": "Mbpp/765"
+    },
+    {
+      "train_id": 766,
+      "plus_id": "Mbpp/766"
+    },
+    {
+      "train_id": 767,
+      "plus_id": "Mbpp/767"
+    },
+    {
+      "train_id": 769,
+      "plus_id": "Mbpp/769"
+    },
+    {
+      "train_id": 770,
+      "plus_id": "Mbpp/770"
+    },
+    {
+      "train_id": 771,
+      "plus_id": "Mbpp/771"
+    },
+    {
+      "train_id": 772,
+      "plus_id": "Mbpp/772"
+    },
+    {
+      "train_id": 773,
+      "plus_id": "Mbpp/773"
+    },
+    {
+      "train_id": 775,
+      "plus_id": "Mbpp/775"
+    },
+    {
+      "train_id": 777,
+      "plus_id": "Mbpp/777"
+    },
+    {
+      "train_id": 778,
+      "plus_id": "Mbpp/778"
+    },
+    {
+      "train_id": 780,
+      "plus_id": "Mbpp/780"
+    },
+    {
+      "train_id": 781,
+      "plus_id": "Mbpp/781"
+    },
+    {
+      "train_id": 782,
+      "plus_id": "Mbpp/782"
+    },
+    {
+      "train_id": 784,
+      "plus_id": "Mbpp/784"
+    },
+    {
+      "train_id": 785,
+      "plus_id": "Mbpp/785"
+    },
+    {
+      "train_id": 786,
+      "plus_id": "Mbpp/786"
+    },
+    {
+      "train_id": 787,
+      "plus_id": "Mbpp/787"
+    },
+    {
+      "train_id": 788,
+      "plus_id": "Mbpp/788"
+    },
+    {
+      "train_id": 790,
+      "plus_id": "Mbpp/790"
+    },
+    {
+      "train_id": 791,
+      "plus_id": "Mbpp/791"
+    },
+    {
+      "train_id": 792,
+      "plus_id": "Mbpp/792"
+    },
+    {
+      "train_id": 793,
+      "plus_id": "Mbpp/793"
+    },
+    {
+      "train_id": 794,
+      "plus_id": "Mbpp/794"
+    },
+    {
+      "train_id": 796,
+      "plus_id": "Mbpp/796"
+    },
+    {
+      "train_id": 797,
+      "plus_id": "Mbpp/797"
+    },
+    {
+      "train_id": 798,
+      "plus_id": "Mbpp/798"
+    },
+    {
+      "train_id": 799,
+      "plus_id": "Mbpp/799"
+    },
+    {
+      "train_id": 800,
+      "plus_id": "Mbpp/800"
+    },
+    {
+      "train_id": 801,
+      "plus_id": "Mbpp/801"
+    },
+    {
+      "train_id": 803,
+      "plus_id": "Mbpp/803"
+    },
+    {
+      "train_id": 804,
+      "plus_id": "Mbpp/804"
+    },
+    {
+      "train_id": 805,
+      "plus_id": "Mbpp/805"
+    },
+    {
+      "train_id": 806,
+      "plus_id": "Mbpp/806"
+    },
+    {
+      "train_id": 807,
+      "plus_id": "Mbpp/807"
+    },
+    {
+      "train_id": 808,
+      "plus_id": "Mbpp/808"
+    },
+    {
+      "train_id": 809,
+      "plus_id": "Mbpp/809"
+    }
+  ],
+  "known_108_reproduced": true,
+  "findings": [
+    {
+      "train_id": "math/train/01079",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00427",
+      "exact": false,
+      "jaccard_5gram": 0.27586206896551724,
+      "numeric_template_5gram": 0.4666666666666667,
+      "containment_5gram": 0.65625,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07055",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00205",
+      "exact": false,
+      "jaccard_5gram": 0.17415730337078653,
+      "numeric_template_5gram": 0.2781954887218045,
+      "containment_5gram": 0.5211267605633803,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07002",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00351",
+      "exact": false,
+      "jaccard_5gram": 0.12903225806451613,
+      "numeric_template_5gram": 0.35135135135135137,
+      "containment_5gram": 0.5416666666666666,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/01897",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00032",
+      "exact": false,
+      "jaccard_5gram": 0.3090909090909091,
+      "numeric_template_5gram": 0.44,
+      "containment_5gram": 0.8461538461538461,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07147",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00255",
+      "exact": false,
+      "jaccard_5gram": 0.21818181818181817,
+      "numeric_template_5gram": 0.21818181818181817,
+      "containment_5gram": 0.5217391304347826,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/05826",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00283",
+      "exact": false,
+      "jaccard_5gram": 0.10204081632653061,
+      "numeric_template_5gram": 0.23684210526315788,
+      "containment_5gram": 0.5,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06808",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00255",
+      "exact": false,
+      "jaccard_5gram": 0.25806451612903225,
+      "numeric_template_5gram": 0.25806451612903225,
+      "containment_5gram": 0.5217391304347826,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07222",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00179",
+      "exact": false,
+      "jaccard_5gram": 0.40476190476190477,
+      "numeric_template_5gram": 0.4409937888198758,
+      "containment_5gram": 0.6635514018691588,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/04631",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00259",
+      "exact": false,
+      "jaccard_5gram": 0.10344827586206896,
+      "numeric_template_5gram": 0.3333333333333333,
+      "containment_5gram": 0.5,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07081",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00095",
+      "exact": false,
+      "jaccard_5gram": 0.047619047619047616,
+      "numeric_template_5gram": 0.26153846153846155,
+      "containment_5gram": 0.6071428571428571,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07081",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00370",
+      "exact": false,
+      "jaccard_5gram": 0.1694915254237288,
+      "numeric_template_5gram": 0.4883720930232558,
+      "containment_5gram": 0.75,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07081",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00408",
+      "exact": false,
+      "jaccard_5gram": 0.08571428571428572,
+      "numeric_template_5gram": 0.3469387755102041,
+      "containment_5gram": 0.6071428571428571,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/02233",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00348",
+      "exact": false,
+      "jaccard_5gram": 0.06666666666666667,
+      "numeric_template_5gram": 1.0,
+      "containment_5gram": 1.0,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/03658",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00256",
+      "exact": false,
+      "jaccard_5gram": 0.11392405063291139,
+      "numeric_template_5gram": 0.3939393939393939,
+      "containment_5gram": 0.6842105263157895,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/04565",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00134",
+      "exact": false,
+      "jaccard_5gram": 0.4397163120567376,
+      "numeric_template_5gram": 0.5703125,
+      "containment_5gram": 0.7448979591836735,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/05415",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00415",
+      "exact": false,
+      "jaccard_5gram": 0.0967741935483871,
+      "numeric_template_5gram": 0.5,
+      "containment_5gram": 0.8461538461538461,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07079",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00370",
+      "exact": false,
+      "jaccard_5gram": 0.14545454545454545,
+      "numeric_template_5gram": 0.2826086956521739,
+      "containment_5gram": 0.5652173913043478,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07079",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00408",
+      "exact": false,
+      "jaccard_5gram": 0.07692307692307693,
+      "numeric_template_5gram": 0.2708333333333333,
+      "containment_5gram": 0.5652173913043478,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06276",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00054",
+      "exact": false,
+      "jaccard_5gram": 0.0,
+      "numeric_template_5gram": 0.2222222222222222,
+      "containment_5gram": 0.5454545454545454,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06276",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00433",
+      "exact": false,
+      "jaccard_5gram": 0.0,
+      "numeric_template_5gram": 0.21428571428571427,
+      "containment_5gram": 0.5,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/00820",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00183",
+      "exact": false,
+      "jaccard_5gram": 0.5714285714285714,
+      "numeric_template_5gram": 1.0,
+      "containment_5gram": 1.0,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/01248",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00354",
+      "exact": false,
+      "jaccard_5gram": 0.11538461538461539,
+      "numeric_template_5gram": 0.5263157894736842,
+      "containment_5gram": 0.7142857142857143,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07013",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00206",
+      "exact": false,
+      "jaccard_5gram": 0.28346456692913385,
+      "numeric_template_5gram": 0.46808510638297873,
+      "containment_5gram": 0.6984126984126984,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07013",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00288",
+      "exact": false,
+      "jaccard_5gram": 0.2206896551724138,
+      "numeric_template_5gram": 0.3333333333333333,
+      "containment_5gram": 0.5081967213114754,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/05076",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00415",
+      "exact": false,
+      "jaccard_5gram": 0.0967741935483871,
+      "numeric_template_5gram": 0.5,
+      "containment_5gram": 0.8461538461538461,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06698",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00229",
+      "exact": false,
+      "jaccard_5gram": 0.375,
+      "numeric_template_5gram": 0.375,
+      "containment_5gram": 0.6226415094339622,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/04346",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00304",
+      "exact": false,
+      "jaccard_5gram": 0.1956521739130435,
+      "numeric_template_5gram": 0.3170731707317073,
+      "containment_5gram": 0.5416666666666666,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07385",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00370",
+      "exact": false,
+      "jaccard_5gram": 0.07446808510638298,
+      "numeric_template_5gram": 0.2972972972972973,
+      "containment_5gram": 0.6111111111111112,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07385",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00408",
+      "exact": false,
+      "jaccard_5gram": 0.21348314606741572,
+      "numeric_template_5gram": 0.4411764705882353,
+      "containment_5gram": 0.7894736842105263,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06067",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00256",
+      "exact": false,
+      "jaccard_5gram": 0.09090909090909091,
+      "numeric_template_5gram": 0.5454545454545454,
+      "containment_5gram": 0.8,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06067",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00348",
+      "exact": false,
+      "jaccard_5gram": 0.0,
+      "numeric_template_5gram": 0.21052631578947367,
+      "containment_5gram": 0.5,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07011",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00146",
+      "exact": false,
+      "jaccard_5gram": 0.02857142857142857,
+      "numeric_template_5gram": 0.2857142857142857,
+      "containment_5gram": 0.5,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06257",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00054",
+      "exact": false,
+      "jaccard_5gram": 0.0,
+      "numeric_template_5gram": 0.3,
+      "containment_5gram": 0.5454545454545454,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06257",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00430",
+      "exact": false,
+      "jaccard_5gram": 0.07692307692307693,
+      "numeric_template_5gram": 0.4,
+      "containment_5gram": 0.6153846153846154,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06257",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00433",
+      "exact": false,
+      "jaccard_5gram": 0.0,
+      "numeric_template_5gram": 0.2857142857142857,
+      "containment_5gram": 0.5,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/01922",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00226",
+      "exact": false,
+      "jaccard_5gram": 0.42857142857142855,
+      "numeric_template_5gram": 1.0,
+      "containment_5gram": 1.0,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07136",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00000",
+      "exact": false,
+      "jaccard_5gram": 0.6451612903225806,
+      "numeric_template_5gram": 0.6451612903225806,
+      "containment_5gram": 0.851063829787234,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/02455",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00348",
+      "exact": false,
+      "jaccard_5gram": 0.06666666666666667,
+      "numeric_template_5gram": 1.0,
+      "containment_5gram": 1.0,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/02768",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00372",
+      "exact": false,
+      "jaccard_5gram": 0.1425233644859813,
+      "numeric_template_5gram": 0.23728813559322035,
+      "containment_5gram": 0.5263157894736842,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/03417",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00120",
+      "exact": false,
+      "jaccard_5gram": 0.5384615384615384,
+      "numeric_template_5gram": 0.5384615384615384,
+      "containment_5gram": 0.8333333333333334,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/04406",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00118",
+      "exact": false,
+      "jaccard_5gram": 0.3137254901960784,
+      "numeric_template_5gram": 0.3137254901960784,
+      "containment_5gram": 0.6666666666666666,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/02355",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00348",
+      "exact": false,
+      "jaccard_5gram": 0.06666666666666667,
+      "numeric_template_5gram": 1.0,
+      "containment_5gram": 1.0,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07483",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00351",
+      "exact": false,
+      "jaccard_5gram": 0.017543859649122806,
+      "numeric_template_5gram": 0.30303030303030304,
+      "containment_5gram": 0.5263157894736842,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06045",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00031",
+      "exact": false,
+      "jaccard_5gram": 0.1111111111111111,
+      "numeric_template_5gram": 1.0,
+      "containment_5gram": 0.0,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/05566",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00240",
+      "exact": false,
+      "jaccard_5gram": 0.16271186440677965,
+      "numeric_template_5gram": 0.3142857142857143,
+      "containment_5gram": 0.5,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07179",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00109",
+      "exact": false,
+      "jaccard_5gram": 0.17346938775510204,
+      "numeric_template_5gram": 0.2777777777777778,
+      "containment_5gram": 0.5882352941176471,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/01403",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00113",
+      "exact": false,
+      "jaccard_5gram": 0.06666666666666667,
+      "numeric_template_5gram": 0.3181818181818182,
+      "containment_5gram": 0.6363636363636364,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/01403",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00336",
+      "exact": false,
+      "jaccard_5gram": 0.1,
+      "numeric_template_5gram": 1.0,
+      "containment_5gram": 1.0,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/02061",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00226",
+      "exact": false,
+      "jaccard_5gram": 0.18181818181818182,
+      "numeric_template_5gram": 0.56,
+      "containment_5gram": 0.7368421052631579,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06252",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00135",
+      "exact": false,
+      "jaccard_5gram": 0.5466666666666666,
+      "numeric_template_5gram": 0.5466666666666666,
+      "containment_5gram": 0.7068965517241379,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/01081",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00336",
+      "exact": false,
+      "jaccard_5gram": 0.0,
+      "numeric_template_5gram": 0.6153846153846154,
+      "containment_5gram": 0.8,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/04352",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00051",
+      "exact": false,
+      "jaccard_5gram": 0.11764705882352941,
+      "numeric_template_5gram": 0.3103448275862069,
+      "containment_5gram": 0.5625,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/00871",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00146",
+      "exact": false,
+      "jaccard_5gram": 0.05,
+      "numeric_template_5gram": 0.2903225806451613,
+      "containment_5gram": 0.5625,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/03791",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00147",
+      "exact": false,
+      "jaccard_5gram": 0.3181818181818182,
+      "numeric_template_5gram": 0.359375,
+      "containment_5gram": 0.5476190476190477,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/03791",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00332",
+      "exact": false,
+      "jaccard_5gram": 0.34782608695652173,
+      "numeric_template_5gram": 0.34782608695652173,
+      "containment_5gram": 0.5333333333333333,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/00342",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00430",
+      "exact": false,
+      "jaccard_5gram": 0.06451612903225806,
+      "numeric_template_5gram": 0.2692307692307692,
+      "containment_5gram": 0.5384615384615384,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07400",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00095",
+      "exact": false,
+      "jaccard_5gram": 0.05952380952380952,
+      "numeric_template_5gram": 0.22058823529411764,
+      "containment_5gram": 0.5172413793103449,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07400",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00370",
+      "exact": false,
+      "jaccard_5gram": 0.07692307692307693,
+      "numeric_template_5gram": 0.4444444444444444,
+      "containment_5gram": 0.6896551724137931,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07400",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00408",
+      "exact": false,
+      "jaccard_5gram": 0.06944444444444445,
+      "numeric_template_5gram": 0.3137254901960784,
+      "containment_5gram": 0.5517241379310345,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07490",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00179",
+      "exact": false,
+      "jaccard_5gram": 0.43037974683544306,
+      "numeric_template_5gram": 0.4358974358974359,
+      "containment_5gram": 0.6355140186915887,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/02062",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00032",
+      "exact": false,
+      "jaccard_5gram": 0.25862068965517243,
+      "numeric_template_5gram": 0.30357142857142855,
+      "containment_5gram": 0.6296296296296297,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/01164",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00113",
+      "exact": false,
+      "jaccard_5gram": 0.06666666666666667,
+      "numeric_template_5gram": 0.3181818181818182,
+      "containment_5gram": 0.6363636363636364,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/01164",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00336",
+      "exact": false,
+      "jaccard_5gram": 0.1,
+      "numeric_template_5gram": 1.0,
+      "containment_5gram": 1.0,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/01431",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00336",
+      "exact": false,
+      "jaccard_5gram": 0.038461538461538464,
+      "numeric_template_5gram": 0.5,
+      "containment_5gram": 0.8181818181818182,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06895",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00370",
+      "exact": false,
+      "jaccard_5gram": 0.10526315789473684,
+      "numeric_template_5gram": 0.29333333333333333,
+      "containment_5gram": 0.6111111111111112,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07209",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00419",
+      "exact": false,
+      "jaccard_5gram": 0.2,
+      "numeric_template_5gram": 0.3563218390804598,
+      "containment_5gram": 0.5535714285714286,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/02215",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00348",
+      "exact": false,
+      "jaccard_5gram": 0.04,
+      "numeric_template_5gram": 0.5714285714285714,
+      "containment_5gram": 1.0,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06854",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00370",
+      "exact": false,
+      "jaccard_5gram": 0.10606060606060606,
+      "numeric_template_5gram": 0.32608695652173914,
+      "containment_5gram": 0.6,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06854",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00408",
+      "exact": false,
+      "jaccard_5gram": 0.1267605633802817,
+      "numeric_template_5gram": 0.2857142857142857,
+      "containment_5gram": 0.56,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06158",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00054",
+      "exact": false,
+      "jaccard_5gram": 0.0,
+      "numeric_template_5gram": 0.35714285714285715,
+      "containment_5gram": 0.625,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06158",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00430",
+      "exact": false,
+      "jaccard_5gram": 0.0,
+      "numeric_template_5gram": 0.3125,
+      "containment_5gram": 0.625,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06158",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00433",
+      "exact": false,
+      "jaccard_5gram": 0.0,
+      "numeric_template_5gram": 0.3333333333333333,
+      "containment_5gram": 0.625,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06379",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00467",
+      "exact": false,
+      "jaccard_5gram": 0.16862745098039217,
+      "numeric_template_5gram": 0.30985915492957744,
+      "containment_5gram": 0.5116279069767442,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06621",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00240",
+      "exact": false,
+      "jaccard_5gram": 0.21348314606741572,
+      "numeric_template_5gram": 0.3487179487179487,
+      "containment_5gram": 0.5714285714285714,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/03638",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00230",
+      "exact": false,
+      "jaccard_5gram": 0.1484375,
+      "numeric_template_5gram": 0.23,
+      "containment_5gram": 0.5476190476190477,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06214",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00346",
+      "exact": false,
+      "jaccard_5gram": 0.16216216216216217,
+      "numeric_template_5gram": 0.2647058823529412,
+      "containment_5gram": 0.5294117647058824,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/01289",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00077",
+      "exact": false,
+      "jaccard_5gram": 0.07692307692307693,
+      "numeric_template_5gram": 0.3333333333333333,
+      "containment_5gram": 0.5833333333333334,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06602",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00031",
+      "exact": false,
+      "jaccard_5gram": 0.1111111111111111,
+      "numeric_template_5gram": 1.0,
+      "containment_5gram": 0.0,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07056",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00420",
+      "exact": false,
+      "jaccard_5gram": 0.15384615384615385,
+      "numeric_template_5gram": 0.2523364485981308,
+      "containment_5gram": 0.5869565217391305,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07208",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00255",
+      "exact": false,
+      "jaccard_5gram": 0.6346153846153846,
+      "numeric_template_5gram": 0.7,
+      "containment_5gram": 0.8974358974358975,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/00943",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00077",
+      "exact": false,
+      "jaccard_5gram": 0.11764705882352941,
+      "numeric_template_5gram": 0.26666666666666666,
+      "containment_5gram": 0.5,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07214",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00028",
+      "exact": false,
+      "jaccard_5gram": 0.21739130434782608,
+      "numeric_template_5gram": 0.2727272727272727,
+      "containment_5gram": 0.6206896551724138,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06771",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00370",
+      "exact": false,
+      "jaccard_5gram": 0.08791208791208792,
+      "numeric_template_5gram": 0.3939393939393939,
+      "containment_5gram": 0.7222222222222222,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07068",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00224",
+      "exact": false,
+      "jaccard_5gram": 0.03225806451612903,
+      "numeric_template_5gram": 0.8181818181818182,
+      "containment_5gram": 0.9,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/03883",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00176",
+      "exact": false,
+      "jaccard_5gram": 0.0,
+      "numeric_template_5gram": 0.3548387096774194,
+      "containment_5gram": 0.5789473684210527,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07095",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00000",
+      "exact": false,
+      "jaccard_5gram": 0.22641509433962265,
+      "numeric_template_5gram": 0.23529411764705882,
+      "containment_5gram": 0.5106382978723404,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07351",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00248",
+      "exact": false,
+      "jaccard_5gram": 0.2602739726027397,
+      "numeric_template_5gram": 0.6666666666666666,
+      "containment_5gram": 0.85,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07293",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00233",
+      "exact": false,
+      "jaccard_5gram": 0.3356164383561644,
+      "numeric_template_5gram": 0.3925925925925926,
+      "containment_5gram": 0.6235294117647059,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07287",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00000",
+      "exact": false,
+      "jaccard_5gram": 0.7142857142857143,
+      "numeric_template_5gram": 0.7454545454545455,
+      "containment_5gram": 0.8723404255319149,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/00091",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00146",
+      "exact": false,
+      "jaccard_5gram": 0.03125,
+      "numeric_template_5gram": 0.375,
+      "containment_5gram": 0.5625,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06787",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00179",
+      "exact": false,
+      "jaccard_5gram": 0.3520408163265306,
+      "numeric_template_5gram": 0.3697916666666667,
+      "containment_5gram": 0.6635514018691588,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/05800",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00342",
+      "exact": false,
+      "jaccard_5gram": 0.08620689655172414,
+      "numeric_template_5gram": 0.38461538461538464,
+      "containment_5gram": 0.6521739130434783,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07112",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00288",
+      "exact": false,
+      "jaccard_5gram": 0.15037593984962405,
+      "numeric_template_5gram": 0.3146067415730337,
+      "containment_5gram": 0.5,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07112",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00370",
+      "exact": false,
+      "jaccard_5gram": 0.07526881720430108,
+      "numeric_template_5gram": 0.3142857142857143,
+      "containment_5gram": 0.6111111111111112,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07349",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00260",
+      "exact": false,
+      "jaccard_5gram": 0.24358974358974358,
+      "numeric_template_5gram": 0.5882352941176471,
+      "containment_5gram": 0.75,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07004",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00255",
+      "exact": false,
+      "jaccard_5gram": 0.4925373134328358,
+      "numeric_template_5gram": 0.4925373134328358,
+      "containment_5gram": 0.717391304347826,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/05767",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00054",
+      "exact": false,
+      "jaccard_5gram": 0.0,
+      "numeric_template_5gram": 0.3,
+      "containment_5gram": 0.5454545454545454,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/05767",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00433",
+      "exact": false,
+      "jaccard_5gram": 0.0,
+      "numeric_template_5gram": 0.2857142857142857,
+      "containment_5gram": 0.5,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06579",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00054",
+      "exact": false,
+      "jaccard_5gram": 0.0,
+      "numeric_template_5gram": 0.24,
+      "containment_5gram": 0.5454545454545454,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06579",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00433",
+      "exact": false,
+      "jaccard_5gram": 0.0,
+      "numeric_template_5gram": 0.23076923076923078,
+      "containment_5gram": 0.5,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/02577",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00219",
+      "exact": false,
+      "jaccard_5gram": 0.12585034013605442,
+      "numeric_template_5gram": 0.24924924924924924,
+      "containment_5gram": 0.5424836601307189,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/02577",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00467",
+      "exact": false,
+      "jaccard_5gram": 0.09627329192546584,
+      "numeric_template_5gram": 0.25870646766169153,
+      "containment_5gram": 0.52,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06556",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00054",
+      "exact": false,
+      "jaccard_5gram": 0.10344827586206896,
+      "numeric_template_5gram": 0.3,
+      "containment_5gram": 0.5454545454545454,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06556",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00430",
+      "exact": false,
+      "jaccard_5gram": 0.0625,
+      "numeric_template_5gram": 0.4,
+      "containment_5gram": 0.6153846153846154,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06556",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00433",
+      "exact": false,
+      "jaccard_5gram": 0.0,
+      "numeric_template_5gram": 0.2857142857142857,
+      "containment_5gram": 0.5,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/02044",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00115",
+      "exact": false,
+      "jaccard_5gram": 0.6666666666666666,
+      "numeric_template_5gram": 0.6666666666666666,
+      "containment_5gram": 0.8,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/04765",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00415",
+      "exact": false,
+      "jaccard_5gram": 0.125,
+      "numeric_template_5gram": 0.75,
+      "containment_5gram": 1.0,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/01509",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00237",
+      "exact": false,
+      "jaccard_5gram": 0.6346153846153846,
+      "numeric_template_5gram": 0.6346153846153846,
+      "containment_5gram": 0.8048780487804879,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07169",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00370",
+      "exact": false,
+      "jaccard_5gram": 0.12631578947368421,
+      "numeric_template_5gram": 0.2692307692307692,
+      "containment_5gram": 0.5833333333333334,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/00846",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00174",
+      "exact": false,
+      "jaccard_5gram": 0.375,
+      "numeric_template_5gram": 0.375,
+      "containment_5gram": 0.5454545454545454,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/05009",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math500",
+      "target_id": "math500/test/00070",
+      "exact": false,
+      "jaccard_5gram": 0.16666666666666666,
+      "numeric_template_5gram": 0.3333333333333333,
+      "containment_5gram": 0.5833333333333334,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "gsm8k/train/01314",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "gsm8k",
+      "target_id": "gsm8k/test/00602",
+      "exact": false,
+      "jaccard_5gram": 0.5483870967741935,
+      "numeric_template_5gram": 0.8461538461538461,
+      "containment_5gram": 0.9166666666666666,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07338",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/07133",
+      "exact": false,
+      "jaccard_5gram": 0.4899328859060403,
+      "numeric_template_5gram": 0.5502392344497608,
+      "containment_5gram": 0.7142857142857143,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/05470",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/04815",
+      "exact": false,
+      "jaccard_5gram": 0.6578947368421053,
+      "numeric_template_5gram": 0.7746478873239436,
+      "containment_5gram": 0.9322033898305084,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07081",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/07003",
+      "exact": false,
+      "jaccard_5gram": 0.1111111111111111,
+      "numeric_template_5gram": 0.3611111111111111,
+      "containment_5gram": 0.6190476190476191,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07081",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/07383",
+      "exact": false,
+      "jaccard_5gram": 0.07936507936507936,
+      "numeric_template_5gram": 0.37209302325581395,
+      "containment_5gram": 0.5714285714285714,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07079",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/07383",
+      "exact": false,
+      "jaccard_5gram": 0.08771929824561403,
+      "numeric_template_5gram": 0.3170731707317073,
+      "containment_5gram": 0.5652173913043478,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06832",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/07133",
+      "exact": false,
+      "jaccard_5gram": 0.3416856492027335,
+      "numeric_template_5gram": 0.3617021276595745,
+      "containment_5gram": 0.612,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07013",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/07154",
+      "exact": false,
+      "jaccard_5gram": 0.26666666666666666,
+      "numeric_template_5gram": 0.32323232323232326,
+      "containment_5gram": 0.5079365079365079,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/05764",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/06506",
+      "exact": false,
+      "jaccard_5gram": 0.17647058823529413,
+      "numeric_template_5gram": 0.6666666666666666,
+      "containment_5gram": 0.8888888888888888,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06380",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/05595",
+      "exact": false,
+      "jaccard_5gram": 0.0625,
+      "numeric_template_5gram": 0.35,
+      "containment_5gram": 0.6363636363636364,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06380",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/06461",
+      "exact": false,
+      "jaccard_5gram": 0.0,
+      "numeric_template_5gram": 0.3888888888888889,
+      "containment_5gram": 0.6363636363636364,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07385",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/07383",
+      "exact": false,
+      "jaccard_5gram": 0.0989010989010989,
+      "numeric_template_5gram": 0.22972972972972974,
+      "containment_5gram": 0.5483870967741935,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/01784",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/02397",
+      "exact": false,
+      "jaccard_5gram": 0.19047619047619047,
+      "numeric_template_5gram": 0.36363636363636365,
+      "containment_5gram": 0.625,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/01922",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/01901",
+      "exact": false,
+      "jaccard_5gram": 0.6,
+      "numeric_template_5gram": 1.0,
+      "containment_5gram": 1.0,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/01922",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/02317",
+      "exact": false,
+      "jaccard_5gram": 0.11428571428571428,
+      "numeric_template_5gram": 0.4444444444444444,
+      "containment_5gram": 0.631578947368421,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07136",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/07302",
+      "exact": false,
+      "jaccard_5gram": 0.6212121212121212,
+      "numeric_template_5gram": 0.7258064516129032,
+      "containment_5gram": 0.8653846153846154,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07366",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/07383",
+      "exact": false,
+      "jaccard_5gram": 0.047058823529411764,
+      "numeric_template_5gram": 0.24615384615384617,
+      "containment_5gram": 0.5161290322580645,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06867",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/07350",
+      "exact": false,
+      "jaccard_5gram": 0.43902439024390244,
+      "numeric_template_5gram": 0.43902439024390244,
+      "containment_5gram": 0.631578947368421,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/01863",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/00604",
+      "exact": false,
+      "jaccard_5gram": 0.05263157894736842,
+      "numeric_template_5gram": 0.3793103448275862,
+      "containment_5gram": 0.5789473684210527,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/04320",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/03587",
+      "exact": false,
+      "jaccard_5gram": 0.41379310344827586,
+      "numeric_template_5gram": 0.4236111111111111,
+      "containment_5gram": 0.6630434782608695,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/05094",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/05595",
+      "exact": false,
+      "jaccard_5gram": 0.1,
+      "numeric_template_5gram": 0.3684210526315789,
+      "containment_5gram": 0.7,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/05094",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/06461",
+      "exact": false,
+      "jaccard_5gram": 0.09090909090909091,
+      "numeric_template_5gram": 0.3333333333333333,
+      "containment_5gram": 0.6,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/05599",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/05926",
+      "exact": false,
+      "jaccard_5gram": 0.017543859649122806,
+      "numeric_template_5gram": 0.2571428571428571,
+      "containment_5gram": 0.5,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/01403",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/00604",
+      "exact": false,
+      "jaccard_5gram": 0.07142857142857142,
+      "numeric_template_5gram": 0.25,
+      "containment_5gram": 0.5454545454545454,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/01662",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/01611",
+      "exact": false,
+      "jaccard_5gram": 0.03508771929824561,
+      "numeric_template_5gram": 0.37209302325581395,
+      "containment_5gram": 0.8,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07241",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/04560",
+      "exact": false,
+      "jaccard_5gram": 0.078125,
+      "numeric_template_5gram": 0.3409090909090909,
+      "containment_5gram": 0.5769230769230769,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07228",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/07481",
+      "exact": false,
+      "jaccard_5gram": 0.28859060402684567,
+      "numeric_template_5gram": 0.2972972972972973,
+      "containment_5gram": 0.5301204819277109,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07395",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/07383",
+      "exact": false,
+      "jaccard_5gram": 0.10416666666666667,
+      "numeric_template_5gram": 0.22535211267605634,
+      "containment_5gram": 0.5161290322580645,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/02061",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/01901",
+      "exact": false,
+      "jaccard_5gram": 0.3,
+      "numeric_template_5gram": 0.56,
+      "containment_5gram": 0.7368421052631579,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/02061",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/02317",
+      "exact": false,
+      "jaccard_5gram": 0.11764705882352941,
+      "numeric_template_5gram": 0.46153846153846156,
+      "containment_5gram": 0.631578947368421,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07021",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/07133",
+      "exact": false,
+      "jaccard_5gram": 0.3274336283185841,
+      "numeric_template_5gram": 0.3613053613053613,
+      "containment_5gram": 0.6007751937984496,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07482",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/06988",
+      "exact": false,
+      "jaccard_5gram": 0.1565217391304348,
+      "numeric_template_5gram": 0.27058823529411763,
+      "containment_5gram": 0.575,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07400",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/07003",
+      "exact": false,
+      "jaccard_5gram": 0.08928571428571429,
+      "numeric_template_5gram": 0.3888888888888889,
+      "containment_5gram": 0.6666666666666666,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07400",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/07383",
+      "exact": false,
+      "jaccard_5gram": 0.06153846153846154,
+      "numeric_template_5gram": 0.36363636363636365,
+      "containment_5gram": 0.5517241379310345,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/01164",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/00604",
+      "exact": false,
+      "jaccard_5gram": 0.07142857142857142,
+      "numeric_template_5gram": 0.25,
+      "containment_5gram": 0.5454545454545454,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06895",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/07383",
+      "exact": false,
+      "jaccard_5gram": 0.13043478260869565,
+      "numeric_template_5gram": 0.22666666666666666,
+      "containment_5gram": 0.5483870967741935,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/00854",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/01611",
+      "exact": false,
+      "jaccard_5gram": 0.057692307692307696,
+      "numeric_template_5gram": 0.22727272727272727,
+      "containment_5gram": 0.5,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07212",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/07383",
+      "exact": false,
+      "jaccard_5gram": 0.07920792079207921,
+      "numeric_template_5gram": 0.23943661971830985,
+      "containment_5gram": 0.5483870967741935,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06854",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/07383",
+      "exact": false,
+      "jaccard_5gram": 0.2413793103448276,
+      "numeric_template_5gram": 0.36585365853658536,
+      "containment_5gram": 0.6,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/00025",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/01611",
+      "exact": false,
+      "jaccard_5gram": 0.041666666666666664,
+      "numeric_template_5gram": 0.25,
+      "containment_5gram": 0.5,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/04884",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/04943",
+      "exact": false,
+      "jaccard_5gram": 0.0,
+      "numeric_template_5gram": 0.23809523809523808,
+      "containment_5gram": 0.5,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/00943",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/00070",
+      "exact": false,
+      "jaccard_5gram": 0.21052631578947367,
+      "numeric_template_5gram": 0.35294117647058826,
+      "containment_5gram": 0.5454545454545454,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/04195",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/03587",
+      "exact": false,
+      "jaccard_5gram": 0.3931034482758621,
+      "numeric_template_5gram": 0.4027777777777778,
+      "containment_5gram": 0.651685393258427,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06771",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/07383",
+      "exact": false,
+      "jaccard_5gram": 0.08888888888888889,
+      "numeric_template_5gram": 0.3181818181818182,
+      "containment_5gram": 0.6774193548387096,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07351",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/06988",
+      "exact": false,
+      "jaccard_5gram": 0.4126984126984127,
+      "numeric_template_5gram": 0.6326530612244898,
+      "containment_5gram": 0.775,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07287",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/07302",
+      "exact": false,
+      "jaccard_5gram": 0.6557377049180327,
+      "numeric_template_5gram": 0.6557377049180327,
+      "containment_5gram": 0.8163265306122449,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07112",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/07383",
+      "exact": false,
+      "jaccard_5gram": 0.03125,
+      "numeric_template_5gram": 0.24285714285714285,
+      "containment_5gram": 0.5483870967741935,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/07454",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/07003",
+      "exact": false,
+      "jaccard_5gram": 0.04918032786885246,
+      "numeric_template_5gram": 0.275,
+      "containment_5gram": 0.5238095238095238,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/01876",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/02397",
+      "exact": false,
+      "jaccard_5gram": 0.16393442622950818,
+      "numeric_template_5gram": 0.33962264150943394,
+      "containment_5gram": 0.5625,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/03750",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/04209",
+      "exact": false,
+      "jaccard_5gram": 0.3111111111111111,
+      "numeric_template_5gram": 0.40476190476190477,
+      "containment_5gram": 0.68,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/04816",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/04943",
+      "exact": false,
+      "jaccard_5gram": 0.0,
+      "numeric_template_5gram": 0.27586206896551724,
+      "containment_5gram": 0.5,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06600",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/04943",
+      "exact": false,
+      "jaccard_5gram": 0.0,
+      "numeric_template_5gram": 0.20512820512820512,
+      "containment_5gram": 0.5,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "math/train/06600",
+      "domain": "math",
+      "interface": null,
+      "target_dataset": "math_dev",
+      "target_id": "math/train/05926",
+      "exact": false,
+      "jaccard_5gram": 0.0,
+      "numeric_template_5gram": 0.4411764705882353,
+      "containment_5gram": 0.8333333333333334,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "code/vfc_80081",
+      "domain": "code",
+      "interface": "stdin_stdout",
+      "target_dataset": "code_dev",
+      "target_id": "code/vfc_18174",
+      "exact": false,
+      "jaccard_5gram": 0.45424476295479604,
+      "numeric_template_5gram": 0.44816053511705684,
+      "containment_5gram": 0.6602564102564102,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "code/vfc_29525",
+      "domain": "code",
+      "interface": "stdin_stdout",
+      "target_dataset": "code_dev",
+      "target_id": "code/vfc_19240",
+      "exact": false,
+      "jaccard_5gram": 0.34782608695652173,
+      "numeric_template_5gram": 0.37373737373737376,
+      "containment_5gram": 0.6416184971098265,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "code/vfc_103820",
+      "domain": "code",
+      "interface": "stdin_stdout",
+      "target_dataset": "code_dev",
+      "target_id": "code/vfc_26837",
+      "exact": false,
+      "jaccard_5gram": 0.2022792022792023,
+      "numeric_template_5gram": 0.24464831804281345,
+      "containment_5gram": 0.5128205128205128,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "code/vfc_95708",
+      "domain": "code",
+      "interface": "stdin_stdout",
+      "target_dataset": "code_dev",
+      "target_id": "code/vfc_26837",
+      "exact": false,
+      "jaccard_5gram": 0.17922077922077922,
+      "numeric_template_5gram": 0.21787709497206703,
+      "containment_5gram": 0.5,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "code/vfc_25443",
+      "domain": "code",
+      "interface": "stdin_stdout",
+      "target_dataset": "code_dev",
+      "target_id": "code/vfc_26837",
+      "exact": false,
+      "jaccard_5gram": 0.21987951807228914,
+      "numeric_template_5gram": 0.2578616352201258,
+      "containment_5gram": 0.5256410256410257,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "code/vfc_25915",
+      "domain": "code",
+      "interface": "stdin_stdout",
+      "target_dataset": "code_dev",
+      "target_id": "code/vfc_26837",
+      "exact": false,
+      "jaccard_5gram": 0.2671232876712329,
+      "numeric_template_5gram": 0.322463768115942,
+      "containment_5gram": 0.5705128205128205,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "code/vfc_26099",
+      "domain": "code",
+      "interface": "stdin_stdout",
+      "target_dataset": "code_dev",
+      "target_id": "code/vfc_81921",
+      "exact": false,
+      "jaccard_5gram": 0.5486935866983373,
+      "numeric_template_5gram": 0.5620437956204379,
+      "containment_5gram": 0.7287066246056783,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "code/vfc_111313",
+      "domain": "code",
+      "interface": "stdin_stdout",
+      "target_dataset": "code_dev",
+      "target_id": "code/vfc_26877",
+      "exact": false,
+      "jaccard_5gram": 0.29961089494163423,
+      "numeric_template_5gram": 0.3374485596707819,
+      "containment_5gram": 0.5503355704697986,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "code/vfc_78117",
+      "domain": "code",
+      "interface": "stdin_stdout",
+      "target_dataset": "code_dev",
+      "target_id": "code/vfc_24223",
+      "exact": false,
+      "jaccard_5gram": 0.5309278350515464,
+      "numeric_template_5gram": 0.5418848167539267,
+      "containment_5gram": 0.75,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "code/vfc_56753",
+      "domain": "code",
+      "interface": "stdin_stdout",
+      "target_dataset": "code_dev",
+      "target_id": "code/vfc_26519",
+      "exact": false,
+      "jaccard_5gram": 0.33554817275747506,
+      "numeric_template_5gram": 0.3087674714104193,
+      "containment_5gram": 0.531578947368421,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "code/vfc_25687",
+      "domain": "code",
+      "interface": "stdin_stdout",
+      "target_dataset": "code_dev",
+      "target_id": "code/vfc_26837",
+      "exact": false,
+      "jaccard_5gram": 0.2862453531598513,
+      "numeric_template_5gram": 0.3229571984435798,
+      "containment_5gram": 0.532051282051282,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "code/vfc_26463",
+      "domain": "code",
+      "interface": "stdin_stdout",
+      "target_dataset": "code_dev",
+      "target_id": "code/vfc_26837",
+      "exact": false,
+      "jaccard_5gram": 0.2825278810408922,
+      "numeric_template_5gram": 0.2965779467680608,
+      "containment_5gram": 0.5,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "code/vfc_136828",
+      "domain": "code",
+      "interface": "stdin_stdout",
+      "target_dataset": "code_dev",
+      "target_id": "code/vfc_26837",
+      "exact": false,
+      "jaccard_5gram": 0.1897018970189702,
+      "numeric_template_5gram": 0.23652694610778444,
+      "containment_5gram": 0.5064102564102564,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "code/vfc_130716",
+      "domain": "code",
+      "interface": "stdin_stdout",
+      "target_dataset": "code_dev",
+      "target_id": "code/vfc_26837",
+      "exact": false,
+      "jaccard_5gram": 0.19613259668508287,
+      "numeric_template_5gram": 0.26245847176079734,
+      "containment_5gram": 0.5064102564102564,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "code/vfc_105218",
+      "domain": "code",
+      "interface": "stdin_stdout",
+      "target_dataset": "code_dev",
+      "target_id": "code/vfc_26877",
+      "exact": false,
+      "jaccard_5gram": 0.28512396694214875,
+      "numeric_template_5gram": 0.329004329004329,
+      "containment_5gram": 0.5100671140939598,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "code/vfc_105218",
+      "domain": "code",
+      "interface": "stdin_stdout",
+      "target_dataset": "code_dev",
+      "target_id": "code/vfc_27009",
+      "exact": false,
+      "jaccard_5gram": 0.171990171990172,
+      "numeric_template_5gram": 0.23450134770889489,
+      "containment_5gram": 0.5506329113924051,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "code/vfc_105218",
+      "domain": "code",
+      "interface": "stdin_stdout",
+      "target_dataset": "code_dev",
+      "target_id": "code/vfc_19252",
+      "exact": false,
+      "jaccard_5gram": 0.19705882352941176,
+      "numeric_template_5gram": 0.2643312101910828,
+      "containment_5gram": 0.5253164556962026,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "code/vfc_105218",
+      "domain": "code",
+      "interface": "stdin_stdout",
+      "target_dataset": "code_dev",
+      "target_id": "code/vfc_19280",
+      "exact": false,
+      "jaccard_5gram": 0.18911917098445596,
+      "numeric_template_5gram": 0.216,
+      "containment_5gram": 0.5126582278481012,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "code/vfc_105218",
+      "domain": "code",
+      "interface": "stdin_stdout",
+      "target_dataset": "code_dev",
+      "target_id": "code/vfc_107316",
+      "exact": false,
+      "jaccard_5gram": 0.19696969696969696,
+      "numeric_template_5gram": 0.22811671087533156,
+      "containment_5gram": 0.5443037974683544,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "code/vfc_105218",
+      "domain": "code",
+      "interface": "stdin_stdout",
+      "target_dataset": "code_dev",
+      "target_id": "code/vfc_26673",
+      "exact": false,
+      "jaccard_5gram": 0.1784841075794621,
+      "numeric_template_5gram": 0.22777777777777777,
+      "containment_5gram": 0.5189873417721519,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "code/vfc_20290",
+      "domain": "code",
+      "interface": "stdin_stdout",
+      "target_dataset": "code_dev",
+      "target_id": "code/vfc_26837",
+      "exact": false,
+      "jaccard_5gram": 0.22492401215805471,
+      "numeric_template_5gram": 0.24605678233438485,
+      "containment_5gram": 0.5,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "code/vfc_25955",
+      "domain": "code",
+      "interface": "stdin_stdout",
+      "target_dataset": "code_dev",
+      "target_id": "code/vfc_26837",
+      "exact": false,
+      "jaccard_5gram": 0.18274111675126903,
+      "numeric_template_5gram": 0.22459893048128343,
+      "containment_5gram": 0.5384615384615384,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "code/vfc_27117",
+      "domain": "code",
+      "interface": "stdin_stdout",
+      "target_dataset": "code_dev",
+      "target_id": "code/vfc_26837",
+      "exact": false,
+      "jaccard_5gram": 0.19607843137254902,
+      "numeric_template_5gram": 0.23423423423423423,
+      "containment_5gram": 0.5,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "code/vfc_19689",
+      "domain": "code",
+      "interface": "stdin_stdout",
+      "target_dataset": "code_dev",
+      "target_id": "code/vfc_19621",
+      "exact": false,
+      "jaccard_5gram": 0.19789473684210526,
+      "numeric_template_5gram": 0.24761904761904763,
+      "containment_5gram": 0.5174129353233831,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "code/vfc_125856",
+      "domain": "code",
+      "interface": "stdin_stdout",
+      "target_dataset": "code_dev",
+      "target_id": "code/vfc_27029",
+      "exact": false,
+      "jaccard_5gram": 0.19578313253012047,
+      "numeric_template_5gram": 0.221875,
+      "containment_5gram": 0.5298507462686567,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "code/vfc_125856",
+      "domain": "code",
+      "interface": "stdin_stdout",
+      "target_dataset": "code_dev",
+      "target_id": "code/vfc_14094",
+      "exact": false,
+      "jaccard_5gram": 0.19937694704049844,
+      "numeric_template_5gram": 0.2440677966101695,
+      "containment_5gram": 0.5373134328358209,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "code/vfc_125856",
+      "domain": "code",
+      "interface": "stdin_stdout",
+      "target_dataset": "code_dev",
+      "target_id": "code/vfc_26403",
+      "exact": false,
+      "jaccard_5gram": 0.26778242677824265,
+      "numeric_template_5gram": 0.30837004405286345,
+      "containment_5gram": 0.5223880597014925,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    },
+    {
+      "train_id": "code/vfc_121257",
+      "domain": "code",
+      "interface": "stdin_stdout",
+      "target_dataset": "code_dev",
+      "target_id": "code/vfc_119319",
+      "exact": false,
+      "jaccard_5gram": 0.525987525987526,
+      "numeric_template_5gram": 0.5691244239631337,
+      "containment_5gram": 0.8045602605863192,
+      "status": "candidate_requires_review",
+      "tier": "calibration_failed_candidate"
+    }
+  ],
+  "embedding": {
+    "status": "未验证 / 未执行",
+    "reason": "No pinned local embedding model; task forbids downloading model weights. Lexical 5-gram/numeric template are not embeddings."
+  },
+  "hypothetical_balance_impact": {
+    "function": {
+      "current": 1250,
+      "candidate_hits": 0,
+      "remaining_if_all_removed": 1250,
+      "needed_replacements_to_restore_1250": 0
+    },
+    "stdin_stdout": {
+      "current": 1250,
+      "candidate_hits": 21,
+      "remaining_if_all_removed": 1229,
+      "needed_replacements_to_restore_1250": 21
+    }
+  },
+  "limitations": [
+    "No semantic decontamination guarantee",
+    "Sensitivity tier recall on free paraphrases unverified",
+    "Numeric-template matches may be related exercises, not duplicates",
+    "No rows removed or approval/manifest changed"
+  ]
+}

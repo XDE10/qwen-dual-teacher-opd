@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\Users\Mr.Z\Desktop\项目二_双教师在线蒸馏\scripts\verify_code_repair_source_v4.py", line 48, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\Users\Mr.Z\Desktop\项目二_双教师在线蒸馏\scripts\verify_code_repair_source_v4.py", line 30, in main
+    raw_ast=hashlib.sha256(ast.dump(ast.parse(raw_code),include_attributes=False).encode()).hexdigest()
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "D:\anaconda3\envs\genai-test\Lib\ast.py", line 52, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<unknown>", line 1
+    ```python
+    ^
+SyntaxError: invalid syntax

@@ -1,0 +1,43 @@
+{
+  "data_manifest": "data/portable_release/manifest.json",
+  "data_files": {
+    "math": "project2_math_train.jsonl",
+    "code": "project2_code_train.jsonl"
+  },
+  "student": {
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "teachers": {
+    "math": {
+      "model": "Qwen/Qwen2.5-Math-7B-Instruct",
+      "revision": "ef9926d75ab1d54532f6a30dd5e760355eb9aa4d"
+    },
+    "code": {
+      "model": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "revision": "c03e6d358207e414f1eca0bb1891e29f1db0e242"
+    }
+  },
+  "tokenizer_audit": "reports/tokenizer_alignment_report.json",
+  "tokenizer_path": "data/tokenizers/Qwen2.5-1.5B-Instruct",
+  "seed": 42,
+  "max_steps": 3,
+  "domain_order": [
+    "math",
+    "code"
+  ],
+  "domain_block_steps": 1,
+  "learning_rate": 2e-05,
+  "gradient_accumulation_steps": 1,
+  "max_new_tokens": {
+    "math": 1024,
+    "code": 1536
+  },
+  "save_steps": 1,
+  "output_dir": "runs/opd_v2_route_smoke",
+  "implementation_version": "opd-v2",
+  "loss_normalization": "response_tokens_v2",
+  "response_row_chunk_size": 16,
+  "sequence_chunk_size": 128,
+  "resume_policy": "reject"
+}
