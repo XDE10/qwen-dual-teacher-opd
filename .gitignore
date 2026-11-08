@@ -1,6 +1,7 @@
 # Python
 __pycache__/
 *.py[cod]
+*$py.class
 *.egg-info/
 .pytest_cache/
 .mypy_cache/
@@ -12,6 +13,9 @@ htmlcov/
 .venv/
 venv/
 env/
+
+# Cache directories
+.cache/
 
 # Training / evaluation outputs (never commit runs)
 runs/
@@ -35,5 +39,9 @@ desktop.ini
 *.swp
 *.swo
 *~
+*.bak
+*.tmp
+*.temp
+*.orig
 .idea/
 .vscode/
