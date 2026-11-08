@@ -1,0 +1,63 @@
+{
+  "version": "project2-release-v5-20261108",
+  "project": 2,
+  "summary": {
+    "project2_math_train": 2500,
+    "project2_math_dev": 256,
+    "project2_code_train": {
+      "function": 1247,
+      "stdin_stdout": 1241
+    },
+    "project2_code_dev": {
+      "function": 100,
+      "stdin_stdout": 100
+    },
+    "removed_rows": 145,
+    "added_rows": 133,
+    "models_trained": 0,
+    "approval": "v4 rows keep their v4 approval; added rows: v5_deterministic_gates_plus_owner_batch_approval"
+  },
+  "parent_manifest": "data/code_training_repair_20261025_v4/release/manifest.json",
+  "parent_manifest_sha256": "40197cef309933cc24f7bddb645dba5b73b6491a3a2705225d7a47b5543577db",
+  "approved_training_files": [
+    "project2_math_train.jsonl",
+    "project2_code_train.jsonl"
+  ],
+  "approved_evaluation_files": [
+    "project2_math_dev.jsonl",
+    "project2_code_dev.jsonl"
+  ],
+  "protected_dev_ids_file": "reserved_dev_ids_never_train.json",
+  "excluded_training_ids_file": "excluded_training_ids_v5.json",
+  "sidecar_files": {
+    "project2_math_train_answers.jsonl": "reference answers for analysis / RFT baselines; not a training input"
+  },
+  "files": {
+    "excluded_training_ids_v5.json": "9d37f42e7320bff3f5d390bbc44943a4b730c571c0be682db6af0af8d60c6189",
+    "project2_code_dev.jsonl": "c7e111eade71c4482680cb21e89bf3164e6b01fdbd20895ff295ac11f449813f",
+    "project2_code_train.jsonl": "45906ccf870372b2d8c4923baf57a16fc1987f6308c363ebba52409c77311cb2",
+    "project2_math_dev.jsonl": "a438e79e46893921ec3c14b96deaf2174668902bd0cc234a0345bd51c8c3903c",
+    "project2_math_train.jsonl": "3b82ad9fc0e1e1137eb0b7542aa094e38023c2ef18e0e7e9cecab1f1679142d3",
+    "project2_math_train_answers.jsonl": "f27297e839cd3702465a3c0b280da63cc90f2d5d17fdd7b914574ae7038d76db",
+    "reserved_dev_ids_never_train.json": "9faacae140d755542d33fc2da126eb55aed67e9469371164c8896c25bd18af3e"
+  },
+  "inputs": {
+    "candidate/candidate_manifest.json": "ed0e6ae725624e3786f9dba635a06003f7d19f9c4c50b222d932c015c942a987",
+    "reports/project2_release_v5_20261108/audit.json": "9db9408b46c6f22ee26de5ebc20e62c5ccc42aed7975ed594768ef1bb9e1c2ae",
+    "data/code_training_repair_20261025_v4/release/manifest.json": "40197cef309933cc24f7bddb645dba5b73b6491a3a2705225d7a47b5543577db",
+    "data/math_manifest.json": "0416b28f855a4ab4568daeec01c433df6ae085e1580a766299b1507d69aa5bda",
+    "data/code_benchmarks/official/HumanEvalPlus-v0.1.10.jsonl": "42526ec0e7d5f3ee0b06d6ced98f8c8bae3d76519151bfb3d36f79010645bd7f",
+    "data/code_benchmarks/official/MbppPlus-v0.2.0.jsonl": "b54e762755248ca411b523c917fa9f93c07b5ff2966bf60b3917b853926a3dad",
+    "src/data/release_v5.py": "aacea4a6a500b06e89c1e7cbe31aba862ea2771883b7fa03e54fc86d903e9d2d",
+    "src/data/decontamination_v5.py": "b69e8ff37643851a39b749697944483d3611d852b35188bd6383949cf0ec768e"
+  },
+  "approval": {
+    "approver": "XDE10 (repository owner)",
+    "approved_at_utc": "2026-11-08T16:01:42Z",
+    "note": "Owner instruction in the Kiro session on 2026-11-08: '批准数据' (approve the data), given after the owner read the v5 summary (reports/project2_release_v5_20261108/README.md). Command executed by Kiro, an AI assistant, on that explicit instruction; the decision is the owner's.",
+    "candidate_manifest_sha256": "ed0e6ae725624e3786f9dba635a06003f7d19f9c4c50b222d932c015c942a987",
+    "audit_report_sha256": "9db9408b46c6f22ee26de5ebc20e62c5ccc42aed7975ed594768ef1bb9e1c2ae",
+    "statement": "Owner batch approval of deterministic-gate candidates; not an itemwise human review."
+  },
+  "approval_scope": "Only the listed train files. Dev files are evaluation-only. v4 stays unchanged."
+}

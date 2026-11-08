@@ -6,9 +6,10 @@
 
 | 路径 | 内容 | 性质 |
 | --- | --- | --- |
-| `code_training_repair_20261025_v4/release/` | 当前 **v4 修复发布**：math/code 的 train/dev jsonl + `manifest.json` + `reserved_dev_ids_never_train.json` | **当前执行数据**（根 `configs/project2_opd_v4_*.json` 绑定） |
+| `code_training_repair_20261025_v4/release/` | **v4 修复发布**：math/code 的 train/dev jsonl + `manifest.json` + `reserved_dev_ids_never_train.json` | 逐字节保留作溯源；只有 opd-v2 配置（`configs/project2_opd_v4_*.json`）还绑定它，opd-v3 改用 v5 |
 | `portable_release/` | 2026-10-24 迁移时的历史发布基线（同 6 个文件） | **冻结基线**，逐字节保留；默认执行不用它 |
-| `project2_release_v5_20261108/candidate/` | **v5 候选**：v4 去掉与评测/dev 重合的 133 条数学、12 条代码，数学按同 level 补 133 条（`training_approved=false`），并附数学参考答案 sidecar | **待负责人批准**；批准后才生成 `release/`，opd-v3 实验配置指向它 |
+| `project2_release_v5_20261108/release/` | **当前执行数据 v5**：v4 去掉与评测/dev 重合的 133 条数学、12 条代码，数学按同 level 补 133 条；附数学参考答案 sidecar 与 `excluded_training_ids_v5.json` | 2026-11-08 按负责人指示批准；opd-v3 全部配置绑定它 |
+| `project2_release_v5_20261108/candidate/` | v5 候选（批准所依据的对象：变更、未批准的新增行、审计绑定摘要） | 证据，保留不改 |
 | `code_benchmarks/official/` | HumanEval+ v0.1.10、MBPP+ v0.2.0 官方文件 | 不入库（gitignore）；由 `scripts/restore_official_benchmarks.py` 恢复并按 sha256 校验 |
 | `tokenizers/` | 4 个 tokenizer 快照：`Qwen2.5-1.5B-Instruct`、`Qwen2.5-7B-Instruct`、`Qwen2.5-Coder-7B-Instruct`、`Qwen2.5-Math-7B-Instruct` | 模板/词表身份证据，离线可用 |
 | `math/` | 数学源池与最终评测集：`math_train.jsonl`（7184）、`math_dev.jsonl`（256）、`math_quarantine.jsonl`（60）、`math_source_test.jsonl`（5000）、`math500_test.jsonl`（500）、`gsm8k_train.jsonl`（7473）、`gsm8k_test.jsonl`（1319） | 源池/评测，不代表训练批准 |

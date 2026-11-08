@@ -5,8 +5,7 @@
 **当前状态（2026-11-08，opd-v3 分支）**
 
 - **opd-v3（MOPD 式混合批次双教师 OPD）已实现，CPU 契约测试通过**：单步内混合 math/code，按领域路由常驻教师；批量 rollout；只算回答位置的 logits；exact / top-k / PG 三种损失；分层采样；软/硬运行身份。设计、显存规划（A100 80GB / G4 96GB）与实验矩阵见 [docs/opd_v3_mopd.md](docs/opd_v3_mopd.md)。真实 Qwen 在 GPU 上**尚未运行**；**D0～D4 均未完成**，不得写成已有正式训练结果。
-- 当前**已批准**数据仍是 **v4 修复发布**：数学 2500 train / 256 dev；代码 2500 train / 200 dev（function 与 stdin/stdout 各 1250 / 100）。
-- **v5 数据候选待负责人批准**：去掉与 MATH-500/GSM8K test/MATH test/dev 重合的 133 条数学题、与代码 dev 重合的 12 条代码题，数学按同 level 补齐。见 [reports/project2_release_v5_20261108/README.md](reports/project2_release_v5_20261108/README.md)。opd-v3 实验配置（smoke 除外）指向 v5，批准前不能训练。
+- **当前数据为 v5（2026-11-08 按负责人指示批准）**：数学 2500 train / 256 dev；代码 2488 train（function 1247 / stdin 1241）/ 200 dev。相对 v4 去掉了与 MATH-500 / GSM8K test / MATH test / dev 重合的 133 条数学题、与代码 dev 重合的 12 条代码题，数学按同 level 补齐。见 [reports/project2_release_v5_20261108/README.md](reports/project2_release_v5_20261108/README.md)。v4 逐字节保留，仅作溯源；所有 opd-v3 配置都指向 v5。
 - 评测协议 v3：vLLM（可回退 HF）greedy 生成；数学同时报 Math-Verify 与保守判分器（保守判分器对 MATH-500 参考答案自判只认 389/500）；代码仍只在本地 Docker 执行。
 - 代码评测在 **Docker 沙箱**中运行，数据集代码不在宿主执行；目标环境无可用 Docker 时停止，不得静默回退宿主子进程。
 - 历史 CPU 测试、2 步 smoke 与 tiny 模型恢复测试只证明工程链路，不能替代真实 Qwen 前向、显存、梯度与能力验收。
@@ -153,7 +152,6 @@ opd-v3 分支实测（2026-11-08，Linux / Python 3.11 / torch 2.15 CPU / transf
 ## 未完成事项（不要夸大）
 
 - 真实学生/教师 GPU 前向、显存峰值、吞吐、词表外概率质量与 checkpoint 恢复**均未验收**。opd-v3 的这些项目只在 tiny 模型上通过了 CPU 测试。
-- v5 数据候选需要负责人执行 `scripts/approve_project2_release_v5.py` 后才能用于训练。
 - D0（原始学生）、D1/D2（数学/代码单教师）、D3（通用单教师）、D4（专业双教师路由）的正式配置与结果都还没有。
 - 代码任务的多解题语义 checker、官方 EvalPlus 完整接线、各领域准确率与跨域退化统计仍需补齐。
 - 所有阶段都应分别陈述「代码已实现」「CPU 测试通过」「真实模型跑通」「最终能力提升」，未运行的检查保持未验证。

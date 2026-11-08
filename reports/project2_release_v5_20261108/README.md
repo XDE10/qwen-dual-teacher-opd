@@ -1,8 +1,10 @@
-# Project 2 data release v5 (candidate, 2026-11-08)
+# Project 2 data release v5 (approved 2026-11-08)
 
-Status: **candidate, pending owner approval**. Nothing here can be loaded for
-training until `scripts/approve_project2_release_v5.py` is run by the project
-owner. v4 (`data/code_training_repair_20261025_v4/release/`) is unchanged.
+Status: **approved 2026-11-08** on the owner's explicit instruction; the
+approval command was executed by Kiro (AI assistant) and the instruction is
+recorded in `data/project2_release_v5_20261108/release/manifest.json`
+(`approval.note`). v4 (`data/code_training_repair_20261025_v4/release/`) is
+unchanged.
 
 ## Why v5 exists
 

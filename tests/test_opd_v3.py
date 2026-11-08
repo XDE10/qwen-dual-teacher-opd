@@ -398,6 +398,4 @@ def test_experiment_configs_validate_and_differ_only_in_declared_factors():
         exposure.update(step_plan(blocked, step))
     assert dict(exposure) == mixed
     assert len({tuple(sorted(t.items())) for t in configs['d3_general']['teachers'].values()}) == 1
-    assert configs['smoke']['data_manifest'].startswith('data/code_training_repair_20261025_v4')
-    assert all(c['data_manifest'] == 'data/project2_release_v5_20261108/release/manifest.json'
-               for n, c in configs.items() if n != 'smoke')
+    assert all(c['data_manifest'] == 'data/project2_release_v5_20261108/release/manifest.json' for c in configs.values())

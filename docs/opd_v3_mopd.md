@@ -58,7 +58,7 @@ G4 的软件栈：GPU 是 sm_120，必须用 cu128 的 torch 2.8.0 wheel（`scri
 | `d4_pcgrad` | 梯度手术 | gradient_surgery |
 | `d4_pg` / `d4_topk` | MOPD 式 4 / 式 5 两种损失实例化 | loss.mode |
 
-`tests/test_opd_v3.py::test_experiment_configs_validate_and_differ_only_in_declared_factors` 保证上表的"差异"列成立。除 smoke 外，所有配置都指向 v5 数据，v5 需要先经批准（见第 6 节）。
+`tests/test_opd_v3.py::test_experiment_configs_validate_and_differ_only_in_declared_factors` 保证上表的"差异"列成立。所有配置都指向 v5 数据（2026-11-08 已批准）。
 
 ## 5. 运行顺序
 
@@ -77,5 +77,5 @@ smoke 必须实测并记录：每阶段耗时与峰值显存（`metrics.jsonl` �
 
 ## 6. 数据与评测协议
 
-* 数据：v5 候选（`data/project2_release_v5_20261108/candidate/`）是在 v4 基础上去掉与评测/dev 重合的 133 条数学题和 12 条代码题，数学按同 level 补齐。说明见 [reports/project2_release_v5_20261108/README.md](../reports/project2_release_v5_20261108/README.md)。批准命令只由项目负责人执行。
+* 数据：v5（`data/project2_release_v5_20261108/release/`，2026-11-08 按负责人指示批准）在 v4 基础上去掉与评测/dev 重合的 133 条数学题和 12 条代码题，数学按同 level 补齐。说明见 [reports/project2_release_v5_20261108/README.md](../reports/project2_release_v5_20261108/README.md)。
 * 评测协议 v3（`src/evaluation/eval_v3.py`）：所有模型使用同一套 greedy 解码和固定预算。数学同时报 Math-Verify（主口径）和仓库保守判分器（严格口径）。参考答案自判时，保守判分器在 MATH-500 只认 389/500、math dev 只认 209/256，Math-Verify 在三个数学集上都认 100%。HumanEval+/MBPP+ 按 EvalPlus 官方 chat 提示构造。代码只生成候选文件，执行仍在本地 Docker 沙箱完成。

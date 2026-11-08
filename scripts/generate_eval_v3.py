@@ -24,7 +24,7 @@ from src.evaluation.eval_v3 import (DEFAULT_MAX_NEW, SUITES, evalplus_text, grad
                                     suite_rows, summarize)
 from src.teachers.opd_contract import load_contract
 
-RELEASE = 'data/code_training_repair_20261025_v4/release/manifest.json'
+RELEASE = 'data/project2_release_v5_20261108/release/manifest.json'
 
 
 def adapter_identity(path):

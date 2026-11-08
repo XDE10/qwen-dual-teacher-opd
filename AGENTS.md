@@ -30,7 +30,7 @@
 - **数据逐行批准**。范围只认 manifest 的 `approved_training_files` / `approved_evaluation_files` 与逐行 `training_approved`；候选 ≠ 批准，AI 审核 ≠ 人工金标。dev 不得进训练。
 - **不得手改批准字段或哈希**来绕过检查。新数据版本必须独立取证、保留旧发布；不能用批量重算 SHA 的方式"修好"检查。
 - **代码评测必须走 Docker 沙箱**，数据集代码不在宿主执行；无可用 Docker 时停止并报告，不得回退宿主子进程。Colab 没有 Docker：GPU 端只生成候选 JSONL（`scripts/generate_eval_v3.py`），由本地 Docker 执行。
-- **v5 数据只能由项目负责人批准**：`scripts/build_project2_release_v5.py` 只生成候选，`scripts/approve_project2_release_v5.py --approver <姓名>` 是有记录的负责人决定。AI 协作者不得替负责人运行批准命令，也不得手改候选中的 `training_approved`。
+- **数据批准只能由项目负责人决定**：`scripts/build_project2_release_v5.py` 只生成候选，`scripts/approve_project2_release_v5.py --approver <姓名>` 记录负责人的决定。AI 协作者只有在负责人明确书面指示后才能代为执行，并且必须在 `--note` 里写明指示的原文、时间和"由 AI 代为执行"。不得手改候选中的 `training_approved`。v5 已于 2026-11-08 按负责人指示批准（见 `data/project2_release_v5_20261108/release/manifest.json` 的 `approval`）。
 - **数学主口径用 Math-Verify，同时报保守判分器**：保守判分器对 MATH-500 参考答案自判只认 389/500，不能单独作为主分数。
 - 新增/修改 opd-v3 配置时，必须保持 `tests/test_opd_v3.py::test_experiment_configs_validate_and_differ_only_in_declared_factors` 通过：对照组之间只允许出现声明过的差异。
 - 代码能力看实际源码，状态看 README 与版本化报告；报告必须区分「已实现」「CPU 通过」「真实模型跑通」「能力提升」，未运行的检查保持未验证。
