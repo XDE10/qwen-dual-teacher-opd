@@ -106,6 +106,36 @@ def load_config(path):
     return validate_config(with_defaults(read(path)), load_contract())
 
 
+def resolve_run_path(path, output_root):
+    """'runs/<x>' paths follow --output-root (e.g. Google Drive); others stay as given."""
+    path = Path(path)
+    if output_root and path.parts and path.parts[0] == 'runs':
+        return Path(output_root).joinpath(*path.parts[1:])
+    return path
+
+
+def adapter_digests(path):
+    path = Path(path)
+    files = {p.relative_to(path).as_posix(): sha_file(p) for p in sorted(path.rglob('*')) if p.is_file()}
+    if 'adapter_config.json' not in files or 'adapter_model.safetensors' not in files:
+        raise ValueError(f'{path} is not a PEFT adapter directory')
+    return files
+
+
+def sha_file(path):
+    import hashlib
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def check_adapter_matches(path, lora):
+    """A warm-start adapter must use the configured LoRA shape, or comparisons are unfair."""
+    saved = read(Path(path) / 'adapter_config.json')
+    expected = {'r': lora['r'], 'lora_alpha': lora['alpha'], 'target_modules': sorted(lora['target_modules'])}
+    actual = {'r': saved.get('r'), 'lora_alpha': saved.get('lora_alpha'), 'target_modules': sorted(saved.get('target_modules') or [])}
+    if actual != expected:
+        raise ValueError(f'init_adapter LoRA config {actual} differs from configured {expected}')
+
+
 def load_pools(c):
     """Approved rows per domain plus protected-ID, domain and duplicate checks."""
     if not Path(c['data_manifest']).exists():
@@ -473,6 +503,12 @@ def run(config_path, output_root=None):
     if output_root:
         c['output_dir'] = (Path(output_root) / Path(c['output_dir']).name).as_posix()
     out = Path(c['output_dir'])
+    init_adapter = None
+    if c.get('init_adapter'):
+        # Warm start (e.g. sft-v3 SeqKD adapter). Its bytes become part of the hard run identity.
+        init_adapter = resolve_run_path(c['init_adapter'], output_root)
+        check_adapter_matches(init_adapter, c['lora'])
+        c['init_adapter_sha256'] = adapter_digests(init_adapter)
     pools = load_pools(c)
     support = audited_support(c)
     if not torch.cuda.is_available() or torch.cuda.device_count() != 1:
@@ -501,6 +537,8 @@ def run(config_path, output_root=None):
     write(out / ('startup_' + str(time.time_ns()) + '.json'), {'phases': recorder.records, 'prompt_budget': budget})
     if saved:
         student = PeftModel.from_pretrained(base, Path(c['resume_from_checkpoint']) / 'student', is_trainable=True)
+    elif init_adapter is not None:
+        student = PeftModel.from_pretrained(base, init_adapter, is_trainable=True)
     else:
         lora = c['lora']
         student = get_peft_model(base, LoraConfig(r=lora['r'], lora_alpha=lora['alpha'], lora_dropout=lora['dropout'],

@@ -46,7 +46,8 @@ def vllm_generate(args, prompts, max_new, support, eos):
         params = SamplingParams(temperature=0.0, max_tokens=max_new[name], stop_token_ids=[eos],
                                 allowed_token_ids=list(range(support)), skip_special_tokens=True)
         outputs = llm.generate([{'prompt_token_ids': ids} for ids in items], params, lora_request=lora)
-        results[name] = [(o.outputs[0].text, len(o.outputs[0].token_ids), o.outputs[0].finish_reason) for o in outputs]
+        results[name] = [(o.outputs[0].text, len(o.outputs[0].token_ids), o.outputs[0].finish_reason,
+                          list(o.outputs[0].token_ids)) for o in outputs]
     return results, {'engine': 'vllm', 'version': __import__('vllm').__version__}
 
 
@@ -72,7 +73,7 @@ def hf_generate(args, prompts, max_new, support, eos, tok):
                                      eos_token_id=eos, pad_token_id=tok.pad_token_id,
                                      logits_processor=LogitsProcessorList([CommonSupportMask(support)]))
             for i, (tokens, ended) in zip(chunk, split_generated(seq, width, eos)):
-                out[i] = (tok.decode(tokens, skip_special_tokens=True), len(tokens), 'stop' if ended else 'length')
+                out[i] = (tok.decode(tokens, skip_special_tokens=True), len(tokens), 'stop' if ended else 'length', tokens)
         results[name] = out
     return results, {'engine': 'hf', 'version': __import__('transformers').__version__}
 
@@ -95,6 +96,8 @@ def main():
     p.add_argument('--gpu-memory-utilization', type=float, default=0.85)
     p.add_argument('--batch-size', type=int, default=64)
     p.add_argument('--self-check', action='store_true', help='grade math references against themselves; no model')
+    p.add_argument('--save-token-ids', action='store_true',
+                   help='store generated token IDs (needed by sft-v3 when generating teacher outputs on train_* suites)')
     a = p.parse_args()
     if a.self_check:
         for name in a.suites:
@@ -135,10 +138,12 @@ def main():
                 'prompt_contract_sha256': hashlib.sha256(Path('configs/project2_prompt_contract.json').read_bytes()).hexdigest()}
     for name, (kind, path, rows) in loaded.items():
         records = []
-        for row, ids, (text, n, finish) in zip(rows, prompts[name], results[name]):
+        for row, ids, (text, n, finish, token_ids) in zip(rows, prompts[name], results[name]):
             sid = row.get('sample_id', row.get('task_id'))
             record = {'id': sid, 'prompt_tokens': len(ids), 'generated_tokens': n, 'finish_reason': finish, 'text': text}
-            if kind == 'math':
+            if a.save_token_ids:
+                record['response_ids'] = token_ids
+            if kind == 'math' and row.get('reference_answer') is not None:
                 record['grade'] = grade_math(text, row['reference_answer'], finish == 'length')
             records.append(record)
         with (out / f'{name}.jsonl').open('w', encoding='utf-8') as f:

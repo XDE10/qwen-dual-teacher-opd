@@ -46,7 +46,7 @@
 | `src/training/` | OPD v2 训练循环、采样、运行时/checkpoint、v1 历史实现 |
 | `src/evaluation/` | 数学验证器、代码比较器/注册表、EvalPlus 接入 |
 | `scripts/` | 训练/评测/数据工程入口 + `colab_bootstrap.sh`（Linux/CUDA 引导，未验证） |
-| `tests/` | 项目二测试（22 个文件）；`python -m pytest -q` |
+| `tests/` | 项目二测试（23 个文件）；`python -m pytest -q` |
 | `tools/` | `verify_code_repair_v4.py`（v4 发布离线验收）、`verify_repository.py`（仓库级布局/映射/镜像校验） |
 | `data/` | 当前 v4 发布、历史 `portable_release`、tokenizer 快照、数学源池/评测集；说明见 [data/README.md](data/README.md) |
 | `reports/` | v4 验收证据、v3 审核记录、当前审核 json/md；说明见 [reports/README.md](reports/README.md) |

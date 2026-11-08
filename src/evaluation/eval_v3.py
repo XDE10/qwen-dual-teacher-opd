@@ -33,7 +33,11 @@ SUITES = {
     'code_dev': ('code', 'release:project2_code_dev.jsonl'),
     'humanevalplus': ('evalplus', 'data/code_benchmarks/official/HumanEvalPlus-v0.1.10.jsonl'),
     'mbppplus': ('evalplus', 'data/code_benchmarks/official/MbppPlus-v0.2.0.jsonl'),
+    # Training prompts: used to generate teacher outputs for SeqKD / warm start (not an evaluation).
+    'train_math': ('math', 'release:project2_math_train.jsonl'),
+    'train_code': ('code', 'release:project2_code_train.jsonl'),
 }
+ANSWER_SIDECAR = 'project2_math_train_answers.jsonl'
 DEFAULT_MAX_NEW = {'math': 2048, 'code': 1536, 'evalplus': 1536}
 
 
@@ -48,6 +52,11 @@ def suite_rows(name, release_manifest):
     ids = [r.get('sample_id', r.get('task_id')) for r in rows]
     if len(set(ids)) != len(ids):
         raise ValueError('Duplicate evaluation IDs in ' + name)
+    sidecar = path.parent / ANSWER_SIDECAR
+    if name == 'train_math' and sidecar.exists():
+        answers = {r['sample_id']: r['reference_answer'] for r in
+                   (json.loads(line) for line in sidecar.read_text(encoding='utf-8').splitlines() if line.strip())}
+        rows = [{**r, 'reference_answer': answers[r['sample_id']]} for r in rows]
     return kind, path, rows
 
 
@@ -107,9 +116,9 @@ def summarize(kind, records):
     n = len(records)
     out = {'count': n, 'truncated': sum(r['finish_reason'] == 'length' for r in records),
            'mean_generated_tokens': sum(r['generated_tokens'] for r in records) / max(n, 1)}
-    if kind == 'math':
-        out['accuracy_conservative'] = sum(bool(r['grade']['conservative']['correct']) for r in records) / max(n, 1)
+    if kind == 'math' and n and all('grade' in r for r in records):
+        out['accuracy_conservative'] = sum(bool(r['grade']['conservative']['correct']) for r in records) / n
         available = [r for r in records if r['grade']['math_verify']['status'] != 'unavailable']
         out['accuracy_math_verify'] = (sum(bool(r['grade']['math_verify']['correct']) for r in available) / n
-                                       if available and len(available) == n else None)
+                                       if len(available) == n else None)
     return out

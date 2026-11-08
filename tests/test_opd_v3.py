@@ -379,7 +379,7 @@ def test_experiment_configs_validate_and_differ_only_in_declared_factors():
     configs = {p.stem.replace('project2_opd_v3_', ''): load_config(p) for p in Path('configs').glob('project2_opd_v3_*.json')}
     reference = configs['d4_dual']
     declared = {'d4_blocked': {'schedule'}, 'd4_pcgrad': {'gradient_surgery'}, 'd4_pg': {'loss'}, 'd4_topk': {'loss'},
-                'd3_general': {'teachers'},
+                'd3_general': {'teachers'}, 'd4_warmstart': {'init_adapter'},
                 'd1_math': {'data_files', 'teachers', 'prompts_per_step', 'max_new_tokens'},
                 'd2_code': {'data_files', 'teachers', 'prompts_per_step', 'max_new_tokens'}}
     assert set(configs) == set(declared) | {'d4_dual', 'smoke'}

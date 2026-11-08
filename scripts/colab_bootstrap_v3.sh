@@ -33,6 +33,6 @@ torch.cuda.synchronize()
 print('bf16 matmul ok', float((x @ x).float().abs().mean()))
 PY
 python -m scripts.restore_official_benchmarks | tee "$ENV_DIR/benchmarks.txt"
-CUDA_VISIBLE_DEVICES="" python -m pytest -q tests/test_opd_v3.py tests/test_release_v5.py tests/test_eval_v3.py \
-  tests/test_opd_contract.py tests/test_losses_and_masks.py tests/test_opd_v2.py | tee "$ENV_DIR/cpu-tests.txt"
+CUDA_VISIBLE_DEVICES="" python -m pytest -q tests/test_opd_v3.py tests/test_v3_tools.py tests/test_release_v5.py \
+  tests/test_eval_v3.py tests/test_opd_contract.py tests/test_losses_and_masks.py tests/test_opd_v2.py | tee "$ENV_DIR/cpu-tests.txt"
 echo "Bootstrap completed: $ENV_DIR. Next: python -m scripts.prefetch_models_v3 --config configs/project2_opd_v3_smoke.json"

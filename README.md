@@ -18,7 +18,7 @@
 cd "D:/Users/Mr.Z/Desktop/项目二_双教师在线蒸馏"
 D:/anaconda3/envs/genai-test/python.exe --version
 
-# 全部项目二测试（22 个测试文件）
+# 全部项目二测试（23 个测试文件）
 D:/anaconda3/envs/genai-test/python.exe -m pytest -q
 
 # v4 发布离线验收（stdlib，无需模型/网络）
@@ -36,7 +36,7 @@ python tools/verify_project2_release_v5.py              # v5 候选（批准后�
 python -m scripts.generate_eval_v3 --self-check --suites math500 math_dev gsm8k_test   # 判分器覆盖率
 ```
 
-Linux/Colab（A100 或 G4）：`bash scripts/colab_bootstrap_v3.sh` → `python -m scripts.prefetch_models_v3 --config ...` → `python -m scripts.train_project2_opd_v3 --config configs/project2_opd_v3_smoke.json`，完整顺序见 [docs/opd_v3_mopd.md](docs/opd_v3_mopd.md)。
+Linux/Colab（A100 或 G4）：`bash scripts/colab_bootstrap_v3.sh` → `python -m scripts.prefetch_models_v3 --config ...` → `python -m scripts.train_project2_opd_v3 --config configs/project2_opd_v3_smoke.json` → `python -m scripts.probe_teacher_fit_v3 ...`，完整顺序与异源教师的处理见 [docs/opd_v3_mopd.md](docs/opd_v3_mopd.md)。
 
 依赖记录在 `requirements/cpu.txt`（本机 CPU 实测版本，**不是** CUDA 锁定）和 `requirements/linux-cuda.txt`（Linux/Colab 候选，**未验证**）。
 
@@ -49,7 +49,7 @@ configs/            # 5 个 json：project2_opd_smoke.json（v1 基线）、
                     #   project2_prompt_contract.json（从 project_blueprints/configs/ 移入）
 src/                # data/ evaluation/ losses/ teachers/ training/，只保留项目二代码
 scripts/            # 项目二训练/评测/数据工程入口 + colab_bootstrap.sh（分类见 scripts/README.md）
-tests/              # 项目二测试（22 个文件）
+tests/              # 项目二测试（23 个文件）
 tools/              # verify_code_repair_v4.py + verify_repository.py
 data/               # portable_release/、code_training_repair_20261025_v4/、
                     #   tokenizers/、math/、math_manifest.json
@@ -66,7 +66,7 @@ requirements/       # cpu.txt、linux-cuda.txt
 
 - `docs/migration/legacy_tools/` 放已退役的 `verify_migration.py` 与 `verify_handover_v2.py`，仅作历史工具保留，**不是**当前入口。
 - `docs/migration/path_mapping.json` 记录被移动/镜像证据的旧路径→新位置与 sha256；`provenance/README.md` 解释镜像机制。
-- `scripts/` 下 35 个入口按训练/评测/审计/数据工程/环境分组，见 [scripts/README.md](scripts/README.md)；哪些依赖已删除的原始数据、不能直接重跑，也在该文件说明。
+- `scripts/` 下 39 个入口按训练/评测/审计/数据工程/环境分组，见 [scripts/README.md](scripts/README.md)；哪些依赖已删除的原始数据、不能直接重跑，也在该文件说明。
 
 ## 数据与模型身份
 
@@ -111,7 +111,7 @@ D:/anaconda3/envs/genai-test/python.exe -m scripts.train_project2_opd \
 - `scripts/train_project2_opd_v3.py`：**opd-v3 入口**（`src/training/opd_v3.py`），配置为 `configs/project2_opd_v3_*.json`（smoke、d1_math、d2_code、d3_general、d4_dual、d4_blocked、d4_pcgrad、d4_pg、d4_topk）。
 - `scripts/train_project2_opd.py`：v2 CLI 入口（内部直接调用 `src/training/opd_v2.py` 的 `cli()`），保留用于溯源。
 - `scripts/train_project2_opd_v1.py`：历史 v1 入口，仅追溯，不推荐新实验。
-- 全部 35 个 `scripts/` 入口的分组与可重跑性见 [scripts/README.md](scripts/README.md)。
+- 全部 39 个 `scripts/` 入口的分组与可重跑性见 [scripts/README.md](scripts/README.md)。
 - `configs/project2_opd_v4_smoke.json` 为 3 步 math/code/math；`*_v4_math_short.json` / `*_v4_code_short.json` 是单域短程配置；`project2_opd_smoke.json` 是 v1 基线原样保留。
 - 数据流：学生模板渲染一次提示 → 学生生成轨迹 → **同一 `input_ids` / `attention_mask` 原样交给冻结教师** → 共同支持上 FP32 重归一化后计算 response-token reverse KL → 更新学生。教师不得重新套自己的聊天模板或 decode 后重新 tokenize。
 
@@ -129,13 +129,13 @@ D:/anaconda3/envs/genai-test/python.exe -m scripts.train_project2_opd \
 ## 验证链
 
 ```bash
-D:/anaconda3/envs/genai-test/python.exe -m pytest -q                    # 当前 182 passed / 1 skipped（含 opd-v3、v5 数据、评测 v3）
+D:/anaconda3/envs/genai-test/python.exe -m pytest -q                    # 当前 189 passed / 1 skipped（含 opd-v3、v5 数据、评测 v3、预热与探针）
 D:/anaconda3/envs/genai-test/python.exe tools/verify_code_repair_v4.py   # v4 发布身份/逐行批准/接口配额
 D:/anaconda3/envs/genai-test/python.exe tools/verify_repository.py       # 新布局 + provenance 镜像/映射
 D:/anaconda3/envs/genai-test/python.exe -m compileall -q src scripts tests tools
 ```
 
-opd-v3 分支实测（2026-11-08，Linux / Python 3.11 / torch 2.15 CPU / transformers 4.57.6 / peft 0.19.0）：`pytest -q` = **182 passed / 1 skipped**；重排时的基线是 144 passed / 1 skipped（18.7s）。唯一 skip 是 `tests/test_code_v2_dedup.py::test_current_final_tests_and_all_legacy_dev_are_protected`：它依赖的原始 benchmark 源文件（`data/code_benchmarks/official/HumanEvalPlus-v0.1.10.jsonl`、`MbppPlus-v0.2.0.jsonl`、`data/project2_code/dev_verification.jsonl`）已随重排删除，测试内以 `pytest.mark.skipif` 显式跳过并注明原因，不是失败。
+opd-v3 分支实测（2026-11-08，Linux / Python 3.11 / torch 2.15 CPU / transformers 4.57.6 / peft 0.19.0）：`pytest -q` = **189 passed / 1 skipped**；重排时的基线是 144 passed / 1 skipped（18.7s）。唯一 skip 是 `tests/test_code_v2_dedup.py::test_current_final_tests_and_all_legacy_dev_are_protected`：它依赖的原始 benchmark 源文件（`data/code_benchmarks/official/HumanEvalPlus-v0.1.10.jsonl`、`MbppPlus-v0.2.0.jsonl`、`data/project2_code/dev_verification.jsonl`）已随重排删除，测试内以 `pytest.mark.skipif` 显式跳过并注明原因，不是失败。
 
 - `verify_code_repair_v4.py` 校验 v4 manifest 文件 SHA、输入证据 SHA、受保护文件、批准行与接口配额，并写出 `reports/code_training_repair_20261025_v4/verification_summary.json`；当前 `errors=[]`，60 条受保护文件中 8 条原位、52 条经 `path_mapping.json` 回退到 `provenance/`。
 - `verify_repository.py` 校验重排后台账、`docs/migration/path_mapping.json` 与 `provenance/` 镜像的可达性和 sha256，并报告重排前即缺失的条目；当前 `layout_ok=true`、70 条映射 sha 全匹配。
