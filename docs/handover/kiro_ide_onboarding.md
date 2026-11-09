@@ -10,7 +10,7 @@
 | --- | --- | --- |
 | 第一次上卡（smoke + 教师探针） | 完成 | `results` 分支 `first_session/20261109T065604Z/`；报告 [reports/g4_first_session_20261109](../../reports/g4_first_session_20261109/README.md) |
 | 第二次上卡：探针细查 + 三个学习率各 30 步 | 完成 | `results` 分支 `session2/20261109T104721Z/`；报告 [reports/g4_session2_lr_sweep_20261109](../../reports/g4_session2_lr_sweep_20261109/README.md) |
-| 第二次上卡：`eval=d0`（未训练学生的 greedy 评测）+ `teacher-outputs`（两位教师在训练题上的输出） | 交接时（13:50 UTC）仍在运行 | 同一目录的 `runs/eval/d0/`、`runs/teacher_outputs/`（跑完后由同步写入） |
+| 第二次上卡：`eval=d0`（未训练学生的 greedy 评测）+ `teacher-outputs`（两位教师在训练题上的输出） | **状态不明**：`eval=d0` 13:20 UTC 开始；最后一次同步在 13:50 UTC，之后每 20 分钟一次的同步没有再出现（14:59 UTC 查看）。先按第 4.1 节检查 | 跑完时在同一目录的 `runs/eval/d0/`、`runs/teacher_outputs/` |
 | D0 的代码分数（本地 Docker） | 未开始 | 第 4.2 节 |
 | D4 80 步、D1/D2/D3、blocked、SFT、warm start | 未开始 | 第 4 节 |
 
@@ -131,16 +131,34 @@ cat ~/.config/opd/evalplus_image
 
 ## 4. 下一步
 
-### 4.1 确认第二次上卡已经跑完
+### 4.1 先查第二次上卡的状态
+
+`results` 分支上最后一次同步是 13:50 UTC，那时 `eval=d0`（13:20 开始）还在生成。`generate_eval_v3` 要等全部评测集生成完才写文件，所以那时还没有 `runs/eval/` 是正常的。不正常的是之后约 14:10、14:30、14:50 的定期同步都没有出现：即使没有新文件，每次同步也会更新 `PUBLISHED.json`、产生一个提交。可能是 VM 被回收了（例如计算单元用完），也可能是 VM 还在、只是保存卡住了。
+
+先看 GitHub 上有没有新结果：
 
 ```zsh
 cd ~/projects/qwen-dual-teacher-opd
 git fetch origin results
+git log -3 --format='%h %cI %s' origin/results
 git show origin/results:session2/20261109T104721Z/runs/sessions/20261109T104721Z/steps.jsonl
 git show origin/results:session2/20261109T104721Z/PUBLISHED.json | head -12
 ```
 
 跑完时 `steps.jsonl` 有 6 行，最后两行是 `eval=d0` 和 `teacher-outputs`，`status` 都是 0；`PUBLISHED.json` 里 `"state": "finished"`、`"exit_status": 0`。
+
+仍停在 13:50 时，查 VM、Drive 和计算单元：
+
+```zsh
+colab status -s opd
+colab download -s opd /content/jobs/session2/output.log ~/session2.log && tail -n 40 ~/session2.log
+rclone lsf mydrive:opd_runs/session2/20261109T104721Z/runs
+colab usage
+```
+
+- **VM 还在，任务还在跑**：等它跑完。日志里有 `periodic save failed`、`Drive copy incomplete` 或 `publishing to GitHub failed` 时，按其中的原因处理。
+- **VM 还在，任务已结束**（日志里有 `[colab_job] command exited with status N; saving results`，之后是保存的输出）：结果应该已在 Drive 和 GitHub 上；GitHub 上没有时，看日志里推送失败的原因。
+- **VM 已经不在**：三组训练的全部 checkpoint 在 13:50 那次同步时已经在 Drive 上（那次 `runs` 的增量是 0 B，日志显示 `saved to Drive`）。`eval=d0` 和 `teacher-outputs` 的结果没有保存下来，改在第三次上卡重跑，用第 4.3 节"新 VM"的第二条命令。如果 `colab usage` 显示计算单元不够，先补足，再按第 4.5 节排期。
 
 - D0 的数学分数：`git show origin/results:session2/20261109T104721Z/runs/eval/d0/math_dev.summary.json`。
 - 每个 summary 的 `seconds` 字段是实测评测耗时，用它替换下面的估计。
@@ -181,7 +199,7 @@ colab exec -s opd --timeout 86400 <<'EOF'
 EOF
 ```
 
-**新 VM**：先按 [docs/colab_cli_wsl2.md](../colab_cli_wsl2.md) 的"每次开卡"第 1、2 步准备好（开 G4、上传凭据、挂 Drive、克隆），再启动。步骤前面加上从 Drive 恢复：
+**新 VM**：先按 [docs/colab_cli_wsl2.md](../colab_cli_wsl2.md) 的"每次开卡"第 1、2 步准备好（开 G4、上传凭据、挂 Drive、克隆），再启动。步骤前面加上从 Drive 恢复。第二次上卡完整跑完（Drive 上有 `runs/teacher_outputs`）时：
 
 ```zsh
 colab exec -s opd --timeout 86400 <<'EOF'
@@ -189,17 +207,27 @@ colab exec -s opd --timeout 86400 <<'EOF'
 EOF
 ```
 
+第二次上卡的 `eval=d0` / `teacher-outputs` 没有跑完（第 4.1 节的"VM 已经不在"）时，不恢复 `teacher_outputs`，改为重跑这两步。这一次要多用约 1.5–2 小时（估计，未实测）：
+
+```zsh
+colab exec -s opd --timeout 86400 <<'EOF'
+%run /content/project2/scripts/colab_job_v3.py session3 --publish --drive mydrive:opd_runs --sync-every 20 --save runs=/content/runs -- bash scripts/colab_session_v3.sh restore=mydrive:opd_runs/session2/20261109T104721Z/runs/opd_v3_d4_dual restore=mydrive:opd_runs/session2/20261109T104721Z/runs/opd_v3_d4_dual_lr1e-4 restore=mydrive:opd_runs/session2/20261109T104721Z/runs/opd_v3_d4_dual_lr1e-5 eval=d0 teacher-outputs dev=d4_dual@30 dev=d4_dual_lr1e-4@30 dev=d4_dual_lr1e-5@30 sft dev=sft train=d4_dual eval=d4_dual
+EOF
+```
+
+这时 D0 的代码分数在第三次上卡之后打：把第 4.2 节命令里的 `session2/20261109T104721Z/runs/eval/d0` 换成 `$S3/runs/eval/d0`（`S3` 的取法见本节末尾）。
+
 耗时估计（根据第二次上卡的实测步耗推算，评测部分还要用 D0 的实测时间校正）：
 
 | 步骤 | 估计 |
 | --- | --- |
 | 环境引导 + 下载模型 | 约 5 分钟 |
 | 从 Drive 恢复（仅新 VM） | 约 5 分钟（约 2 GB） |
-| 三个 checkpoint-30 的 dev 评测（每个 456 题） | 共 15–20 分钟 |
+| 三个 checkpoint-30 的 dev 评测（每个 456 题） | 共 20–25 分钟 |
 | `sft`（约 4900 条教师输出、1 个 epoch、约 77 步） | 10–20 分钟 |
-| `dev=sft` | 约 5 分钟 |
+| `dev=sft` | 约 8 分钟 |
 | `train=d4_dual` 第 31–80 步 | 约 80 分钟（50 × 95 s） |
-| `eval=d4_dual`（6 个测试集，2817 题） | 约 30 分钟 |
+| `eval=d4_dual`（6 个测试集，2817 题） | 40–45 分钟（第二次上卡的 `eval=d0` 开始 30 分钟后还没生成完） |
 
 跑完后，在本地给代码打分。第一行取 `results` 分支上最新的 `session3/<UTC 时间>` 目录，第二行确认它：
 
@@ -230,15 +258,15 @@ dev 只用来做以上选择；测试集（MATH-500、GSM8K test、HumanEval+、
 
 | 次序 | 步骤（`colab_session_v3.sh` 的参数） | 回答的问题 | GPU 估计 |
 | --- | --- | --- | --- |
-| 第四次 | `train=d3_general eval=d3_general train=d1_math eval=d1_math` | 专家教师 vs 通用教师；单数学教师与跨域保持 | 约 3.9 h |
-| 第五次 | `train=d2_code eval=d2_code train=d4_warmstart eval=d4_warmstart` | 单代码教师；先 SFT 再 OPD | 约 4.2 h |
-| 第六次 | `train=d4_blocked eval=d4_blocked`，可选 `train=d4_prox07 eval=d4_prox07` | 混合 vs 分块调度；近端教师 | 约 2.3 h（加 prox 约 4.9 h） |
+| 第四次 | `train=d3_general eval=d3_general train=d1_math eval=d1_math` | 专家教师 vs 通用教师；单数学教师与跨域保持 | 约 4.3 h |
+| 第五次 | `train=d2_code eval=d2_code train=d4_warmstart eval=d4_warmstart` | 单代码教师；先 SFT 再 OPD | 约 4.6 h |
+| 第六次 | `train=d4_blocked eval=d4_blocked`，可选 `train=d4_prox07 eval=d4_prox07` | 混合 vs 分块调度；近端教师 | 约 2.5 h（加 prox 约 5.3 h） |
 
 - 每次上卡后都用第 4.3 节的方式给 `eval/` 下的新目录打代码分数。
 - 新 VM 上需要的前置目录：
   - `d4_warmstart` 需要 SFT 的 adapter：在步骤最前面加 `restore=mydrive:opd_runs/session3/<UTC 时间>/runs/sft_v3_seqkd_mix`，时间戳用 `echo $S3` 显示的那个；
   - D1/D2/D3/blocked/prox 都从头训练，不需要恢复。
-- 合计约 13–16 GPU 小时（不含已用的两次）。
+- 合计约 14–17 GPU 小时（不含已用的两次；每次完整评测按 40–45 分钟算）。如果第二次上卡的 `eval=d0` / `teacher-outputs` 要重跑，再加 1.5–2 小时。
 - G4 每小时消耗多少计算单元没有公开数字，开卡前后各运行一次 `colab usage` 记下来。
 - 日程：
   - 核心结果（D0、D4、SFT、D3、D1、D2）争取在 11/16 前完成；

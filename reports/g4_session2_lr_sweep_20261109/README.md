@@ -103,6 +103,6 @@
 
 ## 未验证
 
-- 任何 greedy 评测结果（D0 和三个 checkpoint 都还在排队或运行中）。
+- 任何 greedy 评测结果。D0 的评测在第二次上卡里 13:20 UTC 开始，13:50 UTC 之后 `results` 分支没有再同步，结果是否保存下来未知（见 `docs/handover/kiro_ide_onboarding.md` 第 4.1 节）；三个 checkpoint-30 的 dev 评测排在第三次上卡。
 - GPU 上的 checkpoint 续训（只在 CPU 上用小模型测过）。
 - 80 步完整训练的动态。
