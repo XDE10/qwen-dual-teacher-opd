@@ -406,3 +406,21 @@ general_teacher on code: KL 0.297 nats/token (similar to MOPD external-teacher c
 2026/11/09 13:09:33 NOTICE:    54.564 KiB / 54.564 KiB, 100%, 54.560 KiB/s, ETA 0s
 2026/11/09 13:09:43 NOTICE:   212.451 MiB / 212.451 MiB, 100%, 30.344 MiB/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/session2/20261109T104721Z
+[publish] 40 files (3.66 MB), 10 left out, 0 strings redacted -> results:session2/20261109T104721Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/session2/20261109T104721Z
+{"step": 24, "loss": 0.21270468924194574, "gradient_norm": 0.1688530296087265, "gradient_cosine_math_code": 0.16952891647815704, "total_wall_seconds": 127.71214906800014, "math": {"kl": 0.2504, "entropy": 0.175, "len": 436.1, "eos": 0.938, "acc": 0.703}, "code": {"kl": 0.2239, "entropy": 0.494, "len": 277.2, "eos": 1.0}}
+{"step": 25, "loss": 0.24429196678102016, "gradient_norm": 0.1773076206445694, "gradient_cosine_math_code": 0.10259239375591278, "total_wall_seconds": 134.85051678299897, "math": {"kl": 0.3564, "entropy": 0.21, "len": 486.4, "eos": 0.906, "acc": 0.562}, "code": {"kl": 0.1961, "entropy": 0.411, "len": 303.8, "eos": 0.969}}
+{"step": 26, "loss": 0.1958688274025917, "gradient_norm": 0.14152169227600098, "gradient_cosine_math_code": 0.1319907158613205, "total_wall_seconds": 87.22999285500009, "math": {"kl": 0.2434, "entropy": 0.168, "len": 533.5, "eos": 0.875, "acc": 0.547}, "code": {"kl": 0.2121, "entropy": 0.445, "len": 283.3, "eos": 1.0}}
+{"step": 27, "loss": 0.16939448658376932, "gradient_norm": 0.15254804491996765, "gradient_cosine_math_code": 0.17101483047008514, "total_wall_seconds": 89.0119760790003, "math": {"kl": 0.1475, "entropy": 0.135, "len": 391.7, "eos": 0.969, "acc": 0.703}, "code": {"kl": 0.2075, "entropy": 0.447, "len": 317.8, "eos": 1.0}}
+{"step": 28, "loss": 0.20483934879302979, "gradient_norm": 0.14381925761699677, "gradient_cosine_math_code": 0.10300398617982864, "total_wall_seconds": 86.92522459400061, "math": {"kl": 0.2309, "entropy": 0.167, "len": 494.0, "eos": 0.922, "acc": 0.641}, "code": {"kl": 0.2061, "entropy": 0.442, "len": 291.4, "eos": 1.0}}
+Timeout during comparison
+{"step": 29, "loss": 0.1913559501990676, "gradient_norm": 0.13655979931354523, "gradient_cosine_math_code": 0.1172509491443634, "total_wall_seconds": 94.00593491200016, "math": {"kl": 0.2042, "entropy": 0.126, "len": 486.8, "eos": 0.906, "acc": 0.688}, "code": {"kl": 0.2121, "entropy": 0.411, "len": 284.6, "eos": 1.0}}
+{"step": 30, "loss": 0.19275956694036722, "gradient_norm": 0.13404633104801178, "gradient_cosine_math_code": 0.13021934032440186, "total_wall_seconds": 86.82289878799929, "math": {"kl": 0.1969, "entropy": 0.144, "len": 489.0, "eos": 0.891, "acc": 0.578}, "code": {"kl": 0.2179, "entropy": 0.449, "len": 314.1, "eos": 1.0}}
+[opd-v3] stopped at step 30 of 80; continue with --resume-from latest
+== /content/runs/opd_v3_d4_dual_lr1e-5: 30 steps, median 93.8 s/step, peak 55.28 GiB, gate pass=False failed=['math.student_entropy']
+== step eval=d0 (started 13:20:30Z)
+`torch_dtype` is deprecated! Use `dtype` instead!
+[colab_job] periodic save (every 20 min)
+2026/11/09 13:29:49 NOTICE:    57.548 KiB / 57.548 KiB, 100%, 57.543 KiB/s, ETA 0s
+2026/11/09 13:29:59 NOTICE:   212.694 MiB / 212.694 MiB, 100%, 26.590 MiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/session2/20261109T104721Z
