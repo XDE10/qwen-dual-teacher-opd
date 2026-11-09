@@ -2,9 +2,9 @@
 
 所有命令从**项目根目录**执行。默认 `python` 是 Python 3.8，**不可用**；请用 `D:/anaconda3/envs/genai-test/python.exe`（Python 3.12），或先 `conda activate genai-test` 再使用 `python`。
 
-本目录共 **39 个文件**（36 个 `.py` + 3 个 `.sh`），按职责分 7 组；第 0 组是 2026-11-08 新增的 opd-v3 / v5 数据 / 评测 v3 / 预热与探针入口。标注「不能直接重跑」的脚本依赖本次重排已删除的原始采集/基准数据，只作**方法与历史记录参考**；删除明细见 [docs/migration/deletion_ledger.json](../docs/migration/deletion_ledger.json)。
+本目录共 **40 个文件**（37 个 `.py` + 3 个 `.sh`），按职责分 7 组；第 0 组是 2026-11-08 新增的 opd-v3 / v5 数据 / 评测 v3 / 预热与探针 / Colab 入口。标注「不能直接重跑」的脚本依赖本次重排已删除的原始采集/基准数据，只作**方法与历史记录参考**；删除明细见 [docs/migration/deletion_ledger.json](../docs/migration/deletion_ledger.json)。
 
-## 0. opd-v3 / v5 数据 / 评测 v3 / 预热与探针（11，当前）
+## 0. opd-v3 / v5 数据 / 评测 v3 / 预热与探针 / Colab（12，当前）
 
 | 文件 | 说明 |
 | --- | --- |
@@ -18,7 +18,8 @@
 | `summarize_run_v3.py` | 把一个 run 目录汇总成一个 JSON（GPU、各阶段耗时、峰值显存、各域 KL/熵/EOS 率） |
 | `train_project2_sft_v3.py` | sft-v3：教师输出上的 LoRA SFT；SeqKD-Mix 基线兼 OPD 预热（`configs/project2_sft_v3_seqkd_mix.json`） |
 | `colab_bootstrap_v3.sh` | A100 / G4（sm_120）环境引导：cu128 torch 2.8.0、架构检查、恢复基准、跑 CPU 测试；可选装 vLLM |
-| `colab_first_session_v3.sh` | 第一次上卡一条命令：引导 → 下载模型 → 2 步 smoke → 运行汇总 → 教师适配度探针，结果写进 Drive 上的一个报告目录 |
+| `colab_first_session_v3.sh` | 第一次上卡一条命令：引导 → 下载模型 → 2 步 smoke → 运行汇总 → 教师适配度探针。结果写进 `$OPD_OUTPUT_ROOT` 下的一个报告目录，退出时（失败也一样）打包成 `/content/opd_first_session.tar.gz`；smoke 失败也照样跑探针；输出目录在 Drive 上而 Drive 没挂载时直接报错 |
+| `colab_job_v3.py` | 在 Colab VM 上运行长任务：任务在独立会话里跑，输出写进 `/content/jobs/<名字>/output.log`，断线或内核中断都不会停掉它；同名再运行时继续跟随或报告结果。配合 Colab CLI 使用，见 `docs/colab_cli_wsl2.md` |
 
 ## 1. 训练入口（2）
 

@@ -10,6 +10,7 @@
 | [handover/v2/](handover/v2/README.md) | 2026-10-24 v2 本地修订与 Colab 交接记录：CHANGELOG、测试/环境日志、`before/` 实现快照、交付哈希、去重记录 | **历史交付**：不代表 GPU 验收或正式训练完成 |
 | [migration/](migration/reorg_20261108.md) | 2026-11-08 重排说明、迁移清单、`path_mapping.json`、重排前快照 `inventory_before_reorg.json`、退役工具 `legacy_tools/`、删除台账 `deletion_ledger.json` | **当前有效**：查旧路径、旧文件、删除范围先看这里 |
 | [opd_v3_mopd.md](opd_v3_mopd.md) | opd-v3 设计：与 MOPD 的对应、单步流水线、损失与归一化、A100/G4 显存规划、1.5B vs 3B、实验配置矩阵、运行顺序 | **当前有效**（代码 CPU 测试通过，GPU 未验证） |
+| [colab_cli_wsl2.md](colab_cli_wsl2.md) | 在 WSL2 里用 Colab CLI（google-colab-cli 0.7.5）开卡、挂 Drive、克隆分支、跑长任务、取回结果；0.7.5 的已知限制 | **当前有效**（未在 Colab 上实测） |
 
 ## 推荐阅读顺序
 

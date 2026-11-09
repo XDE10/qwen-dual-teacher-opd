@@ -6,6 +6,10 @@
 set -euo pipefail
 PROJECT_ROOT="${PROJECT_ROOT:-/content/project2}"
 export OPD_OUTPUT_ROOT="${OPD_OUTPUT_ROOT:-/content/drive/MyDrive/project2/runs}"
+case "$OPD_OUTPUT_ROOT" in
+  /content/drive/*) grep -qs ' /content/drive ' /proc/mounts || {
+    echo "Google Drive is not mounted at /content/drive; mount it or set OPD_OUTPUT_ROOT=/content/runs" >&2; exit 1; } ;;
+esac
 cd "$PROJECT_ROOT"
 test -f src/training/opd_v3.py
 python -c 'import sys; v = sys.version_info[:2]; assert (3, 10) <= v < (3, 14), sys.version; print("python", sys.version)'

@@ -77,6 +77,8 @@ python -m scripts.generate_eval_v3 --model Qwen/Qwen2.5-1.5B-Instruct --revision
 
 smoke 必须实测并记录：每阶段耗时与峰值显存（`metrics.jsonl` 的 `phases`）、支持集外概率质量、生成副本与 PEFT 前向的一致性、checkpoint 续训（`resume_from_checkpoint`）。`python -m scripts.summarize_run_v3 --run-dir <目录>` 把这些汇总成一个 JSON。
 
+第一次上卡用 `scripts/colab_first_session_v3.sh` 一次跑完引导、下载、smoke、汇总和探针。在 WSL2 里用 Colab CLI（google-colab-cli 0.7.5）时，用 `scripts/colab_job_v3.py` 启动它和以后的长任务，命令见 [colab_cli_wsl2.md](colab_cli_wsl2.md)。
+
 预热路线（需要时，见第 7 节）：
 
 ```bash
