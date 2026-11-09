@@ -1,0 +1,85 @@
+{
+  "schema": "opd-results-v1",
+  "name": "first_session",
+  "stamp": "20261109T065604Z",
+  "published_utc": "2026-11-09T06:56:04Z",
+  "job": {
+    "state": "not recorded"
+  },
+  "publisher": {
+    "host": "XDE10",
+    "gpu": null,
+    "code": {
+      "commit": "32247d534c5439e536d0ef03ae794732f2b8b424",
+      "branch": "feat/opd-v3-mopd-data-v5",
+      "modified_tracked_files": false
+    }
+  },
+  "sources": [
+    {
+      "label": "report",
+      "path": "/home/xde10/projects/qwen-dual-teacher-opd/opd_first_session.tar.gz",
+      "kind": "archive",
+      "archive_root": "first_session_20261109T030054Z"
+    }
+  ],
+  "files": [
+    {
+      "path": "report/console.log",
+      "bytes": 21450,
+      "sha256": "d1ee06a4b63c0b9d7d042ab1f95e0619e0636c55803414fc1b2ea9714968e3a7"
+    },
+    {
+      "path": "report/prefetch.jsonl",
+      "bytes": 969,
+      "sha256": "439ef2226f9b5b320854ae92302c36b06a3caab84854fbd5db37d6bb0416e29f"
+    },
+    {
+      "path": "report/smoke_metrics.jsonl",
+      "bytes": 12683,
+      "sha256": "2915a5e99a26ac44f38468950a4ff9fbf6b6264fe0fa6c8326c4fb5fafe9f6e3"
+    },
+    {
+      "path": "report/smoke_run_identity.json",
+      "bytes": 32253,
+      "sha256": "b229119f79d69e7287099800de8599c3c3070112670ff797ec1fc9f279abc815"
+    },
+    {
+      "path": "report/smoke_summary.json",
+      "bytes": 3044,
+      "sha256": "5799d522602028541fd7bb28153815da61a33642fe66d6a3c7add53834443d9a"
+    },
+    {
+      "path": "report/smoke_teacher_pool.json",
+      "bytes": 467,
+      "sha256": "13acc3fe4a67d33c1d5ef774e8cb57764bcde44174fc2104b861325e28f9897d"
+    },
+    {
+      "path": "report/startup_1794193413733254670.json",
+      "bytes": 506,
+      "sha256": "c5c60f09acb4307b086df59f17eeffb3be06e1d57f8e9940b613438539b76e25"
+    },
+    {
+      "path": "report/step-000001.jsonl",
+      "bytes": 4982,
+      "sha256": "0fba5f78490ac36130cc258435d7f1a07a855016163e3ee32142ad96b2bf3eb9"
+    },
+    {
+      "path": "report/step-000002.jsonl",
+      "bytes": 5183,
+      "sha256": "f8550ff1f996bd8f6b9c17c2664f406dbb2382e78c0c3b9b7d80d64a01ba22e7"
+    },
+    {
+      "path": "report/teacher_fit.json",
+      "bytes": 12456,
+      "sha256": "fe7eefe9a0a0bc6e066dbd6978263d8dfffe885dcdc1077be52f6d48a15a8104"
+    }
+  ],
+  "redacted_strings": 0,
+  "skipped": [],
+  "skipped_count": 0,
+  "limits_mb": {
+    "per_file": 20,
+    "total": 50
+  }
+}
