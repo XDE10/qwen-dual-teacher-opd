@@ -4,7 +4,7 @@ Examples (run from the repository root on the GPU machine):
 
   python -m scripts.generate_eval_v3 --model Qwen/Qwen2.5-1.5B-Instruct \
       --revision 989aa7980e4cf806f80c7fef2b1adb7bc71aa306 --suites math500 gsm8k_test humanevalplus mbppplus \
-      --output-dir /content/drive/MyDrive/project2/eval/d0
+      --output-dir /content/runs/eval/d0
   python -m scripts.generate_eval_v3 ... --adapter runs/opd_v3_d4/checkpoint-80/student --output-dir .../d4
   python -m scripts.generate_eval_v3 --self-check --suites math500 math_dev     # grader coverage only
 

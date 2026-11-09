@@ -45,7 +45,7 @@
 | `src/losses/` | 共同支持上的 reverse KL 数值参考与分块实现 |
 | `src/training/` | OPD v2 训练循环、采样、运行时/checkpoint、v1 历史实现 |
 | `src/evaluation/` | 数学验证器、代码比较器/注册表、EvalPlus 接入 |
-| `scripts/` | 训练/评测/数据工程入口；Colab 用 `colab_bootstrap_v3.sh`、`colab_first_session_v3.sh`、`colab_job_v3.py`（GPU 上未验证；Colab CLI 用法见 [docs/colab_cli_wsl2.md](docs/colab_cli_wsl2.md)） |
+| `scripts/` | 训练/评测/数据工程入口；Colab 用 `colab_bootstrap_v3.sh`、`colab_first_session_v3.sh`、`colab_job_v3.py`、`publish_results_v3.py`（GPU 上未验证；Colab CLI 用法见 [docs/colab_cli_wsl2.md](docs/colab_cli_wsl2.md)） |
 | `tests/` | 项目二测试（23 个文件）；`python -m pytest -q` |
 | `tools/` | `verify_code_repair_v4.py`（v4 发布离线验收）、`verify_repository.py`（仓库级布局/映射/镜像校验） |
 | `data/` | 当前 v5 发布、v4 发布（溯源）、历史 `portable_release`、tokenizer 快照、数学源池/评测集；说明见 [data/README.md](data/README.md) |
@@ -97,3 +97,10 @@ D:/anaconda3/envs/genai-test/python.exe -m compileall -q src scripts tests tools
 - 数据、manifest、批准范围、既有 SHA 默认不可改；如需合法修订，独立记录新版本与差异，不刷新旧证据。
 - 修改文档时保留历史说明；指向历史文档的链接要注明其路径是重排前路径。
 - 新报告不要覆盖旧报告；用版本化目录/文件，并说明未运行的检查。
+
+## 7. Colab 运行与结果回传
+
+- 负责人在 WSL2（Ubuntu，zsh）里用 google-colab-cli 0.7.5 操作 Colab，项目在 `~/projects/qwen-dual-teacher-opd`。给本机的命令必须能在 zsh 里直接粘贴：不写行尾 `#` 注释，读密码用 `printf ... && read -rs 变量`（不用 `read -p`），带 `*?[]` 的参数加引号。`colab console` 里是 VM 上的 bash。步骤见 [docs/colab_cli_wsl2.md](docs/colab_cli_wsl2.md)。
+- VM 上的运行输出放 `/content/runs`；Drive 用 rclone 远端 `mydrive:`。长任务用 `scripts/colab_job_v3.py` 启动，结束时复制到 `mydrive:opd_runs/<任务名>/<UTC 时间>/`，并用 `scripts/publish_results_v3.py` 把日志和 JSON 推到 `results` 分支的同名目录。
+- 负责人不能往 Kiro Web 上传文件。读运行结果先看 `results` 分支（`git fetch origin results`），不要让负责人下载后再上传。
+- `results` 分支只放结果，不合并进任何代码分支；不往里放权重、checkpoint 或凭据。

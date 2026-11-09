@@ -579,6 +579,6 @@ def run(config_path, output_root=None):
 def cli():
     parser = argparse.ArgumentParser(description='opd-v3 MOPD-style dual-teacher OPD (single GPU)')
     parser.add_argument('--config', required=True)
-    parser.add_argument('--output-root', help='e.g. /content/drive/MyDrive/project2/runs')
+    parser.add_argument('--output-root', help='e.g. /content/runs (the Colab VM disk)')
     args = parser.parse_args()
     run(args.config, args.output_root)

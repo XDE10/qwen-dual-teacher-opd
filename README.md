@@ -36,7 +36,7 @@ python tools/verify_project2_release_v5.py              # v5 候选（批准后�
 python -m scripts.generate_eval_v3 --self-check --suites math500 math_dev gsm8k_test   # 判分器覆盖率
 ```
 
-Linux/Colab（A100 或 G4）：`bash scripts/colab_bootstrap_v3.sh` → `python -m scripts.prefetch_models_v3 --config ...` → `python -m scripts.train_project2_opd_v3 --config configs/project2_opd_v3_smoke.json` → `python -m scripts.probe_teacher_fit_v3 ...`，完整顺序与异源教师的处理见 [docs/opd_v3_mopd.md](docs/opd_v3_mopd.md)。在 WSL2 里用 Colab CLI（google-colab-cli 0.7.5）时，开卡、挂 Drive、克隆、长任务和取回结果的命令见 [docs/colab_cli_wsl2.md](docs/colab_cli_wsl2.md)。
+Linux/Colab（A100 或 G4）：`bash scripts/colab_bootstrap_v3.sh` → `python -m scripts.prefetch_models_v3 --config ...` → `python -m scripts.train_project2_opd_v3 --config configs/project2_opd_v3_smoke.json` → `python -m scripts.probe_teacher_fit_v3 ...`，完整顺序与异源教师的处理见 [docs/opd_v3_mopd.md](docs/opd_v3_mopd.md)。在 WSL2（zsh）里用 Colab CLI（google-colab-cli 0.7.5）时，开卡、rclone 挂 Drive、克隆、长任务的命令见 [docs/colab_cli_wsl2.md](docs/colab_cli_wsl2.md)；任务结束时结果自动存到 Drive 的 `opd_runs/`，日志和 JSON 推到 `results` 分支。
 
 依赖记录在 `requirements/cpu.txt`（本机 CPU 实测版本，**不是** CUDA 锁定）和 `requirements/linux-cuda.txt`（Linux/Colab 候选，**未验证**）。
 
@@ -66,7 +66,7 @@ requirements/       # cpu.txt、linux-cuda.txt
 
 - `docs/migration/legacy_tools/` 放已退役的 `verify_migration.py` 与 `verify_handover_v2.py`，仅作历史工具保留，**不是**当前入口。
 - `docs/migration/path_mapping.json` 记录被移动/镜像证据的旧路径→新位置与 sha256；`provenance/README.md` 解释镜像机制。
-- `scripts/` 下 40 个入口按训练/评测/审计/数据工程/环境分组，见 [scripts/README.md](scripts/README.md)；哪些依赖已删除的原始数据、不能直接重跑，也在该文件说明。
+- `scripts/` 下 41 个入口按训练/评测/审计/数据工程/环境分组，见 [scripts/README.md](scripts/README.md)；哪些依赖已删除的原始数据、不能直接重跑，也在该文件说明。
 
 ## 数据与模型身份
 
@@ -111,7 +111,7 @@ D:/anaconda3/envs/genai-test/python.exe -m scripts.train_project2_opd \
 - `scripts/train_project2_opd_v3.py`：**opd-v3 入口**（`src/training/opd_v3.py`），配置为 `configs/project2_opd_v3_*.json`（smoke、d1_math、d2_code、d3_general、d4_dual、d4_blocked、d4_pcgrad、d4_pg、d4_topk）。
 - `scripts/train_project2_opd.py`：v2 CLI 入口（内部直接调用 `src/training/opd_v2.py` 的 `cli()`），保留用于溯源。
 - `scripts/train_project2_opd_v1.py`：历史 v1 入口，仅追溯，不推荐新实验。
-- 全部 40 个 `scripts/` 入口的分组与可重跑性见 [scripts/README.md](scripts/README.md)。
+- 全部 41 个 `scripts/` 入口的分组与可重跑性见 [scripts/README.md](scripts/README.md)。
 - `configs/project2_opd_v4_smoke.json` 为 3 步 math/code/math；`*_v4_math_short.json` / `*_v4_code_short.json` 是单域短程配置；`project2_opd_smoke.json` 是 v1 基线原样保留。
 - 数据流：学生模板渲染一次提示 → 学生生成轨迹 → **同一 `input_ids` / `attention_mask` 原样交给冻结教师** → 共同支持上 FP32 重归一化后计算 response-token reverse KL → 更新学生。教师不得重新套自己的聊天模板或 decode 后重新 tokenize。
 

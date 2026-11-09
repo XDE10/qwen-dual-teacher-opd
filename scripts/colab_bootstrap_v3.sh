@@ -1,28 +1,50 @@
 #!/usr/bin/env bash
 # opd-v3 Linux/Colab setup for A100 (sm_80) or G4 RTX PRO 6000 Blackwell (sm_120).
 # UNVERIFIED on GPU until the first smoke run. Downloads no model weights and starts no training.
-#   PROJECT_ROOT=/content/project2 OPD_OUTPUT_ROOT=/content/drive/MyDrive/project2/runs \
-#     INSTALL_VLLM=1 bash scripts/colab_bootstrap_v3.sh
+#   PROJECT_ROOT=/content/project2 OPD_OUTPUT_ROOT=/content/runs INSTALL_VLLM=1 bash scripts/colab_bootstrap_v3.sh
+# Environment records go to $OPD_ENV_DIR (default $OPD_OUTPUT_ROOT/environment-v3/<UTC time>).
 set -euo pipefail
 PROJECT_ROOT="${PROJECT_ROOT:-/content/project2}"
-export OPD_OUTPUT_ROOT="${OPD_OUTPUT_ROOT:-/content/drive/MyDrive/project2/runs}"
-case "$OPD_OUTPUT_ROOT" in
-  /content/drive/*) grep -qs ' /content/drive ' /proc/mounts || {
-    echo "Google Drive is not mounted at /content/drive; mount it or set OPD_OUTPUT_ROOT=/content/runs" >&2; exit 1; } ;;
-esac
+export OPD_OUTPUT_ROOT="${OPD_OUTPUT_ROOT:-/content/runs}"
+# An output root on a Drive mount point that is not mounted would silently fill the VM disk instead.
+for mount in /content/drive /content/mydrive; do
+  case "$OPD_OUTPUT_ROOT/" in
+    "$mount"/*) grep -qs " $mount " /proc/mounts || {
+      echo "$mount is not mounted; mount it or use OPD_OUTPUT_ROOT=/content/runs" >&2; exit 1; } ;;
+  esac
+done
 cd "$PROJECT_ROOT"
 test -f src/training/opd_v3.py
 python -c 'import sys; v = sys.version_info[:2]; assert (3, 10) <= v < (3, 14), sys.version; print("python", sys.version)'
-ENV_DIR="$OPD_OUTPUT_ROOT/environment-v3/$(date -u +%Y%m%dT%H%M%SZ)"
+ENV_DIR="${OPD_ENV_DIR:-$OPD_OUTPUT_ROOT/environment-v3/$(date -u +%Y%m%dT%H%M%SZ)}"
 mkdir -p "$ENV_DIR"
 nvidia-smi --query-gpu=name,memory.total,compute_cap,driver_version --format=csv | tee "$ENV_DIR/gpu.csv"
 nvidia-smi > "$ENV_DIR/nvidia-smi.txt"
 # cu128 wheels contain sm_80 and sm_120 kernels; cu126 wheels lack sm_120 (Blackwell).
 python -m pip install "torch==2.8.0" --index-url https://download.pytorch.org/whl/cu128
+# Colab preinstalls torchvision, torchaudio and torchao built for its own torch. With torch 2.8.0,
+# torchvision fails at import (operator torchvision::nms does not exist), which breaks transformers'
+# model loading and pytest collection, and PEFT refuses torchao 0.10 (it needs >= 0.16) when it adds
+# LoRA. This project is text-only. INSTALL_VLLM=1 reinstalls the torchvision/torchaudio that vLLM
+# pins for torch 2.8.0.
+python -m pip uninstall -y torchvision torchaudio torchao
 python -m pip install -r requirements/linux-cuda-v3.txt
 if [ "${INSTALL_VLLM:-0}" = "1" ]; then python -m pip install -r requirements/linux-cuda-v3-eval.txt; fi
 python -m pip check | tee "$ENV_DIR/pip-check.txt" || echo "pip check reported conflicts; see $ENV_DIR/pip-check.txt"
 python -m pip freeze > "$ENV_DIR/pip-freeze.txt"
+python - <<'PY' | tee "$ENV_DIR/imports.txt"
+import importlib
+import importlib.util
+import peft
+import torch
+import transformers
+print('torch', torch.__version__, 'transformers', transformers.__version__, 'peft', peft.__version__)
+for name in ('torchvision', 'torchaudio', 'torchao'):
+    if importlib.util.find_spec(name) is None:
+        print(name, 'not installed')
+    else:  # left in place only by INSTALL_VLLM=1; it must import against this torch
+        print(name, importlib.import_module(name).__version__)
+PY
 python - <<'PY' | tee "$ENV_DIR/torch.txt"
 import torch
 assert torch.cuda.is_available(), 'CUDA not available'

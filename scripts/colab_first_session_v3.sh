@@ -1,25 +1,26 @@
 #!/usr/bin/env bash
 # First GPU session for opd-v3, in one command:
 #   environment -> model download -> 2-step smoke -> run summary -> teacher-fit probe.
-# Writes one report folder under $OPD_OUTPUT_ROOT. On exit, also after a failure, packs it into
-# $OPD_ARCHIVE (default /content/opd_first_session.tar.gz), one fixed path for `colab download`,
-# which fetches single files only. The probe still runs when the smoke fails. An old smoke run
-# is moved aside, not deleted.
-#   PROJECT_ROOT=/content/project2 OPD_OUTPUT_ROOT=/content/drive/MyDrive/project2/runs \
-#     bash scripts/colab_first_session_v3.sh
-# With google-colab-cli (e.g. from WSL2), start it through scripts/colab_job_v3.py: docs/colab_cli_wsl2.md
+# Writes one report folder under $OPD_OUTPUT_ROOT (default /content/runs, the VM's local disk), with
+# the environment records in its environment/ subfolder. On exit, also after a failure, packs it into
+# $OPD_ARCHIVE (default /content/opd_first_session.tar.gz). The probe still runs when the smoke fails.
+# An old smoke run is moved aside, not deleted.
+#   PROJECT_ROOT=/content/project2 OPD_OUTPUT_ROOT=/content/runs bash scripts/colab_first_session_v3.sh
+# From colab-cli, start it with scripts/colab_job_v3.py, which copies the archive to Drive and pushes
+# the small files to the results branch when it ends (docs/colab_cli_wsl2.md):
+#   colab_job_v3.py first_session --publish --drive mydrive:opd_runs \
+#     --save report=/content/opd_first_session.tar.gz -- bash scripts/colab_first_session_v3.sh
 set -euo pipefail
 PROJECT_ROOT="${PROJECT_ROOT:-/content/project2}"
-export OPD_OUTPUT_ROOT="${OPD_OUTPUT_ROOT:-/content/drive/MyDrive/project2/runs}"
+export OPD_OUTPUT_ROOT="${OPD_OUTPUT_ROOT:-/content/runs}"
 ARCHIVE="${OPD_ARCHIVE:-/content/opd_first_session.tar.gz}"
-case "$OPD_OUTPUT_ROOT" in
-  /content/drive/*)
-    if ! grep -qs ' /content/drive ' /proc/mounts; then
-      echo "Google Drive is not mounted at /content/drive (colab-cli: colab drivemount -s <session>)." >&2
-      echo "Mount it, or set OPD_OUTPUT_ROOT=/content/runs and download $ARCHIVE before the runtime stops." >&2
-      exit 1
-    fi ;;
-esac
+# An output root on a Drive mount point that is not mounted would silently fill the VM disk instead.
+for mount in /content/drive /content/mydrive; do
+  case "$OPD_OUTPUT_ROOT/" in
+    "$mount"/*) grep -qs " $mount " /proc/mounts || {
+      echo "$mount is not mounted; mount it or use OPD_OUTPUT_ROOT=/content/runs" >&2; exit 1; } ;;
+  esac
+done
 cd "$PROJECT_ROOT"
 REPORT="$OPD_OUTPUT_ROOT/first_session_$(date -u +%Y%m%dT%H%M%SZ)"
 mkdir -p "$REPORT"
@@ -34,7 +35,7 @@ exec > >(tee -a "$REPORT/console.log") 2>&1
 # Progress bars would fill console.log with carriage-return updates.
 export HF_HUB_DISABLE_PROGRESS_BARS=1 PIP_PROGRESS_BAR=off
 echo "== commit $(git rev-parse HEAD) on $(git branch --show-current)"
-bash scripts/colab_bootstrap_v3.sh
+OPD_ENV_DIR="$REPORT/environment" bash scripts/colab_bootstrap_v3.sh
 echo "== prefetch (student + math/code/general teachers, about 48 GB)"
 python -m scripts.prefetch_models_v3 --config configs/project2_opd_v3_smoke.json configs/project2_opd_v3_d3_general.json \
   | tee "$REPORT/prefetch.jsonl"
@@ -53,5 +54,5 @@ cp "$SMOKE"/startup_*.json "$SMOKE"/rollouts/*.jsonl "$REPORT/" 2>/dev/null || t
 echo "== teacher-fit probe: 64+64 student rollouts, 3 teachers x 2 domains"
 python -m scripts.probe_teacher_fit_v3 --config configs/project2_opd_v3_d4_dual.json --output "$REPORT/teacher_fit.json" \
   || STATUS=1
-echo "== done. Send smoke_summary.json and teacher_fit.json (console.log if a step failed); all are in $ARCHIVE"
+echo "== done; smoke_summary.json, teacher_fit.json, console.log and environment/ are in $ARCHIVE"
 exit "$STATUS"
