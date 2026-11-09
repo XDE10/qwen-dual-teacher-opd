@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "session2",
   "stamp": "20261109T104721Z",
-  "published_utc": "2026-11-09T11:48:27Z",
+  "published_utc": "2026-11-09T12:08:44Z",
   "job": {
     "state": "running"
   },
@@ -37,8 +37,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 37780,
-      "sha256": "f85cdaa6d8bb4fd02a18e6dda5696141239b69866eeb10da80e003928441d5dd"
+      "bytes": 42448,
+      "sha256": "a014cab1ebb3ad7dfe264ef57dbcc1a8cba80dad94ea2a301d8a36fa4f7ffd0d"
     },
     {
       "path": "runs/opd_v3_d4_dual/metrics.jsonl",
@@ -87,13 +87,18 @@
     },
     {
       "path": "runs/opd_v3_d4_dual_lr1e-4/metrics.jsonl",
-      "bytes": 91514,
-      "sha256": "d8cc35084866f7d82c1533e1fb1d7a1fda179ffbcd6ce0095766ce29a8bd854e"
+      "bytes": 486448,
+      "sha256": "b7222e3d4919a23797aed162ba83e7e87e19dc64d937c0ac62f75f6d85da5630"
     },
     {
       "path": "runs/opd_v3_d4_dual_lr1e-4/resolved_generation.json",
       "bytes": 4752,
       "sha256": "cbc7180f3eba88ac82f76ab9195dc744a5f90fdd3a1edfc7e7f20694d3843fc3"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-4/rollouts/step-000010.jsonl",
+      "bytes": 6321,
+      "sha256": "d1bd9166fd0a636efe9cbca09658807d276be283f21c5accee31e00bc7b81097"
     },
     {
       "path": "runs/opd_v3_d4_dual_lr1e-4/run_identity.json",
@@ -112,8 +117,8 @@
     },
     {
       "path": "runs/sessions/20261109T104721Z/console.log",
-      "bytes": 36392,
-      "sha256": "abdead81b1fd5ed609a2c8051a2c74cfa7806f76d3229eba754a9248d052e289"
+      "bytes": 40579,
+      "sha256": "47a5fae2f4a70a529d69e1427994576b37ab41a968d77993660112107d3a44ae"
     },
     {
       "path": "runs/sessions/20261109T104721Z/environment/benchmarks.txt",
@@ -197,9 +202,13 @@
     {
       "path": "runs/opd_v3_d4_dual/checkpoint-30/",
       "reason": "folder not published"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-4/checkpoint-10/",
+      "reason": "folder not published"
     }
   ],
-  "skipped_count": 5,
+  "skipped_count": 6,
   "limits_mb": {
     "per_file": 20,
     "total": 50
