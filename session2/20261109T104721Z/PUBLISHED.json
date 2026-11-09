@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "session2",
   "stamp": "20261109T104721Z",
-  "published_utc": "2026-11-09T12:49:27Z",
+  "published_utc": "2026-11-09T13:09:43Z",
   "job": {
     "state": "running"
   },
@@ -37,8 +37,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 51771,
-      "sha256": "ffae65e0ac79dbb45de2c6801d234a2fa6171ffe22583e806171c874bdcda7ce"
+      "bytes": 56112,
+      "sha256": "37d80f3bf692e73f718e536a283fc5cf70349956001507c6fb062fc6ca47616d"
     },
     {
       "path": "runs/opd_v3_d4_dual/metrics.jsonl",
@@ -132,8 +132,8 @@
     },
     {
       "path": "runs/opd_v3_d4_dual_lr1e-5/metrics.jsonl",
-      "bytes": 335694,
-      "sha256": "e2a78f2aecf0bc451a1258b19c283c9bcf699d725fce9b928943417a770137ac"
+      "bytes": 701750,
+      "sha256": "bac40b1f04df79ca2e2d1c2f7fed6d702b2fd84d0c7cad197fb6ffe0d2d67658"
     },
     {
       "path": "runs/opd_v3_d4_dual_lr1e-5/resolved_generation.json",
@@ -144,6 +144,11 @@
       "path": "runs/opd_v3_d4_dual_lr1e-5/rollouts/step-000010.jsonl",
       "bytes": 5930,
       "sha256": "85a7d72451afe25e71e35e322576f90f914260bd5e9a70ca9d7f16625f7b804b"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-5/rollouts/step-000020.jsonl",
+      "bytes": 6838,
+      "sha256": "ed90046c98aa94987410be2dd7460e8352f351eaae8205ca8661725c519e13b6"
     },
     {
       "path": "runs/opd_v3_d4_dual_lr1e-5/run_identity.json",
@@ -162,8 +167,8 @@
     },
     {
       "path": "runs/sessions/20261109T104721Z/console.log",
-      "bytes": 48940,
-      "sha256": "daa17c5021c4d375090522603149d9d595ba983f99afb2663c78530e8724ab05"
+      "bytes": 52800,
+      "sha256": "931532f1e2d4d24fd22dcec5ed412b3acd3263bbb52094f7b97e1d047bd23447"
     },
     {
       "path": "runs/sessions/20261109T104721Z/environment/benchmarks.txt",
@@ -263,9 +268,13 @@
     {
       "path": "runs/opd_v3_d4_dual_lr1e-5/checkpoint-10/",
       "reason": "folder not published"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-5/checkpoint-20/",
+      "reason": "folder not published"
     }
   ],
-  "skipped_count": 9,
+  "skipped_count": 10,
   "limits_mb": {
     "per_file": 20,
     "total": 50
