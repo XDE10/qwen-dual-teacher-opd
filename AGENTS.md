@@ -7,7 +7,7 @@
 1. 本文件。
 2. [README.md](README.md)：当前状态、目录树、命令与验证链。
 3. 按任务读 [configs/](configs) 与当前数据 manifest
-   [data/code_training_repair_20261025_v4/release/manifest.json](data/code_training_repair_20261025_v4/release/manifest.json)。
+   [data/project2_release_v5_20261108/release/manifest.json](data/project2_release_v5_20261108/release/manifest.json)（v5；v4 只作溯源）。
 4. 需要历史背景时再读 [docs/README.md](docs/README.md)。不要先遍历 `provenance/`、历史报告或 `docs/handover/v2/`。
 
 ## 1. 项目范围与身份
@@ -39,16 +39,16 @@
 
 | 目录 | 职责 |
 | --- | --- |
-| `configs/` | v1 基线、v4 smoke/math_short/code_short、提示词契约，以及 9 个 opd-v3 配置（`project2_opd_v3_*.json`）；命令从项目根执行 |
+| `configs/` | v1 基线、v4 smoke/math_short/code_short、提示词契约，以及 10 个 opd-v3 配置（`project2_opd_v3_*.json`）和 1 个 sft-v3 配置；命令从项目根执行 |
 | `src/data/` | 批准输入加载、哈希/白名单、代码沙箱、数据工程实现 |
 | `src/teachers/` | 学生提示渲染与"原样 token IDs 直传教师"契约、词表审计 |
 | `src/losses/` | 共同支持上的 reverse KL 数值参考与分块实现 |
 | `src/training/` | OPD v2 训练循环、采样、运行时/checkpoint、v1 历史实现 |
 | `src/evaluation/` | 数学验证器、代码比较器/注册表、EvalPlus 接入 |
-| `scripts/` | 训练/评测/数据工程入口 + `colab_bootstrap.sh`（Linux/CUDA 引导，未验证） |
+| `scripts/` | 训练/评测/数据工程入口；Colab 用 `colab_bootstrap_v3.sh`、`colab_first_session_v3.sh`、`colab_job_v3.py`（GPU 上未验证；Colab CLI 用法见 [docs/colab_cli_wsl2.md](docs/colab_cli_wsl2.md)） |
 | `tests/` | 项目二测试（23 个文件）；`python -m pytest -q` |
 | `tools/` | `verify_code_repair_v4.py`（v4 发布离线验收）、`verify_repository.py`（仓库级布局/映射/镜像校验） |
-| `data/` | 当前 v4 发布、历史 `portable_release`、tokenizer 快照、数学源池/评测集；说明见 [data/README.md](data/README.md) |
+| `data/` | 当前 v5 发布、v4 发布（溯源）、历史 `portable_release`、tokenizer 快照、数学源池/评测集；说明见 [data/README.md](data/README.md) |
 | `reports/` | v4 验收证据、v3 审核记录、当前审核 json/md；说明见 [reports/README.md](reports/README.md) |
 | `provenance/` | 冻结清单 sha256 锚定的历史证据**镜像**（内容不变），不参与运行时读取 |
 | `docs/` | 历史方案/交接/迁移记录；索引见 [docs/README.md](docs/README.md) |
