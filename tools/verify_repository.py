@@ -25,7 +25,7 @@ DATA_OPTIONAL = {'code_benchmarks'}
 PENDING_MANIFESTS = {'data/project2_release_v5_20261108/release/manifest.json':
                      'data/project2_release_v5_20261108/candidate/candidate_manifest.json'}
 REPORT_DIRS = {'code_training_repair_20261025_v4', 'handover_20261024_v3', 'project2_release_v5_20261108',
-               'g4_first_session_20261109'}
+               'g4_first_session_20261109', 'g4_session2_lr_sweep_20261109'}
 REPORT_ROOT_FILES = {'README.md', 'tokenizer_alignment_report.json', 'tokenizer_alignment_revalidation_20261023.json',
                      'tokenizer_alignment_summary.md', 'project2_prompt_contract_audit.json',
                      'code_v2_sandbox_environment.json', 'code_v2_sandbox_selftest.json',
@@ -36,7 +36,7 @@ CONFIGS = {'project2_opd_smoke.json', 'project2_opd_v4_smoke.json', 'project2_op
            'project2_opd_v4_code_short.json', 'project2_prompt_contract.json',
            *(f'project2_opd_v3_{n}.json' for n in ['smoke', 'd1_math', 'd2_code', 'd3_general', 'd4_dual',
                                                      'd4_blocked', 'd4_pcgrad', 'd4_pg', 'd4_topk', 'd4_warmstart',
-                                                     'd4_dual_lr1e-5', 'd4_dual_lr1e-4']),
+                                                     'd4_dual_lr1e-5', 'd4_dual_lr1e-4', 'd4_prox07']),
            'project2_sft_v3_seqkd_mix.json'}
 TEST_FILES = 23
 DOCS_REQUIRED = ['README.md', 'plan/README.md', 'handover/v2/README.md',

@@ -380,7 +380,7 @@ def test_experiment_configs_validate_and_differ_only_in_declared_factors():
     reference = configs['d4_dual']
     declared = {'d4_blocked': {'schedule'}, 'd4_pcgrad': {'gradient_surgery'}, 'd4_pg': {'loss'}, 'd4_topk': {'loss'},
                 'd3_general': {'teachers'}, 'd4_warmstart': {'init_adapter'},
-                'd4_dual_lr1e-5': {'learning_rate'}, 'd4_dual_lr1e-4': {'learning_rate'},
+                'd4_dual_lr1e-5': {'learning_rate'}, 'd4_dual_lr1e-4': {'learning_rate'}, 'd4_prox07': {'loss'},
                 'd1_math': {'data_files', 'teachers', 'prompts_per_step', 'max_new_tokens'},
                 'd2_code': {'data_files', 'teachers', 'prompts_per_step', 'max_new_tokens'}}
     assert set(configs) == set(declared) | {'d4_dual', 'smoke'}

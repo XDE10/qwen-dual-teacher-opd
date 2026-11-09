@@ -31,6 +31,18 @@ checkpoints/
 # scripts/restore_official_benchmarks.py (pinned in inventory_before_reorg.json)
 data/code_benchmarks/official/*.jsonl
 
+# Credentials. They live outside the repository (~/.config/opd/, ~/.config/rclone/, /content/ on the
+# VM); these patterns only stop an accidental copy from being committed.
+gh_credentials
+*credentials*.txt
+.git-credentials
+hf_token
+*.token
+rclone.conf
+.colab-drive-rclone-upload.conf
+.env
+.env.*
+
 # Local logs and OS/editor noise
 *.log
 !reports/**/*.log

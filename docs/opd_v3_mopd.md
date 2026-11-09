@@ -1,6 +1,6 @@
 # opd-v3：单卡 MOPD 式双教师在线蒸馏（设计与运行说明）
 
-状态（2026-11-09）：代码已实现，CPU 契约测试通过（tiny Qwen2，`tests/test_opd_v3.py`）。G4 上真实模型跑通了 2 步 smoke（每步 4+4 条、64 个新 token，显存峰值 35.45 GiB），并测了教师适配度，见 [reports/g4_first_session_20261109/README.md](../reports/g4_first_session_20261109/README.md)。完整批次的显存峰值、吞吐和能力提升都**未验证**。opd-v2 保持不变，用于溯源。
+状态（2026-11-09）：代码已实现，CPU 契约测试通过（tiny Qwen2，`tests/test_opd_v3.py`）。G4 上真实模型跑通了 2 步 smoke（每步 4+4 条、64 个新 token，显存峰值 35.45 GiB），并测了教师适配度，见 [reports/g4_first_session_20261109/README.md](../reports/g4_first_session_20261109/README.md)。三个学习率各跑了 30 步完整批次（每步 64+64 条，约 95 s/步，峰值约 55 GiB），见 [reports/g4_session2_lr_sweep_20261109/README.md](../reports/g4_session2_lr_sweep_20261109/README.md)。完整批次的显存峰值、吞吐和能力提升都**未验证**。opd-v2 保持不变，用于溯源。
 
 ## 1. 与小米 MOPD 的对应关系
 
@@ -58,7 +58,8 @@ G4 的软件栈：GPU 是 sm_120，必须用 cu128 的 torch 2.8.0 wheel（`scri
 | `d4_pcgrad` | 梯度手术 | gradient_surgery |
 | `d4_pg` / `d4_topk` | MOPD 式 4 / 式 5 两种损失实例化 | loss.mode |
 | `d4_warmstart` | 先 SFT 预热、再 OPD（从 `sft_v3_seqkd_mix` 的 adapter 起步） | init_adapter |
-| `d4_dual_lr1e-5` / `d4_dual_lr1e-4` | 学习率探测（`d4_dual` 是 3e-5）：各跑前 30 步看关卡，选中的那个从 checkpoint-30 继续到 80 步 | learning_rate |
+| `d4_dual_lr1e-5` / `d4_dual_lr1e-4` | 学习率探测（`d4_dual` 是 3e-5）：各跑了前 30 步；主实验选 3e-5，从 checkpoint-30 继续到 80 步 | learning_rate |
+| `d4_prox07` | 近端教师 α=0.7：目标分布换成 log(0.7·q + 0.3·p)，限制学生被推离自己 token 的力度；有条件触发的消融 | loss |
 | `project2_sft_v3_seqkd_mix.json` | 教师输出上的 LoRA SFT：既是 SeqKD-Mix 基线，也是预热 | 另一个训练器（sft-v3） |
 
 `tests/test_opd_v3.py::test_experiment_configs_validate_and_differ_only_in_declared_factors` 保证上表的"差异"列成立。所有配置都指向 v5 数据（2026-11-08 已批准）。
@@ -78,7 +79,7 @@ python -m scripts.generate_eval_v3 --model Qwen/Qwen2.5-1.5B-Instruct --revision
 
 smoke 必须实测并记录：每阶段耗时与峰值显存（`metrics.jsonl` 的 `phases`）、支持集外概率质量、生成副本与 PEFT 前向的一致性、checkpoint 续训（`resume_from_checkpoint`）。`python -m scripts.summarize_run_v3 --run-dir <目录>` 把这些汇总成一个 JSON。
 
-第一次上卡用 `scripts/colab_first_session_v3.sh` 一次跑完引导、下载、smoke、汇总和探针。之后每次上卡用 `scripts/colab_session_v3.sh STEP ...`，步骤有 `probe`、`train=NAME[:STOP]`、`eval=d0`、`eval=NAME`、`teacher-outputs`、`restore=REMOTE:PATH`，说明见脚本文件头。`train` 跑完写 `summary.json`，其中的稳定性关卡比较首尾各 10 步（不足 30 步时取总步数的三分之一）。在 WSL2 里用 Colab CLI（google-colab-cli 0.7.5）时，用 `scripts/colab_job_v3.py` 启动它和以后的长任务，结束时结果存到 Drive，日志和 JSON 推到 `results` 分支；命令见 [colab_cli_wsl2.md](colab_cli_wsl2.md)。
+第一次上卡用 `scripts/colab_first_session_v3.sh` 一次跑完引导、下载、smoke、汇总和探针。之后每次上卡用 `scripts/colab_session_v3.sh STEP ...`，步骤有 `probe`、`train=NAME[:STOP]`、`eval=MODEL`、`dev=MODEL`（只评 dev，用于挑选；MODEL 为 `d0`、`sft`、`NAME` 或 `NAME@STEP`）、`teacher-outputs`、`sft`、`restore=REMOTE:PATH`，说明见脚本文件头。`train` 跑完写 `summary.json`，其中的稳定性关卡（v2）以该域第一步为基线，与最后 10 步（不足 30 步时取总步数的三分之一）比较；v1 的首尾窗口比较保留在 `gate_v1_first_window` 字段。在 WSL2 里用 Colab CLI（google-colab-cli 0.7.5）时，用 `scripts/colab_job_v3.py` 启动它和以后的长任务，结束时结果存到 Drive，日志和 JSON 推到 `results` 分支；命令见 [colab_cli_wsl2.md](colab_cli_wsl2.md)。
 
 预热路线（需要时，见第 7 节）：
 
@@ -110,10 +111,25 @@ python -m scripts.train_project2_opd_v3 --config configs/project2_opd_v3_d4_warm
 
 **实测（G4，2026-11-09，64+64 条 rollout）。** 数学教师在数学上 0.369，代码教师在代码上 0.223；通用教师在数学上 0.154、代码上 0.297；代码教师在数学上只有 0.118。数学教师在学生回答上的熵是 1.26（学生 0.32），KL 在回答最后三成升到 0.41–0.71。也就是说，路由给数学的专家教师离学生最远，约为 MOPD 失稳案例的 2 倍。详见 [reports/g4_first_session_20261109/README.md](../reports/g4_first_session_20261109/README.md)。
 
-**关卡（D4 前 30 步，`summarize_run_v3` 自动计算）。** 比较首尾各 10 步的均值，以下各条都满足才继续：各域 KL 下降；学生熵在 0.7–1.5 倍之间（MOPD 的失稳信号是 0.30 → 0.21 的坍缩；我们用精确 KL、数学教师熵高，更要防熵上升）；平均回答长度在 0.7–1.3 倍之间，EOS 率下降不超过 0.10；数学 rollout 准确率（Math-Verify，训练时对学生自己的回答打分）下降不超过 0.08；梯度范数超过此前中位数 10 倍的步不超过 1 次。
+**关卡（`summarize_run_v3` 自动计算，v2）。** 以该域第一步为基线，与最后 10 步的均值比较，以下各条都满足才继续：
+* KL 低于基线；
+* "学生熵 ÷ 教师熵"（同一批 rollout 上）在基线的 0.7–1.5 倍之间。这是选峰性检查：学生相对教师变尖或变平才失败；两者因 rollout 换到更有把握的文本而一起下降时不算失败；
+* 平均回答长度在基线的 0.7–1.3 倍之间，EOS 率下降不超过 0.10；
+* 数学 rollout 准确率（Math-Verify）首尾窗口相比下降不超过 0.08；
+* 梯度范数超过此前中位数 10 倍的步不超过 1 次。
+
+学生熵本身降到 0.5 倍以下只作提示。
+
+v1（2026-11-09 第二次上卡时用的）把学生熵的绝对变化当硬条件，并且全部用首尾窗口比较。学习率大时，第一个窗口已经包含大部分变化，比值被低估。
+
+**第二次上卡的结论（30 步，三个学习率）。**
+* 学生熵大幅下降（math 0.32→0.10，code 0.59→0.28，3e-5），但教师在同一批 rollout 上的熵也一起下降（math 1.26→0.57），两者之比在 math 上基本不变（约 0.2–0.25）。所以这主要是学生的 rollout 换到了两个模型都更有把握的写法，而不是学生相对教师变尖。
+* 数学教师最初的高熵落在格式 token 上：空格、LaTeX 定界符、回答结尾的 EOS。OPD 先学到的是格式：保守判分器与 Math-Verify 的差距从 0.23 缩到约 0.06，回答末尾的 KL 从 0.71 降到约 0.26。
+* 1e-4 走完同一过程大约快 3 倍。到第 21–30 步，它与 3e-5 的配对在线准确率差异已不显著（+1.6 个点，p=0.39）。主实验选 3e-5，因为对照组配置都是 3e-5，而且已有的 30 步可以复用。
+* 是否真有能力提升，要看 greedy dev 与 D0 的比较。
 
 **退路（按成本排序）。**
-1. `proximal_teacher_alpha` 设为 0.5–0.8（只需重启训练）。
+1. `proximal_teacher_alpha` 设为 0.5–0.8（只需重启训练；`configs/project2_opd_v3_d4_prox07.json` 是 α=0.7 的现成配置，触发条件见 [handover/kiro_ide_onboarding.md](handover/kiro_ide_onboarding.md) 第 4.4 节）。
 2. SFT 预热：生成两位教师在训练题上的回答，做 1 个 epoch 的 LoRA SFT，再从该 adapter 做 OPD（`d4_warmstart`）。这一步同时产出 SeqKD-Mix 基线，没有白做的工作。
 3. 改用通用教师（`d3_general`）。
 

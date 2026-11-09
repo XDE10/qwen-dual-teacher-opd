@@ -2,7 +2,10 @@
 
 在 Colab G4 上跑 opd-v3 的标准步骤。合并了负责人整理的《Colab G4 实例训练初始化与避坑规范 v2.0》：rclone 挂 Drive、bash 和 zsh 的 `read` 差异、预装库冲突、`--again`、产物回传。另外，任务结束时会自动把结果存到 Drive 和 GitHub。
 
-状态：第一次上卡已在 G4 上跑完（2026-11-09），结果用 `scripts/publish_results_v3.py` 从 WSL2 补发到了 `results` 分支。`scripts/colab_job_v3.py`、`scripts/colab_session_v3.sh` 在本地 Linux 上用假的 `rclone`、本地 git 仓库和替身命令测过，文档里的 zsh 命令用 zsh 5.8 测过；VM 上自动保存到 Drive 和推送到 GitHub 还没实际跑过。
+状态：
+- 第一次上卡（2026-11-09）已在 G4 上跑完，结果用 `scripts/publish_results_v3.py` 从 WSL2 补发到了 `results` 分支。
+- 第二次上卡（`session2/20261109T104721Z`）已经在 VM 上用 `colab_job_v3.py` 自动保存到 Drive 和 `results` 分支，每 20 分钟同步一次。
+- 下一次上卡要跑什么、命令是什么，见 [handover/kiro_ide_onboarding.md](handover/kiro_ide_onboarding.md) 第 4 节；本文件只讲通用的操作方法。
 
 ## 环境约定
 
@@ -119,7 +122,7 @@ mkdir -p ~/.cache/huggingface && mv /content/hf_token ~/.cache/huggingface/token
 
 ### 3. 运行任务（WSL2）
 
-**第二次上卡（下一步要跑的）**：教师探针细查 → 学习率探测（3 个学习率，各 30 步）→ D0 评测 → 教师输出，预计 2–2.5 小时：
+每次上卡都是同一个形式：`colab_job_v3.py <任务名> --publish --drive mydrive:opd_runs --sync-every 20 --save runs=/content/runs -- bash scripts/colab_session_v3.sh <步骤...>`。下面是第二次上卡（已完成）的命令，下一次上卡的命令见 [handover/kiro_ide_onboarding.md](handover/kiro_ide_onboarding.md) 第 4.3 节：
 
 ```zsh
 colab exec -s opd --timeout 86400 <<'EOF'
@@ -128,7 +131,17 @@ EOF
 ```
 
 - `colab_session_v3.sh` 先引导环境、下载模型，然后每个参数是一步，按顺序执行；某一步失败会记下来，接着跑下一步。步骤说明见脚本文件头。
-- `train=d4_dual:30` 跑 `configs/project2_opd_v3_d4_dual.json` 的前 30 步，在第 30 步存 checkpoint 后停下，并在 run 目录里写 `summary.json`（含稳定性关卡的结果）。
+- `train=d4_dual:30` 跑 `configs/project2_opd_v3_d4_dual.json` 的前 30 步，在第 30 步存 checkpoint 后停下，并在 run 目录里写 `summary.json`（含稳定性关卡的结果）。run 目录里已有 checkpoint 时，`train=NAME` 从最新的有效 checkpoint 接着跑。
+- `eval=MODEL` 在全部 6 个评测集上做 greedy 评测，`dev=MODEL` 只评 math_dev 和 code_dev。MODEL 可以是：
+  - `d0`：未训练的学生；
+  - `sft`：SeqKD-Mix 的 adapter；
+  - `NAME`：run 的最新 checkpoint；
+  - `NAME@STEP`：run 的 checkpoint-STEP。
+
+  挑模型、挑学习率只用 `dev=`。
+- `teacher-outputs` 生成两位教师在训练题上的输出，`sft` 在这些输出上训练 SeqKD-Mix 基线（已训练过就跳过）。
+- `restore=mydrive:...` 把 Drive 上的目录拷回 `/content/runs`，新 VM 接着跑时放在步骤最前面。
+- 代码题的候选文件在 GPU 上生成，打分在本地 Docker 里做：`scripts/score_code_local_v3.py`，用法见交接文档第 4.2 节。
 - `--save runs=/content/runs`：整个 `/content/runs`（run 目录、评测、教师输出、`sessions/` 里的会话日志）复制到 `mydrive:opd_runs/session2/<UTC 时间>/runs/`；其中的日志和 JSON 推到 `results` 分支的 `session2/<UTC 时间>/runs/`。checkpoint 和权重只存 Drive。
 - `--sync-every 20`：每 20 分钟保存一次，跑到一半也能看到进度。
 - 任务开始时会打印 Drive 剩余空间。这次的 checkpoint 和教师输出约 2 GiB；剩余不到 10 GiB 时会提示。
@@ -172,13 +185,13 @@ colab stop -s opd
 - **同一台 VM 还在**：直接运行下一条命令。例如 `train=d4_dual` 会找到 checkpoint-30，从第 31 步继续到第 80 步。
 - **新 VM**：先按“每次开卡”的第 1、2 步准备好，再在步骤列表最前面加 `restore=...`，把需要的目录从 Drive 拷回 `/content/runs`，例如 `restore=mydrive:opd_runs/session2/<UTC 时间>/runs/opd_v3_d4_dual`。Kiro 会按 `results` 分支上的时间戳给出完整命令。
 
-续训会先校验 checkpoint 的 sha256 清单和运行身份。没复制完整的 checkpoint 会被跳过，改用更早的一个；checkpoint 之后多记的日志行会移进 `resume_archive_*`，不会删除。
+续训会先校验 checkpoint 的 sha256 清单和运行身份。没复制完整的 checkpoint 会被跳过，改用更早的一个；checkpoint 之后多记的日志行会移进 `resume_archive_*`，不会删除。运行身份包括训练源文件（`src/training/runtime_v3.py` 的 `SOURCES`）、run 的配置和 `output_dir`。改了其中任何一项，已有的 checkpoint 就不能再续训；`OPD_OUTPUT_ROOT` 因此固定用 `/content/runs`。检查方法见交接文档第 5 节。
 
 ## Colab 环境的已知问题（脚本已处理）
 
-- `scripts/colab_bootstrap_v3.sh` 装好 torch 2.8.0（cu128）后，会卸载 Colab 预装的 torchvision、torchaudio、torchao。它们是按 Colab 自带的 torch 编译的：torchvision 会报 `torchvision::nms` 不存在，导致 transformers 加载模型和 pytest 收集测试失败；PEFT 加 LoRA 时会拒绝 torchao 0.10（要求 ≥ 0.16）。规范 v2.0 里手动卸载的那一步不用再做。`INSTALL_VLLM=1` 时，vLLM 会装回与 torch 2.8.0 匹配的 torchvision/torchaudio。
+- `scripts/colab_bootstrap_v3.sh` 装好 torch 2.8.0（cu128）后，会卸载 Colab 预装的 torchvision、torchaudio、torchao。它们是按 Colab 自带的 torch 编译的：torchvision 会报 `torchvision::nms` 不存在，导致 transformers 加载模型和 pytest 收集测试失败；PEFT 加 LoRA 时会拒绝 torchao 0.10（要求 ≥ 0.16）。规范 v2.0 里手动卸载的那一步不用再做。不要把这三个包加回任何依赖文件。`INSTALL_VLLM=1` 会让 vLLM 装回它自己匹配 torch 2.8.0 的 torchvision/torchaudio；目前评测走 HF，不要设这个变量。
 - Python 3.13 可以用，引导脚本接受 3.10–3.13。
-- 环境记录（`pip-freeze.txt`、`imports.txt`、`torch.txt`、`cpu-tests.txt` 等）放在第一次上卡报告的 `environment/` 里，会一起推到 GitHub。
+- 环境记录（`pip-freeze.txt`、`imports.txt`、`torch.txt`、`cpu-tests.txt` 等）放在每次上卡的 `sessions/<UTC 时间>/environment/`（第一次上卡在报告的 `environment/`）里，会一起推到 GitHub。
 - 输出目录设在 `/content/drive/...` 或 `/content/mydrive/...` 下、而对应位置没挂载时，脚本会直接报错退出，不会把文件写进 VM 本地的同名目录。
 
 ## 0.7.5 的限制
