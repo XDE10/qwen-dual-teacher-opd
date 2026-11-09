@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "session2",
   "stamp": "20261109T104721Z",
-  "published_utc": "2026-11-09T12:29:01Z",
+  "published_utc": "2026-11-09T12:49:27Z",
   "job": {
     "state": "running"
   },
@@ -37,8 +37,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 46808,
-      "sha256": "eb8eed83a13108069d52655d5aa0f0ca0b2224212a890ca39e4f8371c21781c3"
+      "bytes": 51771,
+      "sha256": "ffae65e0ac79dbb45de2c6801d234a2fa6171ffe22583e806171c874bdcda7ce"
     },
     {
       "path": "runs/opd_v3_d4_dual/metrics.jsonl",
@@ -87,8 +87,8 @@
     },
     {
       "path": "runs/opd_v3_d4_dual_lr1e-4/metrics.jsonl",
-      "bytes": 851940,
-      "sha256": "c4ab580662ba547a6ab868a397ef9e06a6ff639541a304679164596eb6c7d4df"
+      "bytes": 912840,
+      "sha256": "bfe88dab643fbd3e3a0f81f80e3b04d9f1f15fae199cae149fb96665c04a21fc"
     },
     {
       "path": "runs/opd_v3_d4_dual_lr1e-4/resolved_generation.json",
@@ -106,6 +106,11 @@
       "sha256": "b20242a92ddd89c5cbe4113f8c4916894f2d0f567151a8bab6ccdc75ed31d6be"
     },
     {
+      "path": "runs/opd_v3_d4_dual_lr1e-4/rollouts/step-000030.jsonl",
+      "bytes": 8785,
+      "sha256": "05319ddbd75a9d1a593e7ce7a6d275545f7fdd17682ab09f761da7ab414a8bfe"
+    },
+    {
       "path": "runs/opd_v3_d4_dual_lr1e-4/run_identity.json",
       "bytes": 32240,
       "sha256": "f16afede25d3237bd62aeaf0c335ca0fe3c6d3d837cf5c493cfc541d31c02e44"
@@ -116,14 +121,49 @@
       "sha256": "d3b725b7af0c85997671f77c39272f0b9bbf0bc3bb21d50e84f9e20ba71de70d"
     },
     {
+      "path": "runs/opd_v3_d4_dual_lr1e-4/summary.json",
+      "bytes": 37395,
+      "sha256": "d018edcff664cdcda5e51d4f022b64154d8d989cd341a47accaf4715635f32f3"
+    },
+    {
       "path": "runs/opd_v3_d4_dual_lr1e-4/teacher_pool.json",
       "bytes": 468,
       "sha256": "0f184b40bf0f2c4a180ac0d7f5ab2207b4b76cbd2e22a982b24648f622c0c6f4"
     },
     {
+      "path": "runs/opd_v3_d4_dual_lr1e-5/metrics.jsonl",
+      "bytes": 335694,
+      "sha256": "e2a78f2aecf0bc451a1258b19c283c9bcf699d725fce9b928943417a770137ac"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-5/resolved_generation.json",
+      "bytes": 4752,
+      "sha256": "cbc7180f3eba88ac82f76ab9195dc744a5f90fdd3a1edfc7e7f20694d3843fc3"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-5/rollouts/step-000010.jsonl",
+      "bytes": 5930,
+      "sha256": "85a7d72451afe25e71e35e322576f90f914260bd5e9a70ca9d7f16625f7b804b"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-5/run_identity.json",
+      "bytes": 32239,
+      "sha256": "68b09d89b1cb5123c4a2c9cd9d409d0f41d72e6584ac76c542fb7a623f827e21"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-5/startup_1794227451374114896.json",
+      "bytes": 506,
+      "sha256": "9cdcc733bcb2bbae65d30a0bd13bb07783caeaf56449e0dda1281f45ff429615"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-5/teacher_pool.json",
+      "bytes": 469,
+      "sha256": "357dc53f5503b7d9d31999fe9639e8575e2e798b00dbb2882514f5b94dee921c"
+    },
+    {
       "path": "runs/sessions/20261109T104721Z/console.log",
-      "bytes": 44458,
-      "sha256": "f6ec494b57e09b7900d48cd290aeabc58bba309e472491b9c0d062e69967f151"
+      "bytes": 48940,
+      "sha256": "daa17c5021c4d375090522603149d9d595ba983f99afb2663c78530e8724ab05"
     },
     {
       "path": "runs/sessions/20261109T104721Z/environment/benchmarks.txt",
@@ -172,8 +212,8 @@
     },
     {
       "path": "runs/sessions/20261109T104721Z/steps.jsonl",
-      "bytes": 106,
-      "sha256": "2e0abea8e1f2fa753660c72458c48322708ffe48926fcb3d8b02e38e26ca3611"
+      "bytes": 172,
+      "sha256": "5263b05438d143d3d79eee232a829d759f7452bcf0e5c17da8a45968905e6de9"
     },
     {
       "path": "runs/sessions/20261109T104721Z/teacher_fit.json",
@@ -215,9 +255,17 @@
     {
       "path": "runs/opd_v3_d4_dual_lr1e-4/checkpoint-20/",
       "reason": "folder not published"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-4/checkpoint-30/",
+      "reason": "folder not published"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-5/checkpoint-10/",
+      "reason": "folder not published"
     }
   ],
-  "skipped_count": 7,
+  "skipped_count": 9,
   "limits_mb": {
     "per_file": 20,
     "total": 50
