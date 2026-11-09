@@ -2,9 +2,10 @@
 
 > 一句话定位：让 1.5B 学生模型在数学与代码两个领域，用自己的在线生成轨迹接受领域专业教师（数学 7B / 代码 7B）的 **token 级反向 KL** 监督，即 On-Policy Distillation（OPD），并比较领域收益、跨域遗忘与教师成本。
 
-**当前状态（2026-11-08，opd-v3 分支）**
+**当前状态（2026-11-09，opd-v3 分支）**
 
-- **opd-v3（MOPD 式混合批次双教师 OPD）已实现，CPU 契约测试通过**：单步内混合 math/code，按领域路由常驻教师；批量 rollout；只算回答位置的 logits；exact / top-k / PG 三种损失；分层采样；软/硬运行身份。设计、显存规划（A100 80GB / G4 96GB）与实验矩阵见 [docs/opd_v3_mopd.md](docs/opd_v3_mopd.md)。真实 Qwen 在 GPU 上**尚未运行**；**D0～D4 均未完成**，不得写成已有正式训练结果。
+- **opd-v3（MOPD 式混合批次双教师 OPD）已实现，CPU 契约测试通过**：单步内混合 math/code，按领域路由常驻教师；批量 rollout；只算回答位置的 logits；exact / top-k / PG 三种损失；分层采样；软/硬运行身份。设计、显存规划（A100 80GB / G4 96GB）与实验矩阵见 [docs/opd_v3_mopd.md](docs/opd_v3_mopd.md)。
+- **G4 上真实模型已跑通 2 步 smoke，并测了教师适配度**（2026-11-09，[reports/g4_first_session_20261109/README.md](reports/g4_first_session_20261109/README.md)）：两位教师常驻时显存峰值 35.45 GiB。数学专家教师离学生最远（逐 token KL 0.369，约为 MOPD 失稳案例的 2 倍），代码教师 0.223，通用教师在数学上 0.154。完整批次的训练、吞吐和 checkpoint 续训**尚未验证**；**D0～D4 均未完成**，不得写成已有正式训练结果。
 - **当前数据为 v5（2026-11-08 按负责人指示批准）**：数学 2500 train / 256 dev；代码 2488 train（function 1247 / stdin 1241）/ 200 dev。相对 v4 去掉了与 MATH-500 / GSM8K test / MATH test / dev 重合的 133 条数学题、与代码 dev 重合的 12 条代码题，数学按同 level 补齐。见 [reports/project2_release_v5_20261108/README.md](reports/project2_release_v5_20261108/README.md)。v4 逐字节保留，仅作溯源；所有 opd-v3 配置都指向 v5。
 - 评测协议 v3：vLLM（可回退 HF）greedy 生成；数学同时报 Math-Verify 与保守判分器（保守判分器对 MATH-500 参考答案自判只认 389/500）；代码仍只在本地 Docker 执行。
 - 代码评测在 **Docker 沙箱**中运行，数据集代码不在宿主执行；目标环境无可用 Docker 时停止，不得静默回退宿主子进程。
@@ -66,7 +67,7 @@ requirements/       # cpu.txt、linux-cuda.txt
 
 - `docs/migration/legacy_tools/` 放已退役的 `verify_migration.py` 与 `verify_handover_v2.py`，仅作历史工具保留，**不是**当前入口。
 - `docs/migration/path_mapping.json` 记录被移动/镜像证据的旧路径→新位置与 sha256；`provenance/README.md` 解释镜像机制。
-- `scripts/` 下 41 个入口按训练/评测/审计/数据工程/环境分组，见 [scripts/README.md](scripts/README.md)；哪些依赖已删除的原始数据、不能直接重跑，也在该文件说明。
+- `scripts/` 下 42 个入口按训练/评测/审计/数据工程/环境分组，见 [scripts/README.md](scripts/README.md)；哪些依赖已删除的原始数据、不能直接重跑，也在该文件说明。
 
 ## 数据与模型身份
 
@@ -108,10 +109,10 @@ D:/anaconda3/envs/genai-test/python.exe -m scripts.train_project2_opd \
   --config configs/project2_opd_v4_smoke.json --output-root "$OPD_OUTPUT_ROOT"
 ```
 
-- `scripts/train_project2_opd_v3.py`：**opd-v3 入口**（`src/training/opd_v3.py`），配置为 `configs/project2_opd_v3_*.json`（smoke、d1_math、d2_code、d3_general、d4_dual、d4_blocked、d4_pcgrad、d4_pg、d4_topk）。
+- `scripts/train_project2_opd_v3.py`：**opd-v3 入口**（`src/training/opd_v3.py`），配置为 `configs/project2_opd_v3_*.json`（smoke、d1_math、d2_code、d3_general、d4_dual、d4_blocked、d4_pcgrad、d4_pg、d4_topk、d4_warmstart，以及学习率探测用的 d4_dual_lr1e-5、d4_dual_lr1e-4）。`--stop-at-step N` 在第 N 步存 checkpoint 后停下，`--resume-from latest` 从最新的有效 checkpoint 继续。
 - `scripts/train_project2_opd.py`：v2 CLI 入口（内部直接调用 `src/training/opd_v2.py` 的 `cli()`），保留用于溯源。
 - `scripts/train_project2_opd_v1.py`：历史 v1 入口，仅追溯，不推荐新实验。
-- 全部 41 个 `scripts/` 入口的分组与可重跑性见 [scripts/README.md](scripts/README.md)。
+- 全部 42 个 `scripts/` 入口的分组与可重跑性见 [scripts/README.md](scripts/README.md)。
 - `configs/project2_opd_v4_smoke.json` 为 3 步 math/code/math；`*_v4_math_short.json` / `*_v4_code_short.json` 是单域短程配置；`project2_opd_smoke.json` 是 v1 基线原样保留。
 - 数据流：学生模板渲染一次提示 → 学生生成轨迹 → **同一 `input_ids` / `attention_mask` 原样交给冻结教师** → 共同支持上 FP32 重归一化后计算 response-token reverse KL → 更新学生。教师不得重新套自己的聊天模板或 decode 后重新 tokenize。
 
@@ -151,7 +152,7 @@ opd-v3 分支实测（2026-11-08，Linux / Python 3.11 / torch 2.15 CPU / transf
 
 ## 未完成事项（不要夸大）
 
-- 真实学生/教师 GPU 前向、显存峰值、吞吐、词表外概率质量与 checkpoint 恢复**均未验收**。opd-v3 的这些项目只在 tiny 模型上通过了 CPU 测试。
+- 真实模型在 G4 上只跑过 2 步 smoke（每步 4+4 条、64 个新 token）和训练前探针。完整批次的显存峰值、吞吐、checkpoint 续训，以及 GPU 上的评测生成**均未验收**。
 - D0（原始学生）、D1/D2（数学/代码单教师）、D3（通用单教师）、D4（专业双教师路由）的正式配置与结果都还没有。
 - 代码任务的多解题语义 checker、官方 EvalPlus 完整接线、各领域准确率与跨域退化统计仍需补齐。
 - 所有阶段都应分别陈述「代码已实现」「CPU 测试通过」「真实模型跑通」「最终能力提升」，未运行的检查保持未验证。

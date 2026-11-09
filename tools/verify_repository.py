@@ -24,7 +24,8 @@ DATA_OPTIONAL = {'code_benchmarks'}
 # v5 is built as a candidate; release/ appears only after the owner approval command.
 PENDING_MANIFESTS = {'data/project2_release_v5_20261108/release/manifest.json':
                      'data/project2_release_v5_20261108/candidate/candidate_manifest.json'}
-REPORT_DIRS = {'code_training_repair_20261025_v4', 'handover_20261024_v3', 'project2_release_v5_20261108'}
+REPORT_DIRS = {'code_training_repair_20261025_v4', 'handover_20261024_v3', 'project2_release_v5_20261108',
+               'g4_first_session_20261109'}
 REPORT_ROOT_FILES = {'README.md', 'tokenizer_alignment_report.json', 'tokenizer_alignment_revalidation_20261023.json',
                      'tokenizer_alignment_summary.md', 'project2_prompt_contract_audit.json',
                      'code_v2_sandbox_environment.json', 'code_v2_sandbox_selftest.json',

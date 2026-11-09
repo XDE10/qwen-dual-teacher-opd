@@ -2,7 +2,7 @@
 
 在 Colab G4 上跑 opd-v3 的标准步骤。合并了负责人整理的《Colab G4 实例训练初始化与避坑规范 v2.0》：rclone 挂 Drive、bash 和 zsh 的 `read` 差异、预装库冲突、`--again`、产物回传。另外，任务结束时会自动把结果存到 Drive 和 GitHub。
 
-状态：`scripts/colab_job_v3.py`、`scripts/publish_results_v3.py` 和两个 shell 脚本在本地 Linux 上测过。测试用了假的 `rclone`、本地 git 仓库和 zsh 5.8。负责人已在 G4 上手动跑完一次第一次上卡；自动保存到 Drive 和推送到 GitHub 还没在 Colab 上跑过。
+状态：第一次上卡已在 G4 上跑完（2026-11-09），结果用 `scripts/publish_results_v3.py` 从 WSL2 补发到了 `results` 分支。`scripts/colab_job_v3.py`、`scripts/colab_session_v3.sh` 在本地 Linux 上用假的 `rclone`、本地 git 仓库和替身命令测过，文档里的 zsh 命令用 zsh 5.8 测过；VM 上自动保存到 Drive 和推送到 GitHub 还没实际跑过。
 
 ## 环境约定
 
@@ -107,7 +107,7 @@ git clone -b feat/opd-v3-mopd-data-v5 https://github.com/XDE10/qwen-dual-teacher
 git -C /content/project2 log --oneline -1
 ```
 
-`mountpoint` 要输出 `/content/mydrive is a mountpoint`。如果上传了 HF token，再执行：
+`mountpoint` 要输出 `/content/mydrive is a mountpoint`。VM 上已经有 `/content/project2`（同一台 VM 上再次上卡）时，把 `git clone` 那行换成 `git -C /content/project2 pull --ff-only`。如果上传了 HF token，再执行：
 
 ```bash
 mkdir -p ~/.cache/huggingface && mv /content/hf_token ~/.cache/huggingface/token && chmod 600 ~/.cache/huggingface/token
@@ -119,7 +119,21 @@ mkdir -p ~/.cache/huggingface && mv /content/hf_token ~/.cache/huggingface/token
 
 ### 3. 运行任务（WSL2）
 
-第一次上卡：
+**第二次上卡（下一步要跑的）**：教师探针细查 → 学习率探测（3 个学习率，各 30 步）→ D0 评测 → 教师输出，预计 2–2.5 小时：
+
+```zsh
+colab exec -s opd --timeout 86400 <<'EOF'
+%run /content/project2/scripts/colab_job_v3.py session2 --publish --drive mydrive:opd_runs --sync-every 20 --save runs=/content/runs -- bash scripts/colab_session_v3.sh probe train=d4_dual:30 train=d4_dual_lr1e-4:30 train=d4_dual_lr1e-5:30 eval=d0 teacher-outputs
+EOF
+```
+
+- `colab_session_v3.sh` 先引导环境、下载模型，然后每个参数是一步，按顺序执行；某一步失败会记下来，接着跑下一步。步骤说明见脚本文件头。
+- `train=d4_dual:30` 跑 `configs/project2_opd_v3_d4_dual.json` 的前 30 步，在第 30 步存 checkpoint 后停下，并在 run 目录里写 `summary.json`（含稳定性关卡的结果）。
+- `--save runs=/content/runs`：整个 `/content/runs`（run 目录、评测、教师输出、`sessions/` 里的会话日志）复制到 `mydrive:opd_runs/session2/<UTC 时间>/runs/`；其中的日志和 JSON 推到 `results` 分支的 `session2/<UTC 时间>/runs/`。checkpoint 和权重只存 Drive。
+- `--sync-every 20`：每 20 分钟保存一次，跑到一半也能看到进度。
+- 任务开始时会打印 Drive 剩余空间。这次的 checkpoint 和教师输出约 2 GiB；剩余不到 10 GiB 时会提示。
+
+第一次上卡（已完成，留作参考）：
 
 ```zsh
 colab exec -s opd --timeout 86400 <<'EOF'
@@ -127,10 +141,12 @@ colab exec -s opd --timeout 86400 <<'EOF'
 EOF
 ```
 
-- `--publish`：任务结束后（失败也一样），把 `job/`（`output.log`、`command.json`）和 `--save` 里的日志、JSON 推到 `results` 分支的 `first_session/<UTC 时间>/`。启动前会先试推一次（`git push --dry-run`）；token 不能推送时直接报错，任务不会启动。
-- `--drive mydrive:opd_runs`：任务结束后，用 `rclone copy` 把 job 目录和 `--save` 的内容原样复制到 `mydrive:opd_runs/first_session/<UTC 时间>/`。`rclone copy` 返回时文件已经在 Drive 上。经 `/content/mydrive` 挂载点写入的文件是异步上传的，VM 释放前可能还没传完，所以脚本不经过挂载点。
-- `--save report=PATH`：要保存的文件、目录或压缩包。`report` 是它在 Drive 和 GitHub 上的子目录名。
-- 任务在 VM 上独立运行，关终端、Windows 睡眠、按 Ctrl-C 都不影响它。在日志出现 `[colab_job] first_session finished with exit status N` 之前，不要运行 `colab stop` 或 `colab restart-kernel`，也不要对同一会话再开 `colab exec`，否则它会排在任务后面。
+两种任务通用的说明：
+
+- `--publish`：任务结束后（失败也一样），把 `job/`（`output.log`、`command.json`）和 `--save` 里的日志、JSON 推到 `results` 分支的 `<任务名>/<UTC 时间>/`。启动前会先试推一次（`git push --dry-run`）；token 不能推送时直接报错，任务不会启动。
+- `--drive mydrive:opd_runs`：任务结束后，用 `rclone copy` 把 job 目录和 `--save` 的内容原样复制到 `mydrive:opd_runs/<任务名>/<UTC 时间>/`。`rclone copy` 返回时文件已经在 Drive 上。经 `/content/mydrive` 挂载点写入的文件是异步上传的，VM 释放前可能还没传完，所以脚本不经过挂载点。
+- `--save LABEL=PATH`：要保存的文件、目录或压缩包；`LABEL` 是它在 Drive 和 GitHub 上的子目录名。
+- 任务在 VM 上独立运行，关终端、Windows 睡眠、按 Ctrl-C 都不影响它。在日志出现 `[colab_job] <任务名> finished with exit status N` 之前，不要运行 `colab stop` 或 `colab restart-kernel`，也不要对同一会话再开 `colab exec`，否则它会排在任务后面。
 - 结束时日志里有 `saved to Drive: ...` 和 GitHub 链接，之后告诉 Kiro“跑完了”即可。
 
 在同一台 VM 上重跑同名任务时，要在任务名后加 `--again`（旧的任务目录改名保留）；不加的话，只会报告上次的结果。断线后重新执行同一条命令，会接着显示日志。
@@ -138,8 +154,10 @@ EOF
 ### 4. 看进度（另开一个 WSL2 终端）
 
 ```zsh
-colab download -s opd /content/jobs/first_session/output.log ./first_session.log && tail -n 40 ./first_session.log
+colab download -s opd /content/jobs/session2/output.log ./session2.log && tail -n 40 ./session2.log
 ```
+
+`--sync-every` 每次保存时也会推到 `results` 分支，Kiro 可以直接看中途结果。
 
 ### 5. 收尾
 
@@ -147,15 +165,14 @@ colab download -s opd /content/jobs/first_session/output.log ./first_session.log
 colab stop -s opd
 ```
 
-## 长训练
+如果马上要跑 Kiro 给的下一条命令，可以先不停：`/content/runs` 里的东西都还在，省去从 Drive 拷回的时间。VM 空闲时也按时长扣计算单元。
 
-```zsh
-colab exec -s opd --timeout 86400 <<'EOF'
-%run /content/project2/scripts/colab_job_v3.py d4_dual --publish --drive mydrive:opd_runs --sync-every 30 --save run=/content/runs/opd_v3_d4_dual -- python -m scripts.train_project2_opd_v3 --config configs/project2_opd_v3_d4_dual.json --output-root /content/runs
-EOF
-```
+## 下次上卡接着跑
 
-`--sync-every 30` 让任务每 30 分钟保存一次。Drive 上保存整个 run 目录，包括 checkpoint，只传有变化的文件。GitHub 上只保存日志和 JSON，在同一个文件夹里原地更新。VM 中途被回收时，Drive 上还有最近一次复制的 checkpoint。checkpoint 带 sha256 清单，没复制完整的 checkpoint 在续训时会被拒绝。
+- **同一台 VM 还在**：直接运行下一条命令。例如 `train=d4_dual` 会找到 checkpoint-30，从第 31 步继续到第 80 步。
+- **新 VM**：先按“每次开卡”的第 1、2 步准备好，再在步骤列表最前面加 `restore=...`，把需要的目录从 Drive 拷回 `/content/runs`，例如 `restore=mydrive:opd_runs/session2/<UTC 时间>/runs/opd_v3_d4_dual`。Kiro 会按 `results` 分支上的时间戳给出完整命令。
+
+续训会先校验 checkpoint 的 sha256 清单和运行身份。没复制完整的 checkpoint 会被跳过，改用更早的一个；checkpoint 之后多记的日志行会移进 `resume_archive_*`，不会删除。
 
 ## Colab 环境的已知问题（脚本已处理）
 

@@ -2,23 +2,24 @@
 
 所有命令从**项目根目录**执行。默认 `python` 是 Python 3.8，**不可用**；请用 `D:/anaconda3/envs/genai-test/python.exe`（Python 3.12），或先 `conda activate genai-test` 再使用 `python`。
 
-本目录共 **41 个文件**（38 个 `.py` + 3 个 `.sh`），按职责分 7 组；第 0 组是 2026-11-08 新增的 opd-v3 / v5 数据 / 评测 v3 / 预热与探针 / Colab 入口。标注「不能直接重跑」的脚本依赖本次重排已删除的原始采集/基准数据，只作**方法与历史记录参考**；删除明细见 [docs/migration/deletion_ledger.json](../docs/migration/deletion_ledger.json)。
+本目录共 **42 个文件**（38 个 `.py` + 4 个 `.sh`），按职责分 7 组；第 0 组是 2026-11-08 新增的 opd-v3 / v5 数据 / 评测 v3 / 预热与探针 / Colab 入口。标注「不能直接重跑」的脚本依赖本次重排已删除的原始采集/基准数据，只作**方法与历史记录参考**；删除明细见 [docs/migration/deletion_ledger.json](../docs/migration/deletion_ledger.json)。
 
-## 0. opd-v3 / v5 数据 / 评测 v3 / 预热与探针 / Colab（13，当前）
+## 0. opd-v3 / v5 数据 / 评测 v3 / 预热与探针 / Colab（14，当前）
 
 | 文件 | 说明 |
 | --- | --- |
-| `train_project2_opd_v3.py` | opd-v3 训练入口（MOPD 式混合批次双教师）；配置 `configs/project2_opd_v3_*.json`；设计见 `docs/opd_v3_mopd.md` |
+| `train_project2_opd_v3.py` | opd-v3 训练入口（MOPD 式混合批次双教师）；配置 `configs/project2_opd_v3_*.json`；`--stop-at-step N` 在第 N 步存 checkpoint 后停下，`--resume-from latest` 从最新的有效 checkpoint 继续；训练时给数学 rollout 打分（遥测）；设计见 `docs/opd_v3_mopd.md` |
 | `generate_eval_v3.py` | 评测协议 v3：vLLM（`--engine hf` 回退）greedy 生成；数学同时用 Math-Verify 和保守判分器评分；代码只写 `*.candidates.jsonl` 交本地 Docker；`--self-check` 测判分器覆盖率 |
 | `restore_official_benchmarks.py` | 从 EvalPlus 官方 release 恢复 HumanEval+ v0.1.10 / MBPP+ v0.2.0，按 `inventory_before_reorg.json` 的 sha256 校验后才写入 |
 | `build_project2_release_v5.py` | 生成 v5 **候选**：重查 prompt 预算、decontamination_v5、去掉重合行、从封存池按同 level 补数学；不批准任何东西 |
 | `approve_project2_release_v5.py` | **仅负责人执行**：绑定候选与审计报告的摘要，生成 `release/`（保留行逐字节不变，永不覆盖） |
 | `prefetch_models_v3.py` | 每个 Colab 会话先按配置下载固定 revision 的学生/教师权重 |
-| `probe_teacher_fit_v3.py` | 训练前测量：未训练学生的 rollout 上，各候选教师 × 领域的初始 KL、熵、低概率 token 占比（异源教师风险，见 `docs/opd_v3_mopd.md` 第 7 节） |
-| `summarize_run_v3.py` | 把一个 run 目录汇总成一个 JSON（GPU、各阶段耗时、峰值显存、各域 KL/熵/EOS 率） |
+| `probe_teacher_fit_v3.py` | 训练前测量：未训练学生的 rollout 上，各候选教师 × 领域的初始 KL、熵、低概率 token 占比、KL 最多的 token；`--dump-tokens K` 另写前 K 条 rollout 的逐 token 数值（异源教师风险，见 `docs/opd_v3_mopd.md` 第 7 节） |
+| `summarize_run_v3.py` | 把一个 run 目录汇总成一个 JSON（GPU、各阶段耗时、峰值显存、各域 KL/熵/EOS 率、数学 rollout 准确率），并比较首尾窗口给出稳定性关卡 |
 | `train_project2_sft_v3.py` | sft-v3：教师输出上的 LoRA SFT；SeqKD-Mix 基线兼 OPD 预热（`configs/project2_sft_v3_seqkd_mix.json`） |
 | `colab_bootstrap_v3.sh` | A100 / G4（sm_120）环境引导：cu128 torch 2.8.0、架构检查、恢复基准、跑 CPU 测试；可选装 vLLM |
 | `colab_first_session_v3.sh` | 第一次上卡一条命令：引导 → 下载模型 → 2 步 smoke → 运行汇总 → 教师适配度探针。报告目录在 `$OPD_OUTPUT_ROOT`（默认 `/content/runs`）下，环境记录在其中的 `environment/`；退出时（失败也一样）打包成 `/content/opd_first_session.tar.gz`；smoke 失败也照样跑探针；输出目录在没挂载的 Drive 挂载点下时直接报错 |
+| `colab_session_v3.sh` | 一次上卡的步骤列表：先引导环境、下载模型，再按参数顺序执行 `probe`、`train=NAME[:STOP]`（已有 checkpoint 时自动续训，跑完写 `summary.json` 含稳定性关卡）、`eval=d0` / `eval=NAME`、`teacher-outputs`、`restore=REMOTE:PATH`；某一步失败时记下来，继续下一步。步骤与用法见文件头和 `docs/colab_cli_wsl2.md` |
 | `colab_job_v3.py` | 在 Colab VM 上运行长任务：任务由独立会话里的监督进程运行，输出写进 `/content/jobs/<名字>/output.log`，断线或内核中断都不会停掉它。结束时（可选每 N 分钟）用 `rclone copy` 存到 Drive（`--drive`），并把日志和 JSON 推到 `results` 分支（`--publish`）；启动前检查 rclone 远端和 GitHub 推送权限。见 `docs/colab_cli_wsl2.md` |
 | `publish_results_v3.py` | 把一次运行的小型文本结果（日志、JSON、JSONL）推到 `results` 分支的 `<任务名>/<UTC 时间>/`，附 `PUBLISHED.json`；跳过权重、checkpoint、隐藏文件，替换看起来像凭据的字符串；遇到并发推送会在新的分支顶端重做。VM 上由 `colab_job_v3.py` 调用，也可以在 WSL2 里补发已下载的结果；`--check` 只测推送权限 |
 

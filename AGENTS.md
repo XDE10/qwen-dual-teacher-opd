@@ -25,8 +25,8 @@
 ## 2. 硬约束（违反即结论错误）
 
 - **token IDs 只能由学生模板渲染一次**，并原样（完整 `input_ids` / `attention_mask`）交给教师；教师不得重新套自己的 chat template，也不得 decode 后再 tokenize 学生前缀。教师侧不得引入自己的后缀/系统提示。
-- **不得称 D0～D4 已完成**。当前只有分时双教师 2 步 smoke 工程配置；D0/D1/D2/D3/D4 的正式配置与结果都未交付。
-- **GPU 未验收**。真实 Qwen 前向、完整 logits 显存、词表外概率质量、教师切换、checkpoint 恢复都不能称为已验证；历史 CPU 测试与 2 步 smoke 不代表正式训练成功。
+- **不得称 D0～D4 已完成**。GPU 上目前只有 2 步 smoke 和训练前教师探针（`reports/g4_first_session_20261109/`）；D0～D4 的 opd-v3 配置已就绪，结果都未交付。
+- **GPU 只验到 smoke**。真实 Qwen 前向在 G4 上只跑过 2 步 smoke（每步 4+4 条、64 个新 token）和探针；完整批次的 logits 显存、吞吐、checkpoint 恢复都不能称为已验证；CPU 测试与 2 步 smoke 不代表正式训练成功。
 - **数据逐行批准**。范围只认 manifest 的 `approved_training_files` / `approved_evaluation_files` 与逐行 `training_approved`；候选 ≠ 批准，AI 审核 ≠ 人工金标。dev 不得进训练。
 - **不得手改批准字段或哈希**来绕过检查。新数据版本必须独立取证、保留旧发布；不能用批量重算 SHA 的方式"修好"检查。
 - **代码评测必须走 Docker 沙箱**，数据集代码不在宿主执行；无可用 Docker 时停止并报告，不得回退宿主子进程。Colab 没有 Docker：GPU 端只生成候选 JSONL（`scripts/generate_eval_v3.py`），由本地 Docker 执行。
@@ -39,13 +39,13 @@
 
 | 目录 | 职责 |
 | --- | --- |
-| `configs/` | v1 基线、v4 smoke/math_short/code_short、提示词契约，以及 10 个 opd-v3 配置（`project2_opd_v3_*.json`）和 1 个 sft-v3 配置；命令从项目根执行 |
+| `configs/` | v1 基线、v4 smoke/math_short/code_short、提示词契约，以及 12 个 opd-v3 配置（`project2_opd_v3_*.json`，含 2 个学习率探测配置）和 1 个 sft-v3 配置；命令从项目根执行 |
 | `src/data/` | 批准输入加载、哈希/白名单、代码沙箱、数据工程实现 |
 | `src/teachers/` | 学生提示渲染与"原样 token IDs 直传教师"契约、词表审计 |
 | `src/losses/` | 共同支持上的 reverse KL 数值参考与分块实现 |
 | `src/training/` | OPD v2 训练循环、采样、运行时/checkpoint、v1 历史实现 |
 | `src/evaluation/` | 数学验证器、代码比较器/注册表、EvalPlus 接入 |
-| `scripts/` | 训练/评测/数据工程入口；Colab 用 `colab_bootstrap_v3.sh`、`colab_first_session_v3.sh`、`colab_job_v3.py`、`publish_results_v3.py`（GPU 上未验证；Colab CLI 用法见 [docs/colab_cli_wsl2.md](docs/colab_cli_wsl2.md)） |
+| `scripts/` | 训练/评测/数据工程入口；Colab 用 `colab_bootstrap_v3.sh`、`colab_first_session_v3.sh`、`colab_session_v3.sh`、`colab_job_v3.py`、`publish_results_v3.py`（GPU 上未验证；Colab CLI 用法见 [docs/colab_cli_wsl2.md](docs/colab_cli_wsl2.md)） |
 | `tests/` | 项目二测试（23 个文件）；`python -m pytest -q` |
 | `tools/` | `verify_code_repair_v4.py`（v4 发布离线验收）、`verify_repository.py`（仓库级布局/映射/镜像校验） |
 | `data/` | 当前 v5 发布、v4 发布（溯源）、历史 `portable_release`、tokenizer 快照、数学源池/评测集；说明见 [data/README.md](data/README.md) |

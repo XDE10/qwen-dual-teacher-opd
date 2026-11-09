@@ -1,6 +1,6 @@
 # opd-v3：单卡 MOPD 式双教师在线蒸馏（设计与运行说明）
 
-状态（2026-11-08）：代码已实现，CPU 契约测试通过（tiny Qwen2，`tests/test_opd_v3.py`）。真实 Qwen 前向、显存峰值、吞吐和能力提升都**未验证**，需要第一次 smoke 实测后再写进报告。opd-v2 保持不变，用于溯源。
+状态（2026-11-09）：代码已实现，CPU 契约测试通过（tiny Qwen2，`tests/test_opd_v3.py`）。G4 上真实模型跑通了 2 步 smoke（每步 4+4 条、64 个新 token，显存峰值 35.45 GiB），并测了教师适配度，见 [reports/g4_first_session_20261109/README.md](../reports/g4_first_session_20261109/README.md)。完整批次的显存峰值、吞吐和能力提升都**未验证**。opd-v2 保持不变，用于溯源。
 
 ## 1. 与小米 MOPD 的对应关系
 
@@ -10,7 +10,7 @@
 |---|---|---|
 | 学生采样 | 学生在线 rollout | 相同；HF 批量采样，走审计过的 sampling-v2 采样链（T=1，无 top-k/top-p，屏蔽共同支持集外 token） |
 | 教师路由 | 按 prompt 所属领域派发给对应教师 | 相同（`teachers.{math,code}`）；同一 (model, revision) 只加载一次 |
-| 一步内的数据 | 多领域混合 batch | 默认 `schedule.type=mixed`（如 32 math + 32 code）；`blocked` 只作消融 |
+| 一步内的数据 | 多领域混合 batch | 默认 `schedule.type=mixed`（G4 上 64 math + 64 code）；`blocked` 只作消融 |
 | 损失 | 逐 token reverse KL；PG 形式（式 4，优势双边截断）与 top-k 形式（式 5，带 `-p+q` 校正） | `loss.mode = exact_rkl / pg / topk_rkl`；`exact_rkl` 是全支持集精确版（K=V），本项目默认 |
 | 序列归一化 | 1/|y| 后对序列求平均 | `normalization=sequence_mean`（默认）；另有 `token_mean`、`domain_token_mean` |
 | 教师来源 | 由同一 SFT 起点做领域 RL 得到（同源） | **异源**：现成的 Qwen2.5-Math-7B / Coder-7B，比学生大约 5 倍。处理办法见第 7 节：先用探针测距离，再按关卡决定是否启用 SFT 预热（`d4_warmstart`）、`proximal_teacher_alpha` 或通用教师 |
@@ -39,7 +39,7 @@
 | 合计 | ≈52–57 GiB | ≈62–67 GiB |
 
 * **A100 80GB**：用默认配置（`rollout_batch_size=64`，`train_microbatch_tokens=16384`）。
-* **G4 96GB（RTX PRO 6000 Blackwell）**：smoke 测出峰值后，可以把 `train_microbatch_tokens` 提到 24576–32768、每步 prompt 提到 64+64。
+* **G4 96GB（RTX PRO 6000 Blackwell）**：smoke 实测常驻部分约 34.2 GiB、峰值 35.45 GiB（2026-11-09）。实验配置据此改为 `train_microbatch_tokens=32768`、每步 64+64 条 prompt；80 步约两遍训练集。完整批次的峰值待第二次上卡实测。
 * **40GB 卡**：`teacher_placement=cpu_swap`，两位教师放主机内存，每步按领域换入两次。
 
 G4 的软件栈：GPU 是 sm_120，必须用 cu128 的 torch 2.8.0 wheel（`scripts/colab_bootstrap_v3.sh` 会检查 `torch.cuda.get_arch_list()`）。v2 bootstrap 用的 cu126 wheel 没有 sm_120 kernel。注意力用 PyTorch SDPA，不依赖 flash-attn。vLLM 0.10.2 只用于评测，可选安装。
@@ -50,14 +50,15 @@ G4 的软件栈：GPU 是 sm_120，必须用 cu128 的 torch 2.8.0 wheel（`scri
 
 | 配置 | 作用 | 与 `d4_dual` 的差异 |
 |---|---|---|
-| `smoke` | 上卡 2 步冒烟（v4 数据，生成 64 token） | — |
+| `smoke` | 上卡 2 步冒烟（每步 4+4 条，生成 64 token） | — |
 | `d4_dual` | 主方法：混合批次、双专家教师、exact RKL、序列归一化 | 基准 |
-| `d1_math` / `d2_code` | 单域诊断，每域曝光与 D4 相同（各 80×32） | 数据、教师、每步 prompt |
+| `d1_math` / `d2_code` | 单域诊断，每域曝光与 D4 相同（各 80×64） | 数据、教师、每步 prompt |
 | `d3_general` | 通用单教师 Qwen2.5-7B-Instruct（与学生同一后训练谱系） | 教师 |
 | `d4_blocked` | 块状交替（每 10 步换域），每域总曝光相同 | schedule |
 | `d4_pcgrad` | 梯度手术 | gradient_surgery |
 | `d4_pg` / `d4_topk` | MOPD 式 4 / 式 5 两种损失实例化 | loss.mode |
 | `d4_warmstart` | 先 SFT 预热、再 OPD（从 `sft_v3_seqkd_mix` 的 adapter 起步） | init_adapter |
+| `d4_dual_lr1e-5` / `d4_dual_lr1e-4` | 学习率探测（`d4_dual` 是 3e-5）：各跑前 30 步看关卡，选中的那个从 checkpoint-30 继续到 80 步 | learning_rate |
 | `project2_sft_v3_seqkd_mix.json` | 教师输出上的 LoRA SFT：既是 SeqKD-Mix 基线，也是预热 | 另一个训练器（sft-v3） |
 
 `tests/test_opd_v3.py::test_experiment_configs_validate_and_differ_only_in_declared_factors` 保证上表的"差异"列成立。所有配置都指向 v5 数据（2026-11-08 已批准）。
@@ -77,7 +78,7 @@ python -m scripts.generate_eval_v3 --model Qwen/Qwen2.5-1.5B-Instruct --revision
 
 smoke 必须实测并记录：每阶段耗时与峰值显存（`metrics.jsonl` 的 `phases`）、支持集外概率质量、生成副本与 PEFT 前向的一致性、checkpoint 续训（`resume_from_checkpoint`）。`python -m scripts.summarize_run_v3 --run-dir <目录>` 把这些汇总成一个 JSON。
 
-第一次上卡用 `scripts/colab_first_session_v3.sh` 一次跑完引导、下载、smoke、汇总和探针。在 WSL2 里用 Colab CLI（google-colab-cli 0.7.5）时，用 `scripts/colab_job_v3.py` 启动它和以后的长任务，结束时结果存到 Drive，日志和 JSON 推到 `results` 分支；命令见 [colab_cli_wsl2.md](colab_cli_wsl2.md)。
+第一次上卡用 `scripts/colab_first_session_v3.sh` 一次跑完引导、下载、smoke、汇总和探针。之后每次上卡用 `scripts/colab_session_v3.sh STEP ...`，步骤有 `probe`、`train=NAME[:STOP]`、`eval=d0`、`eval=NAME`、`teacher-outputs`、`restore=REMOTE:PATH`，说明见脚本文件头。`train` 跑完写 `summary.json`，其中的稳定性关卡比较首尾各 10 步（不足 30 步时取总步数的三分之一）。在 WSL2 里用 Colab CLI（google-colab-cli 0.7.5）时，用 `scripts/colab_job_v3.py` 启动它和以后的长任务，结束时结果存到 Drive，日志和 JSON 推到 `results` 分支；命令见 [colab_cli_wsl2.md](colab_cli_wsl2.md)。
 
 预热路线（需要时，见第 7 节）：
 
@@ -93,7 +94,7 @@ python -m scripts.train_project2_opd_v3 --config configs/project2_opd_v3_d4_warm
 ## 6. 数据与评测协议
 
 * 数据：v5（`data/project2_release_v5_20261108/release/`，2026-11-08 按负责人指示批准）在 v4 基础上去掉与评测/dev 重合的 133 条数学题和 12 条代码题，数学按同 level 补齐。说明见 [reports/project2_release_v5_20261108/README.md](../reports/project2_release_v5_20261108/README.md)。
-* 评测协议 v3（`src/evaluation/eval_v3.py`）：所有模型使用同一套 greedy 解码和固定预算。数学同时报 Math-Verify（主口径）和仓库保守判分器（严格口径）。参考答案自判时，保守判分器在 MATH-500 只认 389/500、math dev 只认 209/256，Math-Verify 在三个数学集上都认 100%。HumanEval+/MBPP+ 按 EvalPlus 官方 chat 提示构造。代码只生成候选文件，执行仍在本地 Docker 沙箱完成。
+* 评测协议 v3（`src/evaluation/eval_v3.py`）：所有模型使用同一套 greedy 解码和固定预算。Qwen2.5 各 checkpoint 的 `generation_config.json` 自带 `repetition_penalty`（1.05–1.1）和采样默认值；HF 回退路径用 `use_model_defaults=False` 加纯 greedy 配置把它们排除，并检查处理器链里只有共同支持集屏蔽，与 vLLM 的温度 0 路径一致（2026-11-09 修正，此前 HF 路径会带上 1.1 的重复惩罚，但还没在 GPU 上用过）。数学同时报 Math-Verify（主口径）和仓库保守判分器（严格口径）。参考答案自判时，保守判分器在 MATH-500 只认 389/500、math dev 只认 209/256，Math-Verify 在三个数学集上都认 100%。HumanEval+/MBPP+ 按 EvalPlus 官方 chat 提示构造。代码只生成候选文件，执行仍在本地 Docker 沙箱完成。
 
 ## 7. 异源教师：风险、测量与退路
 
@@ -107,7 +108,9 @@ python -m scripts.train_project2_opd_v3 --config configs/project2_opd_v3_d4_warm
 
 **测量（训练前约 15 分钟）。** `scripts/probe_teacher_fit_v3.py` 在未训练学生的 rollout 上，测数学教师、代码教师、通用教师（Qwen2.5-7B-Instruct，与学生同一后训练谱系）对两个领域的 3×2 KL 矩阵，并给出熵、"教师认为极不可能的学生 token"占比、KL 随位置的分布。
 
-**关卡（D4 前 20–30 步）。** 同时满足以下四条才继续：各域 KL 呈下降趋势；学生熵相对第 1 步下降不超过 30%（MOPD 的失稳信号是 0.30 → 0.21）；EOS 率与平均回答长度变化在 ±30% 以内；梯度范数没有反复出现超过中位数 10 倍的尖峰。
+**实测（G4，2026-11-09，64+64 条 rollout）。** 数学教师在数学上 0.369，代码教师在代码上 0.223；通用教师在数学上 0.154、代码上 0.297；代码教师在数学上只有 0.118。数学教师在学生回答上的熵是 1.26（学生 0.32），KL 在回答最后三成升到 0.41–0.71。也就是说，路由给数学的专家教师离学生最远，约为 MOPD 失稳案例的 2 倍。详见 [reports/g4_first_session_20261109/README.md](../reports/g4_first_session_20261109/README.md)。
+
+**关卡（D4 前 30 步，`summarize_run_v3` 自动计算）。** 比较首尾各 10 步的均值，以下各条都满足才继续：各域 KL 下降；学生熵在 0.7–1.5 倍之间（MOPD 的失稳信号是 0.30 → 0.21 的坍缩；我们用精确 KL、数学教师熵高，更要防熵上升）；平均回答长度在 0.7–1.3 倍之间，EOS 率下降不超过 0.10；数学 rollout 准确率（Math-Verify，训练时对学生自己的回答打分）下降不超过 0.08；梯度范数超过此前中位数 10 倍的步不超过 1 次。
 
 **退路（按成本排序）。**
 1. `proximal_teacher_alpha` 设为 0.5–0.8（只需重启训练）。
