@@ -1,0 +1,113 @@
+{
+  "run_dir": "/content/runs/opd_v3_smoke",
+  "steps": 2,
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "gpu_total_gib": 95.0,
+  "torch_cuda": "12.8",
+  "teacher_pool": {
+    "placement": "resident",
+    "keys": [
+      [
+        "Qwen/Qwen2.5-Coder-7B-Instruct",
+        "c03e6d358207e414f1eca0bb1891e29f1db0e242"
+      ],
+      [
+        "Qwen/Qwen2.5-Math-7B-Instruct",
+        "ef9926d75ab1d54532f6a30dd5e760355eb9aa4d"
+      ]
+    ],
+    "load_seconds": {
+      "Qwen/Qwen2.5-Math-7B-Instruct/ef9926d75ab1d54532f6a30dd5e760355eb9aa4d": 1.942948473999877,
+      "Qwen/Qwen2.5-Coder-7B-Instruct/c03e6d358207e414f1eca0bb1891e29f1db0e242": 1.633375881999882
+    }
+  },
+  "overall_peak_gib": 35.45,
+  "phase_seconds_total": {
+    "backward_code": 0.4,
+    "backward_math": 0.2,
+    "forward_code": 0.5,
+    "forward_math": 0.2,
+    "optimizer": 0.1,
+    "rollout_code": 1.5,
+    "rollout_math": 1.6,
+    "sync_generation_copy": 0.1,
+    "teacher_route_code": 0.0,
+    "teacher_route_math": 0.0
+  },
+  "per_step": [
+    {
+      "step": 1,
+      "wall_s": 2.4,
+      "peak_gib": 35.45,
+      "loss": 0.328238382935524,
+      "grad_norm": 1.3151618242263794,
+      "cosine_math_code": 0.04676846042275429,
+      "lr": 3e-05,
+      "phase_s": {
+        "backward_code": 0.2,
+        "backward_math": 0.1,
+        "forward_code": 0.2,
+        "forward_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 0.7,
+        "rollout_math": 0.9,
+        "sync_generation_copy": 0.1,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.378,
+        "student_entropy": 0.387,
+        "teacher_entropy": 0.566,
+        "eos_rate": 0.0,
+        "mean_response_tokens": 64.0,
+        "removed_mass_max": 0.0004509091377258301
+      },
+      "code": {
+        "kl": 0.2785,
+        "student_entropy": 0.637,
+        "teacher_entropy": 0.61,
+        "eos_rate": 0.0,
+        "mean_response_tokens": 64.0,
+        "removed_mass_max": 1.9669532775878906e-06
+      }
+    },
+    {
+      "step": 2,
+      "wall_s": 2.1,
+      "peak_gib": 35.45,
+      "loss": 0.4451242685317993,
+      "grad_norm": 1.5137617588043213,
+      "cosine_math_code": 0.007373325061053038,
+      "lr": 3e-05,
+      "phase_s": {
+        "backward_code": 0.2,
+        "backward_math": 0.1,
+        "forward_code": 0.2,
+        "forward_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 0.7,
+        "rollout_math": 0.7,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.6147,
+        "student_entropy": 0.583,
+        "teacher_entropy": 1.184,
+        "eos_rate": 0.0,
+        "mean_response_tokens": 64.0,
+        "removed_mass_max": 0.0017341971397399902
+      },
+      "code": {
+        "kl": 0.2755,
+        "student_entropy": 0.616,
+        "teacher_entropy": 0.494,
+        "eos_rate": 0.0,
+        "mean_response_tokens": 64.0,
+        "removed_mass_max": 1.71661376953125e-05
+      }
+    }
+  ]
+}
