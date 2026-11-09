@@ -136,6 +136,73 @@ def check_adapter_matches(path, lora):
         raise ValueError(f'init_adapter LoRA config {actual} differs from configured {expected}')
 
 
+MATH_ANSWERS = 'project2_math_train_answers.jsonl'
+
+
+def load_math_answers(c):
+    """Reference answers of the approved math rows from the release sidecar, or None.
+
+    Only used to grade the student's own math rollouts for telemetry. Never part of a
+    prompt, of the loss, or of any training decision inside a run.
+    """
+    if 'math' not in c['prompts_per_step']:
+        return None
+    manifest_path = Path(c['data_manifest'])
+    manifest = read(manifest_path)
+    if MATH_ANSWERS not in manifest.get('sidecar_files', {}):
+        return None
+    expected = manifest['files'][MATH_ANSWERS]
+    expected = expected['sha256'] if isinstance(expected, dict) else expected
+    path = manifest_path.parent / MATH_ANSWERS
+    if sha_file(path) != expected:
+        raise ValueError(MATH_ANSWERS + ' digest differs from the release manifest')
+    rows = [json.loads(line) for line in path.read_text(encoding='utf-8').splitlines() if line.strip()]
+    return {r['sample_id']: r['reference_answer'] for r in rows}
+
+
+class MathRolloutGrader:
+    """Grades math rollouts with the evaluation graders (Math-Verify and the conservative verifier)."""
+
+    def __init__(self, answers, decode):
+        self.answers, self.decode = answers, decode
+
+    def __call__(self, rows, rollouts):
+        from src.evaluation.eval_v3 import grade_math
+        verdicts = []
+        for row, x in zip(rows, rollouts):
+            reference = self.answers.get(row['sample_id'])
+            if reference is None:
+                verdicts.append(None)
+                continue
+            grade = grade_math(self.decode(x['response_ids']), reference, not x['ended_with_eos'])
+            verdicts.append({'math_verify': grade['math_verify']['correct'],
+                             'conservative': bool(grade['conservative']['correct'])})
+        return verdicts
+
+
+def grading_summary(verdicts):
+    graded = [v for v in verdicts if v is not None]
+    out = {'rollouts_graded': len(graded)}
+    if graded:
+        out['rollout_accuracy_conservative'] = sum(v['conservative'] for v in graded) / len(graded)
+        known = [v['math_verify'] for v in graded if v['math_verify'] is not None]
+        out['rollout_accuracy_math_verify'] = sum(known) / len(known) if len(known) == len(graded) else None
+    return out
+
+
+def latest_valid_checkpoint(out, identity):
+    """Newest checkpoint in ``out`` whose files and run identity verify; others are reported and skipped."""
+    from src.training.runtime_v3 import validate_checkpoint
+    found = [p for p in Path(out).glob('checkpoint-*') if p.is_dir() and p.name.split('-')[-1].isdigit()]
+    for path in sorted(found, key=lambda p: int(p.name.split('-')[-1]), reverse=True):
+        try:
+            validate_checkpoint(path, identity)
+            return path
+        except (ValueError, OSError, KeyError) as error:
+            print(f'[opd-v3] skipping {path.name}: {error}', flush=True)
+    return None
+
+
 def load_pools(c):
     """Approved rows per domain plus protected-ID, domain and duplicate checks."""
     if not Path(c['data_manifest']).exists():
@@ -306,12 +373,13 @@ class OPDTrainerV3:
     """One optimizer step = sample -> sync copy -> rollouts -> routed teacher scoring -> update."""
 
     def __init__(self, config, student, teachers, engine, samplers, prefixes, support, pad_id, device,
-                 optimizer, scheduler, recorder=None):
+                 optimizer, scheduler, recorder=None, rollout_grader=None):
         self.c, self.student, self.teachers, self.engine = config, student, teachers, engine
         self.samplers, self.prefixes, self.support = samplers, prefixes, support
         self.pad_id, self.device = pad_id, device
         self.optimizer, self.scheduler = optimizer, scheduler
         self.recorder = recorder or PhaseRecorder()
+        self.rollout_grader = rollout_grader  # telemetry only: (rows, rollouts) -> per-rollout verdicts
         self.params = [p for p in student.parameters() if p.requires_grad]
         domains = list(config['prompts_per_step'])
         self.state = {'step': 0, 'exposure': {d: {'prompts': 0, 'response_tokens': 0, 'eos': 0} for d in domains}}
@@ -374,6 +442,10 @@ class OPDTrainerV3:
             self.optimizer.step()
             self.scheduler.step()
         self.state['step'] = step + 1
+        verdicts = {}
+        if self.rollout_grader is not None and 'math' in plan:
+            with phase('grade_math'):
+                verdicts['math'] = self.rollout_grader(rows['math'], rollouts['math'])
         samples = []
         for d in plan:
             exposure = self.state['exposure'][d]
@@ -381,14 +453,19 @@ class OPDTrainerV3:
             exposure['response_tokens'] += sum(lengths[d])
             exposure['eos'] += sum(x['ended_with_eos'] for x in rollouts[d])
             key = c['stratify_keys'].get(d)
-            for row, x in zip(rows[d], rollouts[d]):
-                samples.append({'sample_id': row['sample_id'], 'domain': d, 'stratum': row.get(key),
-                                'prompt_tokens': len(x['prompt_ids']), 'response_tokens': len(x['response_ids']),
-                                'ended_with_eos': x['ended_with_eos']})
+            for k, (row, x) in enumerate(zip(rows[d], rollouts[d])):
+                sample = {'sample_id': row['sample_id'], 'domain': d, 'stratum': row.get(key),
+                          'prompt_tokens': len(x['prompt_ids']), 'response_tokens': len(x['response_ids']),
+                          'ended_with_eos': x['ended_with_eos']}
+                if d in verdicts and verdicts[d][k] is not None:
+                    sample['correct'] = verdicts[d][k]
+                samples.append(sample)
         for d in plan:
             domain_stats[d].update(prompts=len(rows[d]), response_tokens=sum(lengths[d]),
                                    mean_response_tokens=sum(lengths[d]) / len(lengths[d]),
                                    eos_rate=sum(x['ended_with_eos'] for x in rollouts[d]) / len(rollouts[d]))
+            if d in verdicts:
+                domain_stats[d].update(grading_summary(verdicts[d]))
         compute = {'forward_', 'backward_', 'rollout_', 'optimizer', 'sync_generation_copy'}
         record = {'step': self.state['step'], 'domains_in_step': plan, 'loss': loss_value,
                   'loss_mode': c['loss']['mode'], 'normalization': c['loss']['normalization'],
@@ -488,7 +565,14 @@ def save_rollout_texts(out, step, rollouts, decode, per_domain):
                                    ensure_ascii=False) + '\n')
 
 
-def run(config_path, output_root=None):
+def run(config_path, output_root=None, stop_at_step=None, resume_from=None):
+    """Train one opd-v3 config.
+
+    ``stop_at_step``: stop after that step and save a checkpoint there (e.g. a 30-step gate
+    window). ``resume_from``: a checkpoint folder, or 'latest' for the newest valid checkpoint in
+    the output folder (none yet: start fresh). Steps logged after the resumed checkpoint are moved
+    to an archive folder, not deleted. Neither option is part of the run identity.
+    """
     import torch
     from transformers import AutoTokenizer, set_seed
     from peft import LoraConfig, PeftModel, get_peft_model
@@ -526,6 +610,11 @@ def run(config_path, output_root=None):
     probe = gen_copy.model if gen_copy else base
     contracts = {d: resolved_contract(probe, cfg, support, device) for d, cfg in configs.items()}
     identity = build_identity(c, contracts, ROOT)
+    if resume_from:
+        c['resume_policy'] = 'archive_future_v2'
+        chosen = latest_valid_checkpoint(out, identity) if resume_from == 'latest' else resume_from
+        c['resume_from_checkpoint'] = str(chosen) if chosen else None
+        print(f"[opd-v3] resume from {c['resume_from_checkpoint'] or 'scratch (no valid checkpoint)'}", flush=True)
     saved = None
     if c.get('resume_from_checkpoint'):
         validate_checkpoint(c['resume_from_checkpoint'], identity)  # all files verified BEFORE torch.load
@@ -554,31 +643,52 @@ def run(config_path, output_root=None):
     engine = HFRolloutEngine(gen_copy.model if gen_copy else student, configs, contracts, support, tok.pad_token_id,
                              tok.eos_token_id, c['rollout_batch_size'], sync=gen_copy.sync_from if gen_copy else None)
     samplers = {d: StratifiedSampler(rows, d, c['seed'], c['stratify_keys'].get(d)) for d, rows in pools.items()}
+    answers = load_math_answers(c)
+    grader = MathRolloutGrader(answers, lambda ids: tok.decode(ids, skip_special_tokens=True)) if answers else None
     trainer = OPDTrainerV3(c, student, teachers, engine, samplers, prefixes, support, tok.pad_token_id, device,
-                           optimizer, scheduler, PhaseRecorder())
+                           optimizer, scheduler, PhaseRecorder(), rollout_grader=grader)
     if saved:
         restore_engine(trainer, saved)
     write(out / 'teacher_pool.json', {'placement': c['teacher_placement'], 'keys': [list(k) for k in teachers.keys()],
                                       'load_seconds': teachers.load_seconds})
     decode = lambda ids: tok.decode(ids, skip_special_tokens=False)
+    last = min(c['max_steps'], stop_at_step) if stop_at_step else c['max_steps']
     with (out / 'metrics.jsonl').open('a', encoding='utf-8') as log:
-        while trainer.state['step'] < c['max_steps']:
+        while trainer.state['step'] < last:
             record, rollouts = trainer.train_step()
             step = trainer.state['step']
             if c['save_rollouts_every'] and step % c['save_rollouts_every'] == 0:
                 save_rollout_texts(out, step, rollouts, decode, c['rollouts_saved_per_domain'])
-            if step % c['save_steps'] == 0 or step == c['max_steps']:
+            if step % c['save_steps'] == 0 or step in (c['max_steps'], last):
                 save_checkpoint(out / f'checkpoint-{step}', trainer, identity, record['phases'])
             log.write(json.dumps(record) + '\n')
             log.flush()
-            print(json.dumps({k: record[k] for k in ('step', 'loss', 'gradient_norm', 'gradient_cosine_math_code',
-                                                     'total_wall_seconds')}), flush=True)
+            print(json.dumps(progress_line(record)), flush=True)
+    if trainer.state['step'] < c['max_steps']:
+        print(f"[opd-v3] stopped at step {trainer.state['step']} of {c['max_steps']}; "
+              'continue with --resume-from latest', flush=True)
     return trainer.state
+
+
+def progress_line(record):
+    line = {k: record[k] for k in ('step', 'loss', 'gradient_norm', 'gradient_cosine_math_code', 'total_wall_seconds')}
+    for d, stats in record['domains'].items():
+        line[d] = {'kl': round(stats['kl_exact_token_mean'], 4), 'entropy': round(stats['student_entropy_token_mean'], 3),
+                   'len': round(stats['mean_response_tokens'], 1), 'eos': round(stats['eos_rate'], 3)}
+        if stats.get('rollout_accuracy_math_verify') is not None:
+            line[d]['acc'] = round(stats['rollout_accuracy_math_verify'], 3)
+    return line
 
 
 def cli():
     parser = argparse.ArgumentParser(description='opd-v3 MOPD-style dual-teacher OPD (single GPU)')
     parser.add_argument('--config', required=True)
     parser.add_argument('--output-root', help='e.g. /content/runs (the Colab VM disk)')
+    parser.add_argument('--stop-at-step', type=int,
+                        help='stop after this step and save a checkpoint there; continue later with --resume-from latest')
+    parser.add_argument('--resume-from',
+                        help="checkpoint folder, or 'latest' for the newest valid checkpoint in the output folder")
     args = parser.parse_args()
-    run(args.config, args.output_root)
+    if args.stop_at_step is not None and args.stop_at_step < 1:
+        parser.error('--stop-at-step must be positive')
+    run(args.config, args.output_root, args.stop_at_step, args.resume_from)

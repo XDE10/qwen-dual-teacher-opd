@@ -159,6 +159,18 @@ def check_drive(remote):
     return None
 
 
+def drive_about(remote):
+    """Drive quota from `rclone about --json` (bytes), recorded in command.json."""
+    result = run_capture(['rclone', 'about', remote.split(':', 1)[0] + ':', '--json'], 120)
+    if result.returncode:
+        return {'error': result.stdout.strip()[-300:]}
+    try:
+        about = json.loads(result.stdout)
+    except ValueError:
+        return {'error': 'unparsed rclone about output'}
+    return about if isinstance(about, dict) else {'error': 'unexpected rclone about output'}
+
+
 def check_publish():
     result = run_capture([sys.executable, str(PUBLISHER), '--check'], 180)
     if result.returncode:
@@ -359,6 +371,13 @@ def main(argv=None):
     spec = {'name': a.name, 'command': command, 'cwd': str(ROOT), 'started_utc': utc_now(),
             'stamp': utc_now(compact=True), 'save': saves, 'drive': a.drive, 'publish': a.publish,
             'sync_every_min': a.sync_every}
+    if a.drive:
+        spec['drive_about'] = drive_about(a.drive)
+        free = spec['drive_about'].get('free')
+        if isinstance(free, (int, float)):
+            say(f'Drive has {free / 2 ** 30:.1f} GiB free')
+            if free < 10 * 2 ** 30:
+                say('warning: under 10 GiB free on Drive; a training run with checkpoints takes about 2 GiB')
     proc = start(job, spec)
     say(f'started {a.name} (pid {proc.pid}) in {ROOT}; log {job / "output.log"}')
     if destinations(spec):

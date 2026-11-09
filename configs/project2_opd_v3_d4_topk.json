@@ -29,8 +29,8 @@
   "seed": 42,
   "max_steps": 80,
   "prompts_per_step": {
-    "math": 32,
-    "code": 32
+    "math": 64,
+    "code": 64
   },
   "schedule": {
     "type": "mixed"
@@ -41,7 +41,7 @@
   },
   "rollout_engine": "hf_generation_copy",
   "rollout_batch_size": 64,
-  "train_microbatch_tokens": 16384,
+  "train_microbatch_tokens": 32768,
   "loss": {
     "mode": "topk_rkl",
     "topk": 64,
