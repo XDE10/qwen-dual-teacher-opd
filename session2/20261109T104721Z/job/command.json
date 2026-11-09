@@ -1,0 +1,32 @@
+{
+  "name": "session2",
+  "command": [
+    "bash",
+    "scripts/colab_session_v3.sh",
+    "probe",
+    "train=d4_dual:30",
+    "train=d4_dual_lr1e-4:30",
+    "train=d4_dual_lr1e-5:30",
+    "eval=d0",
+    "teacher-outputs"
+  ],
+  "cwd": "/content/project2",
+  "started_utc": "2026-11-09T10:47:21Z",
+  "stamp": "20261109T104721Z",
+  "save": [
+    [
+      "runs",
+      "/content/runs"
+    ]
+  ],
+  "drive": "mydrive:opd_runs",
+  "publish": true,
+  "sync_every_min": 20.0,
+  "drive_about": {
+    "total": 5497558138880,
+    "used": 311407849593,
+    "trashed": 3222506790,
+    "other": 24188451,
+    "free": 5186126100836
+  }
+}

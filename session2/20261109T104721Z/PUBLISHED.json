@@ -1,0 +1,150 @@
+{
+  "schema": "opd-results-v1",
+  "name": "session2",
+  "stamp": "20261109T104721Z",
+  "published_utc": "2026-11-09T11:07:43Z",
+  "job": {
+    "state": "running"
+  },
+  "publisher": {
+    "host": "72673cfdd3d7",
+    "gpu": [
+      "NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB"
+    ],
+    "code": {
+      "commit": "bc02083d68880af209a832601a897ec9931c4b85",
+      "branch": "feat/opd-v3-mopd-data-v5",
+      "modified_tracked_files": false
+    }
+  },
+  "sources": [
+    {
+      "label": "job",
+      "path": "/content/jobs/session2",
+      "kind": "folder"
+    },
+    {
+      "label": "runs",
+      "path": "/content/runs",
+      "kind": "folder"
+    }
+  ],
+  "files": [
+    {
+      "path": "job/command.json",
+      "bytes": 625,
+      "sha256": "488233520243e98ec018844b84fafd9119db7a93e0ce9d80d267a7e3be38101d"
+    },
+    {
+      "path": "job/output.log",
+      "bytes": 28435,
+      "sha256": "ecfd0046b8fec8d0a135e21e2b4a8f6d33c0ba8d09218bc2de4a4087378aa929"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual/metrics.jsonl",
+      "bytes": 244065,
+      "sha256": "db2dbcd15b38bcbe86f7c5651c70f75065452838e2bbddff06e82661a281f7ff"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual/resolved_generation.json",
+      "bytes": 4752,
+      "sha256": "cbc7180f3eba88ac82f76ab9195dc744a5f90fdd3a1edfc7e7f20694d3843fc3"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual/run_identity.json",
+      "bytes": 32232,
+      "sha256": "cd793a657dce859a5f9eb30080a0e55dee7eea25a030c8b2b22266389840d060"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual/startup_1794221637565593834.json",
+      "bytes": 506,
+      "sha256": "e059b59c7918fa8fa0c53b55a312cb00c745d8e55ac8b088087e03ac8c1bf7ba"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual/teacher_pool.json",
+      "bytes": 469,
+      "sha256": "1d90d32ac64654f7eb351f50a7b48718bde4064b018e42d9196771bcb2448041"
+    },
+    {
+      "path": "runs/sessions/20261109T104721Z/console.log",
+      "bytes": 28009,
+      "sha256": "5a2c9196a3e362a809b82c65185caff75ce70921d4c32618213c930b293c8409"
+    },
+    {
+      "path": "runs/sessions/20261109T104721Z/environment/benchmarks.txt",
+      "bytes": 525,
+      "sha256": "578fd7ff28f5e221d8c675b13bcfd1627caf79a938277561195f21d7da5c15d3"
+    },
+    {
+      "path": "runs/sessions/20261109T104721Z/environment/cpu-tests.txt",
+      "bytes": 1080,
+      "sha256": "741ed1d32a329cdb7db49235d9b2b4a0565b66d3bd2d20a72efb97be5ca00064"
+    },
+    {
+      "path": "runs/sessions/20261109T104721Z/environment/gpu.csv",
+      "bytes": 127,
+      "sha256": "88b570a6b620db8484c1ef679f3b5396a5aaec74a9ad5efc87d1a8989776bfb7"
+    },
+    {
+      "path": "runs/sessions/20261109T104721Z/environment/imports.txt",
+      "bytes": 123,
+      "sha256": "b8908577547b46e8ca47243bc9465c4efa339d76cc2ff368bc57cd7d3f3e5ed3"
+    },
+    {
+      "path": "runs/sessions/20261109T104721Z/environment/nvidia-smi.txt",
+      "bytes": 1689,
+      "sha256": "2bebfd676d1996674cfb7c9d131f2663348602be77f87e4d546ab45814f50be1"
+    },
+    {
+      "path": "runs/sessions/20261109T104721Z/environment/pip-check.txt",
+      "bytes": 551,
+      "sha256": "6872327c3200690a53dd49dfb94b04260de9e2b9ab10dc96fa37cb46dd8b8e21"
+    },
+    {
+      "path": "runs/sessions/20261109T104721Z/environment/pip-freeze.txt",
+      "bytes": 14256,
+      "sha256": "ac431fa588173338ab220084b835c7e21fdf1dfbd7f4bb8628ef0441b594586b"
+    },
+    {
+      "path": "runs/sessions/20261109T104721Z/environment/torch.txt",
+      "bytes": 189,
+      "sha256": "6c7034853a92a5248e81864d6fb47da5d31cdad70d226aaec3b72a1cf13dca2e"
+    },
+    {
+      "path": "runs/sessions/20261109T104721Z/prefetch.jsonl",
+      "bytes": 969,
+      "sha256": "ba9cc9bbd3c61379f8e68994e7ff6e9c494ff008a44df7757be502711182ca34"
+    },
+    {
+      "path": "runs/sessions/20261109T104721Z/steps.jsonl",
+      "bytes": 47,
+      "sha256": "0a8e1838203211a04700b526fd90da31de40167331ea1d9995858fe6c57f9076"
+    },
+    {
+      "path": "runs/sessions/20261109T104721Z/teacher_fit.json",
+      "bytes": 50809,
+      "sha256": "610a1b4f176ec58237bf8e1fa93f254c97886b6a71db7bb2654160fe732d4ff4"
+    },
+    {
+      "path": "runs/sessions/20261109T104721Z/teacher_fit_tokens.jsonl",
+      "bytes": 884393,
+      "sha256": "23bc6b18ce7639039c14207ceb984c0851184b5b639fc258a956b432ee6edc56"
+    }
+  ],
+  "redacted_strings": 0,
+  "skipped": [
+    {
+      "path": "job/child_pid",
+      "reason": "not a text result"
+    },
+    {
+      "path": "job/pid",
+      "reason": "not a text result"
+    }
+  ],
+  "skipped_count": 2,
+  "limits_mb": {
+    "per_file": 20,
+    "total": 50
+  }
+}

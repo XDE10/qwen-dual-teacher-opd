@@ -1,0 +1,7 @@
+ipython 7.34.0 requires jedi, which is not installed.
+timm 1.0.31 requires torchvision, which is not installed.
+fastai 2.8.12 requires torchvision, which is not installed.
+gradio 6.31.0 has requirement huggingface-hub<3.0,>=1.16.0, but you have huggingface-hub 0.36.2.
+bigframes 2.51.0 has requirement pyarrow>=23.0.1, but you have pyarrow 21.0.0.
+gradio-client 2.7.2 has requirement huggingface-hub<3.0,>=1.16.0, but you have huggingface-hub 0.36.2.
+diffusers 0.42.1 has requirement huggingface-hub<3.0,>=1.32.0, but you have huggingface-hub 0.36.2.
