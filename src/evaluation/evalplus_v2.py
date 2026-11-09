@@ -19,10 +19,14 @@ def docker_command(image, dataset, samples_dir, official_file, docker='docker'):
         raise ValueError('Pin the official-evaluator Docker image ID and dataset')
     override = 'HUMANEVAL_OVERRIDE_PATH' if dataset == 'humaneval' else 'MBPP_OVERRIDE_PATH'
     entry = "import importlib.metadata as m,runpy; assert m.version('evalplus')=='0.3.1'; runpy.run_module('evalplus.evaluate',run_name='__main__')"
+    # --pids-limit counts threads too: one BLAS/OpenMP thread per process and two evaluation workers
+    # (matching --cpus 2) keep EvalPlus's worker processes well inside it.
     return [docker, 'run', '--rm', '--network', 'none', '--read-only', '--cap-drop', 'ALL',
         '--security-opt', 'no-new-privileges', '--pids-limit', '128', '--memory', '4g', '--cpus', '2',
         '--user', '65534:65534', '--tmpfs', '/tmp:rw,nosuid,size=1g',
         '-e', 'HOME=/tmp', '-e', 'XDG_CACHE_HOME=/tmp', '-e', override + '=/dataset.jsonl',
+        '-e', 'OMP_NUM_THREADS=1', '-e', 'OPENBLAS_NUM_THREADS=1', '-e', 'MKL_NUM_THREADS=1',
         '--mount', f'type=bind,source={Path(samples_dir).resolve().as_posix()},target=/results',
         '--mount', f'type=bind,source={Path(official_file).resolve().as_posix()},target=/dataset.jsonl,readonly',
-        '--entrypoint', 'python', image, '-c', entry, '--dataset', dataset, '--samples', '/results/samples.jsonl']
+        '--entrypoint', 'python', image, '-c', entry, '--dataset', dataset, '--samples', '/results/samples.jsonl',
+        '--parallel', '2']
