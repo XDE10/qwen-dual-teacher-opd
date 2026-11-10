@@ -1,0 +1,74 @@
+{
+  "schema": "opd-results-v1",
+  "name": "code_scores",
+  "stamp": "session3_resume-20261110T030519Z-d4_dual-checkpoint-80",
+  "published_utc": "2026-11-10T05:43:16Z",
+  "job": {
+    "state": "not recorded"
+  },
+  "publisher": {
+    "host": "XDE10",
+    "gpu": null,
+    "code": {
+      "commit": "4f4423bf2f2c80669ea5641c51b387de38573956",
+      "branch": "feat/opd-v3-mopd-data-v5",
+      "modified_tracked_files": true
+    }
+  },
+  "sources": [
+    {
+      "label": "scores",
+      "path": "/home/xde10/opd_scores/session3_resume-20261110T030519Z/d4_dual-checkpoint-80",
+      "kind": "folder"
+    }
+  ],
+  "files": [
+    {
+      "path": "scores/candidates/code_dev.candidates.jsonl",
+      "bytes": 279073,
+      "sha256": "41cdc6a3ec7603f43e4b97889b4f26c1b0c82ae1d4376179725629c85da955a8"
+    },
+    {
+      "path": "scores/candidates/code_dev.summary.json",
+      "bytes": 15106,
+      "sha256": "8d2b88d526aa830b2e6ee6ffbb580ba513005c33668991a508cd5b104ad3c8c0"
+    },
+    {
+      "path": "scores/candidates/humanevalplus.candidates.jsonl",
+      "bytes": 104747,
+      "sha256": "49dbc2ed6594860ccb3455b5bd19ee3e65850442b6db192d868817f606d61cee"
+    },
+    {
+      "path": "scores/candidates/math_dev.summary.json",
+      "bytes": 15190,
+      "sha256": "fb6884802704a8aa51f33b46ccc2fdfe6b6f638557a2d19ca0f4f04d2dd3e2b3"
+    },
+    {
+      "path": "scores/candidates/mbppplus.candidates.jsonl",
+      "bytes": 174128,
+      "sha256": "361792b83a5b3b910f4a13a28abd71c68e709c43acaf5f79dd78f7dcaecc404a"
+    },
+    {
+      "path": "scores/code_dev/evaluate.log",
+      "bytes": 166,
+      "sha256": "f4f94461c0ffc56e5b3a784abd6559717b9af50d2695682e1d4352d78e8bd4b9"
+    },
+    {
+      "path": "scores/code_dev/student.json",
+      "bytes": 39413,
+      "sha256": "bf1b2ca9b40dc5cb0bbacaf765ae8f61d5134a4b691b18990555349286582d9a"
+    },
+    {
+      "path": "scores/scores.json",
+      "bytes": 1399,
+      "sha256": "2b6ee7a0563f3324e4d37ed0ab1e351c52419f5d4e57ab20bd8cecc39ffb488e"
+    }
+  ],
+  "redacted_strings": 0,
+  "skipped": [],
+  "skipped_count": 0,
+  "limits_mb": {
+    "per_file": 20,
+    "total": 50
+  }
+}

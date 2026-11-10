@@ -1,0 +1,45 @@
+{
+  "source": "session3_resume/20261110T030519Z/runs/eval/d4_dual-checkpoint-80",
+  "ref": "origin/results",
+  "scored_utc": "2026-11-10T05:38:01Z",
+  "suites": {
+    "code_dev": {
+      "status": "scored",
+      "protocol": "internal-dev-review-v3",
+      "tasks": 200,
+      "passed": 83,
+      "blocked_after_review": 8,
+      "pass_rate": 0.415,
+      "pass_rate_excluding_blocked": 0.4322916666666667,
+      "by_interface": {
+        "function": {
+          "tasks": 100,
+          "passed": 75,
+          "blocked": 8
+        },
+        "stdin_stdout": {
+          "tasks": 100,
+          "passed": 8,
+          "blocked": 0
+        }
+      },
+      "status_counts": {
+        "mismatch": 58,
+        "passed": 83,
+        "execution_error": 47,
+        "blocked_after_review": 8,
+        "unsupported_or_extraction_error": 4
+      },
+      "image_id": "sha256:3b0c23d092b8ff94262fd3518cf8250c4b1d65c014d6090eea3b23383145201e",
+      "note": "internal dev with reviewed comparators; not official EvalPlus"
+    },
+    "humanevalplus": {
+      "status": "skipped",
+      "reason": "data/code_benchmarks/official/HumanEvalPlus-v0.1.10.jsonl missing; run python3 -m scripts.restore_official_benchmarks"
+    },
+    "mbppplus": {
+      "status": "skipped",
+      "reason": "data/code_benchmarks/official/MbppPlus-v0.2.0.jsonl missing; run python3 -m scripts.restore_official_benchmarks"
+    }
+  }
+}
