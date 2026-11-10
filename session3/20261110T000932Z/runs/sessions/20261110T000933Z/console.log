@@ -284,3 +284,10 @@ mbppplus {"count": 378, "truncated": 6}
 `torch_dtype` is deprecated! Use `dtype` instead!
 train_math {"count": 2500, "truncated": 188, "accuracy_conservative": 0.754, "accuracy_math_verify": 0.8512}
 `torch_dtype` is deprecated! Use `dtype` instead!
+train_code {"count": 2488, "truncated": 0}
+== step dev=d4_dual@30 (started 01:39:05Z)
+`torch_dtype` is deprecated! Use `dtype` instead!
+math_dev {"count": 256, "truncated": 18, "accuracy_conservative": 0.46875, "accuracy_math_verify": 0.5625}
+code_dev {"count": 200, "truncated": 5}
+== step dev=d4_dual_lr1e-4@30 (started 01:47:19Z)
+`torch_dtype` is deprecated! Use `dtype` instead!
