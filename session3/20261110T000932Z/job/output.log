@@ -281,3 +281,17 @@ restored mydrive:opd_runs/session2/20261109T104721Z/runs/opd_v3_d4_dual_lr1e-5 -
 2026/11/10 00:31:54 NOTICE:     1.568 GiB / 1.864 GiB, 84%, 19.302 MiB/s, ETA 15s (xfr#89/101)
 2026/11/10 00:32:12 NOTICE:     1.864 GiB / 1.864 GiB, 100%, 16.753 MiB/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/session3/20261110T000932Z
+[publish] 40 files (2.96 MB), 11 left out, 0 strings redacted -> results:session3/20261110T000932Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/session3/20261110T000932Z
+math_dev {"count": 256, "truncated": 17, "accuracy_conservative": 0.46875, "accuracy_math_verify": 0.58203125}
+math500 {"count": 500, "truncated": 25, "accuracy_conservative": 0.444, "accuracy_math_verify": 0.55}
+gsm8k_test {"count": 1319, "truncated": 5, "accuracy_conservative": 0.7012888551933283, "accuracy_math_verify": 0.7391963608794542}
+code_dev {"count": 200, "truncated": 4}
+humanevalplus {"count": 164, "truncated": 1}
+mbppplus {"count": 378, "truncated": 6}
+== step teacher-outputs (started 00:46:28Z)
+`torch_dtype` is deprecated! Use `dtype` instead!
+[colab_job] periodic save (every 20 min)
+2026/11/10 00:52:24 NOTICE:    26.860 KiB / 26.860 KiB, 100%, 13.427 KiB/s, ETA 0s
+2026/11/10 00:52:44 NOTICE:     4.555 MiB / 4.555 MiB, 100%, 273.329 KiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/session3/20261110T000932Z

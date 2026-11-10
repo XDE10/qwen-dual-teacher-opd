@@ -274,3 +274,11 @@ restored mydrive:opd_runs/session2/20261109T104721Z/runs/opd_v3_d4_dual_lr1e-4 -
 restored mydrive:opd_runs/session2/20261109T104721Z/runs/opd_v3_d4_dual_lr1e-5 -> /content/runs/opd_v3_d4_dual_lr1e-5
 == step eval=d0 (started 00:16:28Z)
 `torch_dtype` is deprecated! Use `dtype` instead!
+math_dev {"count": 256, "truncated": 17, "accuracy_conservative": 0.46875, "accuracy_math_verify": 0.58203125}
+math500 {"count": 500, "truncated": 25, "accuracy_conservative": 0.444, "accuracy_math_verify": 0.55}
+gsm8k_test {"count": 1319, "truncated": 5, "accuracy_conservative": 0.7012888551933283, "accuracy_math_verify": 0.7391963608794542}
+code_dev {"count": 200, "truncated": 4}
+humanevalplus {"count": 164, "truncated": 1}
+mbppplus {"count": 378, "truncated": 6}
+== step teacher-outputs (started 00:46:28Z)
+`torch_dtype` is deprecated! Use `dtype` instead!
