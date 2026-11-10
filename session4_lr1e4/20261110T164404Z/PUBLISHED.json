@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "session4_lr1e4",
   "stamp": "20261110T164404Z",
-  "published_utc": "2026-11-10T21:00:41Z",
+  "published_utc": "2026-11-10T21:05:53Z",
   "job": {
     "state": "running"
   },
@@ -37,8 +37,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 92730,
-      "sha256": "1f587edb9629ea07c784a97af9189d3820d58ecd6bf29304f9896385050c6b6c"
+      "bytes": 93210,
+      "sha256": "f96ece2d5080580c8b22c70faa3f0860652e384d1537dc6c9e9ec99bc5abeedb"
     },
     {
       "path": "runs/eval/d4_dual_lr1e-4-checkpoint-80/code_dev.candidates.jsonl",
