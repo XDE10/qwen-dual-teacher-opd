@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "session3_resume",
   "stamp": "20261110T030519Z",
-  "published_utc": "2026-11-10T03:27:20Z",
+  "published_utc": "2026-11-10T03:48:00Z",
   "job": {
     "state": "running"
   },
@@ -37,8 +37,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 35460,
-      "sha256": "03ff52fbf6ee4c722ef50fb5f334f7cb57c2c9269825e283ee799c8536ab614f"
+      "bytes": 40168,
+      "sha256": "ba3a99f33cc521ed0dca5d7ebcb3872d61c9309ea4795aff24e3caa614b9aa62"
     },
     {
       "path": "runs/eval/d0/code_dev.candidates.jsonl",
@@ -167,8 +167,8 @@
     },
     {
       "path": "runs/opd_v3_d4_dual/metrics.jsonl",
-      "bytes": 943963,
-      "sha256": "aeaa3213eeb9111ca367a3a87735d7d25c0a2529a1e4aeed860c76c153baa9a1"
+      "bytes": 1339804,
+      "sha256": "ac94c878f3f524496d87d4007dabfda8e0d12c4abc26737b6920cacb5e0a527d"
     },
     {
       "path": "runs/opd_v3_d4_dual/resolved_generation.json",
@@ -189,6 +189,11 @@
       "path": "runs/opd_v3_d4_dual/rollouts/step-000030.jsonl",
       "bytes": 9066,
       "sha256": "ecf4f9d22972f11623c50a38ac24d2d2cca3fb618c954fd96c8f56e821b65233"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual/rollouts/step-000040.jsonl",
+      "bytes": 9786,
+      "sha256": "a8886855589ec97807ae5b160c5e95eab0825510373f492504a7a42fd1c041e1"
     },
     {
       "path": "runs/opd_v3_d4_dual/run_identity.json",
@@ -217,8 +222,8 @@
     },
     {
       "path": "runs/sessions/20261110T030520Z/console.log",
-      "bytes": 34709,
-      "sha256": "9b0334f8ffeecd19383c3e5c13d5085f057bfc03655c782445c1a7290de8f774"
+      "bytes": 38914,
+      "sha256": "02075ee0a94f4a7c641980b5c4a80ba316cc77565e473318ca1dd783824a39a9"
     },
     {
       "path": "runs/sessions/20261110T030520Z/environment/benchmarks.txt",
@@ -334,6 +339,10 @@
       "reason": "folder not published"
     },
     {
+      "path": "runs/opd_v3_d4_dual/checkpoint-40/",
+      "reason": "folder not published"
+    },
+    {
       "path": "runs/sft_v3_seqkd_mix/adapter-step-50/",
       "reason": "folder not published"
     },
@@ -342,7 +351,7 @@
       "reason": "folder not published"
     }
   ],
-  "skipped_count": 7,
+  "skipped_count": 8,
   "limits_mb": {
     "per_file": 20,
     "total": 50
