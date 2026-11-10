@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "session3_dev30",
   "stamp": "20261110T150931Z",
-  "published_utc": "2026-11-10T15:14:40Z",
+  "published_utc": "2026-11-10T15:20:41Z",
   "job": {
     "state": "running"
   },
@@ -37,13 +37,148 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 25150,
-      "sha256": "4ccf0a3640132e2ab646d10c4895f1922a41687b6c824ed28750df75d6da2040"
+      "bytes": 26888,
+      "sha256": "c225aace669b4dd3fa65ebae1174a6a0df45ff8c720f882b67c1ca9b079283ba"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual/metrics.jsonl",
+      "bytes": 913514,
+      "sha256": "bc414d16a222d9bf701eb53d13ed7722089b6ce2833282d8522007b5c7867fce"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual/resolved_generation.json",
+      "bytes": 4752,
+      "sha256": "cbc7180f3eba88ac82f76ab9195dc744a5f90fdd3a1edfc7e7f20694d3843fc3"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual/rollouts/step-000010.jsonl",
+      "bytes": 6490,
+      "sha256": "e5ff6aa6046d60feb31d1a78a364dad660d4302181a3bdb92c593ff59337a5ae"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual/rollouts/step-000020.jsonl",
+      "bytes": 7944,
+      "sha256": "fe815373f5be742335142d7b0f3c0707b5bd88f7062a474d2585befc934143be"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual/rollouts/step-000030.jsonl",
+      "bytes": 9066,
+      "sha256": "ecf4f9d22972f11623c50a38ac24d2d2cca3fb618c954fd96c8f56e821b65233"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual/run_identity.json",
+      "bytes": 32232,
+      "sha256": "cd793a657dce859a5f9eb30080a0e55dee7eea25a030c8b2b22266389840d060"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual/startup_1794221637565593834.json",
+      "bytes": 506,
+      "sha256": "e059b59c7918fa8fa0c53b55a312cb00c745d8e55ac8b088087e03ac8c1bf7ba"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual/summary.json",
+      "bytes": 37387,
+      "sha256": "d5f221061bf5db292ca5f63a3190427bedf50dbb930fd8e598019e38d1bfdf7c"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual/teacher_pool.json",
+      "bytes": 469,
+      "sha256": "1d90d32ac64654f7eb351f50a7b48718bde4064b018e42d9196771bcb2448041"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-4/metrics.jsonl",
+      "bytes": 912840,
+      "sha256": "bfe88dab643fbd3e3a0f81f80e3b04d9f1f15fae199cae149fb96665c04a21fc"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-4/resolved_generation.json",
+      "bytes": 4752,
+      "sha256": "cbc7180f3eba88ac82f76ab9195dc744a5f90fdd3a1edfc7e7f20694d3843fc3"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-4/rollouts/step-000010.jsonl",
+      "bytes": 6321,
+      "sha256": "d1bd9166fd0a636efe9cbca09658807d276be283f21c5accee31e00bc7b81097"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-4/rollouts/step-000020.jsonl",
+      "bytes": 8461,
+      "sha256": "b20242a92ddd89c5cbe4113f8c4916894f2d0f567151a8bab6ccdc75ed31d6be"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-4/rollouts/step-000030.jsonl",
+      "bytes": 8785,
+      "sha256": "05319ddbd75a9d1a593e7ce7a6d275545f7fdd17682ab09f761da7ab414a8bfe"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-4/run_identity.json",
+      "bytes": 32240,
+      "sha256": "f16afede25d3237bd62aeaf0c335ca0fe3c6d3d837cf5c493cfc541d31c02e44"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-4/startup_1794224558285126775.json",
+      "bytes": 507,
+      "sha256": "d3b725b7af0c85997671f77c39272f0b9bbf0bc3bb21d50e84f9e20ba71de70d"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-4/summary.json",
+      "bytes": 37395,
+      "sha256": "d018edcff664cdcda5e51d4f022b64154d8d989cd341a47accaf4715635f32f3"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-4/teacher_pool.json",
+      "bytes": 468,
+      "sha256": "0f184b40bf0f2c4a180ac0d7f5ab2207b4b76cbd2e22a982b24648f622c0c6f4"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-5/metrics.jsonl",
+      "bytes": 915040,
+      "sha256": "6c8eb44f277a559d6263f66946269627c77d446bebe99d7c4d7428dafcccf4bc"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-5/resolved_generation.json",
+      "bytes": 4752,
+      "sha256": "cbc7180f3eba88ac82f76ab9195dc744a5f90fdd3a1edfc7e7f20694d3843fc3"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-5/rollouts/step-000010.jsonl",
+      "bytes": 5930,
+      "sha256": "85a7d72451afe25e71e35e322576f90f914260bd5e9a70ca9d7f16625f7b804b"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-5/rollouts/step-000020.jsonl",
+      "bytes": 6838,
+      "sha256": "ed90046c98aa94987410be2dd7460e8352f351eaae8205ca8661725c519e13b6"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-5/rollouts/step-000030.jsonl",
+      "bytes": 7602,
+      "sha256": "743116daf32955efb181217a6cd645c7e12528294e0a3c105e0d8595961c0157"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-5/run_identity.json",
+      "bytes": 32239,
+      "sha256": "68b09d89b1cb5123c4a2c9cd9d409d0f41d72e6584ac76c542fb7a623f827e21"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-5/startup_1794227451374114896.json",
+      "bytes": 506,
+      "sha256": "9cdcc733bcb2bbae65d30a0bd13bb07783caeaf56449e0dda1281f45ff429615"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-5/summary.json",
+      "bytes": 37376,
+      "sha256": "e379bda62f5f6643e4ce8a2340075959536eb6dc407e5d1205de4b492ae5a138"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-5/teacher_pool.json",
+      "bytes": 469,
+      "sha256": "357dc53f5503b7d9d31999fe9639e8575e2e798b00dbb2882514f5b94dee921c"
     },
     {
       "path": "runs/sessions/20261110T150931Z/console.log",
-      "bytes": 24527,
-      "sha256": "6e39923c5709aae294e062ed6c362dd90bf43b1b720835629c223de77f9bdb37"
+      "bytes": 25769,
+      "sha256": "eecdc34be1d049a8b4f8983d050f90fa390db0c6f82fd07c33a7eeadc9e9dc12"
     },
     {
       "path": "runs/sessions/20261110T150931Z/environment/benchmarks.txt",
@@ -87,8 +222,13 @@
     },
     {
       "path": "runs/sessions/20261110T150931Z/prefetch.jsonl",
-      "bytes": 723,
-      "sha256": "0e93c59867766f2d63bb64ac832a716d7559e7ae9689b99dfc6639955e76ecda"
+      "bytes": 969,
+      "sha256": "29c60ef13fbdeffa1e1e45d4cc1f7cbfbb3fccc29cb743ef3404d72610f83fce"
+    },
+    {
+      "path": "runs/sessions/20261110T150931Z/steps.jsonl",
+      "bytes": 347,
+      "sha256": "ddcb1da597dee7fe7a3cadf3371275934e4138442b4471f02aba61372522950e"
     }
   ],
   "redacted_strings": 0,
@@ -100,9 +240,45 @@
     {
       "path": "job/pid",
       "reason": "not a text result"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual/checkpoint-10/",
+      "reason": "folder not published"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual/checkpoint-20/",
+      "reason": "folder not published"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual/checkpoint-30/",
+      "reason": "folder not published"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-4/checkpoint-10/",
+      "reason": "folder not published"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-4/checkpoint-20/",
+      "reason": "folder not published"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-4/checkpoint-30/",
+      "reason": "folder not published"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-5/checkpoint-10/",
+      "reason": "folder not published"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-5/checkpoint-20/",
+      "reason": "folder not published"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual_lr1e-5/checkpoint-30/",
+      "reason": "folder not published"
     }
   ],
-  "skipped_count": 2,
+  "skipped_count": 11,
   "limits_mb": {
     "per_file": 20,
     "total": 50

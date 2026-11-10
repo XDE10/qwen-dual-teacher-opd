@@ -267,3 +267,21 @@ Bootstrap completed: /content/runs/sessions/20261110T150931Z/environment. Next: 
 2026/11/10 15:14:34 NOTICE:    25.135 KiB / 25.135 KiB, 100%, 12.562 KiB/s, ETA 0s
 2026/11/10 15:14:40 NOTICE:    42.763 KiB / 42.763 KiB, 100%, 10.693 KiB/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/session3_dev30/20261110T150931Z
+[publish] 12 files (0.07 MB), 2 left out, 0 strings redacted -> results:session3_dev30/20261110T150931Z
+{"model": "Qwen/Qwen2.5-Math-7B-Instruct", "revision": "ef9926d75ab1d54532f6a30dd5e760355eb9aa4d", "path": "/root/.cache/huggingface/hub/models--Qwen--Qwen2.5-Math-7B-Instruct/snapshots/ef9926d75ab1d54532f6a30dd5e760355eb9aa4d", "seconds": 44.4}
+== step restore=mydrive:opd_runs/session2/20261109T104721Z/runs/opd_v3_d4_dual (started 15:14:44Z)
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/session3_dev30/20261110T150931Z
+2026/11/10 15:14:58 NOTICE:   636.141 MiB / 636.141 MiB, 100%, 47.433 MiB/s, ETA 0s
+restored mydrive:opd_runs/session2/20261109T104721Z/runs/opd_v3_d4_dual -> /content/runs/opd_v3_d4_dual
+== step restore=mydrive:opd_runs/session2/20261109T104721Z/runs/opd_v3_d4_dual_lr1e-4 (started 15:14:58Z)
+2026/11/10 15:15:10 NOTICE:   636.140 MiB / 636.140 MiB, 100%, 55.423 MiB/s, ETA 0s
+restored mydrive:opd_runs/session2/20261109T104721Z/runs/opd_v3_d4_dual_lr1e-4 -> /content/runs/opd_v3_d4_dual_lr1e-4
+== step restore=mydrive:opd_runs/session2/20261109T104721Z/runs/opd_v3_d4_dual_lr1e-5 (started 15:15:10Z)
+2026/11/10 15:15:24 NOTICE:   636.139 MiB / 636.139 MiB, 100%, 51.628 MiB/s, ETA 0s
+restored mydrive:opd_runs/session2/20261109T104721Z/runs/opd_v3_d4_dual_lr1e-5 -> /content/runs/opd_v3_d4_dual_lr1e-5
+== step dev=d4_dual@30 (started 15:15:24Z)
+`torch_dtype` is deprecated! Use `dtype` instead!
+[colab_job] periodic save (every 5 min)
+2026/11/10 15:19:59 NOTICE:    26.021 KiB / 26.021 KiB, 100%, 25.992 KiB/s, ETA 0s
+2026/11/10 15:20:41 NOTICE:     1.864 GiB / 1.864 GiB, 100%, 48.150 MiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/session3_dev30/20261110T150931Z
