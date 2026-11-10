@@ -301,3 +301,11 @@ mbppplus {"count": 378, "truncated": 6}
 2026/11/10 01:12:56 NOTICE:    27.330 KiB / 27.330 KiB, 100%, 13.663 KiB/s, ETA 0s
 2026/11/10 01:13:04 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
 [colab_job] saved to Drive: mydrive:opd_runs/session3/20261110T000932Z
+[publish] 55 files (7.50 MB), 11 left out, 0 strings redacted -> results:session3/20261110T000932Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/session3/20261110T000932Z
+train_math {"count": 2500, "truncated": 188, "accuracy_conservative": 0.754, "accuracy_math_verify": 0.8512}
+`torch_dtype` is deprecated! Use `dtype` instead!
+[colab_job] periodic save (every 20 min)
+2026/11/10 01:33:15 NOTICE:    27.938 KiB / 27.938 KiB, 100%, 13.967 KiB/s, ETA 0s
+2026/11/10 01:33:29 NOTICE:     9.661 MiB / 9.661 MiB, 100%, 1.073 MiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/session3/20261110T000932Z

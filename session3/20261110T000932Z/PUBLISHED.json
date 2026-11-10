@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "session3",
   "stamp": "20261110T000932Z",
-  "published_utc": "2026-11-10T01:13:05Z",
+  "published_utc": "2026-11-10T01:33:31Z",
   "job": {
     "state": "running"
   },
@@ -37,8 +37,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 28205,
-      "sha256": "b30db754e7d3878448dce04767a8fd92d75407138804fbb35d115d436852b894"
+      "bytes": 28843,
+      "sha256": "c28c00f2c575024c5b7603eaf39673734b07d7af2ab66147a1823d5d64a63db6"
     },
     {
       "path": "runs/eval/d0/code_dev.candidates.jsonl",
@@ -252,8 +252,8 @@
     },
     {
       "path": "runs/sessions/20261110T000933Z/console.log",
-      "bytes": 26390,
-      "sha256": "fe5aa2204382b11b94867a1e38283bdcf0839e0d334ed6f5693cecf9b69b6a7d"
+      "bytes": 26549,
+      "sha256": "4dfc851c1d05296d12a5316f1456b17ecf979f0b738da2a58a53f4db40e10113"
     },
     {
       "path": "runs/sessions/20261110T000933Z/environment/benchmarks.txt",
@@ -304,6 +304,16 @@
       "path": "runs/sessions/20261110T000933Z/steps.jsonl",
       "bytes": 397,
       "sha256": "aec1799a5170d214e714499d8462d17b9628f044239920e388ec54bda6d245c0"
+    },
+    {
+      "path": "runs/teacher_outputs/math7b/train_math.jsonl",
+      "bytes": 10100739,
+      "sha256": "aeba3588e4ad54df3cb029230aa0543a625de921909b8d0a50d0080fc6c34038"
+    },
+    {
+      "path": "runs/teacher_outputs/math7b/train_math.summary.json",
+      "bytes": 3297,
+      "sha256": "366ab61d69a25c4cc6402975bab90387a594f5b03310af46caa2b974201ea2ec"
     }
   ],
   "redacted_strings": 0,

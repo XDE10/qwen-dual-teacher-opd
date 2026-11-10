@@ -282,3 +282,5 @@ humanevalplus {"count": 164, "truncated": 1}
 mbppplus {"count": 378, "truncated": 6}
 == step teacher-outputs (started 00:46:28Z)
 `torch_dtype` is deprecated! Use `dtype` instead!
+train_math {"count": 2500, "truncated": 188, "accuracy_conservative": 0.754, "accuracy_math_verify": 0.8512}
+`torch_dtype` is deprecated! Use `dtype` instead!
