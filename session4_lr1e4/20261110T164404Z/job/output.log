@@ -582,3 +582,12 @@ mbppplus {"count": 378, "truncated": 0}
 2026/11/10 19:47:19 NOTICE:    71.464 KiB / 71.464 KiB, 100%, 71.457 KiB/s, ETA 0s
 2026/11/10 19:47:22 NOTICE:     1.297 MiB / 1.297 MiB, 100%, 1.297 MiB/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/session4_lr1e4/20261110T164404Z
+[publish] 52 files (8.58 MB), 14 left out, 0 strings redacted -> results:session4_lr1e4/20261110T164404Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/session4_lr1e4/20261110T164404Z
+{"step": 44, "loss": 0.15036987513303757, "gradient_norm": 0.08708617836236954, "gradient_cosine_math_code": 0.00929407961666584, "total_wall_seconds": 117.12651299400022, "math": {"kl": 0.0972, "entropy": 0.139, "len": 482.3, "eos": 0.922, "acc": 0.625}, "code": {"kl": 0.2039, "entropy": 0.28, "len": 433.5, "eos": 0.984}}
+{"step": 45, "loss": 0.14214730821549892, "gradient_norm": 0.0779142677783966, "gradient_cosine_math_code": 0.02126440778374672, "total_wall_seconds": 91.3541680720009, "math": {"kl": 0.0865, "entropy": 0.131, "len": 498.0, "eos": 0.875, "acc": 0.609}, "code": {"kl": 0.2089, "entropy": 0.285, "len": 407.9, "eos": 1.0}}
+{"step": 46, "loss": 0.13357321172952652, "gradient_norm": 0.07528957724571228, "gradient_cosine_math_code": 0.008698496967554092, "total_wall_seconds": 96.7774885079998, "math": {"kl": 0.0731, "entropy": 0.111, "len": 477.2, "eos": 0.953, "acc": 0.75}, "code": {"kl": 0.206, "entropy": 0.281, "len": 384.5, "eos": 1.0}}
+[colab_job] periodic save (every 5 min)
+2026/11/10 19:52:30 NOTICE:    72.893 KiB / 72.893 KiB, 100%, 72.886 KiB/s, ETA 0s
+2026/11/10 19:52:34 NOTICE:     1.385 MiB / 1.385 MiB, 100%, 1.384 MiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/session4_lr1e4/20261110T164404Z
