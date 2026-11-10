@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "session4_lr1e4",
   "stamp": "20261110T164404Z",
-  "published_utc": "2026-11-10T18:54:59Z",
+  "published_utc": "2026-11-10T19:00:17Z",
   "job": {
     "state": "running"
   },
@@ -37,8 +37,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 57116,
-      "sha256": "f6f84a4bf2943db0b5770a5ce70a0c7bd16005e8929a1277fa89b92bad523436"
+      "bytes": 58904,
+      "sha256": "d110cb2d7eda30e4f4c8364e67ce3d7c44494e44594a0aef50cbfc7eaf8c2156"
     },
     {
       "path": "runs/eval/d4_dual_lr1e-4-checkpoint-80/code_dev.candidates.jsonl",
@@ -117,13 +117,18 @@
     },
     {
       "path": "runs/opd_v3_d3_general_lr1e-4/metrics.jsonl",
-      "bytes": 241989,
-      "sha256": "4653fd8e797ecf5b35aa80a2f42db8b9e776c2dfba723ef1a903463157295f3a"
+      "bytes": 363056,
+      "sha256": "eee141c3f3df8ae34616dc216608ff3cccd46868a320804a741f2f292de46447"
     },
     {
       "path": "runs/opd_v3_d3_general_lr1e-4/resolved_generation.json",
       "bytes": 4752,
       "sha256": "cbc7180f3eba88ac82f76ab9195dc744a5f90fdd3a1edfc7e7f20694d3843fc3"
+    },
+    {
+      "path": "runs/opd_v3_d3_general_lr1e-4/rollouts/step-000010.jsonl",
+      "bytes": 7604,
+      "sha256": "c35e4a98a0dc47e07f99bd0212e869d904ce47f24ac34d67a1506dd831dd0ca5"
     },
     {
       "path": "runs/opd_v3_d3_general_lr1e-4/run_identity.json",
@@ -217,8 +222,8 @@
     },
     {
       "path": "runs/sessions/20261110T164405Z/console.log",
-      "bytes": 44769,
-      "sha256": "47d0ce3297ca132a9da9a7a84d97a16e1bb8ea9d26e42d3c841089038c9f947e"
+      "bytes": 46058,
+      "sha256": "75bfd8090526b46a36289f63f4b34ad591e0df9d5001ebf2e646146548de6000"
     },
     {
       "path": "runs/sessions/20261110T164405Z/environment/benchmarks.txt",
@@ -282,6 +287,10 @@
       "reason": "not a text result"
     },
     {
+      "path": "runs/opd_v3_d3_general_lr1e-4/checkpoint-10/",
+      "reason": "folder not published"
+    },
+    {
       "path": "runs/opd_v3_d4_dual_lr1e-4/checkpoint-10/",
       "reason": "folder not published"
     },
@@ -314,7 +323,7 @@
       "reason": "folder not published"
     }
   ],
-  "skipped_count": 10,
+  "skipped_count": 11,
   "limits_mb": {
     "per_file": 20,
     "total": 50
