@@ -36,7 +36,9 @@ CONFIGS = {'project2_opd_smoke.json', 'project2_opd_v4_smoke.json', 'project2_op
            'project2_opd_v4_code_short.json', 'project2_prompt_contract.json',
            *(f'project2_opd_v3_{n}.json' for n in ['smoke', 'd1_math', 'd2_code', 'd3_general', 'd4_dual',
                                                      'd4_blocked', 'd4_pcgrad', 'd4_pg', 'd4_topk', 'd4_warmstart',
-                                                     'd4_dual_lr1e-5', 'd4_dual_lr1e-4', 'd4_prox07']),
+                                                     'd4_dual_lr1e-5', 'd4_dual_lr1e-4', 'd4_prox07',
+                                                     'd1_math_lr1e-4', 'd2_code_lr1e-4', 'd3_general_lr1e-4',
+                                                     'd4_blocked_lr1e-4', 'd4_warmstart_lr1e-4']),
            'project2_sft_v3_seqkd_mix.json'}
 TEST_FILES = 23
 DOCS_REQUIRED = ['README.md', 'plan/README.md', 'handover/v2/README.md',
