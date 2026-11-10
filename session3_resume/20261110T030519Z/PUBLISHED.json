@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "session3_resume",
   "stamp": "20261110T030519Z",
-  "published_utc": "2026-11-10T03:48:00Z",
+  "published_utc": "2026-11-10T04:08:36Z",
   "job": {
     "state": "running"
   },
@@ -37,8 +37,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 40168,
-      "sha256": "ba3a99f33cc521ed0dca5d7ebcb3872d61c9309ea4795aff24e3caa614b9aa62"
+      "bytes": 44889,
+      "sha256": "9dec2d046d938c4401fe0f60410dda3763406671b0ca9af022a9f1861ef23c2f"
     },
     {
       "path": "runs/eval/d0/code_dev.candidates.jsonl",
@@ -167,8 +167,8 @@
     },
     {
       "path": "runs/opd_v3_d4_dual/metrics.jsonl",
-      "bytes": 1339804,
-      "sha256": "ac94c878f3f524496d87d4007dabfda8e0d12c4abc26737b6920cacb5e0a527d"
+      "bytes": 1735818,
+      "sha256": "3e16fb6963ade2ee7162acd2afacbfac60677508a632b8e49de84be8b39dfdf0"
     },
     {
       "path": "runs/opd_v3_d4_dual/resolved_generation.json",
@@ -194,6 +194,11 @@
       "path": "runs/opd_v3_d4_dual/rollouts/step-000040.jsonl",
       "bytes": 9786,
       "sha256": "a8886855589ec97807ae5b160c5e95eab0825510373f492504a7a42fd1c041e1"
+    },
+    {
+      "path": "runs/opd_v3_d4_dual/rollouts/step-000050.jsonl",
+      "bytes": 8685,
+      "sha256": "08c9f968e64f64365a39b6c0fc6e88a0ea78b8294370a0805adb7db0161979b4"
     },
     {
       "path": "runs/opd_v3_d4_dual/run_identity.json",
@@ -222,8 +227,8 @@
     },
     {
       "path": "runs/sessions/20261110T030520Z/console.log",
-      "bytes": 38914,
-      "sha256": "02075ee0a94f4a7c641980b5c4a80ba316cc77565e473318ca1dd783824a39a9"
+      "bytes": 43132,
+      "sha256": "2dddab2df40a94ca043d08fb49323582e49eb067d36f8c5140c14e9225704941"
     },
     {
       "path": "runs/sessions/20261110T030520Z/environment/benchmarks.txt",
@@ -343,6 +348,10 @@
       "reason": "folder not published"
     },
     {
+      "path": "runs/opd_v3_d4_dual/checkpoint-50/",
+      "reason": "folder not published"
+    },
+    {
       "path": "runs/sft_v3_seqkd_mix/adapter-step-50/",
       "reason": "folder not published"
     },
@@ -351,7 +360,7 @@
       "reason": "folder not published"
     }
   ],
-  "skipped_count": 8,
+  "skipped_count": 9,
   "limits_mb": {
     "per_file": 20,
     "total": 50
