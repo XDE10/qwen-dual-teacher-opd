@@ -1,0 +1,34 @@
+{
+  "name": "session3_resume",
+  "command": [
+    "bash",
+    "scripts/colab_session_v3.sh",
+    "restore=mydrive:opd_runs/session3/20261110T000932Z/runs/opd_v3_d4_dual",
+    "restore=mydrive:opd_runs/session3/20261110T000932Z/runs/teacher_outputs",
+    "restore=mydrive:opd_runs/session3/20261110T000932Z/runs/sft_v3_seqkd_mix",
+    "restore=mydrive:opd_runs/session3/20261110T000932Z/runs/eval",
+    "sft",
+    "dev=sft",
+    "train=d4_dual",
+    "eval=d4_dual"
+  ],
+  "cwd": "/content/project2",
+  "started_utc": "2026-11-10T03:05:19Z",
+  "stamp": "20261110T030519Z",
+  "save": [
+    [
+      "runs",
+      "/content/runs"
+    ]
+  ],
+  "drive": "mydrive:opd_runs",
+  "publish": true,
+  "sync_every_min": 20.0,
+  "drive_about": {
+    "total": 5497558138880,
+    "used": 336218295185,
+    "trashed": 3239284142,
+    "other": 24188451,
+    "free": 5161315655244
+  }
+}

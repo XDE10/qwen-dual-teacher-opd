@@ -1,0 +1,6 @@
+{"step": "restore=mydrive:opd_runs/session3/20261110T000932Z/runs/opd_v3_d4_dual", "status": 0, "seconds": 29}
+{"step": "restore=mydrive:opd_runs/session3/20261110T000932Z/runs/teacher_outputs", "status": 0, "seconds": 9}
+{"step": "restore=mydrive:opd_runs/session3/20261110T000932Z/runs/sft_v3_seqkd_mix", "status": 1, "seconds": 8}
+{"step": "restore=mydrive:opd_runs/session3/20261110T000932Z/runs/eval", "status": 0, "seconds": 13}
+{"step": "sft", "status": 0, "seconds": 413}
+{"step": "dev=sft", "status": 0, "seconds": 435}

@@ -1,0 +1,68 @@
+{
+  "schema": "sft-v3",
+  "config": {
+    "implementation_version": "sft-v3",
+    "data_manifest": "data/project2_release_v5_20261108/release/manifest.json",
+    "data_files": {
+      "math": "project2_math_train.jsonl",
+      "code": "project2_code_train.jsonl"
+    },
+    "teacher_outputs": {
+      "math": "runs/teacher_outputs/math7b/train_math.jsonl",
+      "code": "runs/teacher_outputs/coder7b/train_code.jsonl"
+    },
+    "filters": {
+      "require_eos": true,
+      "math_correct_only": false
+    },
+    "student": {
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+    },
+    "tokenizer_audit": "reports/tokenizer_alignment_report.json",
+    "tokenizer_path": "data/tokenizers/Qwen2.5-1.5B-Instruct",
+    "seed": 42,
+    "epochs": 1,
+    "examples_per_step": 64,
+    "train_microbatch_tokens": 16384,
+    "row_chunk": 64,
+    "lora": {
+      "r": 16,
+      "alpha": 32,
+      "dropout": 0.0,
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ]
+    },
+    "learning_rate": 0.0001,
+    "warmup_steps": 5,
+    "lr_schedule": "linear",
+    "max_grad_norm": 1.0,
+    "save_steps": 50,
+    "output_dir": "runs/sft_v3_seqkd_mix"
+  },
+  "examples": {
+    "math_kept": 2312,
+    "math_truncated": 188,
+    "code_kept": 2488
+  },
+  "manifest_sha": "d26f7760c255bd7c73f8bb091cf04f2fcbf9e90e9f68ebc9d6c25fccc8202c0f",
+  "teacher_outputs_sha": {
+    "math": "aeba3588e4ad54df3cb029230aa0543a625de921909b8d0a50d0080fc6c34038",
+    "code": "c52636e89e540fe2a8afc5ac5e5dd147d0cf890fb6496f0f7dedc9586d3d0a25"
+  },
+  "source_files": {
+    "src/training/sft_v3.py": "898afe782dfba61f546003c9d70ace1ae849f40929ae32c312adfacdba4e0cca",
+    "src/losses/sft_v3.py": "c0985f11dd0305fadfe6959b212fcf3edd53e4ea04c6a2a077689f1cd2ccaa33",
+    "src/losses/mopd_v3.py": "b93d12b8f8c1a4d6b93b26d9ac57754d0273dc759ab12d24577c700b92b101e2",
+    "src/training/opd_v3.py": "b3c486a85eb0744847e9414b0305517813e32a11a515f526b2c8c2bc4c3fd4a7",
+    "src/teachers/opd_contract.py": "6fbce7aef76ae85a628907366e1682528876334fd06f2ad78cb9af1adc5dd25d",
+    "src/data/approved_training_inputs.py": "236ba095002d723ae3b544e9159c930292bbc4ade1eefe5ba85e1ac72d10e2ac"
+  }
+}

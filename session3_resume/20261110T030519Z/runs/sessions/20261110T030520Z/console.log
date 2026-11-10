@@ -1,0 +1,370 @@
+== commit 4f4423bf2f2c80669ea5641c51b387de38573956 on feat/opd-v3-mopd-data-v5; steps: restore=mydrive:opd_runs/session3/20261110T000932Z/runs/opd_v3_d4_dual restore=mydrive:opd_runs/session3/20261110T000932Z/runs/teacher_outputs restore=mydrive:opd_runs/session3/20261110T000932Z/runs/sft_v3_seqkd_mix restore=mydrive:opd_runs/session3/20261110T000932Z/runs/eval sft dev=sft train=d4_dual eval=d4_dual
+python 3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]
+name, memory.total [MiB], compute_cap, driver_version
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB, 12.0, 580.82.07
+Looking in indexes: https://download.pytorch.org/whl/cu128
+Collecting torch==2.8.0
+  Downloading torch-2.8.0%2Bcu128-cp313-cp313-manylinux_2_28_x86_64.whl.metadata (30 kB)
+Requirement already satisfied: filelock in /usr/local/lib/python3.13/dist-packages (from torch==2.8.0) (4.2.7)
+Requirement already satisfied: typing-extensions>=4.10.0 in /usr/local/lib/python3.13/dist-packages (from torch==2.8.0) (4.16.0)
+Requirement already satisfied: setuptools in /usr/local/lib/python3.13/dist-packages (from torch==2.8.0) (80.10.2)
+Requirement already satisfied: sympy>=1.13.3 in /usr/local/lib/python3.13/dist-packages (from torch==2.8.0) (1.14.0)
+Requirement already satisfied: networkx in /usr/local/lib/python3.13/dist-packages (from torch==2.8.0) (3.7)
+Requirement already satisfied: jinja2 in /usr/local/lib/python3.13/dist-packages (from torch==2.8.0) (3.1.6)
+Requirement already satisfied: fsspec in /usr/local/lib/python3.13/dist-packages (from torch==2.8.0) (2025.12.0)
+Collecting nvidia-cuda-nvrtc-cu12==12.8.93 (from torch==2.8.0)
+  Downloading nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (88.0 MB)
+Collecting nvidia-cuda-runtime-cu12==12.8.90 (from torch==2.8.0)
+  Downloading nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (954 kB)
+Collecting nvidia-cuda-cupti-cu12==12.8.90 (from torch==2.8.0)
+  Downloading nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (10.2 MB)
+Collecting nvidia-cudnn-cu12==9.10.2.21 (from torch==2.8.0)
+  Downloading nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_x86_64.whl (706.8 MB)
+Collecting nvidia-cublas-cu12==12.8.4.1 (from torch==2.8.0)
+  Downloading nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl (594.3 MB)
+Collecting nvidia-cufft-cu12==11.3.3.83 (from torch==2.8.0)
+  Downloading nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (193.1 MB)
+Collecting nvidia-curand-cu12==10.3.9.90 (from torch==2.8.0)
+  Downloading nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl (63.6 MB)
+Collecting nvidia-cusolver-cu12==11.7.3.90 (from torch==2.8.0)
+  Downloading nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl (267.5 MB)
+Collecting nvidia-cusparse-cu12==12.5.8.93 (from torch==2.8.0)
+  Downloading nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (288.2 MB)
+Collecting nvidia-cusparselt-cu12==0.7.1 (from torch==2.8.0)
+  Downloading nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl (287.2 MB)
+Collecting nvidia-nccl-cu12==2.27.3 (from torch==2.8.0)
+  Downloading nvidia_nccl_cu12-2.27.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (322.4 MB)
+Collecting nvidia-nvtx-cu12==12.8.90 (from torch==2.8.0)
+  Downloading nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (89 kB)
+Collecting nvidia-nvjitlink-cu12==12.8.93 (from torch==2.8.0)
+  Downloading nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (39.3 MB)
+Collecting nvidia-cufile-cu12==1.13.1.3 (from torch==2.8.0)
+  Downloading nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.2 MB)
+Collecting triton==3.4.0 (from torch==2.8.0)
+  Downloading triton-3.4.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (1.7 kB)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.13/dist-packages (from sympy>=1.13.3->torch==2.8.0) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.13/dist-packages (from jinja2->torch==2.8.0) (3.0.4)
+Downloading torch-2.8.0%2Bcu128-cp313-cp313-manylinux_2_28_x86_64.whl (889.1 MB)
+Downloading triton-3.4.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (155.6 MB)
+Installing collected packages: nvidia-cusparselt-cu12, triton, nvidia-nvtx-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufile-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, nvidia-cusparse-cu12, nvidia-cufft-cu12, nvidia-cudnn-cu12, nvidia-cusolver-cu12, torch
+  Attempting uninstall: triton
+    Found existing installation: triton 3.8.0
+    Uninstalling triton-3.8.0:
+      Successfully uninstalled triton-3.8.0
+  Attempting uninstall: nvidia-nvjitlink-cu12
+    Found existing installation: nvidia-nvjitlink-cu12 12.9.86
+    Uninstalling nvidia-nvjitlink-cu12-12.9.86:
+      Successfully uninstalled nvidia-nvjitlink-cu12-12.9.86
+  Attempting uninstall: nvidia-nccl-cu12
+    Found existing installation: nvidia-nccl-cu12 2.32.3
+    Uninstalling nvidia-nccl-cu12-2.32.3:
+      Successfully uninstalled nvidia-nccl-cu12-2.32.3
+  Attempting uninstall: nvidia-curand-cu12
+    Found existing installation: nvidia-curand-cu12 10.3.10.19
+    Uninstalling nvidia-curand-cu12-10.3.10.19:
+      Successfully uninstalled nvidia-curand-cu12-10.3.10.19
+  Attempting uninstall: nvidia-cuda-runtime-cu12
+    Found existing installation: nvidia-cuda-runtime-cu12 12.9.79
+    Uninstalling nvidia-cuda-runtime-cu12-12.9.79:
+      Successfully uninstalled nvidia-cuda-runtime-cu12-12.9.79
+  Attempting uninstall: nvidia-cuda-nvrtc-cu12
+    Found existing installation: nvidia-cuda-nvrtc-cu12 12.9.86
+    Uninstalling nvidia-cuda-nvrtc-cu12-12.9.86:
+      Successfully uninstalled nvidia-cuda-nvrtc-cu12-12.9.86
+  Attempting uninstall: nvidia-cuda-cupti-cu12
+    Found existing installation: nvidia-cuda-cupti-cu12 12.9.79
+    Uninstalling nvidia-cuda-cupti-cu12-12.9.79:
+      Successfully uninstalled nvidia-cuda-cupti-cu12-12.9.79
+  Attempting uninstall: nvidia-cublas-cu12
+    Found existing installation: nvidia-cublas-cu12 12.9.3.13
+    Uninstalling nvidia-cublas-cu12-12.9.3.13:
+      Successfully uninstalled nvidia-cublas-cu12-12.9.3.13
+  Attempting uninstall: nvidia-cusparse-cu12
+    Found existing installation: nvidia-cusparse-cu12 12.5.10.65
+    Uninstalling nvidia-cusparse-cu12-12.5.10.65:
+      Successfully uninstalled nvidia-cusparse-cu12-12.5.10.65
+  Attempting uninstall: nvidia-cufft-cu12
+    Found existing installation: nvidia-cufft-cu12 11.4.1.4
+    Uninstalling nvidia-cufft-cu12-11.4.1.4:
+      Successfully uninstalled nvidia-cufft-cu12-11.4.1.4
+  Attempting uninstall: nvidia-cudnn-cu12
+    Found existing installation: nvidia-cudnn-cu12 9.28.0.42
+    Uninstalling nvidia-cudnn-cu12-9.28.0.42:
+      Successfully uninstalled nvidia-cudnn-cu12-9.28.0.42
+  Attempting uninstall: nvidia-cusolver-cu12
+    Found existing installation: nvidia-cusolver-cu12 11.7.5.82
+    Uninstalling nvidia-cusolver-cu12-11.7.5.82:
+      Successfully uninstalled nvidia-cusolver-cu12-11.7.5.82
+  Attempting uninstall: torch
+    Found existing installation: torch 2.14.1+cu130
+    Uninstalling torch-2.14.1+cu130:
+      Successfully uninstalled torch-2.14.1+cu130
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+torchvision 0.29.1+cu130 requires torch>=2.14.0, but you have torch 2.8.0+cu128 which is incompatible.
+Successfully installed nvidia-cublas-cu12-12.8.4.1 nvidia-cuda-cupti-cu12-12.8.90 nvidia-cuda-nvrtc-cu12-12.8.93 nvidia-cuda-runtime-cu12-12.8.90 nvidia-cudnn-cu12-9.10.2.21 nvidia-cufft-cu12-11.3.3.83 nvidia-cufile-cu12-1.13.1.3 nvidia-curand-cu12-10.3.9.90 nvidia-cusolver-cu12-11.7.3.90 nvidia-cusparse-cu12-12.5.8.93 nvidia-cusparselt-cu12-0.7.1 nvidia-nccl-cu12-2.27.3 nvidia-nvjitlink-cu12-12.8.93 nvidia-nvtx-cu12-12.8.90 torch-2.8.0+cu128 triton-3.4.0
+Found existing installation: torchvision 0.29.1+cu130
+Uninstalling torchvision-0.29.1+cu130:
+  Successfully uninstalled torchvision-0.29.1+cu130
+Found existing installation: torchaudio 2.11.0+cu130
+Uninstalling torchaudio-2.11.0+cu130:
+  Successfully uninstalled torchaudio-2.11.0+cu130
+Found existing installation: torchao 0.10.0
+Uninstalling torchao-0.10.0:
+  Successfully uninstalled torchao-0.10.0
+Collecting transformers==4.57.6 (from -r requirements/linux-cuda-v3.txt (line 4))
+  Downloading transformers-4.57.6-py3-none-any.whl.metadata (43 kB)
+Collecting peft==0.19.0 (from -r requirements/linux-cuda-v3.txt (line 5))
+  Downloading peft-0.19.0-py3-none-any.whl.metadata (15 kB)
+Collecting accelerate==1.10.1 (from -r requirements/linux-cuda-v3.txt (line 6))
+  Downloading accelerate-1.10.1-py3-none-any.whl.metadata (19 kB)
+Requirement already satisfied: safetensors in /usr/local/lib/python3.13/dist-packages (from -r requirements/linux-cuda-v3.txt (line 7)) (0.8.0)
+Requirement already satisfied: huggingface_hub in /usr/local/lib/python3.13/dist-packages (from -r requirements/linux-cuda-v3.txt (line 8)) (1.33.0)
+Requirement already satisfied: sympy==1.14.0 in /usr/local/lib/python3.13/dist-packages (from -r requirements/linux-cuda-v3.txt (line 9)) (1.14.0)
+Collecting numpy==2.2.6 (from -r requirements/linux-cuda-v3.txt (line 10))
+  Downloading numpy-2.2.6-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+Collecting psutil==7.2.2 (from -r requirements/linux-cuda-v3.txt (line 11))
+  Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+Collecting pyarrow==21.0.0 (from -r requirements/linux-cuda-v3.txt (line 12))
+  Downloading pyarrow-21.0.0-cp313-cp313-manylinux_2_28_x86_64.whl.metadata (3.3 kB)
+Requirement already satisfied: pytest==8.4.2 in /usr/local/lib/python3.13/dist-packages (from -r requirements/linux-cuda-v3.txt (line 13)) (8.4.2)
+Collecting math-verify==0.9.0 (from math-verify[antlr4_13_2]==0.9.0->-r requirements/linux-cuda-v3.txt (line 14))
+  Downloading math_verify-0.9.0-py3-none-any.whl.metadata (1.6 kB)
+Requirement already satisfied: filelock in /usr/local/lib/python3.13/dist-packages (from transformers==4.57.6->-r requirements/linux-cuda-v3.txt (line 4)) (4.2.7)
+Collecting huggingface_hub (from -r requirements/linux-cuda-v3.txt (line 8))
+  Downloading huggingface_hub-0.36.2-py3-none-any.whl.metadata (15 kB)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.13/dist-packages (from transformers==4.57.6->-r requirements/linux-cuda-v3.txt (line 4)) (26.3)
+Requirement already satisfied: pyyaml>=5.1 in /usr/local/lib/python3.13/dist-packages (from transformers==4.57.6->-r requirements/linux-cuda-v3.txt (line 4)) (6.0.3)
+Requirement already satisfied: regex!=2019.12.17 in /usr/local/lib/python3.13/dist-packages (from transformers==4.57.6->-r requirements/linux-cuda-v3.txt (line 4)) (2025.11.3)
+Requirement already satisfied: requests in /usr/local/lib/python3.13/dist-packages (from transformers==4.57.6->-r requirements/linux-cuda-v3.txt (line 4)) (2.32.4)
+Collecting tokenizers<=0.23.0,>=0.22.0 (from transformers==4.57.6->-r requirements/linux-cuda-v3.txt (line 4))
+  Downloading tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)
+Requirement already satisfied: tqdm>=4.27 in /usr/local/lib/python3.13/dist-packages (from transformers==4.57.6->-r requirements/linux-cuda-v3.txt (line 4)) (4.67.3)
+Requirement already satisfied: torch>=1.13.0 in /usr/local/lib/python3.13/dist-packages (from peft==0.19.0->-r requirements/linux-cuda-v3.txt (line 5)) (2.8.0+cu128)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.13/dist-packages (from sympy==1.14.0->-r requirements/linux-cuda-v3.txt (line 9)) (1.3.0)
+Requirement already satisfied: iniconfig>=1 in /usr/local/lib/python3.13/dist-packages (from pytest==8.4.2->-r requirements/linux-cuda-v3.txt (line 13)) (2.3.1)
+Requirement already satisfied: pluggy<2,>=1.5 in /usr/local/lib/python3.13/dist-packages (from pytest==8.4.2->-r requirements/linux-cuda-v3.txt (line 13)) (1.7.0)
+Requirement already satisfied: pygments>=2.7.2 in /usr/local/lib/python3.13/dist-packages (from pytest==8.4.2->-r requirements/linux-cuda-v3.txt (line 13)) (2.21.0)
+Collecting latex2sympy2_extended==1.11.0 (from math-verify==0.9.0->math-verify[antlr4_13_2]==0.9.0->-r requirements/linux-cuda-v3.txt (line 14))
+  Downloading latex2sympy2_extended-1.11.0-py3-none-any.whl.metadata (5.3 kB)
+Collecting antlr4-python3-runtime<=4.13.2,>=4.9.3 (from latex2sympy2_extended==1.11.0->math-verify==0.9.0->math-verify[antlr4_13_2]==0.9.0->-r requirements/linux-cuda-v3.txt (line 14))
+  Downloading antlr4_python3_runtime-4.13.2-py3-none-any.whl.metadata (304 bytes)
+Requirement already satisfied: fsspec>=2023.5.0 in /usr/local/lib/python3.13/dist-packages (from huggingface_hub->-r requirements/linux-cuda-v3.txt (line 8)) (2025.12.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.1.3 in /usr/local/lib/python3.13/dist-packages (from huggingface_hub->-r requirements/linux-cuda-v3.txt (line 8)) (1.8.0)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /usr/local/lib/python3.13/dist-packages (from huggingface_hub->-r requirements/linux-cuda-v3.txt (line 8)) (4.16.0)
+Requirement already satisfied: setuptools in /usr/local/lib/python3.13/dist-packages (from torch>=1.13.0->peft==0.19.0->-r requirements/linux-cuda-v3.txt (line 5)) (80.10.2)
+Requirement already satisfied: networkx in /usr/local/lib/python3.13/dist-packages (from torch>=1.13.0->peft==0.19.0->-r requirements/linux-cuda-v3.txt (line 5)) (3.7)
+Requirement already satisfied: jinja2 in /usr/local/lib/python3.13/dist-packages (from torch>=1.13.0->peft==0.19.0->-r requirements/linux-cuda-v3.txt (line 5)) (3.1.6)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.8.93 in /usr/local/lib/python3.13/dist-packages (from torch>=1.13.0->peft==0.19.0->-r requirements/linux-cuda-v3.txt (line 5)) (12.8.93)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.8.90 in /usr/local/lib/python3.13/dist-packages (from torch>=1.13.0->peft==0.19.0->-r requirements/linux-cuda-v3.txt (line 5)) (12.8.90)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.8.90 in /usr/local/lib/python3.13/dist-packages (from torch>=1.13.0->peft==0.19.0->-r requirements/linux-cuda-v3.txt (line 5)) (12.8.90)
+Requirement already satisfied: nvidia-cudnn-cu12==9.10.2.21 in /usr/local/lib/python3.13/dist-packages (from torch>=1.13.0->peft==0.19.0->-r requirements/linux-cuda-v3.txt (line 5)) (9.10.2.21)
+Requirement already satisfied: nvidia-cublas-cu12==12.8.4.1 in /usr/local/lib/python3.13/dist-packages (from torch>=1.13.0->peft==0.19.0->-r requirements/linux-cuda-v3.txt (line 5)) (12.8.4.1)
+Requirement already satisfied: nvidia-cufft-cu12==11.3.3.83 in /usr/local/lib/python3.13/dist-packages (from torch>=1.13.0->peft==0.19.0->-r requirements/linux-cuda-v3.txt (line 5)) (11.3.3.83)
+Requirement already satisfied: nvidia-curand-cu12==10.3.9.90 in /usr/local/lib/python3.13/dist-packages (from torch>=1.13.0->peft==0.19.0->-r requirements/linux-cuda-v3.txt (line 5)) (10.3.9.90)
+Requirement already satisfied: nvidia-cusolver-cu12==11.7.3.90 in /usr/local/lib/python3.13/dist-packages (from torch>=1.13.0->peft==0.19.0->-r requirements/linux-cuda-v3.txt (line 5)) (11.7.3.90)
+Requirement already satisfied: nvidia-cusparse-cu12==12.5.8.93 in /usr/local/lib/python3.13/dist-packages (from torch>=1.13.0->peft==0.19.0->-r requirements/linux-cuda-v3.txt (line 5)) (12.5.8.93)
+Requirement already satisfied: nvidia-cusparselt-cu12==0.7.1 in /usr/local/lib/python3.13/dist-packages (from torch>=1.13.0->peft==0.19.0->-r requirements/linux-cuda-v3.txt (line 5)) (0.7.1)
+Requirement already satisfied: nvidia-nccl-cu12==2.27.3 in /usr/local/lib/python3.13/dist-packages (from torch>=1.13.0->peft==0.19.0->-r requirements/linux-cuda-v3.txt (line 5)) (2.27.3)
+Requirement already satisfied: nvidia-nvtx-cu12==12.8.90 in /usr/local/lib/python3.13/dist-packages (from torch>=1.13.0->peft==0.19.0->-r requirements/linux-cuda-v3.txt (line 5)) (12.8.90)
+Requirement already satisfied: nvidia-nvjitlink-cu12==12.8.93 in /usr/local/lib/python3.13/dist-packages (from torch>=1.13.0->peft==0.19.0->-r requirements/linux-cuda-v3.txt (line 5)) (12.8.93)
+Requirement already satisfied: nvidia-cufile-cu12==1.13.1.3 in /usr/local/lib/python3.13/dist-packages (from torch>=1.13.0->peft==0.19.0->-r requirements/linux-cuda-v3.txt (line 5)) (1.13.1.3)
+Requirement already satisfied: triton==3.4.0 in /usr/local/lib/python3.13/dist-packages (from torch>=1.13.0->peft==0.19.0->-r requirements/linux-cuda-v3.txt (line 5)) (3.4.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.13/dist-packages (from jinja2->torch>=1.13.0->peft==0.19.0->-r requirements/linux-cuda-v3.txt (line 5)) (3.0.4)
+Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.13/dist-packages (from requests->transformers==4.57.6->-r requirements/linux-cuda-v3.txt (line 4)) (3.4.9)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.13/dist-packages (from requests->transformers==4.57.6->-r requirements/linux-cuda-v3.txt (line 4)) (3.20)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.13/dist-packages (from requests->transformers==4.57.6->-r requirements/linux-cuda-v3.txt (line 4)) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.13/dist-packages (from requests->transformers==4.57.6->-r requirements/linux-cuda-v3.txt (line 4)) (2026.10.23)
+Downloading transformers-4.57.6-py3-none-any.whl (12.0 MB)
+Downloading peft-0.19.0-py3-none-any.whl (680 kB)
+Downloading accelerate-1.10.1-py3-none-any.whl (374 kB)
+Downloading numpy-2.2.6-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.5 MB)
+Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+Downloading pyarrow-21.0.0-cp313-cp313-manylinux_2_28_x86_64.whl (42.8 MB)
+Downloading math_verify-0.9.0-py3-none-any.whl (29 kB)
+Downloading latex2sympy2_extended-1.11.0-py3-none-any.whl (209 kB)
+Downloading huggingface_hub-0.36.2-py3-none-any.whl (566 kB)
+Downloading antlr4_python3_runtime-4.13.2-py3-none-any.whl (144 kB)
+Downloading tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+Installing collected packages: antlr4-python3-runtime, pyarrow, psutil, numpy, latex2sympy2_extended, huggingface_hub, tokenizers, math-verify, transformers, accelerate, peft
+  Attempting uninstall: pyarrow
+    Found existing installation: pyarrow 23.0.1
+    Uninstalling pyarrow-23.0.1:
+      Successfully uninstalled pyarrow-23.0.1
+  Attempting uninstall: psutil
+    Found existing installation: psutil 5.9.5
+    Uninstalling psutil-5.9.5:
+      Successfully uninstalled psutil-5.9.5
+  Attempting uninstall: numpy
+    Found existing installation: numpy 2.4.6
+    Uninstalling numpy-2.4.6:
+      Successfully uninstalled numpy-2.4.6
+  Attempting uninstall: huggingface_hub
+    Found existing installation: huggingface_hub 1.33.0
+    Uninstalling huggingface_hub-1.33.0:
+      Successfully uninstalled huggingface_hub-1.33.0
+  Attempting uninstall: tokenizers
+    Found existing installation: tokenizers 0.23.3
+    Uninstalling tokenizers-0.23.3:
+      Successfully uninstalled tokenizers-0.23.3
+  Attempting uninstall: transformers
+    Found existing installation: transformers 5.22.1
+    Uninstalling transformers-5.22.1:
+      Successfully uninstalled transformers-5.22.1
+  Attempting uninstall: accelerate
+    Found existing installation: accelerate 1.15.0
+    Uninstalling accelerate-1.15.0:
+      Successfully uninstalled accelerate-1.15.0
+  Attempting uninstall: peft
+    Found existing installation: peft 0.21.2
+    Uninstalling peft-0.21.2:
+      Successfully uninstalled peft-0.21.2
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+timm 1.0.31 requires torchvision, which is not installed.
+gradio 6.31.0 requires huggingface-hub<3.0,>=1.16.0, but you have huggingface-hub 0.36.2 which is incompatible.
+bigframes 2.51.0 requires pyarrow>=23.0.1, but you have pyarrow 21.0.0 which is incompatible.
+gradio-client 2.7.2 requires huggingface-hub<3.0,>=1.16.0, but you have huggingface-hub 0.36.2 which is incompatible.
+diffusers 0.42.1 requires huggingface-hub<3.0,>=1.32.0, but you have huggingface-hub 0.36.2 which is incompatible.
+Successfully installed accelerate-1.10.1 antlr4-python3-runtime-4.13.2 huggingface_hub-0.36.2 latex2sympy2_extended-1.11.0 math-verify-0.9.0 numpy-2.2.6 peft-0.19.0 psutil-7.2.2 pyarrow-21.0.0 tokenizers-0.22.2 transformers-4.57.6
+ipython 7.34.0 requires jedi, which is not installed.
+timm 1.0.31 requires torchvision, which is not installed.
+fastai 2.8.12 requires torchvision, which is not installed.
+gradio 6.31.0 has requirement huggingface-hub<3.0,>=1.16.0, but you have huggingface-hub 0.36.2.
+bigframes 2.51.0 has requirement pyarrow>=23.0.1, but you have pyarrow 21.0.0.
+gradio-client 2.7.2 has requirement huggingface-hub<3.0,>=1.16.0, but you have huggingface-hub 0.36.2.
+diffusers 0.42.1 has requirement huggingface-hub<3.0,>=1.32.0, but you have huggingface-hub 0.36.2.
+pip check reported conflicts; see /content/runs/sessions/20261110T030520Z/environment/pip-check.txt
+torch 2.8.0+cu128 transformers 4.57.6 peft 0.19.0
+torchvision not installed
+torchaudio not installed
+torchao not installed
+2.8.0+cu128 cuda 12.8 NVIDIA RTX PRO 6000 Blackwell Server Edition sm_120 95.0 GiB archs ['sm_70', 'sm_75', 'sm_80', 'sm_86', 'sm_90', 'sm_100', 'sm_120']
+bf16 matmul ok 36.087745666503906
+data/code_benchmarks/official/HumanEvalPlus-v0.1.10.jsonl: restored from https://github.com/evalplus/humanevalplus_release/releases/download/v0.1.10/HumanEvalPlus.jsonl.gz (7714666 bytes, sha256 42526ec0e7d5f3ee0b06d6ced98f8c8bae3d76519151bfb3d36f79010645bd7f, 164 rows)
+data/code_benchmarks/official/MbppPlus-v0.2.0.jsonl: restored from https://github.com/evalplus/mbppplus_release/releases/download/v0.2.0/MbppPlus.jsonl.gz (2592369 bytes, sha256 b54e762755248ca411b523c917fa9f93c07b5ff2966bf60b3917b853926a3dad, 378 rows)
+........................................................................ [ 88%]
+.........                                                                [100%]
+=============================== warnings summary ===============================
+tests/test_opd_v3.py::test_checkpoint_resume_reproduces_next_step
+tests/test_v3_tools.py::test_run_paths_and_adapter_checks
+tests/test_opd_v2.py::test_real_opd_adapter_optimizer_scheduler_rng_resume_cpu
+  /usr/local/lib/python3.13/dist-packages/peft/utils/save_and_load.py:372: UserWarning: Could not find a config file in  - will assume that the vocabulary was not modified.
+    warnings.warn(
+
+tests/test_opd_v2.py::test_peft_actual_chain_is_audited
+tests/test_opd_v2.py::test_real_opd_adapter_optimizer_scheduler_rng_resume_cpu
+  /usr/local/lib/python3.13/dist-packages/peft/tuners/lora/layer.py:2503: UserWarning: fan_in_fan_out is set to False but the target module is `Conv1D`. Setting fan_in_fan_out to True.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+81 passed, 5 warnings in 8.31s
+Bootstrap completed: /content/runs/sessions/20261110T030520Z/environment. Next: python -m scripts.prefetch_models_v3 --config configs/project2_opd_v3_smoke.json
+== model download (student, math, code and general teachers)
+{"model": "Qwen/Qwen2.5-1.5B-Instruct", "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306", "path": "/root/.cache/huggingface/hub/models--Qwen--Qwen2.5-1.5B-Instruct/snapshots/989aa7980e4cf806f80c7fef2b1adb7bc71aa306", "seconds": 15.3}
+{"model": "Qwen/Qwen2.5-7B-Instruct", "revision": "a09a35458c702b33eeacc393d103063234e8bc28", "path": "/root/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28", "seconds": 41.3}
+{"model": "Qwen/Qwen2.5-Coder-7B-Instruct", "revision": "c03e6d358207e414f1eca0bb1891e29f1db0e242", "path": "/root/.cache/huggingface/hub/models--Qwen--Qwen2.5-Coder-7B-Instruct/snapshots/c03e6d358207e414f1eca0bb1891e29f1db0e242", "seconds": 44.3}
+{"model": "Qwen/Qwen2.5-Math-7B-Instruct", "revision": "ef9926d75ab1d54532f6a30dd5e760355eb9aa4d", "path": "/root/.cache/huggingface/hub/models--Qwen--Qwen2.5-Math-7B-Instruct/snapshots/ef9926d75ab1d54532f6a30dd5e760355eb9aa4d", "seconds": 44.3}
+== step restore=mydrive:opd_runs/session3/20261110T000932Z/runs/opd_v3_d4_dual (started 03:10:14Z)
+2026/11/10 03:10:43 NOTICE:   636.141 MiB / 636.141 MiB, 100%, 26.336 MiB/s, ETA 0s
+restored mydrive:opd_runs/session3/20261110T000932Z/runs/opd_v3_d4_dual -> /content/runs/opd_v3_d4_dual
+== step restore=mydrive:opd_runs/session3/20261110T000932Z/runs/teacher_outputs (started 03:10:43Z)
+2026/11/10 03:10:52 NOTICE:    20.661 MiB / 20.661 MiB, 100%, 4.316 MiB/s, ETA 0s
+restored mydrive:opd_runs/session3/20261110T000932Z/runs/teacher_outputs -> /content/runs/teacher_outputs
+== step restore=mydrive:opd_runs/session3/20261110T000932Z/runs/sft_v3_seqkd_mix (started 03:10:52Z)
+2026/11/10 03:10:59 ERROR : Google drive root 'opd_runs/session3/20261110T000932Z/runs/sft_v3_seqkd_mix': error reading source root directory: directory not found
+2026/11/10 03:10:59 ERROR : Attempt 1/3 failed with 1 errors and: directory not found
+2026/11/10 03:10:59 ERROR : Google drive root 'opd_runs/session3/20261110T000932Z/runs/sft_v3_seqkd_mix': error reading source root directory: directory not found
+2026/11/10 03:10:59 ERROR : Attempt 2/3 failed with 1 errors and: directory not found
+2026/11/10 03:11:00 ERROR : Google drive root 'opd_runs/session3/20261110T000932Z/runs/sft_v3_seqkd_mix': error reading source root directory: directory not found
+2026/11/10 03:11:00 ERROR : Attempt 3/3 failed with 1 errors and: directory not found
+2026/11/10 03:11:00 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+2026/11/10 03:11:00 Failed to copy: directory not found
+== step restore=mydrive:opd_runs/session3/20261110T000932Z/runs/sft_v3_seqkd_mix FAILED (exit 1)
+== step restore=mydrive:opd_runs/session3/20261110T000932Z/runs/eval (started 03:11:00Z)
+2026/11/10 03:11:13 NOTICE:     5.633 MiB / 5.633 MiB, 100%, 749.528 KiB/s, ETA 0s
+restored mydrive:opd_runs/session3/20261110T000932Z/runs/eval -> /content/runs/eval
+== step sft (started 03:11:13Z)
+`torch_dtype` is deprecated! Use `dtype` instead!
+{"step": 1, "loss_token_mean_nll": 0.2052391916513443, "gradient_norm": 0.18058434128761292}
+{"step": 2, "loss_token_mean_nll": 0.20143751986324787, "gradient_norm": 0.17827989161014557}
+{"step": 3, "loss_token_mean_nll": 0.222448343411088, "gradient_norm": 0.16046886146068573}
+{"step": 4, "loss_token_mean_nll": 0.22057661321014166, "gradient_norm": 0.1450042426586151}
+{"step": 5, "loss_token_mean_nll": 0.21647865138947964, "gradient_norm": 0.10800614207983017}
+{"step": 6, "loss_token_mean_nll": 0.22614746913313866, "gradient_norm": 0.11365197598934174}
+{"step": 7, "loss_token_mean_nll": 0.18314357846975327, "gradient_norm": 0.11343264579772949}
+{"step": 8, "loss_token_mean_nll": 0.18116201646625996, "gradient_norm": 0.11685384064912796}
+{"step": 9, "loss_token_mean_nll": 0.18306138459593058, "gradient_norm": 0.11566787213087082}
+{"step": 10, "loss_token_mean_nll": 0.17437086871359497, "gradient_norm": 0.10903316736221313}
+{"step": 11, "loss_token_mean_nll": 0.1822237754240632, "gradient_norm": 0.10415686666965485}
+{"step": 12, "loss_token_mean_nll": 0.16474774200469255, "gradient_norm": 0.09663745760917664}
+{"step": 13, "loss_token_mean_nll": 0.16276491433382034, "gradient_norm": 0.10604023933410645}
+{"step": 14, "loss_token_mean_nll": 0.18825026974081993, "gradient_norm": 0.09623408317565918}
+{"step": 15, "loss_token_mean_nll": 0.16339807398617268, "gradient_norm": 0.08973788470029831}
+{"step": 16, "loss_token_mean_nll": 0.19920852594077587, "gradient_norm": 0.10429437458515167}
+{"step": 17, "loss_token_mean_nll": 0.1408381089568138, "gradient_norm": 0.08780775964260101}
+{"step": 18, "loss_token_mean_nll": 0.1655994290485978, "gradient_norm": 0.08912401646375656}
+{"step": 19, "loss_token_mean_nll": 0.20106921717524529, "gradient_norm": 0.09555621445178986}
+{"step": 20, "loss_token_mean_nll": 0.1719624320976436, "gradient_norm": 0.0936768501996994}
+{"step": 21, "loss_token_mean_nll": 0.1806752742268145, "gradient_norm": 0.09148498624563217}
+{"step": 22, "loss_token_mean_nll": 0.15683631785213947, "gradient_norm": 0.09225684404373169}
+{"step": 23, "loss_token_mean_nll": 0.19287485256791115, "gradient_norm": 0.09142718464136124}
+{"step": 24, "loss_token_mean_nll": 0.17190722562372684, "gradient_norm": 0.08162831515073776}
+{"step": 25, "loss_token_mean_nll": 0.2091689147055149, "gradient_norm": 0.09296253323554993}
+{"step": 26, "loss_token_mean_nll": 0.20660820417106152, "gradient_norm": 0.09212954342365265}
+{"step": 27, "loss_token_mean_nll": 0.21244785748422146, "gradient_norm": 0.09798486530780792}
+{"step": 28, "loss_token_mean_nll": 0.18470550701022148, "gradient_norm": 0.08979396522045135}
+{"step": 29, "loss_token_mean_nll": 0.1821503583341837, "gradient_norm": 0.08924724161624908}
+{"step": 30, "loss_token_mean_nll": 0.13842428475618362, "gradient_norm": 0.08708534389734268}
+{"step": 31, "loss_token_mean_nll": 0.1851246003061533, "gradient_norm": 0.0910366103053093}
+{"step": 32, "loss_token_mean_nll": 0.18278409913182259, "gradient_norm": 0.09652303159236908}
+{"step": 33, "loss_token_mean_nll": 0.16684454679489136, "gradient_norm": 0.08608859777450562}
+{"step": 34, "loss_token_mean_nll": 0.15719635412096977, "gradient_norm": 0.09270962327718735}
+{"step": 35, "loss_token_mean_nll": 0.17775952257215977, "gradient_norm": 0.09064633399248123}
+{"step": 36, "loss_token_mean_nll": 0.17580395378172398, "gradient_norm": 0.08462872356176376}
+{"step": 37, "loss_token_mean_nll": 0.1651925235055387, "gradient_norm": 0.08823082596063614}
+{"step": 38, "loss_token_mean_nll": 0.16573479992803186, "gradient_norm": 0.0969533920288086}
+{"step": 39, "loss_token_mean_nll": 0.17086448683403432, "gradient_norm": 0.09182731807231903}
+{"step": 40, "loss_token_mean_nll": 0.1872021541930735, "gradient_norm": 0.10206986963748932}
+{"step": 41, "loss_token_mean_nll": 0.19526315480470657, "gradient_norm": 0.09661861509084702}
+{"step": 42, "loss_token_mean_nll": 0.1738445684313774, "gradient_norm": 0.08442780375480652}
+{"step": 43, "loss_token_mean_nll": 0.15071264188736677, "gradient_norm": 0.09106026589870453}
+{"step": 44, "loss_token_mean_nll": 0.19089606450870633, "gradient_norm": 0.09256301820278168}
+{"step": 45, "loss_token_mean_nll": 0.13576140441000462, "gradient_norm": 0.08630099147558212}
+{"step": 46, "loss_token_mean_nll": 0.17548814602196217, "gradient_norm": 0.09205065667629242}
+{"step": 47, "loss_token_mean_nll": 0.17672113608568907, "gradient_norm": 0.09158066660165787}
+{"step": 48, "loss_token_mean_nll": 0.1629961634753272, "gradient_norm": 0.08846861869096756}
+{"step": 49, "loss_token_mean_nll": 0.18002740922383964, "gradient_norm": 0.0967538133263588}
+{"step": 50, "loss_token_mean_nll": 0.1690317232205416, "gradient_norm": 0.09738349169492722}
+{"step": 51, "loss_token_mean_nll": 0.17029276303946972, "gradient_norm": 0.09571942687034607}
+{"step": 52, "loss_token_mean_nll": 0.17474263161420822, "gradient_norm": 0.09584048390388489}
+{"step": 53, "loss_token_mean_nll": 0.16497380938380957, "gradient_norm": 0.08702395856380463}
+{"step": 54, "loss_token_mean_nll": 0.17206053115660325, "gradient_norm": 0.09458376467227936}
+{"step": 55, "loss_token_mean_nll": 0.15907629299908876, "gradient_norm": 0.08001970499753952}
+{"step": 56, "loss_token_mean_nll": 0.13462281331885606, "gradient_norm": 0.08948532491922379}
+{"step": 57, "loss_token_mean_nll": 0.18158642668277025, "gradient_norm": 0.09334446489810944}
+{"step": 58, "loss_token_mean_nll": 0.19415567629039288, "gradient_norm": 0.10254180431365967}
+{"step": 59, "loss_token_mean_nll": 0.17309468239545822, "gradient_norm": 0.0879630595445633}
+{"step": 60, "loss_token_mean_nll": 0.17337537556886673, "gradient_norm": 0.09442856162786484}
+{"step": 61, "loss_token_mean_nll": 0.183297922834754, "gradient_norm": 0.09093539416790009}
+{"step": 62, "loss_token_mean_nll": 0.1682425681501627, "gradient_norm": 0.09252144396305084}
+{"step": 63, "loss_token_mean_nll": 0.16984272841364145, "gradient_norm": 0.09018426388502121}
+{"step": 64, "loss_token_mean_nll": 0.15745763015002012, "gradient_norm": 0.09019540995359421}
+{"step": 65, "loss_token_mean_nll": 0.17494244873523712, "gradient_norm": 0.09620383381843567}
+{"step": 66, "loss_token_mean_nll": 0.16490025259554386, "gradient_norm": 0.09045077860355377}
+{"step": 67, "loss_token_mean_nll": 0.15484024956822395, "gradient_norm": 0.09305164217948914}
+{"step": 68, "loss_token_mean_nll": 0.181251497939229, "gradient_norm": 0.09053973108530045}
+{"step": 69, "loss_token_mean_nll": 0.15804380807094276, "gradient_norm": 0.08908043056726456}
+{"step": 70, "loss_token_mean_nll": 0.17139082588255405, "gradient_norm": 0.08802599459886551}
+{"step": 71, "loss_token_mean_nll": 0.16449956130236387, "gradient_norm": 0.10594261437654495}
+{"step": 72, "loss_token_mean_nll": 0.2108741831034422, "gradient_norm": 0.10007643699645996}
+{"step": 73, "loss_token_mean_nll": 0.16528210788965225, "gradient_norm": 0.08851485699415207}
+{"step": 74, "loss_token_mean_nll": 0.18142617121338844, "gradient_norm": 0.0946943461894989}
+{"step": 75, "loss_token_mean_nll": 0.1703960420563817, "gradient_norm": 0.09273266047239304}
+== /content/runs/sft_v3_seqkd_mix: 75 steps, median 5.4 s/step, peak 10.94 GiB, gate pass=None failed=None warnings=None
+== step dev=sft (started 03:18:06Z)
+`torch_dtype` is deprecated! Use `dtype` instead!
+math_dev {"count": 256, "truncated": 17, "accuracy_conservative": 0.4921875, "accuracy_math_verify": 0.5859375}
+code_dev {"count": 200, "truncated": 1}
+== step train=d4_dual (started 03:25:21Z)
+`torch_dtype` is deprecated! Use `dtype` instead!
+[opd-v3] resume from /content/runs/opd_v3_d4_dual/checkpoint-30
+{"step": 31, "loss": 0.15761000849306583, "gradient_norm": 0.10223598033189774, "gradient_cosine_math_code": 0.004376544617116451, "total_wall_seconds": 85.56384251000009, "math": {"kl": 0.1764, "entropy": 0.087, "len": 462.9, "eos": 0.922, "acc": 0.688}, "code": {"kl": 0.2001, "entropy": 0.274, "len": 334.8, "eos": 1.0}}
