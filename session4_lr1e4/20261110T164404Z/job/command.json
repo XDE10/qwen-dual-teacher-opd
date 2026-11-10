@@ -1,0 +1,31 @@
+{
+  "name": "session4_lr1e4",
+  "command": [
+    "bash",
+    "scripts/colab_session_v3.sh",
+    "restore=mydrive:opd_runs/session2/20261109T104721Z/runs/opd_v3_d4_dual_lr1e-4",
+    "train=d4_dual_lr1e-4",
+    "eval=d4_dual_lr1e-4",
+    "train=d3_general_lr1e-4",
+    "eval=d3_general_lr1e-4"
+  ],
+  "cwd": "/content/project2",
+  "started_utc": "2026-11-10T16:44:04Z",
+  "stamp": "20261110T164404Z",
+  "save": [
+    [
+      "runs",
+      "/content/runs"
+    ]
+  ],
+  "drive": "mydrive:opd_runs",
+  "publish": true,
+  "sync_every_min": 5.0,
+  "drive_about": {
+    "total": 5497558138880,
+    "used": 342191036498,
+    "trashed": 3239284142,
+    "other": 24188451,
+    "free": 5155342913931
+  }
+}
