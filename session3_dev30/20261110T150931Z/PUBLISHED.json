@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "session3_dev30",
   "stamp": "20261110T150931Z",
-  "published_utc": "2026-11-10T15:25:51Z",
+  "published_utc": "2026-11-10T15:31:01Z",
   "job": {
     "state": "running"
   },
@@ -37,8 +37,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 27625,
-      "sha256": "cd372793d74a4e1a8dfda15dcc1cbdbf18d3512fe12813b54071a50fdcf403ae"
+      "bytes": 28369,
+      "sha256": "4c91537aa3db263e7486a7f36ab7b69037d0588888a6bb6348ed97f2bf508c45"
     },
     {
       "path": "runs/eval/d4_dual-checkpoint-30-dev/code_dev.candidates.jsonl",
@@ -64,6 +64,31 @@
       "path": "runs/eval/d4_dual-checkpoint-30-dev/math_dev.summary.json",
       "bytes": 5927,
       "sha256": "a7e34c56d219d6c3c01bcc65424cb9d14ca0a6e8ac9cd24e2b1b84656b9cbc4f"
+    },
+    {
+      "path": "runs/eval/d4_dual_lr1e-4-checkpoint-30-dev/code_dev.candidates.jsonl",
+      "bytes": 277557,
+      "sha256": "1e4588371798cc2590022cae6281732bb962260234a127ff49eedb528ea5a2e0"
+    },
+    {
+      "path": "runs/eval/d4_dual_lr1e-4-checkpoint-30-dev/code_dev.jsonl",
+      "bytes": 290556,
+      "sha256": "099abf19d71231433e74a01b2c1b6e751a2c82a126f8ce24d8f2cc5f12fc4321"
+    },
+    {
+      "path": "runs/eval/d4_dual_lr1e-4-checkpoint-30-dev/code_dev.summary.json",
+      "bytes": 5861,
+      "sha256": "1b16864dd64d8f55a52692d4e12e6c84ff5a309b571718d96de40161eb680d90"
+    },
+    {
+      "path": "runs/eval/d4_dual_lr1e-4-checkpoint-30-dev/math_dev.jsonl",
+      "bytes": 533788,
+      "sha256": "53196ac3b724e262e190acc9af492683e66aa02f200f647db11775f75be3863e"
+    },
+    {
+      "path": "runs/eval/d4_dual_lr1e-4-checkpoint-30-dev/math_dev.summary.json",
+      "bytes": 5942,
+      "sha256": "176f86899db4ca133b006736be77898ac8921f2bca365ffdd24b8ff3b4c1435b"
     },
     {
       "path": "runs/opd_v3_d4_dual/metrics.jsonl",
@@ -202,8 +227,8 @@
     },
     {
       "path": "runs/sessions/20261110T150931Z/console.log",
-      "bytes": 26016,
-      "sha256": "8ac524e7bd6b048ad36a54bd6bd6114a949859513c2d4ce2bb94818e42cb29ea"
+      "bytes": 26270,
+      "sha256": "375d3aa91c0ec2afd753c581ff19033bf23ef829e36cd1eb64ec91d1ccbc4e1d"
     },
     {
       "path": "runs/sessions/20261110T150931Z/environment/benchmarks.txt",
@@ -252,8 +277,8 @@
     },
     {
       "path": "runs/sessions/20261110T150931Z/steps.jsonl",
-      "bytes": 403,
-      "sha256": "a78fb48799fcc1d60ab02bb26f10de42ff705ab52669cbbbace0b67ccbbf43ba"
+      "bytes": 466,
+      "sha256": "5a0021e9d9efbcd8a3e1f7b05899e6d3cb0b5d2dd285b7b76005f5acf81f2e67"
     }
   ],
   "redacted_strings": 0,

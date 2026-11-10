@@ -278,3 +278,7 @@ math_dev {"count": 256, "truncated": 18, "accuracy_conservative": 0.46875, "accu
 code_dev {"count": 200, "truncated": 5}
 == step dev=d4_dual_lr1e-4@30 (started 15:23:37Z)
 `torch_dtype` is deprecated! Use `dtype` instead!
+math_dev {"count": 256, "truncated": 21, "accuracy_conservative": 0.51953125, "accuracy_math_verify": 0.61328125}
+code_dev {"count": 200, "truncated": 5}
+== step dev=d4_dual_lr1e-5@30 (started 15:30:33Z)
+`torch_dtype` is deprecated! Use `dtype` instead!
