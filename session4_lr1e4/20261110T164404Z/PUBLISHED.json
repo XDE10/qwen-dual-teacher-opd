@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "session4_lr1e4",
   "stamp": "20261110T164404Z",
-  "published_utc": "2026-11-10T20:44:57Z",
+  "published_utc": "2026-11-10T20:50:16Z",
   "job": {
     "state": "running"
   },
@@ -37,8 +37,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 89898,
-      "sha256": "1ebab3a4f5ad453e45702ac4abdc8f52aa1ce0cfcd8b960515254f0485fec86a"
+      "bytes": 91770,
+      "sha256": "892b137f15486a33095025899d9614ef53a19190286240db622963a9cdfccf64"
     },
     {
       "path": "runs/eval/d4_dual_lr1e-4-checkpoint-80/code_dev.candidates.jsonl",
@@ -117,8 +117,8 @@
     },
     {
       "path": "runs/opd_v3_d3_general_lr1e-4/metrics.jsonl",
-      "bytes": 2337483,
-      "sha256": "428979f132048ae47331bcf67479e546e2209a4bdf0ad1bedc6340eb8a9f717f"
+      "bytes": 2428683,
+      "sha256": "28464bd0fba640be3d05e45a112b6fc9a76ff49cc27c47e5368504ae68f0472f"
     },
     {
       "path": "runs/opd_v3_d3_general_lr1e-4/resolved_generation.json",
@@ -161,6 +161,11 @@
       "sha256": "26f99270f86aea2c879cfb177a36b4ba11b178753eb9ab496ec082b89f4a61da"
     },
     {
+      "path": "runs/opd_v3_d3_general_lr1e-4/rollouts/step-000080.jsonl",
+      "bytes": 10472,
+      "sha256": "b47157b90035598f992bbe5880fa9b93aa3f953feb12b60330959762050946ba"
+    },
+    {
       "path": "runs/opd_v3_d3_general_lr1e-4/run_identity.json",
       "bytes": 32232,
       "sha256": "3083d37b45b8de0aa241813089e4c28ef8bc6a6d460191f30de1c0c0ba96c178"
@@ -169,6 +174,11 @@
       "path": "runs/opd_v3_d3_general_lr1e-4/startup_1794336090128004475.json",
       "bytes": 507,
       "sha256": "4e1640670248ec99f5f0d56a20c543b669e68b9cef2e0ee6e4462237592c2054"
+    },
+    {
+      "path": "runs/opd_v3_d3_general_lr1e-4/summary.json",
+      "bytes": 95990,
+      "sha256": "d8a48153b99ca0b982fb57372fd60f8438fd41c9e9fa494d7efc5e915b970b07"
     },
     {
       "path": "runs/opd_v3_d3_general_lr1e-4/teacher_pool.json",
@@ -252,8 +262,8 @@
     },
     {
       "path": "runs/sessions/20261110T164405Z/console.log",
-      "bytes": 67098,
-      "sha256": "df3f44b153b5a6262137557b6aa7ea4b0f61d275f61d6d09bb74dc0d31f7b2a9"
+      "bytes": 68471,
+      "sha256": "3e03a97c403125ce8fa119509498d689938c0e118850e0adb7e00469ec93816e"
     },
     {
       "path": "runs/sessions/20261110T164405Z/environment/benchmarks.txt",
@@ -302,8 +312,8 @@
     },
     {
       "path": "runs/sessions/20261110T164405Z/steps.jsonl",
-      "bytes": 243,
-      "sha256": "422831ea14947694b1d3261263ccfb386730374ec30849a11a02cd5e359a4a89"
+      "bytes": 309,
+      "sha256": "4995ae6e67505028276fbc24c4a5d068966e277ee9177a7164f10455dd84ef89"
     }
   ],
   "redacted_strings": 0,
@@ -345,6 +355,10 @@
       "reason": "folder not published"
     },
     {
+      "path": "runs/opd_v3_d3_general_lr1e-4/checkpoint-80/",
+      "reason": "folder not published"
+    },
+    {
       "path": "runs/opd_v3_d4_dual_lr1e-4/checkpoint-10/",
       "reason": "folder not published"
     },
@@ -377,7 +391,7 @@
       "reason": "folder not published"
     }
   ],
-  "skipped_count": 17,
+  "skipped_count": 18,
   "limits_mb": {
     "per_file": 20,
     "total": 50

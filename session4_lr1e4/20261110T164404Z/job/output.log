@@ -682,3 +682,15 @@ mbppplus {"count": 378, "truncated": 0}
 2026/11/10 20:44:52 NOTICE:    87.556 KiB / 87.556 KiB, 100%, 87.481 KiB/s, ETA 0s
 2026/11/10 20:44:56 NOTICE:     2.293 MiB / 2.293 MiB, 100%, 2.291 MiB/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/session4_lr1e4/20261110T164404Z
+[publish] 55 files (9.62 MB), 17 left out, 0 strings redacted -> results:session4_lr1e4/20261110T164404Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/session4_lr1e4/20261110T164404Z
+{"step": 78, "loss": 0.1342271063476801, "gradient_norm": 0.08422990143299103, "gradient_cosine_math_code": -0.017252925783395767, "total_wall_seconds": 132.78969566600063, "math": {"kl": 0.0803, "entropy": 0.115, "len": 450.5, "eos": 0.922, "acc": 0.641}, "code": {"kl": 0.1898, "entropy": 0.259, "len": 355.2, "eos": 0.984}}
+{"step": 79, "loss": 0.1328448597341776, "gradient_norm": 0.08563236147165298, "gradient_cosine_math_code": -0.004189877305179834, "total_wall_seconds": 140.1753750099997, "math": {"kl": 0.0801, "entropy": 0.116, "len": 465.0, "eos": 0.891, "acc": 0.672}, "code": {"kl": 0.1873, "entropy": 0.272, "len": 395.9, "eos": 0.984}}
+{"step": 80, "loss": 0.13362535275518894, "gradient_norm": 0.0772322341799736, "gradient_cosine_math_code": 0.0022332104854285717, "total_wall_seconds": 126.24182966099943, "math": {"kl": 0.0929, "entropy": 0.136, "len": 475.3, "eos": 0.906, "acc": 0.703}, "code": {"kl": 0.1889, "entropy": 0.282, "len": 457.8, "eos": 0.984}}
+== /content/runs/opd_v3_d3_general_lr1e-4: 80 steps, median 91.7 s/step, peak 41.19 GiB, gate pass=False failed=['code.entropy_vs_teacher'] warnings=['code.student_entropy ratio 0.465 outside 0.5-2.0 (information only)', 'math.student_entropy ratio 0.395 outside 0.5-2.0 (information only)']
+== step eval=d3_general_lr1e-4 (started 20:49:30Z)
+`torch_dtype` is deprecated! Use `dtype` instead!
+[colab_job] periodic save (every 5 min)
+2026/11/10 20:50:04 NOTICE:    89.381 KiB / 89.381 KiB, 100%, 89.328 KiB/s, ETA 0s
+2026/11/10 20:50:15 NOTICE:   214.208 MiB / 214.208 MiB, 100%, 26.776 MiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/session4_lr1e4/20261110T164404Z
