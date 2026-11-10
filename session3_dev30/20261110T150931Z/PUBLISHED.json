@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "session3_dev30",
   "stamp": "20261110T150931Z",
-  "published_utc": "2026-11-10T15:31:01Z",
+  "published_utc": "2026-11-10T15:36:09Z",
   "job": {
     "state": "running"
   },
@@ -37,8 +37,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 28369,
-      "sha256": "4c91537aa3db263e7486a7f36ab7b69037d0588888a6bb6348ed97f2bf508c45"
+      "bytes": 28841,
+      "sha256": "01c1dd0c5e3650ec8b183675ed1224467b734f509a0869425ff61d4fc99e6daf"
     },
     {
       "path": "runs/eval/d4_dual-checkpoint-30-dev/code_dev.candidates.jsonl",
