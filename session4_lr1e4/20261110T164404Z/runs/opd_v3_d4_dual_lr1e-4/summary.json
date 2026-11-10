@@ -1,6 +1,6 @@
 {
   "run_dir": "/content/runs/opd_v3_d4_dual_lr1e-4",
-  "steps": 30,
+  "steps": 80,
   "max_steps": 80,
   "learning_rate": 0.0001,
   "prompts_per_step": {
@@ -23,27 +23,139 @@
       ]
     ],
     "load_seconds": {
-      "Qwen/Qwen2.5-Math-7B-Instruct/ef9926d75ab1d54532f6a30dd5e760355eb9aa4d": 1.456081986999834,
-      "Qwen/Qwen2.5-Coder-7B-Instruct/c03e6d358207e414f1eca0bb1891e29f1db0e242": 1.4622357180001018
+      "Qwen/Qwen2.5-Math-7B-Instruct/ef9926d75ab1d54532f6a30dd5e760355eb9aa4d": 1.681737602000112,
+      "Qwen/Qwen2.5-Coder-7B-Instruct/c03e6d358207e414f1eca0bb1891e29f1db0e242": 1.6717125920000626
     }
   },
-  "overall_peak_gib": 55.24,
+  "overall_peak_gib": 55.84,
   "phase_seconds_total": {
-    "backward_code": 165.6,
-    "backward_math": 120.2,
-    "forward_code": 180.1,
-    "forward_math": 140.6,
-    "grade_math": 4.5,
-    "optimizer": 0.2,
-    "rollout_code": 1408.5,
-    "rollout_math": 860.4,
-    "sync_generation_copy": 0.7,
+    "backward_code": 440.3,
+    "backward_math": 324.7,
+    "forward_code": 478.6,
+    "forward_math": 379.0,
+    "grade_math": 11.7,
+    "optimizer": 0.4,
+    "rollout_code": 3874.7,
+    "rollout_math": 2301.3,
+    "sync_generation_copy": 2.0,
     "teacher_route_code": 0.0,
     "teacher_route_math": 0.0
   },
-  "median_step_seconds": 95.1,
+  "median_step_seconds": 95.5,
   "gate": {
-    "steps": 30,
+    "version": 2,
+    "steps": 80,
+    "thresholds": {
+      "baseline": "first step of the domain",
+      "kl_ratio_below": 1.0,
+      "entropy_vs_teacher_range": [
+        0.7,
+        1.5
+      ],
+      "length_ratio_range": [
+        0.7,
+        1.3
+      ],
+      "eos_rate_drop_max": 0.1,
+      "math_accuracy_drop_max": 0.08,
+      "student_entropy_warning_range": [
+        0.5,
+        2.0
+      ],
+      "grad_spike_factor": 10.0,
+      "grad_spikes_max": 1,
+      "window_max": 10,
+      "min_steps": 6
+    },
+    "checks": {
+      "code": {
+        "window": 10,
+        "baseline_step": 1,
+        "kl": {
+          "baseline": 0.2228,
+          "last": 0.1698,
+          "ratio": 0.762,
+          "pass": true
+        },
+        "entropy_vs_teacher": {
+          "baseline": 1.0666,
+          "last": 0.8829,
+          "ratio": 0.828,
+          "pass": true
+        },
+        "mean_response_tokens": {
+          "baseline": 359.5625,
+          "last": 313.8391,
+          "ratio": 0.873,
+          "pass": true
+        },
+        "eos_rate": {
+          "baseline": 1.0,
+          "last": 0.9969,
+          "drop": 0.0031,
+          "pass": true
+        },
+        "student_entropy": {
+          "baseline": 0.5876,
+          "last": 0.3456,
+          "ratio": 0.588
+        }
+      },
+      "math": {
+        "window": 10,
+        "baseline_step": 1,
+        "kl": {
+          "baseline": 0.3691,
+          "last": 0.2168,
+          "ratio": 0.588,
+          "pass": true
+        },
+        "entropy_vs_teacher": {
+          "baseline": 0.2512,
+          "last": 0.1684,
+          "ratio": 0.67,
+          "pass": false
+        },
+        "mean_response_tokens": {
+          "baseline": 403.9219,
+          "last": 467.45,
+          "ratio": 1.157,
+          "pass": true
+        },
+        "eos_rate": {
+          "baseline": 0.9688,
+          "last": 0.9203,
+          "drop": 0.0484,
+          "pass": true
+        },
+        "rollout_accuracy_math_verify": {
+          "first_window": 0.625,
+          "last": 0.6562,
+          "drop": -0.0312,
+          "pass": true
+        },
+        "student_entropy": {
+          "baseline": 0.3172,
+          "last": 0.1039,
+          "ratio": 0.328
+        }
+      },
+      "gradient_norm": {
+        "spike_steps": [],
+        "pass": true
+      }
+    },
+    "failed": [
+      "math.entropy_vs_teacher"
+    ],
+    "undecided": [],
+    "warnings": [
+      "math.student_entropy ratio 0.328 outside 0.5-2.0 (information only)"
+    ],
+    "pass": false
+  },
+  "gate_v1_first_window": {
+    "steps": 80,
     "thresholds": {
       "kl_ratio_below": 1.0,
       "entropy_ratio_range": [
@@ -66,26 +178,26 @@
         "window": 10,
         "kl": {
           "first": 0.2155,
-          "last": 0.1934,
-          "ratio": 0.897,
+          "last": 0.1698,
+          "ratio": 0.788,
           "pass": true
         },
         "student_entropy": {
           "first": 0.4364,
-          "last": 0.3483,
-          "ratio": 0.798,
+          "last": 0.3456,
+          "ratio": 0.792,
           "pass": true
         },
         "mean_response_tokens": {
           "first": 306.0391,
-          "last": 336.95,
-          "ratio": 1.101,
+          "last": 313.8391,
+          "ratio": 1.025,
           "pass": true
         },
         "eos_rate": {
           "first": 0.9969,
-          "last": 0.9984,
-          "drop": -0.0016,
+          "last": 0.9969,
+          "drop": 0.0,
           "pass": true
         }
       },
@@ -93,32 +205,32 @@
         "window": 10,
         "kl": {
           "first": 0.2632,
-          "last": 0.1743,
-          "ratio": 0.662,
+          "last": 0.2168,
+          "ratio": 0.824,
           "pass": true
         },
         "student_entropy": {
           "first": 0.1837,
-          "last": 0.0974,
-          "ratio": 0.53,
+          "last": 0.1039,
+          "ratio": 0.566,
           "pass": false
         },
         "mean_response_tokens": {
           "first": 448.5359,
-          "last": 444.4266,
-          "ratio": 0.991,
+          "last": 467.45,
+          "ratio": 1.042,
           "pass": true
         },
         "eos_rate": {
           "first": 0.9437,
-          "last": 0.9187,
-          "drop": 0.025,
+          "last": 0.9203,
+          "drop": 0.0234,
           "pass": true
         },
         "rollout_accuracy_math_verify": {
           "first": 0.625,
-          "last": 0.6875,
-          "drop": -0.0625,
+          "last": 0.6562,
+          "drop": -0.0312,
           "pass": true
         }
       },
@@ -1331,6 +1443,2006 @@
         "teacher_entropy": 0.399,
         "eos_rate": 1.0,
         "mean_response_tokens": 322.0,
+        "removed_mass_max": 7.62939453125e-06
+      }
+    },
+    {
+      "step": 31,
+      "wall_s": 124.4,
+      "peak_gib": 53.48,
+      "loss": 0.15601206943392754,
+      "grad_norm": 0.09347476810216904,
+      "cosine_math_code": 0.004366437904536724,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.5,
+        "backward_math": 3.8,
+        "forward_code": 6.1,
+        "forward_math": 4.5,
+        "grade_math": 0.5,
+        "optimizer": 0.0,
+        "rollout_code": 78.0,
+        "rollout_math": 25.9,
+        "sync_generation_copy": 0.1,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1761,
+        "student_entropy": 0.097,
+        "teacher_entropy": 0.526,
+        "eos_rate": 0.984375,
+        "mean_response_tokens": 451.9,
+        "removed_mass_max": 0.002647697925567627,
+        "rollout_accuracy_math_verify": 0.7344,
+        "rollout_accuracy_conservative": 0.6875
+      },
+      "code": {
+        "kl": 0.1845,
+        "student_entropy": 0.323,
+        "teacher_entropy": 0.352,
+        "eos_rate": 0.984375,
+        "mean_response_tokens": 337.1,
+        "removed_mass_max": 7.62939453125e-06
+      }
+    },
+    {
+      "step": 32,
+      "wall_s": 93.4,
+      "peak_gib": 54.08,
+      "loss": 0.1398013257421553,
+      "grad_norm": 0.10725187510251999,
+      "cosine_math_code": -0.006969731766730547,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.3,
+        "backward_math": 4.0,
+        "forward_code": 5.7,
+        "forward_math": 4.7,
+        "grade_math": 0.2,
+        "optimizer": 0.0,
+        "rollout_code": 47.6,
+        "rollout_math": 25.8,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1545,
+        "student_entropy": 0.096,
+        "teacher_entropy": 0.523,
+        "eos_rate": 0.90625,
+        "mean_response_tokens": 468.3,
+        "removed_mass_max": 0.0026125311851501465,
+        "rollout_accuracy_math_verify": 0.6406,
+        "rollout_accuracy_conservative": 0.5781
+      },
+      "code": {
+        "kl": 0.1716,
+        "student_entropy": 0.319,
+        "teacher_entropy": 0.353,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 290.5,
+        "removed_mass_max": 3.0517578125e-05
+      }
+    },
+    {
+      "step": 33,
+      "wall_s": 106.7,
+      "peak_gib": 54.08,
+      "loss": 0.1469536554068327,
+      "grad_norm": 0.09364637732505798,
+      "cosine_math_code": 0.004646661225706339,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.6,
+        "backward_math": 3.8,
+        "forward_code": 6.1,
+        "forward_math": 4.4,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 52.8,
+        "rollout_math": 33.9,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1477,
+        "student_entropy": 0.098,
+        "teacher_entropy": 0.315,
+        "eos_rate": 0.96875,
+        "mean_response_tokens": 385.3,
+        "removed_mass_max": 0.0017113089561462402,
+        "rollout_accuracy_math_verify": 0.6562,
+        "rollout_accuracy_conservative": 0.5938
+      },
+      "code": {
+        "kl": 0.1835,
+        "student_entropy": 0.339,
+        "teacher_entropy": 0.371,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 354.1,
+        "removed_mass_max": 9.5367431640625e-06
+      }
+    },
+    {
+      "step": 34,
+      "wall_s": 81.9,
+      "peak_gib": 54.08,
+      "loss": 0.1420013839378953,
+      "grad_norm": 0.09017986804246902,
+      "cosine_math_code": 0.0025714340154081583,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.5,
+        "backward_math": 3.8,
+        "forward_code": 5.9,
+        "forward_math": 4.5,
+        "grade_math": 0.2,
+        "optimizer": 0.0,
+        "rollout_code": 36.1,
+        "rollout_math": 25.9,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.131,
+        "student_entropy": 0.085,
+        "teacher_entropy": 0.342,
+        "eos_rate": 0.890625,
+        "mean_response_tokens": 457.0,
+        "removed_mass_max": 0.0016037821769714355,
+        "rollout_accuracy_math_verify": 0.6875,
+        "rollout_accuracy_conservative": 0.6406
+      },
+      "code": {
+        "kl": 0.1911,
+        "student_entropy": 0.359,
+        "teacher_entropy": 0.408,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 329.2,
+        "removed_mass_max": 1.71661376953125e-05
+      }
+    },
+    {
+      "step": 35,
+      "wall_s": 103.1,
+      "peak_gib": 54.08,
+      "loss": 0.17277199169620872,
+      "grad_norm": 0.08767706155776978,
+      "cosine_math_code": 0.006336679682135582,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.3,
+        "backward_math": 4.6,
+        "forward_code": 6.0,
+        "forward_math": 5.2,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 37.8,
+        "rollout_math": 44.1,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.2074,
+        "student_entropy": 0.097,
+        "teacher_entropy": 0.528,
+        "eos_rate": 0.9375,
+        "mean_response_tokens": 438.6,
+        "removed_mass_max": 0.003003358840942383,
+        "rollout_accuracy_math_verify": 0.6875,
+        "rollout_accuracy_conservative": 0.6719
+      },
+      "code": {
+        "kl": 0.1803,
+        "student_entropy": 0.325,
+        "teacher_entropy": 0.381,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 330.1,
+        "removed_mass_max": 3.7550926208496094e-06
+      }
+    },
+    {
+      "step": 36,
+      "wall_s": 124.5,
+      "peak_gib": 54.22,
+      "loss": 0.1565703470259905,
+      "grad_norm": 0.09731477499008179,
+      "cosine_math_code": -0.005082922056317329,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.8,
+        "backward_math": 3.9,
+        "forward_code": 6.4,
+        "forward_math": 4.6,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 79.6,
+        "rollout_math": 24.1,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1851,
+        "student_entropy": 0.096,
+        "teacher_entropy": 0.473,
+        "eos_rate": 0.90625,
+        "mean_response_tokens": 468.0,
+        "removed_mass_max": 0.00274658203125,
+        "rollout_accuracy_math_verify": 0.6406,
+        "rollout_accuracy_conservative": 0.6094
+      },
+      "code": {
+        "kl": 0.1864,
+        "student_entropy": 0.33,
+        "teacher_entropy": 0.374,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 355.0,
+        "removed_mass_max": 1.33514404296875e-05
+      }
+    },
+    {
+      "step": 37,
+      "wall_s": 90.2,
+      "peak_gib": 54.22,
+      "loss": 0.16094023175537586,
+      "grad_norm": 0.083777517080307,
+      "cosine_math_code": -0.016488870605826378,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.7,
+        "backward_math": 4.0,
+        "forward_code": 6.1,
+        "forward_math": 4.7,
+        "grade_math": 0.2,
+        "optimizer": 0.0,
+        "rollout_code": 45.5,
+        "rollout_math": 24.0,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.2266,
+        "student_entropy": 0.093,
+        "teacher_entropy": 0.658,
+        "eos_rate": 0.90625,
+        "mean_response_tokens": 467.6,
+        "removed_mass_max": 0.002660989761352539,
+        "rollout_accuracy_math_verify": 0.625,
+        "rollout_accuracy_conservative": 0.5312
+      },
+      "code": {
+        "kl": 0.191,
+        "student_entropy": 0.33,
+        "teacher_entropy": 0.38,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 329.5,
+        "removed_mass_max": 3.7550926208496094e-06
+      }
+    },
+    {
+      "step": 38,
+      "wall_s": 97.1,
+      "peak_gib": 54.22,
+      "loss": 0.15287897922098637,
+      "grad_norm": 0.0953708291053772,
+      "cosine_math_code": 0.004050255753099918,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.5,
+        "backward_math": 3.9,
+        "forward_code": 6.0,
+        "forward_math": 4.6,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 48.7,
+        "rollout_math": 28.3,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1373,
+        "student_entropy": 0.087,
+        "teacher_entropy": 0.326,
+        "eos_rate": 0.9375,
+        "mean_response_tokens": 443.4,
+        "removed_mass_max": 0.0019283294677734375,
+        "rollout_accuracy_math_verify": 0.5781,
+        "rollout_accuracy_conservative": 0.5156
+      },
+      "code": {
+        "kl": 0.1955,
+        "student_entropy": 0.32,
+        "teacher_entropy": 0.36,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 326.3,
+        "removed_mass_max": 7.62939453125e-06
+      }
+    },
+    {
+      "step": 39,
+      "wall_s": 91.2,
+      "peak_gib": 54.22,
+      "loss": 0.17980302684009075,
+      "grad_norm": 0.08423981815576553,
+      "cosine_math_code": -0.00421891501173377,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.4,
+        "backward_math": 4.7,
+        "forward_code": 5.8,
+        "forward_math": 5.4,
+        "grade_math": 0.2,
+        "optimizer": 0.0,
+        "rollout_code": 40.5,
+        "rollout_math": 29.1,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.2357,
+        "student_entropy": 0.097,
+        "teacher_entropy": 0.778,
+        "eos_rate": 0.84375,
+        "mean_response_tokens": 528.6,
+        "removed_mass_max": 0.002983391284942627,
+        "rollout_accuracy_math_verify": 0.5938,
+        "rollout_accuracy_conservative": 0.5156
+      },
+      "code": {
+        "kl": 0.1915,
+        "student_entropy": 0.333,
+        "teacher_entropy": 0.383,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 337.0,
+        "removed_mass_max": 9.5367431640625e-06
+      }
+    },
+    {
+      "step": 40,
+      "wall_s": 87.6,
+      "peak_gib": 54.22,
+      "loss": 0.18057896522805095,
+      "grad_norm": 0.07859021425247192,
+      "cosine_math_code": -0.007718479726463556,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.2,
+        "backward_math": 4.2,
+        "forward_code": 5.7,
+        "forward_math": 4.8,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 36.8,
+        "rollout_math": 30.8,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.3217,
+        "student_entropy": 0.085,
+        "teacher_entropy": 0.913,
+        "eos_rate": 0.90625,
+        "mean_response_tokens": 468.4,
+        "removed_mass_max": 0.002882659435272217,
+        "rollout_accuracy_math_verify": 0.7188,
+        "rollout_accuracy_conservative": 0.7031
+      },
+      "code": {
+        "kl": 0.1887,
+        "student_entropy": 0.3,
+        "teacher_entropy": 0.341,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 322.7,
+        "removed_mass_max": 1.9669532775878906e-06
+      }
+    },
+    {
+      "step": 41,
+      "wall_s": 86.3,
+      "peak_gib": 54.22,
+      "loss": 0.1511291298083961,
+      "grad_norm": 0.08618379384279251,
+      "cosine_math_code": 0.010402126237750053,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.4,
+        "backward_math": 4.4,
+        "forward_code": 5.8,
+        "forward_math": 5.1,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 34.7,
+        "rollout_math": 30.7,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1556,
+        "student_entropy": 0.084,
+        "teacher_entropy": 0.442,
+        "eos_rate": 0.953125,
+        "mean_response_tokens": 459.1,
+        "removed_mass_max": 0.002636253833770752,
+        "rollout_accuracy_math_verify": 0.7812,
+        "rollout_accuracy_conservative": 0.6562
+      },
+      "code": {
+        "kl": 0.1905,
+        "student_entropy": 0.323,
+        "teacher_entropy": 0.376,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 325.0,
+        "removed_mass_max": 8.58306884765625e-06
+      }
+    },
+    {
+      "step": 42,
+      "wall_s": 88.1,
+      "peak_gib": 54.9,
+      "loss": 0.17899282090365887,
+      "grad_norm": 0.09532333165407181,
+      "cosine_math_code": 0.0009824708104133606,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.5,
+        "backward_math": 3.9,
+        "forward_code": 5.9,
+        "forward_math": 4.7,
+        "grade_math": 0.2,
+        "optimizer": 0.0,
+        "rollout_code": 43.4,
+        "rollout_math": 24.4,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.2978,
+        "student_entropy": 0.093,
+        "teacher_entropy": 0.874,
+        "eos_rate": 0.859375,
+        "mean_response_tokens": 505.2,
+        "removed_mass_max": 0.002640068531036377,
+        "rollout_accuracy_math_verify": 0.5625,
+        "rollout_accuracy_conservative": 0.5156
+      },
+      "code": {
+        "kl": 0.1661,
+        "student_entropy": 0.324,
+        "teacher_entropy": 0.377,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 332.6,
+        "removed_mass_max": 3.7550926208496094e-06
+      }
+    },
+    {
+      "step": 43,
+      "wall_s": 83.1,
+      "peak_gib": 54.9,
+      "loss": 0.13562402315437794,
+      "grad_norm": 0.08862052857875824,
+      "cosine_math_code": 0.004129625391215086,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.4,
+        "backward_math": 4.0,
+        "forward_code": 5.8,
+        "forward_math": 4.6,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 36.4,
+        "rollout_math": 26.9,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1552,
+        "student_entropy": 0.089,
+        "teacher_entropy": 0.466,
+        "eos_rate": 0.9375,
+        "mean_response_tokens": 468.6,
+        "removed_mass_max": 0.0023908615112304688,
+        "rollout_accuracy_math_verify": 0.7188,
+        "rollout_accuracy_conservative": 0.6562
+      },
+      "code": {
+        "kl": 0.1656,
+        "student_entropy": 0.3,
+        "teacher_entropy": 0.349,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 301.7,
+        "removed_mass_max": 7.62939453125e-06
+      }
+    },
+    {
+      "step": 44,
+      "wall_s": 100.5,
+      "peak_gib": 55.18,
+      "loss": 0.1826330702751875,
+      "grad_norm": 0.09986292570829391,
+      "cosine_math_code": 0.00332734826952219,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.4,
+        "backward_math": 4.0,
+        "forward_code": 5.8,
+        "forward_math": 4.7,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 56.2,
+        "rollout_math": 24.3,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.2519,
+        "student_entropy": 0.101,
+        "teacher_entropy": 0.598,
+        "eos_rate": 0.875,
+        "mean_response_tokens": 491.3,
+        "removed_mass_max": 0.0026657581329345703,
+        "rollout_accuracy_math_verify": 0.6406,
+        "rollout_accuracy_conservative": 0.5781
+      },
+      "code": {
+        "kl": 0.182,
+        "student_entropy": 0.331,
+        "teacher_entropy": 0.384,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 329.8,
+        "removed_mass_max": 3.7550926208496094e-06
+      }
+    },
+    {
+      "step": 45,
+      "wall_s": 94.1,
+      "peak_gib": 55.84,
+      "loss": 0.14425713010132313,
+      "grad_norm": 0.0961122065782547,
+      "cosine_math_code": 0.015209507197141647,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.6,
+        "backward_math": 4.0,
+        "forward_code": 6.2,
+        "forward_math": 4.7,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 46.0,
+        "rollout_math": 27.4,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1407,
+        "student_entropy": 0.097,
+        "teacher_entropy": 0.396,
+        "eos_rate": 0.90625,
+        "mean_response_tokens": 504.4,
+        "removed_mass_max": 0.0024393796920776367,
+        "rollout_accuracy_math_verify": 0.6094,
+        "rollout_accuracy_conservative": 0.5312
+      },
+      "code": {
+        "kl": 0.1869,
+        "student_entropy": 0.311,
+        "teacher_entropy": 0.353,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 344.6,
+        "removed_mass_max": 1.9073486328125e-05
+      }
+    },
+    {
+      "step": 46,
+      "wall_s": 96.4,
+      "peak_gib": 55.84,
+      "loss": 0.14213174302130938,
+      "grad_norm": 0.0806528702378273,
+      "cosine_math_code": 0.0002779042988549918,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.4,
+        "backward_math": 4.6,
+        "forward_code": 5.9,
+        "forward_math": 5.3,
+        "grade_math": 0.3,
+        "optimizer": 0.0,
+        "rollout_code": 42.9,
+        "rollout_math": 32.0,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1701,
+        "student_entropy": 0.081,
+        "teacher_entropy": 0.466,
+        "eos_rate": 0.921875,
+        "mean_response_tokens": 502.7,
+        "removed_mass_max": 0.0026543736457824707,
+        "rollout_accuracy_math_verify": 0.6562,
+        "rollout_accuracy_conservative": 0.625
+      },
+      "code": {
+        "kl": 0.1782,
+        "student_entropy": 0.349,
+        "teacher_entropy": 0.412,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 332.9,
+        "removed_mass_max": 3.7550926208496094e-06
+      }
+    },
+    {
+      "step": 47,
+      "wall_s": 137.2,
+      "peak_gib": 55.84,
+      "loss": 0.13980106823146343,
+      "grad_norm": 0.10149865597486496,
+      "cosine_math_code": -0.015111948363482952,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.6,
+        "backward_math": 4.4,
+        "forward_code": 6.1,
+        "forward_math": 5.0,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 85.0,
+        "rollout_math": 30.7,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1352,
+        "student_entropy": 0.083,
+        "teacher_entropy": 0.373,
+        "eos_rate": 0.90625,
+        "mean_response_tokens": 460.0,
+        "removed_mass_max": 0.002026379108428955,
+        "rollout_accuracy_math_verify": 0.7344,
+        "rollout_accuracy_conservative": 0.6562
+      },
+      "code": {
+        "kl": 0.1671,
+        "student_entropy": 0.305,
+        "teacher_entropy": 0.346,
+        "eos_rate": 0.984375,
+        "mean_response_tokens": 330.0,
+        "removed_mass_max": 5.662441253662109e-06
+      }
+    },
+    {
+      "step": 48,
+      "wall_s": 92.0,
+      "peak_gib": 55.84,
+      "loss": 0.18399535864591599,
+      "grad_norm": 0.08938918262720108,
+      "cosine_math_code": -0.006818084511905909,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.5,
+        "backward_math": 4.0,
+        "forward_code": 5.9,
+        "forward_math": 4.7,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 40.7,
+        "rollout_math": 31.0,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.2996,
+        "student_entropy": 0.115,
+        "teacher_entropy": 0.854,
+        "eos_rate": 0.921875,
+        "mean_response_tokens": 466.6,
+        "removed_mass_max": 0.002930164337158203,
+        "rollout_accuracy_math_verify": 0.625,
+        "rollout_accuracy_conservative": 0.6094
+      },
+      "code": {
+        "kl": 0.179,
+        "student_entropy": 0.33,
+        "teacher_entropy": 0.38,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 320.1,
+        "removed_mass_max": 1.233816146850586e-05
+      }
+    },
+    {
+      "step": 49,
+      "wall_s": 87.0,
+      "peak_gib": 55.84,
+      "loss": 0.12966393865644932,
+      "grad_norm": 0.096013143658638,
+      "cosine_math_code": -0.0017397766932845116,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.3,
+        "backward_math": 3.8,
+        "forward_code": 5.8,
+        "forward_math": 4.5,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 41.6,
+        "rollout_math": 25.7,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1289,
+        "student_entropy": 0.086,
+        "teacher_entropy": 0.349,
+        "eos_rate": 0.953125,
+        "mean_response_tokens": 410.0,
+        "removed_mass_max": 0.0025487542152404785,
+        "rollout_accuracy_math_verify": 0.7188,
+        "rollout_accuracy_conservative": 0.6562
+      },
+      "code": {
+        "kl": 0.1799,
+        "student_entropy": 0.342,
+        "teacher_entropy": 0.392,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 334.8,
+        "removed_mass_max": 1.1444091796875e-05
+      }
+    },
+    {
+      "step": 50,
+      "wall_s": 102.1,
+      "peak_gib": 55.84,
+      "loss": 0.1440797969698906,
+      "grad_norm": 0.08536180853843689,
+      "cosine_math_code": -0.007538057863712311,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.4,
+        "backward_math": 4.3,
+        "forward_code": 5.8,
+        "forward_math": 5.0,
+        "grade_math": 0.2,
+        "optimizer": 0.0,
+        "rollout_code": 52.4,
+        "rollout_math": 29.0,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1863,
+        "student_entropy": 0.104,
+        "teacher_entropy": 0.68,
+        "eos_rate": 0.875,
+        "mean_response_tokens": 465.0,
+        "removed_mass_max": 0.002322375774383545,
+        "rollout_accuracy_math_verify": 0.7031,
+        "rollout_accuracy_conservative": 0.625
+      },
+      "code": {
+        "kl": 0.1742,
+        "student_entropy": 0.376,
+        "teacher_entropy": 0.423,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 306.5,
+        "removed_mass_max": 2.282857894897461e-05
+      }
+    },
+    {
+      "step": 51,
+      "wall_s": 95.7,
+      "peak_gib": 55.84,
+      "loss": 0.13520531449466944,
+      "grad_norm": 0.08229774981737137,
+      "cosine_math_code": -0.00046661743544973433,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.5,
+        "backward_math": 4.0,
+        "forward_code": 6.0,
+        "forward_math": 4.6,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 48.5,
+        "rollout_math": 26.9,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1446,
+        "student_entropy": 0.086,
+        "teacher_entropy": 0.38,
+        "eos_rate": 0.9375,
+        "mean_response_tokens": 441.8,
+        "removed_mass_max": 0.00282365083694458,
+        "rollout_accuracy_math_verify": 0.7344,
+        "rollout_accuracy_conservative": 0.625
+      },
+      "code": {
+        "kl": 0.1815,
+        "student_entropy": 0.372,
+        "teacher_entropy": 0.423,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 341.8,
+        "removed_mass_max": 2.473592758178711e-05
+      }
+    },
+    {
+      "step": 52,
+      "wall_s": 81.0,
+      "peak_gib": 55.84,
+      "loss": 0.1446267799474299,
+      "grad_norm": 0.08347238600254059,
+      "cosine_math_code": 0.0013918632175773382,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.2,
+        "backward_math": 4.0,
+        "forward_code": 5.7,
+        "forward_math": 4.7,
+        "grade_math": 0.2,
+        "optimizer": 0.0,
+        "rollout_code": 34.6,
+        "rollout_math": 26.6,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1875,
+        "student_entropy": 0.09,
+        "teacher_entropy": 0.46,
+        "eos_rate": 0.90625,
+        "mean_response_tokens": 496.4,
+        "removed_mass_max": 0.0029234886169433594,
+        "rollout_accuracy_math_verify": 0.6875,
+        "rollout_accuracy_conservative": 0.5781
+      },
+      "code": {
+        "kl": 0.1634,
+        "student_entropy": 0.297,
+        "teacher_entropy": 0.341,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 325.4,
+        "removed_mass_max": 1.043081283569336e-05
+      }
+    },
+    {
+      "step": 53,
+      "wall_s": 101.6,
+      "peak_gib": 55.84,
+      "loss": 0.13819272816181183,
+      "grad_norm": 0.0846061185002327,
+      "cosine_math_code": 0.006055003497749567,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.6,
+        "backward_math": 4.1,
+        "forward_code": 6.2,
+        "forward_math": 4.8,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 44.3,
+        "rollout_math": 36.4,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1476,
+        "student_entropy": 0.094,
+        "teacher_entropy": 0.447,
+        "eos_rate": 0.921875,
+        "mean_response_tokens": 453.4,
+        "removed_mass_max": 0.0023689866065979004,
+        "rollout_accuracy_math_verify": 0.6875,
+        "rollout_accuracy_conservative": 0.5938
+      },
+      "code": {
+        "kl": 0.1752,
+        "student_entropy": 0.34,
+        "teacher_entropy": 0.396,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 358.9,
+        "removed_mass_max": 1.52587890625e-05
+      }
+    },
+    {
+      "step": 54,
+      "wall_s": 98.6,
+      "peak_gib": 55.84,
+      "loss": 0.13568185828626156,
+      "grad_norm": 0.09180430322885513,
+      "cosine_math_code": -0.003896634792909026,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.7,
+        "backward_math": 4.4,
+        "forward_code": 6.2,
+        "forward_math": 5.1,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 48.0,
+        "rollout_math": 29.1,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1365,
+        "student_entropy": 0.089,
+        "teacher_entropy": 0.403,
+        "eos_rate": 0.9375,
+        "mean_response_tokens": 469.7,
+        "removed_mass_max": 0.002016901969909668,
+        "rollout_accuracy_math_verify": 0.75,
+        "rollout_accuracy_conservative": 0.6562
+      },
+      "code": {
+        "kl": 0.1828,
+        "student_entropy": 0.33,
+        "teacher_entropy": 0.374,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 356.1,
+        "removed_mass_max": 3.7550926208496094e-06
+      }
+    },
+    {
+      "step": 55,
+      "wall_s": 74.3,
+      "peak_gib": 55.84,
+      "loss": 0.16474268678575754,
+      "grad_norm": 0.0991998165845871,
+      "cosine_math_code": -0.012057703919708729,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.5,
+        "backward_math": 3.8,
+        "forward_code": 5.9,
+        "forward_math": 4.5,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 30.9,
+        "rollout_math": 23.6,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.2403,
+        "student_entropy": 0.096,
+        "teacher_entropy": 0.605,
+        "eos_rate": 0.921875,
+        "mean_response_tokens": 452.8,
+        "removed_mass_max": 0.002903461456298828,
+        "rollout_accuracy_math_verify": 0.7344,
+        "rollout_accuracy_conservative": 0.6719
+      },
+      "code": {
+        "kl": 0.1857,
+        "student_entropy": 0.34,
+        "teacher_entropy": 0.386,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 307.5,
+        "removed_mass_max": 5.662441253662109e-06
+      }
+    },
+    {
+      "step": 56,
+      "wall_s": 111.2,
+      "peak_gib": 55.84,
+      "loss": 0.15430099936202168,
+      "grad_norm": 0.09249884635210037,
+      "cosine_math_code": -0.005111053120344877,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.5,
+        "backward_math": 5.1,
+        "forward_code": 5.9,
+        "forward_math": 5.8,
+        "grade_math": 0.2,
+        "optimizer": 0.0,
+        "rollout_code": 44.6,
+        "rollout_math": 44.1,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1843,
+        "student_entropy": 0.105,
+        "teacher_entropy": 0.588,
+        "eos_rate": 0.890625,
+        "mean_response_tokens": 501.3,
+        "removed_mass_max": 0.0028949975967407227,
+        "rollout_accuracy_math_verify": 0.5938,
+        "rollout_accuracy_conservative": 0.5
+      },
+      "code": {
+        "kl": 0.179,
+        "student_entropy": 0.359,
+        "teacher_entropy": 0.416,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 338.9,
+        "removed_mass_max": 1.811981201171875e-05
+      }
+    },
+    {
+      "step": 57,
+      "wall_s": 110.2,
+      "peak_gib": 55.84,
+      "loss": 0.14206917118281126,
+      "grad_norm": 0.09657067805528641,
+      "cosine_math_code": -0.003583300858736038,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.5,
+        "backward_math": 4.4,
+        "forward_code": 6.0,
+        "forward_math": 5.0,
+        "grade_math": 0.2,
+        "optimizer": 0.0,
+        "rollout_code": 56.6,
+        "rollout_math": 32.6,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1664,
+        "student_entropy": 0.091,
+        "teacher_entropy": 0.438,
+        "eos_rate": 0.921875,
+        "mean_response_tokens": 442.8,
+        "removed_mass_max": 0.0027161836624145508,
+        "rollout_accuracy_math_verify": 0.7031,
+        "rollout_accuracy_conservative": 0.6094
+      },
+      "code": {
+        "kl": 0.1777,
+        "student_entropy": 0.338,
+        "teacher_entropy": 0.377,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 337.5,
+        "removed_mass_max": 3.147125244140625e-05
+      }
+    },
+    {
+      "step": 58,
+      "wall_s": 121.0,
+      "peak_gib": 55.84,
+      "loss": 0.13037727680057287,
+      "grad_norm": 0.08329177647829056,
+      "cosine_math_code": 0.006026203744113445,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.5,
+        "backward_math": 4.1,
+        "forward_code": 5.9,
+        "forward_math": 4.7,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 73.8,
+        "rollout_math": 26.8,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1317,
+        "student_entropy": 0.079,
+        "teacher_entropy": 0.382,
+        "eos_rate": 0.9375,
+        "mean_response_tokens": 438.8,
+        "removed_mass_max": 0.002527892589569092,
+        "rollout_accuracy_math_verify": 0.7344,
+        "rollout_accuracy_conservative": 0.6406
+      },
+      "code": {
+        "kl": 0.1625,
+        "student_entropy": 0.324,
+        "teacher_entropy": 0.376,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 315.3,
+        "removed_mass_max": 7.62939453125e-06
+      }
+    },
+    {
+      "step": 59,
+      "wall_s": 99.8,
+      "peak_gib": 55.84,
+      "loss": 0.1463420707732439,
+      "grad_norm": 0.08418236672878265,
+      "cosine_math_code": -0.006339963059872389,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.5,
+        "backward_math": 4.2,
+        "forward_code": 5.9,
+        "forward_math": 4.9,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 53.0,
+        "rollout_math": 26.2,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1896,
+        "student_entropy": 0.094,
+        "teacher_entropy": 0.548,
+        "eos_rate": 0.921875,
+        "mean_response_tokens": 497.3,
+        "removed_mass_max": 0.0027903318405151367,
+        "rollout_accuracy_math_verify": 0.7031,
+        "rollout_accuracy_conservative": 0.6562
+      },
+      "code": {
+        "kl": 0.1589,
+        "student_entropy": 0.357,
+        "teacher_entropy": 0.405,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 323.5,
+        "removed_mass_max": 9.5367431640625e-06
+      }
+    },
+    {
+      "step": 60,
+      "wall_s": 85.9,
+      "peak_gib": 55.84,
+      "loss": 0.145705234259367,
+      "grad_norm": 0.08766919374465942,
+      "cosine_math_code": 0.0020743217319250107,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.5,
+        "backward_math": 3.9,
+        "forward_code": 6.0,
+        "forward_math": 4.5,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 41.7,
+        "rollout_math": 24.2,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1603,
+        "student_entropy": 0.095,
+        "teacher_entropy": 0.428,
+        "eos_rate": 0.9375,
+        "mean_response_tokens": 455.4,
+        "removed_mass_max": 0.002505958080291748,
+        "rollout_accuracy_math_verify": 0.7188,
+        "rollout_accuracy_conservative": 0.7031
+      },
+      "code": {
+        "kl": 0.1841,
+        "student_entropy": 0.338,
+        "teacher_entropy": 0.38,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 325.1,
+        "removed_mass_max": 5.662441253662109e-06
+      }
+    },
+    {
+      "step": 61,
+      "wall_s": 82.4,
+      "peak_gib": 55.84,
+      "loss": 0.14051482919603586,
+      "grad_norm": 0.09373905509710312,
+      "cosine_math_code": 0.007875503040850163,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.3,
+        "backward_math": 3.7,
+        "forward_code": 5.9,
+        "forward_math": 4.3,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 36.8,
+        "rollout_math": 26.2,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1574,
+        "student_entropy": 0.097,
+        "teacher_entropy": 0.494,
+        "eos_rate": 0.953125,
+        "mean_response_tokens": 419.2,
+        "removed_mass_max": 0.0026800036430358887,
+        "rollout_accuracy_math_verify": 0.6562,
+        "rollout_accuracy_conservative": 0.5625
+      },
+      "code": {
+        "kl": 0.1818,
+        "student_entropy": 0.345,
+        "teacher_entropy": 0.39,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 316.4,
+        "removed_mass_max": 2.956390380859375e-05
+      }
+    },
+    {
+      "step": 62,
+      "wall_s": 111.8,
+      "peak_gib": 55.84,
+      "loss": 0.14422545582056046,
+      "grad_norm": 0.09868214279413223,
+      "cosine_math_code": 0.01864408701658249,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.3,
+        "backward_math": 3.8,
+        "forward_code": 5.7,
+        "forward_math": 4.5,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 52.8,
+        "rollout_math": 39.5,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1793,
+        "student_entropy": 0.102,
+        "teacher_entropy": 0.649,
+        "eos_rate": 0.953125,
+        "mean_response_tokens": 450.4,
+        "removed_mass_max": 0.002400338649749756,
+        "rollout_accuracy_math_verify": 0.5938,
+        "rollout_accuracy_conservative": 0.5469
+      },
+      "code": {
+        "kl": 0.1633,
+        "student_entropy": 0.329,
+        "teacher_entropy": 0.382,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 301.2,
+        "removed_mass_max": 3.0517578125e-05
+      }
+    },
+    {
+      "step": 63,
+      "wall_s": 85.1,
+      "peak_gib": 55.84,
+      "loss": 0.1407850047107786,
+      "grad_norm": 0.08248710632324219,
+      "cosine_math_code": 0.008025169372558594,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.0,
+        "backward_math": 3.8,
+        "forward_code": 5.6,
+        "forward_math": 4.5,
+        "grade_math": 0.2,
+        "optimizer": 0.0,
+        "rollout_code": 38.0,
+        "rollout_math": 28.0,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1837,
+        "student_entropy": 0.105,
+        "teacher_entropy": 0.58,
+        "eos_rate": 0.9375,
+        "mean_response_tokens": 461.1,
+        "removed_mass_max": 0.0026952624320983887,
+        "rollout_accuracy_math_verify": 0.6406,
+        "rollout_accuracy_conservative": 0.5781
+      },
+      "code": {
+        "kl": 0.1696,
+        "student_entropy": 0.322,
+        "teacher_entropy": 0.372,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 292.2,
+        "removed_mass_max": 1.424551010131836e-05
+      }
+    },
+    {
+      "step": 64,
+      "wall_s": 80.6,
+      "peak_gib": 55.84,
+      "loss": 0.14178167888894677,
+      "grad_norm": 0.08833532780408859,
+      "cosine_math_code": -0.0151361133903265,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.4,
+        "backward_math": 4.2,
+        "forward_code": 5.9,
+        "forward_math": 4.9,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 33.6,
+        "rollout_math": 26.2,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1412,
+        "student_entropy": 0.089,
+        "teacher_entropy": 0.359,
+        "eos_rate": 0.890625,
+        "mean_response_tokens": 492.6,
+        "removed_mass_max": 0.0028322339057922363,
+        "rollout_accuracy_math_verify": 0.6562,
+        "rollout_accuracy_conservative": 0.6094
+      },
+      "code": {
+        "kl": 0.1927,
+        "student_entropy": 0.35,
+        "teacher_entropy": 0.4,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 331.1,
+        "removed_mass_max": 1.1444091796875e-05
+      }
+    },
+    {
+      "step": 65,
+      "wall_s": 86.5,
+      "peak_gib": 55.84,
+      "loss": 0.13825894333422184,
+      "grad_norm": 0.09483002126216888,
+      "cosine_math_code": -0.007623191457241774,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.4,
+        "backward_math": 4.0,
+        "forward_code": 5.7,
+        "forward_math": 4.7,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 41.7,
+        "rollout_math": 24.7,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.153,
+        "student_entropy": 0.085,
+        "teacher_entropy": 0.372,
+        "eos_rate": 0.9375,
+        "mean_response_tokens": 483.8,
+        "removed_mass_max": 0.0027066469192504883,
+        "rollout_accuracy_math_verify": 0.7031,
+        "rollout_accuracy_conservative": 0.625
+      },
+      "code": {
+        "kl": 0.1763,
+        "student_entropy": 0.339,
+        "teacher_entropy": 0.392,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 261.6,
+        "removed_mass_max": 5.662441253662109e-06
+      }
+    },
+    {
+      "step": 66,
+      "wall_s": 101.5,
+      "peak_gib": 55.84,
+      "loss": 0.1396087147295475,
+      "grad_norm": 0.08628679066896439,
+      "cosine_math_code": 0.016093401238322258,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 6.2,
+        "backward_math": 4.2,
+        "forward_code": 6.5,
+        "forward_math": 4.9,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 51.1,
+        "rollout_math": 28.5,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1843,
+        "student_entropy": 0.098,
+        "teacher_entropy": 0.621,
+        "eos_rate": 0.875,
+        "mean_response_tokens": 468.8,
+        "removed_mass_max": 0.0024640560150146484,
+        "rollout_accuracy_math_verify": 0.6562,
+        "rollout_accuracy_conservative": 0.6094
+      },
+      "code": {
+        "kl": 0.1662,
+        "student_entropy": 0.321,
+        "teacher_entropy": 0.372,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 344.9,
+        "removed_mass_max": 2.092123031616211e-05
+      }
+    },
+    {
+      "step": 67,
+      "wall_s": 90.4,
+      "peak_gib": 55.84,
+      "loss": 0.16431923024356365,
+      "grad_norm": 0.08700773864984512,
+      "cosine_math_code": -0.0081139225512743,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.5,
+        "backward_math": 4.2,
+        "forward_code": 6.0,
+        "forward_math": 4.9,
+        "grade_math": 0.2,
+        "optimizer": 0.0,
+        "rollout_code": 43.0,
+        "rollout_math": 26.6,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.2406,
+        "student_entropy": 0.105,
+        "teacher_entropy": 0.704,
+        "eos_rate": 0.859375,
+        "mean_response_tokens": 484.6,
+        "removed_mass_max": 0.0027390122413635254,
+        "rollout_accuracy_math_verify": 0.6719,
+        "rollout_accuracy_conservative": 0.625
+      },
+      "code": {
+        "kl": 0.1674,
+        "student_entropy": 0.324,
+        "teacher_entropy": 0.377,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 303.8,
+        "removed_mass_max": 1.9669532775878906e-06
+      }
+    },
+    {
+      "step": 68,
+      "wall_s": 134.6,
+      "peak_gib": 55.84,
+      "loss": 0.14222546108067036,
+      "grad_norm": 0.09388090670108795,
+      "cosine_math_code": 0.0025372698437422514,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 6.1,
+        "backward_math": 4.1,
+        "forward_code": 6.6,
+        "forward_math": 4.8,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 84.9,
+        "rollout_math": 28.0,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1661,
+        "student_entropy": 0.102,
+        "teacher_entropy": 0.598,
+        "eos_rate": 0.890625,
+        "mean_response_tokens": 508.8,
+        "removed_mass_max": 0.0027114152908325195,
+        "rollout_accuracy_math_verify": 0.6562,
+        "rollout_accuracy_conservative": 0.6406
+      },
+      "code": {
+        "kl": 0.1663,
+        "student_entropy": 0.297,
+        "teacher_entropy": 0.346,
+        "eos_rate": 0.96875,
+        "mean_response_tokens": 382.9,
+        "removed_mass_max": 7.62939453125e-06
+      }
+    },
+    {
+      "step": 69,
+      "wall_s": 97.3,
+      "peak_gib": 55.84,
+      "loss": 0.14793111104518175,
+      "grad_norm": 0.09401579201221466,
+      "cosine_math_code": 0.007613892666995525,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.5,
+        "backward_math": 3.9,
+        "forward_code": 6.0,
+        "forward_math": 4.6,
+        "grade_math": 0.2,
+        "optimizer": 0.0,
+        "rollout_code": 43.0,
+        "rollout_math": 33.9,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1642,
+        "student_entropy": 0.1,
+        "teacher_entropy": 0.489,
+        "eos_rate": 0.921875,
+        "mean_response_tokens": 469.7,
+        "removed_mass_max": 0.002682924270629883,
+        "rollout_accuracy_math_verify": 0.6094,
+        "rollout_accuracy_conservative": 0.5469
+      },
+      "code": {
+        "kl": 0.1864,
+        "student_entropy": 0.298,
+        "teacher_entropy": 0.338,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 354.2,
+        "removed_mass_max": 5.662441253662109e-06
+      }
+    },
+    {
+      "step": 70,
+      "wall_s": 104.0,
+      "peak_gib": 55.84,
+      "loss": 0.14934913348406553,
+      "grad_norm": 0.09087367355823517,
+      "cosine_math_code": -0.009503831155598164,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.6,
+        "backward_math": 4.4,
+        "forward_code": 6.0,
+        "forward_math": 5.1,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 53.3,
+        "rollout_math": 29.5,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.2132,
+        "student_entropy": 0.097,
+        "teacher_entropy": 0.64,
+        "eos_rate": 0.9375,
+        "mean_response_tokens": 455.0,
+        "removed_mass_max": 0.0028417110443115234,
+        "rollout_accuracy_math_verify": 0.7031,
+        "rollout_accuracy_conservative": 0.6094
+      },
+      "code": {
+        "kl": 0.1663,
+        "student_entropy": 0.317,
+        "teacher_entropy": 0.367,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 298.5,
+        "removed_mass_max": 1.615285873413086e-05
+      }
+    },
+    {
+      "step": 71,
+      "wall_s": 95.5,
+      "peak_gib": 55.84,
+      "loss": 0.17324666772037745,
+      "grad_norm": 0.0892743244767189,
+      "cosine_math_code": 0.009145320393145084,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.6,
+        "backward_math": 3.9,
+        "forward_code": 6.1,
+        "forward_math": 4.6,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 46.0,
+        "rollout_math": 29.1,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.2991,
+        "student_entropy": 0.091,
+        "teacher_entropy": 0.709,
+        "eos_rate": 0.96875,
+        "mean_response_tokens": 447.2,
+        "removed_mass_max": 0.002718985080718994,
+        "rollout_accuracy_math_verify": 0.7188,
+        "rollout_accuracy_conservative": 0.6562
+      },
+      "code": {
+        "kl": 0.1783,
+        "student_entropy": 0.379,
+        "teacher_entropy": 0.425,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 326.7,
+        "removed_mass_max": 0.00026410818099975586
+      }
+    },
+    {
+      "step": 72,
+      "wall_s": 118.9,
+      "peak_gib": 55.84,
+      "loss": 0.16294027026742697,
+      "grad_norm": 0.09166132658720016,
+      "cosine_math_code": 0.006906663998961449,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.5,
+        "backward_math": 3.8,
+        "forward_code": 6.0,
+        "forward_math": 4.5,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 73.0,
+        "rollout_math": 25.9,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.2542,
+        "student_entropy": 0.1,
+        "teacher_entropy": 0.643,
+        "eos_rate": 0.921875,
+        "mean_response_tokens": 458.4,
+        "removed_mass_max": 0.002724766731262207,
+        "rollout_accuracy_math_verify": 0.6406,
+        "rollout_accuracy_conservative": 0.625
+      },
+      "code": {
+        "kl": 0.1673,
+        "student_entropy": 0.315,
+        "teacher_entropy": 0.37,
+        "eos_rate": 0.984375,
+        "mean_response_tokens": 335.9,
+        "removed_mass_max": 1.1444091796875e-05
+      }
+    },
+    {
+      "step": 73,
+      "wall_s": 141.6,
+      "peak_gib": 55.84,
+      "loss": 0.15920188836753368,
+      "grad_norm": 0.08661439269781113,
+      "cosine_math_code": 0.01083917636424303,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.6,
+        "backward_math": 3.9,
+        "forward_code": 6.0,
+        "forward_math": 4.6,
+        "grade_math": 0.2,
+        "optimizer": 0.0,
+        "rollout_code": 94.4,
+        "rollout_math": 26.8,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.2093,
+        "student_entropy": 0.106,
+        "teacher_entropy": 0.594,
+        "eos_rate": 0.9375,
+        "mean_response_tokens": 486.2,
+        "removed_mass_max": 0.002666771411895752,
+        "rollout_accuracy_math_verify": 0.5312,
+        "rollout_accuracy_conservative": 0.5
+      },
+      "code": {
+        "kl": 0.1648,
+        "student_entropy": 0.355,
+        "teacher_entropy": 0.397,
+        "eos_rate": 0.984375,
+        "mean_response_tokens": 308.9,
+        "removed_mass_max": 1.1444091796875e-05
+      }
+    },
+    {
+      "step": 74,
+      "wall_s": 96.3,
+      "peak_gib": 55.84,
+      "loss": 0.169621336273849,
+      "grad_norm": 0.09101159125566483,
+      "cosine_math_code": -0.021562984213232994,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.6,
+        "backward_math": 3.9,
+        "forward_code": 6.0,
+        "forward_math": 4.6,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 48.9,
+        "rollout_math": 27.1,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.2607,
+        "student_entropy": 0.102,
+        "teacher_entropy": 0.728,
+        "eos_rate": 0.921875,
+        "mean_response_tokens": 492.3,
+        "removed_mass_max": 0.00288546085357666,
+        "rollout_accuracy_math_verify": 0.6406,
+        "rollout_accuracy_conservative": 0.5469
+      },
+      "code": {
+        "kl": 0.177,
+        "student_entropy": 0.324,
+        "teacher_entropy": 0.366,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 312.2,
+        "removed_mass_max": 9.5367431640625e-06
+      }
+    },
+    {
+      "step": 75,
+      "wall_s": 87.7,
+      "peak_gib": 55.84,
+      "loss": 0.1444231690838933,
+      "grad_norm": 0.08573384582996368,
+      "cosine_math_code": -0.020794440060853958,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.4,
+        "backward_math": 4.7,
+        "forward_code": 5.8,
+        "forward_math": 5.4,
+        "grade_math": 0.2,
+        "optimizer": 0.0,
+        "rollout_code": 33.1,
+        "rollout_math": 33.1,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1706,
+        "student_entropy": 0.097,
+        "teacher_entropy": 0.549,
+        "eos_rate": 0.859375,
+        "mean_response_tokens": 512.3,
+        "removed_mass_max": 0.002626776695251465,
+        "rollout_accuracy_math_verify": 0.625,
+        "rollout_accuracy_conservative": 0.5312
+      },
+      "code": {
+        "kl": 0.1719,
+        "student_entropy": 0.365,
+        "teacher_entropy": 0.409,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 288.5,
+        "removed_mass_max": 1.043081283569336e-05
+      }
+    },
+    {
+      "step": 76,
+      "wall_s": 109.2,
+      "peak_gib": 55.84,
+      "loss": 0.15786097943782806,
+      "grad_norm": 0.113972008228302,
+      "cosine_math_code": 0.014446505345404148,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.7,
+        "backward_math": 3.8,
+        "forward_code": 6.1,
+        "forward_math": 4.4,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 63.0,
+        "rollout_math": 26.1,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.2092,
+        "student_entropy": 0.109,
+        "teacher_entropy": 0.532,
+        "eos_rate": 0.9375,
+        "mean_response_tokens": 427.5,
+        "removed_mass_max": 0.002580106258392334,
+        "rollout_accuracy_math_verify": 0.75,
+        "rollout_accuracy_conservative": 0.6875
+      },
+      "code": {
+        "kl": 0.1689,
+        "student_entropy": 0.337,
+        "teacher_entropy": 0.384,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 303.0,
+        "removed_mass_max": 9.5367431640625e-06
+      }
+    },
+    {
+      "step": 77,
+      "wall_s": 88.4,
+      "peak_gib": 55.84,
+      "loss": 0.15984761202707887,
+      "grad_norm": 0.08120855689048767,
+      "cosine_math_code": -0.020862773060798645,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.3,
+        "backward_math": 3.8,
+        "forward_code": 5.8,
+        "forward_math": 4.4,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 44.1,
+        "rollout_math": 24.7,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.2439,
+        "student_entropy": 0.116,
+        "teacher_entropy": 0.784,
+        "eos_rate": 0.984375,
+        "mean_response_tokens": 436.2,
+        "removed_mass_max": 0.0027161836624145508,
+        "rollout_accuracy_math_verify": 0.625,
+        "rollout_accuracy_conservative": 0.5469
+      },
+      "code": {
+        "kl": 0.1709,
+        "student_entropy": 0.329,
+        "teacher_entropy": 0.377,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 333.8,
+        "removed_mass_max": 7.62939453125e-06
+      }
+    },
+    {
+      "step": 78,
+      "wall_s": 92.4,
+      "peak_gib": 55.84,
+      "loss": 0.13923132698982954,
+      "grad_norm": 0.09487631916999817,
+      "cosine_math_code": 0.004699093289673328,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.5,
+        "backward_math": 4.2,
+        "forward_code": 5.8,
+        "forward_math": 4.8,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 38.2,
+        "rollout_math": 33.8,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1566,
+        "student_entropy": 0.103,
+        "teacher_entropy": 0.543,
+        "eos_rate": 0.9375,
+        "mean_response_tokens": 468.5,
+        "removed_mass_max": 0.0022985339164733887,
+        "rollout_accuracy_math_verify": 0.625,
+        "rollout_accuracy_conservative": 0.5312
+      },
+      "code": {
+        "kl": 0.173,
+        "student_entropy": 0.346,
+        "teacher_entropy": 0.392,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 297.5,
+        "removed_mass_max": 2.956390380859375e-05
+      }
+    },
+    {
+      "step": 79,
+      "wall_s": 95.6,
+      "peak_gib": 55.84,
+      "loss": 0.13307102397084236,
+      "grad_norm": 0.08744238317012787,
+      "cosine_math_code": 0.001244326587766409,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.9,
+        "backward_math": 3.8,
+        "forward_code": 6.3,
+        "forward_math": 4.5,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 49.1,
+        "rollout_math": 25.9,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1797,
+        "student_entropy": 0.102,
+        "teacher_entropy": 0.541,
+        "eos_rate": 0.90625,
+        "mean_response_tokens": 442.3,
+        "removed_mass_max": 0.0026192069053649902,
+        "rollout_accuracy_math_verify": 0.7188,
+        "rollout_accuracy_conservative": 0.6719
+      },
+      "code": {
+        "kl": 0.1621,
+        "student_entropy": 0.322,
+        "teacher_entropy": 0.362,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 333.2,
+        "removed_mass_max": 5.662441253662109e-06
+      }
+    },
+    {
+      "step": 80,
+      "wall_s": 87.4,
+      "peak_gib": 55.84,
+      "loss": 0.14214229304343462,
+      "grad_norm": 0.0963972806930542,
+      "cosine_math_code": -0.01994067244231701,
+      "lr": 0.0001,
+      "phase_s": {
+        "backward_code": 5.4,
+        "backward_math": 4.3,
+        "forward_code": 5.8,
+        "forward_math": 5.0,
+        "grade_math": 0.1,
+        "optimizer": 0.0,
+        "rollout_code": 39.7,
+        "rollout_math": 27.1,
+        "sync_generation_copy": 0.0,
+        "teacher_route_code": 0.0,
+        "teacher_route_math": 0.0
+      },
+      "math": {
+        "kl": 0.1852,
+        "student_entropy": 0.113,
+        "teacher_entropy": 0.65,
+        "eos_rate": 0.828125,
+        "mean_response_tokens": 503.6,
+        "removed_mass_max": 0.0025040507316589355,
+        "rollout_accuracy_math_verify": 0.6875,
+        "rollout_accuracy_conservative": 0.6094
+      },
+      "code": {
+        "kl": 0.164,
+        "student_entropy": 0.384,
+        "teacher_entropy": 0.433,
+        "eos_rate": 1.0,
+        "mean_response_tokens": 298.5,
         "removed_mass_max": 7.62939453125e-06
       }
     }
