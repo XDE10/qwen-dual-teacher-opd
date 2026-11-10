@@ -413,3 +413,10 @@ mbppplus {"count": 378, "truncated": 0}
 == /content/runs/opd_v3_d3_general_lr1e-4: 80 steps, median 91.7 s/step, peak 41.19 GiB, gate pass=False failed=['code.entropy_vs_teacher'] warnings=['code.student_entropy ratio 0.465 outside 0.5-2.0 (information only)', 'math.student_entropy ratio 0.395 outside 0.5-2.0 (information only)']
 == step eval=d3_general_lr1e-4 (started 20:49:30Z)
 `torch_dtype` is deprecated! Use `dtype` instead!
+math_dev {"count": 256, "truncated": 20, "accuracy_conservative": 0.5, "accuracy_math_verify": 0.61328125}
+math500 {"count": 500, "truncated": 28, "accuracy_conservative": 0.468, "accuracy_math_verify": 0.588}
+gsm8k_test {"count": 1319, "truncated": 2, "accuracy_conservative": 0.7702805155420773, "accuracy_math_verify": 0.7725549658832449}
+code_dev {"count": 200, "truncated": 6}
+humanevalplus {"count": 164, "truncated": 2}
+mbppplus {"count": 378, "truncated": 0}
+== session done; failed steps: none; log /content/runs/sessions/20261110T164405Z/console.log

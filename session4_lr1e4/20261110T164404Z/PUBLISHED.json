@@ -2,9 +2,10 @@
   "schema": "opd-results-v1",
   "name": "session4_lr1e4",
   "stamp": "20261110T164404Z",
-  "published_utc": "2026-11-10T21:16:17Z",
+  "published_utc": "2026-11-10T21:18:01Z",
   "job": {
-    "state": "running"
+    "state": "finished",
+    "exit_status": 0
   },
   "publisher": {
     "host": "7f863522cb1c",
@@ -37,8 +38,83 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 94170,
-      "sha256": "6372972819b39a2f094eef5bb255dd5b8d94a47fa5ade658ffc220c3b1c8d4c7"
+      "bytes": 95245,
+      "sha256": "bf95fce2f527143a6fa7ad6479f9cb3ce414adeb4a287532981ca508a6324ebe"
+    },
+    {
+      "path": "runs/eval/d3_general_lr1e-4-checkpoint-80/code_dev.candidates.jsonl",
+      "bytes": 336116,
+      "sha256": "1f7ab9d8f1bffb62f5ce2ae4caefb2b0509b44c60aba3de9f6f26bfb6f3b122d"
+    },
+    {
+      "path": "runs/eval/d3_general_lr1e-4-checkpoint-80/code_dev.jsonl",
+      "bytes": 349134,
+      "sha256": "798896da93388a801e393632c088d9757cc45172918c54c13cc17bf22935c27a"
+    },
+    {
+      "path": "runs/eval/d3_general_lr1e-4-checkpoint-80/code_dev.summary.json",
+      "bytes": 15117,
+      "sha256": "77e27e456a4b2f68cfebd10c5d17fdbb117d461ad771f99f5a64c4f6ccb4f4d5"
+    },
+    {
+      "path": "runs/eval/d3_general_lr1e-4-checkpoint-80/gsm8k_test.jsonl",
+      "bytes": 1727696,
+      "sha256": "5479cf5447aacb014b9251ecce22ef4831d2d4deace0695174391b2ec70c0927"
+    },
+    {
+      "path": "runs/eval/d3_general_lr1e-4-checkpoint-80/gsm8k_test.summary.json",
+      "bytes": 15185,
+      "sha256": "efef96c41e4dee78b33784c803ab2ed117e0eef278b15c870e336be6c1adacd3"
+    },
+    {
+      "path": "runs/eval/d3_general_lr1e-4-checkpoint-80/humanevalplus.candidates.jsonl",
+      "bytes": 199128,
+      "sha256": "fe240b581004186fbec4f630d9bd797da6bce7d2d72a071da2c2a39a15dbe8e5"
+    },
+    {
+      "path": "runs/eval/d3_general_lr1e-4-checkpoint-80/humanevalplus.jsonl",
+      "bytes": 250669,
+      "sha256": "1448019ee6e1c849d4c8f15cbb3b00ab140d4e76eedaaf3c0198645f67f1d14c"
+    },
+    {
+      "path": "runs/eval/d3_general_lr1e-4-checkpoint-80/humanevalplus.summary.json",
+      "bytes": 15124,
+      "sha256": "6ed01202b041ac63e1b437d1cd0e4fac74a8e6af6a78b10d9227d1b84ccebf04"
+    },
+    {
+      "path": "runs/eval/d3_general_lr1e-4-checkpoint-80/math500.jsonl",
+      "bytes": 1033974,
+      "sha256": "5ce443b1cabb32a49ec34fd46104b378f374a927412590024d5b4467a2d25309"
+    },
+    {
+      "path": "runs/eval/d3_general_lr1e-4-checkpoint-80/math500.summary.json",
+      "bytes": 15147,
+      "sha256": "6399e19316a6a3fe9a08a1b6d228491d48d74346faee40e419959b080fcfb250"
+    },
+    {
+      "path": "runs/eval/d3_general_lr1e-4-checkpoint-80/math_dev.jsonl",
+      "bytes": 543273,
+      "sha256": "ae268f03c9feeb7597d095355275fda286e16e18b3bcca1daf68103b14857510"
+    },
+    {
+      "path": "runs/eval/d3_general_lr1e-4-checkpoint-80/math_dev.summary.json",
+      "bytes": 15193,
+      "sha256": "48770a6244de5f4d3c00113a9a2fa6cc2b6699037010a16ce4afbe45a63b9e0a"
+    },
+    {
+      "path": "runs/eval/d3_general_lr1e-4-checkpoint-80/mbppplus.candidates.jsonl",
+      "bytes": 241593,
+      "sha256": "b14fcec35561b5a46b6cc62369e9db56d6a51b863399de3beef0e469eb8a7509"
+    },
+    {
+      "path": "runs/eval/d3_general_lr1e-4-checkpoint-80/mbppplus.jsonl",
+      "bytes": 396800,
+      "sha256": "bcaa10c7b11a2d648bfa2e100579495dd9edc70c594d4557116328665fad5d65"
+    },
+    {
+      "path": "runs/eval/d3_general_lr1e-4-checkpoint-80/mbppplus.summary.json",
+      "bytes": 15114,
+      "sha256": "de67b915b4b77a6ce6f2f7f4317b7601bb0570f9987005fb8013556d9c5338b5"
     },
     {
       "path": "runs/eval/d4_dual_lr1e-4-checkpoint-80/code_dev.candidates.jsonl",
@@ -262,8 +338,8 @@
     },
     {
       "path": "runs/sessions/20261110T164405Z/console.log",
-      "bytes": 68471,
-      "sha256": "3e03a97c403125ce8fa119509498d689938c0e118850e0adb7e00469ec93816e"
+      "bytes": 69031,
+      "sha256": "cb8f217dbb3001584cbcbbbdaf2fe96d3d233d5fdf6bc840e784c215457f1328"
     },
     {
       "path": "runs/sessions/20261110T164405Z/environment/benchmarks.txt",
@@ -312,8 +388,8 @@
     },
     {
       "path": "runs/sessions/20261110T164405Z/steps.jsonl",
-      "bytes": 309,
-      "sha256": "4995ae6e67505028276fbc24c4a5d068966e277ee9177a7164f10455dd84ef89"
+      "bytes": 374,
+      "sha256": "631c8ae2a2896d6fa7394f35f2af706490c42c830a4a790a31ed1ef71a72a398"
     }
   ],
   "redacted_strings": 0,
