@@ -1,0 +1,1126 @@
+{
+  "protocol": "internal-dev-review-v3",
+  "results": [
+    {
+      "sample_id": "ace/oss_19608",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_10896",
+      "status": "passed",
+      "checked": 17
+    },
+    {
+      "sample_id": "ace/oss_6750",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "Test case 1 passed\n",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpxup80nt3/candidate.py\", line 68, in <module>\n    check_solution()\n  File \"/tmp/tmpxup80nt3/candidate.py\", line 35, in check_solution\n    assert filter_models_by_tags(models, tags) == expected_output, \"Test case 2 failed\"\nAssertionError: Test case 2 failed\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_6260",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_5596",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_12874",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmp3ot5x52i/candidate.py\", line 2, in <module>\n    from typing import List, float\nImportError: cannot import name 'float' from 'typing' (/usr/local/lib/python3.8/typing.py)\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_12430",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_6517",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "Passed for input: {'interacellular_recordings': {'recording1': 1, 'recording2': 2}, 'simultaneous_recordings_table': {'recording3': 3, 'recording4': 4}}\nPassed for input: {'interacellular_recordings': {'recording5': 5}, 'simultaneous_recordings_table': {'recording6': 6}}\n",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmp1oi4ctl0/candidate.py\", line 31, in <module>\n    check_solution()\n  File \"/tmp/tmp1oi4ctl0/candidate.py\", line 28, in check_solution\n    assert result == {'interacellular_recordings': case['icephys_data']['interacellular_recordings'], 'simultaneous_recordings_table': case['icephys_data']['simultaneous_recordings_table']}, f\"Failed for input: {case['icephys_data']}\"\nKeyError: 'interacellular_recordings'\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_11877",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpxy_8_uxh/candidate.py\", line 27, in <module>\n    check_solution()\n  File \"/tmp/tmpxy_8_uxh/candidate.py\", line 24, in check_solution\n    assert result == expected, f\"Expected {expected}, but got {result}.\"\nAssertionError: Expected {'Version': '2.0', 'License': 'MIT License', 'Author': 'John Doe'}, but got {'Version': '2.0', 'Author': 'John Doe'}.\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_11766",
+      "status": "passed",
+      "checked": 19
+    },
+    {
+      "sample_id": "ace/oss_6404",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpxlv87i9_/candidate.py\", line 42, in <module>\n    check_solution()\n  File \"/tmp/tmpxlv87i9_/candidate.py\", line 39, in check_solution\n    assert result == expected, f\"Expected {expected}, but got {result}.\"\nAssertionError: Expected 2, but got {'addition': 2, 'subtraction': 1, 'multiplication': 1}.\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_16071",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_12538",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_3751",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_4981",
+      "status": "passed",
+      "checked": 21
+    },
+    {
+      "sample_id": "ace/oss_11869",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_18660",
+      "status": "passed",
+      "checked": 17
+    },
+    {
+      "sample_id": "ace/oss_12017",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_8179",
+      "status": "passed",
+      "checked": 21
+    },
+    {
+      "sample_id": "ace/oss_6293",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_4319",
+      "status": "passed",
+      "checked": 17
+    },
+    {
+      "sample_id": "ace/oss_18865",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_12999",
+      "status": "passed",
+      "checked": 12
+    },
+    {
+      "sample_id": "ace/oss_7037",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_522",
+      "status": "passed",
+      "checked": 19
+    },
+    {
+      "sample_id": "ace/oss_15349",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_11473",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_14205",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_11186",
+      "status": "passed",
+      "checked": 17
+    },
+    {
+      "sample_id": "ace/oss_18264",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_4083",
+      "status": "passed",
+      "checked": 19
+    },
+    {
+      "sample_id": "ace/oss_5441",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_12119",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_11132",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_3960",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_14495",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_6195",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpz3fqfe8q/candidate.py\", line 26, in <module>\n    check_solution()\n  File \"/tmp/tmpz3fqfe8q/candidate.py\", line 22, in check_solution\n    result = filter_items(inputs)\n  File \"/tmp/tmpz3fqfe8q/candidate.py\", line 11, in filter_items\n    return [item[0] for item in items if item[1] >= 10]\n  File \"/tmp/tmpz3fqfe8q/candidate.py\", line 11, in <listcomp>\n    return [item[0] for item in items if item[1] >= 10]\nTypeError: '>=' not supported between instances of 'str' and 'int'\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_5020",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_19601",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_9154",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_9269",
+      "status": "mismatch",
+      "checked": 3
+    },
+    {
+      "sample_id": "ace/oss_5787",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_14146",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_18795",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_12658",
+      "status": "passed",
+      "checked": 19
+    },
+    {
+      "sample_id": "ace/oss_13178",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_3921",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_3472",
+      "status": "passed",
+      "checked": 17
+    },
+    {
+      "sample_id": "ace/oss_15013",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpm0ws1boa/candidate.py\", line 29, in <module>\n    check_solution()\n  File \"/tmp/tmpm0ws1boa/candidate.py\", line 26, in check_solution\n    assert filter_public_rooms(rooms) == expected_output, \"Test case failed!\"\nAssertionError: Test case failed!\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_2245",
+      "status": "passed",
+      "checked": 19
+    },
+    {
+      "sample_id": "ace/oss_11697",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_13072",
+      "status": "passed",
+      "checked": 16
+    },
+    {
+      "sample_id": "ace/oss_18683",
+      "status": "passed",
+      "checked": 19
+    },
+    {
+      "sample_id": "ace/oss_4341",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpd_ni4v99/candidate.py\", line 23, in <module>\n    check_solution()\n  File \"/tmp/tmpd_ni4v99/candidate.py\", line 20, in check_solution\n    assert verify_results([10, 20], 2) == False, \"Test case 4 failed\"\nAssertionError: Test case 4 failed\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_5030",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_18347",
+      "status": "mismatch",
+      "checked": 1
+    },
+    {
+      "sample_id": "ace/oss_13917",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_17578",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_11417",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmp0aci56tu/candidate.py\", line 26, in <module>\n    check_function()\n  File \"/tmp/tmp0aci56tu/candidate.py\", line 21, in check_function\n    assert abs(calculate_request_time(20, 10) - 10.0) < 0.001, \"Test case 2 failed\"\nAssertionError: Test case 2 failed\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_3463",
+      "status": "passed",
+      "checked": 17
+    },
+    {
+      "sample_id": "ace/oss_4447",
+      "status": "passed",
+      "checked": 17
+    },
+    {
+      "sample_id": "ace/oss_19153",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_12654",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_8286",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpdzvolmf8/candidate.py\", line 26, in <module>\n    print(extract_node_info(pipeline, indices))\n  File \"/tmp/tmpdzvolmf8/candidate.py\", line 10, in extract_node_info\n    node_name = pipeline[index][0]\nIndexError: list index out of range\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_10148",
+      "status": "passed",
+      "checked": 19
+    },
+    {
+      "sample_id": "ace/oss_9324",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_12338",
+      "status": "passed",
+      "checked": 21
+    },
+    {
+      "sample_id": "ace/oss_2559",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "code/vfc_26729",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmp22jyvfp6/candidate.py\", line 36, in <module>\n    print(solve())\n  File \"/tmp/tmp22jyvfp6/candidate.py\", line 25, in solve\n    dp[x] = min(dp[x], dp[x - 1] + cost)\nIndexError: list index out of range\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19480",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26909",
+      "status": "mismatch",
+      "checked": 1
+    },
+    {
+      "sample_id": "code/vfc_27169",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpriz96v56/candidate.py\", line 23, in <module>\n    main()\n  File \"/tmp/tmpriz96v56/candidate.py\", line 18, in main\n    earliest_times = find_earliest_time(N, C, S, F)\n  File \"/tmp/tmpriz96v56/candidate.py\", line 6, in find_earliest_time\n    earliest_times[i] = math.ceil((S - 1) / F) * F + C\nTypeError: unsupported operand type(s) for -: 'list' and 'int'\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_119319",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_27029",
+      "status": "passed",
+      "checked": 3
+    },
+    {
+      "sample_id": "code/vfc_26877",
+      "status": "mismatch",
+      "checked": 2
+    },
+    {
+      "sample_id": "code/vfc_27165",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_138940",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26857",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26901",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19765",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpcu5sw_n_/candidate.py\", line 48, in <module>\n    print(solve(H, W, K, x1, y1, x2, y2, c))\n  File \"/tmp/tmpcu5sw_n_/candidate.py\", line 38, in solve\n    result = bfs(start, end, H, W, K, grid)\n  File \"/tmp/tmpcu5sw_n_/candidate.py\", line 7, in bfs\n    visited[p][q] = True\nTypeError: list indices must be integers or slices, not tuple\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19621",
+      "status": "passed",
+      "checked": 3
+    },
+    {
+      "sample_id": "code/vfc_26837",
+      "status": "passed",
+      "checked": 3
+    },
+    {
+      "sample_id": "code/vfc_19252",
+      "status": "passed",
+      "checked": 4
+    },
+    {
+      "sample_id": "code/vfc_19240",
+      "status": "mismatch",
+      "checked": 1
+    },
+    {
+      "sample_id": "code/vfc_82885",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpodkyoakj/candidate.py\", line 31, in <module>\n    main()\n  File \"/tmp/tmpodkyoakj/candidate.py\", line 26, in main\n    a = apply_operations(a, operations)\n  File \"/tmp/tmpodkyoakj/candidate.py\", line 6, in apply_operations\n    a[i] += d\nIndexError: list index out of range\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_134078",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_83901",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_73157",
+      "status": "passed",
+      "checked": 9
+    },
+    {
+      "sample_id": "code/vfc_6190",
+      "status": "mismatch",
+      "checked": 1
+    },
+    {
+      "sample_id": "code/vfc_14398",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_14094",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_13638",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_13302",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_24079",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_68561",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_67737",
+      "status": "passed",
+      "checked": 48
+    },
+    {
+      "sample_id": "code/vfc_144202",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_29313",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_124235",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_5950",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_106722",
+      "status": "passed",
+      "checked": 4
+    },
+    {
+      "sample_id": "code/vfc_87647",
+      "status": "mismatch",
+      "checked": 1
+    },
+    {
+      "sample_id": "code/vfc_84613",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_6646",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_27081",
+      "status": "passed",
+      "checked": 3
+    },
+    {
+      "sample_id": "code/vfc_6378",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26519",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19280",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_6095",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "code/vfc_68433",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_1780",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "code/vfc_107316",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19508",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_18174",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_99679",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmp2uz_jcgi/candidate.py\", line 41, in <module>\n    palindromes = count_palindromes(s, x)\n  File \"/tmp/tmp2uz_jcgi/candidate.py\", line 19, in count_palindromes\n    for i in range(0, 24 * 60, x):\nTypeError: 'str' object cannot be interpreted as an integer\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19348",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_18906",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_6386",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_18162",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_6310",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_17958",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26761",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_6847",
+      "status": "passed",
+      "checked": 21
+    },
+    {
+      "sample_id": "ace/oss_9962",
+      "status": "passed",
+      "checked": 17
+    },
+    {
+      "sample_id": "code/vfc_18714",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_18754",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19031",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_17762",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_140383",
+      "status": "passed",
+      "checked": 4
+    },
+    {
+      "sample_id": "ace/oss_4602",
+      "status": "passed",
+      "checked": 12
+    },
+    {
+      "sample_id": "code/vfc_26673",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_112082",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26929",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_90134",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_2477",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "code/vfc_6374",
+      "status": "mismatch",
+      "checked": 1
+    },
+    {
+      "sample_id": "ace/oss_11960",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "code/vfc_93139",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_129426",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_6666",
+      "status": "passed",
+      "checked": 16
+    },
+    {
+      "sample_id": "code/vfc_26953",
+      "status": "passed",
+      "checked": 3
+    },
+    {
+      "sample_id": "code/vfc_81921",
+      "status": "passed",
+      "checked": 8
+    },
+    {
+      "sample_id": "code/vfc_6470",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpo2fhuizw/candidate.py\", line 63, in <module>\n    main()\n  File \"/tmp/tmpo2fhuizw/candidate.py\", line 59, in main\n    converted_grid = convert_to_beingawesomeism(r, c, grid)\n  File \"/tmp/tmpo2fhuizw/candidate.py\", line 52, in convert_to_beingawesomeism\n    return convert_grid()\n  File \"/tmp/tmpo2fhuizw/candidate.py\", line 41, in convert_grid\n    convert_subgrid(1, 'N', 1)\n  File \"/tmp/tmpo2fhuizw/candidate.py\", line 10, in convert_subgrid\n    grid[i][j] = 'A'\nTypeError: 'str' object does not support item assignment\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_139286",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26403",
+      "status": "passed",
+      "checked": 7
+    },
+    {
+      "sample_id": "code/vfc_18826",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpvmhtxxj5/candidate.py\", line 32, in <module>\n    solve()\n  File \"/tmp/tmpvmhtxxj5/candidate.py\", line 15, in solve\n    x, y = change\nValueError: too many values to unpack (expected 2)\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_117062",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "Bob\nAlice\n",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpyrwx08rk/candidate.py\", line 43, in <module>\n    winner = find_winner(n, a, m, b)\n  File \"/tmp/tmpyrwx08rk/candidate.py\", line 14, in find_winner\n    if a[1] > b[1]:\nIndexError: list index out of range\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19456",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_8225",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_124121",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_16952",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmp4vgib8k6/candidate.py\", line 23, in <module>\n    print(parse_migration_operations(operations))\n  File \"/tmp/tmp4vgib8k6/candidate.py\", line 7, in parse_migration_operations\n    model_name, field_name, field_type, default_value = op\nValueError: too many values to unpack (expected 4)\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_6770",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26653",
+      "status": "passed",
+      "checked": 4
+    },
+    {
+      "sample_id": "ace/oss_16815",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_6765",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "OpenBLAS blas_thread_init: pthread_create failed for thread 7 of 8: Resource temporarily unavailable\nOpenBLAS blas_thread_init: RLIMIT_NPROC 8 current, 8 max\nTraceback (most recent call last):\n  File \"/opt/gdrl-venv/lib/python3.8/site-packages/numpy/core/__init__.py\", line 23, in <module>\n    from . import multiarray\n  File \"/opt/gdrl-venv/lib/python3.8/site-packages/numpy/core/multiarray.py\", line 10, in <module>\n    from . import overrides\n  File \"/opt/gdrl-venv/lib/python3.8/site-packages/numpy/core/overrides.py\", line 6, in <module>\n    from numpy.core._multiarray_umath import (\nImportError: PyCapsule_Import could not import module \"datetime\"\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/tmp/tmp5x19qs_m/candidate.py\", line 2, in <module>\n    import numpy as np\n  File \"/opt/gdrl-venv/lib/python3.8/site-packages/numpy/__init__.py\", line 141, in <module>\n    from . import core\n  File \"/opt/gdrl-venv/lib/python3.8/site-packages/numpy/core/__init__.py\", line 49, in <module>\n    raise ImportError(msg)\nImportError: \n\nIMPORTANT: PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE!\n\nImporting the numpy C-extensions failed. This error can happen for\nmany reasons, often due to issues with your setup or how NumPy was\ninstalled.\n\nWe have compiled some common reasons and troubleshooting tips at:\n\n    https://numpy.org/devdocs/user/troubleshooting-importerror.html\n\nPlease note and check the following:\n\n  * The Python"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_3274",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_19196",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpslstp4e5/candidate.py\", line 24, in <module>\n    check_function()\n  File \"/tmp/tmpslstp4e5/candidate.py\", line 19, in check_function\n    assert add_card([(\"A\", \"0000FF\"), (\"B\", \"0000FF\"), (\"C\", \"0000FF\")]) == 1, \"Test case 1 failed\"\nAssertionError: Test case 1 failed\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_18621",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_13160",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_14447",
+      "status": "mismatch",
+      "checked": 3
+    },
+    {
+      "sample_id": "ace/oss_1513",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_18203",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_18139",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_18256",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_16138",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "[9, 0, 3, 5, 7, 6, 8]\n",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmp5grlotm8/candidate.py\", line 14, in <module>\n    _opd_result = digitize(-678)\n  File \"/tmp/tmp5grlotm8/candidate.py\", line 7, in digitize\n    reversed_digits = [int(digit) for digit in num_str[::-1]]\n  File \"/tmp/tmp5grlotm8/candidate.py\", line 7, in <listcomp>\n    reversed_digits = [int(digit) for digit in num_str[::-1]]\nValueError: invalid literal for int() with base 10: '-'\n"
+      },
+      "checked": 3
+    },
+    {
+      "sample_id": "ace/oss_12879",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_11659",
+      "status": "blocked_after_review",
+      "error": "题面只要求更新 projects，未规定返回值；现有用例强制返回列表，不能排除原地修改并返回 None 的实现。"
+    },
+    {
+      "sample_id": "ace/oss_618",
+      "status": "blocked_after_review",
+      "error": "未规定配置字符串的键名、空白与布尔拼写；参考使用 true/false，不能把唯一参考文本视为唯一合法输出。"
+    },
+    {
+      "sample_id": "ace/oss_11985",
+      "status": "blocked_after_review",
+      "error": "题面提到预定义扩展名表但只给示例，未封存正式 FILEUPLOAD_ALLOWED_EXTENSIONS 参数；不能用隐藏常量当完整规格。"
+    },
+    {
+      "sample_id": "ace/oss_16281",
+      "status": "blocked_after_review",
+      "error": "题面未规定 pose 请求嵌套形状及成功/失败响应 schema；参考的 {success: bool} 不能由题面唯一推出。"
+    },
+    {
+      "sample_id": "ace/oss_13256",
+      "status": "blocked_after_review",
+      "error": "题面未给服务器启动/错误消息的确切文本，固定字符串比较无法证明所有合法回复等价。"
+    },
+    {
+      "sample_id": "ace/oss_17515",
+      "status": "blocked_after_review",
+      "error": "只说 key-value pair 由逗号连接，没有明确键值分隔符、空白和键次序；参考字符串不唯一。"
+    },
+    {
+      "sample_id": "ace/oss_18226",
+      "status": "blocked_after_review",
+      "error": "文字说倒计时到 0，例子与参考不含 0；规格冲突，不能靠参考程序替题面裁决。"
+    },
+    {
+      "sample_id": "code/vfc_19344",
+      "status": "unsupported_or_extraction_error",
+      "error": "Ambiguous multiple code blocks"
+    },
+    {
+      "sample_id": "code/vfc_26793",
+      "status": "unsupported_or_extraction_error",
+      "error": "Ambiguous multiple code blocks"
+    },
+    {
+      "sample_id": "code/vfc_19536",
+      "status": "unsupported_or_extraction_error",
+      "error": "Ambiguous multiple code blocks"
+    },
+    {
+      "sample_id": "code/vfc_27009",
+      "status": "unsupported_or_extraction_error",
+      "error": "invalid syntax (<unknown>, line 1)"
+    },
+    {
+      "sample_id": "code/vfc_19396",
+      "status": "unsupported_or_extraction_error",
+      "error": "Ambiguous multiple code blocks"
+    },
+    {
+      "sample_id": "code/vfc_19548",
+      "status": "unsupported_or_extraction_error",
+      "error": "Ambiguous multiple code blocks"
+    },
+    {
+      "sample_id": "code/vfc_134964",
+      "status": "unsupported_or_extraction_error",
+      "error": "Ambiguous multiple code blocks"
+    },
+    {
+      "sample_id": "code/vfc_19131",
+      "status": "unsupported_or_extraction_error",
+      "error": "Ambiguous multiple code blocks"
+    },
+    {
+      "sample_id": "code/vfc_18674",
+      "status": "unsupported_or_extraction_error",
+      "error": "invalid syntax (<unknown>, line 1)"
+    },
+    {
+      "sample_id": "code/vfc_26275",
+      "status": "unsupported_or_extraction_error",
+      "error": "Ambiguous multiple code blocks"
+    },
+    {
+      "sample_id": "code/vfc_17062",
+      "status": "unsupported_or_extraction_error",
+      "error": "Ambiguous multiple code blocks"
+    },
+    {
+      "sample_id": "code/vfc_5910",
+      "status": "unsupported_or_extraction_error",
+      "error": "Ambiguous multiple code blocks"
+    },
+    {
+      "sample_id": "code/vfc_84853",
+      "status": "unsupported_or_extraction_error",
+      "error": "Ambiguous multiple code blocks"
+    },
+    {
+      "sample_id": "code/vfc_14818",
+      "status": "unsupported_or_extraction_error",
+      "error": "Ambiguous multiple code blocks"
+    },
+    {
+      "sample_id": "code/vfc_13806",
+      "status": "unsupported_or_extraction_error",
+      "error": "unterminated string literal (detected at line 3) (<unknown>, line 3)"
+    },
+    {
+      "sample_id": "code/vfc_24223",
+      "status": "unsupported_or_extraction_error",
+      "error": "Ambiguous multiple code blocks"
+    },
+    {
+      "sample_id": "code/vfc_110451",
+      "status": "unsupported_or_extraction_error",
+      "error": "Ambiguous multiple code blocks"
+    },
+    {
+      "sample_id": "ace/oss_10109",
+      "status": "blocked_after_review",
+      "error": "题面要求 are_dicts_equal 与 update_dict 两个接口，但当前数据/评分只调用第一个；不能签发完整题意评测。"
+    },
+    {
+      "sample_id": "code/vfc_18518",
+      "status": "unsupported_or_extraction_error",
+      "error": "Ambiguous multiple code blocks"
+    },
+    {
+      "sample_id": "code/vfc_85765",
+      "status": "unsupported_or_extraction_error",
+      "error": "Ambiguous multiple code blocks"
+    },
+    {
+      "sample_id": "code/vfc_18354",
+      "status": "unsupported_or_extraction_error",
+      "error": "Ambiguous multiple code blocks"
+    },
+    {
+      "sample_id": "code/vfc_6682",
+      "status": "unsupported_or_extraction_error",
+      "error": "Ambiguous multiple code blocks"
+    },
+    {
+      "sample_id": "code/vfc_101769",
+      "status": "unsupported_or_extraction_error",
+      "error": "Ambiguous multiple code blocks"
+    },
+    {
+      "sample_id": "code/vfc_91621",
+      "status": "unsupported_or_extraction_error",
+      "error": "Ambiguous multiple code blocks"
+    },
+    {
+      "sample_id": "code/vfc_18490",
+      "status": "unsupported_or_extraction_error",
+      "error": "Ambiguous multiple code blocks"
+    },
+    {
+      "sample_id": "code/vfc_6582",
+      "status": "unsupported_or_extraction_error",
+      "error": "Ambiguous multiple code blocks"
+    },
+    {
+      "sample_id": "code/vfc_18350",
+      "status": "unsupported_or_extraction_error",
+      "error": "unterminated string literal (detected at line 1) (<unknown>, line 1)"
+    }
+  ],
+  "coverage": {
+    "total_tasks": 200,
+    "blocked_tasks": 8,
+    "passed_tasks": 78
+  },
+  "warning": "Source-test compatibility only; not official EvalPlus or proof of semantic completeness",
+  "mode": "student",
+  "data_sha256": "c7e111eade71c4482680cb21e89bf3164e6b01fdbd20895ff295ac11f449813f",
+  "image_id": "sha256:3b0c23d092b8ff94262fd3518cf8250c4b1d65c014d6090eea3b23383145201e",
+  "worker_sha256": "27ef781034dc836e67e2c127061e228a70424f3a572ce3f61e6c6bf954564ba2",
+  "source_compatibility_is_not_semantic_gold": true
+}

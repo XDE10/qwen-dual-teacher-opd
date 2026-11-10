@@ -1,0 +1,74 @@
+{
+  "schema": "opd-results-v1",
+  "name": "code_scores",
+  "stamp": "session3_resume-20261110T030519Z-d0",
+  "published_utc": "2026-11-10T05:37:47Z",
+  "job": {
+    "state": "not recorded"
+  },
+  "publisher": {
+    "host": "XDE10",
+    "gpu": null,
+    "code": {
+      "commit": "4f4423bf2f2c80669ea5641c51b387de38573956",
+      "branch": "feat/opd-v3-mopd-data-v5",
+      "modified_tracked_files": true
+    }
+  },
+  "sources": [
+    {
+      "label": "scores",
+      "path": "/home/xde10/opd_scores/session3_resume-20261110T030519Z/d0",
+      "kind": "folder"
+    }
+  ],
+  "files": [
+    {
+      "path": "scores/candidates/code_dev.candidates.jsonl",
+      "bytes": 289643,
+      "sha256": "da0867ae1f1ded21c4b4190c206b9e72636f015d6f561fe976b8b040cdafa643"
+    },
+    {
+      "path": "scores/candidates/code_dev.summary.json",
+      "bytes": 14778,
+      "sha256": "1df6818d6df3a5aa472e94e46f23374dbd8a444c3656a4b2cd3593d9b95cf071"
+    },
+    {
+      "path": "scores/candidates/humanevalplus.candidates.jsonl",
+      "bytes": 144908,
+      "sha256": "d3ad1e11d6215e6f9c9a4e5268353fb0f4fd4177f63e8e5f94d72604859551b5"
+    },
+    {
+      "path": "scores/candidates/math_dev.summary.json",
+      "bytes": 14855,
+      "sha256": "f5397fcdac1248fc28bb1b11d099f0fe66878e627a2121aff09f2533e859a5ec"
+    },
+    {
+      "path": "scores/candidates/mbppplus.candidates.jsonl",
+      "bytes": 194536,
+      "sha256": "0f69b5a0f859e7890730956dadc21be0594e5b982f3939863e151e4eef1f3ae7"
+    },
+    {
+      "path": "scores/code_dev/evaluate.log",
+      "bytes": 167,
+      "sha256": "bcc261c922ae7ea5b2e3e9487427afcd31f83eedbf5270acb61575df31cfd0d0"
+    },
+    {
+      "path": "scores/code_dev/student.json",
+      "bytes": 33834,
+      "sha256": "bf7a1fa3c8b3337e7280b88e2b8fa6cd753bc6dccf7caf13d851171cb5b2878c"
+    },
+    {
+      "path": "scores/scores.json",
+      "bytes": 1370,
+      "sha256": "b0a22bc11122e5b553fc61a1b0febb2154ac8a97a1c0763865771d1a6e18b5b8"
+    }
+  ],
+  "redacted_strings": 0,
+  "skipped": [],
+  "skipped_count": 0,
+  "limits_mb": {
+    "per_file": 20,
+    "total": 50
+  }
+}
