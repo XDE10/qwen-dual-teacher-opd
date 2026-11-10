@@ -2,9 +2,10 @@
   "schema": "opd-results-v1",
   "name": "session3_resume",
   "stamp": "20261110T030519Z",
-  "published_utc": "2026-11-10T05:10:26Z",
+  "published_utc": "2026-11-10T05:18:42Z",
   "job": {
-    "state": "running"
+    "state": "finished",
+    "exit_status": 1
   },
   "publisher": {
     "host": "e4e4cc6cd285",
@@ -37,8 +38,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 54109,
-      "sha256": "16b2fc7e05cc576309c62d169d2d2687daab91bf4c7ddec6c7ed6205e3de981d"
+      "bytes": 55262,
+      "sha256": "5d740031fff159e602e5e37525a2d45ae84885f4ecb16575718b1e2d65755c8e"
     },
     {
       "path": "runs/eval/d0/code_dev.candidates.jsonl",
@@ -139,6 +140,81 @@
       "path": "runs/eval/d4_dual-checkpoint-30-dev/math_dev.summary.json",
       "bytes": 5926,
       "sha256": "44c923ccf454428543e7417b67126352c2c5b7c82713892d8dd5315cce349806"
+    },
+    {
+      "path": "runs/eval/d4_dual-checkpoint-80/code_dev.candidates.jsonl",
+      "bytes": 279073,
+      "sha256": "41cdc6a3ec7603f43e4b97889b4f26c1b0c82ae1d4376179725629c85da955a8"
+    },
+    {
+      "path": "runs/eval/d4_dual-checkpoint-80/code_dev.jsonl",
+      "bytes": 292055,
+      "sha256": "68fccc39d1435838f754e87daf8b40bcccff3bf1232e91a36d36e5b29b372c61"
+    },
+    {
+      "path": "runs/eval/d4_dual-checkpoint-80/code_dev.summary.json",
+      "bytes": 15106,
+      "sha256": "8d2b88d526aa830b2e6ee6ffbb580ba513005c33668991a508cd5b104ad3c8c0"
+    },
+    {
+      "path": "runs/eval/d4_dual-checkpoint-80/gsm8k_test.jsonl",
+      "bytes": 1800182,
+      "sha256": "f8f8e7f67669fa62ed9891740ad7094947b22f56d9e9f4a1ac0870ae229d52b8"
+    },
+    {
+      "path": "runs/eval/d4_dual-checkpoint-80/gsm8k_test.summary.json",
+      "bytes": 15175,
+      "sha256": "b4e7b95a3d1d6610f17bafc4126c027864941504d98b1da4d0f1ac1454aec8cb"
+    },
+    {
+      "path": "runs/eval/d4_dual-checkpoint-80/humanevalplus.candidates.jsonl",
+      "bytes": 104747,
+      "sha256": "49dbc2ed6594860ccb3455b5bd19ee3e65850442b6db192d868817f606d61cee"
+    },
+    {
+      "path": "runs/eval/d4_dual-checkpoint-80/humanevalplus.jsonl",
+      "bytes": 173372,
+      "sha256": "0280284b3eae64a5cafdaf8eb29db82d617c84bcc8b3b3245c29c90f14722782"
+    },
+    {
+      "path": "runs/eval/d4_dual-checkpoint-80/humanevalplus.summary.json",
+      "bytes": 15115,
+      "sha256": "6667737dc2d3ce86c8d623af093cd8af43b88d985648ce9c5a9e1046e2f269b0"
+    },
+    {
+      "path": "runs/eval/d4_dual-checkpoint-80/math500.jsonl",
+      "bytes": 1036271,
+      "sha256": "7db3b3daea98a50956c055d12641f8fb468f79eae74a7ee11d364d6a2cf4a548"
+    },
+    {
+      "path": "runs/eval/d4_dual-checkpoint-80/math500.summary.json",
+      "bytes": 15136,
+      "sha256": "3d227ff94c5c8bcef4524b534af0816c94b34131f49052e5f84efbaf8adbaa49"
+    },
+    {
+      "path": "runs/eval/d4_dual-checkpoint-80/math_dev.jsonl",
+      "bytes": 536627,
+      "sha256": "12437c694c83afa8b7c3d14bfc191a40b078f58f4cb1e2d975f03a57f72558fe"
+    },
+    {
+      "path": "runs/eval/d4_dual-checkpoint-80/math_dev.summary.json",
+      "bytes": 15190,
+      "sha256": "fb6884802704a8aa51f33b46ccc2fdfe6b6f638557a2d19ca0f4f04d2dd3e2b3"
+    },
+    {
+      "path": "runs/eval/d4_dual-checkpoint-80/mbppplus.candidates.jsonl",
+      "bytes": 174128,
+      "sha256": "361792b83a5b3b910f4a13a28abd71c68e709c43acaf5f79dd78f7dcaecc404a"
+    },
+    {
+      "path": "runs/eval/d4_dual-checkpoint-80/mbppplus.jsonl",
+      "bytes": 338610,
+      "sha256": "fd8b24b637f740c80c24d4450be2a8e0ffca2e98220e11d0846c5d800e225159"
+    },
+    {
+      "path": "runs/eval/d4_dual-checkpoint-80/mbppplus.summary.json",
+      "bytes": 15104,
+      "sha256": "32f7b41e63d95d051334780584f6435fc1e5310939dc4848eee4a5699442fa9d"
     },
     {
       "path": "runs/eval/sft-final_adapter-dev/code_dev.candidates.jsonl",
@@ -242,8 +318,8 @@
     },
     {
       "path": "runs/sessions/20261110T030520Z/console.log",
-      "bytes": 50860,
-      "sha256": "aee10b991b440ef01cf0bfb1f264c2c204e51fc9699921d1f720016ba0692459"
+      "bytes": 51494,
+      "sha256": "f0aca797ef19a99f655d9c4a05bc9ef750665191d711e7db3a4a41435171e53a"
     },
     {
       "path": "runs/sessions/20261110T030520Z/environment/benchmarks.txt",
@@ -292,8 +368,8 @@
     },
     {
       "path": "runs/sessions/20261110T030520Z/steps.jsonl",
-      "bytes": 585,
-      "sha256": "ba6bc73697065fcc80c9c6715330eff8094d2d43f95c1b8feee2b1bb1a706083"
+      "bytes": 640,
+      "sha256": "6bb855da304f85c6d79b4ad6af54b7a72cf67223f026cbaf495be09aa72b60b6"
     },
     {
       "path": "runs/sft_v3_seqkd_mix/metrics.jsonl",

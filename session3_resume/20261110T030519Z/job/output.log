@@ -456,3 +456,16 @@ code_dev {"count": 200, "truncated": 1}
 2026/11/10 05:10:16 NOTICE:    52.620 KiB / 52.620 KiB, 100%, 26.309 KiB/s, ETA 0s
 2026/11/10 05:10:24 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
 [colab_job] saved to Drive: mydrive:opd_runs/session3_resume/20261110T030519Z
+[publish] 61 files (30.23 MB), 12 left out, 0 strings redacted -> results:session3_resume/20261110T030519Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/session3_resume/20261110T030519Z
+math_dev {"count": 256, "truncated": 17, "accuracy_conservative": 0.50390625, "accuracy_math_verify": 0.59765625}
+math500 {"count": 500, "truncated": 34, "accuracy_conservative": 0.454, "accuracy_math_verify": 0.58}
+gsm8k_test {"count": 1319, "truncated": 6, "accuracy_conservative": 0.7452615617892343, "accuracy_math_verify": 0.7460197119029568}
+code_dev {"count": 200, "truncated": 0}
+humanevalplus {"count": 164, "truncated": 0}
+mbppplus {"count": 378, "truncated": 3}
+== session done; failed steps: restore=mydrive:opd_runs/session3/20261110T000932Z/runs/sft_v3_seqkd_mix; log /content/runs/sessions/20261110T030520Z/console.log
+[colab_job] command exited with status 1; saving results
+2026/11/10 05:18:19 NOTICE:    53.729 KiB / 53.729 KiB, 100%, 26.861 KiB/s, ETA 0s
+2026/11/10 05:18:40 NOTICE:     4.652 MiB / 4.652 MiB, 100%, 340.339 KiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/session3_resume/20261110T030519Z

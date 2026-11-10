@@ -420,3 +420,10 @@ code_dev {"count": 200, "truncated": 1}
 == /content/runs/opd_v3_d4_dual: 80 steps, median 95.3 s/step, peak 55.45 GiB, gate pass=True failed=[] warnings=['math.student_entropy ratio 0.314 outside 0.5-2.0 (information only)']
 == step eval=d4_dual (started 04:46:51Z)
 `torch_dtype` is deprecated! Use `dtype` instead!
+math_dev {"count": 256, "truncated": 17, "accuracy_conservative": 0.50390625, "accuracy_math_verify": 0.59765625}
+math500 {"count": 500, "truncated": 34, "accuracy_conservative": 0.454, "accuracy_math_verify": 0.58}
+gsm8k_test {"count": 1319, "truncated": 6, "accuracy_conservative": 0.7452615617892343, "accuracy_math_verify": 0.7460197119029568}
+code_dev {"count": 200, "truncated": 0}
+humanevalplus {"count": 164, "truncated": 0}
+mbppplus {"count": 378, "truncated": 3}
+== session done; failed steps: restore=mydrive:opd_runs/session3/20261110T000932Z/runs/sft_v3_seqkd_mix; log /content/runs/sessions/20261110T030520Z/console.log
