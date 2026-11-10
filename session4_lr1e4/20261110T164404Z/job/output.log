@@ -301,3 +301,13 @@ restored mydrive:opd_runs/session2/20261109T104721Z/runs/opd_v3_d4_dual_lr1e-4 -
 2026/11/10 17:05:14 NOTICE:    29.099 KiB / 29.099 KiB, 100%, 29.096 KiB/s, ETA 0s
 2026/11/10 17:05:18 NOTICE:     1.159 MiB / 1.159 MiB, 100%, 1.159 MiB/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/session4_lr1e4/20261110T164404Z
+[publish] 23 files (1.30 MB), 5 left out, 0 strings redacted -> results:session4_lr1e4/20261110T164404Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/session4_lr1e4/20261110T164404Z
+{"step": 40, "loss": 0.18057896522805095, "gradient_norm": 0.07859021425247192, "gradient_cosine_math_code": -0.007718479726463556, "total_wall_seconds": 87.62486502600018, "math": {"kl": 0.3217, "entropy": 0.085, "len": 468.4, "eos": 0.906, "acc": 0.719}, "code": {"kl": 0.1887, "entropy": 0.3, "len": 322.7, "eos": 1.0}}
+{"step": 41, "loss": 0.1511291298083961, "gradient_norm": 0.08618379384279251, "gradient_cosine_math_code": 0.010402126237750053, "total_wall_seconds": 86.26083831699998, "math": {"kl": 0.1556, "entropy": 0.084, "len": 459.1, "eos": 0.953, "acc": 0.781}, "code": {"kl": 0.1905, "entropy": 0.323, "len": 325.0, "eos": 1.0}}
+{"step": 42, "loss": 0.17899282090365887, "gradient_norm": 0.09532333165407181, "gradient_cosine_math_code": 0.0009824708104133606, "total_wall_seconds": 88.08619746700015, "math": {"kl": 0.2978, "entropy": 0.093, "len": 505.2, "eos": 0.859, "acc": 0.562}, "code": {"kl": 0.1661, "entropy": 0.324, "len": 332.6, "eos": 1.0}}
+{"step": 43, "loss": 0.13562402315437794, "gradient_norm": 0.08862052857875824, "gradient_cosine_math_code": 0.004129625391215086, "total_wall_seconds": 83.14918660600006, "math": {"kl": 0.1552, "entropy": 0.089, "len": 468.6, "eos": 0.938, "acc": 0.719}, "code": {"kl": 0.1656, "entropy": 0.3, "len": 301.7, "eos": 1.0}}
+[colab_job] periodic save (every 5 min)
+2026/11/10 17:10:26 NOTICE:    30.845 KiB / 30.845 KiB, 100%, 30.841 KiB/s, ETA 0s
+2026/11/10 17:10:36 NOTICE:   213.012 MiB / 213.012 MiB, 100%, 30.432 MiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/session4_lr1e4/20261110T164404Z
