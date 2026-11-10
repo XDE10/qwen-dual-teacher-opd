@@ -1,0 +1,110 @@
+{
+  "schema": "opd-results-v1",
+  "name": "session3_dev30",
+  "stamp": "20261110T150931Z",
+  "published_utc": "2026-11-10T15:14:40Z",
+  "job": {
+    "state": "running"
+  },
+  "publisher": {
+    "host": "40473eea95ad",
+    "gpu": [
+      "NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB"
+    ],
+    "code": {
+      "commit": "4f4423bf2f2c80669ea5641c51b387de38573956",
+      "branch": "feat/opd-v3-mopd-data-v5",
+      "modified_tracked_files": false
+    }
+  },
+  "sources": [
+    {
+      "label": "job",
+      "path": "/content/jobs/session3_dev30",
+      "kind": "folder"
+    },
+    {
+      "label": "runs",
+      "path": "/content/runs",
+      "kind": "folder"
+    }
+  ],
+  "files": [
+    {
+      "path": "job/command.json",
+      "bytes": 821,
+      "sha256": "6a028b9f6cd7f5b827eea0645b9f43be9c0fae8b95c41c736af11d887ee933e2"
+    },
+    {
+      "path": "job/output.log",
+      "bytes": 25150,
+      "sha256": "4ccf0a3640132e2ab646d10c4895f1922a41687b6c824ed28750df75d6da2040"
+    },
+    {
+      "path": "runs/sessions/20261110T150931Z/console.log",
+      "bytes": 24527,
+      "sha256": "6e39923c5709aae294e062ed6c362dd90bf43b1b720835629c223de77f9bdb37"
+    },
+    {
+      "path": "runs/sessions/20261110T150931Z/environment/benchmarks.txt",
+      "bytes": 525,
+      "sha256": "578fd7ff28f5e221d8c675b13bcfd1627caf79a938277561195f21d7da5c15d3"
+    },
+    {
+      "path": "runs/sessions/20261110T150931Z/environment/cpu-tests.txt",
+      "bytes": 1080,
+      "sha256": "f96b41f2f7ed74568ca642448a43b5a1d7afed447f6127e9c3dc9fb33a0f7a99"
+    },
+    {
+      "path": "runs/sessions/20261110T150931Z/environment/gpu.csv",
+      "bytes": 127,
+      "sha256": "88b570a6b620db8484c1ef679f3b5396a5aaec74a9ad5efc87d1a8989776bfb7"
+    },
+    {
+      "path": "runs/sessions/20261110T150931Z/environment/imports.txt",
+      "bytes": 123,
+      "sha256": "b8908577547b46e8ca47243bc9465c4efa339d76cc2ff368bc57cd7d3f3e5ed3"
+    },
+    {
+      "path": "runs/sessions/20261110T150931Z/environment/nvidia-smi.txt",
+      "bytes": 1689,
+      "sha256": "460e9f284968c9bc5e802208d8d94791609c68215cfbae3c09f86bf5b611d08f"
+    },
+    {
+      "path": "runs/sessions/20261110T150931Z/environment/pip-check.txt",
+      "bytes": 551,
+      "sha256": "6872327c3200690a53dd49dfb94b04260de9e2b9ab10dc96fa37cb46dd8b8e21"
+    },
+    {
+      "path": "runs/sessions/20261110T150931Z/environment/pip-freeze.txt",
+      "bytes": 14256,
+      "sha256": "ac431fa588173338ab220084b835c7e21fdf1dfbd7f4bb8628ef0441b594586b"
+    },
+    {
+      "path": "runs/sessions/20261110T150931Z/environment/torch.txt",
+      "bytes": 188,
+      "sha256": "37c5012fce8fc4e87d8b6fbc3e23ce28ffa64b45700aa0d70de276018d17a5f0"
+    },
+    {
+      "path": "runs/sessions/20261110T150931Z/prefetch.jsonl",
+      "bytes": 723,
+      "sha256": "0e93c59867766f2d63bb64ac832a716d7559e7ae9689b99dfc6639955e76ecda"
+    }
+  ],
+  "redacted_strings": 0,
+  "skipped": [
+    {
+      "path": "job/child_pid",
+      "reason": "not a text result"
+    },
+    {
+      "path": "job/pid",
+      "reason": "not a text result"
+    }
+  ],
+  "skipped_count": 2,
+  "limits_mb": {
+    "per_file": 20,
+    "total": 50
+  }
+}
