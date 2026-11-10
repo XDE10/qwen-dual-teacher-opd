@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "session4_lr1e4",
   "stamp": "20261110T164404Z",
-  "published_utc": "2026-11-10T19:15:59Z",
+  "published_utc": "2026-11-10T19:21:11Z",
   "job": {
     "state": "running"
   },
@@ -37,8 +37,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 63953,
-      "sha256": "254d58db13f2da445ae95bbd7865636c8a68b165b8638b7bfcb28d14b13eb7a8"
+      "bytes": 65743,
+      "sha256": "306e75ff9eb324758c9b3599548aaca1e3853e74fc2121bc5071e4320b1dcc26"
     },
     {
       "path": "runs/eval/d4_dual_lr1e-4-checkpoint-80/code_dev.candidates.jsonl",
@@ -117,8 +117,8 @@
     },
     {
       "path": "runs/opd_v3_d3_general_lr1e-4/metrics.jsonl",
-      "bytes": 695929,
-      "sha256": "48b3143d08100c70fb8ab604dc24be02d28b4f3c38c054098d0c226d2d8c5eec"
+      "bytes": 817557,
+      "sha256": "7269dd89bd14bccb73928585edff41a272f1b1c914616684e14b7c6426a98266"
     },
     {
       "path": "runs/opd_v3_d3_general_lr1e-4/resolved_generation.json",
@@ -227,8 +227,8 @@
     },
     {
       "path": "runs/sessions/20261110T164405Z/console.log",
-      "bytes": 49608,
-      "sha256": "bc599f3feaa29baf6731bbe7897fbab78a54be52e2ff9db16e0f5ecb5c51bf74"
+      "bytes": 50898,
+      "sha256": "5b93f51197f42e9182f19f8a659b1bdaef7b07e870af3187bb44984ba3b4125e"
     },
     {
       "path": "runs/sessions/20261110T164405Z/environment/benchmarks.txt",
