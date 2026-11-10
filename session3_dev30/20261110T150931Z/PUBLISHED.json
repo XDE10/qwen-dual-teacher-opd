@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "session3_dev30",
   "stamp": "20261110T150931Z",
-  "published_utc": "2026-11-10T15:20:41Z",
+  "published_utc": "2026-11-10T15:25:51Z",
   "job": {
     "state": "running"
   },
@@ -37,8 +37,33 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 26888,
-      "sha256": "c225aace669b4dd3fa65ebae1174a6a0df45ff8c720f882b67c1ca9b079283ba"
+      "bytes": 27625,
+      "sha256": "cd372793d74a4e1a8dfda15dcc1cbdbf18d3512fe12813b54071a50fdcf403ae"
+    },
+    {
+      "path": "runs/eval/d4_dual-checkpoint-30-dev/code_dev.candidates.jsonl",
+      "bytes": 301817,
+      "sha256": "56cd9e72ad696be5b6784825245e167afbb0b9f950cc6847e1e6cebad90a11f5"
+    },
+    {
+      "path": "runs/eval/d4_dual-checkpoint-30-dev/code_dev.jsonl",
+      "bytes": 314812,
+      "sha256": "5c8db4b26b7e517092c43ca100519d3ff3f379b0ee569947ca7c84abbd66fc95"
+    },
+    {
+      "path": "runs/eval/d4_dual-checkpoint-30-dev/code_dev.summary.json",
+      "bytes": 5855,
+      "sha256": "5d74c9b156cc3dc2de39e2f64f202fb116189f68399cc31ecd6d81b7f599a6f0"
+    },
+    {
+      "path": "runs/eval/d4_dual-checkpoint-30-dev/math_dev.jsonl",
+      "bytes": 527724,
+      "sha256": "b71a9b9d138a66e02742a689f4116ed8fc63eb4ea8bca259839d0ff56a7f80d5"
+    },
+    {
+      "path": "runs/eval/d4_dual-checkpoint-30-dev/math_dev.summary.json",
+      "bytes": 5927,
+      "sha256": "a7e34c56d219d6c3c01bcc65424cb9d14ca0a6e8ac9cd24e2b1b84656b9cbc4f"
     },
     {
       "path": "runs/opd_v3_d4_dual/metrics.jsonl",
@@ -177,8 +202,8 @@
     },
     {
       "path": "runs/sessions/20261110T150931Z/console.log",
-      "bytes": 25769,
-      "sha256": "eecdc34be1d049a8b4f8983d050f90fa390db0c6f82fd07c33a7eeadc9e9dc12"
+      "bytes": 26016,
+      "sha256": "8ac524e7bd6b048ad36a54bd6bd6114a949859513c2d4ce2bb94818e42cb29ea"
     },
     {
       "path": "runs/sessions/20261110T150931Z/environment/benchmarks.txt",
@@ -227,8 +252,8 @@
     },
     {
       "path": "runs/sessions/20261110T150931Z/steps.jsonl",
-      "bytes": 347,
-      "sha256": "ddcb1da597dee7fe7a3cadf3371275934e4138442b4471f02aba61372522950e"
+      "bytes": 403,
+      "sha256": "a78fb48799fcc1d60ab02bb26f10de42ff705ab52669cbbbace0b67ccbbf43ba"
     }
   ],
   "redacted_strings": 0,

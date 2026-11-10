@@ -274,3 +274,7 @@ restored mydrive:opd_runs/session2/20261109T104721Z/runs/opd_v3_d4_dual_lr1e-4 -
 restored mydrive:opd_runs/session2/20261109T104721Z/runs/opd_v3_d4_dual_lr1e-5 -> /content/runs/opd_v3_d4_dual_lr1e-5
 == step dev=d4_dual@30 (started 15:15:24Z)
 `torch_dtype` is deprecated! Use `dtype` instead!
+math_dev {"count": 256, "truncated": 18, "accuracy_conservative": 0.46875, "accuracy_math_verify": 0.5625}
+code_dev {"count": 200, "truncated": 5}
+== step dev=d4_dual_lr1e-4@30 (started 15:23:37Z)
+`torch_dtype` is deprecated! Use `dtype` instead!
