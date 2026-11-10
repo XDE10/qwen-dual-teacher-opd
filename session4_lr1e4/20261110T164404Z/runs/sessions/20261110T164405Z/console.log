@@ -322,3 +322,12 @@ restored mydrive:opd_runs/session2/20261109T104721Z/runs/opd_v3_d4_dual_lr1e-4 -
 == /content/runs/opd_v3_d4_dual_lr1e-4: 80 steps, median 95.5 s/step, peak 55.84 GiB, gate pass=False failed=['math.entropy_vs_teacher'] warnings=['math.student_entropy ratio 0.328 outside 0.5-2.0 (information only)']
 == step eval=d4_dual_lr1e-4 (started 18:11:37Z)
 `torch_dtype` is deprecated! Use `dtype` instead!
+math_dev {"count": 256, "truncated": 25, "accuracy_conservative": 0.49609375, "accuracy_math_verify": 0.59765625}
+math500 {"count": 500, "truncated": 41, "accuracy_conservative": 0.44, "accuracy_math_verify": 0.548}
+gsm8k_test {"count": 1319, "truncated": 6, "accuracy_conservative": 0.7475360121304018, "accuracy_math_verify": 0.7482941622441244}
+code_dev {"count": 200, "truncated": 5}
+humanevalplus {"count": 164, "truncated": 1}
+mbppplus {"count": 378, "truncated": 0}
+== step train=d3_general_lr1e-4 (started 18:41:24Z)
+`torch_dtype` is deprecated! Use `dtype` instead!
+{"step": 1, "loss": 0.2458875272423029, "gradient_norm": 0.5006086230278015, "gradient_cosine_math_code": 0.15912683308124542, "total_wall_seconds": 98.29473637200044, "math": {"kl": 0.1543, "entropy": 0.317, "len": 403.9, "eos": 0.969, "acc": 0.609}, "code": {"kl": 0.297, "entropy": 0.588, "len": 359.6, "eos": 1.0}}

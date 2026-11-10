@@ -453,3 +453,18 @@ restored mydrive:opd_runs/session2/20261109T104721Z/runs/opd_v3_d4_dual_lr1e-4 -
 2026/11/10 18:39:12 NOTICE:    51.025 KiB / 51.025 KiB, 100%, 51.020 KiB/s, ETA 0s
 2026/11/10 18:39:15 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
 [colab_job] saved to Drive: mydrive:opd_runs/session4_lr1e4/20261110T164404Z
+[publish] 28 files (2.63 MB), 10 left out, 0 strings redacted -> results:session4_lr1e4/20261110T164404Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/session4_lr1e4/20261110T164404Z
+math_dev {"count": 256, "truncated": 25, "accuracy_conservative": 0.49609375, "accuracy_math_verify": 0.59765625}
+math500 {"count": 500, "truncated": 41, "accuracy_conservative": 0.44, "accuracy_math_verify": 0.548}
+gsm8k_test {"count": 1319, "truncated": 6, "accuracy_conservative": 0.7475360121304018, "accuracy_math_verify": 0.7482941622441244}
+code_dev {"count": 200, "truncated": 5}
+humanevalplus {"count": 164, "truncated": 1}
+mbppplus {"count": 378, "truncated": 0}
+== step train=d3_general_lr1e-4 (started 18:41:24Z)
+`torch_dtype` is deprecated! Use `dtype` instead!
+{"step": 1, "loss": 0.2458875272423029, "gradient_norm": 0.5006086230278015, "gradient_cosine_math_code": 0.15912683308124542, "total_wall_seconds": 98.29473637200044, "math": {"kl": 0.1543, "entropy": 0.317, "len": 403.9, "eos": 0.969, "acc": 0.609}, "code": {"kl": 0.297, "entropy": 0.588, "len": 359.6, "eos": 1.0}}
+[colab_job] periodic save (every 5 min)
+2026/11/10 18:44:22 NOTICE:    52.367 KiB / 52.367 KiB, 100%, 52.362 KiB/s, ETA 0s
+2026/11/10 18:44:35 NOTICE:     4.703 MiB / 4.703 MiB, 100%, 437.950 KiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/session4_lr1e4/20261110T164404Z

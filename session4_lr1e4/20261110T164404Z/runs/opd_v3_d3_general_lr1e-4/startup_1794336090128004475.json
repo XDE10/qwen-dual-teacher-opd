@@ -1,0 +1,25 @@
+{
+  "phases": [
+    {
+      "phase": "student_load",
+      "seconds": 0.43723253600001044,
+      "cpu_rss_before": 1200750592,
+      "cpu_rss_after": 1206009856,
+      "allocated": 3087429120,
+      "reserved": 3107979264,
+      "peak_allocated": 3087429120,
+      "peak_reserved": 3107979264,
+      "gpu_status": "observed"
+    }
+  ],
+  "prompt_budget": {
+    "math": {
+      "rows": 2500,
+      "max_prompt_tokens": 1055
+    },
+    "code": {
+      "rows": 2488,
+      "max_prompt_tokens": 1888
+    }
+  }
+}
