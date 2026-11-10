@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "code_scores",
   "stamp": "session3_resume-20261110T030519Z-d4_dual-checkpoint-80",
-  "published_utc": "2026-11-10T05:43:16Z",
+  "published_utc": "2026-11-10T08:34:11Z",
   "job": {
     "state": "not recorded"
   },
@@ -51,17 +51,47 @@
     {
       "path": "scores/code_dev/evaluate.log",
       "bytes": 166,
-      "sha256": "f4f94461c0ffc56e5b3a784abd6559717b9af50d2695682e1d4352d78e8bd4b9"
+      "sha256": "672ede711b5cc01246eafdc90b76a7f114e12df208e1d8602f618731e7a3df40"
     },
     {
       "path": "scores/code_dev/student.json",
-      "bytes": 39413,
-      "sha256": "bf1b2ca9b40dc5cb0bbacaf765ae8f61d5134a4b691b18990555349286582d9a"
+      "bytes": 39496,
+      "sha256": "93f0d8f9cd06e6f6d9510cf35c3fd0c69abe9abee9f0b6feed20a1d7e52c854b"
+    },
+    {
+      "path": "scores/humanevalplus/evalplus.log",
+      "bytes": 8512,
+      "sha256": "b866f590810f3868f5888dbe82fc98fe6151193447a82cf26e7a3a5b07253afc"
+    },
+    {
+      "path": "scores/humanevalplus/evaluate.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "scores/humanevalplus/official_protocol.json",
+      "bytes": 4966,
+      "sha256": "d557388a65b95d6cfd31303132a3d2cf69d03cd5904f86320d2b6721cd0b4fe6"
+    },
+    {
+      "path": "scores/humanevalplus/samples.jsonl",
+      "bytes": 103155,
+      "sha256": "0bee33cc902b28f476e6d78ad1b408c8a01843959b653f4b8383a858cc24e34f"
+    },
+    {
+      "path": "scores/humanevalplus/samples_eval_results.json",
+      "bytes": 123852,
+      "sha256": "613217f3881a840f87483f77074461a9372233461a594dd9e92acfd58f1abae2"
+    },
+    {
+      "path": "scores/mbppplus/evaluate.log",
+      "bytes": 9287,
+      "sha256": "e7a3296158492b980e0e3fe7dbfa511cdee5a19cc35bb27a28ffab45173cbaaa"
     },
     {
       "path": "scores/scores.json",
-      "bytes": 1399,
-      "sha256": "2b6ee7a0563f3324e4d37ed0ab1e351c52419f5d4e57ab20bd8cecc39ffb488e"
+      "bytes": 1737,
+      "sha256": "c6f31f66accf3e0d962aa7d35aed34b283c760325d05f84c83f15efc87258c7f"
     }
   ],
   "redacted_strings": 0,

@@ -1,20 +1,20 @@
 {
   "source": "session3_resume/20261110T030519Z/runs/eval/d4_dual-checkpoint-80",
   "ref": "origin/results",
-  "scored_utc": "2026-11-10T05:38:01Z",
+  "scored_utc": "2026-11-10T08:15:52Z",
   "suites": {
     "code_dev": {
       "status": "scored",
       "protocol": "internal-dev-review-v3",
       "tasks": 200,
-      "passed": 83,
+      "passed": 82,
       "blocked_after_review": 8,
-      "pass_rate": 0.415,
-      "pass_rate_excluding_blocked": 0.4322916666666667,
+      "pass_rate": 0.41,
+      "pass_rate_excluding_blocked": 0.4270833333333333,
       "by_interface": {
         "function": {
           "tasks": 100,
-          "passed": 75,
+          "passed": 74,
           "blocked": 8
         },
         "stdin_stdout": {
@@ -25,8 +25,8 @@
       },
       "status_counts": {
         "mismatch": 58,
-        "passed": 83,
-        "execution_error": 47,
+        "passed": 82,
+        "execution_error": 48,
         "blocked_after_review": 8,
         "unsupported_or_extraction_error": 4
       },
@@ -34,12 +34,22 @@
       "note": "internal dev with reviewed comparators; not official EvalPlus"
     },
     "humanevalplus": {
-      "status": "skipped",
-      "reason": "data/code_benchmarks/official/HumanEvalPlus-v0.1.10.jsonl missing; run python3 -m scripts.restore_official_benchmarks"
+      "status": "executed",
+      "exit_code": 0,
+      "image_id": "sha256:79a6508d6b82dd8319c1769e87e346d02b4a4b80a9847ebec691ba453fd67204",
+      "log": "humanevalplus/evaluate.log",
+      "evalplus_exit_code": 0,
+      "dataset_sha256": "42526ec0e7d5f3ee0b06d6ced98f8c8bae3d76519151bfb3d36f79010645bd7f",
+      "results_file": "humanevalplus/samples_eval_results.json",
+      "tasks": 164,
+      "pass_at_1_base": 0.5975609756097561,
+      "pass_at_1_plus": 0.5487804878048781
     },
     "mbppplus": {
-      "status": "skipped",
-      "reason": "data/code_benchmarks/official/MbppPlus-v0.2.0.jsonl missing; run python3 -m scripts.restore_official_benchmarks"
+      "status": "failed",
+      "exit_code": 1,
+      "image_id": "sha256:79a6508d6b82dd8319c1769e87e346d02b4a4b80a9847ebec691ba453fd67204",
+      "log": "mbppplus/evaluate.log"
     }
   }
 }
