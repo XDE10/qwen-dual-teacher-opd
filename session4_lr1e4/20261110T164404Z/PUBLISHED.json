@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "session4_lr1e4",
   "stamp": "20261110T164404Z",
-  "published_utc": "2026-11-10T19:36:54Z",
+  "published_utc": "2026-11-10T19:42:11Z",
   "job": {
     "state": "running"
   },
@@ -37,8 +37,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 70152,
-      "sha256": "082454fe6084ee9bff9fe7520ed8b31202d466773741f856e0fec2ef05f115b8"
+      "bytes": 71949,
+      "sha256": "9d1b91adeabbf5d9274d08a1a076150b0f78b973ab265fa98497055fa876abd4"
     },
     {
       "path": "runs/eval/d4_dual_lr1e-4-checkpoint-80/code_dev.candidates.jsonl",
@@ -117,8 +117,8 @@
     },
     {
       "path": "runs/opd_v3_d3_general_lr1e-4/metrics.jsonl",
-      "bytes": 1091047,
-      "sha256": "fc16189b1f65c2b0b69ea8efff7899cffb6bc7d0164e8d90539de6f33ba88a50"
+      "bytes": 1212742,
+      "sha256": "1a808bec3a688c338ef02656bf2bb6b227af399008a3c51402a78df4981ed769"
     },
     {
       "path": "runs/opd_v3_d3_general_lr1e-4/resolved_generation.json",
@@ -139,6 +139,11 @@
       "path": "runs/opd_v3_d3_general_lr1e-4/rollouts/step-000030.jsonl",
       "bytes": 9140,
       "sha256": "4366f191ca866c827c70ce9f8551c0741ffd2dd80046dbf567eee33573df8ea9"
+    },
+    {
+      "path": "runs/opd_v3_d3_general_lr1e-4/rollouts/step-000040.jsonl",
+      "bytes": 10416,
+      "sha256": "354a36dd6d8dc38a32855375dc17ca0a7d8cd089bd4c057e875d16021a9cfa60"
     },
     {
       "path": "runs/opd_v3_d3_general_lr1e-4/run_identity.json",
@@ -232,8 +237,8 @@
     },
     {
       "path": "runs/sessions/20261110T164405Z/console.log",
-      "bytes": 53814,
-      "sha256": "45fd79f3df0a15bb845835720eb10c4644f05c2cd5c7d8358c1bd6ddc0cfa260"
+      "bytes": 55112,
+      "sha256": "0c8bacbc276c9902f3587b4679394b279e76d557eeae5fa5fdf3cd75f6e13e34"
     },
     {
       "path": "runs/sessions/20261110T164405Z/environment/benchmarks.txt",
@@ -309,6 +314,10 @@
       "reason": "folder not published"
     },
     {
+      "path": "runs/opd_v3_d3_general_lr1e-4/checkpoint-40/",
+      "reason": "folder not published"
+    },
+    {
       "path": "runs/opd_v3_d4_dual_lr1e-4/checkpoint-10/",
       "reason": "folder not published"
     },
@@ -341,7 +350,7 @@
       "reason": "folder not published"
     }
   ],
-  "skipped_count": 13,
+  "skipped_count": 14,
   "limits_mb": {
     "per_file": 20,
     "total": 50
