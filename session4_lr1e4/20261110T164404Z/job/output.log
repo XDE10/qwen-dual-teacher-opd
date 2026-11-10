@@ -664,3 +664,13 @@ mbppplus {"count": 378, "truncated": 0}
 2026/11/10 20:34:19 NOTICE:    84.682 KiB / 84.682 KiB, 100%, 84.671 KiB/s, ETA 0s
 2026/11/10 20:34:31 NOTICE:   213.853 MiB / 213.853 MiB, 100%, 21.387 MiB/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/session4_lr1e4/20261110T164404Z
+[publish] 55 files (9.44 MB), 17 left out, 0 strings redacted -> results:session4_lr1e4/20261110T164404Z
+{"step": 72, "loss": 0.1311455313116312, "gradient_norm": 0.08826810866594315, "gradient_cosine_math_code": 0.0006617940962314606, "total_wall_seconds": 120.8483289930009, "math": {"kl": 0.0892, "entropy": 0.128, "len": 442.5, "eos": 0.938, "acc": 0.719}, "code": {"kl": 0.1815, "entropy": 0.262, "len": 425.4, "eos": 0.953}}
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/session4_lr1e4/20261110T164404Z
+{"step": 73, "loss": 0.14308180287480354, "gradient_norm": 0.07941063493490219, "gradient_cosine_math_code": 0.02766759879887104, "total_wall_seconds": 104.19961097600026, "math": {"kl": 0.1028, "entropy": 0.143, "len": 466.1, "eos": 0.953, "acc": 0.625}, "code": {"kl": 0.1939, "entropy": 0.288, "len": 425.3, "eos": 1.0}}
+{"step": 74, "loss": 0.1355385947972536, "gradient_norm": 0.07576359808444977, "gradient_cosine_math_code": 0.0022960861679166555, "total_wall_seconds": 100.01519141100107, "math": {"kl": 0.0891, "entropy": 0.124, "len": 474.3, "eos": 0.953, "acc": 0.719}, "code": {"kl": 0.1986, "entropy": 0.277, "len": 376.7, "eos": 1.0}}
+{"step": 75, "loss": 0.13790546264499426, "gradient_norm": 0.09959757328033447, "gradient_cosine_math_code": -0.015400756150484085, "total_wall_seconds": 92.50555972199982, "math": {"kl": 0.089, "entropy": 0.126, "len": 508.0, "eos": 0.875, "acc": 0.656}, "code": {"kl": 0.2038, "entropy": 0.298, "len": 359.2, "eos": 1.0}}
+[colab_job] periodic save (every 5 min)
+2026/11/10 20:39:40 NOTICE:    86.438 KiB / 86.438 KiB, 100%, 86.386 KiB/s, ETA 0s
+2026/11/10 20:39:44 NOTICE:     2.235 MiB / 2.235 MiB, 100%, 2.234 MiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/session4_lr1e4/20261110T164404Z
