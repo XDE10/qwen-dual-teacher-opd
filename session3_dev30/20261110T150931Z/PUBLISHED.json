@@ -2,9 +2,10 @@
   "schema": "opd-results-v1",
   "name": "session3_dev30",
   "stamp": "20261110T150931Z",
-  "published_utc": "2026-11-10T15:36:09Z",
+  "published_utc": "2026-11-10T15:37:31Z",
   "job": {
-    "state": "running"
+    "state": "finished",
+    "exit_status": 0
   },
   "publisher": {
     "host": "40473eea95ad",
@@ -37,8 +38,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 28841,
-      "sha256": "01c1dd0c5e3650ec8b183675ed1224467b734f509a0869425ff61d4fc99e6daf"
+      "bytes": 29597,
+      "sha256": "fb496dcc462f05d6c59292544807740494cd66c6bb95a354d88bcfcf2112035c"
     },
     {
       "path": "runs/eval/d4_dual-checkpoint-30-dev/code_dev.candidates.jsonl",
@@ -89,6 +90,31 @@
       "path": "runs/eval/d4_dual_lr1e-4-checkpoint-30-dev/math_dev.summary.json",
       "bytes": 5942,
       "sha256": "176f86899db4ca133b006736be77898ac8921f2bca365ffdd24b8ff3b4c1435b"
+    },
+    {
+      "path": "runs/eval/d4_dual_lr1e-5-checkpoint-30-dev/code_dev.candidates.jsonl",
+      "bytes": 229055,
+      "sha256": "fe9268d674291657789d16ab8ee24f6e518e955baf85034e4d9442c32def97eb"
+    },
+    {
+      "path": "runs/eval/d4_dual_lr1e-5-checkpoint-30-dev/code_dev.jsonl",
+      "bytes": 242027,
+      "sha256": "ae12c264daa82e2aacdaa2ca5712a37941142a3c5e73a5c507eb04ae862d466a"
+    },
+    {
+      "path": "runs/eval/d4_dual_lr1e-5-checkpoint-30-dev/code_dev.summary.json",
+      "bytes": 5861,
+      "sha256": "668f7677fc1648f17876c54624613cd90b36fd821b6e155e869f3861ae713732"
+    },
+    {
+      "path": "runs/eval/d4_dual_lr1e-5-checkpoint-30-dev/math_dev.jsonl",
+      "bytes": 526187,
+      "sha256": "60a7f672f3ede1b75621edcabf378d7753e1b8e64cd4b5309229ea059c5888a8"
+    },
+    {
+      "path": "runs/eval/d4_dual_lr1e-5-checkpoint-30-dev/math_dev.summary.json",
+      "bytes": 5944,
+      "sha256": "faeba01c0ae2898ca6fac52723df99658fba680e01cdaddcbb0a052a14bc41ed"
     },
     {
       "path": "runs/opd_v3_d4_dual/metrics.jsonl",
@@ -227,8 +253,8 @@
     },
     {
       "path": "runs/sessions/20261110T150931Z/console.log",
-      "bytes": 26270,
-      "sha256": "375d3aa91c0ec2afd753c581ff19033bf23ef829e36cd1eb64ec91d1ccbc4e1d"
+      "bytes": 26516,
+      "sha256": "57bae06979fda25d2c20d494b72a35dd5850225c84d0986e111ee94166fa5236"
     },
     {
       "path": "runs/sessions/20261110T150931Z/environment/benchmarks.txt",
@@ -277,8 +303,8 @@
     },
     {
       "path": "runs/sessions/20261110T150931Z/steps.jsonl",
-      "bytes": 466,
-      "sha256": "5a0021e9d9efbcd8a3e1f7b05899e6d3cb0b5d2dd285b7b76005f5acf81f2e67"
+      "bytes": 529,
+      "sha256": "fb918a185b21b910c34f968796db6cae6896d223fae2638b5d06f83834113428"
     }
   ],
   "redacted_strings": 0,

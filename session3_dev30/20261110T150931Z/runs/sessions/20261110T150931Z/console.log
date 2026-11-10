@@ -282,3 +282,6 @@ math_dev {"count": 256, "truncated": 21, "accuracy_conservative": 0.51953125, "a
 code_dev {"count": 200, "truncated": 5}
 == step dev=d4_dual_lr1e-5@30 (started 15:30:33Z)
 `torch_dtype` is deprecated! Use `dtype` instead!
+math_dev {"count": 256, "truncated": 16, "accuracy_conservative": 0.49609375, "accuracy_math_verify": 0.6015625}
+code_dev {"count": 200, "truncated": 3}
+== session done; failed steps: none; log /content/runs/sessions/20261110T150931Z/console.log

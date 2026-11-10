@@ -311,3 +311,12 @@ code_dev {"count": 200, "truncated": 5}
 2026/11/10 15:36:07 NOTICE:    27.953 KiB / 27.953 KiB, 100%, 0 B/s, ETA -
 2026/11/10 15:36:09 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
 [colab_job] saved to Drive: mydrive:opd_runs/session3_dev30/20261110T150931Z
+[publish] 50 files (5.13 MB), 11 left out, 0 strings redacted -> results:session3_dev30/20261110T150931Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/session3_dev30/20261110T150931Z
+math_dev {"count": 256, "truncated": 16, "accuracy_conservative": 0.49609375, "accuracy_math_verify": 0.6015625}
+code_dev {"count": 200, "truncated": 3}
+== session done; failed steps: none; log /content/runs/sessions/20261110T150931Z/console.log
+[colab_job] command exited with status 0; saving results
+2026/11/10 15:37:28 NOTICE:    28.671 KiB / 28.671 KiB, 100%, 0 B/s, ETA -
+2026/11/10 15:37:31 NOTICE:  1011.835 KiB / 1011.835 KiB, 100%, 505.523 KiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/session3_dev30/20261110T150931Z
