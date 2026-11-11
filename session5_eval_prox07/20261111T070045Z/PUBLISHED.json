@@ -1,0 +1,217 @@
+{
+  "schema": "opd-results-v1",
+  "name": "session5_eval_prox07",
+  "stamp": "20261111T070045Z",
+  "published_utc": "2026-11-11T07:22:55Z",
+  "job": {
+    "state": "running"
+  },
+  "publisher": {
+    "host": "1da8e477ad88",
+    "gpu": [
+      "NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB"
+    ],
+    "code": {
+      "commit": "06e52c388a7031ed21e6357aa2b715c4e87493ef",
+      "branch": "feat/opd-v3-mopd-data-v5",
+      "modified_tracked_files": false
+    }
+  },
+  "sources": [
+    {
+      "label": "job",
+      "path": "/content/jobs/session5_eval_prox07",
+      "kind": "folder"
+    },
+    {
+      "label": "runs",
+      "path": "/content/runs",
+      "kind": "folder"
+    }
+  ],
+  "files": [
+    {
+      "path": "job/command.json",
+      "bytes": 659,
+      "sha256": "86272b5053f40b0eec045c4fb6cfc2cda7a9e901a9c7863b4c0389dfa9967a49"
+    },
+    {
+      "path": "job/output.log",
+      "bytes": 25731,
+      "sha256": "ffbb4bc54f4dcc14300845ab887d337d0b7339b28597737adfe44eb47e56774a"
+    },
+    {
+      "path": "runs/opd_v3_d4_prox07_lr1e-4/metrics.jsonl",
+      "bytes": 2441174,
+      "sha256": "08b75606e1f5e34b8c3fdfd4e113df9f4c615cb6ecadd97a17d428dddc865da2"
+    },
+    {
+      "path": "runs/opd_v3_d4_prox07_lr1e-4/resolved_generation.json",
+      "bytes": 4752,
+      "sha256": "cbc7180f3eba88ac82f76ab9195dc744a5f90fdd3a1edfc7e7f20694d3843fc3"
+    },
+    {
+      "path": "runs/opd_v3_d4_prox07_lr1e-4/rollouts/step-000010.jsonl",
+      "bytes": 6908,
+      "sha256": "f07e9f47e00df6737749383f52d06157cf8ef8fd516d8e739be7b84f89e97084"
+    },
+    {
+      "path": "runs/opd_v3_d4_prox07_lr1e-4/rollouts/step-000020.jsonl",
+      "bytes": 8955,
+      "sha256": "32a347320411feb8857d8005bb69ad2b74ad209ea325dc0e92622d71ed3da075"
+    },
+    {
+      "path": "runs/opd_v3_d4_prox07_lr1e-4/rollouts/step-000030.jsonl",
+      "bytes": 8364,
+      "sha256": "bf91fc5122e57b697870dd682d6be75946afb5f4a3903251b1e3b788a49f159e"
+    },
+    {
+      "path": "runs/opd_v3_d4_prox07_lr1e-4/rollouts/step-000040.jsonl",
+      "bytes": 10894,
+      "sha256": "a296cf2ed2894f7bf74ec3cfc93b06a81457a0fee7a3dc7e0fe1f89ec50063ca"
+    },
+    {
+      "path": "runs/opd_v3_d4_prox07_lr1e-4/rollouts/step-000050.jsonl",
+      "bytes": 10246,
+      "sha256": "8015c40081535dce277e0fcfdb333ea7d2e08ed50db89103de7cbc9098426b18"
+    },
+    {
+      "path": "runs/opd_v3_d4_prox07_lr1e-4/rollouts/step-000060.jsonl",
+      "bytes": 10053,
+      "sha256": "d24a1c15ce4f7c7e7718e740bf7e338965836da115fe203788c3708c31a44b75"
+    },
+    {
+      "path": "runs/opd_v3_d4_prox07_lr1e-4/rollouts/step-000070.jsonl",
+      "bytes": 10080,
+      "sha256": "4ab6fea5aa166aae881b783dfbf7083728a54692abdf292e63df09a196da94ef"
+    },
+    {
+      "path": "runs/opd_v3_d4_prox07_lr1e-4/rollouts/step-000080.jsonl",
+      "bytes": 12995,
+      "sha256": "102093f4ab324f21c76569d9dd4bc13628d5cc50a10178f2f31eb3b74cf0b9ba"
+    },
+    {
+      "path": "runs/opd_v3_d4_prox07_lr1e-4/run_identity.json",
+      "bytes": 32242,
+      "sha256": "0fa3baa202ba4c6ca890b4b6723b1ce378bc1740df6851030f4d47d5d4429caa"
+    },
+    {
+      "path": "runs/opd_v3_d4_prox07_lr1e-4/startup_1794369095911265979.json",
+      "bytes": 506,
+      "sha256": "726140655f8462e53cec413969bfb63eeaf217363b8139f3e724f4491038eb21"
+    },
+    {
+      "path": "runs/opd_v3_d4_prox07_lr1e-4/summary.json",
+      "bytes": 97376,
+      "sha256": "afd73ecaa9cfd9add2750f757ba04f2e915203156e9fb827aa967534ab9e8412"
+    },
+    {
+      "path": "runs/opd_v3_d4_prox07_lr1e-4/teacher_pool.json",
+      "bytes": 468,
+      "sha256": "d30c470104019e11ff072c38ea7398da96373c10fe49d17dd9adf45a883774d3"
+    },
+    {
+      "path": "runs/sessions/20261111T070045Z/console.log",
+      "bytes": 25157,
+      "sha256": "181b595835cecb4ce851a36862e4e5f822120f49ef66991b62f1bce1c1694578"
+    },
+    {
+      "path": "runs/sessions/20261111T070045Z/environment/benchmarks.txt",
+      "bytes": 525,
+      "sha256": "578fd7ff28f5e221d8c675b13bcfd1627caf79a938277561195f21d7da5c15d3"
+    },
+    {
+      "path": "runs/sessions/20261111T070045Z/environment/cpu-tests.txt",
+      "bytes": 1080,
+      "sha256": "b833d759b34521e6c8e551173f9ccd424b12a30f862f04ad904d58e6395cbdbf"
+    },
+    {
+      "path": "runs/sessions/20261111T070045Z/environment/gpu.csv",
+      "bytes": 127,
+      "sha256": "88b570a6b620db8484c1ef679f3b5396a5aaec74a9ad5efc87d1a8989776bfb7"
+    },
+    {
+      "path": "runs/sessions/20261111T070045Z/environment/imports.txt",
+      "bytes": 123,
+      "sha256": "b8908577547b46e8ca47243bc9465c4efa339d76cc2ff368bc57cd7d3f3e5ed3"
+    },
+    {
+      "path": "runs/sessions/20261111T070045Z/environment/nvidia-smi.txt",
+      "bytes": 1689,
+      "sha256": "e44ff4b8c12707f60dc9f17e18b740863579735ea93b179847c1e90f6df311b9"
+    },
+    {
+      "path": "runs/sessions/20261111T070045Z/environment/pip-check.txt",
+      "bytes": 551,
+      "sha256": "c143ef3a0b6fdb5c79426d645e4cbe0e0a0106c5d44a2db72d20292dc71a6f45"
+    },
+    {
+      "path": "runs/sessions/20261111T070045Z/environment/pip-freeze.txt",
+      "bytes": 14256,
+      "sha256": "ac431fa588173338ab220084b835c7e21fdf1dfbd7f4bb8628ef0441b594586b"
+    },
+    {
+      "path": "runs/sessions/20261111T070045Z/environment/torch.txt",
+      "bytes": 188,
+      "sha256": "91e8eec6c37023a42f857b40b0fcce0dc31df115450478d73c2d68dd4858c37e"
+    },
+    {
+      "path": "runs/sessions/20261111T070045Z/prefetch.jsonl",
+      "bytes": 970,
+      "sha256": "856cd586bb65d4e60e4a1d10dddf083400bcd4a4e577f56e03e6f0982113272a"
+    },
+    {
+      "path": "runs/sessions/20261111T070045Z/steps.jsonl",
+      "bytes": 131,
+      "sha256": "2487348c3672983902a8f0a5be1065b4d926d3a8e370cca3029c5f5d5adb3b00"
+    }
+  ],
+  "redacted_strings": 0,
+  "skipped": [
+    {
+      "path": "job/child_pid",
+      "reason": "not a text result"
+    },
+    {
+      "path": "job/pid",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/opd_v3_d4_prox07_lr1e-4/checkpoint-10/",
+      "reason": "folder not published"
+    },
+    {
+      "path": "runs/opd_v3_d4_prox07_lr1e-4/checkpoint-20/",
+      "reason": "folder not published"
+    },
+    {
+      "path": "runs/opd_v3_d4_prox07_lr1e-4/checkpoint-30/",
+      "reason": "folder not published"
+    },
+    {
+      "path": "runs/opd_v3_d4_prox07_lr1e-4/checkpoint-40/",
+      "reason": "folder not published"
+    },
+    {
+      "path": "runs/opd_v3_d4_prox07_lr1e-4/checkpoint-50/",
+      "reason": "folder not published"
+    },
+    {
+      "path": "runs/opd_v3_d4_prox07_lr1e-4/checkpoint-60/",
+      "reason": "folder not published"
+    },
+    {
+      "path": "runs/opd_v3_d4_prox07_lr1e-4/checkpoint-70/",
+      "reason": "folder not published"
+    },
+    {
+      "path": "runs/opd_v3_d4_prox07_lr1e-4/checkpoint-80/",
+      "reason": "folder not published"
+    }
+  ],
+  "skipped_count": 10,
+  "limits_mb": {
+    "per_file": 20,
+    "total": 50
+  }
+}
