@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "session5_fix_math7b",
   "stamp": "20261111T031226Z",
-  "published_utc": "2026-11-11T05:14:43Z",
+  "published_utc": "2026-11-11T05:35:07Z",
   "job": {
     "state": "running"
   },
@@ -37,8 +37,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 44595,
-      "sha256": "95d5d0b37fb8076f3e9003b46073c5d4585a9ffd9701e5a06b8d1d4e384d6c12"
+      "bytes": 49002,
+      "sha256": "9109bb19255b668756e96b7e2c7fd9e9ad8844a184109e902437f19148fd8a26"
     },
     {
       "path": "runs/eval/d4_dual_lr1e-4-checkpoint-30/code_dev.candidates.jsonl",
@@ -162,8 +162,8 @@
     },
     {
       "path": "runs/opd_v3_d4_prox07_lr1e-4/metrics.jsonl",
-      "bytes": 1493720,
-      "sha256": "75b07c296c89229cbf86328fe17bda76f4967d0149f84fe4a7333939e8e8473a"
+      "bytes": 1860347,
+      "sha256": "40b2c4a2037234ce1718362d162fdbc22afbf762d35b6f966065c7e74ee0009d"
     },
     {
       "path": "runs/opd_v3_d4_prox07_lr1e-4/resolved_generation.json",
@@ -191,6 +191,16 @@
       "sha256": "a296cf2ed2894f7bf74ec3cfc93b06a81457a0fee7a3dc7e0fe1f89ec50063ca"
     },
     {
+      "path": "runs/opd_v3_d4_prox07_lr1e-4/rollouts/step-000050.jsonl",
+      "bytes": 10246,
+      "sha256": "8015c40081535dce277e0fcfdb333ea7d2e08ed50db89103de7cbc9098426b18"
+    },
+    {
+      "path": "runs/opd_v3_d4_prox07_lr1e-4/rollouts/step-000060.jsonl",
+      "bytes": 10053,
+      "sha256": "d24a1c15ce4f7c7e7718e740bf7e338965836da115fe203788c3708c31a44b75"
+    },
+    {
       "path": "runs/opd_v3_d4_prox07_lr1e-4/run_identity.json",
       "bytes": 32242,
       "sha256": "0fa3baa202ba4c6ca890b4b6723b1ce378bc1740df6851030f4d47d5d4429caa"
@@ -207,8 +217,8 @@
     },
     {
       "path": "runs/sessions/20261111T031227Z/console.log",
-      "bytes": 41537,
-      "sha256": "066b804f3002810a7fe1080c99ba30dc61734b31388875b3476a63ed325edccb"
+      "bytes": 45430,
+      "sha256": "1413315f892ee10c0d0909cb71779784ea9629f84fa25d5a8ee8c61f611eb96c"
     },
     {
       "path": "runs/sessions/20261111T031227Z/environment/benchmarks.txt",
@@ -298,9 +308,17 @@
     {
       "path": "runs/opd_v3_d4_prox07_lr1e-4/checkpoint-40/",
       "reason": "folder not published"
+    },
+    {
+      "path": "runs/opd_v3_d4_prox07_lr1e-4/checkpoint-50/",
+      "reason": "folder not published"
+    },
+    {
+      "path": "runs/opd_v3_d4_prox07_lr1e-4/checkpoint-60/",
+      "reason": "folder not published"
     }
   ],
-  "skipped_count": 9,
+  "skipped_count": 11,
   "limits_mb": {
     "per_file": 20,
     "total": 50
