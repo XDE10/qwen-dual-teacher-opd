@@ -1,0 +1,135 @@
+{
+  "schema": "opd-results-v1",
+  "name": "session6_math14b",
+  "stamp": "20261111T133020Z",
+  "published_utc": "2026-11-11T13:50:31Z",
+  "job": {
+    "state": "running"
+  },
+  "publisher": {
+    "host": "5187abaeb409",
+    "gpu": [
+      "NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB"
+    ],
+    "code": {
+      "commit": "ae4379409158f0e63d455611df0b0e8ef4485372",
+      "branch": "feat/opd-v3-mopd-data-v5",
+      "modified_tracked_files": false
+    }
+  },
+  "sources": [
+    {
+      "label": "job",
+      "path": "/content/jobs/session6_math14b",
+      "kind": "folder"
+    },
+    {
+      "label": "runs",
+      "path": "/content/runs",
+      "kind": "folder"
+    }
+  ],
+  "files": [
+    {
+      "path": "job/command.json",
+      "bytes": 590,
+      "sha256": "f5a355e766c2717847a2ec89b9fced9efd597c59b372a9f8b0571be192d8f5f0"
+    },
+    {
+      "path": "job/output.log",
+      "bytes": 27889,
+      "sha256": "634aaa9a9e30c2bb994aca454d4ab7dbabb3b1400ad6ccdb0e8530f43d32c051"
+    },
+    {
+      "path": "runs/opd_v3_d4_math14b_lr1e-4/metrics.jsonl",
+      "bytes": 243901,
+      "sha256": "a19c6fac88816baf8f5f8589d3881b55cf6bf6837cb18a386adb1a0b1586b578"
+    },
+    {
+      "path": "runs/opd_v3_d4_math14b_lr1e-4/resolved_generation.json",
+      "bytes": 4752,
+      "sha256": "cbc7180f3eba88ac82f76ab9195dc744a5f90fdd3a1edfc7e7f20694d3843fc3"
+    },
+    {
+      "path": "runs/opd_v3_d4_math14b_lr1e-4/run_identity.json",
+      "bytes": 32243,
+      "sha256": "adda8ee3eecf2cd7e97b6b21e2bc8f3f8559ddfbafddb89898f460553b8f6921"
+    },
+    {
+      "path": "runs/opd_v3_d4_math14b_lr1e-4/startup_1794404221486225034.json",
+      "bytes": 506,
+      "sha256": "d3630019b41f04fc066bc3adf132788d5084da33339ec5310e552823da4d0766"
+    },
+    {
+      "path": "runs/opd_v3_d4_math14b_lr1e-4/teacher_pool.json",
+      "bytes": 461,
+      "sha256": "a508e18f7870ce3b0233909f75a7e9b61b83070da5de5916479bf7bf37d73ce4"
+    },
+    {
+      "path": "runs/sessions/20261111T133021Z/console.log",
+      "bytes": 27475,
+      "sha256": "2b9a7c1e51a3773514b04082807efb7d51f30e1cbfa2cf35f71a624bf2340ef0"
+    },
+    {
+      "path": "runs/sessions/20261111T133021Z/environment/benchmarks.txt",
+      "bytes": 525,
+      "sha256": "578fd7ff28f5e221d8c675b13bcfd1627caf79a938277561195f21d7da5c15d3"
+    },
+    {
+      "path": "runs/sessions/20261111T133021Z/environment/cpu-tests.txt",
+      "bytes": 1080,
+      "sha256": "901859272475ce40fb8c1ba7330ae3dfded104328a85ae53ad559f7ac4785dbe"
+    },
+    {
+      "path": "runs/sessions/20261111T133021Z/environment/gpu.csv",
+      "bytes": 127,
+      "sha256": "88b570a6b620db8484c1ef679f3b5396a5aaec74a9ad5efc87d1a8989776bfb7"
+    },
+    {
+      "path": "runs/sessions/20261111T133021Z/environment/imports.txt",
+      "bytes": 123,
+      "sha256": "b8908577547b46e8ca47243bc9465c4efa339d76cc2ff368bc57cd7d3f3e5ed3"
+    },
+    {
+      "path": "runs/sessions/20261111T133021Z/environment/nvidia-smi.txt",
+      "bytes": 1689,
+      "sha256": "dfc94efcd85e4bbaed8bffd596e8daae7dd61e789ccca008ae3229f83b17016a"
+    },
+    {
+      "path": "runs/sessions/20261111T133021Z/environment/pip-check.txt",
+      "bytes": 551,
+      "sha256": "c143ef3a0b6fdb5c79426d645e4cbe0e0a0106c5d44a2db72d20292dc71a6f45"
+    },
+    {
+      "path": "runs/sessions/20261111T133021Z/environment/pip-freeze.txt",
+      "bytes": 14256,
+      "sha256": "ac431fa588173338ab220084b835c7e21fdf1dfbd7f4bb8628ef0441b594586b"
+    },
+    {
+      "path": "runs/sessions/20261111T133021Z/environment/torch.txt",
+      "bytes": 188,
+      "sha256": "cc09c6a7264d8897b4fb8d47bdcdfdc165fcc2617d7042ab47179cdc7d95d5eb"
+    },
+    {
+      "path": "runs/sessions/20261111T133021Z/prefetch.jsonl",
+      "bytes": 1207,
+      "sha256": "1eb73b8db04016e4dcec576a8838a52558a5c67317d054e0a9733991fc785094"
+    }
+  ],
+  "redacted_strings": 0,
+  "skipped": [
+    {
+      "path": "job/child_pid",
+      "reason": "not a text result"
+    },
+    {
+      "path": "job/pid",
+      "reason": "not a text result"
+    }
+  ],
+  "skipped_count": 2,
+  "limits_mb": {
+    "per_file": 20,
+    "total": 50
+  }
+}
