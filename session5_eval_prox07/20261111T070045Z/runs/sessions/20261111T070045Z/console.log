@@ -277,3 +277,10 @@ humanevalplus {"count": 164, "truncated": 1}
 mbppplus {"count": 378, "truncated": 5}
 == step eval=d4_prox07_lr1e-4 (started 07:46:32Z)
 `torch_dtype` is deprecated! Use `dtype` instead!
+math_dev {"count": 256, "truncated": 34, "accuracy_conservative": 0.46484375, "accuracy_math_verify": 0.5546875}
+math500 {"count": 500, "truncated": 45, "accuracy_conservative": 0.434, "accuracy_math_verify": 0.552}
+gsm8k_test {"count": 1319, "truncated": 10, "accuracy_conservative": 0.7369219105382866, "accuracy_math_verify": 0.7376800606520091}
+code_dev {"count": 200, "truncated": 3}
+humanevalplus {"count": 164, "truncated": 1}
+mbppplus {"count": 378, "truncated": 1}
+== session done; failed steps: none; log /content/runs/sessions/20261111T070045Z/console.log
