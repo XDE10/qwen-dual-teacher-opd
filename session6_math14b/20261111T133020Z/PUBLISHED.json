@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "session6_math14b",
   "stamp": "20261111T133020Z",
-  "published_utc": "2026-11-11T16:32:23Z",
+  "published_utc": "2026-11-11T16:52:32Z",
   "job": {
     "state": "running"
   },
@@ -37,8 +37,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 55997,
-      "sha256": "3e673ce555e7f321301808bf9b07754caf97c7f10ab9e9efa2f045e98a9aedec"
+      "bytes": 56484,
+      "sha256": "226cd6fd60e1739b19468f59521d85f216f72724e5b457d288a40e50009598f7"
     },
     {
       "path": "runs/eval/d4_math14b_lr1e-4-checkpoint-50/code_dev.candidates.jsonl",
