@@ -387,7 +387,9 @@ def test_experiment_configs_validate_and_differ_only_in_declared_factors():
                 'd1_math_lr1e-4': {'data_files', 'teachers', 'prompts_per_step', 'max_new_tokens', 'learning_rate'},
                 'd2_code_lr1e-4': {'data_files', 'teachers', 'prompts_per_step', 'max_new_tokens', 'learning_rate'},
                 'd4_blocked_lr1e-4': {'schedule', 'learning_rate'},
-                'd4_warmstart_lr1e-4': {'init_adapter', 'learning_rate'}}
+                'd4_warmstart_lr1e-4': {'init_adapter', 'learning_rate'},
+                'd4_prox07_lr1e-4': {'loss', 'learning_rate'},
+                'd4_aligned_lr1e-4': {'teachers', 'learning_rate'}}
     assert set(configs) == set(declared) | {'d4_dual', 'smoke'}
     for name, factors in declared.items():
         differing = {k for k in set(reference) | set(configs[name])
