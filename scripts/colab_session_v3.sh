@@ -79,7 +79,15 @@ export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 echo "== commit $(git rev-parse HEAD) on $(git branch --show-current); steps: $*"
 OPD_ENV_DIR="$SESSION/environment" bash scripts/colab_bootstrap_v3.sh || { echo "== environment setup failed"; exit 1; }
 echo "== model download (student, math, code and general teachers)"
-python -m scripts.prefetch_models_v3 --config configs/project2_opd_v3_d4_dual.json configs/project2_opd_v3_d3_general.json \
+PREFETCH_CONFIGS=(configs/project2_opd_v3_d4_dual.json configs/project2_opd_v3_d3_general.json)
+for step in "$@"; do
+  case "$step" in
+    train=*)
+      spec="${step#train=}"
+      PREFETCH_CONFIGS+=("configs/project2_opd_v3_${spec%%:*}.json") ;;
+  esac
+done
+python -m scripts.prefetch_models_v3 --config "${PREFETCH_CONFIGS[@]}" \
   | tee "$SESSION/prefetch.jsonl" || { echo "== model download failed"; exit 1; }
 
 run_dir() {

@@ -229,14 +229,17 @@ def main(argv=None):
         out = root / group / model
         if (out / 'scores.json').is_file() and not a.force:
             say(f'{source}: already scored in {out} (use --force to score again)')
+            if a.publish and not publish(out, group, model, a.credentials):
+                status = 1
             continue
         found = fetch_candidates(source, a.ref, out / 'candidates')
         if not found:
             say(f'{source}: no candidate files found (is the GPU evaluation finished and published?)')
             status = 1
             continue
+        existing_scores = json.loads((out / 'scores.json').read_text(encoding='utf-8')) if (out / 'scores.json').is_file() else {}
         scores = {'source': source, 'ref': a.ref, 'scored_utc': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
-                  'suites': {}}
+                  'suites': existing_scores.get('suites', {})}
         for suite in a.suites:
             candidates = out / 'candidates' / f'{suite}.candidates.jsonl'
             if suite not in found:

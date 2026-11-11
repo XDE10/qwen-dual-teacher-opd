@@ -80,7 +80,7 @@ def test_all_modes_match_explicit_autograd_with_detached_targets(mode, alpha):
     if mode == 'exact_rkl':
         value = (log_p.exp() * (log_p - target)).sum(-1)
     elif mode == 'topk_rkl':
-        index = log_q.topk(4, -1).indices
+        index = target.topk(4, -1).indices
         lp, lt = log_p.gather(-1, index), target.gather(-1, index)
         value = (lp.exp() * (lp - lt) - lp.exp() + lt.exp()).sum(-1)
     else:
@@ -124,6 +124,26 @@ def test_invalid_options_fail_closed():
         row_divergence(s, t, y, w, 'exact_rkl', alpha=0.)
     with pytest.raises(ValueError, match='Nonfinite'):
         row_divergence(torch.full((3, 5), float('nan')), t, y, w)
+    with pytest.raises(ValueError, match='response_mask'):
+        prediction_rows(torch.tensor([[True, True]]))
+    with pytest.raises(ValueError, match='Empty response rows'):
+        prediction_rows(torch.zeros((2, 3), dtype=torch.bool))
+    assert with_defaults({'loss': None, 'lora': None})['loss']['mode'] == 'exact_rkl'
+
+
+def test_removed_mass_avoids_catastrophic_cancellation():
+    from src.losses.mopd_v3 import removed_mass
+    model = tiny_qwen(vocab=40)
+    _, head = model.model, model.get_output_embeddings()
+    with torch.no_grad():
+        head.weight.zero_()
+        head.weight[:SUPPORT, 0] = 10.0
+        head.weight[SUPPORT:, 0] = -15.0  # tiny tail mass (~1e-11), below float32 1 - exp() precision
+    hidden = torch.ones(2, 16, dtype=torch.float64)
+    hidden[:, 1:] = 0.0
+    s_lse = support_logits(hidden, head, SUPPORT).float().logsumexp(-1)
+    mass = removed_mass(hidden, head, SUPPORT, s_lse)
+    assert (mass > 0).all() and (mass < 1e-9).all()
 
 
 # ------------------------------------------------- response rows / batching
@@ -389,7 +409,8 @@ def test_experiment_configs_validate_and_differ_only_in_declared_factors():
                 'd4_blocked_lr1e-4': {'schedule', 'learning_rate'},
                 'd4_warmstart_lr1e-4': {'init_adapter', 'learning_rate'},
                 'd4_prox07_lr1e-4': {'loss', 'learning_rate'},
-                'd4_aligned_lr1e-4': {'teachers', 'learning_rate'}}
+                'd4_aligned_lr1e-4': {'teachers', 'learning_rate'},
+                'd4_math14b_lr1e-4': {'teachers', 'tokenizer_audit', 'learning_rate'}}
     assert set(configs) == set(declared) | {'d4_dual', 'smoke'}
     for name, factors in declared.items():
         differing = {k for k in set(reference) | set(configs[name])

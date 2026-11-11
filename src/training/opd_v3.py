@@ -66,9 +66,10 @@ def with_defaults(config):
     c = json.loads(json.dumps(config))
     for key, value in DEFAULTS.items():
         if isinstance(value, dict):
-            c[key] = {**value, **c.get(key, {})}
-        else:
-            c.setdefault(key, value)
+            existing = c.get(key)
+            c[key] = {**value, **(existing if isinstance(existing, dict) else {})}
+        elif c.get(key) is None:
+            c[key] = value
     return c
 
 

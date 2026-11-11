@@ -48,7 +48,11 @@ def decoder_and_head(model):
 
 def prediction_rows(response_mask):
     """Logit rows (batch, position) whose next token is a response target."""
+    if response_mask.dim() != 2 or response_mask.shape[1] < 2 or response_mask[:, 0].any():
+        raise ValueError('response_mask must be [batch, seq>=2] with no target on the first token')
     rows = response_mask[:, 1:].nonzero(as_tuple=False)
+    if rows.shape[0] == 0:
+        raise ValueError('Empty response rows in microbatch')
     return rows[:, 0], rows[:, 1]
 
 
@@ -74,7 +78,7 @@ def removed_mass(hidden, head, support, support_lse):
     bias = head.bias[support:] if getattr(head, 'bias', None) is not None else None
     extra = F.linear(hidden, head.weight[support:], bias).float().logsumexp(-1)
     total = torch.logaddexp(support_lse.float(), extra)
-    return (1 - (support_lse.float() - total).exp()).clamp_min(0)
+    return (extra - total).exp()
 
 
 def _logprobs(student, teacher, alpha, dtype):
@@ -89,6 +93,10 @@ def _logprobs(student, teacher, alpha, dtype):
     return s, t, log_p, log_q, target
 
 
+def _safe_mul(prob, log_term):
+    return torch.where(prob > 0, prob * log_term, torch.zeros_like(prob))
+
+
 def _forward_chunk(student, teacher, targets, mode, topk, clip, alpha, dtype):
     s, t, log_p, log_q, target = _logprobs(student, teacher, alpha, dtype)
     p, q = log_p.exp(), log_q.exp()
@@ -96,16 +104,16 @@ def _forward_chunk(student, teacher, targets, mode, topk, clip, alpha, dtype):
     lp_y, lq_y = log_p.gather(-1, y).squeeze(-1), log_q.gather(-1, y).squeeze(-1)
     index = None
     if mode == 'exact_rkl':
-        value = (p * (log_p - target)).sum(-1)
+        value = _safe_mul(p, log_p - target).sum(-1)
     elif mode == 'topk_rkl':
-        index = log_q.topk(topk, dim=-1).indices
+        index = target.topk(topk, dim=-1).indices
         lp, lt = log_p.gather(-1, index), target.gather(-1, index)
-        value = (lp.exp() * (lp - lt) - lp.exp() + lt.exp()).sum(-1)
+        value = (_safe_mul(lp.exp(), lp - lt) - lp.exp() + lt.exp()).sum(-1)
     else:
         advantage = (target.gather(-1, y).squeeze(-1) - lp_y).clamp(-clip, clip)
         value = -advantage * lp_y
-    stats = torch.stack([(p * (log_p - log_q)).sum(-1), lp_y, lq_y, -(p * log_p).sum(-1),
-                         -(q * log_q).sum(-1), s.logsumexp(-1), t.logsumexp(-1)], -1)
+    stats = torch.stack([_safe_mul(p, log_p - log_q).sum(-1), lp_y, lq_y, -_safe_mul(p, log_p).sum(-1),
+                         -_safe_mul(q, log_q).sum(-1), s.logsumexp(-1), t.logsumexp(-1)], -1)
     return value, stats.float(), index
 
 
@@ -114,10 +122,11 @@ def _grad_chunk(student, teacher, targets, index, mode, clip, alpha, dtype):
     p = log_p.exp()
     if mode == 'exact_rkl':
         r = log_p - target
-        return p * (r - (p * r).sum(-1, keepdim=True))
+        pr = _safe_mul(p, r)
+        return _safe_mul(p, r - pr.sum(-1, keepdim=True))
     if mode == 'topk_rkl':
         lp, lt = log_p.gather(-1, index), target.gather(-1, index)
-        weighted = lp.exp() * (lp - lt)
+        weighted = _safe_mul(lp.exp(), lp - lt)
         grad = -p * weighted.sum(-1, keepdim=True)
         return grad.scatter_add(-1, index, weighted)
     y = targets[:, None]
