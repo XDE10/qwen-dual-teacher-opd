@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "session6_math14b",
   "stamp": "20261111T133020Z",
-  "published_utc": "2026-11-11T16:12:10Z",
+  "published_utc": "2026-11-11T16:32:23Z",
   "job": {
     "state": "running"
   },
@@ -37,8 +37,83 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 54929,
-      "sha256": "f77b5b7626c068091af51bf7ed2b0e67b508cfbfca2599686d851d83bb157178"
+      "bytes": 55997,
+      "sha256": "3e673ce555e7f321301808bf9b07754caf97c7f10ab9e9efa2f045e98a9aedec"
+    },
+    {
+      "path": "runs/eval/d4_math14b_lr1e-4-checkpoint-50/code_dev.candidates.jsonl",
+      "bytes": 266619,
+      "sha256": "7b79360a9746f817590c1414912a07956709c1485a330deff10b9fd6ad2f6a43"
+    },
+    {
+      "path": "runs/eval/d4_math14b_lr1e-4-checkpoint-50/code_dev.jsonl",
+      "bytes": 279611,
+      "sha256": "5f134ebe288cfa54a028c418557f5b95c5001b11d95dd5437dde8ce8632f1ad0"
+    },
+    {
+      "path": "runs/eval/d4_math14b_lr1e-4-checkpoint-50/code_dev.summary.json",
+      "bytes": 15115,
+      "sha256": "e519c0f1fe78f765a5edb5a381c5750bb62b6f128125a45072fada790416de5c"
+    },
+    {
+      "path": "runs/eval/d4_math14b_lr1e-4-checkpoint-50/gsm8k_test.jsonl",
+      "bytes": 1841800,
+      "sha256": "24f8ab1a54364d6ff899238f67b7d63764b81e7efceee45048ba9a830554e652"
+    },
+    {
+      "path": "runs/eval/d4_math14b_lr1e-4-checkpoint-50/gsm8k_test.summary.json",
+      "bytes": 15183,
+      "sha256": "f3316b3d12693f631bea683292e23004065e918bcadfabd94ce57f292089105e"
+    },
+    {
+      "path": "runs/eval/d4_math14b_lr1e-4-checkpoint-50/humanevalplus.candidates.jsonl",
+      "bytes": 89582,
+      "sha256": "92c9f72878e1156e9bbb883748bd51a8a510d4ffdf8e9e40066a3ff4725a5a81"
+    },
+    {
+      "path": "runs/eval/d4_math14b_lr1e-4-checkpoint-50/humanevalplus.jsonl",
+      "bytes": 163457,
+      "sha256": "c35f6edd4abf306bd6ed8e8a5787d260ab4a6432d1643d339075bd221e10ef72"
+    },
+    {
+      "path": "runs/eval/d4_math14b_lr1e-4-checkpoint-50/humanevalplus.summary.json",
+      "bytes": 15124,
+      "sha256": "ac699f2c8c5b0abb6779b1c41f83290bcd36415256fa60b1472e9e6c1928f897"
+    },
+    {
+      "path": "runs/eval/d4_math14b_lr1e-4-checkpoint-50/math500.jsonl",
+      "bytes": 1040524,
+      "sha256": "be3948f380627d84b22915aa28b00533f6e437f1de9d758f293ceb00a652e215"
+    },
+    {
+      "path": "runs/eval/d4_math14b_lr1e-4-checkpoint-50/math500.summary.json",
+      "bytes": 15145,
+      "sha256": "d3e033c76bc3308614448224b2cbd7a35535279a0bd2eb38c499ced41b696c2e"
+    },
+    {
+      "path": "runs/eval/d4_math14b_lr1e-4-checkpoint-50/math_dev.jsonl",
+      "bytes": 556218,
+      "sha256": "6d9b142f56a483e54192c4e8bd52d0c0e15066ad764554ff5beefd5e76ca3f58"
+    },
+    {
+      "path": "runs/eval/d4_math14b_lr1e-4-checkpoint-50/math_dev.summary.json",
+      "bytes": 15193,
+      "sha256": "d6ffe330eee5c0f7b21a78d71bdbf39bde78d605ffc3dcdce68dc4b451b4e1d7"
+    },
+    {
+      "path": "runs/eval/d4_math14b_lr1e-4-checkpoint-50/mbppplus.candidates.jsonl",
+      "bytes": 171698,
+      "sha256": "b1441d8574486b440d0860c44c2fa6a2e4bf379eb7bc0bab8ad3a7e5e54a8985"
+    },
+    {
+      "path": "runs/eval/d4_math14b_lr1e-4-checkpoint-50/mbppplus.jsonl",
+      "bytes": 347780,
+      "sha256": "0cb898686d45d5ace8d9f5099c85ed21c05846114b36dc6de0ccb8ee53001623"
+    },
+    {
+      "path": "runs/eval/d4_math14b_lr1e-4-checkpoint-50/mbppplus.summary.json",
+      "bytes": 15113,
+      "sha256": "5b65796c1bfac392ca5e312f030d6a1701818575ed57c82c6e32d69a598dfc64"
     },
     {
       "path": "runs/opd_v3_d4_math14b_lr1e-4/metrics.jsonl",
@@ -112,8 +187,8 @@
     },
     {
       "path": "runs/sessions/20261111T133021Z/console.log",
-      "bytes": 51022,
-      "sha256": "9a64469dc3ff7470e7c87688a4c1f7bcc8fd943e5dbc6284c8fa9ea3b953690e"
+      "bytes": 51593,
+      "sha256": "1d6c79dfe7e0c6be8424b0adbea10d78d5c8902053cc8761d23f2e4ce8a53995"
     },
     {
       "path": "runs/sessions/20261111T133021Z/environment/benchmarks.txt",
@@ -162,8 +237,8 @@
     },
     {
       "path": "runs/sessions/20261111T133021Z/steps.jsonl",
-      "bytes": 66,
-      "sha256": "1b2158f38e12b4ea6fa32b22e58d99dd8c0e855d0f70419153d7f854596ff945"
+      "bytes": 134,
+      "sha256": "0470c03288233505b8b598527043e2960983cd6f52c6d5aaed59aca4bbe9e8bc"
     }
   ],
   "redacted_strings": 0,

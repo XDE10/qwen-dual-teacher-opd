@@ -349,3 +349,11 @@ Bootstrap completed: /content/runs/sessions/20261111T133021Z/environment. Next: 
 == /content/runs/opd_v3_d4_math14b_lr1e-4: 80 steps, median 96.6 s/step, peak 70.39 GiB, gate pass=True failed=[] warnings=[]
 == step eval=d4_math14b_lr1e-4@50 (started 15:51:23Z)
 `torch_dtype` is deprecated! Use `dtype` instead!
+math_dev {"count": 256, "truncated": 27, "accuracy_conservative": 0.484375, "accuracy_math_verify": 0.5859375}
+math500 {"count": 500, "truncated": 28, "accuracy_conservative": 0.45, "accuracy_math_verify": 0.568}
+gsm8k_test {"count": 1319, "truncated": 6, "accuracy_conservative": 0.7793783169067475, "accuracy_math_verify": 0.7808946171341926}
+code_dev {"count": 200, "truncated": 1}
+humanevalplus {"count": 164, "truncated": 2}
+mbppplus {"count": 378, "truncated": 3}
+== step eval=d4_math14b_lr1e-4 (started 16:27:48Z)
+`torch_dtype` is deprecated! Use `dtype` instead!
