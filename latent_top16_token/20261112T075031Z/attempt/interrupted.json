@@ -1,0 +1,11 @@
+{
+  "status": "interrupted_no_recoverable_checkpoint",
+  "termination_cause": null,
+  "completed_optimizer_steps_in_saved_evidence": 0,
+  "checkpoint_count": 0,
+  "drive": "mydrive:opd_runs/latent_top16_token/20261112T075031Z",
+  "source_bundle_sha256": "e28e19b5cbb4cde11c46cb13d87a11e8d129ab07e268c9b30b722246b638b0a0",
+  "observed_device_memory_mib_sample": 96139,
+  "observed_gpu_utilization_percent_recent_sample": 97.0,
+  "scope": "GPU generation samples only; no completed step, speed, or accuracy measurement"
+}

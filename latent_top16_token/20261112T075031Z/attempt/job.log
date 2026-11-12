@@ -1,0 +1,38 @@
+Thu Nov 12 07:50:31 AM UTC 2026
+name, memory.total [MiB], driver_version
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB, 580.82.07
+W: Skipping acquire of configured file 'main/source/Sources' as repository 'https://r2u.stat.illinois.edu/ubuntu noble InRelease' does not seem to provide it (sources.list entry misspelt?)
+Selecting previously unselected package rclone.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 127324 files and directories currently installed.)
+Preparing to unpack .../rclone_1.60.1+dfsg-3ubuntu0.24.04.6_amd64.deb ...
+Unpacking rclone (1.60.1+dfsg-3ubuntu0.24.04.6) ...
+Setting up rclone (1.60.1+dfsg-3ubuntu0.24.04.6) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Installing pinned CUDA environment
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+torchvision 0.29.1+cu130 requires torch>=2.14.0, but you have torch 2.8.0+cu128 which is incompatible.
+Found existing installation: torchvision 0.29.1+cu130
+Uninstalling torchvision-0.29.1+cu130:
+  Successfully uninstalled torchvision-0.29.1+cu130
+Found existing installation: torchaudio 2.11.0+cu130
+Uninstalling torchaudio-2.11.0+cu130:
+  Successfully uninstalled torchaudio-2.11.0+cu130
+Found existing installation: torchao 0.10.0
+Uninstalling torchao-0.10.0:
+  Successfully uninstalled torchao-0.10.0
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+timm 1.0.31 requires torchvision, which is not installed.
+bigframes 2.51.0 requires pyarrow>=23.0.1, but you have pyarrow 21.0.0 which is incompatible.
+gradio 6.31.0 requires huggingface-hub<3.0,>=1.16.0, but you have huggingface-hub 0.36.2 which is incompatible.
+diffusers 0.42.1 requires huggingface-hub<3.0,>=1.32.0, but you have huggingface-hub 0.36.2 which is incompatible.
+gradio-client 2.7.2 requires huggingface-hub<3.0,>=1.16.0, but you have huggingface-hub 0.36.2 which is incompatible.
+Versions: 2.8.0+cu128 4.57.6 0.19.0
+Starting the first two updates at the full training settings
+{"common_token_ids": 151665, "approved_prompts": {"math": 2500, "code": 2488}}
+{"model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B", "model_source": "local", "model_stage_seconds": 2.26}
+{"model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B", "saved_to_drive": true, "drive_copy_seconds": 6.07}
+{"model": "hbx/JustRL-DeepSeek-1.5B", "model_source": "local", "model_stage_seconds": 2.27}
+{"model": "hbx/JustRL-DeepSeek-1.5B", "saved_to_drive": true, "drive_copy_seconds": 6.74}
+{"model": "Fate-Zero/Archer2.0-Code-1.5B-Preview", "model_source": "local", "model_stage_seconds": 2.25}
+{"model": "Fate-Zero/Archer2.0-Code-1.5B-Preview", "saved_to_drive": true, "drive_copy_seconds": 7.18}
+`torch_dtype` is deprecated! Use `dtype` instead!

@@ -1,0 +1,54 @@
+{
+  "schema": "opd-results-v1",
+  "name": "latent_top16_token",
+  "stamp": "20261112T075031Z",
+  "published_utc": "2026-11-12T12:51:54Z",
+  "job": {
+    "state": "not recorded"
+  },
+  "publisher": {
+    "host": "XDE10",
+    "gpu": null,
+    "code": {
+      "commit": "98e9f861f8829ed7cb48d699e2ae0f7a7536411a",
+      "branch": "feat/opd-v3-mopd-data-v5",
+      "modified_tracked_files": true
+    }
+  },
+  "sources": [
+    {
+      "label": "attempt",
+      "path": "/tmp/project2-top16/interrupted",
+      "kind": "folder"
+    }
+  ],
+  "files": [
+    {
+      "path": "attempt/interrupted.json",
+      "bytes": 520,
+      "sha256": "337c4ed30926c783f897df3c36b397f94def2a6ea54cebd737bccedb26f1ce2f"
+    },
+    {
+      "path": "attempt/job.log",
+      "bytes": 3449,
+      "sha256": "6dfb4c9d996bdbc4be70ec418ff01399f90137895463b0224a6b3a9e60bf25b2"
+    },
+    {
+      "path": "attempt/run/metrics.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "attempt/run/run_identity.json",
+      "bytes": 31427,
+      "sha256": "7a3f57766bfd948e6f935994679d4b3a82caaa52db3e7832f8b8ab16f831b2df"
+    }
+  ],
+  "redacted_strings": 0,
+  "skipped": [],
+  "skipped_count": 0,
+  "limits_mb": {
+    "per_file": 20,
+    "total": 50
+  }
+}
