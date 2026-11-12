@@ -17,6 +17,25 @@
 - 代码评测在 **Docker 沙箱**中运行，数据集代码不在宿主执行；目标环境无可用 Docker 时停止，不得静默回退宿主子进程。
 - 历史 CPU 测试、2 步 smoke 与 tiny 模型恢复测试只证明工程链路，不能替代真实 Qwen 前向、显存、梯度与能力验收。
 
+## R1 / Latent-MOPD 双域探索（2026-11-12）
+
+这轮探索使用 `DeepSeek-R1-Distill-Qwen-1.5B` 学生、`JustRL-DeepSeek-1.5B` 数学教师和 `Archer2.0-Code-1.5B-Preview` 代码教师。三个版本由 [训练入口](src/training/latent_opd.py) 锁定，权重缓存在 `mydrive:models/`。训练使用 v5 已批准的数学和代码池。D0–D4 的模型、配置和结果沿用上面的 OPD v3 记录。
+
+- [损失实现](src/losses/latent_opd.py) 依据 [Latent-MOPD 附录 A、C](https://arxiv.org/html/2610.02381v1)。每个回答位置选择学生的 top-16 候选，师生打分在有效词表上归一化，优势按整步的领域内奖励标准差缩放。`token` 只使用这套 token 损失，`latent` 加最后三层对齐并按教师计数各淡出 10 步，`math20` 只把数学淡出延长到 20 步。
+- 正式配置为单卡 LoRA、数学和代码逐步交替、62 步、每步 32 题 × 4 个回答、温度 1.0、生成上限 16,384 token、AdamW 固定学习率 `1e-5`。论文主实验包含逻辑域并使用 8 个 worker。本实验的并行生成分批和已批准数据属于双域改编。
+- WSL2 执行 `~/.venvs/opd/bin/python -m pytest -q`，196 项通过、1 项跳过，包含 top-16 损失与梯度的数值对照。此前 L4 短跑用全词表 reverse KL 和 128 token 上限，验证了三条训练路径及旧实现的 checkpoint 续跑。[L4 原始记录](https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent_smoke/20261112T065855Z)
+- G4 首次 top-16 正式负载尝试于 2026-11-12 15:50（新加坡时间）启动。32 条并发生成期间观测到显存约 93.9 GiB，最近 20 秒平均 GPU 利用率约 97%。复查时会话已结束，Drive 保存的步级日志为空且无 checkpoint，退出原因未确认。正式步耗时、训练能力提升和评测分数仍待验证。[G4 启动与中断证据](https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent_top16_token/20261112T075031Z)
+
+2026-11-12 20:57（新加坡时间）的 G4 重试由负责人关闭会话，复查 Drive 时没有可恢复的 checkpoint。[重试中断记录](https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent_top16_token_retry/20261112T125718Z)
+
+2026-11-12 21:12（新加坡时间）在 G4 会话 `p2-top16-restart` 按相同配置从第 1 步重开纯 token。最后一次同步在 21:33，保存的 `metrics.jsonl` 为空，Drive 中没有 checkpoint，Colab 已无该会话。运行未完成，终止原因未确认。[最后一次同步记录](https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent_top16_token_retry/20261112T131202Z)
+
+[Colab 启动脚本](scripts/colab_latent_top16.sh) 使用 16 条并发，保持每个优化器步生成 128 个回答，记录 GPU 采样并在第一步结束即保存 checkpoint。用已引导的 Colab 环境从仓库根目录运行：
+
+```bash
+python scripts/colab_job_v3.py latent_top16_token_retry --drive mydrive:opd_runs --publish --sync-every 3 --save runs=/content/runs/r1_latent_top16_20261112 -- bash scripts/colab_latent_top16.sh token
+```
+
 ## 快速开始
 
 所有命令都从项目根目录执行。

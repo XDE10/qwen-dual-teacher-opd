@@ -328,6 +328,59 @@ def build_trainer(c, base_state, seed=0):
     return OPDTrainerV3(c, student, teachers, engine, samplers, prefixes, SUPPORT, PAD, 'cpu', optimizer, scheduler)
 
 
+def test_latent_top16_scores_and_gradients_match_dense_appendix_c(monkeypatch):
+    from src.losses import latent_opd
+
+    monkeypatch.setattr(latent_opd, 'LOGIT_ROWS', 2)
+    student, teacher = tiny_qwen(seed=1), tiny_qwen(seed=2)
+    ids, attention = right_pad([[3, 4, 5, 6], [7, 8, 9]], PAD, 'cpu')
+    response = latent_opd.response_batch(ids, attention, [[3], [7, 8]], SUPPORT)
+    batch, rows, positions = response
+    student_hidden = student.model(**batch).last_hidden_state[rows, positions]
+    teacher_hidden = teacher.model(**batch).last_hidden_state[rows, positions]
+    student_log_probs = support_logits(student_hidden, student.lm_head, SUPPORT).float().log_softmax(-1)
+    teacher_log_probs = support_logits(teacher_hidden, teacher.lm_head, SUPPORT).float().log_softmax(-1)
+    selected, expected_ids = student_log_probs.detach().topk(16, dim=-1)
+    expected_rewards = selected.softmax(-1) * (teacher_log_probs.detach().gather(-1, expected_ids) - selected)
+    expected_advantages = expected_rewards / expected_rewards.std(correction=1).clamp_min(1e-6)
+    expected_loss = -(expected_advantages * student_log_probs.gather(-1, expected_ids)).sum(-1).mean()
+
+    candidates, rewards = latent_opd.score_candidates(student, teacher, response, SUPPORT)
+    assert torch.equal(candidates, expected_ids) and not rewards.requires_grad
+    torch.testing.assert_close(rewards, expected_rewards, atol=1e-7, rtol=1e-5)
+    scales = latent_opd.reward_scale([(candidates[:2], rewards[:2]), (candidates[2:], rewards[2:])])
+    actual_loss = latent_opd.token_objective(student_hidden, student.lm_head, SUPPORT, candidates, rewards / scales)
+    torch.testing.assert_close(actual_loss, expected_loss)
+    actual_grad, = torch.autograd.grad(actual_loss, student_hidden, retain_graph=True)
+    expected_grad, = torch.autograd.grad(expected_loss, student_hidden)
+    torch.testing.assert_close(actual_grad, expected_grad, atol=1e-7, rtol=1e-5)
+
+
+@pytest.mark.parametrize(('variant', 'start_step', 'weights'), [
+    ('token', 0, [(1.0, 0.0), (1.0, 0.0)]),
+    ('latent', 0, [(0.0, 1.0), (0.0, 1.0)]),
+    ('latent', 10, [(0.5, 0.5), (0.5, 0.5)]),
+    ('math20', 20, [(1.0, 0.5), (1.0, 0.0)]),
+    ('math20', 40, [(1.0, 0.0), (1.0, 0.0)]),
+])
+def test_latent_opd_updates_only_student_with_per_teacher_weights(variant, start_step, weights):
+    from src.training.latent_opd import train_step
+
+    trainer = build_trainer(trainer_config(), tiny_qwen(seed=99).state_dict())
+    trainer.student.gradient_checkpointing_enable(gradient_checkpointing_kwargs={'use_reentrant': False})
+    trainer.student.enable_input_require_grads()
+    trainer.state['step'] = start_step
+    for domain, expected in zip(('math', 'code'), weights):
+        before = [param.detach().clone() for param in trainer.params]
+        record = train_step(trainer, variant, prompts=1, responses=2, microbatch_tokens=8)
+        assert record['domain'] == domain and record['responses'] == 2
+        assert (record['token_weight'], record['latent_weight']) == expected
+        assert math.isfinite(record['loss']) and record['gradient_norm'] > 0
+        assert any(not torch.equal(param, old) for param, old in zip(trainer.params, before))
+        assert all(param.grad is None for teacher in trainer.teachers.models.values()
+                   for param in teacher.parameters())
+
+
 def test_mixed_step_routes_teachers_updates_only_lora_and_reports_telemetry():
     torch.manual_seed(11)
     c = trainer_config()
