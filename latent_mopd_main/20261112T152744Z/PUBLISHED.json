@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent_mopd_main",
   "stamp": "20261112T152744Z",
-  "published_utc": "2026-11-12T15:49:12Z",
+  "published_utc": "2026-11-12T15:51:23Z",
   "job": {
     "state": "running"
   },
@@ -37,18 +37,18 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 33636,
-      "sha256": "e150cac71d15e6fac99c6e584cb4c43ec80fcca0e565b60637c5002698d431e9"
+      "bytes": 50126,
+      "sha256": "86d808e340d95f10624f17045334aea5ca8486a4b495d02db0a8ac85a5fa8157"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/metrics.jsonl",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "bytes": 422,
+      "sha256": "31826ca5cd1c10a359d904e1a367040406c1c913404b8b10a46af5866f3d270e"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/phase_metrics.jsonl",
-      "bytes": 17762,
-      "sha256": "12c7372ce9f7451bfa951892298f77f12c9f7efb2a6db6ec6f08e44d7b9401a2"
+      "bytes": 33114,
+      "sha256": "67f0994e9c2a0abecabd4c5d19f1baef775f07db85a24ac8fb8a372c4dfbd97a"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/run_identity.json",
@@ -80,6 +80,10 @@
     {
       "path": "job/pid",
       "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/checkpoint-1/",
+      "reason": "folder not published"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000001/batch-0001.json.gz",
@@ -206,6 +210,18 @@
       "reason": "not a text result"
     },
     {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000001/batch-0032.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000002/batch-0001.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000002/batch-0002.json.gz",
+      "reason": "not a text result"
+    },
+    {
       "path": "runs/smoke/latent_mopd_top16_latent/checkpoint-1/",
       "reason": "folder not published"
     },
@@ -226,7 +242,7 @@
       "reason": "not a text result"
     }
   ],
-  "skipped_count": 38,
+  "skipped_count": 42,
   "limits_mb": {
     "per_file": 20,
     "total": 50
