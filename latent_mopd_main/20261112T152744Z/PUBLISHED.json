@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent_mopd_main",
   "stamp": "20261112T152744Z",
-  "published_utc": "2026-11-12T15:40:42Z",
+  "published_utc": "2026-11-12T15:42:50Z",
   "job": {
     "state": "running"
   },
@@ -37,8 +37,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 23632,
-      "sha256": "4eb5433d3979e3cbea9da206f0d91fa589eb7719ee1a87124a882ea9426c246f"
+      "bytes": 27147,
+      "sha256": "2196b47c8a2596e2d71c61a736e30ab416d531bebf1364d27882b3dc4a448b6e"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/metrics.jsonl",
@@ -47,8 +47,8 @@
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/phase_metrics.jsonl",
-      "bytes": 10461,
-      "sha256": "507c0debe5f94847519bb2fe520eeff1e28b8df1839853fd6378bd304ccd4670"
+      "bytes": 13262,
+      "sha256": "cbe168ce0c2675093a8eb7d15dfe2e765a9357fa83c7471bc4c9dacd02740cde"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/run_identity.json",
@@ -154,6 +154,26 @@
       "reason": "not a text result"
     },
     {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000001/batch-0019.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000001/batch-0020.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000001/batch-0021.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000001/batch-0022.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000001/batch-0023.json.gz",
+      "reason": "not a text result"
+    },
+    {
       "path": "runs/smoke/latent_mopd_top16_latent/checkpoint-1/",
       "reason": "folder not published"
     },
@@ -174,7 +194,7 @@
       "reason": "not a text result"
     }
   ],
-  "skipped_count": 25,
+  "skipped_count": 30,
   "limits_mb": {
     "per_file": 20,
     "total": 50
