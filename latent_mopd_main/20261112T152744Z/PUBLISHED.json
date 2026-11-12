@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent_mopd_main",
   "stamp": "20261112T152744Z",
-  "published_utc": "2026-11-12T20:11:35Z",
+  "published_utc": "2026-11-12T20:13:49Z",
   "job": {
     "state": "running"
   },
@@ -37,8 +37,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 552573,
-      "sha256": "b81bcc64da95b2a915f388eb2a3d73f8c0b43a07f32301daf2104fcdb5d9a05c"
+      "bytes": 556049,
+      "sha256": "280c5ee7d254915d5f1298c9d8a3f9b5be83d95e57a90714712958388817fc6b"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/metrics.jsonl",
@@ -47,8 +47,8 @@
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/phase_metrics.jsonl",
-      "bytes": 449230,
-      "sha256": "89f724bbf2adcf8529de6a5db38062db65d17b3824d9827141ea6326c1ac0ae4"
+      "bytes": 452031,
+      "sha256": "9e2e634fdd588d98c58b9eddda1af343ab6f9c9d0c03dbcd30035d430be7a18e"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/run_identity.json",
@@ -1190,6 +1190,26 @@
       "reason": "not a text result"
     },
     {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000009/batch-0021.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000009/batch-0022.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000009/batch-0023.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000009/batch-0024.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000009/batch-0025.json.gz",
+      "reason": "not a text result"
+    },
+    {
       "path": "runs/smoke/latent_mopd_top16_latent/checkpoint-1/",
       "reason": "folder not published"
     },
@@ -1210,7 +1230,7 @@
       "reason": "not a text result"
     }
   ],
-  "skipped_count": 284,
+  "skipped_count": 289,
   "limits_mb": {
     "per_file": 20,
     "total": 50
