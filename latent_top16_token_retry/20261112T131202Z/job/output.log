@@ -1,0 +1,20 @@
+[colab_job] running: bash scripts/colab_latent_top16.sh token
+2026/11/12 13:12:02.296, 0, 97887, 0
+{"common_token_ids": 151665, "approved_prompts": {"math": 2500, "code": 2488}}
+{"model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B", "model_source": "local", "model_stage_seconds": 2.06}
+{"model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B", "saved_to_drive": true, "drive_copy_seconds": 4.67}
+{"model": "hbx/JustRL-DeepSeek-1.5B", "model_source": "local", "model_stage_seconds": 2.07}
+{"model": "hbx/JustRL-DeepSeek-1.5B", "saved_to_drive": true, "drive_copy_seconds": 4.7}
+{"model": "Fate-Zero/Archer2.0-Code-1.5B-Preview", "model_source": "local", "model_stage_seconds": 2.07}
+{"model": "Fate-Zero/Archer2.0-Code-1.5B-Preview", "saved_to_drive": true, "drive_copy_seconds": 4.7}
+`torch_dtype` is deprecated! Use `dtype` instead!
+2026/11/12 13:12:32.313, 15299, 97887, 60
+2026/11/12 13:13:02.328, 19119, 97887, 88
+2026/11/12 13:13:32.348, 26427, 97887, 90
+2026/11/12 13:14:02.368, 34615, 97887, 93
+2026/11/12 13:14:32.388, 42975, 97887, 92
+[colab_job] periodic save (every 3 min)
+2026/11/12 13:15:02.406, 51679, 97887, 94
+2026/11/12 13:15:04 NOTICE:     1.644 KiB / 1.644 KiB, 100%, 4 B/s, ETA 0s
+2026/11/12 13:15:07 NOTICE:    30.706 KiB / 30.706 KiB, 100%, 30.687 KiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent_top16_token_retry/20261112T131202Z

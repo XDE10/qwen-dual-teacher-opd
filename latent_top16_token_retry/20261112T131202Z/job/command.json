@@ -1,0 +1,27 @@
+{
+  "name": "latent_top16_token_retry",
+  "command": [
+    "bash",
+    "scripts/colab_latent_top16.sh",
+    "token"
+  ],
+  "cwd": "/content/p2-top16-retry",
+  "started_utc": "2026-11-12T13:12:02Z",
+  "stamp": "20261112T131202Z",
+  "save": [
+    [
+      "runs",
+      "/content/runs/r1_latent_top16_20261112"
+    ]
+  ],
+  "drive": "mydrive:opd_runs",
+  "publish": true,
+  "sync_every_min": 3.0,
+  "drive_about": {
+    "total": 5497558138880,
+    "used": 416993565244,
+    "trashed": 3356980760,
+    "other": 24188451,
+    "free": 5080540385185
+  }
+}

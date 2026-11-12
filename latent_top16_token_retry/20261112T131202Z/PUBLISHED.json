@@ -1,0 +1,70 @@
+{
+  "schema": "opd-results-v1",
+  "name": "latent_top16_token_retry",
+  "stamp": "20261112T131202Z",
+  "published_utc": "2026-11-12T13:15:07Z",
+  "job": {
+    "state": "running"
+  },
+  "publisher": {
+    "host": "fcbb1ed28fb5",
+    "gpu": [
+      "NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB"
+    ],
+    "code": {
+      "commit": null,
+      "branch": null,
+      "modified_tracked_files": null
+    }
+  },
+  "sources": [
+    {
+      "label": "job",
+      "path": "/content/jobs/latent_top16_token_retry",
+      "kind": "folder"
+    },
+    {
+      "label": "runs",
+      "path": "/content/runs/r1_latent_top16_20261112",
+      "kind": "folder"
+    }
+  ],
+  "files": [
+    {
+      "path": "job/command.json",
+      "bytes": 549,
+      "sha256": "271644006379d4c238424a3aa6886e766d8427e3651688e8319342f95a295432"
+    },
+    {
+      "path": "job/output.log",
+      "bytes": 1369,
+      "sha256": "7e2fc931800eb0120d42aea2c31f859ec69bb16c597ee4221516c46329e4fb0e"
+    },
+    {
+      "path": "runs/latent_mopd_top16_token/metrics.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runs/latent_mopd_top16_token/run_identity.json",
+      "bytes": 31443,
+      "sha256": "fd33329697ae5e36e50fd33dea5ffe7bc71548713b25ddc7a270165fb98857a8"
+    }
+  ],
+  "redacted_strings": 0,
+  "skipped": [
+    {
+      "path": "job/child_pid",
+      "reason": "not a text result"
+    },
+    {
+      "path": "job/pid",
+      "reason": "not a text result"
+    }
+  ],
+  "skipped_count": 2,
+  "limits_mb": {
+    "per_file": 20,
+    "total": 50
+  }
+}
