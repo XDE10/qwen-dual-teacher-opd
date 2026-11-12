@@ -1,0 +1,114 @@
+{
+  "schema": "opd-results-v1",
+  "name": "latent_mopd_main",
+  "stamp": "20261112T152744Z",
+  "published_utc": "2026-11-12T15:30:04Z",
+  "job": {
+    "state": "running"
+  },
+  "publisher": {
+    "host": "7d7a0f82f60e",
+    "gpu": [
+      "NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB"
+    ],
+    "code": {
+      "commit": null,
+      "branch": null,
+      "modified_tracked_files": null
+    }
+  },
+  "sources": [
+    {
+      "label": "job",
+      "path": "/content/jobs/latent_mopd_main",
+      "kind": "folder"
+    },
+    {
+      "label": "runs",
+      "path": "/content/runs/r1_latent_observable",
+      "kind": "folder"
+    }
+  ],
+  "files": [
+    {
+      "path": "job/command.json",
+      "bytes": 561,
+      "sha256": "a664ad574bc7b163abb58e4868175c4e4aec47b4efa016d79e7338930acb1542"
+    },
+    {
+      "path": "job/output.log",
+      "bytes": 10779,
+      "sha256": "75de005e3ababe12488d912c38413503a30622f3958487c073bdb15daf9db1da"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/metrics.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/phase_metrics.jsonl",
+      "bytes": 964,
+      "sha256": "fa7b1618a25c9bcbd8b6dd76db86e780bbfc387d0e26bcb6f9ffaee7d0579b91"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/run_identity.json",
+      "bytes": 31561,
+      "sha256": "bff53edd704f2562b3661d468ea583d0dba3084c47f7f6c452ba8a810391685e"
+    },
+    {
+      "path": "runs/smoke/latent_mopd_top16_latent/metrics.jsonl",
+      "bytes": 1247,
+      "sha256": "c9b56e6dd1d3d6f2b635ab283a631f85ebee690dafed1fcb37bcc3e7cb8e23b5"
+    },
+    {
+      "path": "runs/smoke/latent_mopd_top16_latent/phase_metrics.jsonl",
+      "bytes": 6507,
+      "sha256": "539487306b7502893c2c95916832353ac2d63b1b2e390e375c839f6431d84d39"
+    },
+    {
+      "path": "runs/smoke/latent_mopd_top16_latent/run_identity.json",
+      "bytes": 31557,
+      "sha256": "e4d57337e4b95c4407cf45ab8eb25d3ca646abe7a8d78ea9479bfb5f2936bd53"
+    }
+  ],
+  "redacted_strings": 0,
+  "skipped": [
+    {
+      "path": "job/child_pid",
+      "reason": "not a text result"
+    },
+    {
+      "path": "job/pid",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000001/batch-0001.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/smoke/latent_mopd_top16_latent/checkpoint-1/",
+      "reason": "folder not published"
+    },
+    {
+      "path": "runs/smoke/latent_mopd_top16_latent/checkpoint-3/",
+      "reason": "folder not published"
+    },
+    {
+      "path": "runs/smoke/latent_mopd_top16_latent/rollout_spool/step-000001/batch-0001.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/smoke/latent_mopd_top16_latent/rollout_spool/step-000002/batch-0001.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/smoke/latent_mopd_top16_latent/rollout_spool/step-000003/batch-0001.json.gz",
+      "reason": "not a text result"
+    }
+  ],
+  "skipped_count": 8,
+  "limits_mb": {
+    "per_file": 20,
+    "total": 50
+  }
+}
