@@ -5497,3 +5497,17 @@ Three-step GPU smoke passed
 2026/11/12 23:09:31.851, 42667, 97887, 85
 2026/11/12 23:09:32 NOTICE:   776.399 KiB / 776.399 KiB, 100%, 775.744 KiB/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/latent_mopd_main/20261112T152744Z
+[publish] 8 files (1.61 MB), 449 left out, 0 strings redacted -> results:latent_mopd_main/20261112T152744Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent_mopd_main/20261112T152744Z
+2026/11/12 23:10:01.870, 42667, 97887, 86
+{"step": 14, "domain": "code", "phase": "rollout_batch_done", "timestamp": 1794525017.176666, "batch": 25, "reused": false, "done_responses": 100, "total_responses": 128, "response_tokens": 53000, "max_response_tokens": 16384, "truncated_responses": 1, "seconds": 148.89652402000138, "allocated_bytes": 14537439232, "reserved_bytes": 44033900544}
+{"step": 14, "domain": "code", "phase": "rollout_batch_start", "timestamp": 1794525017.1770372, "batch": 26, "done_responses": 100, "total_responses": 128, "allocated_bytes": 14537439232, "reserved_bytes": 44033900544}
+2026/11/12 23:10:31.888, 42667, 97887, 75
+{"step": 14, "domain": "code", "phase": "rollout_batch_done", "timestamp": 1794525051.4891148, "batch": 26, "reused": false, "done_responses": 104, "total_responses": 128, "response_tokens": 14277, "max_response_tokens": 4044, "truncated_responses": 0, "seconds": 34.31190672699813, "allocated_bytes": 14537439232, "reserved_bytes": 44033900544}
+{"step": 14, "domain": "code", "phase": "rollout_batch_start", "timestamp": 1794525051.4894803, "batch": 27, "done_responses": 104, "total_responses": 128, "allocated_bytes": 14537439232, "reserved_bytes": 44033900544}
+2026/11/12 23:11:01.906, 42667, 97887, 76
+2026/11/12 23:11:31.925, 42667, 97887, 83
+[colab_job] periodic save (every 2 min)
+2026/11/12 23:11:38 NOTICE:   867.605 KiB / 867.605 KiB, 100%, 866.945 KiB/s, ETA 0s
+2026/11/12 23:11:40 NOTICE:   792.770 KiB / 792.770 KiB, 100%, 792.324 KiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent_mopd_main/20261112T152744Z
