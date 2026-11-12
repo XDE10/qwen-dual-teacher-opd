@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent_mopd_main",
   "stamp": "20261112T152744Z",
-  "published_utc": "2026-11-12T16:44:29Z",
+  "published_utc": "2026-11-12T16:46:37Z",
   "job": {
     "state": "running"
   },
@@ -37,8 +37,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 128126,
-      "sha256": "cdbd28e70f13ba9a720791d1b333ae6364828ff08fe775d802e628a6be84ce09"
+      "bytes": 131600,
+      "sha256": "69ee6276fee08ad5e41c96beb4fedacb9a17cacb087afe60944f65f8c2c982ad"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/metrics.jsonl",
@@ -47,8 +47,8 @@
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/phase_metrics.jsonl",
-      "bytes": 93786,
-      "sha256": "02a1a27b504cfa1a5eca0238b44bce38a082c608dccd581e4bdb1bd7f5bc0369"
+      "bytes": 96585,
+      "sha256": "4b38693781eeac363f79a8fa47b47fb5a7da04b769b92fa070165f9bd7d21eed"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/run_identity.json",
@@ -378,6 +378,26 @@
       "reason": "not a text result"
     },
     {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000003/batch-0010.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000003/batch-0011.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000003/batch-0012.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000003/batch-0013.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000003/batch-0014.json.gz",
+      "reason": "not a text result"
+    },
+    {
       "path": "runs/smoke/latent_mopd_top16_latent/checkpoint-1/",
       "reason": "folder not published"
     },
@@ -398,7 +418,7 @@
       "reason": "not a text result"
     }
   ],
-  "skipped_count": 81,
+  "skipped_count": 86,
   "limits_mb": {
     "per_file": 20,
     "total": 50
