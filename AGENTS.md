@@ -26,8 +26,7 @@
 ## 2. 硬约束（违反即结论错误）
 
 - **token IDs 只能由学生模板渲染一次**，并原样（完整 `input_ids` / `attention_mask`）交给教师；教师不得重新套自己的 chat template，也不得 decode 后再 tokenize 学生前缀。教师侧不得引入自己的后缀/系统提示。
-- **不得称 D0～D4 已完成**。GPU 上目前只有 2 步 smoke、训练前教师探针（`reports/g4_first_session_20261109/`）和三个学习率各 30 步的 D4 训练（`reports/g4_session2_lr_sweep_20261109/`）；D0～D4 都还没有评测分数。
-- **GPU 已验到 30 步训练**。G4 上跑过完整批次（每步 64+64 条）的前 30 步，显存和吞吐已实测；GPU 上的 checkpoint 续训、评测生成、SFT 训练都不能称为已验证；在线准确率和关卡通过不代表能力提升。
+- **明确区分已跑完与未运行的实验配置**。G4 GPU 与本地 Docker 上已完成 D0、SFT（`sft_v3_seqkd_mix`）、D3（`d3_general_lr1e-4`）、D4 专职双教师（`d4_dual`、`d4_dual_lr1e-4`、`d4_prox07_lr1e-4`）以及 D4 先验对齐双教师（`d4_math14b_lr1e-4`：`Qwen2.5-14B-Instruct` + `Qwen2.5-Coder-7B-Instruct`）的 80 步训练与 6 套评测集（详见 [reports/g4_opd_v3_experiments_20261112/README.md](reports/g4_opd_v3_experiments_20261112/README.md)）；单域对照组（`d1_math*`、`d2_code*`）与附加消融配置（`d4_blocked*`、`d4_pcgrad`、`d4_pg`、`d4_topk`、`d4_warmstart*`、`d4_aligned_lr1e-4`）仅完成 CPU 契约测试，未在 GPU 上运行。
 - **数据逐行批准**。范围只认 manifest 的 `approved_training_files` / `approved_evaluation_files` 与逐行 `training_approved`；候选 ≠ 批准，AI 审核 ≠ 人工金标。dev 不得进训练。
 - **不得手改批准字段或哈希**来绕过检查。新数据版本必须独立取证、保留旧发布；不能用批量重算 SHA 的方式"修好"检查。
 - **代码评测必须走 Docker 沙箱**，数据集代码不在宿主执行；无可用 Docker 时停止并报告，不得回退宿主子进程。Colab 没有 Docker：GPU 端只生成候选 JSONL（`scripts/generate_eval_v3.py`），由本地 Docker 执行。

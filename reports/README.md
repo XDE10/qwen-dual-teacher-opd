@@ -10,8 +10,9 @@
 | `project2_release_v5_20261108/` | v5 候选审计：全部 5456 条 prompt 的预算复核、decontamination_v5 命中证据、补题统计、筛除历史说明与批准步骤（`README.md`、`audit.json`） | **当前审计**（v5 已批准） |
 | `g4_first_session_20261109/` | 第一次上卡（Colab G4）：环境、2 步 smoke 的耗时与显存、教师适配度探针的 KL 矩阵，以及据此做的配置改动；原始文件在 `results` 分支 | **GPU 实测记录**（只到 smoke 与探针） |
 | `g4_session2_lr_sweep_20261109/` | 第二次上卡：三个学习率各 30 步完整批次的吞吐、显存、KL/熵/长度/EOS/在线准确率，配对比较，学生熵下降的成因分析，关卡 v1→v2，学习率决定；原始文件在 `results` 分支 | **GPU 实测记录**（训练遥测，没有评测分数） |
+| `g4_opd_v3_experiments_20261112/` | 第三至第六次上卡与本地 Docker 评测汇总：D0、SFT（`SeqKD-Mix`）、D3（`7B` 单通用教师）、D4（`Math-7B+Coder-7B` 含 `3e-5`、`1e-4`、近端教师 `prox07`）以及先验对齐双教师 `d4_math14b_lr1e-4`（`14B-Instruct+Coder-7B`）的 80 步训练与 6 大评测集完整结果（`README.md`、`evaluation_matrix.json`） | **GPU 正式训练与完整评测记录** |
 | `handover_20261024_v3/` | 2026-10-25 v3 审核与实施记录：200 题比较器逐项决策（192 reviewed / 8 blocked）、去重、Docker 环境、v3 配置与测试日志 | **历史审核记录**（v3 的 2499 池已被 v4 取代） |
-| 根目录当前审核 json/md（13 个文件） | tokenizer 对齐审计、提示词契约审计、去重、人工审核包、代码接口/官方基准重叠/沙箱/CPU 环境等 | **当前审核依据** |
+| 根目录当前审核 json/md（15 个文件） | tokenizer 对齐审计（含 14B 扩展审计）、提示词契约审计、去重、人工审核包、代码接口/官方基准重叠/沙箱/CPU 环境、技术审查复核记录等 | **当前审核依据** |
 
 ## 当前 v4 验收证据（`code_training_repair_20261025_v4/`）
 

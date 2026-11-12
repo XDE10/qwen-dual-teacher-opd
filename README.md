@@ -2,11 +2,16 @@
 
 > 一句话定位：让 1.5B 学生模型在数学与代码两个领域，用自己的在线生成轨迹接受领域专业教师（数学 7B / 代码 7B）的 **token 级反向 KL** 监督，即 On-Policy Distillation（OPD），并比较领域收益、跨域遗忘与教师成本。
 
-**当前状态（2026-11-09，opd-v3 分支）**。接手先读 [docs/handover/kiro_ide_onboarding.md](docs/handover/kiro_ide_onboarding.md)（本地 Kiro IDE 交接：当前进度、环境初始化、下一次上卡的命令、决策规则）。
+**当前状态（2026-11-12，opd-v3 分支）**。完整实验报告与评测矩阵见 [reports/g4_opd_v3_experiments_20261112/README.md](reports/g4_opd_v3_experiments_20261112/README.md)；本地 Kiro IDE 交接说明见 [docs/handover/kiro_ide_onboarding.md](docs/handover/kiro_ide_onboarding.md)。
 
-- **opd-v3（MOPD 式混合批次双教师 OPD）已实现，CPU 契约测试通过**：单步内混合 math/code，按领域路由常驻教师；批量 rollout；只算回答位置的 logits；exact / top-k / PG 三种损失；分层采样；软/硬运行身份。设计、显存规划（A100 80GB / G4 96GB）与实验矩阵见 [docs/opd_v3_mopd.md](docs/opd_v3_mopd.md)。
-- **G4 上真实模型已跑通 2 步 smoke，并测了教师适配度**（2026-11-09，[reports/g4_first_session_20261109/README.md](reports/g4_first_session_20261109/README.md)）：两位教师常驻时显存峰值 35.45 GiB。数学专家教师离学生最远（逐 token KL 0.369，约为 MOPD 失稳案例的 2 倍），代码教师 0.223，通用教师在数学上 0.154。完整批次的训练、吞吐和 checkpoint 续训**尚未验证**；**D0～D4 均未完成**，不得写成已有正式训练结果。
-- **三个学习率各跑了 30 步完整批次**（2026-11-09，[reports/g4_session2_lr_sweep_20261109/README.md](reports/g4_session2_lr_sweep_20261109/README.md)）：每步 64+64 条，约 95 s/步，显存峰值约 55 GiB，梯度平稳。学生熵大幅下降，但教师在同一批 rollout 上的熵也一起下降，数学教师最初的分歧主要在格式 token 上。主实验定为 3e-5（`d4_dual`），从 checkpoint-30 续跑到 80 步。训练题上的在线准确率（T=1）只是遥测，greedy 评测还没有结果。
+- **opd-v3（MOPD 式混合批次双教师 OPD）已实现，CPU 契约测试通过（190 passed / 1 skipped）**：单步内混合 math/code，按领域路由常驻教师；批量 rollout；只算回答位置的 logits；exact / top-k / PG 三种损失；分层采样；软/硬运行身份。设计、显存规划（A100 80GB / G4 96GB）与实验矩阵见 [docs/opd_v3_mopd.md](docs/opd_v3_mopd.md)。
+- **G4 上已完成 6 轮上卡训练、checkpoint 续训与全套贪心评测（含本地 Docker 代码沙箱打分）**（详见 [reports/g4_opd_v3_experiments_20261112/README.md](reports/g4_opd_v3_experiments_20261112/README.md)）：
+  - **D0 基线（`1.5B-Instruct`）**：`math_dev` 58.20%（保守 46.88%）、`MATH-500` 55.00%（保守 44.40%）、`GSM8K` 73.92%（保守 70.13%）、`code_dev` 39.00%（剔除 8 题阻断后 40.62%）、`HumanEval` 51.22% / Plus 46.95%、`MBPP` 64.55% / Plus 55.29%。
+  - **SFT 基线（`sft_v3_seqkd_mix`）**：`math_dev` 58.59%（保守 49.22%）、`code_dev` 38.50%，表明离线序列蒸馏对已指令微调学生的增益有限。
+  - **D3 通用单教师（`Qwen2.5-7B-Instruct` @ 80，`lr=1e-4`）**：`math_dev` 61.33%、`MATH-500` **58.80%**、`GSM8K` 77.26%、`MBPP` **67.72% / Plus 59.52%**，但 `HumanEval` 仅 54.27% / Plus 50.61%、`code_dev` 40.00%。
+  - **D4 专职双教师（`Math-7B` + `Coder-7B`）**：在 `3e-5 @ 80` 和 `1e-4 @ 30` 下同时提升数学（`MATH-500` 58.00% / 56.60%）与代码（`HumanEval+` 54.88% / 56.10%）；但在 `1e-4 @ 80` 下因 `Math-7B` 先验偏远（初始 KL 0.369）出现数学长题截断退化（`MATH-500` 54.80%）；近端教师消融 `d4_prox07_lr1e-4`（$\alpha=0.7$）将 `HumanEval` 推高至 **62.80% / Plus 57.32%**、`code_dev` 推高至 **43.50%**。
+  - **D4 先验对齐双教师（`d4_math14b_lr1e-4`：`Qwen2.5-14B-Instruct` + `Qwen2.5-Coder-7B-Instruct`）**：80 步训练以**零失败、零警告**通过 Gate v2（显存峰值 70.39 GiB，中位 96.6 s/步）；在 `@50` 实现 **6 大评测集 100% 全面超越 D0**（`GSM8K` **78.09%** 全项目最高、`MATH-500` 56.80%、`code_dev` 43.00%、`HumanEval` 61.59% / Plus 54.88%、`MBPP` 65.08% / Plus 55.82%），在 `@80` 取得 `math_dev` **60.94%**、`MATH-500` **56.80%**、`GSM8K` **77.26%**、`HumanEval+` **55.49%**，彻底消除后期数学退化。
+  - **未运行项说明**：单域教师配置（`d1_math*`、`d2_code*`）及部分附加消融配置（`d4_blocked*`、`d4_pcgrad`、`d4_pg`、`d4_topk`、`d4_warmstart*`、`d4_aligned_lr1e-4`）仅完成配置与 CPU 契约测试，未在 GPU 上执行。
 - **当前数据为 v5（2026-11-08 按负责人指示批准）**：数学 2500 train / 256 dev；代码 2488 train（function 1247 / stdin 1241）/ 200 dev。相对 v4 去掉了与 MATH-500 / GSM8K test / MATH test / dev 重合的 133 条数学题、与代码 dev 重合的 12 条代码题，数学按同 level 补齐。见 [reports/project2_release_v5_20261108/README.md](reports/project2_release_v5_20261108/README.md)。v4 逐字节保留，仅作溯源；所有 opd-v3 配置都指向 v5。
 - 评测协议 v3：vLLM（可回退 HF）greedy 生成；数学同时报 Math-Verify 与保守判分器（保守判分器对 MATH-500 参考答案自判只认 389/500）；代码仍只在本地 Docker 执行。
 - 代码评测在 **Docker 沙箱**中运行，数据集代码不在宿主执行；目标环境无可用 Docker 时停止，不得静默回退宿主子进程。
@@ -160,11 +165,15 @@ opd-v3 分支实测（2026-11-08，Linux / Python 3.11 / torch 2.15 CPU / transf
 - `docs/migration/`：重排说明 `reorg_20261108.md`、迁移清单、`path_mapping.json`、重排前快照 `inventory_before_reorg.json`、退役工具与删除台账 `deletion_ledger.json`（130 个顶层项 / 4225 个文件 / 4,380,095,420 字节）。查旧文件/旧目录先查这里。
 - 原 `modern_genai` 仓库及其 `.venv` 已清理，不能引用其路径；本项目目录可独立迁移。
 
-## 未完成事项（不要夸大）
+## 已验证与未运行事项边界（不要夸大）
 
-- 真实模型在 G4 上跑过 2 步 smoke、训练前探针和三个学习率各 30 步的完整批次。GPU 上的 checkpoint 续训、评测生成和 SFT 训练**均未验收**；代码题的本地 Docker 打分（`scripts/score_code_local_v3.py`）只用替身命令测过。
-- D0（原始学生）、D1/D2（数学/代码单教师）、D3（通用单教师）、D4（专业双教师路由）的正式配置与结果都还没有。
-- 代码任务的多解题语义 checker、官方 EvalPlus 完整接线、各领域准确率与跨域退化统计仍需补齐。
+- **已在 G4 GPU 与本地 Docker 完成验证**：
+  - 2 步 smoke、教师适配度探针（`reports/g4_first_session_20261109/`）；
+  - 三个学习率（`1e-5`、`3e-5`、`1e-4`）各 30 步完整批次训练及开发集配对评测（`reports/g4_session2_lr_sweep_20261109/`）；
+  - D0 基线、SFT（`sft_v3_seqkd_mix`）、D3（`d3_general_lr1e-4`）、D4 专职双教师（`d4_dual`、`d4_dual_lr1e-4`、`d4_prox07_lr1e-4`）以及 D4 先验对齐双教师（`d4_math14b_lr1e-4`：`14B-Instruct` + `Coder-7B`）的 80 步训练、硬身份 checkpoint 续训、GPU 贪心评测生成，以及本地 Docker 沙箱代码评测（`code_dev` + 官方 EvalPlus v0.3.1 `HumanEval+` / `MBPP+`），详见 [reports/g4_opd_v3_experiments_20261112/README.md](reports/g4_opd_v3_experiments_20261112/README.md)。
+- **仅实现配置并通过 CPU 测试、未在 GPU 运行**：
+  - 单域单教师配置 `d1_math` / `d1_math_lr1e-4`、`d2_code` / `d2_code_lr1e-4`；
+  - 附加消融配置 `d4_blocked` / `d4_blocked_lr1e-4`、`d4_pcgrad`、`d4_pg`、`d4_topk`、`d4_warmstart` / `d4_warmstart_lr1e-4`、`d4_aligned_lr1e-4`。
 - 所有阶段都应分别陈述「代码已实现」「CPU 测试通过」「真实模型跑通」「最终能力提升」，未运行的检查保持未验证。
 
 ## 给 AI/协作者的入口
