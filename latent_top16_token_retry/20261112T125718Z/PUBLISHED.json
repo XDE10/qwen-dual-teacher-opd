@@ -1,0 +1,63 @@
+{
+  "schema": "opd-results-v1",
+  "name": "latent_top16_token_retry",
+  "stamp": "20261112T125718Z",
+  "published_utc": "2026-11-12T13:06:12Z",
+  "job": {
+    "state": "not recorded"
+  },
+  "publisher": {
+    "host": "XDE10",
+    "gpu": null,
+    "code": {
+      "commit": "98e9f861f8829ed7cb48d699e2ae0f7a7536411a",
+      "branch": "feat/opd-v3-mopd-data-v5",
+      "modified_tracked_files": true
+    }
+  },
+  "sources": [
+    {
+      "label": "attempt",
+      "path": "/tmp/project2-top16-retry/closed-attempt",
+      "kind": "folder"
+    }
+  ],
+  "files": [
+    {
+      "path": "attempt/interrupted.json",
+      "bytes": 290,
+      "sha256": "c45ac7c9c1c419f20d02b4c9e57f67bfb978179d49e78326f1140e3ea03dc201"
+    },
+    {
+      "path": "attempt/job/command.json",
+      "bytes": 549,
+      "sha256": "cbfc461a3af2a5b71de92d3f9e9c5ef857a5762de1aa5b063cca96413303d39d"
+    },
+    {
+      "path": "attempt/job/output.log",
+      "bytes": 1121,
+      "sha256": "d340714ffa2fd6cbe7cd3a0b320821ad70ab077f6dad7ff6f8a12cd132e3994e"
+    },
+    {
+      "path": "attempt/live.log",
+      "bytes": 955,
+      "sha256": "e3852362fad35cccca3105c8fdaf5d34facce3a3eb23512616372f29460fcab5"
+    }
+  ],
+  "redacted_strings": 0,
+  "skipped": [
+    {
+      "path": "attempt/job/child_pid",
+      "reason": "not a text result"
+    },
+    {
+      "path": "attempt/job/pid",
+      "reason": "not a text result"
+    }
+  ],
+  "skipped_count": 2,
+  "limits_mb": {
+    "per_file": 20,
+    "total": 50
+  }
+}
