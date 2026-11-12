@@ -3793,3 +3793,28 @@ Three-step GPU smoke passed
 2026/11/12 20:52:13 NOTICE:   594.686 KiB / 594.686 KiB, 100%, 594.554 KiB/s, ETA 0s
 2026/11/12 20:52:15 NOTICE:   609.396 KiB / 609.396 KiB, 100%, 608.983 KiB/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/latent_mopd_main/20261112T152744Z
+[publish] 8 files (1.12 MB), 327 left out, 0 strings redacted -> results:latent_mopd_main/20261112T152744Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent_mopd_main/20261112T152744Z
+2026/11/12 20:52:26.784, 42667, 97887, 79
+2026/11/12 20:52:56.802, 42667, 97887, 84
+2026/11/12 20:53:26.820, 42667, 97887, 86
+2026/11/12 20:53:56.839, 42667, 97887, 86
+{"step": 10, "domain": "code", "phase": "rollout_batch_done", "timestamp": 1794516857.857192, "batch": 32, "reused": false, "done_responses": 128, "total_responses": 128, "response_tokens": 52413, "max_response_tokens": 15085, "truncated_responses": 0, "seconds": 136.3196835020026, "allocated_bytes": 14537439232, "reserved_bytes": 44033900544}
+{"step": 10, "domain": "code", "phase": "rollout_done", "timestamp": 1794516857.859603, "response_tokens": 744164, "seconds": 2047.3624585640027, "p50_response_tokens": 3723, "p95_response_tokens": 15498, "truncated_responses": 3, "allocated_bytes": 14537439232, "reserved_bytes": 44033900544}
+{"step": 10, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794516857.9119565, "microbatch": 1, "total_microbatches": 47, "allocated_bytes": 14562339840, "reserved_bytes": 44033900544}
+{"step": 10, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794516858.9507697, "microbatch": 1, "seconds": 1.0384978699985368, "allocated_bytes": 14565485568, "reserved_bytes": 44033900544}
+{"step": 10, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794516858.9510837, "microbatch": 2, "total_microbatches": 47, "allocated_bytes": 14565485568, "reserved_bytes": 44033900544}
+[colab_job] periodic save (every 2 min)
+{"step": 10, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794516859.9893672, "microbatch": 2, "seconds": 1.0381170000000566, "allocated_bytes": 14568631296, "reserved_bytes": 44033900544}
+{"step": 10, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794516859.9896233, "microbatch": 3, "total_microbatches": 47, "allocated_bytes": 14568631296, "reserved_bytes": 44033900544}
+{"step": 10, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794516861.0213122, "microbatch": 3, "seconds": 1.0315292329978547, "allocated_bytes": 14571777024, "reserved_bytes": 44033900544}
+{"step": 10, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794516861.021573, "microbatch": 4, "total_microbatches": 47, "allocated_bytes": 14571777024, "reserved_bytes": 44033900544}
+2026/11/12 20:54:21 NOTICE:   596.578 KiB / 596.578 KiB, 100%, 298.181 KiB/s, ETA 0s
+{"step": 10, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794516862.0415075, "microbatch": 4, "seconds": 1.0197745579971524, "allocated_bytes": 14574904832, "reserved_bytes": 44033900544}
+{"step": 10, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794516862.0417545, "microbatch": 5, "total_microbatches": 47, "allocated_bytes": 14574904832, "reserved_bytes": 44033900544}
+{"step": 10, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794516863.0407043, "microbatch": 5, "seconds": 0.9987866170013149, "allocated_bytes": 14578013184, "reserved_bytes": 44033900544}
+{"step": 10, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794516863.0410154, "microbatch": 6, "total_microbatches": 47, "allocated_bytes": 14578013184, "reserved_bytes": 44033900544}
+{"step": 10, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794516864.0155783, "microbatch": 6, "seconds": 0.9744175779997022, "allocated_bytes": 14581103616, "reserved_bytes": 44033900544}
+{"step": 10, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794516864.0158205, "microbatch": 7, "total_microbatches": 47, "allocated_bytes": 14581103616, "reserved_bytes": 44033900544}
+2026/11/12 20:54:24 NOTICE:   551.813 KiB / 551.813 KiB, 100%, 551.668 KiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent_mopd_main/20261112T152744Z
