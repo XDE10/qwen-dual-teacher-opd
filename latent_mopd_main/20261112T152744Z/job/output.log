@@ -4510,3 +4510,16 @@ Three-step GPU smoke passed
 2026/11/12 21:45:54 NOTICE:   712.123 KiB / 712.123 KiB, 100%, 711.747 KiB/s, ETA 0s
 2026/11/12 21:45:56 NOTICE:   610.533 KiB / 610.533 KiB, 100%, 610.216 KiB/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/latent_mopd_main/20261112T152744Z
+[publish] 8 files (1.34 MB), 383 left out, 0 strings redacted -> results:latent_mopd_main/20261112T152744Z
+2026/11/12 21:45:58.758, 42667, 97887, 85
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent_mopd_main/20261112T152744Z
+2026/11/12 21:46:28.777, 42667, 97887, 85
+{"step": 12, "domain": "code", "phase": "rollout_batch_done", "timestamp": 1794520010.8177147, "batch": 23, "reused": false, "done_responses": 92, "total_responses": 128, "response_tokens": 57955, "max_response_tokens": 15329, "truncated_responses": 0, "seconds": 138.73539077199894, "allocated_bytes": 14537439232, "reserved_bytes": 44033900544}
+{"step": 12, "domain": "code", "phase": "rollout_batch_start", "timestamp": 1794520010.818101, "batch": 24, "done_responses": 92, "total_responses": 128, "allocated_bytes": 14537439232, "reserved_bytes": 44033900544}
+2026/11/12 21:46:58.796, 42667, 97887, 73
+2026/11/12 21:47:28.814, 42667, 97887, 82
+2026/11/12 21:47:58.832, 42667, 97887, 84
+[colab_job] periodic save (every 2 min)
+2026/11/12 21:48:02 NOTICE:   713.375 KiB / 713.375 KiB, 100%, 713.188 KiB/s, ETA 0s
+2026/11/12 21:48:04 NOTICE:   655.456 KiB / 655.456 KiB, 100%, 655.021 KiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent_mopd_main/20261112T152744Z
