@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent_mopd_main",
   "stamp": "20261112T152744Z",
-  "published_utc": "2026-11-12T22:07:22Z",
+  "published_utc": "2026-11-12T22:09:30Z",
   "job": {
     "state": "running"
   },
@@ -37,8 +37,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 774570,
-      "sha256": "16ccfcd6a1076f48ff91ad4b12dbe6f319699ef01c9f41be5e0c18f34386d2bd"
+      "bytes": 799036,
+      "sha256": "1ba993bcc24de9b2eafd8b955745a83c2b23a05ff74b4f98a3726c5e252742ff"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/metrics.jsonl",
@@ -47,8 +47,8 @@
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/phase_metrics.jsonl",
-      "bytes": 632864,
-      "sha256": "60b263cf593929c83f0602bf293f9ad46118068d1fe7307ee351ebb6ac4753e6"
+      "bytes": 656608,
+      "sha256": "20f587a55c246e40a15e1fc431e93e9a1b7072d1f328f047997819afd6f0f88b"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/run_identity.json",
