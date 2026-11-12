@@ -2784,3 +2784,17 @@ Three-step GPU smoke passed
 2026/11/12 19:19:53.394, 42663, 97887, 71
 2026/11/12 19:19:55 NOTICE:   406.257 KiB / 406.257 KiB, 100%, 406.174 KiB/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/latent_mopd_main/20261112T152744Z
+[publish] 8 files (0.85 MB), 245 left out, 0 strings redacted -> results:latent_mopd_main/20261112T152744Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent_mopd_main/20261112T152744Z
+{"step": 8, "domain": "code", "phase": "rollout_batch_done", "timestamp": 1794511203.3024933, "batch": 14, "reused": false, "done_responses": 56, "total_responses": 128, "response_tokens": 5075, "max_response_tokens": 1487, "truncated_responses": 0, "seconds": 12.654859403000955, "allocated_bytes": 14537439232, "reserved_bytes": 44029706240}
+{"step": 8, "domain": "code", "phase": "rollout_batch_start", "timestamp": 1794511203.3028347, "batch": 15, "done_responses": 56, "total_responses": 128, "allocated_bytes": 14537439232, "reserved_bytes": 44029706240}
+2026/11/12 19:20:23.412, 42663, 97887, 77
+2026/11/12 19:20:53.430, 42663, 97887, 83
+{"step": 8, "domain": "code", "phase": "rollout_batch_done", "timestamp": 1794511275.5731995, "batch": 15, "reused": false, "done_responses": 60, "total_responses": 128, "response_tokens": 17181, "max_response_tokens": 8345, "truncated_responses": 0, "seconds": 72.27017181500014, "allocated_bytes": 14537439232, "reserved_bytes": 44029706240}
+{"step": 8, "domain": "code", "phase": "rollout_batch_start", "timestamp": 1794511275.5735137, "batch": 16, "done_responses": 60, "total_responses": 128, "allocated_bytes": 14537439232, "reserved_bytes": 44029706240}
+2026/11/12 19:21:23.448, 42663, 97887, 74
+2026/11/12 19:21:53.466, 42663, 97887, 82
+[colab_job] periodic save (every 2 min)
+2026/11/12 19:22:00 NOTICE:   441.798 KiB / 441.798 KiB, 100%, 441.743 KiB/s, ETA 0s
+2026/11/12 19:22:02 NOTICE:   387.039 KiB / 387.039 KiB, 100%, 386.825 KiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent_mopd_main/20261112T152744Z
