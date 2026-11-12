@@ -1,0 +1,61 @@
+{
+  "source": "session6_math14b/20261111T133020Z/runs/eval/d4_math14b_lr1e-4-checkpoint-50",
+  "ref": "origin/results",
+  "scored_utc": "2026-11-12T00:52:05Z",
+  "suites": {
+    "code_dev": {
+      "status": "scored",
+      "protocol": "internal-dev-review-v3",
+      "tasks": 200,
+      "passed": 86,
+      "blocked_after_review": 8,
+      "pass_rate": 0.43,
+      "pass_rate_excluding_blocked": 0.4479166666666667,
+      "by_interface": {
+        "function": {
+          "tasks": 100,
+          "passed": 75,
+          "blocked": 8
+        },
+        "stdin_stdout": {
+          "tasks": 100,
+          "passed": 11,
+          "blocked": 0
+        }
+      },
+      "status_counts": {
+        "mismatch": 66,
+        "passed": 86,
+        "execution_error": 35,
+        "blocked_after_review": 8,
+        "unsupported_or_extraction_error": 5
+      },
+      "image_id": "sha256:3b0c23d092b8ff94262fd3518cf8250c4b1d65c014d6090eea3b23383145201e",
+      "note": "internal dev with reviewed comparators; not official EvalPlus"
+    },
+    "humanevalplus": {
+      "status": "executed",
+      "exit_code": 0,
+      "image_id": "sha256:79a6508d6b82dd8319c1769e87e346d02b4a4b80a9847ebec691ba453fd67204",
+      "log": "humanevalplus/evaluate.log",
+      "evalplus_exit_code": 0,
+      "dataset_sha256": "42526ec0e7d5f3ee0b06d6ced98f8c8bae3d76519151bfb3d36f79010645bd7f",
+      "results_file": "humanevalplus/samples_eval_results.json",
+      "tasks": 164,
+      "pass_at_1_base": 0.6158536585365854,
+      "pass_at_1_plus": 0.5487804878048781
+    },
+    "mbppplus": {
+      "status": "executed",
+      "exit_code": 0,
+      "image_id": "sha256:79a6508d6b82dd8319c1769e87e346d02b4a4b80a9847ebec691ba453fd67204",
+      "log": "mbppplus/evaluate.log",
+      "evalplus_exit_code": 0,
+      "dataset_sha256": "b54e762755248ca411b523c917fa9f93c07b5ff2966bf60b3917b853926a3dad",
+      "results_file": "mbppplus/samples_eval_results.json",
+      "tasks": 378,
+      "pass_at_1_base": 0.6507936507936508,
+      "pass_at_1_plus": 0.5582010582010583
+    }
+  }
+}

@@ -1,0 +1,1191 @@
+{
+  "protocol": "internal-dev-review-v3",
+  "results": [
+    {
+      "sample_id": "ace/oss_19608",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_10896",
+      "status": "passed",
+      "checked": 17
+    },
+    {
+      "sample_id": "ace/oss_6750",
+      "status": "passed",
+      "checked": 17
+    },
+    {
+      "sample_id": "ace/oss_6260",
+      "status": "passed",
+      "checked": 19
+    },
+    {
+      "sample_id": "ace/oss_5596",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_12874",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_12430",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_6517",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmp1v_3xkm_/candidate.py\", line 7, in <module>\n    _opd_result = map_icephys_data({'interacellular_recordings': 'data1'})\n  File \"/tmp/tmp1v_3xkm_/candidate.py\", line 5, in map_icephys_data\n    return {key: icephys_data[key] for key in ['interacellular_recordings', 'simultaneous_recordings_table']}\n  File \"/tmp/tmp1v_3xkm_/candidate.py\", line 5, in <dictcomp>\n    return {key: icephys_data[key] for key in ['interacellular_recordings', 'simultaneous_recordings_table']}\nKeyError: 'simultaneous_recordings_table'\n"
+      },
+      "checked": 1
+    },
+    {
+      "sample_id": "ace/oss_11877",
+      "status": "passed",
+      "checked": 19
+    },
+    {
+      "sample_id": "ace/oss_11766",
+      "status": "passed",
+      "checked": 19
+    },
+    {
+      "sample_id": "ace/oss_6404",
+      "status": "passed",
+      "checked": 19
+    },
+    {
+      "sample_id": "ace/oss_16071",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_12538",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_3751",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_4981",
+      "status": "passed",
+      "checked": 21
+    },
+    {
+      "sample_id": "ace/oss_11869",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_18660",
+      "status": "passed",
+      "checked": 17
+    },
+    {
+      "sample_id": "ace/oss_12017",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_8179",
+      "status": "passed",
+      "checked": 21
+    },
+    {
+      "sample_id": "ace/oss_6293",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_4319",
+      "status": "passed",
+      "checked": 17
+    },
+    {
+      "sample_id": "ace/oss_18865",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_12999",
+      "status": "passed",
+      "checked": 12
+    },
+    {
+      "sample_id": "ace/oss_7037",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_522",
+      "status": "passed",
+      "checked": 19
+    },
+    {
+      "sample_id": "ace/oss_15349",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_11473",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_14205",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_11186",
+      "status": "mismatch",
+      "checked": 1
+    },
+    {
+      "sample_id": "ace/oss_18264",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_4083",
+      "status": "passed",
+      "checked": 19
+    },
+    {
+      "sample_id": "ace/oss_5441",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_12119",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_11132",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_3960",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_14495",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_6195",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_5020",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_19601",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_9154",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_9269",
+      "status": "mismatch",
+      "checked": 3
+    },
+    {
+      "sample_id": "ace/oss_5787",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_14146",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_18795",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_12658",
+      "status": "passed",
+      "checked": 19
+    },
+    {
+      "sample_id": "ace/oss_13178",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_3921",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_3472",
+      "status": "passed",
+      "checked": 17
+    },
+    {
+      "sample_id": "ace/oss_15013",
+      "status": "passed",
+      "checked": 16
+    },
+    {
+      "sample_id": "ace/oss_2245",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpp_dmroma/candidate.py\", line 19, in <module>\n    _opd_result = parse_django_migration_content('# -*- coding: utf-8 -*-\\n# Generated by Django 1.9.2 on 2016-06-15 15:08\\nfrom __future__ import unicode_literals')\n  File \"/tmp/tmpp_dmroma/candidate.py\", line 13, in parse_django_migration_content\n    version = lines[version_index + 1].split(' ')[1]\nTypeError: unsupported operand type(s) for +: 'NoneType' and 'int'\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_11697",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_13072",
+      "status": "passed",
+      "checked": 16
+    },
+    {
+      "sample_id": "ace/oss_18683",
+      "status": "passed",
+      "checked": 19
+    },
+    {
+      "sample_id": "ace/oss_4341",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_5030",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_18347",
+      "status": "mismatch",
+      "checked": 1
+    },
+    {
+      "sample_id": "ace/oss_13917",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_17578",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_11417",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_3463",
+      "status": "passed",
+      "checked": 17
+    },
+    {
+      "sample_id": "ace/oss_4447",
+      "status": "passed",
+      "checked": 17
+    },
+    {
+      "sample_id": "ace/oss_19153",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_12654",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_8286",
+      "status": "passed",
+      "checked": 16
+    },
+    {
+      "sample_id": "ace/oss_10148",
+      "status": "passed",
+      "checked": 19
+    },
+    {
+      "sample_id": "ace/oss_9324",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_12338",
+      "status": "passed",
+      "checked": 21
+    },
+    {
+      "sample_id": "ace/oss_2559",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "code/vfc_19480",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26909",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19344",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmptswrb6v4/candidate.py\", line 33, in <module>\n    main()\n  File \"/tmp/tmptswrb6v4/candidate.py\", line 20, in main\n    a = int(data[i])\nValueError: invalid literal for int() with base 10: 'XX......XX...X'\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26793",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_27169",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpiof2yac9/candidate.py\", line 31, in <module>\n    F = [int(data[i]) for i in range(2 * N, 3 * N)]\n  File \"/tmp/tmpiof2yac9/candidate.py\", line 31, in <listcomp>\n    F = [int(data[i]) for i in range(2 * N, 3 * N)]\nIndexError: list index out of range\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19536",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpg7vz7yub/candidate.py\", line 33, in <module>\n    main()\n  File \"/tmp/tmpg7vz7yub/candidate.py\", line 26, in main\n    s = data[2 * i]\nIndexError: list index out of range\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_119319",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmp5ibvsesf/candidate.py\", line 60, in <module>\n    main()\n  File \"/tmp/tmp5ibvsesf/candidate.py\", line 16, in main\n    p, q = map(int, data[3 + 2 * i])\nValueError: not enough values to unpack (expected 2, got 1)\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_27029",
+      "status": "mismatch",
+      "checked": 1
+    },
+    {
+      "sample_id": "code/vfc_26877",
+      "status": "mismatch",
+      "checked": 2
+    },
+    {
+      "sample_id": "code/vfc_27165",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_138940",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26857",
+      "status": "mismatch",
+      "checked": 1
+    },
+    {
+      "sample_id": "code/vfc_27009",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26901",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19396",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmps08rvxs6/candidate.py\", line 35, in <module>\n    main()\n  File \"/tmp/tmps08rvxs6/candidate.py\", line 24, in main\n    s = data[2 * i + 1]\nIndexError: list index out of range\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19621",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpjhl7kpro/candidate.py\", line 12, in <module>\n    B = int(data[2 * i + 1])\nIndexError: list index out of range\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19548",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmp1pz1z3u2/candidate.py\", line 39, in <module>\n    main()\n  File \"/tmp/tmp1pz1z3u2/candidate.py\", line 27, in main\n    y = int(data[2*i+3])\nValueError: invalid literal for int() with base 10: '.'\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26837",
+      "status": "passed",
+      "checked": 3
+    },
+    {
+      "sample_id": "code/vfc_134964",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19252",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmprjri_kl3/candidate.py\", line 29, in <module>\n    main()\n  File \"/tmp/tmprjri_kl3/candidate.py\", line 25, in main\n    result = max_value(N, W, weights, values)\n  File \"/tmp/tmprjri_kl3/candidate.py\", line 7, in max_value\n    if j >= weights[i - 1]:\nIndexError: list index out of range\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19240",
+      "status": "mismatch",
+      "checked": 1
+    },
+    {
+      "sample_id": "code/vfc_19131",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_82885",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmp0qfx9h_c/candidate.py\", line 45, in <module>\n    main()\n  File \"/tmp/tmp0qfx9h_c/candidate.py\", line 38, in main\n    result = solve(n, m, k, a, operations, queries)\n  File \"/tmp/tmp0qfx9h_c/candidate.py\", line 12, in solve\n    a[j] += 1\nIndexError: list index out of range\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_18674",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_134078",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_83901",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpn_hnz5ep/candidate.py\", line 19, in <module>\n    if a[i] < a[i + 1]:\nIndexError: list index out of range\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26275",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_73157",
+      "status": "passed",
+      "checked": 9
+    },
+    {
+      "sample_id": "code/vfc_6190",
+      "status": "mismatch",
+      "checked": 1
+    },
+    {
+      "sample_id": "code/vfc_17062",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_5910",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpra1d8eu6/candidate.py\", line 44, in <module>\n    main()\n  File \"/tmp/tmpra1d8eu6/candidate.py\", line 28, in main\n    n = int(data[0])\nValueError: invalid literal for int() with base 10: '())(())(())('\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_84853",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_14818",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpfn98nt1n/candidate.py\", line 49, in <module>\n    main()\n  File \"/tmp/tmpfn98nt1n/candidate.py\", line 29, in main\n    y = int(data[i + 2])\nValueError: invalid literal for int() with base 10: 'B'\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_14398",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_14094",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_13806",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_13638",
+      "status": "mismatch",
+      "checked": 1
+    },
+    {
+      "sample_id": "code/vfc_13302",
+      "status": "mismatch",
+      "checked": 1
+    },
+    {
+      "sample_id": "code/vfc_24223",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_24079",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_68561",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmp25y2izo2/candidate.py\", line 11, in <module>\n    exponent = int(parts[1])\nValueError: invalid literal for int() with base 10: '549e3'\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_67737",
+      "status": "passed",
+      "checked": 48
+    },
+    {
+      "sample_id": "code/vfc_144202",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_124235",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_110451",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpisj33f1c/candidate.py\", line 32, in <module>\n    main()\n  File \"/tmp/tmpisj33f1c/candidate.py\", line 26, in main\n    results.append(calculate_error_function(user_address, potential_address))\n  File \"/tmp/tmpisj33f1c/candidate.py\", line 9, in calculate_error_function\n    error += abs(i - potential_address.index(user_address[i]))\nValueError: substring not found\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_5950",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_106722",
+      "status": "passed",
+      "checked": 4
+    },
+    {
+      "sample_id": "code/vfc_87647",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_84613",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_6646",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_27081",
+      "status": "passed",
+      "checked": 3
+    },
+    {
+      "sample_id": "code/vfc_6378",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26519",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpe75ixc9b/candidate.py\", line 39, in <module>\n    results.append(solve(n, p))\n  File \"/tmp/tmpe75ixc9b/candidate.py\", line 16, in solve\n    while result[target - 1] != 0:\nIndexError: list index out of range\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19280",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_6095",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "code/vfc_18518",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_68433",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_1780",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "code/vfc_107316",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19508",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpndz5dn8s/candidate.py\", line 48, in <module>\n    main()\n  File \"/tmp/tmpndz5dn8s/candidate.py\", line 41, in main\n    add_edge(edges, x - 1, y - 1)\n  File \"/tmp/tmpndz5dn8s/candidate.py\", line 18, in add_edge\n    edges[x - 1].append(y - 1)\nAttributeError: 'tuple' object has no attribute 'append'\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_18174",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpny3pb_cu/candidate.py\", line 35, in <module>\n    get_year_name(n, m, s, t, q, years)\n  File \"/tmp/tmpny3pb_cu/candidate.py\", line 15, in get_year_name\n    next_year = s[(s.index(current_year) + 1) % n] + t[(t.index(current_year) + 1) % m]\nValueError: 'sinyu' is not in list\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_85765",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "3\n",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpx4uhipct/candidate.py\", line 12, in <module>\n    N = int(data[2 + i * 2])\nIndexError: list index out of range\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_99679",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmphldn507j/candidate.py\", line 35, in <module>\n    x = int(data[2 * i + 1])\nValueError: invalid literal for int() with base 10: '00:00'\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19348",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpm576p2yz/candidate.py\", line 31, in <module>\n    result = count_integer_intersections(n, p, m, q)\n  File \"/tmp/tmpm576p2yz/candidate.py\", line 8, in count_integer_intersections\n    if (q[j] - p[i]) % 2 == 0:\nIndexError: list index out of range\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_18906",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_6386",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmp7lp8ezba/candidate.py\", line 30, in <module>\n    Q = int(data[7])\nIndexError: list index out of range\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_18162",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_6310",
+      "status": "mismatch",
+      "checked": 4
+    },
+    {
+      "sample_id": "code/vfc_17958",
+      "status": "mismatch",
+      "checked": 2
+    },
+    {
+      "sample_id": "code/vfc_26761",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_6847",
+      "status": "passed",
+      "checked": 21
+    },
+    {
+      "sample_id": "ace/oss_9962",
+      "status": "passed",
+      "checked": 17
+    },
+    {
+      "sample_id": "code/vfc_18714",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_18754",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_18354",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpboegmi9o/candidate.py\", line 25, in <module>\n    a = restore_array(n, b)\n  File \"/tmp/tmpboegmi9o/candidate.py\", line 10, in restore_array\n    a[i] = b[i] + x[i]\nNameError: name 'x' is not defined\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19031",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_17762",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmp9ec8pjhu/candidate.py\", line 19, in <module>\n    a, b = map(int, data[n+i*2:n+(i+1)*2])\nValueError: not enough values to unpack (expected 2, got 1)\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_140383",
+      "status": "passed",
+      "checked": 4
+    },
+    {
+      "sample_id": "ace/oss_4602",
+      "status": "passed",
+      "checked": 12
+    },
+    {
+      "sample_id": "code/vfc_26673",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_6682",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpbszfkcaq/candidate.py\", line 27, in <module>\n    main()\n  File \"/tmp/tmpbszfkcaq/candidate.py\", line 21, in main\n    results.append(\"Yes\" if is_irreducible_anagram(s, l, r) else \"No\")\n  File \"/tmp/tmpbszfkcaq/candidate.py\", line 7, in is_irreducible_anagram\n    char_count[s[i]] += 1\nIndexError: string index out of range\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_112082",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26929",
+      "status": "passed",
+      "checked": 3
+    },
+    {
+      "sample_id": "code/vfc_90134",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_91621",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmp_f79igun/candidate.py\", line 27, in <module>\n    k = int(data[2 * i])\nIndexError: list index out of range\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_2477",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "code/vfc_6374",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_11960",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "code/vfc_93139",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_129426",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_6666",
+      "status": "passed",
+      "checked": 16
+    },
+    {
+      "sample_id": "code/vfc_26953",
+      "status": "passed",
+      "checked": 3
+    },
+    {
+      "sample_id": "code/vfc_81921",
+      "status": "passed",
+      "checked": 8
+    },
+    {
+      "sample_id": "code/vfc_18490",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmplxq3uujh/candidate.py\", line 73, in <module>\n    main()\n  File \"/tmp/tmplxq3uujh/candidate.py\", line 69, in main\n    expression = generate_expression(functions[i])\n  File \"/tmp/tmplxq3uujh/candidate.py\", line 30, in generate_expression\n    term = f'({expression_stack.pop()}&{expression_stack.pop()})|{expression_stack.pop()}'\nIndexError: pop from an empty deque\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_6470",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpnv02goyi/candidate.py\", line 66, in <module>\n    main()\n  File \"/tmp/tmpnv02goyi/candidate.py\", line 53, in main\n    r = int(data[i])\nValueError: invalid literal for int() with base 10: 'AAPAAAAA'\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26403",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmp4uus377y/candidate.py\", line 2, in <module>\n    K = int(input())\nValueError: invalid literal for int() with base 10: '2 900'\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_18826",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_6582",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_117062",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19456",
+      "status": "passed",
+      "checked": 3
+    },
+    {
+      "sample_id": "ace/oss_8225",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpjc2hw9uo/candidate.py\", line 9, in <module>\n    _opd_result = get_number('Category1', 3)\n  File \"/tmp/tmpjc2hw9uo/candidate.py\", line 3, in get_number\n    if category not in number_map:\nNameError: name 'number_map' is not defined\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_124121",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpz1u5kw91/candidate.py\", line 21, in <module>\n    cost += abs(A[i] - A[i + 1])\nIndexError: list index out of range\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_18350",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_16952",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmp_p9btkub/candidate.py\", line 13, in <module>\n    _opd_result = parse_migration_operations([('migrations.AlterField', 'Employee', 'hired_date', 'DateField', '2022-01-21'), ('migrations.AlterField', 'Teacher', 'hired_date', 'DateField', '2022-01-21'), ('migrations.CreateModel', 'Student', 'admission_date', 'DateField', '2022-01-01'), ('migrations.CreateModel', 'Department', 'name', 'CharField', 'Engineering'), ('migrations.AlterField', 'Employee', 'salary', 'DecimalField', '100000.00')])\n  File \"/tmp/tmp_p9btkub/candidate.py\", line 7, in parse_migration_operations\n    model_name, field_name, field_type, default_value = operation\nValueError: too many values to unpack (expected 4)\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_6770",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmp0plrg7c4/candidate.py\", line 37, in <module>\n    main()\n  File \"/tmp/tmp0plrg7c4/candidate.py\", line 25, in main\n    x1, y1 = distances[(x[i], y[i])]\nTypeError: 'int' object is not subscriptable\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26653",
+      "status": "passed",
+      "checked": 4
+    },
+    {
+      "sample_id": "ace/oss_16815",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_6765",
+      "status": "passed",
+      "checked": 17
+    },
+    {
+      "sample_id": "ace/oss_3274",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_19196",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_18621",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_13160",
+      "status": "passed",
+      "checked": 19
+    },
+    {
+      "sample_id": "ace/oss_14447",
+      "status": "mismatch",
+      "checked": 3
+    },
+    {
+      "sample_id": "ace/oss_1513",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_18203",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_18139",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_18256",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_16138",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmps3cyq3an/candidate.py\", line 14, in <module>\n    _opd_result = digitize(-678)\n  File \"/tmp/tmps3cyq3an/candidate.py\", line 10, in digitize\n    digits = [int(digit) for digit in reversed_str]\n  File \"/tmp/tmps3cyq3an/candidate.py\", line 10, in <listcomp>\n    digits = [int(digit) for digit in reversed_str]\nValueError: invalid literal for int() with base 10: '-'\n"
+      },
+      "checked": 3
+    },
+    {
+      "sample_id": "ace/oss_12879",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_11659",
+      "status": "blocked_after_review",
+      "error": "题面只要求更新 projects，未规定返回值；现有用例强制返回列表，不能排除原地修改并返回 None 的实现。"
+    },
+    {
+      "sample_id": "ace/oss_618",
+      "status": "blocked_after_review",
+      "error": "未规定配置字符串的键名、空白与布尔拼写；参考使用 true/false，不能把唯一参考文本视为唯一合法输出。"
+    },
+    {
+      "sample_id": "ace/oss_11985",
+      "status": "blocked_after_review",
+      "error": "题面提到预定义扩展名表但只给示例，未封存正式 FILEUPLOAD_ALLOWED_EXTENSIONS 参数；不能用隐藏常量当完整规格。"
+    },
+    {
+      "sample_id": "ace/oss_16281",
+      "status": "blocked_after_review",
+      "error": "题面未规定 pose 请求嵌套形状及成功/失败响应 schema；参考的 {success: bool} 不能由题面唯一推出。"
+    },
+    {
+      "sample_id": "ace/oss_13256",
+      "status": "blocked_after_review",
+      "error": "题面未给服务器启动/错误消息的确切文本，固定字符串比较无法证明所有合法回复等价。"
+    },
+    {
+      "sample_id": "ace/oss_17515",
+      "status": "blocked_after_review",
+      "error": "只说 key-value pair 由逗号连接，没有明确键值分隔符、空白和键次序；参考字符串不唯一。"
+    },
+    {
+      "sample_id": "ace/oss_18226",
+      "status": "blocked_after_review",
+      "error": "文字说倒计时到 0，例子与参考不含 0；规格冲突，不能靠参考程序替题面裁决。"
+    },
+    {
+      "sample_id": "code/vfc_26729",
+      "status": "unsupported_or_extraction_error",
+      "error": "invalid syntax (<unknown>, line 1)"
+    },
+    {
+      "sample_id": "code/vfc_19765",
+      "status": "unsupported_or_extraction_error",
+      "error": "Ambiguous multiple code blocks"
+    },
+    {
+      "sample_id": "code/vfc_29313",
+      "status": "unsupported_or_extraction_error",
+      "error": "Ambiguous multiple code blocks"
+    },
+    {
+      "sample_id": "ace/oss_10109",
+      "status": "blocked_after_review",
+      "error": "题面要求 are_dicts_equal 与 update_dict 两个接口，但当前数据/评分只调用第一个；不能签发完整题意评测。"
+    },
+    {
+      "sample_id": "code/vfc_101769",
+      "status": "unsupported_or_extraction_error",
+      "error": "Ambiguous multiple code blocks"
+    },
+    {
+      "sample_id": "code/vfc_139286",
+      "status": "unsupported_or_extraction_error",
+      "error": "Ambiguous multiple code blocks"
+    }
+  ],
+  "coverage": {
+    "total_tasks": 200,
+    "blocked_tasks": 8,
+    "passed_tasks": 86
+  },
+  "warning": "Source-test compatibility only; not official EvalPlus or proof of semantic completeness",
+  "mode": "student",
+  "data_sha256": "c7e111eade71c4482680cb21e89bf3164e6b01fdbd20895ff295ac11f449813f",
+  "image_id": "sha256:3b0c23d092b8ff94262fd3518cf8250c4b1d65c014d6090eea3b23383145201e",
+  "worker_sha256": "27ef781034dc836e67e2c127061e228a70424f3a572ce3f61e6c6bf954564ba2",
+  "source_compatibility_is_not_semantic_gold": true
+}

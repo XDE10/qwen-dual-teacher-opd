@@ -1,0 +1,124 @@
+{
+  "schema": "opd-results-v1",
+  "name": "code_scores",
+  "stamp": "session6_math14b-20261111T133020Z-d4_math14b_lr1e-4-checkpoint-50",
+  "published_utc": "2026-11-12T01:06:41Z",
+  "job": {
+    "state": "not recorded"
+  },
+  "publisher": {
+    "host": "XDE10",
+    "gpu": null,
+    "code": {
+      "commit": "ae4379409158f0e63d455611df0b0e8ef4485372",
+      "branch": "feat/opd-v3-mopd-data-v5",
+      "modified_tracked_files": false
+    }
+  },
+  "sources": [
+    {
+      "label": "scores",
+      "path": "/home/xde10/opd_scores/session6_math14b-20261111T133020Z/d4_math14b_lr1e-4-checkpoint-50",
+      "kind": "folder"
+    }
+  ],
+  "files": [
+    {
+      "path": "scores/candidates/code_dev.candidates.jsonl",
+      "bytes": 266619,
+      "sha256": "7b79360a9746f817590c1414912a07956709c1485a330deff10b9fd6ad2f6a43"
+    },
+    {
+      "path": "scores/candidates/code_dev.summary.json",
+      "bytes": 15115,
+      "sha256": "e519c0f1fe78f765a5edb5a381c5750bb62b6f128125a45072fada790416de5c"
+    },
+    {
+      "path": "scores/candidates/humanevalplus.candidates.jsonl",
+      "bytes": 89582,
+      "sha256": "92c9f72878e1156e9bbb883748bd51a8a510d4ffdf8e9e40066a3ff4725a5a81"
+    },
+    {
+      "path": "scores/candidates/math_dev.summary.json",
+      "bytes": 15193,
+      "sha256": "d6ffe330eee5c0f7b21a78d71bdbf39bde78d605ffc3dcdce68dc4b451b4e1d7"
+    },
+    {
+      "path": "scores/candidates/mbppplus.candidates.jsonl",
+      "bytes": 171698,
+      "sha256": "b1441d8574486b440d0860c44c2fa6a2e4bf379eb7bc0bab8ad3a7e5e54a8985"
+    },
+    {
+      "path": "scores/code_dev/evaluate.log",
+      "bytes": 166,
+      "sha256": "2351304440ea1d7de735e40cc6b6691075dfaf05cdefa8c12c882c8201bcbd67"
+    },
+    {
+      "path": "scores/code_dev/student.json",
+      "bytes": 34863,
+      "sha256": "018b8b3c1bc04c79be1b3316b0777bd44190ed19c4f48cc7592798e9adfabc74"
+    },
+    {
+      "path": "scores/humanevalplus/evalplus.log",
+      "bytes": 8487,
+      "sha256": "658dac0a901ba969451407756aec273a51507cc5dc0c714c79dcc199f6ed47d1"
+    },
+    {
+      "path": "scores/humanevalplus/evaluate.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "scores/humanevalplus/official_protocol.json",
+      "bytes": 5031,
+      "sha256": "1160fa4f4d5b3768fa6ca01eaafe76aa8b4592f6bd2a76c5a06ce2974ef507aa"
+    },
+    {
+      "path": "scores/humanevalplus/samples.jsonl",
+      "bytes": 87956,
+      "sha256": "681182ef44872b7cd376d3c000d3f78c05d8971309dd195db1fa33b011161d7b"
+    },
+    {
+      "path": "scores/humanevalplus/samples_eval_results.json",
+      "bytes": 108746,
+      "sha256": "60a4d2d0d0c125754bb8d29020c46b2243420db3ab1403aeba47f8a7093d4f6d"
+    },
+    {
+      "path": "scores/mbppplus/evalplus.log",
+      "bytes": 45737,
+      "sha256": "5fec613a76a437a44a3c92468e8fad10329ad49be511657e7ea096baf6d25fb1"
+    },
+    {
+      "path": "scores/mbppplus/evaluate.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "scores/mbppplus/official_protocol.json",
+      "bytes": 7664,
+      "sha256": "f0f11870b5d6697ca4bfe718b2890bb34adf4f58bea55dab92760551cc61857b"
+    },
+    {
+      "path": "scores/mbppplus/samples.jsonl",
+      "bytes": 167978,
+      "sha256": "56f94a791fde0c3fb1072622265e15f70349c960bb7a7894b1567f4e3d46a0c0"
+    },
+    {
+      "path": "scores/mbppplus/samples_eval_results.json",
+      "bytes": 210196,
+      "sha256": "d67dc809800ff757eb0f0f1b1a306718e3956b5c2f34b8175ef86593ddfff53b"
+    },
+    {
+      "path": "scores/scores.json",
+      "bytes": 2042,
+      "sha256": "3ac100b49d94880a50d0c4789481d9f52827b02ab10116baa218a6219433e2d0"
+    }
+  ],
+  "redacted_strings": 0,
+  "skipped": [],
+  "skipped_count": 0,
+  "limits_mb": {
+    "per_file": 20,
+    "total": 50
+  }
+}
