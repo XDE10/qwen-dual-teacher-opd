@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent_mopd_main",
   "stamp": "20261112T152744Z",
-  "published_utc": "2026-11-12T15:36:27Z",
+  "published_utc": "2026-11-12T15:38:35Z",
   "job": {
     "state": "running"
   },
@@ -37,8 +37,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 18386,
-      "sha256": "ec9aa7dc1622cffd3e3ea5b327e38f450e2130c1d79661d633dde8343e4a43a3"
+      "bytes": 22408,
+      "sha256": "6ee8ad5be1ddf200f2b534e377cf1712550d2c4310e450ba1c380266940f07d8"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/metrics.jsonl",
@@ -47,8 +47,8 @@
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/phase_metrics.jsonl",
-      "bytes": 6541,
-      "sha256": "71742e151488e7534a8b5cb354b1a274863d9dbaa82d7e337c38140526b4bfbc"
+      "bytes": 9900,
+      "sha256": "8f4683b7b087eafdbbc636a38ca05e2f8970c93c22f43fbb83f57e1f957c5b9b"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/run_identity.json",
@@ -126,6 +126,30 @@
       "reason": "not a text result"
     },
     {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000001/batch-0012.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000001/batch-0013.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000001/batch-0014.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000001/batch-0015.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000001/batch-0016.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000001/batch-0017.json.gz",
+      "reason": "not a text result"
+    },
+    {
       "path": "runs/smoke/latent_mopd_top16_latent/checkpoint-1/",
       "reason": "folder not published"
     },
@@ -146,7 +170,7 @@
       "reason": "not a text result"
     }
   ],
-  "skipped_count": 18,
+  "skipped_count": 24,
   "limits_mb": {
     "per_file": 20,
     "total": 50
