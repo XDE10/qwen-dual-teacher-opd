@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent_top16_token_retry",
   "stamp": "20261112T131202Z",
-  "published_utc": "2026-11-12T13:21:19Z",
+  "published_utc": "2026-11-12T13:24:24Z",
   "job": {
     "state": "running"
   },
@@ -37,8 +37,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 2871,
-      "sha256": "541b64c30aeaf98046732bffe97ee7f2a86109aa7f5da859140b6ebf4a2f66d0"
+      "bytes": 3622,
+      "sha256": "bc10df9de4aec7d5f35c319f3737a2597ce9f2ccee47355652ef193f306e0b3b"
     },
     {
       "path": "runs/latent_mopd_top16_token/metrics.jsonl",
