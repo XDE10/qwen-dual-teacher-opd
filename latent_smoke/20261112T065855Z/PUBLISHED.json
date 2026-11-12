@@ -1,0 +1,80 @@
+{
+  "schema": "opd-results-v1",
+  "name": "latent_smoke",
+  "stamp": "20261112T065855Z",
+  "published_utc": "2026-11-12T07:22:21Z",
+  "job": {
+    "state": "finished",
+    "exit_status": 0
+  },
+  "publisher": {
+    "host": "XDE10",
+    "gpu": null,
+    "code": {
+      "commit": "98e9f861f8829ed7cb48d699e2ae0f7a7536411a",
+      "branch": "feat/opd-v3-mopd-data-v5",
+      "modified_tracked_files": true
+    }
+  },
+  "sources": [
+    {
+      "label": "smoke",
+      "path": "/tmp/project2-latent-smoke/results",
+      "kind": "folder"
+    }
+  ],
+  "files": [
+    {
+      "path": "smoke/gpu-memory.csv",
+      "bytes": 104507,
+      "sha256": "7994f3138d73c4b45f7180919ccb190c7923a44e9e6db7ac8cbaabf44640ec92"
+    },
+    {
+      "path": "smoke/runs/latent_opd_latent/metrics.jsonl",
+      "bytes": 1013,
+      "sha256": "b3c67aaa4dec3b48130dabb4a826e433057dd34c4db7ffdd73b73d4ace86102f"
+    },
+    {
+      "path": "smoke/runs/latent_opd_latent/run_identity.json",
+      "bytes": 31375,
+      "sha256": "1856fd2dd633ef97f9181f4c8f1bc0c6fbbf515ed80423a2f639de37668a39a0"
+    },
+    {
+      "path": "smoke/runs/latent_opd_math20/metrics.jsonl",
+      "bytes": 1012,
+      "sha256": "7816945a0fa9d360dece90949c9f2e0b95b11d78bfb1fc2d7a13cf2e8b2022ac"
+    },
+    {
+      "path": "smoke/runs/latent_opd_math20/run_identity.json",
+      "bytes": 31375,
+      "sha256": "9a460631c28d356d70e97bd8bc32393696ce66821a6e9bdbe9d19b908b3fa63e"
+    },
+    {
+      "path": "smoke/runs/latent_opd_token/metrics.jsonl",
+      "bytes": 497,
+      "sha256": "255f6e60484e483e0568f04892dfcf2c49b5eb8a4354f6fe958da504e9115b77"
+    },
+    {
+      "path": "smoke/runs/latent_opd_token/run_identity.json",
+      "bytes": 31373,
+      "sha256": "e85182231b7ef15dc7d21e8a53e51f019973b8d32820a28ca3b3279360de5361"
+    },
+    {
+      "path": "smoke/smoke.log",
+      "bytes": 13890,
+      "sha256": "a72ddb03328c937654e9f78ae9f306f1a2976e85750012d5e308863180ffc541"
+    },
+    {
+      "path": "smoke/smoke_verification.json",
+      "bytes": 922,
+      "sha256": "bbfbaa2103ce814c377f46fe466c623f2b995a0cb9b25e67605ad08300d5df67"
+    }
+  ],
+  "redacted_strings": 0,
+  "skipped": [],
+  "skipped_count": 0,
+  "limits_mb": {
+    "per_file": 20,
+    "total": 50
+  }
+}

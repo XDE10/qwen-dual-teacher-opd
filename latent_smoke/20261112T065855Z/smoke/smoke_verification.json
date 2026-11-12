@@ -1,0 +1,35 @@
+{
+  "peak_device_memory_mib": 15578,
+  "memory_samples": 3808,
+  "latent_resume_updated_adapter": true,
+  "result_path": "mydrive:opd_runs/latent_smoke/20261112T065855Z",
+  "student_cold_cache": {
+    "model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+    "model_source": "drive",
+    "model_stage_seconds": 48.14
+  },
+  "source_bundle_sha256": "ef2eeecc491d46c07ac264ad3d20c8af3c2282602437ad9bfe4159e520fff9a8",
+  "variants": {
+    "latent": {
+      "optimizer_steps": 4,
+      "device": "NVIDIA L4",
+      "truncated_responses": 8,
+      "responses": 8,
+      "max_new_tokens": 128
+    },
+    "math20": {
+      "optimizer_steps": 4,
+      "device": "NVIDIA L4",
+      "truncated_responses": 8,
+      "responses": 8,
+      "max_new_tokens": 128
+    },
+    "token": {
+      "optimizer_steps": 2,
+      "device": "NVIDIA L4",
+      "truncated_responses": 4,
+      "responses": 4,
+      "max_new_tokens": 128
+    }
+  }
+}

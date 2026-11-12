@@ -1,0 +1,113 @@
+Thu Nov 12 06:58:55 AM UTC 2026
+name, memory.total [MiB], driver_version
+NVIDIA L4, 23034 MiB, 580.82.07
+Filesystem      Size  Used Avail Use% Mounted on
+overlay         236G   85M  236G   1% /
+W: Skipping acquire of configured file 'main/source/Sources' as repository 'https://r2u.stat.illinois.edu/ubuntu noble InRelease' does not seem to provide it (sources.list entry misspelt?)
+Selecting previously unselected package rclone.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 127324 files and directories currently installed.)
+Preparing to unpack .../rclone_1.60.1+dfsg-3ubuntu0.24.04.6_amd64.deb ...
+Unpacking rclone (1.60.1+dfsg-3ubuntu0.24.04.6) ...
+Setting up rclone (1.60.1+dfsg-3ubuntu0.24.04.6) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+13
+Installing pinned training dependencies
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+torchvision 0.29.1+cu130 requires torch>=2.14.0, but you have torch 2.8.0+cu128 which is incompatible.
+Found existing installation: torchvision 0.29.1+cu130
+Uninstalling torchvision-0.29.1+cu130:
+  Successfully uninstalled torchvision-0.29.1+cu130
+Found existing installation: torchaudio 2.11.0+cu130
+Uninstalling torchaudio-2.11.0+cu130:
+  Successfully uninstalled torchaudio-2.11.0+cu130
+Found existing installation: torchao 0.10.0
+Uninstalling torchao-0.10.0:
+  Successfully uninstalled torchao-0.10.0
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+timm 1.0.31 requires torchvision, which is not installed.
+bigframes 2.51.0 requires pyarrow>=23.0.1, but you have pyarrow 21.0.0 which is incompatible.
+gradio 6.31.0 requires huggingface-hub<3.0,>=1.16.0, but you have huggingface-hub 0.36.2 which is incompatible.
+diffusers 0.42.1 requires huggingface-hub<3.0,>=1.32.0, but you have huggingface-hub 0.36.2 which is incompatible.
+gradio-client 2.7.2 requires huggingface-hub<3.0,>=1.16.0, but you have huggingface-hub 0.36.2 which is incompatible.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794466992.451828    4497 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794466992.524655    4497 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794466995.104398    4497 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+versions 2.8.0+cu128 4.57.6 0.19.0
+Starting pure token smoke
+{"common_token_ids": 151665, "approved_prompts": {"math": 2500, "code": 2488}}
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794467017.470899    4603 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794467017.541074    4603 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794467020.117406    4603 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+{"model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B", "model_source": "hugging_face", "model_stage_seconds": 31.33}
+{"model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B", "saved_to_drive": true, "drive_copy_seconds": 126.4}
+{"model": "hbx/JustRL-DeepSeek-1.5B", "model_source": "hugging_face", "model_stage_seconds": 24.18}
+{"model": "hbx/JustRL-DeepSeek-1.5B", "saved_to_drive": true, "drive_copy_seconds": 132.62}
+{"model": "Fate-Zero/Archer2.0-Code-1.5B-Preview", "model_source": "hugging_face", "model_stage_seconds": 29.11}
+{"model": "Fate-Zero/Archer2.0-Code-1.5B-Preview", "saved_to_drive": true, "drive_copy_seconds": 130.58}
+`torch_dtype` is deprecated! Use `dtype` instead!
+{"step": 1, "domain": "math", "token_weight": 1.0, "latent_weight": 0.0, "prompts": 2, "responses": 2, "response_tokens": 256, "truncated_responses": 2, "loss": 0.08340929448604584, "gradient_norm": 0.24222269654273987, "seconds": 6.9222258659999625}
+{"step": 2, "domain": "code", "token_weight": 1.0, "latent_weight": 0.0, "prompts": 2, "responses": 2, "response_tokens": 256, "truncated_responses": 2, "loss": 0.293811559677124, "gradient_norm": 0.689142107963562, "seconds": 6.626243999000053}
+Starting latent smoke
+{"common_token_ids": 151665, "approved_prompts": {"math": 2500, "code": 2488}}
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794467534.398504    7045 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794467534.469048    7045 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794467537.035248    7045 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+{"model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B", "model_source": "local", "model_stage_seconds": 10.5}
+{"model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B", "saved_to_drive": true, "drive_copy_seconds": 8.21}
+{"model": "hbx/JustRL-DeepSeek-1.5B", "model_source": "local", "model_stage_seconds": 10.52}
+{"model": "hbx/JustRL-DeepSeek-1.5B", "saved_to_drive": true, "drive_copy_seconds": 8.32}
+{"model": "Fate-Zero/Archer2.0-Code-1.5B-Preview", "model_source": "local", "model_stage_seconds": 10.47}
+{"model": "Fate-Zero/Archer2.0-Code-1.5B-Preview", "saved_to_drive": true, "drive_copy_seconds": 7.94}
+`torch_dtype` is deprecated! Use `dtype` instead!
+{"step": 1, "domain": "math", "token_weight": 0.0, "latent_weight": 1.0, "prompts": 2, "responses": 2, "response_tokens": 256, "truncated_responses": 2, "loss": 3.0091259759501554e-05, "gradient_norm": 5.4352385632228106e-05, "seconds": 6.874997827000016}
+{"step": 2, "domain": "code", "token_weight": 0.0, "latent_weight": 1.0, "prompts": 2, "responses": 2, "response_tokens": 256, "truncated_responses": 2, "loss": 8.064458779699635e-05, "gradient_norm": 8.091415656963363e-05, "seconds": 6.633580990999917}
+Checking latent checkpoint continuation
+{"common_token_ids": 151665, "approved_prompts": {"math": 2500, "code": 2488}}
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794467633.201137    7566 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794467633.274204    7566 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794467635.857434    7566 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+{"model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B", "model_source": "local", "model_stage_seconds": 10.49}
+{"model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B", "saved_to_drive": true, "drive_copy_seconds": 8.64}
+{"model": "hbx/JustRL-DeepSeek-1.5B", "model_source": "local", "model_stage_seconds": 10.44}
+{"model": "hbx/JustRL-DeepSeek-1.5B", "saved_to_drive": true, "drive_copy_seconds": 8.86}
+{"model": "Fate-Zero/Archer2.0-Code-1.5B-Preview", "model_source": "local", "model_stage_seconds": 10.41}
+{"model": "Fate-Zero/Archer2.0-Code-1.5B-Preview", "saved_to_drive": true, "drive_copy_seconds": 8.24}
+`torch_dtype` is deprecated! Use `dtype` instead!
+{"step": 3, "domain": "math", "token_weight": 0.1, "latent_weight": 0.9, "prompts": 2, "responses": 2, "response_tokens": 256, "truncated_responses": 2, "loss": 0.008746751584112644, "gradient_norm": 0.027428630739450455, "seconds": 6.820161107999866}
+{"step": 4, "domain": "code", "token_weight": 0.1, "latent_weight": 0.9, "prompts": 2, "responses": 2, "response_tokens": 256, "truncated_responses": 2, "loss": 0.019377242773771286, "gradient_norm": 0.04718755930662155, "seconds": 6.605763283999977}
+Starting extended math smoke
+{"common_token_ids": 151665, "approved_prompts": {"math": 2500, "code": 2488}}
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794467733.631366    8103 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794467733.704017    8103 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794467736.247360    8103 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+{"model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B", "model_source": "local", "model_stage_seconds": 10.45}
+{"model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B", "saved_to_drive": true, "drive_copy_seconds": 8.08}
+{"model": "hbx/JustRL-DeepSeek-1.5B", "model_source": "local", "model_stage_seconds": 10.4}
+{"model": "hbx/JustRL-DeepSeek-1.5B", "saved_to_drive": true, "drive_copy_seconds": 7.84}
+{"model": "Fate-Zero/Archer2.0-Code-1.5B-Preview", "model_source": "local", "model_stage_seconds": 10.42}
+{"model": "Fate-Zero/Archer2.0-Code-1.5B-Preview", "saved_to_drive": true, "drive_copy_seconds": 8.95}
+`torch_dtype` is deprecated! Use `dtype` instead!
+{"step": 1, "domain": "math", "token_weight": 0.0, "latent_weight": 1.0, "prompts": 2, "responses": 2, "response_tokens": 256, "truncated_responses": 2, "loss": 3.0091259759501554e-05, "gradient_norm": 5.4352385632228106e-05, "seconds": 6.864281308999807}
+{"step": 2, "domain": "code", "token_weight": 0.0, "latent_weight": 1.0, "prompts": 2, "responses": 2, "response_tokens": 256, "truncated_responses": 2, "loss": 8.064458779699635e-05, "gradient_norm": 8.09207049314864e-05, "seconds": 6.544633388999955}
+{"step": 3, "domain": "math", "token_weight": 0.1, "latent_weight": 0.95, "prompts": 2, "responses": 2, "response_tokens": 256, "truncated_responses": 2, "loss": 0.009528080001473427, "gradient_norm": 0.02858090214431286, "seconds": 6.246774369999912}
+{"step": 4, "domain": "code", "token_weight": 0.1, "latent_weight": 0.9, "prompts": 2, "responses": 2, "response_tokens": 256, "truncated_responses": 2, "loss": 0.017759272828698158, "gradient_norm": 0.04045948013663292, "seconds": 6.669127516000117}
+token verified 2 GPU steps; gradients nonzero; final checkpoint valid
+latent verified 4 GPU steps; gradients nonzero; final checkpoint valid
+math20 verified 4 GPU steps; gradients nonzero; final checkpoint valid
+Saving GPU smoke results to mydrive:opd_runs/latent_smoke/20261112T065855Z
+GPU smoke finished
