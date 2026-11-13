@@ -1,0 +1,14 @@
+# opd-v3 on Linux/Colab (A100 sm_80 or G4 RTX PRO 6000 Blackwell sm_120). NOT GPU-VERIFIED yet.
+# torch==2.8.0 is installed FIRST from the cu128 index by scripts/colab_bootstrap_v3.sh.
+# The cu126 wheels used by the v2 bootstrap have no sm_120 kernels, so they cannot run on G4.
+transformers==4.57.6
+peft==0.19.0
+accelerate==1.10.1
+safetensors
+huggingface_hub
+sympy==1.14.0
+numpy==2.2.6
+psutil==7.2.2
+pyarrow==21.0.0
+pytest==8.4.2
+math-verify[antlr4_13_2]==0.9.0

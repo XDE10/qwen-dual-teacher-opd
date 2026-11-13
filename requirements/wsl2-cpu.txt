@@ -1,0 +1,15 @@
+# CPU environment for the repository tests in WSL2 (Ubuntu), the local Kiro IDE setup.
+# Verified on 2026-11-09 in a Linux sandbox (Python 3.11): pytest -q = 189 passed / 1 skipped.
+# Same torch / transformers / peft versions as the Colab GPU runs (requirements/linux-cuda-v3.txt).
+# Install into a virtual environment (Ubuntu's system Python refuses pip installs), torch first:
+#   python3 -m venv ~/.venvs/opd
+#   ~/.venvs/opd/bin/python -m pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
+#   ~/.venvs/opd/bin/python -m pip install -r requirements/wsl2-cpu.txt
+transformers==4.57.6
+peft==0.19.0
+accelerate==1.10.1
+numpy==2.2.6
+sympy==1.14.0
+psutil==7.2.2
+pytest==8.4.2
+math-verify[antlr4_13_2]==0.9.0

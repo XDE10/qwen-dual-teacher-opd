@@ -13,6 +13,7 @@ def main():
     p.add_argument('--mode', choices=['registry', 'reference-selfcheck', 'student'], required=True)
     p.add_argument('--candidates')
     p.add_argument('--registry')
+    p.add_argument('--image-id', help='sandbox image ID (sha256:...); default: reports/code_v2_sandbox_environment.json')
     a = p.parse_args()
     out = Path(a.output_dir)
     out.mkdir(parents=True, exist_ok=True)
@@ -38,11 +39,14 @@ def main():
             raise ValueError('Candidate IDs differ from sealed dev')
         if any(v.get('status') not in ({'reviewed','blocked_after_review'} if reviewed_v3 else {'reviewed'}) for v in registry.values()):
             raise ValueError('Student comparator registry requires semantic review')
+    from src.data.code_sandbox_v2 import ROOT, environment, run_jobs
+    worker = ROOT / 'scripts' / ('code_eval_worker_v3.py' if reviewed_v3 else 'code_eval_worker_v2.py')
+    image_id = environment(worker, a.image_id)['image_id']
     try:
-        result = evaluate(rows, candidates, registry)
+        result = evaluate(rows, candidates, registry, executor=lambda jobs: run_jobs(jobs, worker=worker, image=image_id))
     except RuntimeError as error:
         result = {'status': '未验证', 'category': 'sandbox_infrastructure_unavailable', 'error': str(error)}
-    result.update(mode=a.mode, data_sha256=sha(a.data),
+    result.update(mode=a.mode, data_sha256=sha(a.data), image_id=image_id,
                   worker_sha256=sha('scripts/code_eval_worker_v3.py' if reviewed_v3 else 'scripts/code_eval_worker_v2.py'),
                   source_compatibility_is_not_semantic_gold=True)
     write(out / (a.mode + '.json'), result)

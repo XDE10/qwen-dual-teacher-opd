@@ -1,0 +1,109 @@
+{
+  "version": "project2-release-v5-20261108",
+  "status": "candidate_pending_owner_approval",
+  "counts": {
+    "math_train": {
+      "v4": 2500,
+      "removed": 133,
+      "added": 133,
+      "v5": 2500
+    },
+    "code_train": {
+      "v4": 2500,
+      "removed": 12,
+      "added": 0,
+      "v5": 2488
+    }
+  },
+  "budget": {
+    "math_train": {
+      "rows": 2500,
+      "max_prompt_tokens": 1055,
+      "limit": 3072,
+      "over_budget": [],
+      "rows_without_recorded_count": 2500,
+      "recorded_count_mismatches": []
+    },
+    "math_dev": {
+      "rows": 256,
+      "max_prompt_tokens": 403,
+      "limit": 3072,
+      "over_budget": [],
+      "rows_without_recorded_count": 256,
+      "recorded_count_mismatches": []
+    },
+    "code_train": {
+      "rows": 2500,
+      "max_prompt_tokens": 1888,
+      "limit": 2560,
+      "over_budget": [],
+      "rows_without_recorded_count": 837,
+      "recorded_count_mismatches": []
+    },
+    "code_dev": {
+      "rows": 200,
+      "max_prompt_tokens": 1284,
+      "limit": 2560,
+      "over_budget": [],
+      "rows_without_recorded_count": 75,
+      "recorded_count_mismatches": []
+    }
+  },
+  "decontamination": {
+    "rules": {
+      "ngram": 13,
+      "lcs_ratio": 0.6,
+      "jaccard_3gram": 0.85,
+      "code_boilerplate_removed": true
+    },
+    "math_protected_items": 7095,
+    "code_protected_items": 742,
+    "flagged_math_train_rows": 133,
+    "flagged_code_train_rows": 12,
+    "hits_by_protected_set": {
+      "math": {
+        "math500_test": 21,
+        "math_test_5000": 217,
+        "original_math_dev": 15,
+        "gsm8k_test": 1
+      },
+      "code": {
+        "code_dev_v4": 13
+      }
+    }
+  },
+  "refill": {
+    "need_by_stratum": {
+      "('DigitalLearningGmbH/MATH-lighteval', 'Level 3')": 27,
+      "('DigitalLearningGmbH/MATH-lighteval', 'Level 2')": 25,
+      "('DigitalLearningGmbH/MATH-lighteval', 'Level 4')": 35,
+      "('DigitalLearningGmbH/MATH-lighteval', 'Level 5')": 43,
+      "('DigitalLearningGmbH/MATH-lighteval', 'Level 1')": 2,
+      "('openai/gsm8k', None)": 1
+    },
+    "skipped_candidates": {
+      "decontamination_v5": 9,
+      "excluded_id": 42
+    },
+    "math_target": null,
+    "added_by_source": {
+      "DigitalLearningGmbH/MATH-lighteval": 132,
+      "openai/gsm8k": 1
+    }
+  },
+  "code_interfaces_v5": {
+    "function": 1247,
+    "stdin_stdout": 1241
+  },
+  "limits": [
+    "Lexical overlap rules cannot prove semantic or pretraining decontamination.",
+    "Added rows passed deterministic gates only: no AI review and no itemwise human review.",
+    "IDs of 40 MATH top-up candidates that were not admitted in 2026-10 were lost; they cannot be excluded by ID.",
+    "Removed code rows are not refilled."
+  ],
+  "candidate_files": {
+    "added_math_train.jsonl": "d0d2c80b365b8d7bd97ed9b49cb19655ce94bfc7b00598ac3ec9af1954596829",
+    "changes.json": "231093b542c1e2c42ba3ccd7d32b9f6449239fa87ce91b856563e0931cb5f0a9",
+    "project2_math_train_answers.jsonl": "f27297e839cd3702465a3c0b280da63cc90f2d5d17fdd7b914574ae7038d76db"
+  }
+}

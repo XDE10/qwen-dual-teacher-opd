@@ -1,0 +1,79 @@
+{
+  "implementation_version": "opd-v3",
+  "data_manifest": "data/project2_release_v5_20261108/release/manifest.json",
+  "data_files": {
+    "math": "project2_math_train.jsonl",
+    "code": "project2_code_train.jsonl"
+  },
+  "stratify_keys": {
+    "math": "source",
+    "code": "interface"
+  },
+  "student": {
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "teachers": {
+    "math": {
+      "model": "Qwen/Qwen2.5-Math-7B-Instruct",
+      "revision": "ef9926d75ab1d54532f6a30dd5e760355eb9aa4d"
+    },
+    "code": {
+      "model": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "revision": "c03e6d358207e414f1eca0bb1891e29f1db0e242"
+    }
+  },
+  "teacher_placement": "resident",
+  "tokenizer_audit": "reports/tokenizer_alignment_report.json",
+  "tokenizer_path": "data/tokenizers/Qwen2.5-1.5B-Instruct",
+  "seed": 42,
+  "max_steps": 80,
+  "prompts_per_step": {
+    "math": 64,
+    "code": 64
+  },
+  "schedule": {
+    "type": "mixed"
+  },
+  "max_new_tokens": {
+    "math": 1024,
+    "code": 1536
+  },
+  "rollout_engine": "hf_generation_copy",
+  "rollout_batch_size": 64,
+  "train_microbatch_tokens": 32768,
+  "loss": {
+    "mode": "exact_rkl",
+    "topk": 64,
+    "pg_advantage_clip": 10.0,
+    "proximal_teacher_alpha": 1.0,
+    "normalization": "sequence_mean",
+    "row_chunk": 64
+  },
+  "gradient_telemetry": true,
+  "gradient_surgery": "none",
+  "lora": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.0,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+  "learning_rate": 3e-05,
+  "warmup_steps": 5,
+  "lr_schedule": "constant",
+  "max_grad_norm": 1.0,
+  "save_steps": 10,
+  "save_rollouts_every": 10,
+  "rollouts_saved_per_domain": 2,
+  "output_dir": "runs/opd_v3_d4_warmstart",
+  "resume_policy": "reject",
+  "init_adapter": "runs/sft_v3_seqkd_mix/final_adapter"
+}
