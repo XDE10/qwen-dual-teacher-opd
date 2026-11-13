@@ -8497,3 +8497,17 @@ Three-step GPU smoke passed
 2026/11/13 03:00:40.430, 42671, 97887, 71
 2026/11/13 03:00:40 NOTICE:     1.138 MiB / 1.138 MiB, 100%, 1.137 MiB/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/latent_mopd_main/20261112T152744Z
+[publish] 8 files (2.48 MB), 655 left out, 0 strings redacted -> results:latent_mopd_main/20261112T152744Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent_mopd_main/20261112T152744Z
+2026/11/13 03:01:10.448, 42671, 97887, 81
+{"step": 21, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794538882.7761059, "batch": 6, "reused": false, "done_responses": 24, "total_responses": 128, "response_tokens": 11183, "max_response_tokens": 5073, "truncated_responses": 0, "seconds": 43.455736516996694, "allocated_bytes": 14537439232, "reserved_bytes": 44038094848}
+{"step": 21, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794538882.7763813, "batch": 7, "done_responses": 24, "total_responses": 128, "allocated_bytes": 14537439232, "reserved_bytes": 44038094848}
+2026/11/13 03:01:40.466, 42671, 97887, 77
+{"step": 21, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794538908.1752079, "batch": 7, "reused": false, "done_responses": 28, "total_responses": 128, "response_tokens": 9480, "max_response_tokens": 2980, "truncated_responses": 0, "seconds": 25.398668883994105, "allocated_bytes": 14537439232, "reserved_bytes": 44038094848}
+{"step": 21, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794538908.1754854, "batch": 8, "done_responses": 28, "total_responses": 128, "allocated_bytes": 14537439232, "reserved_bytes": 44038094848}
+2026/11/13 03:02:10.484, 42671, 97887, 78
+2026/11/13 03:02:40.502, 42671, 97887, 85
+[colab_job] periodic save (every 2 min)
+2026/11/13 03:02:46 NOTICE:     1.319 MiB / 1.319 MiB, 100%, 1.318 MiB/s, ETA 0s
+2026/11/13 03:02:48 NOTICE:     1.112 MiB / 1.112 MiB, 100%, 1.112 MiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent_mopd_main/20261112T152744Z
