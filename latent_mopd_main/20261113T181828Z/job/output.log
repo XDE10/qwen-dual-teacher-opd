@@ -249,3 +249,17 @@ Three-step GPU smoke passed
 2026/11/13 18:28:28.941, 25099, 97887, 75
 2026/11/13 18:28:32 NOTICE:     2.593 MiB / 2.593 MiB, 100%, 1.296 MiB/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/latent_mopd_main/20261113T181828Z
+[publish] 10 files (2.68 MB), 56 left out, 0 strings redacted -> results:latent_mopd_main/20261113T181828Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent_mopd_main/20261113T181828Z
+2026/11/13 18:28:58.960, 25099, 97887, 83
+2026/11/13 18:29:28.978, 25099, 97887, 85
+{"step": 42, "domain": "code", "phase": "rollout_batch_done", "timestamp": 1794594578.9009776, "batch": 13, "reused": false, "done_responses": 52, "total_responses": 128, "response_tokens": 24600, "max_response_tokens": 9334, "truncated_responses": 0, "seconds": 82.02415602099995, "allocated_bytes": 14536521728, "reserved_bytes": 25614614528}
+{"step": 42, "domain": "code", "phase": "rollout_batch_start", "timestamp": 1794594578.9012847, "batch": 14, "done_responses": 52, "total_responses": 128, "allocated_bytes": 14536521728, "reserved_bytes": 25614614528}
+2026/11/13 18:29:58.997, 25099, 97887, 78
+2026/11/13 18:30:29.015, 25099, 97887, 84
+[colab_job] periodic save (every 2 min)
+2026/11/13 18:30:41 NOTICE:    49.867 KiB / 49.867 KiB, 100%, 49.863 KiB/s, ETA 0s
+{"step": 42, "domain": "code", "phase": "rollout_batch_done", "timestamp": 1794594643.4864542, "batch": 14, "reused": false, "done_responses": 56, "total_responses": 128, "response_tokens": 22653, "max_response_tokens": 7448, "truncated_responses": 0, "seconds": 64.58500787899993, "allocated_bytes": 14536521728, "reserved_bytes": 25614614528}
+{"step": 42, "domain": "code", "phase": "rollout_batch_start", "timestamp": 1794594643.4868014, "batch": 15, "done_responses": 56, "total_responses": 128, "allocated_bytes": 14536521728, "reserved_bytes": 25614614528}
+2026/11/13 18:30:46 NOTICE:     2.578 MiB / 2.578 MiB, 100%, 1.288 MiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent_mopd_main/20261113T181828Z
