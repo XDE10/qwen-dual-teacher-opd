@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent_mopd_main",
   "stamp": "20261113T220228Z",
-  "published_utc": "2026-11-13T22:32:24Z",
+  "published_utc": "2026-11-13T22:34:36Z",
   "job": {
     "state": "running"
   },
@@ -37,8 +37,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 62430,
-      "sha256": "08c9d9ef157e957bc1706c66a80f9d7d981377cf34b792b04a693696a8ed27a8"
+      "bytes": 64271,
+      "sha256": "1cb88d402338c84514d781fb6177d1f9f9060623d3efb190d27d54428b45068c"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/metrics.jsonl",
@@ -47,8 +47,8 @@
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/phase_metrics.jsonl",
-      "bytes": 3033562,
-      "sha256": "a20d1489228493cb7760eac2082c9a15e0dd84618fe24e79596f10bd8a292471"
+      "bytes": 3034691,
+      "sha256": "ef6ba384361cde523f2687b676d8345f0bc3e6538ca861de693dd31f652f5935"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/resume_archive_1794543309830572075/metrics.jsonl",
@@ -337,6 +337,14 @@
       "reason": "not a text result"
     },
     {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000042/batch-0024.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000042/batch-0025.json.gz",
+      "reason": "not a text result"
+    },
+    {
       "path": "runs/smoke/latent_mopd_top16_latent/checkpoint-1/",
       "reason": "folder not published"
     },
@@ -357,7 +365,7 @@
       "reason": "not a text result"
     }
   ],
-  "skipped_count": 67,
+  "skipped_count": 69,
   "limits_mb": {
     "per_file": 20,
     "total": 50
