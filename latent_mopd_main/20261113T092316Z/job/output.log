@@ -1,0 +1,94 @@
+[colab_job] running: bash scripts/colab_latent_top16.sh latent smoke-then-full
+2026/11/13 09:23:16.293, 0, 97887, 0
+{"common_token_ids": 151665, "approved_prompts": {"math": 2500, "code": 2488}}
+{"model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B", "model_source": "local", "model_stage_seconds": 2.04}
+{"model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B", "saved_to_drive": true, "drive_copy_seconds": 4.69}
+{"model": "hbx/JustRL-DeepSeek-1.5B", "model_source": "local", "model_stage_seconds": 2.05}
+{"model": "hbx/JustRL-DeepSeek-1.5B", "saved_to_drive": true, "drive_copy_seconds": 4.61}
+{"model": "Fate-Zero/Archer2.0-Code-1.5B-Preview", "model_source": "local", "model_stage_seconds": 2.05}
+{"model": "Fate-Zero/Archer2.0-Code-1.5B-Preview", "saved_to_drive": true, "drive_copy_seconds": 4.7}
+`torch_dtype` is deprecated! Use `dtype` instead!
+2026/11/13 09:23:46.309, 15137, 97887, 0
+Three-step GPU smoke passed
+{"common_token_ids": 151665, "approved_prompts": {"math": 2500, "code": 2488}}
+{"model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B", "model_source": "local", "model_stage_seconds": 1.98}
+{"model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B", "saved_to_drive": true, "drive_copy_seconds": 4.58}
+{"model": "hbx/JustRL-DeepSeek-1.5B", "model_source": "local", "model_stage_seconds": 2.0}
+{"model": "hbx/JustRL-DeepSeek-1.5B", "saved_to_drive": true, "drive_copy_seconds": 4.56}
+{"model": "Fate-Zero/Archer2.0-Code-1.5B-Preview", "model_source": "local", "model_stage_seconds": 1.99}
+{"model": "Fate-Zero/Archer2.0-Code-1.5B-Preview", "saved_to_drive": true, "drive_copy_seconds": 4.53}
+`torch_dtype` is deprecated! Use `dtype` instead!
+{"step": 31, "domain": "math", "phase": "step_start", "timestamp": 1794561854.450064, "token_weight": 1.0, "latent_weight": 0.0, "allocated_bytes": 14445623296, "reserved_bytes": 15191769088}
+{"step": 31, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794561854.5162947, "batch": 1, "done_responses": 0, "total_responses": 128, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794561854.5182238, "batch": 1, "reused": true, "done_responses": 4, "total_responses": 128, "response_tokens": 17706, "max_response_tokens": 6596, "truncated_responses": 0, "seconds": 0.0016139800000019022, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794561854.5184505, "batch": 2, "done_responses": 4, "total_responses": 128, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794561854.5196784, "batch": 2, "reused": true, "done_responses": 8, "total_responses": 128, "response_tokens": 12103, "max_response_tokens": 3568, "truncated_responses": 0, "seconds": 0.0010867299999972602, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794561854.5198572, "batch": 3, "done_responses": 8, "total_responses": 128, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794561854.5208912, "batch": 3, "reused": true, "done_responses": 12, "total_responses": 128, "response_tokens": 10460, "max_response_tokens": 4715, "truncated_responses": 0, "seconds": 0.000919360000011693, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794561854.5210502, "batch": 4, "done_responses": 12, "total_responses": 128, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794561854.522248, "batch": 4, "reused": true, "done_responses": 16, "total_responses": 128, "response_tokens": 12466, "max_response_tokens": 4871, "truncated_responses": 0, "seconds": 0.0010689299999739887, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794561854.5224144, "batch": 5, "done_responses": 16, "total_responses": 128, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794561854.523431, "batch": 5, "reused": true, "done_responses": 20, "total_responses": 128, "response_tokens": 9949, "max_response_tokens": 3259, "truncated_responses": 0, "seconds": 0.0008887199999207951, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794561854.5235913, "batch": 6, "done_responses": 20, "total_responses": 128, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794561854.528183, "batch": 6, "reused": true, "done_responses": 24, "total_responses": 128, "response_tokens": 58270, "max_response_tokens": 16384, "truncated_responses": 2, "seconds": 0.004477629000007255, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794561854.5283685, "batch": 7, "done_responses": 24, "total_responses": 128, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794561854.5298347, "batch": 7, "reused": true, "done_responses": 28, "total_responses": 128, "response_tokens": 7229, "max_response_tokens": 2621, "truncated_responses": 0, "seconds": 0.0006516299999930197, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794561854.5299854, "batch": 8, "done_responses": 28, "total_responses": 128, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794561854.530268, "batch": 8, "reused": true, "done_responses": 32, "total_responses": 128, "response_tokens": 1065, "max_response_tokens": 300, "truncated_responses": 0, "seconds": 0.0001784700000371231, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794561854.5304098, "batch": 9, "done_responses": 32, "total_responses": 128, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794561854.5310173, "batch": 9, "reused": true, "done_responses": 36, "total_responses": 128, "response_tokens": 5484, "max_response_tokens": 1792, "truncated_responses": 0, "seconds": 0.0005047600000125385, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794561854.531154, "batch": 10, "done_responses": 36, "total_responses": 128, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794561854.5322933, "batch": 10, "reused": true, "done_responses": 40, "total_responses": 128, "response_tokens": 12300, "max_response_tokens": 3668, "truncated_responses": 0, "seconds": 0.00102164999998422, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794561854.5324407, "batch": 11, "done_responses": 40, "total_responses": 128, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794561854.532737, "batch": 11, "reused": true, "done_responses": 44, "total_responses": 128, "response_tokens": 1323, "max_response_tokens": 450, "truncated_responses": 0, "seconds": 0.00018717000000378903, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794561854.5328748, "batch": 12, "done_responses": 44, "total_responses": 128, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794561854.5332658, "batch": 12, "reused": true, "done_responses": 48, "total_responses": 128, "response_tokens": 2304, "max_response_tokens": 1182, "truncated_responses": 0, "seconds": 0.0002827399999887348, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794561854.5334134, "batch": 13, "done_responses": 48, "total_responses": 128, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794561854.534417, "batch": 13, "reused": true, "done_responses": 52, "total_responses": 128, "response_tokens": 10311, "max_response_tokens": 4396, "truncated_responses": 0, "seconds": 0.0008966699999746197, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794561854.5345888, "batch": 14, "done_responses": 52, "total_responses": 128, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794561854.535079, "batch": 14, "reused": true, "done_responses": 56, "total_responses": 128, "response_tokens": 3596, "max_response_tokens": 1683, "truncated_responses": 0, "seconds": 0.0003771699999788325, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794561854.5355978, "batch": 15, "done_responses": 56, "total_responses": 128, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794561854.5392377, "batch": 15, "reused": true, "done_responses": 60, "total_responses": 128, "response_tokens": 43395, "max_response_tokens": 16384, "truncated_responses": 1, "seconds": 0.003529560000060883, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794561854.5394, "batch": 16, "done_responses": 60, "total_responses": 128, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794561854.5397124, "batch": 16, "reused": true, "done_responses": 64, "total_responses": 128, "response_tokens": 1470, "max_response_tokens": 413, "truncated_responses": 0, "seconds": 0.00020475999997415784, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794561854.5398507, "batch": 17, "done_responses": 64, "total_responses": 128, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794561854.540529, "batch": 17, "reused": true, "done_responses": 68, "total_responses": 128, "response_tokens": 6073, "max_response_tokens": 2315, "truncated_responses": 0, "seconds": 0.0005709299999807627, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794561854.5406733, "batch": 18, "done_responses": 68, "total_responses": 128, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794561854.5415213, "batch": 18, "reused": true, "done_responses": 72, "total_responses": 128, "response_tokens": 8419, "max_response_tokens": 3814, "truncated_responses": 0, "seconds": 0.0007446199999776582, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794561854.5416691, "batch": 19, "done_responses": 72, "total_responses": 128, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794561854.542182, "batch": 19, "reused": true, "done_responses": 76, "total_responses": 128, "response_tokens": 3912, "max_response_tokens": 2606, "truncated_responses": 0, "seconds": 0.00040321999995285296, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794561854.5423384, "batch": 20, "done_responses": 76, "total_responses": 128, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794561854.542968, "batch": 20, "reused": true, "done_responses": 80, "total_responses": 128, "response_tokens": 5459, "max_response_tokens": 2763, "truncated_responses": 0, "seconds": 0.0005218599999352591, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794561854.5431101, "batch": 21, "done_responses": 80, "total_responses": 128, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794561854.5443902, "batch": 21, "reused": true, "done_responses": 84, "total_responses": 128, "response_tokens": 14020, "max_response_tokens": 4871, "truncated_responses": 0, "seconds": 0.0011602189999848633, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+{"step": 31, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794561854.5445426, "batch": 22, "done_responses": 84, "total_responses": 128, "allocated_bytes": 14454142976, "reserved_bytes": 15405678592}
+2026/11/13 09:24:16.324, 15393, 97887, 72
+2026/11/13 09:24:46.341, 15855, 97887, 82
+[colab_job] periodic save (every 2 min)
+2026/11/13 09:25:16.359, 16947, 97887, 85
+2026/11/13 09:25:19 NOTICE:    14.291 KiB / 14.291 KiB, 100%, 7.146 KiB/s, ETA 0s
+2026/11/13 09:25:46.378, 19151, 97887, 85
+2026/11/13 09:26:16.397, 23307, 97887, 86
+2026/11/13 09:26:20 NOTICE:   923.245 MiB / 1.265 GiB, 71%, 5.968 MiB/s, ETA 1m2s (xfr#201/1033)
+{"step": 31, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794562002.8414285, "batch": 22, "reused": false, "done_responses": 88, "total_responses": 128, "response_tokens": 52375, "max_response_tokens": 16257, "truncated_responses": 0, "seconds": 148.29676424500008, "allocated_bytes": 14454142976, "reserved_bytes": 27315404800}
+{"step": 31, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794562002.8417623, "batch": 23, "done_responses": 88, "total_responses": 128, "allocated_bytes": 14454142976, "reserved_bytes": 27315404800}
+2026/11/13 09:26:46.416, 26711, 97887, 71
+2026/11/13 09:27:16.434, 26711, 97887, 80
+2026/11/13 09:27:20 NOTICE:     1.251 GiB / 1.265 GiB, 99%, 2.626 MiB/s, ETA 5s (xfr#435/1033)
+{"step": 31, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794562047.487476, "batch": 23, "reused": false, "done_responses": 92, "total_responses": 128, "response_tokens": 13672, "max_response_tokens": 5277, "truncated_responses": 0, "seconds": 44.64556086799996, "allocated_bytes": 14454142976, "reserved_bytes": 27315404800}
+{"step": 31, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794562047.4877586, "batch": 24, "done_responses": 92, "total_responses": 128, "allocated_bytes": 14454142976, "reserved_bytes": 27315404800}
+{"step": 31, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794562053.5508528, "batch": 24, "reused": false, "done_responses": 96, "total_responses": 128, "response_tokens": 2571, "max_response_tokens": 720, "truncated_responses": 0, "seconds": 6.062945891000027, "allocated_bytes": 14454142976, "reserved_bytes": 27315404800}
+{"step": 31, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794562053.5511115, "batch": 25, "done_responses": 96, "total_responses": 128, "allocated_bytes": 14454142976, "reserved_bytes": 27315404800}
+2026/11/13 09:27:46.452, 26711, 97887, 75
+{"step": 31, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794562080.0206347, "batch": 25, "reused": false, "done_responses": 100, "total_responses": 128, "response_tokens": 10870, "max_response_tokens": 3137, "truncated_responses": 0, "seconds": 26.469353748000003, "allocated_bytes": 14454142976, "reserved_bytes": 27315404800}
+{"step": 31, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794562080.0209198, "batch": 26, "done_responses": 100, "total_responses": 128, "allocated_bytes": 14454142976, "reserved_bytes": 27315404800}
+{"step": 31, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794562090.8001218, "batch": 26, "reused": false, "done_responses": 104, "total_responses": 128, "response_tokens": 3346, "max_response_tokens": 1278, "truncated_responses": 0, "seconds": 10.779058475000056, "allocated_bytes": 14454142976, "reserved_bytes": 27315404800}
+{"step": 31, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794562090.8004181, "batch": 27, "done_responses": 104, "total_responses": 128, "allocated_bytes": 14454142976, "reserved_bytes": 27315404800}
+2026/11/13 09:28:16.470, 26711, 97887, 73
+2026/11/13 09:28:20 NOTICE:     1.257 GiB / 1.265 GiB, 99%, 133.946 KiB/s, ETA 1m7s (xfr#678/1033)
+2026/11/13 09:28:46.488, 26711, 97887, 82
+2026/11/13 09:29:16.507, 26711, 97887, 84
+2026/11/13 09:29:20 NOTICE:     1.262 GiB / 1.265 GiB, 100%, 92.808 KiB/s, ETA 33s (xfr#915/1033)
+2026/11/13 09:29:46.525, 26711, 97887, 85
+2026/11/13 09:29:48 NOTICE:     1.265 GiB / 1.265 GiB, 100%, 105.410 KiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent_mopd_main/20261113T092316Z
