@@ -7337,3 +7337,161 @@ Three-step GPU smoke passed
 2026/11/13 01:39:19 NOTICE:     1.131 MiB / 1.131 MiB, 100%, 1.130 MiB/s, ETA 0s
 2026/11/13 01:39:21 NOTICE:  1022.959 KiB / 1022.959 KiB, 100%, 1022.615 KiB/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/latent_mopd_main/20261112T152744Z
+[publish] 8 files (2.14 MB), 584 left out, 0 strings redacted -> results:latent_mopd_main/20261112T152744Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent_mopd_main/20261112T152744Z
+2026/11/13 01:39:37.406, 42671, 97887, 86
+{"step": 18, "domain": "code", "phase": "rollout_batch_done", "timestamp": 1794533998.1823065, "batch": 32, "reused": false, "done_responses": 128, "total_responses": 128, "response_tokens": 48842, "max_response_tokens": 14919, "truncated_responses": 0, "seconds": 136.82266787499975, "allocated_bytes": 14537439232, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "rollout_done", "timestamp": 1794533998.184839, "response_tokens": 754259, "seconds": 2071.6015377110016, "p50_response_tokens": 2739, "p95_response_tokens": 15914, "truncated_responses": 5, "allocated_bytes": 14537439232, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794533998.2371407, "microbatch": 1, "total_microbatches": 47, "allocated_bytes": 14562631168, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794533999.2877665, "microbatch": 1, "seconds": 1.0503373940009624, "allocated_bytes": 14565776896, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794533999.2880373, "microbatch": 2, "total_microbatches": 47, "allocated_bytes": 14565776896, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534000.3376207, "microbatch": 2, "seconds": 1.049417103997257, "allocated_bytes": 14568922624, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534000.3378737, "microbatch": 3, "total_microbatches": 47, "allocated_bytes": 14568922624, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534001.3875866, "microbatch": 3, "seconds": 1.0495382549997885, "allocated_bytes": 14572068352, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534001.387843, "microbatch": 4, "total_microbatches": 47, "allocated_bytes": 14572068352, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534002.4185588, "microbatch": 4, "seconds": 1.0305394059978426, "allocated_bytes": 14575214080, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534002.4188755, "microbatch": 5, "total_microbatches": 47, "allocated_bytes": 14575214080, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534003.443817, "microbatch": 5, "seconds": 1.0247934689978138, "allocated_bytes": 14578359808, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534003.4440715, "microbatch": 6, "total_microbatches": 47, "allocated_bytes": 14578359808, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534004.4464893, "microbatch": 6, "seconds": 1.0022745329988538, "allocated_bytes": 14581485056, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534004.4467406, "microbatch": 7, "total_microbatches": 47, "allocated_bytes": 14581485056, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534005.436903, "microbatch": 7, "seconds": 0.9900124900013907, "allocated_bytes": 14584592896, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534005.4371881, "microbatch": 8, "total_microbatches": 47, "allocated_bytes": 14584592896, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534006.429732, "microbatch": 8, "seconds": 0.9923829789986485, "allocated_bytes": 14587708928, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534006.430013, "microbatch": 9, "total_microbatches": 47, "allocated_bytes": 14587708928, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534007.4158313, "microbatch": 9, "seconds": 0.9856515729989042, "allocated_bytes": 14590819328, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534007.4160967, "microbatch": 10, "total_microbatches": 47, "allocated_bytes": 14590819328, "reserved_bytes": 44038094848}
+2026/11/13 01:40:07.425, 42671, 97887, 99
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534008.3848388, "microbatch": 10, "seconds": 0.9685758439954952, "allocated_bytes": 14593916928, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534008.385112, "microbatch": 11, "total_microbatches": 47, "allocated_bytes": 14593916928, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534009.3420148, "microbatch": 11, "seconds": 0.9567369709984632, "allocated_bytes": 14596968960, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534009.3422697, "microbatch": 12, "total_microbatches": 47, "allocated_bytes": 14596968960, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534010.3042362, "microbatch": 12, "seconds": 0.96135842899821, "allocated_bytes": 14600053248, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534010.30447, "microbatch": 13, "total_microbatches": 47, "allocated_bytes": 14600053248, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534011.2320743, "microbatch": 13, "seconds": 0.9274667999998201, "allocated_bytes": 14603114496, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534011.2323558, "microbatch": 14, "total_microbatches": 47, "allocated_bytes": 14603114496, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534012.152594, "microbatch": 14, "seconds": 0.920075743997586, "allocated_bytes": 14606181376, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534012.152844, "microbatch": 15, "total_microbatches": 47, "allocated_bytes": 14606181376, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534013.057007, "microbatch": 15, "seconds": 0.9039898530027131, "allocated_bytes": 14609224192, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534013.057255, "microbatch": 16, "total_microbatches": 47, "allocated_bytes": 14609224192, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534013.9331133, "microbatch": 16, "seconds": 0.8757022110003163, "allocated_bytes": 14611974144, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534013.9333675, "microbatch": 17, "total_microbatches": 47, "allocated_bytes": 14611974144, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534014.7986264, "microbatch": 17, "seconds": 0.8651023570055258, "allocated_bytes": 14614716928, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534014.798885, "microbatch": 18, "total_microbatches": 47, "allocated_bytes": 14614716928, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534015.655029, "microbatch": 18, "seconds": 0.8559775429966976, "allocated_bytes": 14617450496, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534015.6552742, "microbatch": 19, "total_microbatches": 47, "allocated_bytes": 14617450496, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534016.5018227, "microbatch": 19, "seconds": 0.8463875789966551, "allocated_bytes": 14620169216, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534016.5021293, "microbatch": 20, "total_microbatches": 47, "allocated_bytes": 14620169216, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534017.3446643, "microbatch": 20, "seconds": 0.8418066419981187, "allocated_bytes": 14622882816, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534017.3449073, "microbatch": 21, "total_microbatches": 47, "allocated_bytes": 14622882816, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534018.1810608, "microbatch": 21, "seconds": 0.8359946760028834, "allocated_bytes": 14625615360, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534018.18131, "microbatch": 22, "total_microbatches": 47, "allocated_bytes": 14625615360, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534019.0147312, "microbatch": 22, "seconds": 0.8332696880024741, "allocated_bytes": 14628335616, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534019.014975, "microbatch": 23, "total_microbatches": 47, "allocated_bytes": 14628335616, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534019.847908, "microbatch": 23, "seconds": 0.8327687380005955, "allocated_bytes": 14631063040, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534019.8481548, "microbatch": 24, "total_microbatches": 47, "allocated_bytes": 14631063040, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534020.6775956, "microbatch": 24, "seconds": 0.8292871689991443, "allocated_bytes": 14633786880, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534020.6779118, "microbatch": 25, "total_microbatches": 47, "allocated_bytes": 14633786880, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534021.4802232, "microbatch": 25, "seconds": 0.8021212360035861, "allocated_bytes": 14636478976, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534021.4804819, "microbatch": 26, "total_microbatches": 47, "allocated_bytes": 14636478976, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534022.2631907, "microbatch": 26, "seconds": 0.7825367979967268, "allocated_bytes": 14639121408, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534022.263443, "microbatch": 27, "total_microbatches": 47, "allocated_bytes": 14639121408, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534023.0430143, "microbatch": 27, "seconds": 0.7794031299999915, "allocated_bytes": 14641775616, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534023.0437775, "microbatch": 28, "total_microbatches": 47, "allocated_bytes": 14641775616, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534023.8256998, "microbatch": 28, "seconds": 0.7817865690012695, "allocated_bytes": 14644443648, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534023.8259277, "microbatch": 29, "total_microbatches": 47, "allocated_bytes": 14644443648, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534024.5993218, "microbatch": 29, "seconds": 0.7732478239995544, "allocated_bytes": 14647088128, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534024.599558, "microbatch": 30, "total_microbatches": 47, "allocated_bytes": 14647088128, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534025.3755188, "microbatch": 30, "seconds": 0.775819123002293, "allocated_bytes": 14649745408, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534025.3757591, "microbatch": 31, "total_microbatches": 47, "allocated_bytes": 14649745408, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534026.1390264, "microbatch": 31, "seconds": 0.7631271599966567, "allocated_bytes": 14652383232, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534026.139271, "microbatch": 32, "total_microbatches": 47, "allocated_bytes": 14652383232, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534026.8688953, "microbatch": 32, "seconds": 0.7294791919994168, "allocated_bytes": 14654997504, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534026.8691432, "microbatch": 33, "total_microbatches": 47, "allocated_bytes": 14654997504, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534027.5851765, "microbatch": 33, "seconds": 0.7158821599950898, "allocated_bytes": 14657601536, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534027.585441, "microbatch": 34, "total_microbatches": 47, "allocated_bytes": 14657601536, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534030.0067866, "microbatch": 34, "seconds": 2.421184560000256, "allocated_bytes": 14662451200, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534030.0070424, "microbatch": 35, "total_microbatches": 47, "allocated_bytes": 14662451200, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534032.2928402, "microbatch": 35, "seconds": 2.285663762995682, "allocated_bytes": 14667107840, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534032.293107, "microbatch": 36, "total_microbatches": 47, "allocated_bytes": 14667107840, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534034.5200548, "microbatch": 36, "seconds": 2.2268042400028207, "allocated_bytes": 14671703040, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534034.5203202, "microbatch": 37, "total_microbatches": 47, "allocated_bytes": 14671703040, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534036.671999, "microbatch": 37, "seconds": 2.151534725999227, "allocated_bytes": 14676337664, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534036.6722593, "microbatch": 38, "total_microbatches": 47, "allocated_bytes": 14676337664, "reserved_bytes": 44038094848}
+2026/11/13 01:40:37.447, 42671, 97887, 100
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534038.3787098, "microbatch": 38, "seconds": 1.7063104900007602, "allocated_bytes": 14680731648, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534038.3790329, "microbatch": 39, "total_microbatches": 47, "allocated_bytes": 14680731648, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534040.2113228, "microbatch": 39, "seconds": 1.8321190030037542, "allocated_bytes": 14684933120, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534040.2115939, "microbatch": 40, "total_microbatches": 47, "allocated_bytes": 14684933120, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534041.948679, "microbatch": 40, "seconds": 1.7369222009947407, "allocated_bytes": 14689339904, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534041.9489148, "microbatch": 41, "total_microbatches": 47, "allocated_bytes": 14689339904, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534043.6046607, "microbatch": 41, "seconds": 1.6555924310014234, "allocated_bytes": 14693958656, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534043.604904, "microbatch": 42, "total_microbatches": 47, "allocated_bytes": 14693958656, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534045.1666307, "microbatch": 42, "seconds": 1.5615732290025335, "allocated_bytes": 14698425856, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534045.1668818, "microbatch": 43, "total_microbatches": 47, "allocated_bytes": 14698425856, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534046.6765254, "microbatch": 43, "seconds": 1.509486831004324, "allocated_bytes": 14702735360, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534046.676783, "microbatch": 44, "total_microbatches": 47, "allocated_bytes": 14702735360, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534048.0570602, "microbatch": 44, "seconds": 1.3801378009957261, "allocated_bytes": 14707130880, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534048.0573072, "microbatch": 45, "total_microbatches": 47, "allocated_bytes": 14707130880, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534049.4227521, "microbatch": 45, "seconds": 1.3653047589978087, "allocated_bytes": 14711375872, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534049.423073, "microbatch": 46, "total_microbatches": 47, "allocated_bytes": 14711375872, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534050.7377367, "microbatch": 46, "seconds": 1.3144994309986942, "allocated_bytes": 14715630080, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_start", "timestamp": 1794534050.7379985, "microbatch": 47, "total_microbatches": 47, "allocated_bytes": 14715630080, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "candidate_scoring_done", "timestamp": 1794534051.7056704, "microbatch": 47, "seconds": 0.967529873996682, "allocated_bytes": 14718288384, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "forward_start", "timestamp": 1794534051.7098634, "microbatch": 1, "total_microbatches": 47, "allocated_bytes": 14644429824, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_start", "timestamp": 1794534052.6319933, "microbatch": 1, "forward_seconds": 0.9218742919983924, "allocated_bytes": 16892495360, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_done", "timestamp": 1794534054.175714, "microbatch": 1, "seconds": 1.5434189100051299, "allocated_bytes": 14719337472, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "forward_start", "timestamp": 1794534054.1763372, "microbatch": 2, "total_microbatches": 47, "allocated_bytes": 14719337472, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_start", "timestamp": 1794534055.0990827, "microbatch": 2, "forward_seconds": 0.9225464319970342, "allocated_bytes": 16966354432, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_done", "timestamp": 1794534056.643017, "microbatch": 2, "seconds": 1.5436829200043576, "allocated_bytes": 14719337472, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "forward_start", "timestamp": 1794534056.6436996, "microbatch": 3, "total_microbatches": 47, "allocated_bytes": 14719337472, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_start", "timestamp": 1794534057.5664725, "microbatch": 3, "forward_seconds": 0.9225710719983908, "allocated_bytes": 16966354432, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_done", "timestamp": 1794534059.1103823, "microbatch": 3, "seconds": 1.5436669300033827, "allocated_bytes": 14719337472, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "forward_start", "timestamp": 1794534059.1111054, "microbatch": 4, "total_microbatches": 47, "allocated_bytes": 14719337472, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_start", "timestamp": 1794534060.0146108, "microbatch": 4, "forward_seconds": 0.9033207340035005, "allocated_bytes": 16934656512, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_done", "timestamp": 1794534061.5281196, "microbatch": 4, "seconds": 1.5132284589999472, "allocated_bytes": 14719337472, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "forward_start", "timestamp": 1794534061.5288656, "microbatch": 5, "total_microbatches": 47, "allocated_bytes": 14719337472, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_start", "timestamp": 1794534062.4244614, "microbatch": 5, "forward_seconds": 0.8953765389960608, "allocated_bytes": 16923719680, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_done", "timestamp": 1794534063.925006, "microbatch": 5, "seconds": 1.5003052169995499, "allocated_bytes": 14719337472, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "forward_start", "timestamp": 1794534063.9257348, "microbatch": 6, "total_microbatches": 47, "allocated_bytes": 14719337472, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_start", "timestamp": 1794534064.8028867, "microbatch": 6, "forward_seconds": 0.8769594600016717, "allocated_bytes": 16880856576, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_done", "timestamp": 1794534066.2714953, "microbatch": 6, "seconds": 1.46836068599805, "allocated_bytes": 14719316992, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "forward_start", "timestamp": 1794534066.2722096, "microbatch": 7, "total_microbatches": 47, "allocated_bytes": 14719316992, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_start", "timestamp": 1794534067.1397526, "microbatch": 7, "forward_seconds": 0.8673471060028533, "allocated_bytes": 16857726976, "reserved_bytes": 44038094848}
+2026/11/13 01:41:07.468, 42671, 97887, 100
+{"step": 18, "domain": "code", "phase": "backward_done", "timestamp": 1794534068.5919054, "microbatch": 7, "seconds": 1.4519033359974856, "allocated_bytes": 14719299584, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "forward_start", "timestamp": 1794534068.592723, "microbatch": 8, "total_microbatches": 47, "allocated_bytes": 14719299584, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_start", "timestamp": 1794534069.4606535, "microbatch": 8, "forward_seconds": 0.8677352160011651, "allocated_bytes": 16862647296, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_done", "timestamp": 1794534070.9148786, "microbatch": 8, "seconds": 1.4539737660015817, "allocated_bytes": 14719307776, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "forward_start", "timestamp": 1794534070.9156973, "microbatch": 9, "total_microbatches": 47, "allocated_bytes": 14719307776, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_start", "timestamp": 1794534071.7788644, "microbatch": 9, "forward_seconds": 0.8629536890002782, "allocated_bytes": 16852547584, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_done", "timestamp": 1794534073.2239814, "microbatch": 9, "seconds": 1.444869020000624, "allocated_bytes": 14719302144, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "forward_start", "timestamp": 1794534073.2247696, "microbatch": 10, "total_microbatches": 47, "allocated_bytes": 14719302144, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_start", "timestamp": 1794534074.0691156, "microbatch": 10, "forward_seconds": 0.8441460299945902, "allocated_bytes": 16826135552, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_done", "timestamp": 1794534075.4802332, "microbatch": 10, "seconds": 1.4108774720007204, "allocated_bytes": 14719289344, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "forward_start", "timestamp": 1794534075.4809997, "microbatch": 11, "total_microbatches": 47, "allocated_bytes": 14719289344, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_start", "timestamp": 1794534076.3203266, "microbatch": 11, "forward_seconds": 0.8391241240024101, "allocated_bytes": 16795874816, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_done", "timestamp": 1794534077.720254, "microbatch": 11, "seconds": 1.399691928003449, "allocated_bytes": 14719243776, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "forward_start", "timestamp": 1794534077.7210023, "microbatch": 12, "total_microbatches": 47, "allocated_bytes": 14719243776, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_start", "timestamp": 1794534078.56047, "microbatch": 12, "forward_seconds": 0.8392799930006731, "allocated_bytes": 16810732032, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_done", "timestamp": 1794534079.9617891, "microbatch": 12, "seconds": 1.4010666579997633, "allocated_bytes": 14719276032, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "forward_start", "timestamp": 1794534079.9626117, "microbatch": 13, "total_microbatches": 47, "allocated_bytes": 14719276032, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_start", "timestamp": 1794534080.7718139, "microbatch": 13, "forward_seconds": 0.8090062720002607, "allocated_bytes": 16771236864, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_done", "timestamp": 1794534082.1397727, "microbatch": 13, "seconds": 1.3676659479970112, "allocated_bytes": 14719252992, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "forward_start", "timestamp": 1794534082.140685, "microbatch": 14, "total_microbatches": 47, "allocated_bytes": 14719252992, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_start", "timestamp": 1794534082.9420104, "microbatch": 14, "forward_seconds": 0.801114896996296, "allocated_bytes": 16761075712, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_done", "timestamp": 1794534084.2955785, "microbatch": 14, "seconds": 1.3533318069967208, "allocated_bytes": 14719258624, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "forward_start", "timestamp": 1794534084.296357, "microbatch": 15, "total_microbatches": 47, "allocated_bytes": 14719258624, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_start", "timestamp": 1794534085.0839868, "microbatch": 15, "forward_seconds": 0.78742741500173, "allocated_bytes": 16724214272, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_done", "timestamp": 1794534086.4125767, "microbatch": 15, "seconds": 1.3283406019982067, "allocated_bytes": 14719234560, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "forward_start", "timestamp": 1794534086.413326, "microbatch": 16, "total_microbatches": 47, "allocated_bytes": 14719234560, "reserved_bytes": 44038094848}
+[colab_job] periodic save (every 2 min)
+{"step": 18, "domain": "code", "phase": "backward_start", "timestamp": 1794534087.176809, "microbatch": 16, "forward_seconds": 0.7632899700038251, "allocated_bytes": 16677953024, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_done", "timestamp": 1794534088.4689422, "microbatch": 16, "seconds": 1.2918648250051774, "allocated_bytes": 14719203840, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "forward_start", "timestamp": 1794534088.4697113, "microbatch": 17, "total_microbatches": 47, "allocated_bytes": 14719203840, "reserved_bytes": 44038094848}
+2026/11/13 01:41:28 NOTICE:     1.160 MiB / 1.160 MiB, 100%, 1.159 MiB/s, ETA 0s
+{"step": 18, "domain": "code", "phase": "backward_start", "timestamp": 1794534089.2232354, "microbatch": 17, "forward_seconds": 0.7533291060026386, "allocated_bytes": 16653966848, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "backward_done", "timestamp": 1794534090.4969165, "microbatch": 17, "seconds": 1.2734316360001685, "allocated_bytes": 14719196672, "reserved_bytes": 44038094848}
+{"step": 18, "domain": "code", "phase": "forward_start", "timestamp": 1794534090.4977164, "microbatch": 18, "total_microbatches": 47, "allocated_bytes": 14719196672, "reserved_bytes": 44038094848}
+2026/11/13 01:41:30 NOTICE:     1.026 MiB / 1.026 MiB, 100%, 1.025 MiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent_mopd_main/20261112T152744Z
