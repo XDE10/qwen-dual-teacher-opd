@@ -1,0 +1,28 @@
+{
+  "name": "latent_mopd_main",
+  "command": [
+    "bash",
+    "scripts/colab_latent_top16.sh",
+    "latent",
+    "smoke-then-full"
+  ],
+  "cwd": "/content/p2-latent-main",
+  "started_utc": "2026-11-13T22:02:28Z",
+  "stamp": "20261113T220228Z",
+  "save": [
+    [
+      "runs",
+      "/content/runs/r1_latent_observable"
+    ]
+  ],
+  "drive": "mydrive:opd_runs",
+  "publish": true,
+  "sync_every_min": 2.0,
+  "drive_about": {
+    "total": 5497558138880,
+    "used": 527261161702,
+    "trashed": 3424092350,
+    "other": 24188451,
+    "free": 4970272788727
+  }
+}
