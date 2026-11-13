@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent_mopd_main",
   "stamp": "20261113T181828Z",
-  "published_utc": "2026-11-13T19:19:55Z",
+  "published_utc": "2026-11-13T19:22:10Z",
   "job": {
     "state": "running"
   },
@@ -37,8 +37,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 147094,
-      "sha256": "8d374a6ce5f82e43f36e8a0e22820df88c123e30a3c3069e43da5e967a916a8a"
+      "bytes": 150057,
+      "sha256": "6f9d9d8f6db5e06d597f6572d6829c74c06e6190a47bac11de10b8fa78ae9ccc"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/metrics.jsonl",
@@ -47,8 +47,8 @@
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/phase_metrics.jsonl",
-      "bytes": 2728157,
-      "sha256": "74e9090f5e58960c33f9ecee1b429e60c0b7015fa6c5cc5860a852912cfea0b4"
+      "bytes": 2730404,
+      "sha256": "7d9c9d32475e832d25b4d719a1ef623d59e5007fefd05f15f9fd8ba7a930d7c6"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/resume_archive_1794543309830572075/metrics.jsonl",
@@ -420,6 +420,22 @@
       "reason": "not a text result"
     },
     {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000043/batch-0014.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000043/batch-0015.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000043/batch-0016.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000043/batch-0017.json.gz",
+      "reason": "not a text result"
+    },
+    {
       "path": "runs/smoke/latent_mopd_top16_latent/checkpoint-1/",
       "reason": "folder not published"
     },
@@ -440,7 +456,7 @@
       "reason": "not a text result"
     }
   ],
-  "skipped_count": 89,
+  "skipped_count": 93,
   "limits_mb": {
     "per_file": 20,
     "total": 50
