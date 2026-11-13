@@ -328,6 +328,41 @@ def build_trainer(c, base_state, seed=0):
     return OPDTrainerV3(c, student, teachers, engine, samplers, prefixes, SUPPORT, PAD, 'cpu', optimizer, scheduler)
 
 
+def test_latent_rollout_recovery_reuses_completed_batches(tmp_path):
+    import json
+
+    from src.training.latent_progress import RunProgress
+
+    class Engine:
+        batch_size = 2
+
+        def __init__(self, fail_at=None):
+            self.calls = 0
+            self.fail_at = fail_at
+
+        def generate(self, prefixes, domain):
+            self.calls += 1
+            if self.calls == self.fail_at:
+                raise RuntimeError('interrupted')
+            return [{'prompt_ids': prefix, 'domain': domain, 'ended_with_eos': True,
+                     'response_ids': [torch.randint(16, 32, ()).item()]} for prefix in prefixes]
+
+    identity = {'hard': {'config': {'seed': 42}}}
+    progress = RunProgress(tmp_path, identity, 'cpu')
+    prefixes = [[3, 4], [5], [6, 7], [8]]
+    with pytest.raises(RuntimeError, match='interrupted'):
+        progress.rollouts(Engine(fail_at=2), prefixes, 1, 'math')
+    engine = Engine()
+    restored = progress.rollouts(engine, prefixes, 1, 'math')
+    assert engine.calls == 1
+    assert [row['prompt_ids'] for row in restored] == prefixes
+    (tmp_path / 'rollout_spool/step-000001/batch-0001.json.gz').write_bytes(b'corrupt')
+    assert progress.rollouts(engine, prefixes, 1, 'math') == restored
+    assert engine.calls == 2
+    events = [json.loads(line) for line in (tmp_path / 'phase_metrics.jsonl').read_text().splitlines()]
+    assert any(row['phase'] == 'rollout_batch_done' and row['reused'] for row in events)
+
+
 def test_latent_top16_scores_and_gradients_match_dense_appendix_c(monkeypatch):
     from src.losses import latent_opd
 

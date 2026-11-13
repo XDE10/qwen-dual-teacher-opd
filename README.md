@@ -30,11 +30,13 @@
 
 2026-11-12 21:12（新加坡时间）在 G4 会话 `p2-top16-restart` 按相同配置从第 1 步重开纯 token。最后一次同步在 21:33，保存的 `metrics.jsonl` 为空，Drive 中没有 checkpoint，Colab 已无该会话。运行未完成，终止原因未确认。[最后一次同步记录](https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent_top16_token_retry/20261112T131202Z)
 
-[Colab 启动脚本](scripts/colab_latent_top16.sh) 使用 16 条并发，保持每个优化器步生成 128 个回答，记录 GPU 采样并在第一步结束即保存 checkpoint。用已引导的 Colab 环境从仓库根目录运行：
+[Colab 启动脚本](scripts/colab_latent_top16.sh) 的新运行目录为 `/content/runs/r1_latent_observable`。`latent smoke-then-full` 先跑 3 步验证数学、代码、混合损失和 checkpoint，验证通过后启动 62 步 Latent。正式配置保留每步 128 条回答与 16K 上限，每次并发 4 条。`phase_metrics.jsonl` 记录各批进度、长度、截断、耗时和 CUDA 显存。压缩的 `rollout_spool` 文件按运行身份和样本验证，恢复后可复用已经落盘的生成批次。首步结束即保存优化器 checkpoint。
 
 ```bash
-python scripts/colab_job_v3.py latent_top16_token_retry --drive mydrive:opd_runs --publish --sync-every 3 --save runs=/content/runs/r1_latent_top16_20261112 -- bash scripts/colab_latent_top16.sh token
+python scripts/colab_job_v3.py latent_mopd_main --drive mydrive:opd_runs --publish --sync-every 2 --save runs=/content/runs/r1_latent_observable -- bash scripts/colab_latent_top16.sh latent smoke-then-full
 ```
+
+2026-11-12 23:27（新加坡时间）在 G4 会话 `p2-latent-main` 启动 Latent。3 步短跑通过，覆盖纯隐藏层更新和 top-16 加隐藏层的联合更新，第 1、3 步 checkpoint 通过哈希校验并同步到 Drive。随后自动启动 16K 正式配置。11 月 13 日复查时已完成 16/62 步，正式 checkpoint 已保存至第 10 步，正式评测待执行。当前实现的 WSL2 全量测试为 197 项通过、1 项跳过。[本轮运行记录](https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent_mopd_main/20261112T152744Z)
 
 ## 快速开始
 

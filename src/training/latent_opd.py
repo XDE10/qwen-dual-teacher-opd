@@ -51,7 +51,7 @@ def audit_inputs():
     return tok, support['size'], pools, prefixes
 
 
-def train_step(trainer, variant, prompts, responses, microbatch_tokens):
+def train_step(trainer, variant, prompts, responses, microbatch_tokens, progress=None):
     import torch
 
     from src.losses.latent_opd import loss_weights, response_batch, reward_scale, routed_loss, score_candidates
@@ -63,16 +63,28 @@ def train_step(trainer, variant, prompts, responses, microbatch_tokens):
     step = trainer.state['step']
     domain = opd.DOMAINS[step % len(opd.DOMAINS)]
     token_weight, latent_weight = loss_weights(variant, domain, step // len(opd.DOMAINS))
+
+    def event(phase, **detail):
+        if progress is not None:
+            progress.event(step + 1, domain, phase, **detail)
+
+    event('step_start', token_weight=token_weight, latent_weight=latent_weight)
     rows = trainer.samplers[domain].next(prompts)
     prefixes = [trainer.prefixes[row['sample_id']] for row in rows for _ in range(responses)]
     trainer.engine.sync(trainer.student)
-    rollouts = trainer.engine.generate(prefixes, domain)
+    rollouts = (progress.rollouts(trainer.engine, prefixes, step + 1, domain) if progress is not None
+                else trainer.engine.generate(prefixes, domain))
     rollout_seconds = time.monotonic() - started
     targets = [len(item['response_ids']) for item in rollouts]
     if min(targets) < 1:
         raise RuntimeError('Empty on-policy response')
     sequences = [prefix + item['response_ids'] for prefix, item in zip(prefixes, rollouts)]
     target_count = sum(targets)
+    sorted_lengths = sorted(targets)
+    event('rollout_done', response_tokens=target_count, seconds=rollout_seconds,
+          p50_response_tokens=sorted_lengths[(len(targets) - 1) // 2],
+          p95_response_tokens=sorted_lengths[(95 * len(targets) - 1) // 100],
+          truncated_responses=sum(not item['ended_with_eos'] for item in rollouts))
     teacher = trainer.teachers.get(domain)
     batches = []
     for group in opd.pack_by_tokens([len(ids) for ids in sequences], microbatch_tokens):
@@ -83,7 +95,14 @@ def train_step(trainer, variant, prompts, responses, microbatch_tokens):
     scoring_started = time.monotonic()
     if token_weight:
         trainer.student.eval()
-        scored = [score_candidates(trainer.student, teacher, batch, trainer.support) for batch, _ in batches]
+        scored = []
+        for number, (batch, _) in enumerate(batches, 1):
+            event('candidate_scoring_start', microbatch=number, total_microbatches=len(batches))
+            began = time.monotonic()
+            scored.append(score_candidates(trainer.student, teacher, batch, trainer.support))
+            if cuda and progress is not None:
+                torch.cuda.synchronize(trainer.device)
+            event('candidate_scoring_done', microbatch=number, seconds=time.monotonic() - began)
         scale = reward_scale(scored)
     else:
         scored = [(None, None)] * len(batches)
@@ -95,17 +114,25 @@ def train_step(trainer, variant, prompts, responses, microbatch_tokens):
     trainer.student.train()
     trainer.optimizer.zero_grad(set_to_none=True)
     total_loss = 0.0
-    for (batch, count), (candidates, rewards) in zip(batches, scored):
+    for number, ((batch, count), (candidates, rewards)) in enumerate(zip(batches, scored), 1):
+        event('forward_start', microbatch=number, total_microbatches=len(batches))
+        began = time.monotonic()
         advantages = rewards / scale if token_weight else None
         loss = routed_loss(trainer.student, teacher, batch, trainer.support, token_weight, latent_weight,
                            candidates, advantages) * (count / len(rollouts))
+        if cuda and progress is not None:
+            torch.cuda.synchronize(trainer.device)
+        event('backward_start', microbatch=number, forward_seconds=time.monotonic() - began)
+        began = time.monotonic()
         loss.backward()
         total_loss += float(loss.detach())
         del loss
+        event('backward_done', microbatch=number, seconds=time.monotonic() - began)
     norm = torch.nn.utils.clip_grad_norm_(trainer.params, 1.0, error_if_nonfinite=True)
     trainer.optimizer.step()
     trainer.scheduler.step()
     trainer.state['step'] = step + 1
+    event('optimizer_done', gradient_norm=float(norm))
     memory = {'peak_allocated_bytes': torch.cuda.max_memory_allocated(trainer.device),
               'peak_reserved_bytes': torch.cuda.max_memory_reserved(trainer.device)} if cuda else {}
     return {'step': step + 1, 'domain': domain, 'token_weight': token_weight, 'latent_weight': latent_weight,
@@ -120,6 +147,7 @@ def run(args, assets):
     from peft import LoraConfig, PeftModel, get_peft_model
     from transformers import set_seed
 
+    from src.training.latent_progress import RunProgress
     from src.training.model_drive_cache import stage_model
     from src.training.rollout_v3 import GenerationCopy, HFRolloutEngine
     from src.training.runtime_v3 import SOURCES, build_identity, prepare_output, validate_checkpoint
@@ -139,7 +167,7 @@ def run(args, assets):
     set_seed(args.seed)
     device = torch.device('cuda')
     output = Path(args.output_root) / ('latent_mopd_top16_' + args.variant)
-    config = {**DATA, 'implementation_version': 'latent-mopd-top16', 'student': STUDENT,
+    config = {**DATA, 'implementation_version': 'latent-mopd-top16-replay', 'student': STUDENT,
               'teachers': TEACHERS, 'variant': args.variant,
               'tokenizer_path': str(ASSETS / STUDENT['model'].split('/')[-1]), 'tokenizer_audit': str(AUDIT),
               'seed': args.seed, 'prompts': args.prompts, 'responses': args.responses, 'steps': args.steps,
@@ -152,10 +180,10 @@ def run(args, assets):
     contracts = {d: resolved_contract(generation.model, cfg, support, device) for d, cfg in configs.items()}
     identity = build_identity(config, contracts, opd.ROOT, sources=[*SOURCES, 'src/training/latent_opd.py',
                               'src/losses/latent_opd.py', 'src/teachers/tokenizer_audit.py',
-                              'src/training/model_drive_cache.py'])
+                              'src/training/model_drive_cache.py', 'src/training/latent_progress.py'])
     checkpoint = opd.latest_valid_checkpoint(output, identity) if args.resume else None
-    if args.resume and checkpoint is None:
-        raise ValueError(f'No matching checkpoint in {output}')
+    if args.resume and checkpoint is None and not (output / 'run_identity.json').is_file():
+        raise ValueError(f'No saved run in {output}')
     if checkpoint is not None:
         validate_checkpoint(checkpoint, identity)
         saved = torch.load(checkpoint / 'engine.pt', map_location='cpu', weights_only=False)
@@ -180,14 +208,17 @@ def run(args, assets):
                                optimizer, scheduler)
     if saved is not None:
         opd.restore_engine(trainer, saved)
-    prepare_output(output, identity, trainer.state['step'] if saved else None, 'archive_future_v2')
+    prepare_output(output, identity, trainer.state['step'] if args.resume else None, 'archive_future_v2')
+    progress = RunProgress(output, identity, device)
     last = min(args.steps, args.stop_at_step) if args.stop_at_step else args.steps
     with (output / 'metrics.jsonl').open('a', encoding='utf-8') as log:
         while trainer.state['step'] < last:
-            record = train_step(trainer, args.variant, args.prompts, args.responses, args.microbatch_tokens)
+            record = train_step(trainer, args.variant, args.prompts, args.responses, args.microbatch_tokens, progress)
             step = record['step']
-            if step % 10 == 0 or step == last:
+            if step == 1 or step % 10 == 0 or step == last:
+                progress.event(step, record['domain'], 'checkpoint_start')
                 opd.save_checkpoint(output / f'checkpoint-{step}', trainer, identity, record)
+                progress.event(step, record['domain'], 'checkpoint_saved')
             print(json.dumps(record), file=log, flush=True)
             print(json.dumps(record), flush=True)
 
