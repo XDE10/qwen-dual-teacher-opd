@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent_mopd_main",
   "stamp": "20261113T220228Z",
-  "published_utc": "2026-11-13T22:52:22Z",
+  "published_utc": "2026-11-13T22:54:36Z",
   "job": {
     "state": "running"
   },
@@ -37,18 +37,18 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 124732,
-      "sha256": "3716b9a91f4db2e961f3100371e8b7ac35057c2576b36668a0aece31e2c10844"
+      "bytes": 135633,
+      "sha256": "c2970ccd4e692fe99cbc6506670d7ac8780594be03ccaeac7db7791a783bb316"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/metrics.jsonl",
-      "bytes": 17142,
-      "sha256": "2d1f6dcfecf9fa30e147a4f939c6fa7900da5eebf8a4a5c37b57f14f1df8095c"
+      "bytes": 17553,
+      "sha256": "dc2ec6aeb0bcd84492438051ec44c17c935c854ac1ba129f260b71ae0ca03984"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/phase_metrics.jsonl",
-      "bytes": 3089660,
-      "sha256": "1157a547e0f60808bf47e6fe7baace780bd69977c8a2fd2dbc10c5268b09dd7c"
+      "bytes": 3099434,
+      "sha256": "c15021832ad8f035d61343bc168b2bb3f6e839cc03c2c290d61f08efc0ae8bcd"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/resume_archive_1794543309830572075/metrics.jsonl",
@@ -373,6 +373,18 @@
       "reason": "not a text result"
     },
     {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000043/batch-0001.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000043/batch-0002.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000043/batch-0003.json.gz",
+      "reason": "not a text result"
+    },
+    {
       "path": "runs/smoke/latent_mopd_top16_latent/checkpoint-1/",
       "reason": "folder not published"
     },
@@ -393,7 +405,7 @@
       "reason": "not a text result"
     }
   ],
-  "skipped_count": 76,
+  "skipped_count": 79,
   "limits_mb": {
     "per_file": 20,
     "total": 50
