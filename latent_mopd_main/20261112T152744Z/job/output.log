@@ -8953,3 +8953,17 @@ Three-step GPU smoke passed
 2026/11/13 03:49:46 NOTICE:     1.383 MiB / 1.383 MiB, 100%, 1.382 MiB/s, ETA 0s
 2026/11/13 03:49:47 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
 [colab_job] saved to Drive: mydrive:opd_runs/latent_mopd_main/20261112T152744Z
+[publish] 8 files (2.60 MB), 708 left out, 0 strings redacted -> results:latent_mopd_main/20261112T152744Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent_mopd_main/20261112T152744Z
+{"step": 22, "domain": "code", "phase": "rollout_batch_done", "timestamp": 1794541810.2362201, "batch": 27, "reused": false, "done_responses": 108, "total_responses": 128, "response_tokens": 54112, "max_response_tokens": 16384, "truncated_responses": 1, "seconds": 151.63221794800484, "allocated_bytes": 14537439232, "reserved_bytes": 44038094848}
+{"step": 22, "domain": "code", "phase": "rollout_batch_start", "timestamp": 1794541810.2365804, "batch": 28, "done_responses": 108, "total_responses": 128, "allocated_bytes": 14537439232, "reserved_bytes": 44038094848}
+2026/11/13 03:50:12.256, 42671, 97887, 74
+2026/11/13 03:50:42.274, 42671, 97887, 83
+2026/11/13 03:51:12.292, 42671, 97887, 85
+2026/11/13 03:51:42.310, 42671, 97887, 86
+{"step": 22, "domain": "code", "phase": "rollout_batch_done", "timestamp": 1794541908.7386394, "batch": 28, "reused": false, "done_responses": 112, "total_responses": 128, "response_tokens": 38743, "max_response_tokens": 11093, "truncated_responses": 0, "seconds": 98.50188677699771, "allocated_bytes": 14537439232, "reserved_bytes": 44038094848}
+{"step": 22, "domain": "code", "phase": "rollout_batch_start", "timestamp": 1794541908.739013, "batch": 29, "done_responses": 112, "total_responses": 128, "allocated_bytes": 14537439232, "reserved_bytes": 44038094848}
+[colab_job] periodic save (every 2 min)
+2026/11/13 03:51:53 NOTICE:     1.385 MiB / 1.385 MiB, 100%, 1.384 MiB/s, ETA 0s
+2026/11/13 03:51:55 NOTICE:     1.262 MiB / 1.262 MiB, 100%, 1.261 MiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent_mopd_main/20261112T152744Z
