@@ -1019,3 +1019,34 @@ Three-step GPU smoke passed
 {"step": 33, "domain": "math", "phase": "backward_start", "timestamp": 1794566331.5000408, "microbatch": 24, "forward_seconds": 0.5657203970004048, "allocated_bytes": 16334823936, "reserved_bytes": 41406169088}
 2026/11/13 10:38:52 NOTICE:     1.917 MiB / 1.917 MiB, 100%, 1.916 MiB/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/latent_mopd_main/20261113T092316Z
+[publish] 9 files (2.15 MB), 1067 left out, 0 strings redacted -> results:latent_mopd_main/20261113T092316Z
+{"step": 33, "domain": "math", "phase": "backward_done", "timestamp": 1794566332.8298783, "microbatch": 24, "seconds": 1.329509780999615, "allocated_bytes": 14645366272, "reserved_bytes": 41406169088}
+{"step": 33, "domain": "math", "phase": "optimizer_done", "timestamp": 1794566332.8353136, "gradient_norm": 1.067825198173523, "allocated_bytes": 14645366784, "reserved_bytes": 41406169088}
+{"step": 33, "domain": "math", "token_weight": 1.0, "latent_weight": 0.0, "prompts": 32, "responses": 128, "response_tokens": 448068, "truncated_responses": 1, "loss": -2.0953754279762506, "gradient_norm": 1.067825198173523, "seconds": 1439.5632383339998, "rollout_seconds": 1323.7125041790005, "candidate_scoring_seconds": 34.33363078000002, "peak_allocated_bytes": 22162598912, "peak_reserved_bytes": 41406169088}
+{"step": 34, "domain": "code", "phase": "step_start", "timestamp": 1794566332.8397458, "token_weight": 1.0, "latent_weight": 0.0, "allocated_bytes": 14536521728, "reserved_bytes": 41406169088}
+{"step": 34, "domain": "code", "phase": "rollout_batch_start", "timestamp": 1794566332.8510237, "batch": 1, "done_responses": 0, "total_responses": 128, "allocated_bytes": 14536521728, "reserved_bytes": 41406169088}
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent_mopd_main/20261113T092316Z
+{"step": 34, "domain": "code", "phase": "rollout_batch_done", "timestamp": 1794566339.03056, "batch": 1, "reused": false, "done_responses": 4, "total_responses": 128, "response_tokens": 2578, "max_response_tokens": 727, "truncated_responses": 0, "seconds": 6.179299068999171, "allocated_bytes": 14536521728, "reserved_bytes": 41406169088}
+{"step": 34, "domain": "code", "phase": "rollout_batch_start", "timestamp": 1794566339.0308485, "batch": 2, "done_responses": 4, "total_responses": 128, "allocated_bytes": 14536521728, "reserved_bytes": 41406169088}
+{"step": 34, "domain": "code", "phase": "rollout_batch_done", "timestamp": 1794566357.4661427, "batch": 2, "reused": false, "done_responses": 8, "total_responses": 128, "response_tokens": 5060, "max_response_tokens": 2171, "truncated_responses": 0, "seconds": 18.43512182500035, "allocated_bytes": 14536521728, "reserved_bytes": 41406169088}
+{"step": 34, "domain": "code", "phase": "rollout_batch_start", "timestamp": 1794566357.4664552, "batch": 3, "done_responses": 8, "total_responses": 128, "allocated_bytes": 14536521728, "reserved_bytes": 41406169088}
+2026/11/13 10:39:19.105, 40161, 97887, 70
+{"step": 34, "domain": "code", "phase": "rollout_batch_done", "timestamp": 1794566364.383243, "batch": 3, "reused": false, "done_responses": 12, "total_responses": 128, "response_tokens": 3150, "max_response_tokens": 814, "truncated_responses": 0, "seconds": 6.916619198999797, "allocated_bytes": 14536521728, "reserved_bytes": 41406169088}
+{"step": 34, "domain": "code", "phase": "rollout_batch_start", "timestamp": 1794566364.3835423, "batch": 4, "done_responses": 12, "total_responses": 128, "allocated_bytes": 14536521728, "reserved_bytes": 41406169088}
+{"step": 34, "domain": "code", "phase": "rollout_batch_done", "timestamp": 1794566372.245862, "batch": 4, "reused": false, "done_responses": 16, "total_responses": 128, "response_tokens": 3269, "max_response_tokens": 926, "truncated_responses": 0, "seconds": 7.862154864000331, "allocated_bytes": 14536521728, "reserved_bytes": 41406169088}
+{"step": 34, "domain": "code", "phase": "rollout_batch_start", "timestamp": 1794566372.2461522, "batch": 5, "done_responses": 16, "total_responses": 128, "allocated_bytes": 14536521728, "reserved_bytes": 41406169088}
+{"step": 34, "domain": "code", "phase": "rollout_batch_done", "timestamp": 1794566379.794389, "batch": 5, "reused": false, "done_responses": 20, "total_responses": 128, "response_tokens": 3504, "max_response_tokens": 888, "truncated_responses": 0, "seconds": 7.548049498999717, "allocated_bytes": 14536521728, "reserved_bytes": 41406169088}
+{"step": 34, "domain": "code", "phase": "rollout_batch_start", "timestamp": 1794566379.7946727, "batch": 6, "done_responses": 20, "total_responses": 128, "allocated_bytes": 14536521728, "reserved_bytes": 41406169088}
+2026/11/13 10:39:49.123, 40161, 97887, 75
+{"step": 34, "domain": "code", "phase": "rollout_batch_done", "timestamp": 1794566409.0318308, "batch": 6, "reused": false, "done_responses": 24, "total_responses": 128, "response_tokens": 7064, "max_response_tokens": 3437, "truncated_responses": 0, "seconds": 29.236160253999515, "allocated_bytes": 14536521728, "reserved_bytes": 41406169088}
+{"step": 34, "domain": "code", "phase": "rollout_batch_start", "timestamp": 1794566409.032136, "batch": 7, "done_responses": 24, "total_responses": 128, "allocated_bytes": 14536521728, "reserved_bytes": 41406169088}
+2026/11/13 10:40:19.142, 40161, 97887, 76
+{"step": 34, "domain": "code", "phase": "rollout_batch_done", "timestamp": 1794566438.3444571, "batch": 7, "reused": false, "done_responses": 28, "total_responses": 128, "response_tokens": 11659, "max_response_tokens": 3446, "truncated_responses": 0, "seconds": 29.31213774400021, "allocated_bytes": 14536521728, "reserved_bytes": 41406169088}
+{"step": 34, "domain": "code", "phase": "rollout_batch_start", "timestamp": 1794566438.3447518, "batch": 8, "done_responses": 28, "total_responses": 128, "allocated_bytes": 14536521728, "reserved_bytes": 41406169088}
+{"step": 34, "domain": "code", "phase": "rollout_batch_done", "timestamp": 1794566447.0870357, "batch": 8, "reused": false, "done_responses": 32, "total_responses": 128, "response_tokens": 3729, "max_response_tokens": 1032, "truncated_responses": 0, "seconds": 8.742118405999463, "allocated_bytes": 14536521728, "reserved_bytes": 41406169088}
+{"step": 34, "domain": "code", "phase": "rollout_batch_start", "timestamp": 1794566447.087346, "batch": 9, "done_responses": 32, "total_responses": 128, "allocated_bytes": 14536521728, "reserved_bytes": 41406169088}
+2026/11/13 10:40:49.160, 40161, 97887, 73
+[colab_job] periodic save (every 2 min)
+2026/11/13 10:40:57 NOTICE:   175.177 KiB / 175.177 KiB, 100%, 175.074 KiB/s, ETA 0s
+2026/11/13 10:41:00 NOTICE:     1.961 MiB / 1.961 MiB, 100%, 1004.047 KiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent_mopd_main/20261113T092316Z
