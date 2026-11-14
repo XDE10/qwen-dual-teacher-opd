@@ -6350,3 +6350,17 @@ Three-step GPU smoke passed
 2026/11/14 06:23:47.414, 31035, 97887, 74
 2026/11/14 06:23:48 NOTICE:     3.756 MiB / 3.756 MiB, 100%, 1.251 MiB/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/latent_mopd_main/20261113T220228Z
+[publish] 11 files (4.83 MB), 510 left out, 0 strings redacted -> results:latent_mopd_main/20261113T220228Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent_mopd_main/20261113T220228Z
+{"step": 56, "domain": "code", "phase": "rollout_batch_done", "timestamp": 1794637449.039166, "batch": 18, "reused": false, "done_responses": 72, "total_responses": 128, "response_tokens": 11230, "max_response_tokens": 3371, "truncated_responses": 0, "seconds": 28.672862567997072, "allocated_bytes": 14536521728, "reserved_bytes": 31836864512}
+{"step": 56, "domain": "code", "phase": "rollout_batch_start", "timestamp": 1794637449.0395014, "batch": 19, "done_responses": 72, "total_responses": 128, "allocated_bytes": 14536521728, "reserved_bytes": 31836864512}
+2026/11/14 06:24:17.431, 31035, 97887, 75
+{"step": 56, "domain": "code", "phase": "rollout_batch_done", "timestamp": 1794637481.6855092, "batch": 19, "reused": false, "done_responses": 76, "total_responses": 128, "response_tokens": 10899, "max_response_tokens": 3812, "truncated_responses": 0, "seconds": 32.645841080993705, "allocated_bytes": 14536521728, "reserved_bytes": 31836864512}
+{"step": 56, "domain": "code", "phase": "rollout_batch_start", "timestamp": 1794637481.6858268, "batch": 20, "done_responses": 76, "total_responses": 128, "allocated_bytes": 14536521728, "reserved_bytes": 31836864512}
+2026/11/14 06:24:47.449, 31035, 97887, 74
+2026/11/14 06:25:17.467, 31035, 97887, 81
+2026/11/14 06:25:47.485, 31035, 97887, 84
+[colab_job] periodic save (every 2 min)
+2026/11/14 06:25:57 NOTICE:     1.007 MiB / 1.007 MiB, 100%, 515.259 KiB/s, ETA 0s
+2026/11/14 06:26:02 NOTICE:     3.722 MiB / 3.722 MiB, 100%, 1.860 MiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent_mopd_main/20261113T220228Z
