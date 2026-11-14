@@ -2503,3 +2503,25 @@ Three-step GPU smoke passed
 2026/11/14 01:12:38 NOTICE:   408.700 KiB / 408.700 KiB, 100%, 408.329 KiB/s, ETA 0s
 2026/11/14 01:12:43 NOTICE:     3.211 MiB / 3.211 MiB, 100%, 1.605 MiB/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/latent_mopd_main/20261113T220228Z
+[publish] 11 files (3.71 MB), 205 left out, 0 strings redacted -> results:latent_mopd_main/20261113T220228Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent_mopd_main/20261113T220228Z
+2026/11/14 01:13:06.009, 31029, 97887, 79
+{"step": 47, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794618787.2028618, "batch": 2, "reused": false, "done_responses": 8, "total_responses": 128, "response_tokens": 12201, "max_response_tokens": 3748, "truncated_responses": 0, "seconds": 32.08121944699997, "allocated_bytes": 14536521728, "reserved_bytes": 31830573056}
+{"step": 47, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794618787.2031577, "batch": 3, "done_responses": 8, "total_responses": 128, "allocated_bytes": 14536521728, "reserved_bytes": 31830573056}
+{"step": 47, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794618815.3126886, "batch": 3, "reused": false, "done_responses": 12, "total_responses": 128, "response_tokens": 12023, "max_response_tokens": 3281, "truncated_responses": 0, "seconds": 28.109345435999785, "allocated_bytes": 14536521728, "reserved_bytes": 31830573056}
+{"step": 47, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794618815.3129835, "batch": 4, "done_responses": 12, "total_responses": 128, "allocated_bytes": 14536521728, "reserved_bytes": 31830573056}
+2026/11/14 01:13:36.027, 31029, 97887, 72
+{"step": 47, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794618831.3055522, "batch": 4, "reused": false, "done_responses": 16, "total_responses": 128, "response_tokens": 3067, "max_response_tokens": 1869, "truncated_responses": 0, "seconds": 15.992398325000977, "allocated_bytes": 14536521728, "reserved_bytes": 31830573056}
+{"step": 47, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794618831.3058424, "batch": 5, "done_responses": 16, "total_responses": 128, "allocated_bytes": 14536521728, "reserved_bytes": 31830573056}
+{"step": 47, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794618836.1346214, "batch": 5, "reused": false, "done_responses": 20, "total_responses": 128, "response_tokens": 1776, "max_response_tokens": 563, "truncated_responses": 0, "seconds": 4.828615399001137, "allocated_bytes": 14536521728, "reserved_bytes": 31830573056}
+{"step": 47, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794618836.1348672, "batch": 6, "done_responses": 20, "total_responses": 128, "allocated_bytes": 14536521728, "reserved_bytes": 31830573056}
+2026/11/14 01:14:06.045, 31029, 97887, 74
+{"step": 47, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794618872.0202441, "batch": 6, "reused": false, "done_responses": 24, "total_responses": 128, "response_tokens": 9740, "max_response_tokens": 4193, "truncated_responses": 0, "seconds": 35.88520807200075, "allocated_bytes": 14536521728, "reserved_bytes": 31830573056}
+{"step": 47, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794618872.020519, "batch": 7, "done_responses": 24, "total_responses": 128, "allocated_bytes": 14536521728, "reserved_bytes": 31830573056}
+2026/11/14 01:14:36.063, 31029, 97887, 72
+[colab_job] periodic save (every 2 min)
+{"step": 47, "domain": "math", "phase": "rollout_batch_done", "timestamp": 1794618892.7883081, "batch": 7, "reused": false, "done_responses": 28, "total_responses": 128, "response_tokens": 6093, "max_response_tokens": 2429, "truncated_responses": 0, "seconds": 20.767032735999237, "allocated_bytes": 14536521728, "reserved_bytes": 31830573056}
+{"step": 47, "domain": "math", "phase": "rollout_batch_start", "timestamp": 1794618892.7885845, "batch": 8, "done_responses": 28, "total_responses": 128, "allocated_bytes": 14536521728, "reserved_bytes": 31830573056}
+2026/11/14 01:14:53 NOTICE:   412.092 KiB / 412.092 KiB, 100%, 411.918 KiB/s, ETA 0s
+2026/11/14 01:14:59 NOTICE:     3.231 MiB / 3.231 MiB, 100%, 826.546 KiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent_mopd_main/20261113T220228Z

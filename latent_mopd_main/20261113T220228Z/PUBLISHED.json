@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent_mopd_main",
   "stamp": "20261113T220228Z",
-  "published_utc": "2026-11-14T01:12:43Z",
+  "published_utc": "2026-11-14T01:14:59Z",
   "job": {
     "state": "running"
   },
@@ -37,8 +37,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 418754,
-      "sha256": "d199637ab035db22afb62c7438d68e61352c6f610947af3523ea9ce3f9ee71c0"
+      "bytes": 422790,
+      "sha256": "e1df3faa0c23bf057448b5f0d599ff58d033e9b7514b90d2ab519e628f151866"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/metrics.jsonl",
@@ -47,8 +47,8 @@
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/phase_metrics.jsonl",
-      "bytes": 3338016,
-      "sha256": "c36cd7c871bc394389a7443dc35f6b239e099bc606e609d13d94c8d4c9fb65c9"
+      "bytes": 3341377,
+      "sha256": "52f40b5b85663cf3876f18d2d1d87da82e9b0153f14e6536c4c6f5bfa991fada"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/resume_archive_1794543309830572075/metrics.jsonl",
@@ -889,6 +889,30 @@
       "reason": "not a text result"
     },
     {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000047/batch-0002.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000047/batch-0003.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000047/batch-0004.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000047/batch-0005.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000047/batch-0006.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000047/batch-0007.json.gz",
+      "reason": "not a text result"
+    },
+    {
       "path": "runs/smoke/latent_mopd_top16_latent/checkpoint-1/",
       "reason": "folder not published"
     },
@@ -909,7 +933,7 @@
       "reason": "not a text result"
     }
   ],
-  "skipped_count": 205,
+  "skipped_count": 211,
   "limits_mb": {
     "per_file": 20,
     "total": 50
