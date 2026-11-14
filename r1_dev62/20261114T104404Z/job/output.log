@@ -80,3 +80,11 @@ math_dev {"count": 256, "truncated": 80, "accuracy_conservative": 0.53125, "accu
 2026/11/14 11:45:23 NOTICE:     6.235 KiB / 6.235 KiB, 100%, 0 B/s, ETA -
 2026/11/14 11:45:24 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
 [colab_job] saved to Drive: mydrive:opd_runs/r1_dev62/20261114T104404Z
+[publish] 6 files (2.92 MB), 2 left out, 0 strings redacted -> results:r1_dev62/20261114T104404Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/r1_dev62/20261114T104404Z
+{"event": "batch_done", "model": "base-r1", "suite": "code_dev", "batch": 1, "items_done": 64, "longest_response": 8192, "response_tokens": 116679, "seconds": 783.1}
+{"event": "batch_start", "model": "base-r1", "suite": "code_dev", "batch": 2, "size": 64}
+[colab_job] periodic save (every 5 min)
+2026/11/14 11:50:30 NOTICE:     6.926 KiB / 6.926 KiB, 100%, 0 B/s, ETA -
+2026/11/14 11:50:31 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+[colab_job] saved to Drive: mydrive:opd_runs/r1_dev62/20261114T104404Z
