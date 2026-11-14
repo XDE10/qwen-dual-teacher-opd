@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "r1_dev62",
   "stamp": "20261114T104404Z",
-  "published_utc": "2026-11-14T13:12:46Z",
+  "published_utc": "2026-11-14T13:17:56Z",
   "job": {
     "state": "running"
   },
@@ -61,6 +61,16 @@
       "sha256": "b5d4c1a2e0ffdf35e5af921199ff49e303ad06d296ad28cd16b7664b94689f70"
     },
     {
+      "path": "eval/latent-62/math_dev.jsonl",
+      "bytes": 3128984,
+      "sha256": "2647b04e683e7ec283ff2f1e1e6e09ad6039e8aa0a5cef1b0a8cb3b3966c1356"
+    },
+    {
+      "path": "eval/latent-62/math_dev.summary.json",
+      "bytes": 3697,
+      "sha256": "4d507130e4310b50d51fe483ff7d624313e3644a11021bf42415abc3334db090"
+    },
+    {
       "path": "eval/run_dev_eval.py.txt",
       "bytes": 5841,
       "sha256": "17bacebf88f771c88ffc1dac12bb764cd5676d3a888b5875dd1ec63dfef6bab7"
@@ -72,8 +82,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 16171,
-      "sha256": "b67ae93ba8dcca6c0599a0e9d19b83ffff5b0bec50f067f3e1ab845b72beb884"
+      "bytes": 17013,
+      "sha256": "c1ece4f14672f897bcfd9eb40973268d50c793125c031bebd6164b968db0ee49"
     }
   ],
   "redacted_strings": 0,

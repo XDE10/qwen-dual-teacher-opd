@@ -197,3 +197,12 @@ code_dev {"count": 200, "truncated": 98}
 2026/11/14 13:12:45 NOTICE:    15.578 KiB / 15.578 KiB, 100%, 15.575 KiB/s, ETA 0s
 2026/11/14 13:12:45 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
 [colab_job] saved to Drive: mydrive:opd_runs/r1_dev62/20261114T104404Z
+[publish] 9 files (6.49 MB), 2 left out, 0 strings redacted -> results:r1_dev62/20261114T104404Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/r1_dev62/20261114T104404Z
+{"event": "batch_done", "model": "latent-62", "suite": "math_dev", "batch": 4, "items_done": 256, "longest_response": 8192, "response_tokens": 387891, "seconds": 869.5}
+math_dev {"count": 256, "truncated": 85, "accuracy_conservative": 0.50390625, "accuracy_math_verify": 0.6328125}
+{"event": "batch_start", "model": "latent-62", "suite": "code_dev", "batch": 1, "size": 64}
+[colab_job] periodic save (every 5 min)
+2026/11/14 13:17:52 NOTICE:    16.393 KiB / 16.393 KiB, 100%, 0 B/s, ETA -
+2026/11/14 13:17:55 NOTICE:     2.988 MiB / 2.988 MiB, 100%, 2.987 MiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/r1_dev62/20261114T104404Z
