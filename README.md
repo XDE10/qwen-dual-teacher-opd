@@ -38,7 +38,18 @@ python scripts/colab_job_v3.py latent_mopd_main --drive mydrive:opd_runs --publi
 
 2026-11-12 23:27（新加坡时间）在 G4 会话 `p2-latent-main` 启动 Latent。3 步短跑通过，覆盖纯隐藏层更新和 top-16 加隐藏层的联合更新，第 1、3 步 checkpoint 通过哈希校验并同步到 Drive。随后自动启动 16K 正式配置。11 月 13 日复查时已完成 16/62 步，正式 checkpoint 已保存至第 10 步，正式评测待执行。当前实现的 WSL2 全量测试为 197 项通过、1 项跳过。[本轮运行记录](https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent_mopd_main/20261112T152744Z)
 
-**2026-11-14 11:38（新加坡时间）快照**：正式训练累计完成 50/62 个 optimizer updates，第 51 步数学已生成 104/128 条。最新发布日志记录了 checkpoint-50 保存与 Drive 同步。训练启动版本为 `d3c0242de47040853a353f5f61b21842eb540624`。R1 双域 dev/test 和匹配预算的 Pure top-16 正式结果待验证。[固定结果快照](https://github.com/XDE10/qwen-dual-teacher-opd/tree/f0e98c6867d2004564983657eb296d957c3aa1aa/latent_mopd_main/20261113T220228Z)
+**2026-11-14 正式训练完成。** 训练版本为 `d3c0242de47040853a353f5f61b21842eb540624`。11:38（新加坡时间）的快照记录了 50/62 步与 checkpoint-50 同步。最终归档记录了连续的 62 次优化器更新（数学与代码各 31 次）以及正常退出。Drive 上 `checkpoint-62` 的文件通过 manifest 哈希校验，训练会话已释放。[11:38 快照](https://github.com/XDE10/qwen-dual-teacher-opd/tree/f0e98c6867d2004564983657eb296d957c3aa1aa/latent_mopd_main/20261113T220228Z) · [最终训练归档](https://github.com/XDE10/qwen-dual-teacher-opd/tree/3b6ea99b76cc84898f11988fe828457a302de9b3/latent_mopd_main/20261113T220228Z)
+
+Base R1 与 Latent @62 使用相同的 R1 模板、HF greedy 解码和 8,192 token 输出上限，在 v5 dev 上逐题比较。代码候选使用同一个本地 Docker 镜像及审查过的内部比较器评分。差值为 Latent 减 Base。[生成协议与明细](https://github.com/XDE10/qwen-dual-teacher-opd/tree/6d0c38db2c754419f4542cf514b88c1f00868de3/r1_dev62/20261114T104404Z/eval) · [逐题比较与评分归档](https://github.com/XDE10/qwen-dual-teacher-opd/tree/36312e2212cc66d7cf76be1887aaa686340a6f9a/code_scores/r1_dev62-20261114T104404Z)
+
+| 指标 | Base R1 | Latent @62 | 差值（百分点） |
+| --- | ---: | ---: | ---: |
+| `math_dev` · Math-Verify | 170/256（66.41%） | 162/256（63.28%） | −3.13 |
+| `math_dev` · 保守判分 | 136/256（53.13%） | 129/256（50.39%） | −2.73 |
+| `code_dev` · 全部题 | 70/200（35.00%） | 78/200（39.00%） | +4.00 |
+| `code_dev` · 排除 8 道阻断题 | 70/192（36.46%） | 78/192（40.63%） | +4.17 |
+
+数学截断数为 80 → 85，代码为 98 → 97。这轮双教师实验在 8K dev 上数学下降、代码上升，未达到两域各提升 5 个百分点的目标。论文的同源主实验含逻辑教师，采用不同的训练题池与评测口径。16K dev、R1 官方测试集及同预算 Pure top-16 结果仍待验证。
 
 首次从 checkpoint-20 恢复时，第 22 步复用了旧轨迹。当前缓存键没有学生权重指纹，第 22 步的严格 on-policy 性质无法追溯确认。从 checkpoint-40 恢复时，仅尝试复用直接由该 checkpoint 生成的第 41 步轨迹，第 42 步起重新生成。在后续训练中，缓存与生成策略的绑定仍需完善。
 
