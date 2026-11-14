@@ -103,3 +103,40 @@ def test_readonly_duplicate_detection_original_paraphrase_numeric_replacement():
 def test_heavy_paraphrase_limit_is_explicit():
     index = Index([{'id': 'x', 'text': 'Find the sum of all integers from one to ten.'}])
     assert not index.query('Compute the aggregate value for numbers 1 through 10.', .8)
+
+
+def test_evalplus_memory_policy_is_versioned_and_core_is_disabled(tmp_path):
+    from src.evaluation.evalplus_v2 import container_entry
+    command = docker_command('sha256:pinned', 'mbpp', tmp_path, tmp_path / 'data.jsonl')
+    assert command[command.index('--ulimit') + 1] == 'core=0:0'
+    assert command[command.index('--memory') + 1] == '6g'
+    assert 'OPD_EVALPLUS_EXTRA_MEMORY_BYTES=1073741824' in command
+    assert 'memory_with_headroom' in command[command.index('-c') + 1]
+    legacy = docker_command('sha256:pinned', 'mbpp', tmp_path, tmp_path / 'data.jsonl',
+                            memory_policy='legacy-fixed-1g')
+    assert 'memory_with_headroom' not in legacy[legacy.index('-c') + 1]
+    assert 'prctl(4, 0' in legacy[legacy.index('-c') + 1]
+    assert 'cli.main()' in legacy[legacy.index('-c') + 1]
+    assert 'EVALPLUS_MAX_MEMORY_BYTES=1073741824' in legacy
+    with pytest.raises(ValueError, match='policy'):
+        container_entry('unknown')
+
+
+def test_evalplus_headroom_is_calculated_per_child_and_not_fixed_4g():
+    import io
+    from types import SimpleNamespace
+    from src.evaluation.evalplus_v2 import container_entry
+    tree = ast.parse(container_entry())
+    fn = next(n for n in tree.body if isinstance(n, ast.FunctionDef))
+    pages = [1200000]  # inherited VMS already exceeds 4 GiB
+    fake_os = SimpleNamespace(environ={'OPD_EVALPLUS_EXTRA_MEMORY_BYTES': str(1 << 30)},
+                              sysconf=lambda _: 4096)
+    scope = {'os': fake_os, 'open': lambda *a, **kw: io.StringIO(str(pages[0]) + ' 0')}
+    exec(compile(ast.Module(body=[fn], type_ignores=[]), '<resource-policy>', 'exec'), scope)
+    query = scope['memory_with_headroom']
+    assert query() == pages[0] * 4096 + (1 << 30)
+    pages[0] += 1000
+    assert query() == pages[0] * 4096 + (1 << 30)
+    fake_os.environ['OPD_EVALPLUS_EXTRA_MEMORY_BYTES'] = '0'
+    with pytest.raises(ValueError, match='positive'):
+        query()

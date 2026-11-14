@@ -17,7 +17,7 @@
 - 代码评测在 **Docker 沙箱**中运行，数据集代码不在宿主执行；目标环境无可用 Docker 时停止，不得静默回退宿主子进程。
 - 历史 CPU 测试、2 步 smoke 与 tiny 模型恢复测试只证明工程链路，不能替代真实 Qwen 前向、显存、梯度与能力验收。
 
-## R1 / Latent-MOPD 双域探索（2026-11-12）
+## R1 / Latent-MOPD 双域训练
 
 这轮探索使用 `DeepSeek-R1-Distill-Qwen-1.5B` 学生、`JustRL-DeepSeek-1.5B` 数学教师和 `Archer2.0-Code-1.5B-Preview` 代码教师。三个版本由 [训练入口](src/training/latent_opd.py) 锁定，权重缓存在 `mydrive:models/`。训练使用 v5 已批准的数学和代码池。D0–D4 的模型、配置和结果沿用上面的 OPD v3 记录。
 
@@ -37,6 +37,12 @@ python scripts/colab_job_v3.py latent_mopd_main --drive mydrive:opd_runs --publi
 ```
 
 2026-11-12 23:27（新加坡时间）在 G4 会话 `p2-latent-main` 启动 Latent。3 步短跑通过，覆盖纯隐藏层更新和 top-16 加隐藏层的联合更新，第 1、3 步 checkpoint 通过哈希校验并同步到 Drive。随后自动启动 16K 正式配置。11 月 13 日复查时已完成 16/62 步，正式 checkpoint 已保存至第 10 步，正式评测待执行。当前实现的 WSL2 全量测试为 197 项通过、1 项跳过。[本轮运行记录](https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent_mopd_main/20261112T152744Z)
+
+**2026-11-14 11:38（新加坡时间）快照**：正式训练累计完成 50/62 个 optimizer updates，第 51 步数学已生成 104/128 条。最新发布日志记录了 checkpoint-50 保存与 Drive 同步。训练启动版本为 `d3c0242de47040853a353f5f61b21842eb540624`。R1 双域 dev/test 和匹配预算的 Pure top-16 正式结果待验证。[固定结果快照](https://github.com/XDE10/qwen-dual-teacher-opd/tree/f0e98c6867d2004564983657eb296d957c3aa1aa/latent_mopd_main/20261113T220228Z)
+
+首次从 checkpoint-20 恢复时，第 22 步复用了旧轨迹。当前缓存键没有学生权重指纹，第 22 步的严格 on-policy 性质无法追溯确认。从 checkpoint-40 恢复时，仅尝试复用直接由该 checkpoint 生成的第 41 步轨迹，第 42 步起重新生成。在后续训练中，缓存与生成策略的绑定仍需完善。
+
+代码评测采用版本化的 EvalPlus 资源策略。默认 `vms-headroom-v1` 已在固定 Docker 镜像中验证两道 MBPP 样本，完整数据集重评分和评分入口的完整性验证仍待完成。[验证记录](reports/wsl_evalplus_crash_fix_20261113/README.md)
 
 ## 快速开始
 

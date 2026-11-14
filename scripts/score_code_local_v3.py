@@ -167,7 +167,9 @@ def score_evalplus(suite, candidates, out, image):
     if protocol.is_file():
         identity = json.loads(protocol.read_text(encoding='utf-8'))
         summary.update(status=identity.get('status'), evalplus_exit_code=identity.get('exit_code'),
-                       dataset_sha256=identity.get('dataset_sha256'))
+                       dataset_sha256=identity.get('dataset_sha256'),
+                       resource_protocol=identity.get('resource_protocol', 'legacy-fixed-1g'),
+                       core_dump_limit_bytes=identity.get('core_dump_limit_bytes'))
     found = sorted(out.glob('*eval_results.json'))
     if found:
         evaluated = json.loads(found[0].read_text(encoding='utf-8')).get('eval', {})

@@ -25,7 +25,8 @@ DATA_OPTIONAL = {'code_benchmarks'}
 PENDING_MANIFESTS = {'data/project2_release_v5_20261108/release/manifest.json':
                      'data/project2_release_v5_20261108/candidate/candidate_manifest.json'}
 REPORT_DIRS = {'code_training_repair_20261025_v4', 'handover_20261024_v3', 'project2_release_v5_20261108',
-               'g4_first_session_20261109', 'g4_session2_lr_sweep_20261109', 'g4_opd_v3_experiments_20261112'}
+               'g4_first_session_20261109', 'g4_session2_lr_sweep_20261109', 'g4_opd_v3_experiments_20261112',
+               'wsl_evalplus_crash_fix_20261113'}
 REPORT_ROOT_FILES = {'README.md', 'tokenizer_alignment_report.json', 'tokenizer_alignment_report_14b.json',
                      'tokenizer_alignment_revalidation_20261023.json',
                      'tokenizer_alignment_summary.md', 'project2_prompt_contract_audit.json',
