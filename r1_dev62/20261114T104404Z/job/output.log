@@ -11,3 +11,11 @@
 2026/11/14 10:54:15 NOTICE:         716 B / 716 B, 100%, 0 B/s, ETA -
 2026/11/14 10:54:16 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
 [colab_job] saved to Drive: mydrive:opd_runs/r1_dev62/20261114T104404Z
+[publish] 4 files (0.01 MB), 2 left out, 0 strings redacted -> results:r1_dev62/20261114T104404Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/r1_dev62/20261114T104404Z
+{"event": "batch_done", "model": "base-r1", "suite": "math_dev", "batch": 1, "items_done": 64, "longest_response": 8192, "response_tokens": 188474, "seconds": 765.2}
+{"event": "batch_start", "model": "base-r1", "suite": "math_dev", "batch": 2, "size": 64}
+[colab_job] periodic save (every 5 min)
+2026/11/14 10:59:25 NOTICE:     1.386 KiB / 1.386 KiB, 100%, 354 B/s, ETA 0s
+2026/11/14 10:59:26 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+[colab_job] saved to Drive: mydrive:opd_runs/r1_dev62/20261114T104404Z
