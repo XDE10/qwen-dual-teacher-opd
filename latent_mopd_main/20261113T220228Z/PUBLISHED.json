@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent_mopd_main",
   "stamp": "20261113T220228Z",
-  "published_utc": "2026-11-14T04:40:38Z",
+  "published_utc": "2026-11-14T04:42:51Z",
   "job": {
     "state": "running"
   },
@@ -37,18 +37,18 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 844293,
-      "sha256": "82204ecfee66434f736fec9a177ca79999b862766b7f6a9e3893eab8c4085b03"
+      "bytes": 851503,
+      "sha256": "46a7a7afa8940c07346377c03517b5b7959db52cd105d294c0b615320aa4e86f"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/metrics.jsonl",
-      "bytes": 21295,
-      "sha256": "6197008570a1289d7eb3eca44f22a67a6f2727fabf0f88de57a43a7b946b20aa"
+      "bytes": 21713,
+      "sha256": "c48113aeb861d77045cb3744d0d8c00c9b6581ec05a2cb3d6c698f3e76627e82"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/phase_metrics.jsonl",
-      "bytes": 3697097,
-      "sha256": "7ee1ca84a04e97f884239616cbc873aa421ace094ccff54a159122a76bd2d844"
+      "bytes": 3703173,
+      "sha256": "7e5b23dff5a6c4f1431dd8a02f4a5ee8354b69db4821159c2a6a6e7fb2cf354d"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/resume_archive_1794543309830572075/metrics.jsonl",
@@ -1657,6 +1657,22 @@
       "reason": "not a text result"
     },
     {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000053/batch-0001.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000053/batch-0002.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000053/batch-0003.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000053/batch-0004.json.gz",
+      "reason": "not a text result"
+    },
+    {
       "path": "runs/smoke/latent_mopd_top16_latent/checkpoint-1/",
       "reason": "folder not published"
     },
@@ -1677,7 +1693,7 @@
       "reason": "not a text result"
     }
   ],
-  "skipped_count": 397,
+  "skipped_count": 401,
   "limits_mb": {
     "per_file": 20,
     "total": 50
