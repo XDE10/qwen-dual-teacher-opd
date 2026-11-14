@@ -2,9 +2,10 @@
   "schema": "opd-results-v1",
   "name": "r1_dev62",
   "stamp": "20261114T104404Z",
-  "published_utc": "2026-11-14T14:04:08Z",
+  "published_utc": "2026-11-14T14:05:30Z",
   "job": {
-    "state": "running"
+    "state": "finished",
+    "exit_status": 0
   },
   "publisher": {
     "host": "479ffef83991",
@@ -61,6 +62,21 @@
       "sha256": "b5d4c1a2e0ffdf35e5af921199ff49e303ad06d296ad28cd16b7664b94689f70"
     },
     {
+      "path": "eval/latent-62/code_dev.candidates.jsonl",
+      "bytes": 206844,
+      "sha256": "c45241f915eb11420067e7242009dc9f85538f4463fdd792d1a2d7dcd8634681"
+    },
+    {
+      "path": "eval/latent-62/code_dev.jsonl",
+      "bytes": 3884222,
+      "sha256": "04622441e9972791139475817c77711569cffd37cc9678e62822acd91cc0e9d2"
+    },
+    {
+      "path": "eval/latent-62/code_dev.summary.json",
+      "bytes": 3615,
+      "sha256": "671dcaee1d29674452102182e64bbf31fbca93cbf6c9d6683022d268b5410534"
+    },
+    {
       "path": "eval/latent-62/math_dev.jsonl",
       "bytes": 3128984,
       "sha256": "2647b04e683e7ec283ff2f1e1e6e09ad6039e8aa0a5cef1b0a8cb3b3966c1356"
@@ -82,8 +98,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 21903,
-      "sha256": "800a5269a3cc3ccc474c9d0ab6d64790e0d8a7438c9f2b0192e8a096fee639ce"
+      "bytes": 22598,
+      "sha256": "3515a0ffedf26dcc2233d6afa6d61ec8d130c32da9d9097a32ab076986f1b5d6"
     }
   ],
   "redacted_strings": 0,
