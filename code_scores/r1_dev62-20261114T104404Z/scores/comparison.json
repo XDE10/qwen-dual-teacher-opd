@@ -1,0 +1,148 @@
+{
+  "generation_commit": "6d0c38db2c754419f4542cf514b88c1f00868de3",
+  "generation_path": "r1_dev62/20261114T104404Z/eval",
+  "generation_protocol": {
+    "eval_code_commit": "7d93c5d7e45841b5aa744b3fd89031d35b1eb34e",
+    "training_results_commit": "3b6ea99b76cc84898f11988fe828457a302de9b3",
+    "checkpoint_manifest_sha256": "38735bb8f55e45ba229e448fb4f95ceb8ae1d4bf93b9685b14bdb9752f6a1e4d",
+    "training_identity_sha256": "bff53edd704f2562b3661d468ea583d0dba3084c47f7f6c452ba8a810391685e",
+    "tokenizer_audit_sha256": "4e39dbfd4bef5c891fc1d691a7bcfaed71b650a667a14185474f2c5fac830c91",
+    "model": {
+      "model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+      "revision": "ad9f0ae0864d7fbcd1cd905e3c6c5b069cc8b562"
+    },
+    "torch": "2.8.0+cu128",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "suites": [
+      "math_dev",
+      "code_dev"
+    ],
+    "generation": "HF BF16 greedy, common support, same R1 template",
+    "max_new_tokens": 8192,
+    "batch_size": 64,
+    "grading_text": "After the first closing think tag. Empty if no closing think tag. Raw output kept."
+  },
+  "scores": {
+    "math_dev_math_verify": {
+      "n": 256,
+      "base_correct": 170,
+      "latent_correct": 162,
+      "base_pct": 66.40625,
+      "latent_pct": 63.28125,
+      "delta_pp": -3.125,
+      "newly_correct": 25,
+      "newly_wrong": 33
+    },
+    "math_dev_conservative": {
+      "n": 256,
+      "base_correct": 136,
+      "latent_correct": 129,
+      "base_pct": 53.125,
+      "latent_pct": 50.390625,
+      "delta_pp": -2.734375,
+      "newly_correct": 22,
+      "newly_wrong": 29
+    },
+    "code_dev_all": {
+      "n": 200,
+      "base_correct": 70,
+      "latent_correct": 78,
+      "base_pct": 35.0,
+      "latent_pct": 39.0,
+      "delta_pp": 4.0,
+      "newly_correct": 15,
+      "newly_wrong": 7
+    },
+    "code_dev_scored": {
+      "n": 192,
+      "base_correct": 70,
+      "latent_correct": 78,
+      "base_pct": 36.458333333333336,
+      "latent_pct": 40.625,
+      "delta_pp": 4.166666666666667,
+      "newly_correct": 15,
+      "newly_wrong": 7
+    },
+    "code_dev_function": {
+      "n": 100,
+      "base_correct": 56,
+      "latent_correct": 60,
+      "base_pct": 56.0,
+      "latent_pct": 60.0,
+      "delta_pp": 4.0,
+      "newly_correct": 11,
+      "newly_wrong": 7
+    },
+    "code_dev_stdin_stdout": {
+      "n": 100,
+      "base_correct": 14,
+      "latent_correct": 18,
+      "base_pct": 14.0,
+      "latent_pct": 18.0,
+      "delta_pp": 4.0,
+      "newly_correct": 4,
+      "newly_wrong": 0
+    }
+  },
+  "generation_stats": {
+    "base-r1": {
+      "math_dev": {
+        "count": 256,
+        "truncated": 80,
+        "unclosed_thinking": 79,
+        "median_generated_tokens": 2666.5,
+        "generation_seconds": 3118.976796388626
+      },
+      "code_dev": {
+        "count": 200,
+        "truncated": 98,
+        "unclosed_thinking": 98,
+        "median_generated_tokens": 3946.0,
+        "generation_seconds": 2702.5234758853912,
+        "status_counts": {
+          "mismatch": 104,
+          "passed": 70,
+          "execution_error": 3,
+          "unsupported_or_extraction_error": 15,
+          "blocked_after_review": 8
+        }
+      }
+    },
+    "latent-62": {
+      "math_dev": {
+        "count": 256,
+        "truncated": 85,
+        "unclosed_thinking": 84,
+        "median_generated_tokens": 2722.5,
+        "generation_seconds": 3320.1840891838074
+      },
+      "code_dev": {
+        "count": 200,
+        "truncated": 97,
+        "unclosed_thinking": 97,
+        "median_generated_tokens": 5106.0,
+        "generation_seconds": 2934.09845161438,
+        "status_counts": {
+          "passed": 78,
+          "execution_error": 5,
+          "mismatch": 91,
+          "unsupported_return_repr": 1,
+          "unsupported_or_extraction_error": 17,
+          "blocked_after_review": 8
+        }
+      }
+    }
+  },
+  "code_scorer": {
+    "base-r1": {
+      "image": "sha256:1d52838af602b4b5a831beb13a0e4d073280665ea7be7f69ce2382f29c5a613f",
+      "worker_sha256": "27ef781034dc836e67e2c127061e228a70424f3a572ce3f61e6c6bf954564ba2",
+      "protocol": "internal-dev-review-v3"
+    },
+    "latent-62": {
+      "image": "sha256:1d52838af602b4b5a831beb13a0e4d073280665ea7be7f69ce2382f29c5a613f",
+      "worker_sha256": "27ef781034dc836e67e2c127061e228a70424f3a572ce3f61e6c6bf954564ba2",
+      "protocol": "internal-dev-review-v3"
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "schema": "opd-results-v1",
+  "name": "code_scores",
+  "stamp": "r1_dev62-20261114T104404Z",
+  "published_utc": "2026-11-14T14:08:36Z",
+  "job": {
+    "state": "finished",
+    "exit_status": 0
+  },
+  "publisher": {
+    "host": "XDE10",
+    "gpu": null,
+    "code": {
+      "commit": "7d93c5d7e45841b5aa744b3fd89031d35b1eb34e",
+      "branch": "main",
+      "modified_tracked_files": false
+    }
+  },
+  "sources": [
+    {
+      "label": "scores",
+      "path": "/home/xde10/opd_scores/r1_dev62-20261114T104404Z",
+      "kind": "folder"
+    }
+  ],
+  "files": [
+    {
+      "path": "scores/base-r1/candidates/code_dev.candidates.jsonl",
+      "bytes": 203688,
+      "sha256": "904a3f9902d268d543988451f4e7a5df45c56ffb582f4eba8505ac3c934c6ede"
+    },
+    {
+      "path": "scores/base-r1/candidates/code_dev.summary.json",
+      "bytes": 3292,
+      "sha256": "cbafa338b15c3dbc7e75c2556cb4e5e8cb00db00fee1cda397f5e167bf70b0b6"
+    },
+    {
+      "path": "scores/base-r1/candidates/math_dev.summary.json",
+      "bytes": 3367,
+      "sha256": "b4e7862f813508073f9dd4bc0ba689cf1d8b94d8bee82ff4ae0b850fdc72d172"
+    },
+    {
+      "path": "scores/base-r1/code_dev/evaluate.log",
+      "bytes": 167,
+      "sha256": "8ec994a8f2457f18deb518390cc80c81f9c922072ce4e273b9777bb8258ba624"
+    },
+    {
+      "path": "scores/base-r1/code_dev/student.json",
+      "bytes": 23100,
+      "sha256": "a069aa71bd116d4be2998670c301db94c4e86c4a3028713046279b44d0eacfa1"
+    },
+    {
+      "path": "scores/base-r1/scores.json",
+      "bytes": 1025,
+      "sha256": "b1b78c5b186510bd1500692319ec39f51543ce226f748e1d49f81edfba8dad13"
+    },
+    {
+      "path": "scores/comparison.json",
+      "bytes": 4405,
+      "sha256": "86fe939e2d246cbac1d6e3f078920ca5b630ea04798508a1e2ecba6de96886ea"
+    },
+    {
+      "path": "scores/latent-62/candidates/code_dev.candidates.jsonl",
+      "bytes": 206844,
+      "sha256": "c45241f915eb11420067e7242009dc9f85538f4463fdd792d1a2d7dcd8634681"
+    },
+    {
+      "path": "scores/latent-62/candidates/code_dev.summary.json",
+      "bytes": 3615,
+      "sha256": "671dcaee1d29674452102182e64bbf31fbca93cbf6c9d6683022d268b5410534"
+    },
+    {
+      "path": "scores/latent-62/candidates/math_dev.summary.json",
+      "bytes": 3697,
+      "sha256": "4d507130e4310b50d51fe483ff7d624313e3644a11021bf42415abc3334db090"
+    },
+    {
+      "path": "scores/latent-62/code_dev/evaluate.log",
+      "bytes": 196,
+      "sha256": "19f3e84ac7a14463323510a1888ae0d3f058d57c97273b4b961e31cd62fe7e1a"
+    },
+    {
+      "path": "scores/latent-62/code_dev/student.json",
+      "bytes": 24613,
+      "sha256": "601f69af1b1da024fcaeb46176ea03b519bd27591eb7ba4315ed3b6781951b34"
+    },
+    {
+      "path": "scores/latent-62/scores.json",
+      "bytes": 1053,
+      "sha256": "19bbd175bade2f031ccee3f768663fd2e0385448a6323d8942b263ba114c5a66"
+    }
+  ],
+  "redacted_strings": 0,
+  "skipped": [],
+  "skipped_count": 0,
+  "limits_mb": {
+    "per_file": 20,
+    "total": 50
+  }
+}
