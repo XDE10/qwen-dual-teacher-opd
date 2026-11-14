@@ -3826,3 +3826,18 @@ Three-step GPU smoke passed
 2026/11/14 03:10:55 NOTICE:   617.265 KiB / 617.265 KiB, 100%, 616.906 KiB/s, ETA 0s
 2026/11/14 03:11:00 NOTICE:     3.428 MiB / 3.428 MiB, 100%, 1.713 MiB/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/latent_mopd_main/20261113T220228Z
+[publish] 11 files (4.09 MB), 326 left out, 0 strings redacted -> results:latent_mopd_main/20261113T220228Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent_mopd_main/20261113T220228Z
+{"step": 50, "domain": "code", "phase": "rollout_batch_done", "timestamp": 1794625870.1266398, "batch": 27, "reused": false, "done_responses": 108, "total_responses": 128, "response_tokens": 50239, "max_response_tokens": 13865, "truncated_responses": 0, "seconds": 124.3360150999979, "allocated_bytes": 14536521728, "reserved_bytes": 31830573056}
+{"step": 50, "domain": "code", "phase": "rollout_batch_start", "timestamp": 1794625870.1270003, "batch": 28, "done_responses": 108, "total_responses": 128, "allocated_bytes": 14536521728, "reserved_bytes": 31830573056}
+2026/11/14 03:11:10.324, 31029, 97887, 70
+2026/11/14 03:11:40.343, 31029, 97887, 80
+2026/11/14 03:12:10.361, 31029, 97887, 84
+2026/11/14 03:12:40.379, 31029, 97887, 85
+[colab_job] periodic save (every 2 min)
+2026/11/14 03:13:10.398, 31029, 97887, 86
+2026/11/14 03:13:10 NOTICE:   618.475 KiB / 618.475 KiB, 100%, 308.932 KiB/s, ETA 0s
+{"step": 50, "domain": "code", "phase": "rollout_batch_done", "timestamp": 1794625991.9374104, "batch": 28, "reused": false, "done_responses": 112, "total_responses": 128, "response_tokens": 45811, "max_response_tokens": 13560, "truncated_responses": 0, "seconds": 121.81025417300043, "allocated_bytes": 14536521728, "reserved_bytes": 31830573056}
+{"step": 50, "domain": "code", "phase": "rollout_batch_start", "timestamp": 1794625991.9377723, "batch": 29, "done_responses": 112, "total_responses": 128, "allocated_bytes": 14536521728, "reserved_bytes": 31830573056}
+2026/11/14 03:13:15 NOTICE:     3.474 MiB / 3.474 MiB, 100%, 1.736 MiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent_mopd_main/20261113T220228Z
