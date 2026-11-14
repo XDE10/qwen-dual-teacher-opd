@@ -4464,3 +4464,17 @@ Three-step GPU smoke passed
 2026/11/14 03:51:19 NOTICE:   726.728 KiB / 726.728 KiB, 100%, 363.087 KiB/s, ETA 0s
 2026/11/14 03:51:24 NOTICE:     3.503 MiB / 3.503 MiB, 100%, 1.167 MiB/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/latent_mopd_main/20261113T220228Z
+[publish] 11 files (4.29 MB), 374 left out, 0 strings redacted -> results:latent_mopd_main/20261113T220228Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent_mopd_main/20261113T220228Z
+2026/11/14 03:51:41.819, 31029, 97887, 82
+2026/11/14 03:52:11.838, 31029, 97887, 84
+{"step": 52, "domain": "code", "phase": "rollout_batch_done", "timestamp": 1794628351.816412, "batch": 10, "reused": false, "done_responses": 40, "total_responses": 128, "response_tokens": 28751, "max_response_tokens": 10379, "truncated_responses": 0, "seconds": 90.81227368100008, "allocated_bytes": 14536521728, "reserved_bytes": 31830573056}
+{"step": 52, "domain": "code", "phase": "rollout_batch_start", "timestamp": 1794628351.8167048, "batch": 11, "done_responses": 40, "total_responses": 128, "allocated_bytes": 14536521728, "reserved_bytes": 31830573056}
+2026/11/14 03:52:41.857, 31029, 97887, 73
+2026/11/14 03:53:11.874, 31029, 97887, 82
+{"step": 52, "domain": "code", "phase": "rollout_batch_done", "timestamp": 1794628404.3162532, "batch": 11, "reused": false, "done_responses": 44, "total_responses": 128, "response_tokens": 18500, "max_response_tokens": 6108, "truncated_responses": 0, "seconds": 52.49938436299999, "allocated_bytes": 14536521728, "reserved_bytes": 31830573056}
+{"step": 52, "domain": "code", "phase": "rollout_batch_start", "timestamp": 1794628404.3165524, "batch": 12, "done_responses": 44, "total_responses": 128, "allocated_bytes": 14536521728, "reserved_bytes": 31830573056}
+[colab_job] periodic save (every 2 min)
+2026/11/14 03:53:33 NOTICE:   728.484 KiB / 728.484 KiB, 100%, 363.997 KiB/s, ETA 0s
+2026/11/14 03:53:38 NOTICE:     3.501 MiB / 3.501 MiB, 100%, 1.750 MiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent_mopd_main/20261113T220228Z
