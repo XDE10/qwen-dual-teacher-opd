@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "r1_dev62",
   "stamp": "20261114T104404Z",
-  "published_utc": "2026-11-14T12:16:04Z",
+  "published_utc": "2026-11-14T12:21:28Z",
   "job": {
     "state": "running"
   },
@@ -31,6 +31,21 @@
   ],
   "files": [
     {
+      "path": "eval/base-r1/code_dev.candidates.jsonl",
+      "bytes": 203688,
+      "sha256": "904a3f9902d268d543988451f4e7a5df45c56ffb582f4eba8505ac3c934c6ede"
+    },
+    {
+      "path": "eval/base-r1/code_dev.jsonl",
+      "bytes": 3534804,
+      "sha256": "c4e649362065933853e45b440f21f091de15ca674392a8a889d6e8ec76fb980b"
+    },
+    {
+      "path": "eval/base-r1/code_dev.summary.json",
+      "bytes": 3292,
+      "sha256": "cbafa338b15c3dbc7e75c2556cb4e5e8cb00db00fee1cda397f5e167bf70b0b6"
+    },
+    {
       "path": "eval/base-r1/math_dev.jsonl",
       "bytes": 3039503,
       "sha256": "def0f09d8163b17d3a102baa187b18b6eea557d73122c1705b099a61a974e261"
@@ -57,8 +72,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 9814,
-      "sha256": "b8f55b0f052db146476568452b12a6e19a34c6435c9ff636f5bc6623cdc86ca0"
+      "bytes": 10837,
+      "sha256": "a412ebc92d3fd9c7c6a88b26607a938aeb162f9e7b4581ff87b2add514bcc17a"
     }
   ],
   "redacted_strings": 0,
