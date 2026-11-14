@@ -1,0 +1,129 @@
+from copy import copy
+import hashlib
+import json
+from pathlib import Path
+import subprocess
+import shutil
+import sys
+import time
+
+import torch
+
+from scripts import generate_eval_v3 as runner
+from src.training.latent_opd import STUDENT
+from src.training.runtime_v3 import validate_checkpoint
+
+assets = Path('/content/opd-eval-assets')
+output = Path('/content/runs/r1_dev62')
+tokenizer = assets / 'DeepSeek-R1-Distill-Qwen-1.5B'
+audit = assets / 'tokenizer_audit.json'
+checkpoint = assets / 'checkpoint-62'
+identity_file = assets / 'training_identity.json'
+identity = json.loads(identity_file.read_text())
+hard = identity['hard']
+release = Path(runner.RELEASE)
+manifest = json.loads(release.read_text())
+budget = 8192
+batch_size = 64
+suites = ('math_dev', 'code_dev')
+
+def sha(path):
+    with path.open('rb') as stream:
+        return hashlib.file_digest(stream, 'sha256').hexdigest()
+
+def final_answer(text):
+    return text.partition('</think>')[2].strip()
+
+assert hard['config']['student'] == STUDENT
+assert hard['config']['variant'] == 'latent' and hard['config']['steps'] == 62
+validate_checkpoint(checkpoint, identity)
+assert hard['audit_sha'] == sha(audit)
+for name, digest in hard['tokenizer_files'].items():
+    assert sha(tokenizer / Path(name).name) == digest
+audit_json = json.loads(audit.read_text())
+assert audit_json['common_support']['ids'] == list(range(151665))
+assert audit_json['mapping_difference_count'] == 0
+assert hard['manifest_sha'] == sha(release)
+assert hard['prompt_contract_sha'] == sha(Path('configs/project2_prompt_contract.json'))
+for suite in suites:
+    path = release.parent / ('project2_' + suite + '.jsonl')
+    assert path.name in manifest['approved_evaluation_files']
+    assert sha(path) == manifest['files'][path.name]
+
+output.mkdir(parents=True, exist_ok=True)
+protocol = {
+    'eval_code_commit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
+    'training_results_commit': '3b6ea99b76cc84898f11988fe828457a302de9b3',
+    'checkpoint_manifest_sha256': sha(checkpoint / 'checkpoint_manifest.json'),
+    'training_identity_sha256': sha(identity_file),
+    'tokenizer_audit_sha256': sha(audit),
+    'model': STUDENT,
+    'torch': torch.__version__,
+    'gpu': torch.cuda.get_device_name(),
+    'suites': list(suites),
+    'generation': 'HF BF16 greedy, common support, same R1 template',
+    'max_new_tokens': budget,
+    'batch_size': batch_size,
+    'grading_text': 'After the first closing think tag. Empty if no closing think tag. Raw output kept.',
+}
+(output / 'comparison_protocol.json').write_text(json.dumps(protocol, indent=2) + '\n')
+
+shutil.copyfile(__file__, output / 'run_dev_eval.py.txt')
+original_hf_generate = runner.hf_generate
+
+def generate_from_staged_weights(args, *parameters):
+    local = copy(args)
+    local.model = (assets / 'model_path').read_text().strip()
+    local.revision = None
+    return original_hf_generate(local, *parameters)
+
+runner.hf_generate = generate_from_staged_weights
+original_grade = runner.grade_math
+runner.grade_math = lambda text, reference, truncated: original_grade(final_answer(text), reference, truncated)
+original_generate = runner.generate_greedy
+
+def observed_generate(model, ids, attention, config, support, expected):
+    counts['batch'] += 1
+    started = time.monotonic()
+    print(json.dumps({'event': 'batch_start', 'model': label, 'suite': suite,
+                      'batch': counts['batch'], 'size': len(ids)}), flush=True)
+    values = original_generate(model, ids, attention, config, support, expected)
+    eos = values[:, ids.shape[-1]:].eq(config.eos_token_id)
+    positions = eos.int().argmax(dim=1) + 1
+    lengths = torch.where(eos.any(dim=1), positions, values.shape[-1] - ids.shape[-1])
+    counts['done'] += len(ids)
+    print(json.dumps({'event': 'batch_done', 'model': label, 'suite': suite, 'batch': counts['batch'],
+                      'items_done': counts['done'], 'longest_response': int(lengths.max()),
+                      'response_tokens': int(lengths.sum()), 'seconds': round(time.monotonic() - started, 1)}),
+          flush=True)
+    return values
+
+runner.generate_greedy = observed_generate
+for label in ('base-r1', 'latent-62'):
+    folder = output / label
+    for suite in suites:
+        counts = {'batch': 0, 'done': 0}
+        cmd = ['generate_eval_v3', '--model', STUDENT['model'], '--revision', STUDENT['revision'],
+               '--suites', suite, '--engine', 'hf', '--batch-size', str(batch_size), '--max-new-math', str(budget),
+               '--max-new-code', str(budget), '--max-model-len', '16384', '--output-dir', str(folder),
+               '--tokenizer-path', str(tokenizer), '--tokenizer-audit', str(audit)]
+        if label == 'latent-62':
+            cmd += ['--adapter', str(checkpoint / 'student')]
+        sys.argv = cmd
+        runner.main()
+        rows = [json.loads(line) for line in (folder / (suite + '.jsonl')).read_text().splitlines()]
+        assert len(rows) == (256 if suite == 'math_dev' else 200)
+        summary_file = folder / (suite + '.summary.json')
+        summary = json.loads(summary_file.read_text())
+        summary['final_answer_present'] = sum(bool(final_answer(row['text'])) for row in rows)
+        summary['unclosed_thinking'] = sum('</think>' not in row['text'] for row in rows)
+        if suite == 'math_dev':
+            assert summary['accuracy_math_verify'] is not None
+        else:
+            contents = [json.dumps({'sample_id': row['id'], 'text': final_answer(row['text'])},
+                                   ensure_ascii=False) for row in rows]
+            path = folder / 'code_dev.candidates.jsonl'
+            temporary = path.with_suffix('.tmp')
+            temporary.write_text('\n'.join(contents) + '\n')
+            temporary.replace(path)
+        summary_file.write_text(json.dumps(summary, indent=2) + '\n')

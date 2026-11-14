@@ -1,0 +1,70 @@
+{
+  "schema": "opd-results-v1",
+  "name": "r1_dev62",
+  "stamp": "20261114T104404Z",
+  "published_utc": "2026-11-14T10:49:10Z",
+  "job": {
+    "state": "running"
+  },
+  "publisher": {
+    "host": "479ffef83991",
+    "gpu": [
+      "NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB"
+    ],
+    "code": {
+      "commit": "7d93c5d7e45841b5aa744b3fd89031d35b1eb34e",
+      "branch": "main",
+      "modified_tracked_files": false
+    }
+  },
+  "sources": [
+    {
+      "label": "job",
+      "path": "/content/jobs/r1_dev62",
+      "kind": "folder"
+    },
+    {
+      "label": "eval",
+      "path": "/content/runs/r1_dev62",
+      "kind": "folder"
+    }
+  ],
+  "files": [
+    {
+      "path": "eval/comparison_protocol.json",
+      "bytes": 922,
+      "sha256": "b5d4c1a2e0ffdf35e5af921199ff49e303ad06d296ad28cd16b7664b94689f70"
+    },
+    {
+      "path": "eval/run_dev_eval.py.txt",
+      "bytes": 5841,
+      "sha256": "17bacebf88f771c88ffc1dac12bb764cd5676d3a888b5875dd1ec63dfef6bab7"
+    },
+    {
+      "path": "job/command.json",
+      "bytes": 512,
+      "sha256": "8dafe5a7942d34005b52be4a2d6a5cd23a873055725a5a7d5c87f053c3ed073b"
+    },
+    {
+      "path": "job/output.log",
+      "bytes": 475,
+      "sha256": "da3e59ad447805ec4d345d87a2c45befc67065b9c05250b48f50431b06d62037"
+    }
+  ],
+  "redacted_strings": 0,
+  "skipped": [
+    {
+      "path": "job/child_pid",
+      "reason": "not a text result"
+    },
+    {
+      "path": "job/pid",
+      "reason": "not a text result"
+    }
+  ],
+  "skipped_count": 2,
+  "limits_mb": {
+    "per_file": 20,
+    "total": 50
+  }
+}

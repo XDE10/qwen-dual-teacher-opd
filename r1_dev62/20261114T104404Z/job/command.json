@@ -1,0 +1,26 @@
+{
+  "name": "r1_dev62",
+  "command": [
+    "bash",
+    "/content/opd-eval-assets/launch_dev_eval.sh"
+  ],
+  "cwd": "/content/project2",
+  "started_utc": "2026-11-14T10:44:04Z",
+  "stamp": "20261114T104404Z",
+  "save": [
+    [
+      "eval",
+      "/content/runs/r1_dev62"
+    ]
+  ],
+  "drive": "mydrive:opd_runs",
+  "publish": true,
+  "sync_every_min": 5.0,
+  "drive_about": {
+    "total": 5497558138880,
+    "used": 547197217724,
+    "trashed": 3424092350,
+    "other": 24188451,
+    "free": 4950336732705
+  }
+}

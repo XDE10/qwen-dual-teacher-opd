@@ -1,0 +1,7 @@
+[colab_job] running: bash /content/opd-eval-assets/launch_dev_eval.sh
+`torch_dtype` is deprecated! Use `dtype` instead!
+{"event": "batch_start", "model": "base-r1", "suite": "math_dev", "batch": 1, "size": 64}
+[colab_job] periodic save (every 5 min)
+2026/11/14 10:49:07 NOTICE:         772 B / 772 B, 100%, 385 B/s, ETA 0s
+2026/11/14 10:49:10 NOTICE:     6.604 KiB / 6.604 KiB, 100%, 6.600 KiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/r1_dev62/20261114T104404Z
