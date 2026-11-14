@@ -2,9 +2,10 @@
   "schema": "opd-results-v1",
   "name": "latent_mopd_main",
   "stamp": "20261113T220228Z",
-  "published_utc": "2026-11-14T10:33:14Z",
+  "published_utc": "2026-11-14T10:34:46Z",
   "job": {
-    "state": "running"
+    "state": "finished",
+    "exit_status": 0
   },
   "publisher": {
     "host": "949dcf85457d",
@@ -37,18 +38,18 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 1568123,
-      "sha256": "105e45c2ab5f2067395154d5837bb5bd8bec7c8dd1f1b84ccd520b207321e9a5"
+      "bytes": 1580442,
+      "sha256": "3837d0a8ff5a1ca2a56f515501d881456c3dcc3b71fe536913a619d3f7307865"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/metrics.jsonl",
-      "bytes": 25457,
-      "sha256": "7b0abea117b5fd28691359a4a7fe80ba0b591277df62de54345942ccac63fb0d"
+      "bytes": 25874,
+      "sha256": "7dff603ad00c43fe301362cb4b24a360035d28505dbd986693a729ce5e0391f6"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/phase_metrics.jsonl",
-      "bytes": 4308177,
-      "sha256": "033c3929a92c2ef66b0ce81187964cfc2e83bcaf9a8d5633903a98b24524cfec"
+      "bytes": 4319430,
+      "sha256": "c6d1226c95b32fa9948b13eadcc8f467c3d63293099303c0255f845472d9a437"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/resume_archive_1794543309830572075/metrics.jsonl",
@@ -122,6 +123,10 @@
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/checkpoint-60/",
+      "reason": "folder not published"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/checkpoint-62/",
       "reason": "folder not published"
     },
     {
@@ -2083,13 +2088,9 @@
     {
       "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000056/batch-0010.json.gz",
       "reason": "not a text result"
-    },
-    {
-      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000056/batch-0011.json.gz",
-      "reason": "not a text result"
     }
   ],
-  "skipped_count": 718,
+  "skipped_count": 719,
   "limits_mb": {
     "per_file": 20,
     "total": 50
