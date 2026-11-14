@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent_mopd_main",
   "stamp": "20261113T220228Z",
-  "published_utc": "2026-11-14T02:17:24Z",
+  "published_utc": "2026-11-14T02:19:37Z",
   "job": {
     "state": "running"
   },
@@ -37,18 +37,18 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 544382,
-      "sha256": "9b3eb9c4112ae4af399d82227e9dc6023842ed72b62f22138e75646a36777173"
+      "bytes": 554631,
+      "sha256": "88759b6a05bc2be6af866b3b66b5dffcb07141254e30128e9faa002f273f8d64"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/metrics.jsonl",
-      "bytes": 19630,
-      "sha256": "d905631e692c94ec4d860ac4ee39fd82910d9cbdc8f8e739383b4a9b43015732"
+      "bytes": 20047,
+      "sha256": "289367a4390d3c9c2945631c041427587a05b72d23239e5ed66eef9cd7f80e2b"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/phase_metrics.jsonl",
-      "bytes": 3443154,
-      "sha256": "5ca570d36af56994d2efcb3fd7003f1fcfff688a1b0cbd554131cd38d48f1cda"
+      "bytes": 3452312,
+      "sha256": "add778cb0b46771ec7921bd01d6aab805af1953af81400ed52f2d1aa89475305"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/resume_archive_1794543309830572075/metrics.jsonl",
@@ -1141,6 +1141,18 @@
       "reason": "not a text result"
     },
     {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000049/batch-0001.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000049/batch-0002.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000049/batch-0003.json.gz",
+      "reason": "not a text result"
+    },
+    {
       "path": "runs/smoke/latent_mopd_top16_latent/checkpoint-1/",
       "reason": "folder not published"
     },
@@ -1161,7 +1173,7 @@
       "reason": "not a text result"
     }
   ],
-  "skipped_count": 268,
+  "skipped_count": 271,
   "limits_mb": {
     "per_file": 20,
     "total": 50
