@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent_mopd_main",
   "stamp": "20261113T220228Z",
-  "published_utc": "2026-11-14T02:26:21Z",
+  "published_utc": "2026-11-14T02:28:36Z",
   "job": {
     "state": "running"
   },
@@ -37,8 +37,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 561223,
-      "sha256": "84d5c14daa9a10f7e4490d46d1b70d113c3efe0a496cadd409acdf25b59ea1e5"
+      "bytes": 565831,
+      "sha256": "85c1f6510dd27e18554c289fdfae9e649a616b05c4d3a85afd72b2f686b0b4b4"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/metrics.jsonl",
@@ -47,8 +47,8 @@
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/phase_metrics.jsonl",
-      "bytes": 3456801,
-      "sha256": "b9ca2fe1f48c6a4fb887344aa736ecef462ef4aec06e40e02595e3f10c12daaa"
+      "bytes": 3460734,
+      "sha256": "74a5ba1d3b4add3e1ad5e17556ce0ca64eedb626d8c14b46b641dab7dcd84408"
     },
     {
       "path": "runs/full/latent_mopd_top16_latent/resume_archive_1794543309830572075/metrics.jsonl",
@@ -1185,6 +1185,34 @@
       "reason": "not a text result"
     },
     {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000049/batch-0012.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000049/batch-0013.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000049/batch-0014.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000049/batch-0015.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000049/batch-0016.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000049/batch-0017.json.gz",
+      "reason": "not a text result"
+    },
+    {
+      "path": "runs/full/latent_mopd_top16_latent/rollout_spool/step-000049/batch-0018.json.gz",
+      "reason": "not a text result"
+    },
+    {
       "path": "runs/smoke/latent_mopd_top16_latent/checkpoint-1/",
       "reason": "folder not published"
     },
@@ -1205,7 +1233,7 @@
       "reason": "not a text result"
     }
   ],
-  "skipped_count": 279,
+  "skipped_count": 286,
   "limits_mb": {
     "per_file": 20,
     "total": 50
