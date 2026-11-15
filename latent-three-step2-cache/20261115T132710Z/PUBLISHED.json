@@ -2,9 +2,10 @@
   "schema": "opd-results-v1",
   "name": "latent-three-step2-cache",
   "stamp": "20261115T132710Z",
-  "published_utc": "2026-11-15T14:48:41Z",
+  "published_utc": "2026-11-15T14:54:00Z",
   "job": {
-    "state": "running"
+    "state": "finished",
+    "exit_status": 0
   },
   "publisher": {
     "host": "c11bfc32e5c9",
@@ -86,9 +87,29 @@
       "sha256": "afa942a9c6d78f7a9e28d1ec68a53b63bc0affefaa59e9a654e85321439c23d5"
     },
     {
+      "path": "evidence/checkpoint-2_drive_check.log",
+      "bytes": 263,
+      "sha256": "fef393ff18bee9cef6daf3bb0ff2acce8ac141c8fe002c33aa3383100e439caa"
+    },
+    {
+      "path": "evidence/checkpoint-2_drive_check.txt",
+      "bytes": 239,
+      "sha256": "23bdc5861fba98aa1400250268a4e456e6ee50b3e1bd5a6afa5f587cd09e6154"
+    },
+    {
+      "path": "evidence/checkpoint-2_manifest.json",
+      "bytes": 711,
+      "sha256": "98ebf250c46f87b95e1ccb3ee5145bbb4c02a14ee344c0a282f37694337c3c84"
+    },
+    {
+      "path": "evidence/drive_sync.json",
+      "bytes": 287,
+      "sha256": "3bfd91a499bfd6aea2731441d0673a43221ea75533ada10ba2a662e2ca621365"
+    },
+    {
       "path": "evidence/gpu_samples.csv",
-      "bytes": 40888,
-      "sha256": "831a1aaaedb4de0a4437297eef26666c9775f61db6f0c21b7077bfcb636f3b3a"
+      "bytes": 41052,
+      "sha256": "5a139ec451d17a09e7821eb888eee415c8207eb005a9ff3856507d9c0f3c4c7c"
     },
     {
       "path": "evidence/migration.json",
@@ -101,14 +122,19 @@
       "sha256": "a951c04f3e80c8027a34f849d0ba596f19d0e9f2bdb173abcdaf32d24556398e"
     },
     {
+      "path": "evidence/step2_result.json",
+      "bytes": 2847,
+      "sha256": "c3f89055b069f27af1f9ddd07067461afe91a0a16394a462c94125a8b6a30e59"
+    },
+    {
       "path": "job/command.json",
       "bytes": 930,
       "sha256": "75bd52dc59034aa7c56342c8e36eaa1589fc190787e893afd61ba1c3d142835f"
     },
     {
       "path": "job/output.log",
-      "bytes": 32286,
-      "sha256": "50dbb3dbf20153686b18cea0ae087f3f8ac8ab05e280ff5a3a6a16e607fd0e95"
+      "bytes": 34364,
+      "sha256": "b7d0d4534e133b0f55f69aa3145d5ab0b5c98337ad175cbd3bb0f59c7887c860"
     },
     {
       "path": "metrics/metrics.jsonl",
@@ -117,8 +143,8 @@
     },
     {
       "path": "phases/phase_metrics.jsonl",
-      "bytes": 25881,
-      "sha256": "439f108124f1fa7a484e4f7ddf350e0b2623334c4c950d101ae0abf5bd995d07"
+      "bytes": 26036,
+      "sha256": "78367285f9760404097de96f8d746d4ae654cf3afd081a717a3fd75bd8dcf19b"
     }
   ],
   "redacted_strings": 0,

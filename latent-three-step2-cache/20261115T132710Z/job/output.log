@@ -202,3 +202,25 @@ STAGE resumed step 2 only, rollout weight cache enabled
 2026/11/15 14:48:40 NOTICE:     3.542 KiB / 3.542 KiB, 100%, 0 B/s, ETA -
 2026/11/15 14:48:41 NOTICE:    25.274 KiB / 25.274 KiB, 100%, 0 B/s, ETA -
 [colab_job] saved to Drive: mydrive:opd_runs/latent-three-step2-cache/20261115T132710Z
+[publish] 15 files (0.15 MB), 2 left out, 0 strings redacted -> results:latent-three-step2-cache/20261115T132710Z
+{"step": 2, "domain": "code", "phase": "checkpoint_saved", "timestamp": 1794754140.5925796, "allocated_bytes": 36313633792, "reserved_bytes": 53821308928}
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent-three-step2-cache/20261115T132710Z
+LATENT_THREE_STEP2_VERIFIED {"step": 2, "domain": "code", "seconds": 4712.286422772, "response_tokens": 1339641, "truncated_responses": 12, "peak_allocated_bytes": 45737741824, "peak_reserved_bytes": 101021908992}
+STAGE syncing checkpoint-2 to mydrive:opd_runs/latent-three-step2-cache/20261115T132710Z/checkpoint-2
+2026/11/15 14:49:45 NOTICE:     2.918 GiB / 18.122 GiB, 16%, 101.453 MiB/s, ETA 2m33s
+2026/11/15 14:50:15 NOTICE:     5.266 GiB / 18.122 GiB, 29%, 82.856 MiB/s, ETA 2m38s
+2026/11/15 14:50:45 NOTICE:     7.607 GiB / 18.122 GiB, 42%, 80.529 MiB/s, ETA 2m13s
+2026/11/15 14:51:15 NOTICE:     9.950 GiB / 18.122 GiB, 55%, 80.442 MiB/s, ETA 1m44s
+2026/11/15 14:51:45 NOTICE:    12.042 GiB / 18.122 GiB, 66%, 68.805 MiB/s, ETA 1m30s
+2026/11/15 14:52:15 NOTICE:    13.722 GiB / 18.122 GiB, 76%, 58.737 MiB/s, ETA 1m16s
+2026/11/15 14:52:45 NOTICE:    15.417 GiB / 18.122 GiB, 85%, 57.554 MiB/s, ETA 48s
+2026/11/15 14:53:15 NOTICE:    17.073 GiB / 18.122 GiB, 94%, 57.394 MiB/s, ETA 18s
+2026/11/15 14:53:34 NOTICE:    18.122 GiB / 18.122 GiB, 100%, 56.101 MiB/s, ETA 0s
+LATENT_THREE_STEP2_DRIVE_VERIFIED mydrive:opd_runs/latent-three-step2-cache/20261115T132710Z/checkpoint-2
+[colab_job] command exited with status 0; saving results
+2026/11/15 14:53:54 NOTICE:    33.119 KiB / 33.119 KiB, 100%, 0 B/s, ETA -
+2026/11/15 14:53:57 NOTICE:    44.335 KiB / 44.335 KiB, 100%, 44.313 KiB/s, ETA 0s
+2026/11/15 14:53:57 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+2026/11/15 14:53:58 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+2026/11/15 14:54:00 NOTICE:    25.426 KiB / 25.426 KiB, 100%, 0 B/s, ETA -
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-step2-cache/20261115T132710Z
