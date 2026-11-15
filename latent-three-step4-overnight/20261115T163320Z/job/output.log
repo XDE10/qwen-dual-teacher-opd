@@ -567,3 +567,15 @@
 2026/11/15 19:56:30 NOTICE:   130.735 KiB / 130.735 KiB, 100%, 0 B/s, ETA -
 2026/11/15 19:56:32 NOTICE:   100.089 KiB / 100.089 KiB, 100%, 0 B/s, ETA -
 [colab_job] saved to Drive: mydrive:opd_runs/latent-three-step4-overnight/20261115T163320Z
+[publish] 5 files (0.38 MB), 2 left out, 0 strings redacted -> results:latent-three-step4-overnight/20261115T163320Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent-three-step4-overnight/20261115T163320Z
+{"phase": "rollout_progress", "case": [5, true, 42], "timestamp": 1794772627.104171, "responses": 36, "total": 128, "batch_response_lengths": [13121, 14052, 15256, 15429], "allocated_bytes": 30139643904, "reserved_bytes": 93736402944}
+{"phase": "rollout_progress", "case": [5, true, 42], "timestamp": 1794772815.4183805, "responses": 40, "total": 128, "batch_response_lengths": [11499, 14397, 16253, 16258], "allocated_bytes": 30139643904, "reserved_bytes": 93736402944}
+{"phase": "rollout_progress", "case": [5, true, 42], "timestamp": 1794772934.6227372, "responses": 44, "total": 128, "batch_response_lengths": [11337, 7880, 4146, 7179], "allocated_bytes": 30139643904, "reserved_bytes": 93736402944}
+{"phase": "rollout_progress", "case": [5, true, 42], "timestamp": 1794773126.6200385, "responses": 48, "total": 128, "batch_response_lengths": [14481, 14693, 14443, 16384], "allocated_bytes": 30139643904, "reserved_bytes": 97372864512}
+{"phase": "rollout_progress", "case": [5, true, 42], "timestamp": 1794773151.3147962, "responses": 52, "total": 128, "batch_response_lengths": [1673, 1961, 1208, 2683], "allocated_bytes": 30139643904, "reserved_bytes": 97372864512}
+[colab_job] periodic save (every 10 min)
+2026/11/15 20:06:38 NOTICE:   121.335 KiB / 121.335 KiB, 100%, 0 B/s, ETA -
+2026/11/15 20:06:39 NOTICE:   131.880 KiB / 131.880 KiB, 100%, 0 B/s, ETA -
+2026/11/15 20:06:41 NOTICE:   105.093 KiB / 105.093 KiB, 100%, 0 B/s, ETA -
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-step4-overnight/20261115T163320Z
