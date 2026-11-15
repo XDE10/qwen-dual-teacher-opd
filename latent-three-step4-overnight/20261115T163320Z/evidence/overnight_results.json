@@ -1,0 +1,53 @@
+{
+  "checkpoint_manifest_sha256": "98ebf250c46f87b95e1ccb3ee5145bbb4c02a14ee344c0a282f37694337c3c84",
+  "optimizer_updates": 0,
+  "desired_finish_from": "2026-11-16T07:00:00+08:00",
+  "batch_deadline": "2026-11-16T07:55:00+08:00",
+  "scheduled_cases": [
+    [
+      4,
+      true,
+      42
+    ],
+    [
+      4,
+      false,
+      42
+    ],
+    [
+      5,
+      true,
+      42
+    ],
+    [
+      6,
+      true,
+      42
+    ]
+  ],
+  "optional_cases": [
+    [
+      4,
+      true,
+      43
+    ],
+    [
+      4,
+      false,
+      43
+    ],
+    [
+      5,
+      true,
+      43
+    ],
+    [
+      6,
+      true,
+      43
+    ]
+  ],
+  "matched_math_cache_comparisons": [],
+  "cases": [],
+  "status": "initializing"
+}

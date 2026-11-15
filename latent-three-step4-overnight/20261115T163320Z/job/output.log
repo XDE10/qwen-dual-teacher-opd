@@ -1,0 +1,26 @@
+[colab_job] running: bash -c '
+    set -euo pipefail
+    nvidia-smi --query-gpu=timestamp,memory.used,memory.total,utilization.gpu --format=csv,nounits --loop=5 > "$2/telemetry/gpu_samples.csv" &
+    telemetry_pid=$!
+    trap "kill $telemetry_pid 2>/dev/null || true" EXIT
+    python -u -m scripts.probe_latent_three_overnight \
+      --manifest runs/latent_mopd_three/release_poolfix_20261115/manifest.json \
+      --checkpoint "$1/input/checkpoint-2" --output "$2/evidence" \
+      --early-finish 2026-11-16T07:00:00+08:00 --deadline 2026-11-16T07:55:00+08:00
+  ' -- /content/runs/latent_three_step4_joint_stress_20261116 /content/runs/latent_three_step4_overnight_20261116
+{"phase": "tokenizer_start", "case": null, "timestamp": 1794760402.8060474, "allocated_bytes": 0, "reserved_bytes": 0}
+{"phase": "checkpoint_restore_start", "case": null, "timestamp": 1794760404.8589425, "allocated_bytes": 0, "reserved_bytes": 0}
+{"phase": "teacher_load_start", "case": null, "timestamp": 1794760417.3684227, "domain": "math", "allocated_bytes": 19458240000, "reserved_bytes": 19690160128}
+{"phase": "teacher_load_start", "case": null, "timestamp": 1794760419.6343718, "domain": "code", "allocated_bytes": 23012416512, "reserved_bytes": 23305650176}
+{"phase": "teacher_load_start", "case": null, "timestamp": 1794760421.9142334, "domain": "logic", "allocated_bytes": 26566593024, "reserved_bytes": 26927431680}
+{"phase": "case_start", "case": [4, true, 42], "timestamp": 1794760426.4373968, "allocated_bytes": 30121687040, "reserved_bytes": 31117541376}
+{"phase": "rollout_start", "case": [4, true, 42], "timestamp": 1794760426.439918, "responses": 0, "total": 128, "allocated_bytes": 30121687040, "reserved_bytes": 31117541376}
+{"phase": "rollout_progress", "case": [4, true, 42], "timestamp": 1794760616.5284262, "responses": 4, "total": 128, "batch_response_lengths": [16384, 15090, 10323, 13117], "allocated_bytes": 30131124224, "reserved_bytes": 97242841088}
+{"phase": "rollout_progress", "case": [4, true, 42], "timestamp": 1794760806.7131164, "responses": 8, "total": 128, "batch_response_lengths": [15667, 16384, 13934, 3399], "allocated_bytes": 30131124224, "reserved_bytes": 97242841088}
+{"phase": "rollout_progress", "case": [4, true, 42], "timestamp": 1794760835.36436, "responses": 12, "total": 128, "batch_response_lengths": [2031, 3106, 2223, 1677], "allocated_bytes": 30131124224, "reserved_bytes": 97242841088}
+{"phase": "rollout_progress", "case": [4, true, 42], "timestamp": 1794761000.0461118, "responses": 16, "total": 128, "batch_response_lengths": [14669, 13314, 7484, 12204], "allocated_bytes": 30131124224, "reserved_bytes": 97242841088}
+[colab_job] periodic save (every 10 min)
+2026/11/15 16:43:23 NOTICE:     3.941 KiB / 3.941 KiB, 100%, 1.971 KiB/s, ETA 0s
+2026/11/15 16:43:26 NOTICE:     2.630 KiB / 2.630 KiB, 100%, 2.629 KiB/s, ETA 0s
+2026/11/15 16:43:28 NOTICE:     5.051 KiB / 5.051 KiB, 100%, 5.049 KiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-step4-overnight/20261115T163320Z

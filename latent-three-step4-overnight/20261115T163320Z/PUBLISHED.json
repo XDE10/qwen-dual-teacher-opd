@@ -1,0 +1,80 @@
+{
+  "schema": "opd-results-v1",
+  "name": "latent-three-step4-overnight",
+  "stamp": "20261115T163320Z",
+  "published_utc": "2026-11-15T16:43:28Z",
+  "job": {
+    "state": "running"
+  },
+  "publisher": {
+    "host": "134a1c1bb5bc",
+    "gpu": [
+      "NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB"
+    ],
+    "code": {
+      "commit": "4dee8bfbc554a22461d4d347f4973fc7fb7a016e",
+      "branch": null,
+      "modified_tracked_files": true
+    }
+  },
+  "sources": [
+    {
+      "label": "job",
+      "path": "/content/jobs/latent-three-step4-overnight",
+      "kind": "folder"
+    },
+    {
+      "label": "evidence",
+      "path": "/content/runs/latent_three_step4_overnight_20261116/evidence",
+      "kind": "folder"
+    },
+    {
+      "label": "telemetry",
+      "path": "/content/runs/latent_three_step4_overnight_20261116/telemetry",
+      "kind": "folder"
+    }
+  ],
+  "files": [
+    {
+      "path": "evidence/overnight_results.json",
+      "bytes": 713,
+      "sha256": "2b2666060320c3f0fe5f46b23fd9a2d4aa3b4c7bfd10f504250d152c686ed830"
+    },
+    {
+      "path": "evidence/phase_metrics.jsonl",
+      "bytes": 1980,
+      "sha256": "6736d377b859bcbb8334ca28be38b5c9750662bc67f493855646c1d0e107ec18"
+    },
+    {
+      "path": "job/command.json",
+      "bytes": 1329,
+      "sha256": "a7131853a2b6074023199cd9e032fbc71cf22aa66c5877ff1de04f968d601393"
+    },
+    {
+      "path": "job/output.log",
+      "bytes": 3031,
+      "sha256": "4c579404be88edbdf7b3360548262cd0d964a71316e16ca8417d30e99514ac83"
+    },
+    {
+      "path": "telemetry/gpu_samples.csv",
+      "bytes": 5172,
+      "sha256": "0a8c4cdac5a497fe2a33b27afd23c4bd75e6514cd4dce4c51c4c26362cc6a99e"
+    }
+  ],
+  "redacted_strings": 0,
+  "skipped": [
+    {
+      "path": "job/child_pid",
+      "reason": "not a text result"
+    },
+    {
+      "path": "job/pid",
+      "reason": "not a text result"
+    }
+  ],
+  "skipped_count": 2,
+  "limits_mb": {
+    "per_file": 20,
+    "total": 50
+  }
+}
