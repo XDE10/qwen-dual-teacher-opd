@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent-three-poolfix-62",
   "stamp": "20261115T093339Z",
-  "published_utc": "2026-11-15T11:10:53Z",
+  "published_utc": "2026-11-15T11:26:04Z",
   "job": {
     "state": "running"
   },
@@ -32,8 +32,8 @@
   "files": [
     {
       "path": "full/metrics.jsonl",
-      "bytes": 1878,
-      "sha256": "94f532f0074e39c1be19a0ff5d9d0cb3bc7d0286df1010e0b46934deab35980c"
+      "bytes": 3626,
+      "sha256": "d0c174693707b9065aedbdb92ef58cce0d0014acb52bfe52167def67d2a42a20"
     },
     {
       "path": "full/migration.json",
@@ -42,8 +42,8 @@
     },
     {
       "path": "full/phase_metrics.jsonl",
-      "bytes": 5909,
-      "sha256": "071aa68ea7bb9ee84d33ad34a2912e1b37c3e9fe4f0a6de5e1eb5afbe5c8253c"
+      "bytes": 26774,
+      "sha256": "f5fe7f2889a00e198d4c86781de610d7f276a86175babe889dc3314a3a90768e"
     },
     {
       "path": "full/run_identity.json",
@@ -57,8 +57,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 9612,
-      "sha256": "36945a917119a15ba64e83507fe4121902717235daa42e1c79822f90c6f1e66f"
+      "bytes": 31001,
+      "sha256": "67f8d56372f6ead6141898f8348c1767123169365c42ed6b9164a613c7f53dd6"
     }
   ],
   "redacted_strings": 0,
