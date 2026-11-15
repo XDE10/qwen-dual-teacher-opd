@@ -280,3 +280,18 @@ LATENT_THREE_STAGE formal_steps_2_to_62
 2026/11/15 08:53:12 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
 2026/11/15 08:53:13 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
 [colab_job] saved to Drive: mydrive:opd_runs/latent-three-codefix-62/20261115T054641Z
+[publish] 18 files (0.17 MB), 3 left out, 0 strings redacted -> results:latent-three-codefix-62/20261115T054641Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent-three-codefix-62/20261115T054641Z
+{"step": 2, "domain": "code", "phase": "rollout_progress", "timestamp": 1794732828.3172562, "responses": 88, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 36440113152}
+{"step": 2, "domain": "code", "phase": "rollout_progress", "timestamp": 1794733021.2688963, "responses": 92, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 36440113152}
+{"step": 2, "domain": "code", "phase": "rollout_progress", "timestamp": 1794733276.7203767, "responses": 96, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 36440113152}
+{"step": 2, "domain": "code", "phase": "rollout_progress", "timestamp": 1794733533.7666616, "responses": 100, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 36440113152}
+{"step": 2, "domain": "code", "phase": "rollout_progress", "timestamp": 1794733553.0422425, "responses": 104, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 36440113152}
+{"step": 2, "domain": "code", "phase": "rollout_progress", "timestamp": 1794733641.2120183, "responses": 108, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 36440113152}
+{"step": 2, "domain": "code", "phase": "rollout_progress", "timestamp": 1794733673.4187622, "responses": 112, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 36440113152}
+[colab_job] periodic save (every 15 min)
+2026/11/15 09:08:22 NOTICE:    47.286 KiB / 47.286 KiB, 100%, 0 B/s, ETA -
+2026/11/15 09:08:23 NOTICE:    29.237 KiB / 29.237 KiB, 100%, 0 B/s, ETA -
+2026/11/15 09:08:24 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+2026/11/15 09:08:25 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-codefix-62/20261115T054641Z
