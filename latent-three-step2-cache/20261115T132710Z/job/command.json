@@ -1,0 +1,38 @@
+{
+  "name": "latent-three-step2-cache",
+  "command": [
+    "bash",
+    "probe_assets/run_step2_rollout_cache.sh"
+  ],
+  "cwd": "/content/project2",
+  "started_utc": "2026-11-15T13:27:10Z",
+  "stamp": "20261115T132710Z",
+  "save": [
+    [
+      "evidence",
+      "/content/runs/latent_three_step2_cache_20261115/evidence"
+    ],
+    [
+      "environment",
+      "/content/runs/latent_three_step2_cache_20261115/environment"
+    ],
+    [
+      "metrics",
+      "/content/runs/latent_three_step2_cache_20261115/full/latent_mopd_three_latent/metrics.jsonl"
+    ],
+    [
+      "phases",
+      "/content/runs/latent_three_step2_cache_20261115/full/latent_mopd_three_latent/phase_metrics.jsonl"
+    ]
+  ],
+  "drive": "mydrive:opd_runs",
+  "publish": true,
+  "sync_every_min": 10.0,
+  "drive_about": {
+    "total": 5497558138880,
+    "used": 599156838172,
+    "trashed": 3424092350,
+    "other": 24188451,
+    "free": 4898377112257
+  }
+}
