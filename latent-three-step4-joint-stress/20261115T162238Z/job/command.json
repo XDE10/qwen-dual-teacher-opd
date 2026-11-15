@@ -1,0 +1,34 @@
+{
+  "name": "latent-three-step4-joint-stress",
+  "command": [
+    "bash",
+    "probe_assets/run_step4_joint_probe.sh"
+  ],
+  "cwd": "/content/project2",
+  "started_utc": "2026-11-15T16:22:38Z",
+  "stamp": "20261115T162238Z",
+  "save": [
+    [
+      "evidence",
+      "/content/runs/latent_three_step4_joint_stress_20261116/evidence"
+    ],
+    [
+      "telemetry",
+      "/content/runs/latent_three_step4_joint_stress_20261116/telemetry"
+    ],
+    [
+      "environment",
+      "/content/runs/latent_three_step4_joint_stress_20261116/environment"
+    ]
+  ],
+  "drive": "mydrive:opd_runs",
+  "publish": true,
+  "sync_every_min": 0,
+  "drive_about": {
+    "total": 5497558138880,
+    "used": 618615619747,
+    "trashed": 3424092350,
+    "other": 24188451,
+    "free": 4878918330682
+  }
+}

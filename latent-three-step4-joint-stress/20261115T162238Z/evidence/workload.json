@@ -1,0 +1,1012 @@
+{
+  "target_step": 4,
+  "domain": "math",
+  "prompt_ids": [
+    "math/ad84628e-57fd-471a-ba39-83723e160257",
+    "math/75ca4dd2-dfa7-406c-a5c2-ecab6f5e1306",
+    "math/33b07191-12e8-47bf-8017-668f4dc9b275",
+    "math/50956c64-3f03-4b23-9061-85bf88e56c31",
+    "math/fcfb56fb-6550-4b0c-8846-ea586a7dfea3",
+    "math/be472bd8-c7b1-4f01-9ae2-c2ac7077857b",
+    "math/e2ba92e5-9622-4044-bb3f-4fc6302c820a",
+    "math/0f32fe95-dd93-4d03-a54a-3a7802f11f8b",
+    "math/29493ed6-6888-44f5-916e-4ed1aa5456b5",
+    "math/aea89852-b994-43bd-a1ee-e515555cdac4",
+    "math/40dc69ae-7991-4d24-88cc-f3870c909aa6",
+    "math/f5f8e210-9adf-4cfa-b2c3-4845393273a1",
+    "math/0a4cd405-e623-47de-a625-9ea980d76e2f",
+    "math/082de53c-7528-4e16-baa0-f70a68036b1f",
+    "math/10cf9e63-6a0c-41fe-b936-5a3fbd795409",
+    "math/c3701617-a7f0-4aac-b292-829b0c26bc3f",
+    "math/744526b6-c8d5-4846-82ae-e58487319719",
+    "math/f5e010ca-1872-40ee-9bed-d56ca1ed4a65",
+    "math/95db2704-5a78-413e-8609-d0393b0d19d1",
+    "math/a08156d3-b0d5-479e-aa37-cb5f95aaad88",
+    "math/e43db337-270f-4817-a3e1-ac85c62623b8",
+    "math/0dc9a3e9-d56f-4e54-aafc-3bd0e9bbb482",
+    "math/6fd64891-07f8-4b62-a811-47aabe8be82c",
+    "math/0e0a5dad-9afe-4881-88de-aa8c6d303ce0",
+    "math/ba8824ed-47eb-4743-bdbe-86090e2e6672",
+    "math/f0668bc5-3e32-433d-b72b-8da5ffb16eaf",
+    "math/b89575fe-cef2-4f9a-8865-7efa3f3f16e6",
+    "math/37c243d7-361c-46b6-8e19-9a0cde3d1b7a",
+    "math/248c2eeb-cc07-482e-9231-58cf442b7c93",
+    "math/547f08c9-aa4d-4c6f-99f7-20c2b7115f04",
+    "math/e38f8705-36cc-4df8-9101-7c1f03bfaed8",
+    "math/4d32e9e9-9e26-4e65-a918-c62aaf4f0ba3"
+  ],
+  "responses": 128,
+  "response_lengths": [
+    16384,
+    12210,
+    12210,
+    9491,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    16384,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    12009,
+    12009,
+    9490,
+    9490,
+    9490,
+    16384,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    16384,
+    12175,
+    12175,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    16384,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    12141,
+    12141,
+    9490,
+    9490,
+    9490,
+    16384,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    16384,
+    12114,
+    12114,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    16384,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    12128,
+    12128,
+    9490,
+    9490,
+    9490,
+    16384,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    16384,
+    12069,
+    12069,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    16384,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    12170,
+    12170,
+    9490,
+    9490,
+    9490,
+    16384,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490,
+    9490
+  ],
+  "response_tokens": 1339641,
+  "truncated_responses": 12,
+  "token_weight": 0.1,
+  "latent_weight": 0.9,
+  "groups": [
+    {
+      "indices": [
+        10
+      ],
+      "sequence_lengths": [
+        16524
+      ],
+      "response_tokens": 16384,
+      "padded_tokens": 16524
+    },
+    {
+      "indices": [
+        0
+      ],
+      "sequence_lengths": [
+        16462
+      ],
+      "response_tokens": 16384,
+      "padded_tokens": 16462
+    },
+    {
+      "indices": [
+        1,
+        2
+      ],
+      "sequence_lengths": [
+        12288,
+        12288
+      ],
+      "response_tokens": 24420,
+      "padded_tokens": 24576
+    },
+    {
+      "indices": [
+        4,
+        5
+      ],
+      "sequence_lengths": [
+        9646,
+        9646
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19292
+    },
+    {
+      "indices": [
+        6,
+        7
+      ],
+      "sequence_lengths": [
+        9646,
+        9646
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19292
+    },
+    {
+      "indices": [
+        8,
+        9
+      ],
+      "sequence_lengths": [
+        9630,
+        9630
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19260
+    },
+    {
+      "indices": [
+        11,
+        12
+      ],
+      "sequence_lengths": [
+        9630,
+        9590
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19260
+    },
+    {
+      "indices": [
+        13,
+        14
+      ],
+      "sequence_lengths": [
+        9590,
+        9590
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19180
+    },
+    {
+      "indices": [
+        15,
+        3
+      ],
+      "sequence_lengths": [
+        9590,
+        9569
+      ],
+      "response_tokens": 18981,
+      "padded_tokens": 19180
+    },
+    {
+      "indices": [
+        21
+      ],
+      "sequence_lengths": [
+        16471
+      ],
+      "response_tokens": 16384,
+      "padded_tokens": 16471
+    },
+    {
+      "indices": [
+        16,
+        17
+      ],
+      "sequence_lengths": [
+        12288,
+        12288
+      ],
+      "response_tokens": 24018,
+      "padded_tokens": 24576
+    },
+    {
+      "indices": [
+        18,
+        19
+      ],
+      "sequence_lengths": [
+        9769,
+        9769
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19538
+    },
+    {
+      "indices": [
+        28,
+        29
+      ],
+      "sequence_lengths": [
+        9705,
+        9705
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19410
+    },
+    {
+      "indices": [
+        30,
+        31
+      ],
+      "sequence_lengths": [
+        9705,
+        9705
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19410
+    },
+    {
+      "indices": [
+        24,
+        25
+      ],
+      "sequence_lengths": [
+        9633,
+        9633
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19266
+    },
+    {
+      "indices": [
+        26,
+        27
+      ],
+      "sequence_lengths": [
+        9633,
+        9633
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19266
+    },
+    {
+      "indices": [
+        20,
+        22
+      ],
+      "sequence_lengths": [
+        9577,
+        9577
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19154
+    },
+    {
+      "indices": [
+        23
+      ],
+      "sequence_lengths": [
+        9577
+      ],
+      "response_tokens": 9490,
+      "padded_tokens": 9577
+    },
+    {
+      "indices": [
+        32
+      ],
+      "sequence_lengths": [
+        16497
+      ],
+      "response_tokens": 16384,
+      "padded_tokens": 16497
+    },
+    {
+      "indices": [
+        42
+      ],
+      "sequence_lengths": [
+        16491
+      ],
+      "response_tokens": 16384,
+      "padded_tokens": 16491
+    },
+    {
+      "indices": [
+        33,
+        34
+      ],
+      "sequence_lengths": [
+        12288,
+        12288
+      ],
+      "response_tokens": 24350,
+      "padded_tokens": 24576
+    },
+    {
+      "indices": [
+        44,
+        45
+      ],
+      "sequence_lengths": [
+        9699,
+        9699
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19398
+    },
+    {
+      "indices": [
+        46,
+        47
+      ],
+      "sequence_lengths": [
+        9699,
+        9699
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19398
+    },
+    {
+      "indices": [
+        35,
+        40
+      ],
+      "sequence_lengths": [
+        9603,
+        9597
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19206
+    },
+    {
+      "indices": [
+        41,
+        43
+      ],
+      "sequence_lengths": [
+        9597,
+        9597
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19194
+    },
+    {
+      "indices": [
+        36,
+        37
+      ],
+      "sequence_lengths": [
+        9596,
+        9596
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19192
+    },
+    {
+      "indices": [
+        38,
+        39
+      ],
+      "sequence_lengths": [
+        9596,
+        9596
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19192
+    },
+    {
+      "indices": [
+        53
+      ],
+      "sequence_lengths": [
+        16489
+      ],
+      "response_tokens": 16384,
+      "padded_tokens": 16489
+    },
+    {
+      "indices": [
+        48,
+        49
+      ],
+      "sequence_lengths": [
+        12288,
+        12288
+      ],
+      "response_tokens": 24282,
+      "padded_tokens": 24576
+    },
+    {
+      "indices": [
+        56,
+        57
+      ],
+      "sequence_lengths": [
+        9647,
+        9647
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19294
+    },
+    {
+      "indices": [
+        58,
+        59
+      ],
+      "sequence_lengths": [
+        9647,
+        9647
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19294
+    },
+    {
+      "indices": [
+        50,
+        51
+      ],
+      "sequence_lengths": [
+        9637,
+        9637
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19274
+    },
+    {
+      "indices": [
+        60,
+        61
+      ],
+      "sequence_lengths": [
+        9621,
+        9621
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19242
+    },
+    {
+      "indices": [
+        62,
+        63
+      ],
+      "sequence_lengths": [
+        9621,
+        9621
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19242
+    },
+    {
+      "indices": [
+        52,
+        54
+      ],
+      "sequence_lengths": [
+        9595,
+        9595
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19190
+    },
+    {
+      "indices": [
+        55
+      ],
+      "sequence_lengths": [
+        9595
+      ],
+      "response_tokens": 9490,
+      "padded_tokens": 9595
+    },
+    {
+      "indices": [
+        64
+      ],
+      "sequence_lengths": [
+        16558
+      ],
+      "response_tokens": 16384,
+      "padded_tokens": 16558
+    },
+    {
+      "indices": [
+        74
+      ],
+      "sequence_lengths": [
+        16502
+      ],
+      "response_tokens": 16384,
+      "padded_tokens": 16502
+    },
+    {
+      "indices": [
+        65,
+        66
+      ],
+      "sequence_lengths": [
+        12288,
+        12288
+      ],
+      "response_tokens": 24228,
+      "padded_tokens": 24576
+    },
+    {
+      "indices": [
+        67,
+        76
+      ],
+      "sequence_lengths": [
+        9664,
+        9648
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19328
+    },
+    {
+      "indices": [
+        77,
+        78
+      ],
+      "sequence_lengths": [
+        9648,
+        9648
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19296
+    },
+    {
+      "indices": [
+        79,
+        72
+      ],
+      "sequence_lengths": [
+        9648,
+        9608
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19296
+    },
+    {
+      "indices": [
+        73,
+        75
+      ],
+      "sequence_lengths": [
+        9608,
+        9608
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19216
+    },
+    {
+      "indices": [
+        68,
+        69
+      ],
+      "sequence_lengths": [
+        9606,
+        9606
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19212
+    },
+    {
+      "indices": [
+        70,
+        71
+      ],
+      "sequence_lengths": [
+        9606,
+        9606
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19212
+    },
+    {
+      "indices": [
+        85
+      ],
+      "sequence_lengths": [
+        16500
+      ],
+      "response_tokens": 16384,
+      "padded_tokens": 16500
+    },
+    {
+      "indices": [
+        80,
+        81
+      ],
+      "sequence_lengths": [
+        12288,
+        12288
+      ],
+      "response_tokens": 24256,
+      "padded_tokens": 24576
+    },
+    {
+      "indices": [
+        88,
+        89
+      ],
+      "sequence_lengths": [
+        9713,
+        9713
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19426
+    },
+    {
+      "indices": [
+        90,
+        91
+      ],
+      "sequence_lengths": [
+        9713,
+        9713
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19426
+    },
+    {
+      "indices": [
+        82,
+        83
+      ],
+      "sequence_lengths": [
+        9650,
+        9650
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19300
+    },
+    {
+      "indices": [
+        92,
+        93
+      ],
+      "sequence_lengths": [
+        9637,
+        9637
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19274
+    },
+    {
+      "indices": [
+        94,
+        95
+      ],
+      "sequence_lengths": [
+        9637,
+        9637
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19274
+    },
+    {
+      "indices": [
+        84,
+        86
+      ],
+      "sequence_lengths": [
+        9606,
+        9606
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19212
+    },
+    {
+      "indices": [
+        87
+      ],
+      "sequence_lengths": [
+        9606
+      ],
+      "response_tokens": 9490,
+      "padded_tokens": 9606
+    },
+    {
+      "indices": [
+        96
+      ],
+      "sequence_lengths": [
+        16603
+      ],
+      "response_tokens": 16384,
+      "padded_tokens": 16603
+    },
+    {
+      "indices": [
+        106
+      ],
+      "sequence_lengths": [
+        16496
+      ],
+      "response_tokens": 16384,
+      "padded_tokens": 16496
+    },
+    {
+      "indices": [
+        97,
+        98
+      ],
+      "sequence_lengths": [
+        12288,
+        12288
+      ],
+      "response_tokens": 24138,
+      "padded_tokens": 24576
+    },
+    {
+      "indices": [
+        108,
+        109
+      ],
+      "sequence_lengths": [
+        9718,
+        9718
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19436
+    },
+    {
+      "indices": [
+        110,
+        111
+      ],
+      "sequence_lengths": [
+        9718,
+        9718
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19436
+    },
+    {
+      "indices": [
+        99,
+        100
+      ],
+      "sequence_lengths": [
+        9709,
+        9609
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19418
+    },
+    {
+      "indices": [
+        101,
+        102
+      ],
+      "sequence_lengths": [
+        9609,
+        9609
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19218
+    },
+    {
+      "indices": [
+        103,
+        104
+      ],
+      "sequence_lengths": [
+        9609,
+        9602
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19218
+    },
+    {
+      "indices": [
+        105,
+        107
+      ],
+      "sequence_lengths": [
+        9602,
+        9602
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19204
+    },
+    {
+      "indices": [
+        117
+      ],
+      "sequence_lengths": [
+        16508
+      ],
+      "response_tokens": 16384,
+      "padded_tokens": 16508
+    },
+    {
+      "indices": [
+        112,
+        113
+      ],
+      "sequence_lengths": [
+        12288,
+        12288
+      ],
+      "response_tokens": 24340,
+      "padded_tokens": 24576
+    },
+    {
+      "indices": [
+        120,
+        121
+      ],
+      "sequence_lengths": [
+        9631,
+        9631
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19262
+    },
+    {
+      "indices": [
+        122,
+        123
+      ],
+      "sequence_lengths": [
+        9631,
+        9631
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19262
+    },
+    {
+      "indices": [
+        116,
+        118
+      ],
+      "sequence_lengths": [
+        9614,
+        9614
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19228
+    },
+    {
+      "indices": [
+        119,
+        114
+      ],
+      "sequence_lengths": [
+        9614,
+        9608
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19228
+    },
+    {
+      "indices": [
+        115,
+        124
+      ],
+      "sequence_lengths": [
+        9608,
+        9595
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19216
+    },
+    {
+      "indices": [
+        125,
+        126
+      ],
+      "sequence_lengths": [
+        9595,
+        9595
+      ],
+      "response_tokens": 18980,
+      "padded_tokens": 19190
+    },
+    {
+      "indices": [
+        127
+      ],
+      "sequence_lengths": [
+        9595
+      ],
+      "response_tokens": 9490,
+      "padded_tokens": 9595
+    }
+  ],
+  "worker_responses": 16,
+  "packing_tokens": 24576,
+  "max_padded_tokens": 24576,
+  "manifest_sha256": "e5f4c579f8a4514795e6ba80e1e4c2df034e724346bbfce7a2ea150d7d969252",
+  "stress_rollout": true
+}

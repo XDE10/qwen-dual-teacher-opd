@@ -1,0 +1,16 @@
+........................................................................ [ 76%]
+......................                                                   [100%]
+=============================== warnings summary ===============================
+tests/test_opd_v3.py::test_checkpoint_resume_reproduces_next_step
+tests/test_v3_tools.py::test_run_paths_and_adapter_checks
+tests/test_opd_v2.py::test_real_opd_adapter_optimizer_scheduler_rng_resume_cpu
+  /usr/local/lib/python3.13/dist-packages/peft/utils/save_and_load.py:372: UserWarning: Could not find a config file in  - will assume that the vocabulary was not modified.
+    warnings.warn(
+
+tests/test_opd_v2.py::test_peft_actual_chain_is_audited
+tests/test_opd_v2.py::test_real_opd_adapter_optimizer_scheduler_rng_resume_cpu
+  /usr/local/lib/python3.13/dist-packages/peft/tuners/lora/layer.py:2503: UserWarning: fan_in_fan_out is set to False but the target module is `Conv1D`. Setting fan_in_fan_out to True.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+94 passed, 5 warnings in 10.95s

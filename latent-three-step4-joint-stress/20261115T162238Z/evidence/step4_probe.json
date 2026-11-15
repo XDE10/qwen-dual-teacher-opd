@@ -1,0 +1,49 @@
+{
+  "loss": -3.43815197609365,
+  "token_loss": -34.38842126727104,
+  "raw_rep_loss": 0.0007668671146348061,
+  "reward_std": 0.9349071383476257,
+  "gradient_norm": 43.06106948852539,
+  "optimizer_updates": 0,
+  "restored_step": 2,
+  "target_step": 4,
+  "domain": "math",
+  "synthetic_responses": true,
+  "stress_rollout": {
+    "responses": 4,
+    "response_lengths": [
+      16384,
+      16384,
+      16384,
+      16384
+    ],
+    "response_tokens": 65536,
+    "prompt_tokens": 279,
+    "cache_enabled": true,
+    "masked_eos_token_id": 151665,
+    "seconds": 190.50133887900006
+  },
+  "responses": 128,
+  "response_tokens": 1339641,
+  "truncated_responses": 12,
+  "microbatches": 72,
+  "token_weight": 0.1,
+  "latent_weight": 0.9,
+  "resident_teachers": [
+    "math",
+    "code",
+    "logic"
+  ],
+  "checkpoint_manifest_sha256": "98ebf250c46f87b95e1ccb3ee5145bbb4c02a14ee344c0a282f37694337c3c84",
+  "reserved_missing_adam_moment_bytes": 1866989568,
+  "reserved_missing_adam_moment_names": [
+    "lm_head.weight"
+  ],
+  "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "device_total_bytes": 101974081536,
+  "baseline_allocated_bytes": 31997196288,
+  "peak_allocated_bytes": 47707764736,
+  "peak_reserved_bytes": 100885594112,
+  "compute_seconds": 265.5203165910001,
+  "total_seconds": 540.2719031030001
+}

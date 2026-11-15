@@ -1,0 +1,141 @@
+{
+  "schema": "opd-results-v1",
+  "name": "latent-three-step4-joint-stress",
+  "stamp": "20261115T162238Z",
+  "published_utc": "2026-11-15T16:32:59Z",
+  "job": {
+    "state": "finished",
+    "exit_status": 0
+  },
+  "publisher": {
+    "host": "134a1c1bb5bc",
+    "gpu": [
+      "NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB"
+    ],
+    "code": {
+      "commit": "4dee8bfbc554a22461d4d347f4973fc7fb7a016e",
+      "branch": null,
+      "modified_tracked_files": true
+    }
+  },
+  "sources": [
+    {
+      "label": "job",
+      "path": "/content/jobs/latent-three-step4-joint-stress",
+      "kind": "folder"
+    },
+    {
+      "label": "evidence",
+      "path": "/content/runs/latent_three_step4_joint_stress_20261116/evidence",
+      "kind": "folder"
+    },
+    {
+      "label": "telemetry",
+      "path": "/content/runs/latent_three_step4_joint_stress_20261116/telemetry",
+      "kind": "folder"
+    },
+    {
+      "label": "environment",
+      "path": "/content/runs/latent_three_step4_joint_stress_20261116/environment",
+      "kind": "folder"
+    }
+  ],
+  "files": [
+    {
+      "path": "environment/benchmarks.txt",
+      "bytes": 170,
+      "sha256": "a2e04bf5436553834a1884d6531f356c96b453623314efb766603d0f0a64586b"
+    },
+    {
+      "path": "environment/cpu-tests.txt",
+      "bytes": 1081,
+      "sha256": "f2b65a1cc352afd517b02f448c8cc052577bbe1b70ac1cd2dcdac170d530120a"
+    },
+    {
+      "path": "environment/gpu.csv",
+      "bytes": 127,
+      "sha256": "88b570a6b620db8484c1ef679f3b5396a5aaec74a9ad5efc87d1a8989776bfb7"
+    },
+    {
+      "path": "environment/imports.txt",
+      "bytes": 123,
+      "sha256": "b8908577547b46e8ca47243bc9465c4efa339d76cc2ff368bc57cd7d3f3e5ed3"
+    },
+    {
+      "path": "environment/nvidia-smi.txt",
+      "bytes": 1689,
+      "sha256": "7584f0e752dd1743f9724b811627f6d41369d277ab4196e47269eed0ba433212"
+    },
+    {
+      "path": "environment/pip-check.txt",
+      "bytes": 551,
+      "sha256": "40626712bba0ef1ec15bf0c03d9e69a301ba6be6b85a1a966a5ce8fbddec89bf"
+    },
+    {
+      "path": "environment/pip-freeze.txt",
+      "bytes": 14256,
+      "sha256": "ac431fa588173338ab220084b835c7e21fdf1dfbd7f4bb8628ef0441b594586b"
+    },
+    {
+      "path": "environment/torch.txt",
+      "bytes": 189,
+      "sha256": "8314976561090ae5d908d73830de46e5a1ad0b381694e3e8d01c6a8c5af2de40"
+    },
+    {
+      "path": "evidence/memory_headroom.json",
+      "bytes": 168,
+      "sha256": "46753692c2d3dad540618378a2f1b28fc111584a76dee1048dbbb293da20fac5"
+    },
+    {
+      "path": "evidence/phase_metrics.jsonl",
+      "bytes": 96047,
+      "sha256": "baca9fcd5f43c50f1b08ca34c62bbda74bf93f92351a592507fd8a29d5d48af0"
+    },
+    {
+      "path": "evidence/step4_probe.json",
+      "bytes": 1315,
+      "sha256": "4b502d31619a11376ee0e513d83180ff222a1a5ecf6856dc9447eebfa77ba34d"
+    },
+    {
+      "path": "evidence/stress_rollout.json",
+      "bytes": 235,
+      "sha256": "2df9b88f9292b232097988d14bfc9eb2f85b27cad4608e9b117471a948378d50"
+    },
+    {
+      "path": "evidence/workload.json",
+      "bytes": 16540,
+      "sha256": "bcda36ab90ffea9a9ce84b4173eb7112e46abf8fd4ab2ea24067cdad615815fb"
+    },
+    {
+      "path": "job/command.json",
+      "bytes": 786,
+      "sha256": "1854b2a02108a66c7df92e4ffd54049ac83a32dcfbce31b7e5944906beac1e1f"
+    },
+    {
+      "path": "job/output.log",
+      "bytes": 97346,
+      "sha256": "2b8282eece32139937b2d012226842576a6aae2076bf7cef7823ab83d76bcee9"
+    },
+    {
+      "path": "telemetry/gpu_samples.csv",
+      "bytes": 22979,
+      "sha256": "9668150d9ec3d1db01e617d0ef2730a4396f095d3c4f1baeb24c59144989865f"
+    }
+  ],
+  "redacted_strings": 0,
+  "skipped": [
+    {
+      "path": "job/child_pid",
+      "reason": "not a text result"
+    },
+    {
+      "path": "job/pid",
+      "reason": "not a text result"
+    }
+  ],
+  "skipped_count": 2,
+  "limits_mb": {
+    "per_file": 20,
+    "total": 50
+  }
+}
