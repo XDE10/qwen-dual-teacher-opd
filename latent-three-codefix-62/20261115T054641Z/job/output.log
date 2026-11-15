@@ -255,3 +255,16 @@ LATENT_THREE_STAGE formal_steps_2_to_62
 2026/11/15 08:22:52 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
 2026/11/15 08:22:52 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
 [colab_job] saved to Drive: mydrive:opd_runs/latent-three-codefix-62/20261115T054641Z
+[publish] 18 files (0.17 MB), 3 left out, 0 strings redacted -> results:latent-three-codefix-62/20261115T054641Z
+{"step": 2, "domain": "code", "phase": "rollout_progress", "timestamp": 1794730973.5606508, "responses": 52, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 36440113152}
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent-three-codefix-62/20261115T054641Z
+{"step": 2, "domain": "code", "phase": "rollout_progress", "timestamp": 1794731197.3869002, "responses": 56, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 36440113152}
+{"step": 2, "domain": "code", "phase": "rollout_progress", "timestamp": 1794731285.7779622, "responses": 60, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 36440113152}
+{"step": 2, "domain": "code", "phase": "rollout_progress", "timestamp": 1794731522.954642, "responses": 64, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 36440113152}
+{"step": 2, "domain": "code", "phase": "rollout_progress", "timestamp": 1794731780.7271476, "responses": 68, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 36440113152}
+[colab_job] periodic save (every 15 min)
+2026/11/15 08:37:59 NOTICE:    44.013 KiB / 44.013 KiB, 100%, 44.005 KiB/s, ETA 0s
+2026/11/15 08:38:01 NOTICE:    27.235 KiB / 27.235 KiB, 100%, 27.223 KiB/s, ETA 0s
+2026/11/15 08:38:02 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+2026/11/15 08:38:03 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-codefix-62/20261115T054641Z
