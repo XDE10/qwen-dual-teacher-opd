@@ -1,0 +1,5 @@
+{"step": 2, "domain": "code", "phase": "rollout_start", "timestamp": 1794735335.4371266, "responses": 128, "token_weight": 0.0, "latent_weight": 1.0, "teacher": {"model": "Fate-Zero/Archer2.0-Code-1.5B-Preview", "revision": "db1e1ff9f3c36f7177f3896358ce26edeb62ce56"}, "allocated_bytes": 30121687040, "reserved_bytes": 30526144512}
+{"step": 2, "domain": "code", "phase": "rollout_progress", "timestamp": 1794735596.8591535, "responses": 4, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 36368809984}
+{"step": 2, "domain": "code", "phase": "rollout_progress", "timestamp": 1794735838.2838674, "responses": 8, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 36429627392}
+{"step": 2, "domain": "code", "phase": "rollout_progress", "timestamp": 1794736069.103251, "responses": 12, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 36429627392}
+{"step": 2, "domain": "code", "phase": "rollout_progress", "timestamp": 1794736306.8211677, "responses": 16, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 36429627392}

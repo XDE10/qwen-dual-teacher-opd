@@ -1,0 +1,16 @@
+[colab_job] running: python -m src.training.latent_mopd_three latent --manifest /content/project2/runs/latent_mopd_three/release_poolfix_20261115/manifest.json --output-root /content/runs/latent_three_poolfix_20261115/full --steps 62 --prompts 32 --responses 4 --max-new-tokens 16384 --rollout-batch 4 --resume
+{"step": 2, "domain": "code", "phase": "rollout_start", "timestamp": 1794735335.4371266, "responses": 128, "token_weight": 0.0, "latent_weight": 1.0, "teacher": {"model": "Fate-Zero/Archer2.0-Code-1.5B-Preview", "revision": "db1e1ff9f3c36f7177f3896358ce26edeb62ce56"}, "allocated_bytes": 30121687040, "reserved_bytes": 30526144512}
+{"step": 2, "domain": "code", "phase": "rollout_progress", "timestamp": 1794735596.8591535, "responses": 4, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 36368809984}
+{"step": 2, "domain": "code", "phase": "rollout_progress", "timestamp": 1794735838.2838674, "responses": 8, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 36429627392}
+{"step": 2, "domain": "code", "phase": "rollout_progress", "timestamp": 1794736069.103251, "responses": 12, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 36429627392}
+[colab_job] periodic save (every 15 min)
+2026/11/15 09:48:46 NOTICE:     2.139 KiB / 2.139 KiB, 100%, 438 B/s, ETA 0s
+2026/11/15 09:49:48 NOTICE:     3.983 GiB / 18.122 GiB, 22%, 84.047 MiB/s, ETA 2m52s
+2026/11/15 09:50:48 NOTICE:     8.514 GiB / 18.122 GiB, 47%, 69.063 MiB/s, ETA 2m22s
+{"step": 2, "domain": "code", "phase": "rollout_progress", "timestamp": 1794736306.8211677, "responses": 16, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 36429627392}
+2026/11/15 09:51:48 NOTICE:    11.886 GiB / 18.122 GiB, 66%, 45.830 MiB/s, ETA 2m19s
+2026/11/15 09:52:48 NOTICE:    13.878 GiB / 18.122 GiB, 77%, 34.585 MiB/s, ETA 2m5s
+2026/11/15 09:53:48 NOTICE:    15.933 GiB / 18.122 GiB, 88%, 35.032 MiB/s, ETA 1m3s
+2026/11/15 09:54:48 NOTICE:    18.019 GiB / 18.122 GiB, 99%, 34.769 MiB/s, ETA 3s
+2026/11/15 09:54:52 NOTICE:    18.122 GiB / 18.122 GiB, 100%, 34.804 MiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-poolfix-62/20261115T093339Z

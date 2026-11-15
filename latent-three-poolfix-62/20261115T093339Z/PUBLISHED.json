@@ -1,0 +1,84 @@
+{
+  "schema": "opd-results-v1",
+  "name": "latent-three-poolfix-62",
+  "stamp": "20261115T093339Z",
+  "published_utc": "2026-11-15T09:54:52Z",
+  "job": {
+    "state": "running"
+  },
+  "publisher": {
+    "host": "db4849cf7133",
+    "gpu": [
+      "NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB"
+    ],
+    "code": {
+      "commit": "4dee8bfbc554a22461d4d347f4973fc7fb7a016e",
+      "branch": null,
+      "modified_tracked_files": false
+    }
+  },
+  "sources": [
+    {
+      "label": "job",
+      "path": "/content/jobs/latent-three-poolfix-62",
+      "kind": "folder"
+    },
+    {
+      "label": "full",
+      "path": "/content/runs/latent_three_poolfix_20261115/full/latent_mopd_three_latent",
+      "kind": "folder"
+    }
+  ],
+  "files": [
+    {
+      "path": "full/metrics.jsonl",
+      "bytes": 1878,
+      "sha256": "94f532f0074e39c1be19a0ff5d9d0cb3bc7d0286df1010e0b46934deab35980c"
+    },
+    {
+      "path": "full/migration.json",
+      "bytes": 521,
+      "sha256": "882049ac5d6b4968e4e708ef1baee300574af30aa2df88ece2dbade4e99e0eda"
+    },
+    {
+      "path": "full/phase_metrics.jsonl",
+      "bytes": 1073,
+      "sha256": "741e1a576deeb511879db033a78fad3b1d924b8fb752163660930cff4551795f"
+    },
+    {
+      "path": "full/run_identity.json",
+      "bytes": 34534,
+      "sha256": "59b8f146f5bdd9d5a3e312bd47bf327180666ddfa7220119b0a75590c1467500"
+    },
+    {
+      "path": "job/command.json",
+      "bytes": 939,
+      "sha256": "71095daac61fcd0bc4a0ecb704d97349ce55f0c4ae7e8244810cdcff6a0adfca"
+    },
+    {
+      "path": "job/output.log",
+      "bytes": 2176,
+      "sha256": "6d40fc067dc9faec4def2c1857f1195fcc7e214b1d217e866894c5e81690fb84"
+    }
+  ],
+  "redacted_strings": 0,
+  "skipped": [
+    {
+      "path": "job/child_pid",
+      "reason": "not a text result"
+    },
+    {
+      "path": "job/pid",
+      "reason": "not a text result"
+    },
+    {
+      "path": "full/checkpoint-1/",
+      "reason": "folder not published"
+    }
+  ],
+  "skipped_count": 3,
+  "limits_mb": {
+    "per_file": 20,
+    "total": 50
+  }
+}

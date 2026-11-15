@@ -1,0 +1,43 @@
+{
+  "name": "latent-three-poolfix-62",
+  "command": [
+    "python",
+    "-m",
+    "src.training.latent_mopd_three",
+    "latent",
+    "--manifest",
+    "/content/project2/runs/latent_mopd_three/release_poolfix_20261115/manifest.json",
+    "--output-root",
+    "/content/runs/latent_three_poolfix_20261115/full",
+    "--steps",
+    "62",
+    "--prompts",
+    "32",
+    "--responses",
+    "4",
+    "--max-new-tokens",
+    "16384",
+    "--rollout-batch",
+    "4",
+    "--resume"
+  ],
+  "cwd": "/content/project2",
+  "started_utc": "2026-11-15T09:33:39Z",
+  "stamp": "20261115T093339Z",
+  "save": [
+    [
+      "full",
+      "/content/runs/latent_three_poolfix_20261115/full/latent_mopd_three_latent"
+    ]
+  ],
+  "drive": "mydrive:opd_runs",
+  "publish": true,
+  "sync_every_min": 15.0,
+  "drive_about": {
+    "total": 5497558138880,
+    "used": 579697902739,
+    "trashed": 3424092350,
+    "other": 24188451,
+    "free": 4917836047690
+  }
+}
