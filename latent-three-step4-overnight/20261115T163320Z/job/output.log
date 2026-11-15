@@ -579,3 +579,13 @@
 2026/11/15 20:06:39 NOTICE:   131.880 KiB / 131.880 KiB, 100%, 0 B/s, ETA -
 2026/11/15 20:06:41 NOTICE:   105.093 KiB / 105.093 KiB, 100%, 0 B/s, ETA -
 [colab_job] saved to Drive: mydrive:opd_runs/latent-three-step4-overnight/20261115T163320Z
+[publish] 5 files (0.38 MB), 2 left out, 0 strings redacted -> results:latent-three-step4-overnight/20261115T163320Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent-three-step4-overnight/20261115T163320Z
+{"phase": "rollout_progress", "case": [5, true, 42], "timestamp": 1794773341.0287645, "responses": 56, "total": 128, "batch_response_lengths": [16384, 12562, 15741, 12186], "allocated_bytes": 30139643904, "reserved_bytes": 97372864512}
+{"phase": "rollout_progress", "case": [5, true, 42], "timestamp": 1794773534.4994745, "responses": 60, "total": 128, "batch_response_lengths": [11659, 13274, 16384, 13489], "allocated_bytes": 30139643904, "reserved_bytes": 97372864512}
+{"phase": "rollout_progress", "case": [5, true, 42], "timestamp": 1794773696.247367, "responses": 64, "total": 128, "batch_response_lengths": [14378, 14313, 8235, 6949], "allocated_bytes": 30139643904, "reserved_bytes": 97372864512}
+[colab_job] periodic save (every 10 min)
+2026/11/15 20:16:47 NOTICE:   122.610 KiB / 122.610 KiB, 100%, 122.594 KiB/s, ETA 0s
+2026/11/15 20:16:49 NOTICE:   132.568 KiB / 132.568 KiB, 100%, 0 B/s, ETA -
+2026/11/15 20:16:51 NOTICE:   110.097 KiB / 110.097 KiB, 100%, 110.023 KiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-step4-overnight/20261115T163320Z
