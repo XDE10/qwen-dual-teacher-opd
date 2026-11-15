@@ -41,3 +41,17 @@ STAGE resumed step 2 only, rollout weight cache enabled
 2026/11/15 13:57:44 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
 2026/11/15 13:57:46 NOTICE:     2.145 KiB / 2.145 KiB, 100%, 0 B/s, ETA -
 [colab_job] saved to Drive: mydrive:opd_runs/latent-three-step2-cache/20261115T132710Z
+[publish] 15 files (0.08 MB), 2 left out, 0 strings redacted -> results:latent-three-step2-cache/20261115T132710Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent-three-step2-cache/20261115T132710Z
+{"step": 2, "domain": "code", "phase": "rollout_progress", "timestamp": 1794751123.0082762, "responses": 44, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 100598284288}
+{"step": 2, "domain": "code", "phase": "rollout_progress", "timestamp": 1794751150.2477233, "responses": 48, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 100598284288}
+{"step": 2, "domain": "code", "phase": "rollout_progress", "timestamp": 1794751343.9982846, "responses": 52, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 100598284288}
+{"step": 2, "domain": "code", "phase": "rollout_progress", "timestamp": 1794751513.045671, "responses": 56, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 100598284288}
+{"step": 2, "domain": "code", "phase": "rollout_progress", "timestamp": 1794751578.3151467, "responses": 60, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 100598284288}
+[colab_job] periodic save (every 10 min)
+2026/11/15 14:07:52 NOTICE:     6.056 KiB / 6.056 KiB, 100%, 0 B/s, ETA -
+2026/11/15 14:07:54 NOTICE:    19.813 KiB / 19.813 KiB, 100%, 0 B/s, ETA -
+2026/11/15 14:07:55 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+2026/11/15 14:07:56 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+2026/11/15 14:07:57 NOTICE:     3.057 KiB / 3.057 KiB, 100%, 0 B/s, ETA -
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-step2-cache/20261115T132710Z
