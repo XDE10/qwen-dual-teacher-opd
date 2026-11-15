@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent-three-step4-overnight",
   "stamp": "20261115T163320Z",
-  "published_utc": "2026-11-15T18:04:44Z",
+  "published_utc": "2026-11-15T18:14:54Z",
   "job": {
     "state": "running"
   },
@@ -42,8 +42,8 @@
     },
     {
       "path": "evidence/phase_metrics.jsonl",
-      "bytes": 112392,
-      "sha256": "f4fd43eafb882556b5b51b36c351db0d0d1cf8a8713d3d2870055a6a1a9dde1b"
+      "bytes": 113097,
+      "sha256": "a4c2f57fc9caf32c1899505369642916c124585f1bab943069399459b46c95ff"
     },
     {
       "path": "job/command.json",
@@ -52,13 +52,13 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 106441,
-      "sha256": "6950bdf2bd2281cc6db00296d7b3f3dfd34554d663f0881e7f911af2e884e612"
+      "bytes": 107772,
+      "sha256": "9d87c5d26f0491c7b4c0d5bbd20675dcd0f32848b64927e7dd478e956015dd46"
     },
     {
       "path": "telemetry/gpu_samples.csv",
-      "bytes": 46169,
-      "sha256": "9b63c5d7f1c270efd981cee67ecf3dd6eda261721bbabfa637a6ae1d760e8a9e"
+      "bytes": 51293,
+      "sha256": "ff5d98790ec89d8a48ed0d62ca4da1a5a58a3fe41f0d524dcc18a45be9eee4e7"
     }
   ],
   "redacted_strings": 0,
