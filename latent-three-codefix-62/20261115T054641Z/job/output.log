@@ -107,3 +107,15 @@ LATENT_THREE_STAGE scale_formal_step_1
 2026/11/15 07:17:42 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
 2026/11/15 07:17:43 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
 [colab_job] saved to Drive: mydrive:opd_runs/latent-three-codefix-62/20261115T054641Z
+[publish] 17 files (0.12 MB), 2 left out, 0 strings redacted -> results:latent-three-codefix-62/20261115T054641Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent-three-codefix-62/20261115T054641Z
+{"step": 1, "domain": "math", "phase": "rollout_progress", "timestamp": 1794727173.401268, "responses": 112, "total": 128, "allocated_bytes": 17780974592, "reserved_bytes": 23716691968}
+{"step": 1, "domain": "math", "phase": "rollout_progress", "timestamp": 1794727424.420558, "responses": 116, "total": 128, "allocated_bytes": 17780974592, "reserved_bytes": 23716691968}
+{"step": 1, "domain": "math", "phase": "rollout_progress", "timestamp": 1794727599.4997385, "responses": 120, "total": 128, "allocated_bytes": 17780974592, "reserved_bytes": 23716691968}
+{"step": 1, "domain": "math", "phase": "rollout_progress", "timestamp": 1794727800.0749123, "responses": 124, "total": 128, "allocated_bytes": 17780974592, "reserved_bytes": 23716691968}
+[colab_job] periodic save (every 15 min)
+2026/11/15 07:32:50 NOTICE:    18.767 KiB / 18.767 KiB, 100%, 0 B/s, ETA -
+2026/11/15 07:32:52 NOTICE:     5.938 KiB / 5.938 KiB, 100%, 5.938 KiB/s, ETA 0s
+2026/11/15 07:32:53 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+2026/11/15 07:32:54 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-codefix-62/20261115T054641Z
