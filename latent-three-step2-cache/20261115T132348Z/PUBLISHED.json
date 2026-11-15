@@ -1,0 +1,106 @@
+{
+  "schema": "opd-results-v1",
+  "name": "latent-three-step2-cache",
+  "stamp": "20261115T132348Z",
+  "published_utc": "2026-11-15T13:25:57Z",
+  "job": {
+    "state": "finished",
+    "exit_status": 1
+  },
+  "publisher": {
+    "host": "c11bfc32e5c9",
+    "gpu": [
+      "NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB"
+    ],
+    "code": {
+      "commit": "4dee8bfbc554a22461d4d347f4973fc7fb7a016e",
+      "branch": null,
+      "modified_tracked_files": true
+    }
+  },
+  "sources": [
+    {
+      "label": "job",
+      "path": "/content/jobs/latent-three-step2-cache",
+      "kind": "folder"
+    },
+    {
+      "label": "evidence",
+      "path": "/content/runs/latent_three_step2_cache_20261115/evidence",
+      "kind": "folder"
+    },
+    {
+      "label": "environment",
+      "path": "/content/runs/latent_three_step2_cache_20261115/environment",
+      "kind": "folder"
+    }
+  ],
+  "files": [
+    {
+      "path": "environment/benchmarks.txt",
+      "bytes": 170,
+      "sha256": "a2e04bf5436553834a1884d6531f356c96b453623314efb766603d0f0a64586b"
+    },
+    {
+      "path": "environment/cpu-tests.txt",
+      "bytes": 1081,
+      "sha256": "493d4c28279d883dd74b13ad1ad0fffdea1c700ba271359e024a69c2bd082e44"
+    },
+    {
+      "path": "environment/gpu.csv",
+      "bytes": 127,
+      "sha256": "88b570a6b620db8484c1ef679f3b5396a5aaec74a9ad5efc87d1a8989776bfb7"
+    },
+    {
+      "path": "environment/imports.txt",
+      "bytes": 123,
+      "sha256": "b8908577547b46e8ca47243bc9465c4efa339d76cc2ff368bc57cd7d3f3e5ed3"
+    },
+    {
+      "path": "environment/nvidia-smi.txt",
+      "bytes": 1689,
+      "sha256": "d79e19bcba0bec5a131f0c3b075c97982db8ef027aa5384fece669b7b344b008"
+    },
+    {
+      "path": "environment/pip-check.txt",
+      "bytes": 551,
+      "sha256": "40626712bba0ef1ec15bf0c03d9e69a301ba6be6b85a1a966a5ce8fbddec89bf"
+    },
+    {
+      "path": "environment/pip-freeze.txt",
+      "bytes": 14256,
+      "sha256": "ac431fa588173338ab220084b835c7e21fdf1dfbd7f4bb8628ef0441b594586b"
+    },
+    {
+      "path": "environment/torch.txt",
+      "bytes": 187,
+      "sha256": "afa942a9c6d78f7a9e28d1ec68a53b63bc0affefaa59e9a654e85321439c23d5"
+    },
+    {
+      "path": "job/command.json",
+      "bytes": 930,
+      "sha256": "da0349d2eeb7777d0010ab531b0df179c480b24df95860f63b9ff5fda0938180"
+    },
+    {
+      "path": "job/output.log",
+      "bytes": 2403,
+      "sha256": "d61c13d7a9a88ef4e45ed5d4e45edc52ba9849d869bf51f0a505130f7013d3a7"
+    }
+  ],
+  "redacted_strings": 0,
+  "skipped": [
+    {
+      "path": "job/child_pid",
+      "reason": "not a text result"
+    },
+    {
+      "path": "job/pid",
+      "reason": "not a text result"
+    }
+  ],
+  "skipped_count": 2,
+  "limits_mb": {
+    "per_file": 20,
+    "total": 50
+  }
+}

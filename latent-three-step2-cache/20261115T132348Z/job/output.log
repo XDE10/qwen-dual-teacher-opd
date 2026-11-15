@@ -1,0 +1,31 @@
+[colab_job] running: bash probe_assets/run_step2_rollout_cache.sh
+STAGE downloading sealed checkpoint-1
+2026/11/15 13:24:09 NOTICE:     1.293 GiB / 18.122 GiB, 7%, 66.638 MiB/s, ETA 4m18s
+2026/11/15 13:24:29 NOTICE:     2.644 GiB / 18.122 GiB, 15%, 68.644 MiB/s, ETA 3m50s
+2026/11/15 13:24:49 NOTICE:     4.032 GiB / 18.122 GiB, 22%, 70.481 MiB/s, ETA 3m24s
+2026/11/15 13:25:09 NOTICE:    10.367 GiB / 18.122 GiB, 57%, 283.783 MiB/s, ETA 27s
+2026/11/15 13:25:29 NOTICE:    17.178 GiB / 18.122 GiB, 95%, 327.289 MiB/s, ETA 2s
+2026/11/15 13:25:46 NOTICE:    18.122 GiB / 18.122 GiB, 100%, 142.862 MiB/s, ETA 0s
+STAGE migrating checkpoint-1 into the rollout-cache run
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/content/project2/scripts/migrate_latent_three_checkpoint.py", line 177, in <module>
+    migrate(args.source, args.old_manifest, args.new_manifest, args.destination,
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            original_trainer=args.vocab_fix_original_trainer, local_cpu=args.local_cpu_verification,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            rollout_cache_baseline=args.rollout_cache_baseline)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/project2/scripts/migrate_latent_three_checkpoint.py", line 93, in migrate
+    current = build_identity(config, hard['generation'], ROOT, sources=SOURCE_FILES)
+  File "/content/project2/src/training/runtime_v3.py", line 39, in build_identity
+    raise ValueError('Empty tokenizer directory')
+ValueError: Empty tokenizer directory
+[colab_job] command exited with status 1; saving results
+2026/11/15 13:25:52 NOTICE:     2.669 KiB / 2.669 KiB, 100%, 1.335 KiB/s, ETA 0s
+2026/11/15 13:25:53 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+2026/11/15 13:25:57 NOTICE:    17.758 KiB / 17.758 KiB, 100%, 8.880 KiB/s, ETA 0s
+[colab_job] metrics: /content/runs/latent_three_step2_cache_20261115/full/latent_mopd_three_latent/metrics.jsonl does not exist; nothing to copy
+[colab_job] phases: /content/runs/latent_three_step2_cache_20261115/full/latent_mopd_three_latent/phase_metrics.jsonl does not exist; nothing to copy
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-step2-cache/20261115T132348Z
