@@ -1,0 +1,18 @@
+[colab_job] running: bash /content/prepare_latent_three_poolfix.sh
+2026/11/15 09:28:16 NOTICE:    11.475 GiB / 18.122 GiB, 63%, 396.778 MiB/s, ETA 17s
+2026/11/15 09:28:46 NOTICE:    18.122 GiB / 18.122 GiB, 100%, 198.496 MiB/s, ETA 0s
+2026/11/15 09:28:51 NOTICE:    18.122 GiB / 18.122 GiB, 100%, 134.765 MiB/s, ETA 0s
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/content/project2/scripts/migrate_latent_three_checkpoint.py", line 99, in <module>
+    migrate(args.source, args.old_manifest, args.new_manifest, args.destination)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/project2/scripts/migrate_latent_three_checkpoint.py", line 38, in migrate
+    current = build_identity(config, hard['generation'], ROOT, sources=SOURCE_FILES)
+  File "/content/project2/src/training/runtime_v3.py", line 39, in build_identity
+    raise ValueError('Empty tokenizer directory')
+ValueError: Empty tokenizer directory
+[colab_job] command exited with status 1; saving results
+2026/11/15 09:29:00 NOTICE:     1.556 KiB / 1.556 KiB, 100%, 318 B/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-poolfix-prepare/20261115T092744Z
