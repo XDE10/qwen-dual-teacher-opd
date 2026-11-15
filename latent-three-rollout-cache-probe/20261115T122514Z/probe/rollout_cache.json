@@ -1,0 +1,104 @@
+{
+  "student": {
+    "model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+    "revision": "ad9f0ae0864d7fbcd1cd905e3c6c5b069cc8b562"
+  },
+  "manifest_sha256": "e5f4c579f8a4514795e6ba80e1e4c2df034e724346bbfce7a2ea150d7d969252",
+  "tokenizer_audit_sha256": "a4128c958bb8f7fa99d36538dbd12008dc69b1bd8a918202dcc46b01fbaea5ca",
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "torch": "2.8.0+cu128",
+  "support": 151665,
+  "sample_id": "code/cb237beb6aeec2bdf75e8963e45a03b8",
+  "domain": "code",
+  "concurrent_responses": 4,
+  "seed": 42,
+  "max_new_tokens": 512,
+  "optimizer_updates": 0,
+  "measurements": [
+    {
+      "autocast_cache": false,
+      "seconds": 6.489116322000086,
+      "tokens": 2048,
+      "tokens_per_second": 315.6053765066061,
+      "lengths": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "ended_by_eos": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "peak_allocated_bytes": 7968715776,
+      "peak_reserved_bytes": 8388608000
+    },
+    {
+      "autocast_cache": true,
+      "seconds": 4.849637105000056,
+      "tokens": 2048,
+      "tokens_per_second": 422.2996392634158,
+      "lengths": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "ended_by_eos": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "peak_allocated_bytes": 10588294144,
+      "peak_reserved_bytes": 11393826816
+    },
+    {
+      "autocast_cache": true,
+      "seconds": 4.850470484000084,
+      "tokens": 2048,
+      "tokens_per_second": 422.2270822501854,
+      "lengths": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "ended_by_eos": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "peak_allocated_bytes": 10588294144,
+      "peak_reserved_bytes": 11393826816
+    },
+    {
+      "autocast_cache": false,
+      "seconds": 6.498514510000064,
+      "tokens": 2048,
+      "tokens_per_second": 315.1489462474063,
+      "lengths": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "ended_by_eos": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "peak_allocated_bytes": 7968715776,
+      "peak_reserved_bytes": 8388608000
+    }
+  ],
+  "identical_sampled_token_ids": true,
+  "fixed_prefix_logprob_max_abs_diff": 0.0,
+  "median_tokens_per_second_cache_off": 315.3771613770062,
+  "median_tokens_per_second_cache_on": 422.2633607568006,
+  "throughput_ratio_cache_on_over_off": 1.3389154715994833
+}

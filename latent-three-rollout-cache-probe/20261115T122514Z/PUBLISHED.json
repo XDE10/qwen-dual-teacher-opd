@@ -1,0 +1,111 @@
+{
+  "schema": "opd-results-v1",
+  "name": "latent-three-rollout-cache-probe",
+  "stamp": "20261115T122514Z",
+  "published_utc": "2026-11-15T12:26:17Z",
+  "job": {
+    "state": "finished",
+    "exit_status": 0
+  },
+  "publisher": {
+    "host": "e06ebe26a079",
+    "gpu": [
+      "NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB"
+    ],
+    "code": {
+      "commit": "4dee8bfbc554a22461d4d347f4973fc7fb7a016e",
+      "branch": null,
+      "modified_tracked_files": true
+    }
+  },
+  "sources": [
+    {
+      "label": "job",
+      "path": "/content/jobs/latent-three-rollout-cache-probe",
+      "kind": "folder"
+    },
+    {
+      "label": "probe",
+      "path": "/content/runs/latent_three_rollout_cache_20261115/evidence",
+      "kind": "folder"
+    },
+    {
+      "label": "environment",
+      "path": "/content/runs/latent_three_rollout_cache_20261115/environment",
+      "kind": "folder"
+    }
+  ],
+  "files": [
+    {
+      "path": "environment/benchmarks.txt",
+      "bytes": 170,
+      "sha256": "a2e04bf5436553834a1884d6531f356c96b453623314efb766603d0f0a64586b"
+    },
+    {
+      "path": "environment/cpu-tests.txt",
+      "bytes": 1081,
+      "sha256": "7268a55f19ec22943cd5075bfb16d10858639e78a66bb7dd30709e5e829e5d42"
+    },
+    {
+      "path": "environment/gpu.csv",
+      "bytes": 127,
+      "sha256": "88b570a6b620db8484c1ef679f3b5396a5aaec74a9ad5efc87d1a8989776bfb7"
+    },
+    {
+      "path": "environment/imports.txt",
+      "bytes": 123,
+      "sha256": "b8908577547b46e8ca47243bc9465c4efa339d76cc2ff368bc57cd7d3f3e5ed3"
+    },
+    {
+      "path": "environment/nvidia-smi.txt",
+      "bytes": 1689,
+      "sha256": "6cad292de943a7597a94a10614221a1c6aff1d9f9d876557b3c1a791dc0c3995"
+    },
+    {
+      "path": "environment/pip-check.txt",
+      "bytes": 551,
+      "sha256": "40626712bba0ef1ec15bf0c03d9e69a301ba6be6b85a1a966a5ce8fbddec89bf"
+    },
+    {
+      "path": "environment/pip-freeze.txt",
+      "bytes": 14256,
+      "sha256": "ac431fa588173338ab220084b835c7e21fdf1dfbd7f4bb8628ef0441b594586b"
+    },
+    {
+      "path": "environment/torch.txt",
+      "bytes": 189,
+      "sha256": "1a4d6710f66249bcb423df7dd28965e196b1482c1acef1600a5c3a8c843fe609"
+    },
+    {
+      "path": "job/command.json",
+      "bytes": 990,
+      "sha256": "670a559aa2a39afa8c7a6bf64803a21fc8f6eb4da0bc346c748809405618aa95"
+    },
+    {
+      "path": "job/output.log",
+      "bytes": 5717,
+      "sha256": "39e79965dc636612e61846684c6605b2e5f1ec418a135c81c00883f3074a1803"
+    },
+    {
+      "path": "probe/rollout_cache.json",
+      "bytes": 2489,
+      "sha256": "1c2b8f24c726b985bff6c87c7f6eb1e56e012997b57250774953e978980a7057"
+    }
+  ],
+  "redacted_strings": 0,
+  "skipped": [
+    {
+      "path": "job/child_pid",
+      "reason": "not a text result"
+    },
+    {
+      "path": "job/pid",
+      "reason": "not a text result"
+    }
+  ],
+  "skipped_count": 2,
+  "limits_mb": {
+    "per_file": 20,
+    "total": 50
+  }
+}

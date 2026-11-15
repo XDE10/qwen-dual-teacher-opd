@@ -1,0 +1,41 @@
+{
+  "name": "latent-three-rollout-cache-probe",
+  "command": [
+    "/usr/bin/python3",
+    "-m",
+    "scripts.probe_latent_three_rollout_cache",
+    "--manifest",
+    "/content/project2/runs/latent_mopd_three/release_poolfix_20261115/manifest.json",
+    "--output",
+    "/content/runs/latent_three_rollout_cache_20261115/evidence/rollout_cache.json",
+    "--domain",
+    "code",
+    "--prompt-index",
+    "1",
+    "--new-tokens",
+    "512"
+  ],
+  "cwd": "/content/project2",
+  "started_utc": "2026-11-15T12:25:14Z",
+  "stamp": "20261115T122514Z",
+  "save": [
+    [
+      "probe",
+      "/content/runs/latent_three_rollout_cache_20261115/evidence"
+    ],
+    [
+      "environment",
+      "/content/runs/latent_three_rollout_cache_20261115/environment"
+    ]
+  ],
+  "drive": "mydrive:opd_runs",
+  "publish": true,
+  "sync_every_min": 0,
+  "drive_about": {
+    "total": 5497558138880,
+    "used": 599156614519,
+    "trashed": 3424092350,
+    "other": 24188451,
+    "free": 4898377335910
+  }
+}
