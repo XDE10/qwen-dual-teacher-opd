@@ -1391,3 +1391,15 @@
 2026/11/15 22:49:19 NOTICE:   336.785 KiB / 336.785 KiB, 100%, 0 B/s, ETA -
 2026/11/15 22:49:21 NOTICE:   185.238 KiB / 185.238 KiB, 100%, 185.085 KiB/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/latent-three-step4-overnight/20261115T163320Z
+[publish] 5 files (0.88 MB), 2 left out, 0 strings redacted -> results:latent-three-step4-overnight/20261115T163320Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent-three-step4-overnight/20261115T163320Z
+{"phase": "rollout_progress", "case": [4, true, 43], "timestamp": 1794782969.5935867, "responses": 88, "total": 128, "batch_response_lengths": [16324, 15163, 13054, 16165], "allocated_bytes": 30139643904, "reserved_bytes": 97282686976}
+{"phase": "rollout_progress", "case": [4, true, 43], "timestamp": 1794783158.011519, "responses": 92, "total": 128, "batch_response_lengths": [13996, 11478, 15056, 16294], "allocated_bytes": 30139643904, "reserved_bytes": 97282686976}
+{"phase": "rollout_progress", "case": [4, true, 43], "timestamp": 1794783229.4660594, "responses": 96, "total": 128, "batch_response_lengths": [5114, 6569, 3645, 7422], "allocated_bytes": 30139643904, "reserved_bytes": 97282686976}
+{"phase": "rollout_progress", "case": [4, true, 43], "timestamp": 1794783398.7980595, "responses": 100, "total": 128, "batch_response_lengths": [10031, 13395, 9874, 15040], "allocated_bytes": 30139643904, "reserved_bytes": 97282686976}
+{"phase": "rollout_progress", "case": [4, true, 43], "timestamp": 1794783563.0724936, "responses": 104, "total": 128, "batch_response_lengths": [7047, 14759, 10288, 10648], "allocated_bytes": 30139643904, "reserved_bytes": 97282686976}
+[colab_job] periodic save (every 10 min)
+2026/11/15 22:59:28 NOTICE:   315.018 KiB / 315.018 KiB, 100%, 314.722 KiB/s, ETA 0s
+2026/11/15 22:59:30 NOTICE:   337.933 KiB / 337.933 KiB, 100%, 337.927 KiB/s, ETA 0s
+2026/11/15 22:59:32 NOTICE:   190.242 KiB / 190.242 KiB, 100%, 0 B/s, ETA -
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-step4-overnight/20261115T163320Z
