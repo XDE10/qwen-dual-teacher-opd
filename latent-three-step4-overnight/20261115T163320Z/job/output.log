@@ -34,3 +34,15 @@
 2026/11/15 16:53:36 NOTICE:     2.620 KiB / 2.620 KiB, 100%, 0 B/s, ETA -
 2026/11/15 16:53:38 NOTICE:    10.055 KiB / 10.055 KiB, 100%, 10.053 KiB/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/latent-three-step4-overnight/20261115T163320Z
+[publish] 5 files (0.02 MB), 2 left out, 0 strings redacted -> results:latent-three-step4-overnight/20261115T163320Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent-three-step4-overnight/20261115T163320Z
+{"phase": "rollout_progress", "case": [4, true, 42], "timestamp": 1794761656.0156982, "responses": 32, "total": 128, "batch_response_lengths": [15807, 6061, 7431, 13199], "allocated_bytes": 30131124224, "reserved_bytes": 97270104064}
+{"phase": "rollout_progress", "case": [4, true, 42], "timestamp": 1794761769.038953, "responses": 36, "total": 128, "batch_response_lengths": [10968, 5037, 10358, 7733], "allocated_bytes": 30131124224, "reserved_bytes": 97270104064}
+{"phase": "rollout_progress", "case": [4, true, 42], "timestamp": 1794761931.0333662, "responses": 40, "total": 128, "batch_response_lengths": [14484, 12752, 8979, 7520], "allocated_bytes": 30131124224, "reserved_bytes": 97270104064}
+{"phase": "rollout_progress", "case": [4, true, 42], "timestamp": 1794761973.4213266, "responses": 44, "total": 128, "batch_response_lengths": [3684, 4327, 3551, 4569], "allocated_bytes": 30131124224, "reserved_bytes": 97270104064}
+{"phase": "rollout_progress", "case": [4, true, 42], "timestamp": 1794762163.7411342, "responses": 48, "total": 128, "batch_response_lengths": [16384, 15813, 16384, 16384], "allocated_bytes": 30131124224, "reserved_bytes": 97270104064}
+[colab_job] periodic save (every 10 min)
+2026/11/15 17:03:44 NOTICE:     5.660 KiB / 5.660 KiB, 100%, 0 B/s, ETA -
+2026/11/15 17:03:46 NOTICE:     3.762 KiB / 3.762 KiB, 100%, 3.761 KiB/s, ETA 0s
+2026/11/15 17:03:48 NOTICE:    15.059 KiB / 15.059 KiB, 100%, 15.056 KiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-step4-overnight/20261115T163320Z
