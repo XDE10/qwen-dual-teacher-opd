@@ -1,0 +1,25 @@
+[colab_job] running: bash probe_assets/run_cold_joint.sh
+STAGE restoring original checkpoint files from Drive
+2026/11/15 13:08:44 NOTICE:     7.480 GiB / 18.122 GiB, 41%, 386.671 MiB/s, ETA 28s
+2026/11/15 13:09:04 NOTICE:    14.657 GiB / 18.122 GiB, 81%, 362.412 MiB/s, ETA 9s
+2026/11/15 13:09:24 NOTICE:    18.122 GiB / 18.122 GiB, 100%, 202.626 MiB/s, ETA 0s
+2026/11/15 13:09:34 NOTICE:    18.122 GiB / 18.122 GiB, 100%, 106.270 MiB/s, ETA 0s
+/content/runs/latent_three_codefix_20261115/full/latent_mopd_three_latent/checkpoint-1/checkpoint_manifest.json: OK
+/content/runs/latent_three_codefix_20261115/full/latent_mopd_three_latent/metrics.jsonl: OK
+STAGE cold CUDA restore
+Migrating sealed checkpoint and comparing completed schedule prefix
+Restoring sealed student and AdamW on CUDA
+Replaying restored RNG and a 32-token CUDA rollout twice
+{"passed": true, "restored_step": 1, "next_step": 2, "matched_completed_prefixes": 32, "source_manifest_sha256": "10f3be926c88e5aadcb351ce1017ab9e6b9067278438c0d0050ffca486701b51", "checkpoint_manifest_sha256": "5c936bd17569268030a50689878a6e3a470a5362042ee1fd93065632e6adccd4", "poolfix_manifest_sha256": "e5f4c579f8a4514795e6ba80e1e4c2df034e724346bbfce7a2ea150d7d969252", "tokenizer_audit_sha256": "a4128c958bb8f7fa99d36538dbd12008dc69b1bd8a918202dcc46b01fbaea5ca", "hard_identity_matched": true, "source_seal_unchanged": true, "student_cuda_parameters": 1777088000, "adamw_parameter_states": 338, "adamw_sampled_elements_verified": 2366, "adamw_step": 1, "exact_rng_payload_restored": ["python", "numpy", "cpu", "cuda"], "rng_draws_equal": true, "rollout_token_ids_equal": true, "replay_domain": "code", "replay_sample_id": "code/cb237beb6aeec2bdf75e8963e45a03b8", "rollout_response_tokens": 32, "rollout_ended_by_eos": false, "rollout_response_sha256": "0143ba16da3dc749f772b543a93be0b8cf8171c03aaf3d9cb34427be226753e3", "optimizer_updates": 0, "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition", "peak_allocated_bytes": 20029613568, "peak_reserved_bytes": 20306722816, "runtime": {"torch": "2.8.0+cu128", "transformers": "4.57.6", "peft": "0.19.0"}, "verification_seconds": 33.33621787499999}
+LATENT_THREE_COLD_RESTORE_OK
+STAGE joint 16K fixed-response forward and backward with three resident teachers
+Verifying single-step checkpoint
+Candidate scoring: 703 prompt tokens and 16384 fixed response tokens
+Joint objective and backward
+{"loss": -0.07247481495141983, "token_loss": -0.7251468300819397, "raw_rep_loss": 4.429655382409692e-05, "reward_std": 0.02548707276582718, "gradient_norm": 6.701128959655762, "probe": "joint_16k_fixed_response", "domain": "logic", "sample_id": "logic/circuit_logic/42440021/82", "prompt_tokens": 703, "response_tokens": 16384, "optimizer_updates": 0, "token_weight": 0.1, "latent_weight": 0.9, "resident_teachers": ["math", "code", "logic"], "checkpoint_manifest_sha256": "5c936bd17569268030a50689878a6e3a470a5362042ee1fd93065632e6adccd4", "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition", "baseline_allocated_bytes": 31989343232, "reserved_missing_adam_moment_bytes": 1866989568, "peak_allocated_bytes": 40883668992, "peak_reserved_bytes": 43989860352, "scoring_seconds": 1.0604626169999847, "total_seconds": 3.392129971000031}
+LATENT_THREE_PROBE_OK joint16k
+[colab_job] command exited with status 0; saving results
+2026/11/15 13:12:04 NOTICE:     3.883 KiB / 3.883 KiB, 100%, 794 B/s, ETA 0s
+2026/11/15 13:12:11 NOTICE:     3.786 KiB / 3.786 KiB, 100%, 968 B/s, ETA 0s
+2026/11/15 13:12:18 NOTICE:    17.759 KiB / 17.759 KiB, 100%, 4.438 KiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-cold-joint16k/20261115T130822Z

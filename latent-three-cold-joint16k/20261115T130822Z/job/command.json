@@ -1,0 +1,30 @@
+{
+  "name": "latent-three-cold-joint16k",
+  "command": [
+    "bash",
+    "probe_assets/run_cold_joint.sh"
+  ],
+  "cwd": "/content/project2",
+  "started_utc": "2026-11-15T13:08:22Z",
+  "stamp": "20261115T130822Z",
+  "save": [
+    [
+      "evidence",
+      "/content/runs/latent_three_cold_joint_20261115/evidence"
+    ],
+    [
+      "environment",
+      "/content/runs/latent_three_cold_joint_20261115/environment"
+    ]
+  ],
+  "drive": "mydrive:opd_runs",
+  "publish": true,
+  "sync_every_min": 0,
+  "drive_about": {
+    "total": 5497558138880,
+    "used": 599156779475,
+    "trashed": 3424092350,
+    "other": 24188451,
+    "free": 4898377170954
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "schema": "opd-results-v1",
+  "name": "latent-three-cold-joint16k",
+  "stamp": "20261115T130822Z",
+  "published_utc": "2026-11-15T13:12:18Z",
+  "job": {
+    "state": "finished",
+    "exit_status": 0
+  },
+  "publisher": {
+    "host": "b77e70315ee4",
+    "gpu": [
+      "NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB"
+    ],
+    "code": {
+      "commit": "4dee8bfbc554a22461d4d347f4973fc7fb7a016e",
+      "branch": null,
+      "modified_tracked_files": true
+    }
+  },
+  "sources": [
+    {
+      "label": "job",
+      "path": "/content/jobs/latent-three-cold-joint16k",
+      "kind": "folder"
+    },
+    {
+      "label": "evidence",
+      "path": "/content/runs/latent_three_cold_joint_20261115/evidence",
+      "kind": "folder"
+    },
+    {
+      "label": "environment",
+      "path": "/content/runs/latent_three_cold_joint_20261115/environment",
+      "kind": "folder"
+    }
+  ],
+  "files": [
+    {
+      "path": "environment/benchmarks.txt",
+      "bytes": 170,
+      "sha256": "a2e04bf5436553834a1884d6531f356c96b453623314efb766603d0f0a64586b"
+    },
+    {
+      "path": "environment/cpu-tests.txt",
+      "bytes": 1081,
+      "sha256": "493d4c28279d883dd74b13ad1ad0fffdea1c700ba271359e024a69c2bd082e44"
+    },
+    {
+      "path": "environment/gpu.csv",
+      "bytes": 127,
+      "sha256": "88b570a6b620db8484c1ef679f3b5396a5aaec74a9ad5efc87d1a8989776bfb7"
+    },
+    {
+      "path": "environment/imports.txt",
+      "bytes": 123,
+      "sha256": "b8908577547b46e8ca47243bc9465c4efa339d76cc2ff368bc57cd7d3f3e5ed3"
+    },
+    {
+      "path": "environment/nvidia-smi.txt",
+      "bytes": 1689,
+      "sha256": "30639c238bf81f816b329b67eac935fc49a28562627c84c43ce12e5a748d1b19"
+    },
+    {
+      "path": "environment/pip-check.txt",
+      "bytes": 551,
+      "sha256": "40626712bba0ef1ec15bf0c03d9e69a301ba6be6b85a1a966a5ce8fbddec89bf"
+    },
+    {
+      "path": "environment/pip-freeze.txt",
+      "bytes": 14256,
+      "sha256": "ac431fa588173338ab220084b835c7e21fdf1dfbd7f4bb8628ef0441b594586b"
+    },
+    {
+      "path": "environment/torch.txt",
+      "bytes": 188,
+      "sha256": "45f465633df58a4579e7ba9f8a34880cbdb0a3d4f435c96c9bff923a18036a80"
+    },
+    {
+      "path": "evidence/cold_restore/checkpoint_manifest.json",
+      "bytes": 711,
+      "sha256": "5c936bd17569268030a50689878a6e3a470a5362042ee1fd93065632e6adccd4"
+    },
+    {
+      "path": "evidence/cold_restore/cold_restore.json",
+      "bytes": 1394,
+      "sha256": "eac15ab05e6254252a67aeb9ca96769b5394436bd9a21883c1ac806e20a9d05c"
+    },
+    {
+      "path": "evidence/cold_restore/migration.json",
+      "bytes": 872,
+      "sha256": "4bfa34cb613c49662045a772850289ff7b79bcd5fa3f94b102834e391eeb79f4"
+    },
+    {
+      "path": "evidence/joint16k/probe.json",
+      "bytes": 900,
+      "sha256": "ef2509bdd6537ffbf5563e344ee4590fd9370e5575d729eee792e2b0dc241f5b"
+    },
+    {
+      "path": "job/command.json",
+      "bytes": 653,
+      "sha256": "76c1b942aef134539776bef5570154b484a6dcb6798fba3f7af186d3c0a084ce"
+    },
+    {
+      "path": "job/output.log",
+      "bytes": 3638,
+      "sha256": "ed2824d12c80283141b540f3751bfa5560ebd30526784077475fccdd54288cab"
+    }
+  ],
+  "redacted_strings": 0,
+  "skipped": [
+    {
+      "path": "job/child_pid",
+      "reason": "not a text result"
+    },
+    {
+      "path": "job/pid",
+      "reason": "not a text result"
+    }
+  ],
+  "skipped_count": 2,
+  "limits_mb": {
+    "per_file": 20,
+    "total": 50
+  }
+}

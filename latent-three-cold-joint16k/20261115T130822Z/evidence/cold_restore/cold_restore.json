@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "restored_step": 1,
+  "next_step": 2,
+  "matched_completed_prefixes": 32,
+  "source_manifest_sha256": "10f3be926c88e5aadcb351ce1017ab9e6b9067278438c0d0050ffca486701b51",
+  "checkpoint_manifest_sha256": "5c936bd17569268030a50689878a6e3a470a5362042ee1fd93065632e6adccd4",
+  "poolfix_manifest_sha256": "e5f4c579f8a4514795e6ba80e1e4c2df034e724346bbfce7a2ea150d7d969252",
+  "tokenizer_audit_sha256": "a4128c958bb8f7fa99d36538dbd12008dc69b1bd8a918202dcc46b01fbaea5ca",
+  "hard_identity_matched": true,
+  "source_seal_unchanged": true,
+  "student_cuda_parameters": 1777088000,
+  "adamw_parameter_states": 338,
+  "adamw_sampled_elements_verified": 2366,
+  "adamw_step": 1,
+  "exact_rng_payload_restored": [
+    "python",
+    "numpy",
+    "cpu",
+    "cuda"
+  ],
+  "rng_draws_equal": true,
+  "rollout_token_ids_equal": true,
+  "replay_domain": "code",
+  "replay_sample_id": "code/cb237beb6aeec2bdf75e8963e45a03b8",
+  "rollout_response_tokens": 32,
+  "rollout_ended_by_eos": false,
+  "rollout_response_sha256": "0143ba16da3dc749f772b543a93be0b8cf8171c03aaf3d9cb34427be226753e3",
+  "optimizer_updates": 0,
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "peak_allocated_bytes": 20029613568,
+  "peak_reserved_bytes": 20306722816,
+  "runtime": {
+    "torch": "2.8.0+cu128",
+    "transformers": "4.57.6",
+    "peft": "0.19.0"
+  },
+  "verification_seconds": 33.33621787499999
+}
