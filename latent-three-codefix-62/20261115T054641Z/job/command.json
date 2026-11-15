@@ -1,0 +1,34 @@
+{
+  "name": "latent-three-codefix-62",
+  "command": [
+    "bash",
+    "scripts/colab_latent_three_formal.sh"
+  ],
+  "cwd": "/content/project2",
+  "started_utc": "2026-11-15T05:46:41Z",
+  "stamp": "20261115T054641Z",
+  "save": [
+    [
+      "full",
+      "/content/runs/latent_three_codefix_20261115/full/latent_mopd_three_latent"
+    ],
+    [
+      "evidence",
+      "/content/runs/latent_three_codefix_20261115/evidence"
+    ],
+    [
+      "environment",
+      "/content/runs/latent_three_codefix_20261115/environment"
+    ]
+  ],
+  "drive": "mydrive:opd_runs",
+  "publish": true,
+  "sync_every_min": 15.0,
+  "drive_about": {
+    "total": 5497558138880,
+    "used": 554382835880,
+    "trashed": 3424092350,
+    "other": 24188451,
+    "free": 4943151114549
+  }
+}

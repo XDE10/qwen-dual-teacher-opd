@@ -1,0 +1,145 @@
+{
+  "schema": "opd-results-v1",
+  "name": "latent-three-codefix-62",
+  "stamp": "20261115T054641Z",
+  "published_utc": "2026-11-15T06:01:53Z",
+  "job": {
+    "state": "running"
+  },
+  "publisher": {
+    "host": "50a111490a07",
+    "gpu": [
+      "NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB"
+    ],
+    "code": {
+      "commit": "4dee8bfbc554a22461d4d347f4973fc7fb7a016e",
+      "branch": null,
+      "modified_tracked_files": false
+    }
+  },
+  "sources": [
+    {
+      "label": "job",
+      "path": "/content/jobs/latent-three-codefix-62",
+      "kind": "folder"
+    },
+    {
+      "label": "full",
+      "path": "/content/runs/latent_three_codefix_20261115/full/latent_mopd_three_latent",
+      "kind": "folder"
+    },
+    {
+      "label": "evidence",
+      "path": "/content/runs/latent_three_codefix_20261115/evidence",
+      "kind": "folder"
+    },
+    {
+      "label": "environment",
+      "path": "/content/runs/latent_three_codefix_20261115/environment",
+      "kind": "folder"
+    }
+  ],
+  "files": [
+    {
+      "path": "environment/benchmarks.txt",
+      "bytes": 170,
+      "sha256": "a2e04bf5436553834a1884d6531f356c96b453623314efb766603d0f0a64586b"
+    },
+    {
+      "path": "environment/cpu-tests.txt",
+      "bytes": 1081,
+      "sha256": "db4c5273876ed4fd8d665bb9735dcfff39f727d709a38e5268511c9a8cac9b86"
+    },
+    {
+      "path": "environment/gpu.csv",
+      "bytes": 127,
+      "sha256": "88b570a6b620db8484c1ef679f3b5396a5aaec74a9ad5efc87d1a8989776bfb7"
+    },
+    {
+      "path": "environment/imports.txt",
+      "bytes": 123,
+      "sha256": "b8908577547b46e8ca47243bc9465c4efa339d76cc2ff368bc57cd7d3f3e5ed3"
+    },
+    {
+      "path": "environment/nvidia-smi.txt",
+      "bytes": 1689,
+      "sha256": "ff413d9eee9f7fa66d082f912a153489c6f44f56dd87644e633aa77fa24e3c17"
+    },
+    {
+      "path": "environment/pip-check.txt",
+      "bytes": 551,
+      "sha256": "40626712bba0ef1ec15bf0c03d9e69a301ba6be6b85a1a966a5ce8fbddec89bf"
+    },
+    {
+      "path": "environment/pip-freeze.txt",
+      "bytes": 14256,
+      "sha256": "ac431fa588173338ab220084b835c7e21fdf1dfbd7f4bb8628ef0441b594586b"
+    },
+    {
+      "path": "environment/torch.txt",
+      "bytes": 187,
+      "sha256": "2a439720fce6099de22ba5365168f20a5506d66a3c9d55b45109989f51c40f20"
+    },
+    {
+      "path": "evidence/smoke/checkpoint_manifest.json",
+      "bytes": 711,
+      "sha256": "c524a2338e81903c27b14323c9c762d81f226485f39fdfbcce877f11cdf6ed88"
+    },
+    {
+      "path": "evidence/smoke/metrics.jsonl",
+      "bytes": 2915,
+      "sha256": "a8ab5a2e7d32841f0f5815d9e583266d32e36b5e5e238f631248cb6f4169920e"
+    },
+    {
+      "path": "evidence/smoke/phase_metrics.jsonl",
+      "bytes": 9024,
+      "sha256": "894f3f58a88fbeb49b3962a3a2d35a64260a06618da245d26d41e27fc806c6ad"
+    },
+    {
+      "path": "evidence/smoke/run_identity.json",
+      "bytes": 34529,
+      "sha256": "061eb21130490ef73423829a3c177c57ba37c8097b52079a6576748c33013c79"
+    },
+    {
+      "path": "full/metrics.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "full/phase_metrics.jsonl",
+      "bytes": 874,
+      "sha256": "565000d3a66de46e422c4afa466e2f5cbf10abd4d4071a821abfa3063f08381d"
+    },
+    {
+      "path": "full/run_identity.json",
+      "bytes": 34534,
+      "sha256": "7d2176105c6dd9ce0f23a445c44ffadfdb42f9618665cfe648eca5f66378afa0"
+    },
+    {
+      "path": "job/command.json",
+      "bytes": 762,
+      "sha256": "184a3e38d7531d1ac263801556b992ed78679775f486e466776ba3e58bbefc34"
+    },
+    {
+      "path": "job/output.log",
+      "bytes": 10510,
+      "sha256": "100c1b5f814714ec327696c6508f05526e74cdda869aa912cb37c5fdc28ffb17"
+    }
+  ],
+  "redacted_strings": 0,
+  "skipped": [
+    {
+      "path": "job/child_pid",
+      "reason": "not a text result"
+    },
+    {
+      "path": "job/pid",
+      "reason": "not a text result"
+    }
+  ],
+  "skipped_count": 2,
+  "limits_mb": {
+    "per_file": 20,
+    "total": 50
+  }
+}

@@ -1,0 +1,4 @@
+{"step": 1, "domain": "math", "phase": "rollout_start", "timestamp": 1794721921.6264925, "responses": 128, "token_weight": 0.0, "latent_weight": 1.0, "teacher": {"model": "hbx/JustRL-DeepSeek-1.5B", "revision": "0637e4096c789c67f9eecbe8355e0bdeddede1c2"}, "allocated_bytes": 17772454912, "reserved_bytes": 17955815424}
+{"step": 1, "domain": "math", "phase": "rollout_progress", "timestamp": 1794722121.640776, "responses": 4, "total": 128, "allocated_bytes": 17780974592, "reserved_bytes": 22777167872}
+{"step": 1, "domain": "math", "phase": "rollout_progress", "timestamp": 1794722372.6636937, "responses": 8, "total": 128, "allocated_bytes": 17780974592, "reserved_bytes": 23712497664}
+{"step": 1, "domain": "math", "phase": "rollout_progress", "timestamp": 1794722394.3297648, "responses": 12, "total": 128, "allocated_bytes": 17780974592, "reserved_bytes": 23712497664}
