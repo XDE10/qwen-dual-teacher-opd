@@ -46,3 +46,15 @@
 2026/11/15 17:03:46 NOTICE:     3.762 KiB / 3.762 KiB, 100%, 3.761 KiB/s, ETA 0s
 2026/11/15 17:03:48 NOTICE:    15.059 KiB / 15.059 KiB, 100%, 15.056 KiB/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/latent-three-step4-overnight/20261115T163320Z
+[publish] 5 files (0.03 MB), 2 left out, 0 strings redacted -> results:latent-three-step4-overnight/20261115T163320Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent-three-step4-overnight/20261115T163320Z
+{"phase": "rollout_progress", "case": [4, true, 42], "timestamp": 1794762353.6113048, "responses": 52, "total": 128, "batch_response_lengths": [11433, 16384, 7166, 16384], "allocated_bytes": 30131124224, "reserved_bytes": 97270104064}
+{"phase": "rollout_progress", "case": [4, true, 42], "timestamp": 1794762543.3875544, "responses": 56, "total": 128, "batch_response_lengths": [16384, 14186, 16384, 16075], "allocated_bytes": 30131124224, "reserved_bytes": 97270104064}
+{"phase": "rollout_progress", "case": [4, true, 42], "timestamp": 1794762717.308193, "responses": 60, "total": 128, "batch_response_lengths": [7290, 7776, 12152, 15340], "allocated_bytes": 30131124224, "reserved_bytes": 97270104064}
+{"phase": "rollout_progress", "case": [4, true, 42], "timestamp": 1794762763.5730774, "responses": 64, "total": 128, "batch_response_lengths": [4251, 3183, 4950, 3077], "allocated_bytes": 30131124224, "reserved_bytes": 97270104064}
+[colab_job] periodic save (every 10 min)
+2026/11/15 17:13:54 NOTICE:     7.171 KiB / 7.171 KiB, 100%, 0 B/s, ETA -
+{"phase": "rollout_progress", "case": [4, true, 42], "timestamp": 1794762836.2049012, "responses": 68, "total": 128, "batch_response_lengths": [2825, 7493, 1723, 2200], "allocated_bytes": 30131124224, "reserved_bytes": 97270104064}
+2026/11/15 17:13:56 NOTICE:     4.676 KiB / 4.676 KiB, 100%, 4.675 KiB/s, ETA 0s
+2026/11/15 17:13:58 NOTICE:    20.062 KiB / 20.062 KiB, 100%, 0 B/s, ETA -
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-step4-overnight/20261115T163320Z
