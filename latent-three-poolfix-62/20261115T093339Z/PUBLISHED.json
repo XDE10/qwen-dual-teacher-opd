@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent-three-poolfix-62",
   "stamp": "20261115T093339Z",
-  "published_utc": "2026-11-15T10:10:04Z",
+  "published_utc": "2026-11-15T10:25:17Z",
   "job": {
     "state": "running"
   },
@@ -42,8 +42,8 @@
     },
     {
       "path": "full/phase_metrics.jsonl",
-      "bytes": 2189,
-      "sha256": "ab64ab4a5f756b359e4c08eabce56cc2781d1c0a192fd3de2ce97d7b81f28a5c"
+      "bytes": 3118,
+      "sha256": "bf0e02b918f26593ad6f5824e96ab6656922c57b1da90eecf3ffbaa7402c325a"
     },
     {
       "path": "full/run_identity.json",
@@ -57,8 +57,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 3812,
-      "sha256": "464f8241810901bd7bce1190aac77bd7a0584df1a1246b0729a219fe1f29a441"
+      "bytes": 5261,
+      "sha256": "8c7facaba564fe948d74b38690c84342b2a84cd76ecc6feab871300595be8aa2"
     }
   ],
   "redacted_strings": 0,
