@@ -208,3 +208,14 @@
 2026/11/15 11:56:25 NOTICE:    34.699 KiB / 34.699 KiB, 100%, 34.697 KiB/s, ETA 0s
 2026/11/15 11:56:28 NOTICE:    29.794 KiB / 29.794 KiB, 100%, 29.772 KiB/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/latent-three-poolfix-62/20261115T093339Z
+[publish] 6 files (0.10 MB), 3 left out, 0 strings redacted -> results:latent-three-poolfix-62/20261115T093339Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent-three-poolfix-62/20261115T093339Z
+{"step": 3, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794743875.8393378, "responses": 100, "total": 128, "allocated_bytes": 36315317760, "reserved_bytes": 52246347776}
+{"step": 3, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794743990.1989899, "responses": 104, "total": 128, "allocated_bytes": 36315317760, "reserved_bytes": 52246347776}
+{"step": 3, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794744184.8962908, "responses": 108, "total": 128, "allocated_bytes": 36315317760, "reserved_bytes": 52246347776}
+{"step": 3, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794744374.0826187, "responses": 112, "total": 128, "allocated_bytes": 36315317760, "reserved_bytes": 52246347776}
+{"step": 3, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794744535.287389, "responses": 116, "total": 128, "allocated_bytes": 36315317760, "reserved_bytes": 52246347776}
+[colab_job] periodic save (every 15 min)
+2026/11/15 12:11:37 NOTICE:    36.128 KiB / 36.128 KiB, 100%, 36.124 KiB/s, ETA 0s
+2026/11/15 12:11:40 NOTICE:    30.711 KiB / 30.711 KiB, 100%, 30.703 KiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-poolfix-62/20261115T093339Z
