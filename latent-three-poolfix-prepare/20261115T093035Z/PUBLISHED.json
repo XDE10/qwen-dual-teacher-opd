@@ -1,0 +1,56 @@
+{
+  "schema": "opd-results-v1",
+  "name": "latent-three-poolfix-prepare",
+  "stamp": "20261115T093035Z",
+  "published_utc": "2026-11-15T09:31:26Z",
+  "job": {
+    "state": "finished",
+    "exit_status": 0
+  },
+  "publisher": {
+    "host": "db4849cf7133",
+    "gpu": [
+      "NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB"
+    ],
+    "code": {
+      "commit": "4dee8bfbc554a22461d4d347f4973fc7fb7a016e",
+      "branch": null,
+      "modified_tracked_files": false
+    }
+  },
+  "sources": [
+    {
+      "label": "job",
+      "path": "/content/jobs/latent-three-poolfix-prepare",
+      "kind": "folder"
+    }
+  ],
+  "files": [
+    {
+      "path": "job/command.json",
+      "bytes": 467,
+      "sha256": "9c91d75131c7be791706a517dd941fa650405b6296a76469e0ca32852def6ece"
+    },
+    {
+      "path": "job/output.log",
+      "bytes": 401,
+      "sha256": "e4a8e1f698d1d3ee1fa23e9b4029d71c7ff05ab77943e5f919ef162734e4dc1d"
+    }
+  ],
+  "redacted_strings": 0,
+  "skipped": [
+    {
+      "path": "job/child_pid",
+      "reason": "not a text result"
+    },
+    {
+      "path": "job/pid",
+      "reason": "not a text result"
+    }
+  ],
+  "skipped_count": 2,
+  "limits_mb": {
+    "per_file": 20,
+    "total": 50
+  }
+}
