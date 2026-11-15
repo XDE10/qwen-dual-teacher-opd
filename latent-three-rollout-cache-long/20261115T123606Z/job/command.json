@@ -1,0 +1,35 @@
+{
+  "name": "latent-three-rollout-cache-long",
+  "command": [
+    "python",
+    "-m",
+    "scripts.probe_latent_three_rollout_cache_long",
+    "--manifest",
+    "/content/project2/runs/latent_mopd_three/release_poolfix_20261115/manifest.json",
+    "--output",
+    "/content/runs/latent_three_rollout_cache_long_20261115/evidence/rollout_cache_long.json"
+  ],
+  "cwd": "/content/project2",
+  "started_utc": "2026-11-15T12:36:06Z",
+  "stamp": "20261115T123606Z",
+  "save": [
+    [
+      "probe",
+      "/content/runs/latent_three_rollout_cache_long_20261115/evidence"
+    ],
+    [
+      "environment",
+      "/content/runs/latent_three_rollout_cache_long_20261115/environment"
+    ]
+  ],
+  "drive": "mydrive:opd_runs",
+  "publish": true,
+  "sync_every_min": 0,
+  "drive_about": {
+    "total": 5497558138880,
+    "used": 599156686523,
+    "trashed": 3424092350,
+    "other": 24188451,
+    "free": 4898377263906
+  }
+}
