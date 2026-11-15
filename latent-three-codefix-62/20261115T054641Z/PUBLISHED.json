@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent-three-codefix-62",
   "stamp": "20261115T054641Z",
-  "published_utc": "2026-11-15T09:08:25Z",
+  "published_utc": "2026-11-15T09:23:37Z",
   "job": {
     "state": "running"
   },
@@ -107,13 +107,13 @@
     },
     {
       "path": "full/metrics.jsonl",
-      "bytes": 1878,
-      "sha256": "94f532f0074e39c1be19a0ff5d9d0cb3bc7d0286df1010e0b46934deab35980c"
+      "bytes": 3629,
+      "sha256": "10ebdec7828524a0c4949a235a0571e4590ce135b94062c79e8d56085d19d431"
     },
     {
       "path": "full/phase_metrics.jsonl",
-      "bytes": 29939,
-      "sha256": "bf7acc4d92cda8be16ae245b3a518fc12261f4a95bc14108c472a83166972479"
+      "bytes": 50444,
+      "sha256": "278fb03471860e17c8b8b15be9a95bced0940d193613bb84959638cf034df9b3"
     },
     {
       "path": "full/run_identity.json",
@@ -127,8 +127,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 48787,
-      "sha256": "881e96f173f8f5c3540e75d4a6ceb3d78674b771e45c4bba12a0aac6ef075d19"
+      "bytes": 69947,
+      "sha256": "f903b4d02131a8d04d61c3cf54893ad67a1f89dfa1c2a8af99495c995dcdd6ea"
     }
   ],
   "redacted_strings": 0,
