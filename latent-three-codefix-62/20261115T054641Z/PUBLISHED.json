@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent-three-codefix-62",
   "stamp": "20261115T054641Z",
-  "published_utc": "2026-11-15T07:32:54Z",
+  "published_utc": "2026-11-15T07:52:32Z",
   "job": {
     "state": "running"
   },
@@ -81,6 +81,11 @@
       "sha256": "2a439720fce6099de22ba5365168f20a5506d66a3c9d55b45109989f51c40f20"
     },
     {
+      "path": "evidence/joint16k/probe.json",
+      "bytes": 900,
+      "sha256": "271bc254c4ce38fdf67cd91fb9a6d35e599d83e506455522ac4c72c67923b175"
+    },
+    {
       "path": "evidence/smoke/checkpoint_manifest.json",
       "bytes": 711,
       "sha256": "c524a2338e81903c27b14323c9c762d81f226485f39fdfbcce877f11cdf6ed88"
@@ -102,13 +107,13 @@
     },
     {
       "path": "full/metrics.jsonl",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "bytes": 1878,
+      "sha256": "94f532f0074e39c1be19a0ff5d9d0cb3bc7d0286df1010e0b46934deab35980c"
     },
     {
       "path": "full/phase_metrics.jsonl",
-      "bytes": 6081,
-      "sha256": "a54eec04f55a52df426bc63dbcbbec88cbe0463a0adaf98933b7a1caded08474"
+      "bytes": 25287,
+      "sha256": "5234ff3ca8c452098fc832da2b4906341604c9dcaabc32412af34eb8b1043413"
     },
     {
       "path": "full/run_identity.json",
@@ -122,8 +127,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 19589,
-      "sha256": "e030748e68fa9b95ebd24a06fca2fb58af6fd928b8cf72ac2700545fb9973e44"
+      "bytes": 40892,
+      "sha256": "c84572ac12426ac89735911a7b8d3d0ded187ff2dea6e257c654172065c59914"
     }
   ],
   "redacted_strings": 0,
@@ -135,9 +140,13 @@
     {
       "path": "job/pid",
       "reason": "not a text result"
+    },
+    {
+      "path": "full/checkpoint-1/",
+      "reason": "folder not published"
     }
   ],
-  "skipped_count": 2,
+  "skipped_count": 3,
   "limits_mb": {
     "per_file": 20,
     "total": 50

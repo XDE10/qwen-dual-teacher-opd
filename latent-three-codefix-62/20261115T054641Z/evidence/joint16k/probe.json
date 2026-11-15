@@ -1,0 +1,28 @@
+{
+  "loss": -0.07248128950595856,
+  "token_loss": -0.7252115607261658,
+  "raw_rep_loss": 4.429655382409692e-05,
+  "reward_std": 0.02548702247440815,
+  "gradient_norm": 6.70158052444458,
+  "probe": "joint_16k_fixed_response",
+  "domain": "logic",
+  "sample_id": "logic/circuit_logic/42440021/82",
+  "prompt_tokens": 703,
+  "response_tokens": 16384,
+  "optimizer_updates": 0,
+  "token_weight": 0.1,
+  "latent_weight": 0.9,
+  "resident_teachers": [
+    "math",
+    "code",
+    "logic"
+  ],
+  "checkpoint_manifest_sha256": "10f3be926c88e5aadcb351ce1017ab9e6b9067278438c0d0050ffca486701b51",
+  "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "baseline_allocated_bytes": 31989343232,
+  "reserved_missing_adam_moment_bytes": 1866989568,
+  "peak_allocated_bytes": 40883898880,
+  "peak_reserved_bytes": 44289753088,
+  "scoring_seconds": 1.0448418329997367,
+  "total_seconds": 3.1831136399996467
+}
