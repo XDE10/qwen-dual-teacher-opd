@@ -1104,3 +1104,8 @@
 {"phase": "case_start", "case": [4, true, 43], "timestamp": 1794779554.2207017, "allocated_bytes": 30139643904, "reserved_bytes": 53833891840}
 {"phase": "rollout_start", "case": [4, true, 43], "timestamp": 1794779554.2756135, "responses": 0, "total": 128, "allocated_bytes": 30139643904, "reserved_bytes": 31130124288}
 {"phase": "rollout_progress", "case": [4, true, 43], "timestamp": 1794779742.9474676, "responses": 4, "total": 128, "batch_response_lengths": [14671, 10259, 16384, 16299], "allocated_bytes": 30139643904, "reserved_bytes": 97253326848}
+{"phase": "rollout_progress", "case": [4, true, 43], "timestamp": 1794779930.8671086, "responses": 8, "total": 128, "batch_response_lengths": [9481, 16068, 16309, 15754], "allocated_bytes": 30139643904, "reserved_bytes": 97253326848}
+{"phase": "rollout_progress", "case": [4, true, 43], "timestamp": 1794779983.240573, "responses": 12, "total": 128, "batch_response_lengths": [2540, 3253, 5575, 1392], "allocated_bytes": 30139643904, "reserved_bytes": 97255424000}
+{"phase": "rollout_progress", "case": [4, true, 43], "timestamp": 1794780172.2920368, "responses": 16, "total": 128, "batch_response_lengths": [10707, 16384, 15144, 9428], "allocated_bytes": 30139643904, "reserved_bytes": 97255424000}
+{"phase": "rollout_progress", "case": [4, true, 43], "timestamp": 1794780362.6600535, "responses": 20, "total": 128, "batch_response_lengths": [16384, 16384, 16384, 16384], "allocated_bytes": 30139643904, "reserved_bytes": 97255424000}
+{"phase": "rollout_progress", "case": [4, true, 43], "timestamp": 1794780455.1445675, "responses": 24, "total": 128, "batch_response_lengths": [9321, 6555, 7925, 6326], "allocated_bytes": 30139643904, "reserved_bytes": 97255424000}

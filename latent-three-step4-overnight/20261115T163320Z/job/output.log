@@ -1336,3 +1336,15 @@
 2026/11/15 21:58:27 NOTICE:   395.219 KiB / 395.219 KiB, 100%, 0 B/s, ETA -
 2026/11/15 21:58:29 NOTICE:   160.219 KiB / 160.219 KiB, 100%, 160.080 KiB/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/latent-three-step4-overnight/20261115T163320Z
+[publish] 5 files (0.84 MB), 2 left out, 0 strings redacted -> results:latent-three-step4-overnight/20261115T163320Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent-three-step4-overnight/20261115T163320Z
+{"phase": "rollout_progress", "case": [4, true, 43], "timestamp": 1794779930.8671086, "responses": 8, "total": 128, "batch_response_lengths": [9481, 16068, 16309, 15754], "allocated_bytes": 30139643904, "reserved_bytes": 97253326848}
+{"phase": "rollout_progress", "case": [4, true, 43], "timestamp": 1794779983.240573, "responses": 12, "total": 128, "batch_response_lengths": [2540, 3253, 5575, 1392], "allocated_bytes": 30139643904, "reserved_bytes": 97255424000}
+{"phase": "rollout_progress", "case": [4, true, 43], "timestamp": 1794780172.2920368, "responses": 16, "total": 128, "batch_response_lengths": [10707, 16384, 15144, 9428], "allocated_bytes": 30139643904, "reserved_bytes": 97255424000}
+{"phase": "rollout_progress", "case": [4, true, 43], "timestamp": 1794780362.6600535, "responses": 20, "total": 128, "batch_response_lengths": [16384, 16384, 16384, 16384], "allocated_bytes": 30139643904, "reserved_bytes": 97255424000}
+{"phase": "rollout_progress", "case": [4, true, 43], "timestamp": 1794780455.1445675, "responses": 24, "total": 128, "batch_response_lengths": [9321, 6555, 7925, 6326], "allocated_bytes": 30139643904, "reserved_bytes": 97255424000}
+[colab_job] periodic save (every 10 min)
+2026/11/15 22:08:36 NOTICE:   307.417 KiB / 307.417 KiB, 100%, 307.363 KiB/s, ETA 0s
+2026/11/15 22:08:37 NOTICE:   333.354 KiB / 333.354 KiB, 100%, 0 B/s, ETA -
+2026/11/15 22:08:39 NOTICE:   165.223 KiB / 165.223 KiB, 100%, 165.120 KiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-step4-overnight/20261115T163320Z
