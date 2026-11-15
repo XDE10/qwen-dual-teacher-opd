@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent-three-codefix-62",
   "stamp": "20261115T054641Z",
-  "published_utc": "2026-11-15T07:52:32Z",
+  "published_utc": "2026-11-15T08:07:42Z",
   "job": {
     "state": "running"
   },
@@ -112,8 +112,8 @@
     },
     {
       "path": "full/phase_metrics.jsonl",
-      "bytes": 25287,
-      "sha256": "5234ff3ca8c452098fc832da2b4906341604c9dcaabc32412af34eb8b1043413"
+      "bytes": 26217,
+      "sha256": "fdcc5d2bc58581b30cc079ecf0b061243794407e44a378d80d7b4ba40d8b6af8"
     },
     {
       "path": "full/run_identity.json",
@@ -127,8 +127,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 40892,
-      "sha256": "c84572ac12426ac89735911a7b8d3d0ded187ff2dea6e257c654172065c59914"
+      "bytes": 42477,
+      "sha256": "13492e096d7ac821f2a05bbec1a77f9a46a80149c8c513e7a321f2aa9c96209c"
     }
   ],
   "redacted_strings": 0,
