@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent-three-formal62-c",
   "stamp": "20261116T062304Z",
-  "published_utc": "2026-11-16T08:46:01Z",
+  "published_utc": "2026-11-16T09:06:27Z",
   "job": {
     "state": "running"
   },
@@ -91,14 +91,19 @@
       "sha256": "e0812e4a32c863938853f6f4ac3ac12949f3ecc92524bb81bf0d9b8b82324b6b"
     },
     {
+      "path": "evidence/checkpoint-6_drive_check.log",
+      "bytes": 281,
+      "sha256": "ed404b6836011801ebb2d5790099e389d65ee775e11fe6d138a57c394e266322"
+    },
+    {
       "path": "evidence/checkpoint-6_verified.json",
-      "bytes": 2543,
-      "sha256": "da56af6ea52ba8183393157d36dd01267715fa9b8cdd221c8160bcac2e72af87"
+      "bytes": 2716,
+      "sha256": "e9d4541c0c0b9425d921024d9312d556ec0a7c84d844dfa4633366a081f98ad9"
     },
     {
       "path": "evidence/gpu_samples.csv",
-      "bytes": 70900,
-      "sha256": "4dd91c6a16a95ec1db23f423649119684f11fa5031b7ba2d1d4420c0e9aefbde"
+      "bytes": 81033,
+      "sha256": "5698d2b95992daee40604bcb44f733851062dd2d7c8eb7f86afae3b6435b22ff"
     },
     {
       "path": "evidence/restore_from_drive.json",
@@ -117,8 +122,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 82337,
-      "sha256": "97fe9585816835deb1d7b662a301ca09d95e5f6e6e46eeaaaeee9521aa258088"
+      "bytes": 86257,
+      "sha256": "be8f3f21b79ca25c74df36f1a98a916c09d5c3cbb336fcdcb0efaa96cc566434"
     },
     {
       "path": "metrics/metrics.jsonl",
@@ -127,13 +132,13 @@
     },
     {
       "path": "phases/phase_metrics.jsonl",
-      "bytes": 133383,
-      "sha256": "65a4e960c7e9515ab519eb1f28abe667d552bad06e4e33d88abf53d2a36ef7fe"
+      "bytes": 135557,
+      "sha256": "31ce2b58593a2c1ef21fcd88d1f33aeb688a7399f46faedfb566a5c26d0add7c"
     },
     {
       "path": "telemetry/gpu_samples.csv",
-      "bytes": 70900,
-      "sha256": "4dd91c6a16a95ec1db23f423649119684f11fa5031b7ba2d1d4420c0e9aefbde"
+      "bytes": 81033,
+      "sha256": "5698d2b95992daee40604bcb44f733851062dd2d7c8eb7f86afae3b6435b22ff"
     }
   ],
   "redacted_strings": 0,
