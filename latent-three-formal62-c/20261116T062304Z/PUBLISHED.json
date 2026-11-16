@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent-three-formal62-c",
   "stamp": "20261116T062304Z",
-  "published_utc": "2026-11-16T21:41:40Z",
+  "published_utc": "2026-11-16T22:02:04Z",
   "job": {
     "state": "running"
   },
@@ -131,6 +131,16 @@
       "sha256": "c537640772b565359a8fa5992ed46f0a8b48132212ccfb4ab187b7cb75789cba"
     },
     {
+      "path": "evidence/checkpoint-18_drive_check.log",
+      "bytes": 283,
+      "sha256": "96f1c61eae9aca053ae3b9f026dd9f649262c7ef5e971c841429049b6c32db45"
+    },
+    {
+      "path": "evidence/checkpoint-18_verified.json",
+      "bytes": 2795,
+      "sha256": "ff9656286e3afc13f78c619652309d4740ef222f0755c422a088af10741bf54e"
+    },
+    {
       "path": "evidence/checkpoint-6_drive_check.log",
       "bytes": 281,
       "sha256": "ed404b6836011801ebb2d5790099e389d65ee775e11fe6d138a57c394e266322"
@@ -152,8 +162,8 @@
     },
     {
       "path": "evidence/gpu_samples.csv",
-      "bytes": 459539,
-      "sha256": "c55f65d6c28f9367f7eea8d3900de544d83b31c78ee9e179f7b803012914b4ff"
+      "bytes": 469392,
+      "sha256": "80b84ed721de3b80a971c9bf28da0aa8a09005e25546df46b99b2124a499ec24"
     },
     {
       "path": "evidence/restore_from_drive.json",
@@ -172,23 +182,23 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 517009,
-      "sha256": "eba6e8bfdf1aadf6bb2191429a4b45059e959d4c919237dcd17141f75ce2849b"
+      "bytes": 539806,
+      "sha256": "b2e073a00f12421810b37a0f5518fd27a8f8cbc23e199d56a64ed7435f9d02ea"
     },
     {
       "path": "metrics/metrics.jsonl",
-      "bytes": 30604,
-      "sha256": "37bddf5b0373862559d7de88d9fe73637d4f12b9db68ded0d03acdee437a1f2f"
+      "bytes": 32286,
+      "sha256": "fb80b7f80e9b1912a13788012fd56f87b1e18118f06eed96bd548a118bdd4486"
     },
     {
       "path": "phases/phase_metrics.jsonl",
-      "bytes": 523726,
-      "sha256": "da7fdb73d92ea35189e9e889f350434d1c9cdbf61e39a964878d5edf403ff662"
+      "bytes": 543550,
+      "sha256": "52dfa1e9fd1f5c3e0aef04b3d2e411d79192d940507052d8b8722e7baa2de71c"
     },
     {
       "path": "telemetry/gpu_samples.csv",
-      "bytes": 459539,
-      "sha256": "c55f65d6c28f9367f7eea8d3900de544d83b31c78ee9e179f7b803012914b4ff"
+      "bytes": 469392,
+      "sha256": "80b84ed721de3b80a971c9bf28da0aa8a09005e25546df46b99b2124a499ec24"
     }
   ],
   "redacted_strings": 0,
