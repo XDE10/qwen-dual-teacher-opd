@@ -990,3 +990,26 @@ P2_CHECKPOINT_DRIVE_VERIFIED 8 mydrive:opd_runs/latent-three-formal62-checkpoint
 P2_FORMAL_SEGMENT_START 9 10
 2026/11/16 11:29:19 NOTICE:   208.851 KiB / 208.851 KiB, 100%, 208.809 KiB/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/latent-three-formal62-c/20261116T062304Z
+[publish] 20 files (0.70 MB), 2 left out, 0 strings redacted -> results:latent-three-formal62-c/20261116T062304Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent-three-formal62-c/20261116T062304Z
+{"step": 9, "domain": "logic", "phase": "rollout_start", "timestamp": 1794828587.6734912, "responses": 128, "token_weight": 0.2, "latent_weight": 0.8, "teacher": {"model": "nvidia/Nemotron-Research-Reasoning-Qwen-1.5B", "revision": "a8e647c7a46f04e84ce732d6fa3fa627ba343b8d"}, "allocated_bytes": 31988808192, "reserved_bytes": 32413581312}
+{"step": 9, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794828641.143722, "responses": 4, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 41250979840}
+{"step": 9, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794828743.2340345, "responses": 8, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 56704892928}
+{"step": 9, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794828762.4538624, "responses": 12, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 56704892928}
+{"step": 9, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794828844.5432935, "responses": 16, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 56704892928}
+{"step": 9, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794828892.2116537, "responses": 20, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 56704892928}
+{"step": 9, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794829043.5559754, "responses": 24, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 80134275072}
+{"step": 9, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794829147.9909368, "responses": 28, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 80134275072}
+{"step": 9, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794829259.884004, "responses": 32, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 80134275072}
+{"step": 9, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794829450.2576795, "responses": 36, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 98666807296}
+{"step": 9, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794829482.6926277, "responses": 40, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 98666807296}
+{"step": 9, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794829576.3420806, "responses": 44, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 98666807296}
+{"step": 9, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794829732.0495265, "responses": 48, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 98666807296}
+[colab_job] periodic save (every 20 min)
+2026/11/16 11:49:29 NOTICE:   171.583 KiB / 171.583 KiB, 100%, 171.444 KiB/s, ETA 0s
+2026/11/16 11:49:34 NOTICE:   161.827 KiB / 161.827 KiB, 100%, 80.838 KiB/s, ETA 0s
+2026/11/16 11:49:38 NOTICE:   159.008 KiB / 159.008 KiB, 100%, 79.434 KiB/s, ETA 0s
+2026/11/16 11:49:40 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+2026/11/16 11:49:42 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+2026/11/16 11:49:45 NOTICE:   211.370 KiB / 211.370 KiB, 100%, 211.265 KiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-formal62-c/20261116T062304Z
