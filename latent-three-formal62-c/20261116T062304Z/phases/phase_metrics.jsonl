@@ -2383,3 +2383,11 @@
 {"step": 16, "domain": "math", "phase": "checkpoint_saved", "timestamp": 1794858585.506435, "allocated_bytes": 39115822592, "reserved_bytes": 52143587328}
 {"step": 17, "domain": "code", "phase": "rollout_start", "timestamp": 1794859062.5409138, "responses": 128, "token_weight": 0.5, "latent_weight": 0.5, "teacher": {"model": "Fate-Zero/Archer2.0-Code-1.5B-Preview", "revision": "db1e1ff9f3c36f7177f3896358ce26edeb62ce56"}, "allocated_bytes": 31988808192, "reserved_bytes": 32413581312}
 {"step": 17, "domain": "code", "phase": "rollout_progress", "timestamp": 1794859127.701928, "responses": 4, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 44728057856}
+{"step": 17, "domain": "code", "phase": "rollout_progress", "timestamp": 1794859295.4289272, "responses": 8, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 87761616896}
+{"step": 17, "domain": "code", "phase": "rollout_progress", "timestamp": 1794859455.979836, "responses": 12, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 87761616896}
+{"step": 17, "domain": "code", "phase": "rollout_progress", "timestamp": 1794859627.8378603, "responses": 16, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 91467284480}
+{"step": 17, "domain": "code", "phase": "rollout_progress", "timestamp": 1794859805.418244, "responses": 20, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 91467284480}
+{"step": 17, "domain": "code", "phase": "rollout_progress", "timestamp": 1794859998.8250873, "responses": 24, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 41859153920}
+{"step": 17, "domain": "code", "phase": "rollout_progress", "timestamp": 1794860009.3736744, "responses": 28, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 41919971328}
+{"step": 17, "domain": "code", "phase": "rollout_progress", "timestamp": 1794860140.1256993, "responses": 32, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 41919971328}
+{"step": 17, "domain": "code", "phase": "rollout_progress", "timestamp": 1794860294.3986483, "responses": 36, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 41919971328}

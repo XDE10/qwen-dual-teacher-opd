@@ -2657,3 +2657,21 @@ P2_FORMAL_SEGMENT_START 17 18
 2026/11/16 19:59:36 NOTICE:    28.110 KiB / 28.110 KiB, 100%, 28.107 KiB/s, ETA 0s
 2026/11/16 19:59:40 NOTICE:   466.652 KiB / 466.652 KiB, 100%, 466.466 KiB/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/latent-three-formal62-c/20261116T062304Z
+[publish] 28 files (1.75 MB), 2 left out, 0 strings redacted -> results:latent-three-formal62-c/20261116T062304Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent-three-formal62-c/20261116T062304Z
+{"step": 17, "domain": "code", "phase": "rollout_progress", "timestamp": 1794859295.4289272, "responses": 8, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 87761616896}
+{"step": 17, "domain": "code", "phase": "rollout_progress", "timestamp": 1794859455.979836, "responses": 12, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 87761616896}
+{"step": 17, "domain": "code", "phase": "rollout_progress", "timestamp": 1794859627.8378603, "responses": 16, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 91467284480}
+{"step": 17, "domain": "code", "phase": "rollout_progress", "timestamp": 1794859805.418244, "responses": 20, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 91467284480}
+{"step": 17, "domain": "code", "phase": "rollout_progress", "timestamp": 1794859998.8250873, "responses": 24, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 41859153920}
+{"step": 17, "domain": "code", "phase": "rollout_progress", "timestamp": 1794860009.3736744, "responses": 28, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 41919971328}
+{"step": 17, "domain": "code", "phase": "rollout_progress", "timestamp": 1794860140.1256993, "responses": 32, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 41919971328}
+{"step": 17, "domain": "code", "phase": "rollout_progress", "timestamp": 1794860294.3986483, "responses": 36, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 41919971328}
+[colab_job] periodic save (every 20 min)
+2026/11/16 20:19:50 NOTICE:   457.752 KiB / 457.752 KiB, 100%, 457.731 KiB/s, ETA 0s
+2026/11/16 20:19:53 NOTICE:   408.438 KiB / 408.438 KiB, 100%, 408.031 KiB/s, ETA 0s
+2026/11/16 20:19:56 NOTICE:   408.479 KiB / 408.479 KiB, 100%, 408.097 KiB/s, ETA 0s
+2026/11/16 20:19:58 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+2026/11/16 20:20:00 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+2026/11/16 20:20:03 NOTICE:   468.110 KiB / 468.110 KiB, 100%, 467.660 KiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-formal62-c/20261116T062304Z
