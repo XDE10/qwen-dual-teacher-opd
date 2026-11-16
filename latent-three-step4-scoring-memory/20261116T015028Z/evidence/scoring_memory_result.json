@@ -1,0 +1,19 @@
+{
+  "checkpoint_manifest_sha256": "98ebf250c46f87b95e1ccb3ee5145bbb4c02a14ee344c0a282f37694337c3c84",
+  "optimizer_updates": 0,
+  "target_step": 4,
+  "seed": 42,
+  "cache_enabled": true,
+  "intervention": "one empty_cache after rollout before moments/scoring",
+  "baseline": {
+    "response_tokens": 1296860,
+    "microbatches": 83,
+    "rollout_seconds": 4549.246085499,
+    "joint_compute_seconds": 316.28125397999975,
+    "peak_allocated_bytes": 48050861056,
+    "peak_reserved_bytes": 101195972608,
+    "loss": -0.21988066483754665,
+    "gradient_norm": 1.0059953927993774
+  },
+  "status": "running"
+}

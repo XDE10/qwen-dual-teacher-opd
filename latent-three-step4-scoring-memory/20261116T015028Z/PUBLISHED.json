@@ -1,0 +1,125 @@
+{
+  "schema": "opd-results-v1",
+  "name": "latent-three-step4-scoring-memory",
+  "stamp": "20261116T015028Z",
+  "published_utc": "2026-11-16T02:00:39Z",
+  "job": {
+    "state": "running"
+  },
+  "publisher": {
+    "host": "d91d9df71062",
+    "gpu": [
+      "NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB"
+    ],
+    "code": {
+      "commit": "4dee8bfbc554a22461d4d347f4973fc7fb7a016e",
+      "branch": null,
+      "modified_tracked_files": true
+    }
+  },
+  "sources": [
+    {
+      "label": "job",
+      "path": "/content/jobs/latent-three-step4-scoring-memory",
+      "kind": "folder"
+    },
+    {
+      "label": "evidence",
+      "path": "/content/runs/latent_three_step4_scoring_memory_20261116/evidence",
+      "kind": "folder"
+    },
+    {
+      "label": "telemetry",
+      "path": "/content/runs/latent_three_step4_scoring_memory_20261116/telemetry",
+      "kind": "folder"
+    },
+    {
+      "label": "environment",
+      "path": "/content/runs/latent_three_step4_scoring_memory_20261116/environment",
+      "kind": "folder"
+    }
+  ],
+  "files": [
+    {
+      "path": "environment/benchmarks.txt",
+      "bytes": 170,
+      "sha256": "a2e04bf5436553834a1884d6531f356c96b453623314efb766603d0f0a64586b"
+    },
+    {
+      "path": "environment/cpu-tests.txt",
+      "bytes": 1081,
+      "sha256": "34476fb1cf5915e1adf791da9c7f2e461960b62f1c15dd63b028d685c4f7d5e9"
+    },
+    {
+      "path": "environment/gpu.csv",
+      "bytes": 127,
+      "sha256": "88b570a6b620db8484c1ef679f3b5396a5aaec74a9ad5efc87d1a8989776bfb7"
+    },
+    {
+      "path": "environment/imports.txt",
+      "bytes": 123,
+      "sha256": "b8908577547b46e8ca47243bc9465c4efa339d76cc2ff368bc57cd7d3f3e5ed3"
+    },
+    {
+      "path": "environment/nvidia-smi.txt",
+      "bytes": 1689,
+      "sha256": "167313b17fd179d0c468bda0d9526a0210fa598a4ea24051ea352cd85e8bf6ec"
+    },
+    {
+      "path": "environment/pip-check.txt",
+      "bytes": 551,
+      "sha256": "40626712bba0ef1ec15bf0c03d9e69a301ba6be6b85a1a966a5ce8fbddec89bf"
+    },
+    {
+      "path": "environment/pip-freeze.txt",
+      "bytes": 14256,
+      "sha256": "ac431fa588173338ab220084b835c7e21fdf1dfbd7f4bb8628ef0441b594586b"
+    },
+    {
+      "path": "environment/torch.txt",
+      "bytes": 184,
+      "sha256": "48ff4c3af532c96a74049cca3510618f4802d59bc8325920ac5b783079a7f858"
+    },
+    {
+      "path": "evidence/phase_metrics.jsonl",
+      "bytes": 3929,
+      "sha256": "d2d28115e23d6754ab4812128f70eb02efcb2484d58d98916e6172b1f2815dc2"
+    },
+    {
+      "path": "evidence/scoring_memory_result.json",
+      "bytes": 605,
+      "sha256": "30f0da4a3066385d9c4d6cbf311cda3f374b9ff848ec3c98b498f4fc236eea61"
+    },
+    {
+      "path": "job/command.json",
+      "bytes": 805,
+      "sha256": "5297d79207409bcb0078b4cf7b38c928596e495ac0d1880f3e51f16293f03deb"
+    },
+    {
+      "path": "job/output.log",
+      "bytes": 4941,
+      "sha256": "fafd17e9787df1d7f2abc41b7ceab64891a2441c7332ac196850ec68569214ba"
+    },
+    {
+      "path": "telemetry/gpu_samples.csv",
+      "bytes": 22860,
+      "sha256": "09333b6e55f4ff2edd0ce78245647061cd060b48a0dce27b80ffeec4431011a2"
+    }
+  ],
+  "redacted_strings": 0,
+  "skipped": [
+    {
+      "path": "job/child_pid",
+      "reason": "not a text result"
+    },
+    {
+      "path": "job/pid",
+      "reason": "not a text result"
+    }
+  ],
+  "skipped_count": 2,
+  "limits_mb": {
+    "per_file": 20,
+    "total": 50
+  }
+}

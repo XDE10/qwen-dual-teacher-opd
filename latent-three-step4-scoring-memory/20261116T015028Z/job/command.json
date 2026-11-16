@@ -1,0 +1,34 @@
+{
+  "name": "latent-three-step4-scoring-memory",
+  "command": [
+    "bash",
+    "/content/scoring_memory_package/run_remote.sh"
+  ],
+  "cwd": "/content/project2",
+  "started_utc": "2026-11-16T01:50:28Z",
+  "stamp": "20261116T015028Z",
+  "save": [
+    [
+      "evidence",
+      "/content/runs/latent_three_step4_scoring_memory_20261116/evidence"
+    ],
+    [
+      "telemetry",
+      "/content/runs/latent_three_step4_scoring_memory_20261116/telemetry"
+    ],
+    [
+      "environment",
+      "/content/runs/latent_three_step4_scoring_memory_20261116/environment"
+    ]
+  ],
+  "drive": "mydrive:opd_runs",
+  "publish": true,
+  "sync_every_min": 10.0,
+  "drive_about": {
+    "total": 5497558138880,
+    "used": 637154146441,
+    "trashed": 3424092350,
+    "other": 24188451,
+    "free": 4860379803988
+  }
+}
