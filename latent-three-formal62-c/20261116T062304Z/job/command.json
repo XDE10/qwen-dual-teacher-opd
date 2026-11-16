@@ -1,0 +1,44 @@
+{
+  "name": "latent-three-formal62-c",
+  "command": [
+    "bash",
+    "/content/formal_step62_package/run_formal62.sh",
+    "20261116T061609Z",
+    "4"
+  ],
+  "cwd": "/content/project2",
+  "started_utc": "2026-11-16T06:23:04Z",
+  "stamp": "20261116T062304Z",
+  "save": [
+    [
+      "evidence",
+      "/content/runs/latent_three_step34_scoring_memory_20261116/evidence62"
+    ],
+    [
+      "telemetry",
+      "/content/runs/latent_three_step34_scoring_memory_20261116/evidence62/gpu_samples.csv"
+    ],
+    [
+      "environment",
+      "/content/runs/latent_three_step34_scoring_memory_20261116/environment62"
+    ],
+    [
+      "metrics",
+      "/content/runs/latent_three_step34_scoring_memory_20261116/full/latent_mopd_three_latent/metrics.jsonl"
+    ],
+    [
+      "phases",
+      "/content/runs/latent_three_step34_scoring_memory_20261116/full/latent_mopd_three_latent/phase_metrics.jsonl"
+    ]
+  ],
+  "drive": "mydrive:opd_runs",
+  "publish": true,
+  "sync_every_min": 20.0,
+  "drive_about": {
+    "total": 5497558138880,
+    "used": 764480027274,
+    "trashed": 3465781370,
+    "other": 24188451,
+    "free": 4733053923155
+  }
+}

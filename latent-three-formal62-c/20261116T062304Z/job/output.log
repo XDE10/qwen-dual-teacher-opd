@@ -1,0 +1,24 @@
+[colab_job] running: bash /content/formal_step62_package/run_formal62.sh 20261116T061609Z 4
+P2_RESTORE_START 4 mydrive:opd_runs/latent-three-step34-checkpoints/20261116T032801Z
+2026/11/16 06:23:30 NOTICE:     8.777 GiB / 19.861 GiB, 44%, 458.344 MiB/s, ETA 24s
+2026/11/16 06:23:50 NOTICE:    15.161 GiB / 19.861 GiB, 76%, 364.546 MiB/s, ETA 13s
+2026/11/16 06:24:10 NOTICE:    19.861 GiB / 19.861 GiB, 100%, 251.581 MiB/s, ETA 0s
+2026/11/16 06:24:21 NOTICE:    19.861 GiB / 19.861 GiB, 100%, 115.967 MiB/s, ETA 0s
+P2_CHECKPOINT_LOCAL_VERIFIED 4 444d351b917aeaf302caa3977e6cffe9a6da622bd621125b38df053bba25958f
+P2_RESTORE_VERIFIED 4
+P2_FORMAL_SEGMENT_START 5 6
+{"step": 5, "domain": "code", "phase": "rollout_start", "timestamp": 1794810416.7958338, "responses": 128, "token_weight": 0.1, "latent_weight": 0.9, "teacher": {"model": "Fate-Zero/Archer2.0-Code-1.5B-Preview", "revision": "db1e1ff9f3c36f7177f3896358ce26edeb62ce56"}, "allocated_bytes": 31988808192, "reserved_bytes": 32413581312}
+{"step": 5, "domain": "code", "phase": "rollout_progress", "timestamp": 1794810607.2774656, "responses": 4, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 99795075072}
+{"step": 5, "domain": "code", "phase": "rollout_progress", "timestamp": 1794810798.4862428, "responses": 8, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 99795075072}
+{"step": 5, "domain": "code", "phase": "rollout_progress", "timestamp": 1794810815.783567, "responses": 12, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 99885252608}
+{"step": 5, "domain": "code", "phase": "rollout_progress", "timestamp": 1794810999.7316532, "responses": 16, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 99885252608}
+{"step": 5, "domain": "code", "phase": "rollout_progress", "timestamp": 1794811176.6610737, "responses": 20, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 99885252608}
+{"step": 5, "domain": "code", "phase": "rollout_progress", "timestamp": 1794811344.188551, "responses": 24, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 99885252608}
+[colab_job] periodic save (every 20 min)
+2026/11/16 06:43:11 NOTICE:     3.215 KiB / 3.215 KiB, 100%, 822 B/s, ETA 0s
+2026/11/16 06:43:16 NOTICE:    14.964 KiB / 14.964 KiB, 100%, 7.485 KiB/s, ETA 0s
+2026/11/16 06:43:22 NOTICE:     9.097 KiB / 9.097 KiB, 100%, 4.546 KiB/s, ETA 0s
+2026/11/16 06:43:29 NOTICE:    17.760 KiB / 17.760 KiB, 100%, 4.440 KiB/s, ETA 0s
+2026/11/16 06:43:34 NOTICE:     7.004 KiB / 7.004 KiB, 100%, 3.502 KiB/s, ETA 0s
+2026/11/16 06:43:39 NOTICE:    58.599 KiB / 58.599 KiB, 100%, 29.312 KiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-formal62-c/20261116T062304Z

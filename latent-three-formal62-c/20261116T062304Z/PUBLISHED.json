@@ -1,0 +1,150 @@
+{
+  "schema": "opd-results-v1",
+  "name": "latent-three-formal62-c",
+  "stamp": "20261116T062304Z",
+  "published_utc": "2026-11-16T06:43:39Z",
+  "job": {
+    "state": "running"
+  },
+  "publisher": {
+    "host": "f99a549f550e",
+    "gpu": [
+      "NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB"
+    ],
+    "code": {
+      "commit": "4dee8bfbc554a22461d4d347f4973fc7fb7a016e",
+      "branch": null,
+      "modified_tracked_files": true
+    }
+  },
+  "sources": [
+    {
+      "label": "job",
+      "path": "/content/jobs/latent-three-formal62-c",
+      "kind": "folder"
+    },
+    {
+      "label": "evidence",
+      "path": "/content/runs/latent_three_step34_scoring_memory_20261116/evidence62",
+      "kind": "folder"
+    },
+    {
+      "label": "telemetry",
+      "path": "/content/runs/latent_three_step34_scoring_memory_20261116/evidence62/gpu_samples.csv",
+      "kind": "file"
+    },
+    {
+      "label": "environment",
+      "path": "/content/runs/latent_three_step34_scoring_memory_20261116/environment62",
+      "kind": "folder"
+    },
+    {
+      "label": "metrics",
+      "path": "/content/runs/latent_three_step34_scoring_memory_20261116/full/latent_mopd_three_latent/metrics.jsonl",
+      "kind": "file"
+    },
+    {
+      "label": "phases",
+      "path": "/content/runs/latent_three_step34_scoring_memory_20261116/full/latent_mopd_three_latent/phase_metrics.jsonl",
+      "kind": "file"
+    }
+  ],
+  "files": [
+    {
+      "path": "environment/benchmarks.txt",
+      "bytes": 170,
+      "sha256": "a2e04bf5436553834a1884d6531f356c96b453623314efb766603d0f0a64586b"
+    },
+    {
+      "path": "environment/cpu-tests.txt",
+      "bytes": 1081,
+      "sha256": "971bef381c0ec1a5ad3d692bca6d7bd8d235315e68a4e3adf5811cdcd84e0bba"
+    },
+    {
+      "path": "environment/gpu.csv",
+      "bytes": 127,
+      "sha256": "88b570a6b620db8484c1ef679f3b5396a5aaec74a9ad5efc87d1a8989776bfb7"
+    },
+    {
+      "path": "environment/imports.txt",
+      "bytes": 123,
+      "sha256": "b8908577547b46e8ca47243bc9465c4efa339d76cc2ff368bc57cd7d3f3e5ed3"
+    },
+    {
+      "path": "environment/nvidia-smi.txt",
+      "bytes": 1689,
+      "sha256": "5dd87e663652576b2198ed662fac587418547f0b8b0f406046ed07a86057c753"
+    },
+    {
+      "path": "environment/pip-check.txt",
+      "bytes": 551,
+      "sha256": "40626712bba0ef1ec15bf0c03d9e69a301ba6be6b85a1a966a5ce8fbddec89bf"
+    },
+    {
+      "path": "environment/pip-freeze.txt",
+      "bytes": 14256,
+      "sha256": "ac431fa588173338ab220084b835c7e21fdf1dfbd7f4bb8628ef0441b594586b"
+    },
+    {
+      "path": "environment/torch.txt",
+      "bytes": 189,
+      "sha256": "e0812e4a32c863938853f6f4ac3ac12949f3ecc92524bb81bf0d9b8b82324b6b"
+    },
+    {
+      "path": "evidence/gpu_samples.csv",
+      "bytes": 9483,
+      "sha256": "d9f54e0e77e9bdf907e5f239d9fb8bad9054a1dfdc6e156841dc7bbc976d4e47"
+    },
+    {
+      "path": "evidence/restore_from_drive.json",
+      "bytes": 3166,
+      "sha256": "18d2377f47ead847503d0df51fbd9a332fe816a815a57a1d18d6d166a1778538"
+    },
+    {
+      "path": "evidence/restore_verified.json",
+      "bytes": 2884,
+      "sha256": "5156c1067a9e592c968b52b3466074da39cec02d8d486f896b2a94392b1755f1"
+    },
+    {
+      "path": "job/command.json",
+      "bytes": 1138,
+      "sha256": "80f37f4efb6a027309ee539a990eea09e46f635ad67109be4a919d50b028be07"
+    },
+    {
+      "path": "job/output.log",
+      "bytes": 2716,
+      "sha256": "49b2ad5a214f47822dc9d8a6abc8efc7bd2b1e8835bfc508b13cbb72e2e2ff0b"
+    },
+    {
+      "path": "metrics/metrics.jsonl",
+      "bytes": 7172,
+      "sha256": "cda0ce52e7d53e16b1c50a3cc4d696c6f990ad1b73cd40f674e81309fdef9db1"
+    },
+    {
+      "path": "phases/phase_metrics.jsonl",
+      "bytes": 60005,
+      "sha256": "1c0935605678623aa1e1c767f27f2790ca89a94855807f6d4f165deb5f3ecb5d"
+    },
+    {
+      "path": "telemetry/gpu_samples.csv",
+      "bytes": 9483,
+      "sha256": "d9f54e0e77e9bdf907e5f239d9fb8bad9054a1dfdc6e156841dc7bbc976d4e47"
+    }
+  ],
+  "redacted_strings": 0,
+  "skipped": [
+    {
+      "path": "job/child_pid",
+      "reason": "not a text result"
+    },
+    {
+      "path": "job/pid",
+      "reason": "not a text result"
+    }
+  ],
+  "skipped_count": 2,
+  "limits_mb": {
+    "per_file": 20,
+    "total": 50
+  }
+}
