@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent-three-step4-scoring-memory",
   "stamp": "20261116T015028Z",
-  "published_utc": "2026-11-16T02:51:35Z",
+  "published_utc": "2026-11-16T03:01:50Z",
   "job": {
     "state": "running"
   },
@@ -82,8 +82,8 @@
     },
     {
       "path": "evidence/phase_metrics.jsonl",
-      "bytes": 13853,
-      "sha256": "2ded2af2ac57f9c406c162bef90a2390b4c435c3cb15b3e61959178c57aa46de"
+      "bytes": 15836,
+      "sha256": "5082db6928e1a4aa6f19146f6b7b184e9107c6165f599204395e664bf75809d5"
     },
     {
       "path": "evidence/scoring_memory_result.json",
@@ -97,13 +97,13 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 18290,
-      "sha256": "79547fe28e16795d847e2c71ec8a4b3b223193113a35fe2c52afd24ffc871d98"
+      "bytes": 20953,
+      "sha256": "d0baced8a78a33d7cde1fe24fb58494cd8e1580f326dcbdff8de5a67920bc74c"
     },
     {
       "path": "telemetry/gpu_samples.csv",
-      "bytes": 151170,
-      "sha256": "2f7ffe7804e50f1cf1f8d82f04479da2f6b1dc96fe6a7a31d7c1a5ce0de68839"
+      "bytes": 177000,
+      "sha256": "0b8f35266d378a2df42c72ed9d74db2b7bd1b472139b2d75e16768aa2489e5e3"
     }
   ],
   "redacted_strings": 0,

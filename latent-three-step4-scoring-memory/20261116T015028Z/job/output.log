@@ -80,3 +80,15 @@ STAGE restore archived checkpoint-2
 2026/11/16 02:51:34 NOTICE:   147.545 KiB / 147.545 KiB, 100%, 0 B/s, ETA -
 2026/11/16 02:51:35 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
 [colab_job] saved to Drive: mydrive:opd_runs/latent-three-step4-scoring-memory/20261116T015028Z
+[publish] 13 files (0.19 MB), 2 left out, 0 strings redacted -> results:latent-three-step4-scoring-memory/20261116T015028Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent-three-step4-scoring-memory/20261116T015028Z
+{"phase": "rollout_progress", "timestamp": 1794797536.602182, "responses": 96, "total": 128, "batch_response_lengths": [9785, 9721, 8812, 8014], "allocated_bytes": 30131124224, "reserved_bytes": 97270104064, "peak_allocated_bytes": 37196222976, "peak_reserved_bytes": 97270104064, "driver_free_bytes": 4011720704, "driver_total_bytes": 101974081536, "driver_used_bytes": 97962360832, "inactive_split_bytes": 986417152, "active_bytes": 30131124224, "allocator_retries": 0, "allocator_ooms": 0}
+{"phase": "rollout_progress", "timestamp": 1794797594.2911124, "responses": 100, "total": 128, "batch_response_lengths": [5304, 6011, 3444, 5598], "allocated_bytes": 30131124224, "reserved_bytes": 97270104064, "peak_allocated_bytes": 37196222976, "peak_reserved_bytes": 97270104064, "driver_free_bytes": 4011720704, "driver_total_bytes": 101974081536, "driver_used_bytes": 97962360832, "inactive_split_bytes": 986417152, "active_bytes": 30131124224, "allocator_retries": 0, "allocator_ooms": 0}
+{"phase": "rollout_progress", "timestamp": 1794797764.8306785, "responses": 104, "total": 128, "batch_response_lengths": [14965, 8195, 13346, 7913], "allocated_bytes": 30131124224, "reserved_bytes": 97270104064, "peak_allocated_bytes": 37196222976, "peak_reserved_bytes": 97270104064, "driver_free_bytes": 4011720704, "driver_total_bytes": 101974081536, "driver_used_bytes": 97962360832, "inactive_split_bytes": 986417152, "active_bytes": 30131124224, "allocator_retries": 0, "allocator_ooms": 0}
+{"phase": "rollout_progress", "timestamp": 1794797939.8777251, "responses": 108, "total": 128, "batch_response_lengths": [11492, 5106, 15328, 11541], "allocated_bytes": 30131124224, "reserved_bytes": 97270104064, "peak_allocated_bytes": 37196222976, "peak_reserved_bytes": 97270104064, "driver_free_bytes": 4011720704, "driver_total_bytes": 101974081536, "driver_used_bytes": 97962360832, "inactive_split_bytes": 986417152, "active_bytes": 30131124224, "allocator_retries": 0, "allocator_ooms": 0}
+[colab_job] periodic save (every 10 min)
+2026/11/16 03:01:46 NOTICE:    20.084 KiB / 20.084 KiB, 100%, 0 B/s, ETA -
+2026/11/16 03:01:47 NOTICE:    15.465 KiB / 15.465 KiB, 100%, 0 B/s, ETA -
+2026/11/16 03:01:49 NOTICE:   172.770 KiB / 172.770 KiB, 100%, 0 B/s, ETA -
+2026/11/16 03:01:50 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-step4-scoring-memory/20261116T015028Z
