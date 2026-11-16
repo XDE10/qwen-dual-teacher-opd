@@ -1,0 +1,24 @@
+{
+  "source_checkpoint_manifest_sha256": "98ebf250c46f87b95e1ccb3ee5145bbb4c02a14ee344c0a282f37694337c3c84",
+  "migrated_checkpoint_manifest_sha256": "f3b262a9c9d224b8a6280b754f0d5faa6ecca66bc38fbdf2c83f662678b8a5fc",
+  "unchanged_payload_files": {
+    "engine.pt": "ae2ca89eb0f336f454e72c14e36a5fa076511af320bccbf44075e25ff6643e8d",
+    "student/model.safetensors.index.json": "c7e56c5725b828b21936d5ec6e2ae9acec9fd04a739d1fab9824d603c23cbf71",
+    "student/generation_config.json": "994ffcc2da754604dd754028c2bb0ea5ac52747f206d73f62c72543a6ee96664",
+    "student/model-00001-of-00002.safetensors": "275dadb12d22e339e153d8d698147cd6c5181655a02e597c8f5cf8d90cd2d972",
+    "student/model-00002-of-00002.safetensors": "d2284b501d9da9a603e4017ffb37764d0ab6443beae7f64615c90e375dc628dd",
+    "student/config.json": "5777504bffbd6bd782fb72f7d3997a9e68cecaa3937d0afbdef1635abf11b239"
+  },
+  "prior_trainer_sha256": "2b7736f37c0e740ffcbfa9c69e368d6f4efd4a678760c7f717bad789d104bf6d",
+  "trainer_sha256": "c68797a2063ad5df7bf1d9e187ad94c0c37bbbf12894b26a14a518052fa29eb7",
+  "new_output_dir": "/content/runs/latent_three_step34_scoring_memory_20261116/full/latent_mopd_three_latent",
+  "manifest_sha256": "e5f4c579f8a4514795e6ba80e1e4c2df034e724346bbfce7a2ea150d7d969252",
+  "schedule_sha256": "fb63303496426c95085f552961f4e2c733efa33de88dfc689bddde6fdb6e68bb",
+  "pinned_packages": {
+    "torch": "2.8.0+cu128",
+    "transformers": "4.57.6",
+    "peft": "0.19.0"
+  },
+  "completed_updates": 2,
+  "next_step": 3
+}

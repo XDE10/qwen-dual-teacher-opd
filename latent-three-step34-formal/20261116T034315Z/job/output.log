@@ -1,0 +1,22 @@
+[colab_job] running: bash /content/formal_step34_package/run_formal.sh 20261116T032801Z 2
+STEP34_RESTORE_START checkpoint-2
+2026/11/16 03:43:37 NOTICE:     8.438 GiB / 18.122 GiB, 47%, 440.244 MiB/s, ETA 22s
+2026/11/16 03:43:57 NOTICE:    14.836 GiB / 18.122 GiB, 82%, 358.740 MiB/s, ETA 9s
+2026/11/16 03:44:17 NOTICE:    18.122 GiB / 18.122 GiB, 100%, 193.005 MiB/s, ETA 0s
+2026/11/16 03:44:23 NOTICE:    18.122 GiB / 18.122 GiB, 100%, 122.848 MiB/s, ETA 0s
+STEP34_MIGRATION_VERIFIED {"source_checkpoint_manifest_sha256": "98ebf250c46f87b95e1ccb3ee5145bbb4c02a14ee344c0a282f37694337c3c84", "migrated_checkpoint_manifest_sha256": "f3b262a9c9d224b8a6280b754f0d5faa6ecca66bc38fbdf2c83f662678b8a5fc", "unchanged_payload_files": {"engine.pt": "ae2ca89eb0f336f454e72c14e36a5fa076511af320bccbf44075e25ff6643e8d", "student/model.safetensors.index.json": "c7e56c5725b828b21936d5ec6e2ae9acec9fd04a739d1fab9824d603c23cbf71", "student/generation_config.json": "994ffcc2da754604dd754028c2bb0ea5ac52747f206d73f62c72543a6ee96664", "student/model-00001-of-00002.safetensors": "275dadb12d22e339e153d8d698147cd6c5181655a02e597c8f5cf8d90cd2d972", "student/model-00002-of-00002.safetensors": "d2284b501d9da9a603e4017ffb37764d0ab6443beae7f64615c90e375dc628dd", "student/config.json": "5777504bffbd6bd782fb72f7d3997a9e68cecaa3937d0afbdef1635abf11b239"}, "prior_trainer_sha256": "2b7736f37c0e740ffcbfa9c69e368d6f4efd4a678760c7f717bad789d104bf6d", "trainer_sha256": "c68797a2063ad5df7bf1d9e187ad94c0c37bbbf12894b26a14a518052fa29eb7", "new_output_dir": "/content/runs/latent_three_step34_scoring_memory_20261116/full/latent_mopd_three_latent", "manifest_sha256": "e5f4c579f8a4514795e6ba80e1e4c2df034e724346bbfce7a2ea150d7d969252", "schedule_sha256": "fb63303496426c95085f552961f4e2c733efa33de88dfc689bddde6fdb6e68bb", "pinned_packages": {"torch": "2.8.0+cu128", "transformers": "4.57.6", "peft": "0.19.0"}, "completed_updates": 2, "next_step": 3}
+STEP34_TRAINING_START 3
+{"step": 3, "domain": "logic", "phase": "rollout_start", "timestamp": 1794800812.9259064, "responses": 128, "token_weight": 0.0, "latent_weight": 1.0, "teacher": {"model": "nvidia/Nemotron-Research-Reasoning-Qwen-1.5B", "revision": "a8e647c7a46f04e84ce732d6fa3fa627ba343b8d"}, "allocated_bytes": 30121687040, "reserved_bytes": 30526144512}
+{"step": 3, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794800965.3997314, "responses": 4, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 78810972160}
+{"step": 3, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794800981.0172248, "responses": 8, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 78871789568}
+{"step": 3, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794801009.970382, "responses": 12, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 78875983872}
+{"step": 3, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794801140.1481812, "responses": 16, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 78875983872}
+{"step": 3, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794801185.4379053, "responses": 20, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 78896955392}
+[colab_job] periodic save (every 10 min)
+2026/11/16 03:53:22 NOTICE:     4.287 KiB / 4.287 KiB, 100%, 1.070 KiB/s, ETA 0s
+2026/11/16 03:53:27 NOTICE:     1.470 KiB / 1.470 KiB, 100%, 752 B/s, ETA 0s
+2026/11/16 03:53:33 NOTICE:    20.733 KiB / 20.733 KiB, 100%, 10.360 KiB/s, ETA 0s
+2026/11/16 03:53:39 NOTICE:    17.759 KiB / 17.759 KiB, 100%, 4.441 KiB/s, ETA 0s
+2026/11/16 03:53:44 NOTICE:     3.542 KiB / 3.542 KiB, 100%, 1.770 KiB/s, ETA 0s
+2026/11/16 03:53:49 NOTICE:     1.242 KiB / 1.242 KiB, 100%, 636 B/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-step34-formal/20261116T034315Z

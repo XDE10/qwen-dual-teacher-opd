@@ -1,0 +1,44 @@
+{
+  "name": "latent-three-step34-formal",
+  "command": [
+    "bash",
+    "/content/formal_step34_package/run_formal.sh",
+    "20261116T032801Z",
+    "2"
+  ],
+  "cwd": "/content/project2",
+  "started_utc": "2026-11-16T03:43:15Z",
+  "stamp": "20261116T034315Z",
+  "save": [
+    [
+      "evidence",
+      "/content/runs/latent_three_step34_scoring_memory_20261116/evidence"
+    ],
+    [
+      "telemetry",
+      "/content/runs/latent_three_step34_scoring_memory_20261116/telemetry"
+    ],
+    [
+      "environment",
+      "/content/runs/latent_three_step34_scoring_memory_20261116/environment"
+    ],
+    [
+      "metrics",
+      "/content/runs/latent_three_step34_scoring_memory_20261116/full/latent_mopd_three_latent/metrics.jsonl"
+    ],
+    [
+      "phases",
+      "/content/runs/latent_three_step34_scoring_memory_20261116/full/latent_mopd_three_latent/phase_metrics.jsonl"
+    ]
+  ],
+  "drive": "mydrive:opd_runs",
+  "publish": true,
+  "sync_every_min": 10.0,
+  "drive_about": {
+    "total": 5497558138880,
+    "used": 678125506088,
+    "trashed": 3424092350,
+    "other": 24188451,
+    "free": 4819408444341
+  }
+}

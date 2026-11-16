@@ -1,0 +1,6 @@
+{"step": 3, "domain": "logic", "phase": "rollout_start", "timestamp": 1794800812.9259064, "responses": 128, "token_weight": 0.0, "latent_weight": 1.0, "teacher": {"model": "nvidia/Nemotron-Research-Reasoning-Qwen-1.5B", "revision": "a8e647c7a46f04e84ce732d6fa3fa627ba343b8d"}, "allocated_bytes": 30121687040, "reserved_bytes": 30526144512}
+{"step": 3, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794800965.3997314, "responses": 4, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 78810972160}
+{"step": 3, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794800981.0172248, "responses": 8, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 78871789568}
+{"step": 3, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794801009.970382, "responses": 12, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 78875983872}
+{"step": 3, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794801140.1481812, "responses": 16, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 78875983872}
+{"step": 3, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794801185.4379053, "responses": 20, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 78896955392}
