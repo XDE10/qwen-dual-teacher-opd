@@ -185,3 +185,16 @@ STEP34_TRAINING_START 4
 2026/11/16 04:55:57 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
 2026/11/16 04:56:00 NOTICE:    17.977 KiB / 17.977 KiB, 100%, 17.976 KiB/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/latent-three-step34-formal/20261116T034315Z
+[publish] 18 files (0.23 MB), 2 left out, 0 strings redacted -> results:latent-three-step34-formal/20261116T034315Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent-three-step34-formal/20261116T034315Z
+{"step": 4, "domain": "math", "phase": "rollout_progress", "timestamp": 1794805070.3787472, "responses": 36, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 97280589824}
+{"step": 4, "domain": "math", "phase": "rollout_progress", "timestamp": 1794805259.032322, "responses": 40, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 97280589824}
+{"step": 4, "domain": "math", "phase": "rollout_progress", "timestamp": 1794805408.7294655, "responses": 44, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 97280589824}
+[colab_job] periodic save (every 10 min)
+2026/11/16 05:06:10 NOTICE:    30.155 KiB / 30.155 KiB, 100%, 30.150 KiB/s, ETA 0s
+2026/11/16 05:06:11 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+2026/11/16 05:06:15 NOTICE:    80.111 KiB / 80.111 KiB, 100%, 80.101 KiB/s, ETA 0s
+2026/11/16 05:06:16 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+2026/11/16 05:06:18 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+2026/11/16 05:06:21 NOTICE:    18.521 KiB / 18.521 KiB, 100%, 18.519 KiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-step34-formal/20261116T034315Z
