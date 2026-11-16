@@ -20,3 +20,22 @@ STEP34_TRAINING_START 3
 2026/11/16 03:53:44 NOTICE:     3.542 KiB / 3.542 KiB, 100%, 1.770 KiB/s, ETA 0s
 2026/11/16 03:53:49 NOTICE:     1.242 KiB / 1.242 KiB, 100%, 636 B/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/latent-three-step34-formal/20261116T034315Z
+[publish] 14 files (0.05 MB), 2 left out, 0 strings redacted -> results:latent-three-step34-formal/20261116T034315Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent-three-step34-formal/20261116T034315Z
+{"step": 3, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794801247.9266343, "responses": 24, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 78901149696}
+{"step": 3, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794801313.123509, "responses": 28, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 78901149696}
+{"step": 3, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794801370.3099864, "responses": 32, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 78901149696}
+{"step": 3, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794801409.5411026, "responses": 36, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 78901149696}
+{"step": 3, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794801418.181176, "responses": 40, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 78901149696}
+{"step": 3, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794801547.7701333, "responses": 44, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 78901149696}
+{"step": 3, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794801736.89292, "responses": 48, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 97429487616}
+{"step": 3, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794801747.075007, "responses": 52, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 97429487616}
+[colab_job] periodic save (every 10 min)
+{"step": 3, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794801836.9066148, "responses": 56, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 97429487616}
+2026/11/16 04:03:59 NOTICE:     5.651 KiB / 5.651 KiB, 100%, 5.649 KiB/s, ETA 0s
+2026/11/16 04:04:00 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+2026/11/16 04:04:04 NOTICE:    46.696 KiB / 46.696 KiB, 100%, 46.693 KiB/s, ETA 0s
+2026/11/16 04:04:06 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+2026/11/16 04:04:07 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+2026/11/16 04:04:11 NOTICE:     2.881 KiB / 2.881 KiB, 100%, 2.880 KiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-step34-formal/20261116T034315Z
