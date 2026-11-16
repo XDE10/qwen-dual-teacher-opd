@@ -1842,3 +1842,44 @@ P2_CHECKPOINT_LOCAL_VERIFIED 12 02f88bc82af80f3967fa606d5421427fffc8c23775cbe3c6
 2026/11/16 15:54:47 NOTICE:    20.899 KiB / 20.899 KiB, 100%, 20.885 KiB/s, ETA 0s
 2026/11/16 15:54:50 NOTICE:   343.127 KiB / 343.127 KiB, 100%, 342.759 KiB/s, ETA 0s
 [colab_job] saved to Drive: mydrive:opd_runs/latent-three-formal62-c/20261116T062304Z
+[publish] 23 files (1.25 MB), 2 left out, 0 strings redacted -> results:latent-three-formal62-c/20261116T062304Z
+2026/11/16 15:54:56 NOTICE:    10.756 GiB / 19.861 GiB, 54%, 61.713 MiB/s, ETA 2m31s
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent-three-formal62-c/20261116T062304Z
+2026/11/16 15:55:16 NOTICE:    11.831 GiB / 19.861 GiB, 60%, 55.772 MiB/s, ETA 2m27s
+2026/11/16 15:55:36 NOTICE:    12.448 GiB / 19.861 GiB, 63%, 38.327 MiB/s, ETA 3m18s
+2026/11/16 15:55:56 NOTICE:    13.097 GiB / 19.861 GiB, 66%, 34.580 MiB/s, ETA 3m20s
+2026/11/16 15:56:16 NOTICE:    13.745 GiB / 19.861 GiB, 69%, 33.316 MiB/s, ETA 3m7s
+2026/11/16 15:56:36 NOTICE:    14.347 GiB / 19.861 GiB, 72%, 31.563 MiB/s, ETA 2m58s
+2026/11/16 15:56:56 NOTICE:    14.956 GiB / 19.861 GiB, 75%, 31.557 MiB/s, ETA 2m39s
+2026/11/16 15:57:16 NOTICE:    15.605 GiB / 19.861 GiB, 79%, 32.628 MiB/s, ETA 2m13s
+2026/11/16 15:57:36 NOTICE:    16.250 GiB / 19.861 GiB, 82%, 32.249 MiB/s, ETA 1m54s
+2026/11/16 15:57:56 NOTICE:    16.862 GiB / 19.861 GiB, 85%, 31.898 MiB/s, ETA 1m36s
+2026/11/16 15:58:16 NOTICE:    17.472 GiB / 19.861 GiB, 88%, 31.787 MiB/s, ETA 1m16s
+2026/11/16 15:58:36 NOTICE:    18.112 GiB / 19.861 GiB, 91%, 32.694 MiB/s, ETA 54s
+2026/11/16 15:58:56 NOTICE:    18.737 GiB / 19.861 GiB, 94%, 32.466 MiB/s, ETA 35s
+2026/11/16 15:59:16 NOTICE:    19.355 GiB / 19.861 GiB, 97%, 32.184 MiB/s, ETA 16s
+2026/11/16 15:59:33 NOTICE:    19.861 GiB / 19.861 GiB, 100%, 29.390 MiB/s, ETA 0s
+2026/11/16 15:59:52 NOTICE: Google drive root 'opd_runs/latent-three-formal62-checkpoints/20261116T061609Z/checkpoint-12': 0 differences found
+2026/11/16 15:59:52 NOTICE: Google drive root 'opd_runs/latent-three-formal62-checkpoints/20261116T061609Z/checkpoint-12': 8 matching files
+P2_CHECKPOINT_DRIVE_VERIFIED 12 mydrive:opd_runs/latent-three-formal62-checkpoints/20261116T061609Z/checkpoint-12
+P2_FORMAL_SEGMENT_START 13 14
+{"step": 13, "domain": "math", "phase": "rollout_start", "timestamp": 1794844841.2256773, "responses": 128, "token_weight": 0.4, "latent_weight": 0.6, "teacher": {"model": "hbx/JustRL-DeepSeek-1.5B", "revision": "0637e4096c789c67f9eecbe8355e0bdeddede1c2"}, "allocated_bytes": 31988808192, "reserved_bytes": 32413581312}
+{"step": 13, "domain": "math", "phase": "rollout_progress", "timestamp": 1794844940.2101238, "responses": 4, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 57164169216}
+{"step": 13, "domain": "math", "phase": "rollout_progress", "timestamp": 1794844973.8420649, "responses": 8, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 57187237888}
+{"step": 13, "domain": "math", "phase": "rollout_progress", "timestamp": 1794845049.5934587, "responses": 12, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 57187237888}
+{"step": 13, "domain": "math", "phase": "rollout_progress", "timestamp": 1794845077.65144, "responses": 16, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 57187237888}
+{"step": 13, "domain": "math", "phase": "rollout_progress", "timestamp": 1794845150.4219246, "responses": 20, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 57187237888}
+{"step": 13, "domain": "math", "phase": "rollout_progress", "timestamp": 1794845228.4406452, "responses": 24, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 57187237888}
+{"step": 13, "domain": "math", "phase": "rollout_progress", "timestamp": 1794845332.712591, "responses": 28, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 59697528832}
+{"step": 13, "domain": "math", "phase": "rollout_progress", "timestamp": 1794845375.0588076, "responses": 32, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 59697528832}
+{"step": 13, "domain": "math", "phase": "rollout_progress", "timestamp": 1794845430.0865443, "responses": 36, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 59697528832}
+{"step": 13, "domain": "math", "phase": "rollout_progress", "timestamp": 1794845585.5345235, "responses": 40, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 80620814336}
+[colab_job] periodic save (every 20 min)
+2026/11/16 16:15:00 NOTICE:   320.798 KiB / 320.798 KiB, 100%, 320.737 KiB/s, ETA 0s
+{"step": 13, "domain": "math", "phase": "rollout_progress", "timestamp": 1794845701.1835895, "responses": 44, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 80620814336}
+2026/11/16 16:15:04 NOTICE:   291.727 KiB / 291.727 KiB, 100%, 291.688 KiB/s, ETA 0s
+2026/11/16 16:15:07 NOTICE:   288.773 KiB / 288.773 KiB, 100%, 288.528 KiB/s, ETA 0s
+2026/11/16 16:15:09 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+2026/11/16 16:15:10 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+2026/11/16 16:15:14 NOTICE:   345.443 KiB / 345.443 KiB, 100%, 345.422 KiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-formal62-c/20261116T062304Z
