@@ -78,3 +78,7 @@
 {"step": 3, "domain": "logic", "phase": "checkpoint_start", "timestamp": 1794803173.9163282, "allocated_bytes": 36315303936, "reserved_bytes": 54423191552}
 {"step": 3, "domain": "logic", "phase": "checkpoint_saved", "timestamp": 1794803231.9548097, "allocated_bytes": 36315303936, "reserved_bytes": 54423191552}
 {"step": 4, "domain": "math", "phase": "rollout_start", "timestamp": 1794803650.4561787, "responses": 128, "token_weight": 0.1, "latent_weight": 0.9, "teacher": {"model": "hbx/JustRL-DeepSeek-1.5B", "revision": "0637e4096c789c67f9eecbe8355e0bdeddede1c2"}, "allocated_bytes": 30121687040, "reserved_bytes": 30526144512}
+{"step": 4, "domain": "math", "phase": "rollout_progress", "timestamp": 1794803839.6853025, "responses": 4, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 97255424000}
+{"step": 4, "domain": "math", "phase": "rollout_progress", "timestamp": 1794804028.498839, "responses": 8, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 97255424000}
+{"step": 4, "domain": "math", "phase": "rollout_progress", "timestamp": 1794804054.9792144, "responses": 12, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 97257521152}
+{"step": 4, "domain": "math", "phase": "rollout_progress", "timestamp": 1794804243.4509299, "responses": 16, "total": 128, "allocated_bytes": 30130206720, "reserved_bytes": 97257521152}
