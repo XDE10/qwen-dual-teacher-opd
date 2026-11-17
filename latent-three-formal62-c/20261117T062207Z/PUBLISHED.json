@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent-three-formal62-c",
   "stamp": "20261117T062207Z",
-  "published_utc": "2026-11-17T09:20:49Z",
+  "published_utc": "2026-11-17T09:41:04Z",
   "job": {
     "state": "running"
   },
@@ -102,8 +102,8 @@
     },
     {
       "path": "evidence/gpu_samples.csv",
-      "bytes": 88975,
-      "sha256": "34adba88acf53334a133fc134367ec2520baeaaffd6be5dba91634210c038784"
+      "bytes": 99213,
+      "sha256": "02d9ab19e5a96a1bfe0c1c1b227c43614ec3e8b181573232fb783db5f4e744f8"
     },
     {
       "path": "evidence/restore_from_drive.json",
@@ -122,8 +122,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 122514,
-      "sha256": "7280e7b561b70ec72cf4c53a957b112a9c99c8cee1437ae19ded795fd79d0a77"
+      "bytes": 141597,
+      "sha256": "53c17589b4488971352f32f7579f11bfbfbbe3d40293a9f4740326144d3b5e23"
     },
     {
       "path": "metrics/metrics.jsonl",
@@ -132,13 +132,13 @@
     },
     {
       "path": "phases/phase_metrics.jsonl",
-      "bytes": 823244,
-      "sha256": "5ffe73318216d7697892591dac3241a316b1a0b94d973a8f41d1cb3fd7218753"
+      "bytes": 841519,
+      "sha256": "7534e4fc307686c95fb132889d1a416ca6ee918c65a4e8101568b79e7410df0b"
     },
     {
       "path": "telemetry/gpu_samples.csv",
-      "bytes": 88975,
-      "sha256": "34adba88acf53334a133fc134367ec2520baeaaffd6be5dba91634210c038784"
+      "bytes": 99213,
+      "sha256": "02d9ab19e5a96a1bfe0c1c1b227c43614ec3e8b181573232fb783db5f4e744f8"
     }
   ],
   "redacted_strings": 0,
