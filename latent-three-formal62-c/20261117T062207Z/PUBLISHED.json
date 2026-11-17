@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent-three-formal62-c",
   "stamp": "20261117T062207Z",
-  "published_utc": "2026-11-17T20:30:27Z",
+  "published_utc": "2026-11-17T20:50:45Z",
   "job": {
     "state": "running"
   },
@@ -161,14 +161,19 @@
       "sha256": "b19af5ad3ceb273dd634b622e0d7b3a6a9342aa4924af403431e2a91e320711f"
     },
     {
+      "path": "evidence/checkpoint-40_drive_check.log",
+      "bytes": 283,
+      "sha256": "90f7a7b58069da7339e3b5954b47723cbb3b1820beca9b8b5217f88f8a92da6f"
+    },
+    {
       "path": "evidence/checkpoint-40_verified.json",
-      "bytes": 2866,
-      "sha256": "b66b783c481a779195073a48b3d6f20a748078c2742afa346eb268681083fcab"
+      "bytes": 3040,
+      "sha256": "018dc008b66655725a0020ec6f8717e546582e018fb119931d1fc57e261aabc8"
     },
     {
       "path": "evidence/gpu_samples.csv",
-      "bytes": 424571,
-      "sha256": "b4d4a6f5ddc4fd19a70863a72d198017e3324970dcb84878d4bd5903935abc87"
+      "bytes": 434481,
+      "sha256": "2f9487bab3f9b21adc7fe94ba4f703bc385aef637c55b998829d02b868458efc"
     },
     {
       "path": "evidence/restore_from_drive.json",
@@ -187,8 +192,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 545785,
-      "sha256": "1edf4ec3c5e7c7fc543ad99ea616e38e2397af0ba6d12850b8712788264d4410"
+      "bytes": 549657,
+      "sha256": "66426928b295840d1d99a3a70cfd1f739635b360b3e1c8e0c7665d0b063c26b3"
     },
     {
       "path": "metrics/metrics.jsonl",
@@ -197,13 +202,13 @@
     },
     {
       "path": "phases/phase_metrics.jsonl",
-      "bytes": 1208459,
-      "sha256": "35472e0ff83b4a9d7c5e3176580518755904352d8d1b1ac21d93dd4cec142f19"
+      "bytes": 1209911,
+      "sha256": "7edb1717e385bf28b0fb16fc0202fd643f1015d14b657759195117ec47551a80"
     },
     {
       "path": "telemetry/gpu_samples.csv",
-      "bytes": 424571,
-      "sha256": "b4d4a6f5ddc4fd19a70863a72d198017e3324970dcb84878d4bd5903935abc87"
+      "bytes": 434481,
+      "sha256": "2f9487bab3f9b21adc7fe94ba4f703bc385aef637c55b998829d02b868458efc"
     }
   ],
   "redacted_strings": 0,

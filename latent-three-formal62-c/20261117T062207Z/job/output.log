@@ -3073,3 +3073,38 @@ P2_CHECKPOINT_LOCAL_VERIFIED 40 b5d8b4ba02bd74a8fe1961988101d97cd0b266c416e08c28
 2026/11/17 20:30:25 NOTICE:    70.350 KiB / 70.350 KiB, 100%, 70.335 KiB/s, ETA 0s
 2026/11/17 20:30:27 NOTICE:     1.152 MiB / 1.152 MiB, 100%, 0 B/s, ETA -
 [colab_job] saved to Drive: mydrive:opd_runs/latent-three-formal62-c/20261117T062207Z
+[publish] 31 files (2.60 MB), 2 left out, 0 strings redacted -> results:latent-three-formal62-c/20261117T062207Z
+2026/11/17 20:30:30 NOTICE:     3.715 GiB / 19.861 GiB, 19%, 89.842 MiB/s, ETA 3m4s
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent-three-formal62-c/20261117T062207Z
+2026/11/17 20:30:50 NOTICE:     5.275 GiB / 19.861 GiB, 27%, 82.928 MiB/s, ETA 3m
+2026/11/17 20:31:10 NOTICE:     6.826 GiB / 19.861 GiB, 34%, 80.734 MiB/s, ETA 2m45s
+2026/11/17 20:31:30 NOTICE:     8.392 GiB / 19.861 GiB, 42%, 80.545 MiB/s, ETA 2m25s
+2026/11/17 20:31:50 NOTICE:     9.943 GiB / 19.861 GiB, 50%, 79.588 MiB/s, ETA 2m7s
+2026/11/17 20:32:10 NOTICE:    11.510 GiB / 19.861 GiB, 58%, 80.508 MiB/s, ETA 1m46s
+2026/11/17 20:32:30 NOTICE:    12.659 GiB / 19.861 GiB, 64%, 65.249 MiB/s, ETA 1m53s
+2026/11/17 20:32:50 NOTICE:    13.800 GiB / 19.861 GiB, 69%, 60.405 MiB/s, ETA 1m42s
+2026/11/17 20:33:10 NOTICE:    14.956 GiB / 19.861 GiB, 75%, 59.652 MiB/s, ETA 1m24s
+2026/11/17 20:33:30 NOTICE:    16.128 GiB / 19.861 GiB, 81%, 59.807 MiB/s, ETA 1m3s
+2026/11/17 20:33:50 NOTICE:    17.308 GiB / 19.861 GiB, 87%, 60.168 MiB/s, ETA 43s
+2026/11/17 20:34:10 NOTICE:    18.477 GiB / 19.861 GiB, 93%, 59.756 MiB/s, ETA 23s
+2026/11/17 20:34:30 NOTICE:    19.632 GiB / 19.861 GiB, 99%, 59.735 MiB/s, ETA 3s
+2026/11/17 20:34:35 NOTICE:    19.861 GiB / 19.861 GiB, 100%, 55.380 MiB/s, ETA 0s
+2026/11/17 20:34:54 NOTICE: Google drive root 'opd_runs/latent-three-formal62-checkpoints/20261116T061609Z/checkpoint-40': 0 differences found
+2026/11/17 20:34:54 NOTICE: Google drive root 'opd_runs/latent-three-formal62-checkpoints/20261116T061609Z/checkpoint-40': 8 matching files
+P2_CHECKPOINT_DRIVE_VERIFIED 40 mydrive:opd_runs/latent-three-formal62-checkpoints/20261116T061609Z/checkpoint-40
+P2_FORMAL_SEGMENT_START 41 42
+{"step": 41, "domain": "code", "phase": "rollout_start", "timestamp": 1794947737.8389595, "responses": 128, "token_weight": 1.0, "latent_weight": 0.0, "teacher": {"model": "Fate-Zero/Archer2.0-Code-1.5B-Preview", "revision": "db1e1ff9f3c36f7177f3896358ce26edeb62ce56"}, "allocated_bytes": 31988808192, "reserved_bytes": 32413581312}
+{"step": 41, "domain": "code", "phase": "rollout_progress", "timestamp": 1794947863.1549814, "responses": 4, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 68037902336}
+{"step": 41, "domain": "code", "phase": "rollout_progress", "timestamp": 1794948057.2105997, "responses": 8, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 41859153920}
+{"step": 41, "domain": "code", "phase": "rollout_progress", "timestamp": 1794948241.3104267, "responses": 12, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 41859153920}
+{"step": 41, "domain": "code", "phase": "rollout_progress", "timestamp": 1794948433.947983, "responses": 16, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 41859153920}
+{"step": 41, "domain": "code", "phase": "rollout_progress", "timestamp": 1794948505.2958808, "responses": 20, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 41859153920}
+{"step": 41, "domain": "code", "phase": "rollout_progress", "timestamp": 1794948603.7600477, "responses": 24, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 41945137152}
+[colab_job] periodic save (every 20 min)
+2026/11/17 20:50:37 NOTICE:   536.242 KiB / 536.242 KiB, 100%, 535.691 KiB/s, ETA 0s
+2026/11/17 20:50:39 NOTICE:   427.502 KiB / 427.502 KiB, 100%, 427.074 KiB/s, ETA 0s
+2026/11/17 20:50:41 NOTICE:   424.257 KiB / 424.257 KiB, 100%, 424.187 KiB/s, ETA 0s
+2026/11/17 20:50:42 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+2026/11/17 20:50:43 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+2026/11/17 20:50:45 NOTICE:     1.154 MiB / 1.154 MiB, 100%, 0 B/s, ETA -
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-formal62-c/20261117T062207Z
