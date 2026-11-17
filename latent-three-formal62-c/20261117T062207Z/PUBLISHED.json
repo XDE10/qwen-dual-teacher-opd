@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent-three-formal62-c",
   "stamp": "20261117T062207Z",
-  "published_utc": "2026-11-17T22:32:17Z",
+  "published_utc": "2026-11-17T22:52:35Z",
   "job": {
     "state": "running"
   },
@@ -171,9 +171,19 @@
       "sha256": "018dc008b66655725a0020ec6f8717e546582e018fb119931d1fc57e261aabc8"
     },
     {
+      "path": "evidence/checkpoint-42_drive_check.log",
+      "bytes": 283,
+      "sha256": "bb9541f38bf7f84238077d85130b88a25a22d733c06555d1726c5e43966e91a1"
+    },
+    {
+      "path": "evidence/checkpoint-42_verified.json",
+      "bytes": 2763,
+      "sha256": "bd14f67adf860923b636d771d80282ed32551ea13bd5fb64d35b792bd8a61ac8"
+    },
+    {
       "path": "evidence/gpu_samples.csv",
-      "bytes": 485694,
-      "sha256": "40c81b5eb4fe98bd9d3ff119963fef2d2acf9a3a8072bc62a1d5f139e996b469"
+      "bytes": 495571,
+      "sha256": "50595f36bab061e311b194ef878c6cc14d90e60c76cf41fe0d27dec41541cd79"
     },
     {
       "path": "evidence/restore_from_drive.json",
@@ -192,23 +202,23 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 603649,
-      "sha256": "573290cfb561f3dfac896aac5f638ca7cdfc21790256ea97f2d7da684649b745"
+      "bytes": 626232,
+      "sha256": "20adc6d9531c23987e11c7e733b88ddde8b2edba51b389f4294494ed10588dfa"
     },
     {
       "path": "metrics/metrics.jsonl",
-      "bytes": 73842,
-      "sha256": "3a8dfc55639d3fca9ac29e66829b3031a2ca445e210ffb0b80bdf17743d35193"
+      "bytes": 75491,
+      "sha256": "e7162d93e2a7943ca3ef05718732f3cba59da6c405fb26343512d107ad404bc5"
     },
     {
       "path": "phases/phase_metrics.jsonl",
-      "bytes": 1259789,
-      "sha256": "fabd2e8ef566cc4c171172da876707dd56b71dfd2d5cacc6a8ef5125322f7f0e"
+      "bytes": 1279758,
+      "sha256": "cd0a456958e7109cc2f5db2f264c9da0f9a03d4ade4c9b2e9ef97bcfbed4399d"
     },
     {
       "path": "telemetry/gpu_samples.csv",
-      "bytes": 485694,
-      "sha256": "40c81b5eb4fe98bd9d3ff119963fef2d2acf9a3a8072bc62a1d5f139e996b469"
+      "bytes": 495571,
+      "sha256": "50595f36bab061e311b194ef878c6cc14d90e60c76cf41fe0d27dec41541cd79"
     }
   ],
   "redacted_strings": 0,
