@@ -122,3 +122,175 @@ P2_FORMAL_SEGMENT_START 25 26
 2026/11/17 06:53:07 NOTICE:    20.901 MiB / 20.901 MiB, 100%, 428.157 KiB/s, ETA 0s
 2026/11/17 06:53:07 Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
 [colab_job] Drive copy incomplete: job (rclone exit 1), evidence (rclone exit 1), telemetry (rclone exit 1), environment (rclone exit 1), metrics (rclone exit 1), phases (rclone exit 1); destination mydrive:opd_runs/latent-three-formal62-c/20261117T062207Z
+[publish] 16 files (0.81 MB), 2 left out, 0 strings redacted -> results:latent-three-formal62-c/20261117T062207Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent-three-formal62-c/20261117T062207Z
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794898434.9741533, "responses": 88, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 65101889536}
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794898514.5326302, "responses": 92, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 65101889536}
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794898582.1950302, "responses": 96, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 65101889536}
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794898723.9033263, "responses": 100, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 74067214336}
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794898804.442861, "responses": 104, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 74067214336}
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794898840.5901775, "responses": 108, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 74067214336}
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794898921.647162, "responses": 112, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 74067214336}
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794899031.7316973, "responses": 116, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 74067214336}
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794899074.222412, "responses": 120, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 74067214336}
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794899135.816108, "responses": 124, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 74067214336}
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794899204.7500453, "responses": 128, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 74067214336}
+{"step": 25, "domain": "math", "phase": "rollout_cache_release_start", "timestamp": 1794899204.7505007, "driver_free_bytes": 27214610432, "allocated_bytes": 31997327872, "reserved_bytes": 74067214336}
+{"step": 25, "domain": "math", "phase": "rollout_cache_release_done", "timestamp": 1794899204.8766913, "driver_free_bytes": 68868243456, "released_driver_bytes": 41653633024, "seconds": 0.12601418199983527, "allocated_bytes": 31997327872, "reserved_bytes": 32413581312}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899204.8813388, "microbatch": 1, "total_microbatches": 48, "allocated_bytes": 31997327872, "reserved_bytes": 32413581312}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899206.753859, "microbatch": 2, "total_microbatches": 48, "allocated_bytes": 32001487360, "reserved_bytes": 35058089984}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899207.9437418, "microbatch": 3, "total_microbatches": 48, "allocated_bytes": 32000436736, "reserved_bytes": 35058089984}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899209.4867876, "microbatch": 4, "total_microbatches": 48, "allocated_bytes": 32001630720, "reserved_bytes": 35471228928}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899210.7902014, "microbatch": 5, "total_microbatches": 48, "allocated_bytes": 32001339392, "reserved_bytes": 35471228928}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899212.039926, "microbatch": 6, "total_microbatches": 48, "allocated_bytes": 32001200640, "reserved_bytes": 35471228928}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899213.142509, "microbatch": 7, "total_microbatches": 48, "allocated_bytes": 32001015296, "reserved_bytes": 35471228928}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899214.5216155, "microbatch": 8, "total_microbatches": 48, "allocated_bytes": 32001103360, "reserved_bytes": 35471228928}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899216.2360415, "microbatch": 9, "total_microbatches": 48, "allocated_bytes": 32001823744, "reserved_bytes": 36289118208}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899217.666655, "microbatch": 10, "total_microbatches": 48, "allocated_bytes": 32001048576, "reserved_bytes": 36289118208}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899219.004383, "microbatch": 11, "total_microbatches": 48, "allocated_bytes": 32001733632, "reserved_bytes": 36289118208}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899220.0689561, "microbatch": 12, "total_microbatches": 48, "allocated_bytes": 32000407552, "reserved_bytes": 36289118208}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899221.5578675, "microbatch": 13, "total_microbatches": 48, "allocated_bytes": 32001260032, "reserved_bytes": 36289118208}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899222.8037622, "microbatch": 14, "total_microbatches": 48, "allocated_bytes": 32001011200, "reserved_bytes": 36289118208}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899224.529648, "microbatch": 15, "total_microbatches": 48, "allocated_bytes": 32002832896, "reserved_bytes": 36289118208}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899226.1224182, "microbatch": 16, "total_microbatches": 48, "allocated_bytes": 32001522176, "reserved_bytes": 36289118208}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899227.4176674, "microbatch": 17, "total_microbatches": 48, "allocated_bytes": 32001260032, "reserved_bytes": 36289118208}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899228.425437, "microbatch": 18, "total_microbatches": 48, "allocated_bytes": 32000438272, "reserved_bytes": 36289118208}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899229.8253438, "microbatch": 19, "total_microbatches": 48, "allocated_bytes": 32001177088, "reserved_bytes": 36289118208}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899231.0709102, "microbatch": 20, "total_microbatches": 48, "allocated_bytes": 32001036800, "reserved_bytes": 36289118208}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899232.2825756, "microbatch": 21, "total_microbatches": 48, "allocated_bytes": 32000458752, "reserved_bytes": 36289118208}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899233.8679023, "microbatch": 22, "total_microbatches": 48, "allocated_bytes": 32002159104, "reserved_bytes": 36289118208}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899235.380047, "microbatch": 23, "total_microbatches": 48, "allocated_bytes": 32001260032, "reserved_bytes": 36289118208}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899236.6377368, "microbatch": 24, "total_microbatches": 48, "allocated_bytes": 32001270272, "reserved_bytes": 36289118208}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899236.9126399, "microbatch": 25, "total_microbatches": 48, "allocated_bytes": 31998480896, "reserved_bytes": 36289118208}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899238.5164254, "microbatch": 26, "total_microbatches": 48, "allocated_bytes": 32001722368, "reserved_bytes": 36289118208}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899240.0128248, "microbatch": 27, "total_microbatches": 48, "allocated_bytes": 32001522176, "reserved_bytes": 36289118208}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899241.4217181, "microbatch": 28, "total_microbatches": 48, "allocated_bytes": 32001260032, "reserved_bytes": 36289118208}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899242.9236884, "microbatch": 29, "total_microbatches": 48, "allocated_bytes": 32001741824, "reserved_bytes": 36289118208}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899243.9418101, "microbatch": 30, "total_microbatches": 48, "allocated_bytes": 32000408576, "reserved_bytes": 36289118208}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899245.7488065, "microbatch": 31, "total_microbatches": 48, "allocated_bytes": 32001260032, "reserved_bytes": 36289118208}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899246.9589632, "microbatch": 32, "total_microbatches": 48, "allocated_bytes": 32000465920, "reserved_bytes": 36289118208}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899248.7318852, "microbatch": 33, "total_microbatches": 48, "allocated_bytes": 32002832896, "reserved_bytes": 36729520128}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899250.2294278, "microbatch": 34, "total_microbatches": 48, "allocated_bytes": 32001522176, "reserved_bytes": 36729520128}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899251.4998307, "microbatch": 35, "total_microbatches": 48, "allocated_bytes": 32001231872, "reserved_bytes": 36729520128}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899252.5103946, "microbatch": 36, "total_microbatches": 48, "allocated_bytes": 32000392704, "reserved_bytes": 36729520128}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899253.1590042, "microbatch": 37, "total_microbatches": 48, "allocated_bytes": 32000002048, "reserved_bytes": 36729520128}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899254.825286, "microbatch": 38, "total_microbatches": 48, "allocated_bytes": 32002324992, "reserved_bytes": 36729520128}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899256.223783, "microbatch": 39, "total_microbatches": 48, "allocated_bytes": 32001122816, "reserved_bytes": 36729520128}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899257.445915, "microbatch": 40, "total_microbatches": 48, "allocated_bytes": 32000999936, "reserved_bytes": 36729520128}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899259.1316154, "microbatch": 41, "total_microbatches": 48, "allocated_bytes": 32001782784, "reserved_bytes": 36729520128}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899260.3749797, "microbatch": 42, "total_microbatches": 48, "allocated_bytes": 32000468480, "reserved_bytes": 36729520128}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899261.0125175, "microbatch": 43, "total_microbatches": 48, "allocated_bytes": 31999524864, "reserved_bytes": 36729520128}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899262.808836, "microbatch": 44, "total_microbatches": 48, "allocated_bytes": 32001603584, "reserved_bytes": 36729520128}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899264.1549106, "microbatch": 45, "total_microbatches": 48, "allocated_bytes": 32000804352, "reserved_bytes": 36729520128}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899265.6847641, "microbatch": 46, "total_microbatches": 48, "allocated_bytes": 32001603584, "reserved_bytes": 36729520128}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899266.9597495, "microbatch": 47, "total_microbatches": 48, "allocated_bytes": 32000911872, "reserved_bytes": 36729520128}
+{"step": 25, "domain": "math", "phase": "score", "timestamp": 1794899268.3753173, "microbatch": 48, "total_microbatches": 48, "allocated_bytes": 32001603584, "reserved_bytes": 36729520128}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899268.8586755, "microbatch": 1, "total_microbatches": 48, "allocated_bytes": 31997327872, "reserved_bytes": 36729520128}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899274.828686, "microbatch": 2, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 44795166720}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899278.576268, "microbatch": 3, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 50499420160}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899283.2838712, "microbatch": 4, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 51434749952}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899287.2077248, "microbatch": 5, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 51434749952}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899290.930228, "microbatch": 6, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 51434749952}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899294.221217, "microbatch": 7, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 51434749952}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899298.5893574, "microbatch": 8, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 51434749952}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899303.8187528, "microbatch": 9, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899308.130538, "microbatch": 10, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899312.2178483, "microbatch": 11, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899315.460981, "microbatch": 12, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899320.1754563, "microbatch": 13, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899324.1023824, "microbatch": 14, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899329.3613174, "microbatch": 15, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899334.1782973, "microbatch": 16, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899338.0683331, "microbatch": 17, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899341.084173, "microbatch": 18, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899345.5236592, "microbatch": 19, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899349.453938, "microbatch": 20, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899353.2180133, "microbatch": 21, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899358.001607, "microbatch": 22, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899362.5335054, "microbatch": 23, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899366.2741036, "microbatch": 24, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899367.0189204, "microbatch": 25, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899371.8604715, "microbatch": 26, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899376.3490036, "microbatch": 27, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899380.5647006, "microbatch": 28, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899385.194963, "microbatch": 29, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899388.2239745, "microbatch": 30, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899394.0614672, "microbatch": 31, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899397.8416133, "microbatch": 32, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899403.2048607, "microbatch": 33, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899407.694188, "microbatch": 34, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899411.5207973, "microbatch": 35, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899414.5317128, "microbatch": 36, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899416.2670105, "microbatch": 37, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899421.5839632, "microbatch": 38, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899425.9845166, "microbatch": 39, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899429.79442, "microbatch": 40, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899434.8977904, "microbatch": 41, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899438.638812, "microbatch": 42, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899440.5087416, "microbatch": 43, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899446.2310436, "microbatch": 44, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899450.5051215, "microbatch": 45, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899455.0760458, "microbatch": 46, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899458.9055004, "microbatch": 47, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "backward", "timestamp": 1794899463.252, "microbatch": 48, "total_microbatches": 48, "allocated_bytes": 39115577344, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "optimizer_start", "timestamp": 1794899464.6616561, "allocated_bytes": 39115577856, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "optimizer_step_returned", "timestamp": 1794899464.6668978, "allocated_bytes": 39115577856, "reserved_bytes": 52370079744}
+{"step": 25, "domain": "math", "phase": "optimizer_done", "timestamp": 1794899464.7207882, "loss": -2.8956505320966244, "token_loss": -3.619585882872343, "raw_rep_loss": 9.102463167209862e-05, "reward_std": 0.081183522939682, "gradient_norm": 12.740469932556152, "optimizer_updates": 1, "sample_ids": ["math/c14cc34f-b4f5-4686-9a7b-0ef17a5b7f4c", "math/11425409-c209-49e8-8090-7ce4a6fa460f", "math/21721668-5c36-4124-8292-b4ca0f8a19d9", "math/3a2accf3-694b-4c6c-87f4-bd1403471856", "math/53502e51-ad04-4e24-80bc-e656e74186be", "math/54a36161-390e-4aa8-925f-9cfc4bb2fca2", "math/8175cdf7-78df-4211-b746-f4b427cd5ebc", "math/051e2a7a-f841-4872-853e-0fa29de0f1ea", "math/e78ca0be-d488-4855-89a3-50003777c691", "math/6e7f1614-e1ef-4482-bad9-28d53b0b184a", "math/82fb4feb-ddc8-4918-b32d-3419f6986886", "math/e4eede97-5bed-4a2a-9b64-5de4e8cde3e8", "math/6e5f5444-3c2a-46c7-9e59-30563d9be896", "math/a22b23ff-c59a-4c93-8c36-e7c768e76921", "math/319be8e0-e989-4703-9858-3685d625d378", "math/c6f91f10-a0d3-4f00-81fa-07d530819153", "math/15e8f365-a140-4e70-99b7-1ed2cb320da4", "math/f2c0adee-ea2b-4ad9-a74a-fdfdf5b02802", "math/24d91027-2ad9-4da5-87b0-1ecd126e8106", "math/6f7112a8-8477-4050-9e65-95def35413e4", "math/0ab93969-de46-4eed-9732-7f74df0dce0f", "math/8019858a-66d1-42c5-ae43-0b1591208791", "math/da54a3f1-3869-4989-abfc-16739118ab48", "math/e28d375e-a903-41e1-81ba-3e91eaa1f025", "math/c4ff1842-db80-41a5-ac0f-a3a0c7f1e043", "math/1015b85f-02cf-4036-9f81-4a8ee06a59eb", "math/b7de1c96-9bce-4c71-b3ee-fa1c22aa98e6", "math/7a7e5fa1-1be7-487f-b6b7-573d85df69ed", "math/05f83050-cdcb-4f7c-a26c-a751aa2e5fb3", "math/d5e96780-4da8-4c44-9a83-156bef1c96e6", "math/77d0edd3-4199-40e3-b7e0-32ddf7427852", "math/75e434ce-36f9-4ec2-b72c-e0846f2ba1e8"], "responses": 128, "allocator_retries": 0, "allocator_ooms": 0, "response_tokens": 870256, "truncated_responses": 0, "token_weight": 0.8, "latent_weight": 0.19999999999999996, "seconds": 2722.29581323, "peak_allocated_bytes": 48233347584, "peak_reserved_bytes": 74067214336, "allocated_bytes": 39115575808, "reserved_bytes": 52370079744}
+{"step": 26, "domain": "code", "phase": "rollout_start", "timestamp": 1794899464.721115, "responses": 128, "token_weight": 0.8, "latent_weight": 0.19999999999999996, "teacher": {"model": "Fate-Zero/Archer2.0-Code-1.5B-Preview", "revision": "db1e1ff9f3c36f7177f3896358ce26edeb62ce56"}, "allocated_bytes": 39115575808, "reserved_bytes": 52370079744}
+{"step": 26, "domain": "code", "phase": "rollout_progress", "timestamp": 1794899558.624853, "responses": 4, "total": 128, "allocated_bytes": 39115575808, "reserved_bytes": 52430897152}
+[colab_job] periodic save (every 20 min)
+2026/11/17 07:13:43 ERROR : command.json: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:13:43 ERROR : pid: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:13:43 ERROR : child_pid: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:13:52 ERROR : output.log: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:13:52 ERROR : Attempt 1/3 failed with 4 errors and: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:14:13 NOTICE:   531.796 KiB / 573.098 KiB, 93%, 6.905 KiB/s, ETA 5s
+2026/11/17 07:14:27 ERROR : command.json: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:14:30 ERROR : child_pid: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:14:30 ERROR : pid: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:14:30 ERROR : output.log: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:14:30 ERROR : Attempt 2/3 failed with 4 errors and: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:15:13 NOTICE:     1.210 MiB / 1.211 MiB, 100%, 7.868 KiB/s, ETA 0s
+2026/11/17 07:15:13 ERROR : child_pid: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:15:13 ERROR : pid: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:15:13 ERROR : output.log: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:15:13 ERROR : command.json: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:15:13 ERROR : Attempt 3/3 failed with 4 errors and: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:15:13 NOTICE:     1.211 MiB / 1.211 MiB, 100%, 7.868 KiB/s, ETA 0s
+2026/11/17 07:15:13 Failed to copy with 4 errors: last error was: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+{"step": 26, "domain": "code", "phase": "rollout_progress", "timestamp": 1794899729.648293, "responses": 8, "total": 128, "allocated_bytes": 39115575808, "reserved_bytes": 52430897152}
+2026/11/17 07:15:44 ERROR : restore_verified.json: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:15:51 ERROR : restore_from_drive.json: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:15:54 ERROR : gpu_samples.csv: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:15:54 ERROR : Attempt 1/3 failed with 3 errors and: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:16:13 NOTICE:   494.098 KiB / 525.025 KiB, 94%, 8.254 KiB/s, ETA 3s
+2026/11/17 07:16:19 ERROR : restore_verified.json: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:16:22 ERROR : restore_from_drive.json: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:16:24 ERROR : gpu_samples.csv: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:16:24 ERROR : Attempt 2/3 failed with 3 errors and: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:17:08 ERROR : gpu_samples.csv: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:17:10 ERROR : restore_verified.json: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:17:11 ERROR : restore_from_drive.json: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:17:11 ERROR : Attempt 3/3 failed with 3 errors and: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:17:11 NOTICE:   927.012 KiB / 927.012 KiB, 100%, 8.534 KiB/s, ETA 0s
+2026/11/17 07:17:11 Failed to copy with 3 errors: last error was: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:17:28 ERROR : gpu_samples.csv: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:17:28 ERROR : Attempt 1/3 failed with 1 errors and: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:17:44 ERROR : gpu_samples.csv: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:17:44 ERROR : Attempt 2/3 failed with 1 errors and: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+{"step": 26, "domain": "code", "phase": "rollout_progress", "timestamp": 1794899875.6928098, "responses": 12, "total": 128, "allocated_bytes": 39115575808, "reserved_bytes": 52430897152}
+2026/11/17 07:18:01 ERROR : gpu_samples.csv: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:18:01 ERROR : Attempt 3/3 failed with 1 errors and: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:18:01 NOTICE:   793.564 KiB / 793.564 KiB, 100%, 15.523 KiB/s, ETA 0s
+2026/11/17 07:18:01 Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:18:36 ERROR : cpu-tests.txt: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:18:36 ERROR : imports.txt: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:18:36 ERROR : gpu.csv: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:18:36 ERROR : benchmarks.txt: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:19:02 NOTICE:   112.422 KiB / 128.716 KiB, 87%, 3.458 KiB/s, ETA 4s
+2026/11/17 07:19:09 ERROR : Attempt 1/3 failed with 4 errors and: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 07:19:10 ERROR : Attempt 2/3 succeeded
+2026/11/17 07:19:10 NOTICE:   159.471 KiB / 159.471 KiB, 100%, 4.229 KiB/s, ETA 0s
+2026/11/17 07:19:12 NOTICE:    44.055 KiB / 44.055 KiB, 100%, 0 B/s, ETA -
+2026/11/17 07:19:14 NOTICE:   737.038 KiB / 737.038 KiB, 100%, 0 B/s, ETA -
+[colab_job] Drive copy incomplete: job (rclone exit 1), evidence (rclone exit 1), telemetry (rclone exit 1); destination mydrive:opd_runs/latent-three-formal62-c/20261117T062207Z
