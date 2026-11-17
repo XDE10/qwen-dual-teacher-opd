@@ -234,3 +234,14 @@
 2026/11/17 12:12:01 NOTICE:    68.129 KiB / 68.129 KiB, 100%, 68.122 KiB/s, ETA 0s
 2026/11/17 12:12:02 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
 [colab_job] saved to Drive: p2drive:opd_runs/latent-three-eval28/20261117T095221Z
+[publish] 31 files (48.02 MB), 6 left out, 0 strings redacted -> results:latent-three-eval28/20261117T095221Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent-three-eval28/20261117T095221Z
+{"event": "eval_batch_done", "model": "latent-28", "suite": "logic_dev", "done": 200, "total": 200, "response_tokens": 55278, "seconds": 178.2476606149994, "peak_allocated_bytes": 23880464896}
+{"event": "eval_suite_done", "model": "latent-28", "suite": "logic_dev", "count": 200, "summary": {"model": {"checkpoint_manifest_sha256": "b52e94769768898f965a196c600a9baaa54ffe7b25e2d45d3e9994e94462a47f", "step": 28, "student": {"model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B", "revision": "ad9f0ae0864d7fbcd1cd905e3c6c5b069cc8b562"}}, "cap": 8192, "batch_size": 64, "support": 151665, "torch": "2.8.0+cu128", "transformers": "4.57.6", "decoding": "HF BF16 greedy; repetition_penalty=1.0; common support", "prompt_contract_sha256": "4f531ef0a625868c3c822b045ec170fd4634971631488e34421a5ae179452e8f", "suite_sha256": {"code_dev": "c7e111eade71c4482680cb21e89bf3164e6b01fdbd20895ff295ac11f449813f", "math_dev": "a438e79e46893921ec3c14b96deaf2174668902bd0cc234a0345bd51c8c3903c", "logic_dev": "da749325bfdc8bf816b92542f7735ef2cb7b360d11fb55f3e72311cd100b5edb"}, "count": 200, "truncated": 118, "mean_generated_tokens": 7041.79, "data_sha256": "da749325bfdc8bf816b92542f7735ef2cb7b360d11fb55f3e72311cd100b5edb", "unclosed_thinking": 117, "empty_final": 117, "accuracy": 0.225, "mean_verifier_score": 0.24578958327546296}}
+{"event": "eval_batch_start", "model": "base-r1", "suite": "logic_dev", "batch": 1, "size": 64}
+[colab_job] periodic save (every 5 min)
+2026/11/17 12:17:19 NOTICE:    23.631 KiB / 23.631 KiB, 100%, 23.628 KiB/s, ETA 0s
+2026/11/17 12:17:24 NOTICE:    11.729 MiB / 11.729 MiB, 100%, 5.863 MiB/s, ETA 0s
+2026/11/17 12:17:27 NOTICE:    70.820 KiB / 70.820 KiB, 100%, 70.814 KiB/s, ETA 0s
+2026/11/17 12:17:29 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+[colab_job] saved to Drive: p2drive:opd_runs/latent-three-eval28/20261117T095221Z

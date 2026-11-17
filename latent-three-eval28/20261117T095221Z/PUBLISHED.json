@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent-three-eval28",
   "stamp": "20261117T095221Z",
-  "published_utc": "2026-11-17T12:12:06Z",
+  "published_utc": "2026-11-17T12:17:32Z",
   "job": {
     "state": "running"
   },
@@ -96,6 +96,11 @@
       "sha256": "cbafa338b15c3dbc7e75c2556cb4e5e8cb00db00fee1cda397f5e167bf70b0b6"
     },
     {
+      "path": "eval/base-r1/generation_identity.json",
+      "bytes": 525,
+      "sha256": "b2e3f54a341f1fc6e0faf5414fcbffbba2008ea9864f3dca82ed4391db64949d"
+    },
+    {
       "path": "eval/base-r1/math_dev.jsonl",
       "bytes": 3039503,
       "sha256": "def0f09d8163b17d3a102baa187b18b6eea557d73122c1705b099a61a974e261"
@@ -136,6 +141,11 @@
       "sha256": "384f448a1d86b1b40f06db8267d9369ffcd59dcd61ce6c1b7e27ddaa6b7169e5"
     },
     {
+      "path": "eval/latent-28/batches/logic_dev/0003.json",
+      "bytes": 923221,
+      "sha256": "1ff7436eadd3ff63036a660593e54360a2d3100457b33f274839d12941905695"
+    },
+    {
       "path": "eval/latent-28/batches/math_dev/0000.json",
       "bytes": 3854814,
       "sha256": "458bb70d80a84670ad134dfba7bb46fbfe22d47836c5f39cd3705317a93f139d"
@@ -171,6 +181,11 @@
       "sha256": "9bcefc8af79fabd70d4f0ef32ead844437350dd11c4760111eca98bdb30424bf"
     },
     {
+      "path": "eval/latent-28/logic_dev.summary.json",
+      "bytes": 1112,
+      "sha256": "86db8e334db5384fa183fe01e1e70c52db798df88ab9e858c71aa7297e82b100"
+    },
+    {
       "path": "eval/latent-28/math_dev.summary.json",
       "bytes": 1119,
       "sha256": "635d54fb25f177405b2a7ac1543fa8466b10abf7c0baa6245376c7d2574b39d0"
@@ -187,13 +202,13 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 22519,
-      "sha256": "edf75a2433ff673f08805a52adfdb77b0d7d3ca5b8daf6db2ba163297b70f994"
+      "bytes": 24593,
+      "sha256": "e9e24ae61e32799b5f6a4cfae42ac2c7310cb510b47ae2406d20e9b158cfc81b"
     },
     {
       "path": "telemetry/gpu_samples.csv",
-      "bytes": 69806,
-      "sha256": "7f5b31fb8ecd57db6747581b6e0e6230073195236268c1a72d5d8e07ecbd15c1"
+      "bytes": 72520,
+      "sha256": "d449414314338ab4b1744eb952dbb06ee1744bf334bc3c58d637479d086cb642"
     }
   ],
   "redacted_strings": 0,
@@ -221,9 +236,13 @@
     {
       "path": "eval/latent-28/code_dev.jsonl",
       "reason": "over the 50 MB total"
+    },
+    {
+      "path": "eval/latent-28/logic_dev.jsonl",
+      "reason": "over the 50 MB total"
     }
   ],
-  "skipped_count": 6,
+  "skipped_count": 7,
   "limits_mb": {
     "per_file": 20,
     "total": 50

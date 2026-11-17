@@ -1,0 +1,30 @@
+{
+  "model": {
+    "checkpoint_manifest_sha256": "b52e94769768898f965a196c600a9baaa54ffe7b25e2d45d3e9994e94462a47f",
+    "step": 28,
+    "student": {
+      "model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+      "revision": "ad9f0ae0864d7fbcd1cd905e3c6c5b069cc8b562"
+    }
+  },
+  "cap": 8192,
+  "batch_size": 64,
+  "support": 151665,
+  "torch": "2.8.0+cu128",
+  "transformers": "4.57.6",
+  "decoding": "HF BF16 greedy; repetition_penalty=1.0; common support",
+  "prompt_contract_sha256": "4f531ef0a625868c3c822b045ec170fd4634971631488e34421a5ae179452e8f",
+  "suite_sha256": {
+    "code_dev": "c7e111eade71c4482680cb21e89bf3164e6b01fdbd20895ff295ac11f449813f",
+    "math_dev": "a438e79e46893921ec3c14b96deaf2174668902bd0cc234a0345bd51c8c3903c",
+    "logic_dev": "da749325bfdc8bf816b92542f7735ef2cb7b360d11fb55f3e72311cd100b5edb"
+  },
+  "count": 200,
+  "truncated": 118,
+  "mean_generated_tokens": 7041.79,
+  "data_sha256": "da749325bfdc8bf816b92542f7735ef2cb7b360d11fb55f3e72311cd100b5edb",
+  "unclosed_thinking": 117,
+  "empty_final": 117,
+  "accuracy": 0.225,
+  "mean_verifier_score": 0.24578958327546296
+}
