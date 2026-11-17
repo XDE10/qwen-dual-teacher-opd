@@ -3674,3 +3674,23 @@ P2_FORMAL_SEGMENT_START 43 44
 2026/11/17 23:33:09 NOTICE:    75.606 KiB / 75.606 KiB, 100%, 0 B/s, ETA -
 2026/11/17 23:33:11 NOTICE:     1.244 MiB / 1.244 MiB, 100%, 0 B/s, ETA -
 [colab_job] saved to Drive: mydrive:opd_runs/latent-three-formal62-c/20261117T062207Z
+[publish] 34 files (2.97 MB), 2 left out, 0 strings redacted -> results:latent-three-formal62-c/20261117T062207Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent-three-formal62-c/20261117T062207Z
+{"step": 44, "domain": "code", "phase": "rollout_progress", "timestamp": 1794958505.1028302, "responses": 20, "total": 128, "allocated_bytes": 39119279104, "reserved_bytes": 50816090112}
+{"step": 44, "domain": "code", "phase": "rollout_progress", "timestamp": 1794958537.7687898, "responses": 24, "total": 128, "allocated_bytes": 39119279104, "reserved_bytes": 50816090112}
+{"step": 44, "domain": "code", "phase": "rollout_progress", "timestamp": 1794958732.2923815, "responses": 28, "total": 128, "allocated_bytes": 39119279104, "reserved_bytes": 50816090112}
+{"step": 44, "domain": "code", "phase": "rollout_progress", "timestamp": 1794958799.055425, "responses": 32, "total": 128, "allocated_bytes": 39119279104, "reserved_bytes": 50816090112}
+{"step": 44, "domain": "code", "phase": "rollout_progress", "timestamp": 1794958827.0969148, "responses": 36, "total": 128, "allocated_bytes": 39119279104, "reserved_bytes": 50816090112}
+{"step": 44, "domain": "code", "phase": "rollout_progress", "timestamp": 1794959020.005324, "responses": 40, "total": 128, "allocated_bytes": 39119279104, "reserved_bytes": 50816090112}
+{"step": 44, "domain": "code", "phase": "rollout_progress", "timestamp": 1794959078.8913941, "responses": 44, "total": 128, "allocated_bytes": 39119279104, "reserved_bytes": 50816090112}
+{"step": 44, "domain": "code", "phase": "rollout_progress", "timestamp": 1794959271.9897218, "responses": 48, "total": 128, "allocated_bytes": 39119279104, "reserved_bytes": 50816090112}
+{"step": 44, "domain": "code", "phase": "rollout_progress", "timestamp": 1794959464.9754918, "responses": 52, "total": 128, "allocated_bytes": 39119279104, "reserved_bytes": 50816090112}
+{"step": 44, "domain": "code", "phase": "rollout_progress", "timestamp": 1794959569.88292, "responses": 56, "total": 128, "allocated_bytes": 39119279104, "reserved_bytes": 50816090112}
+[colab_job] periodic save (every 20 min)
+2026/11/17 23:53:21 NOTICE:   638.872 KiB / 638.872 KiB, 100%, 638.766 KiB/s, ETA 0s
+2026/11/17 23:53:23 NOTICE:   513.891 KiB / 513.891 KiB, 100%, 513.745 KiB/s, ETA 0s
+2026/11/17 23:53:26 NOTICE:   513.932 KiB / 513.932 KiB, 100%, 513.737 KiB/s, ETA 0s
+2026/11/17 23:53:26 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+2026/11/17 23:53:27 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+2026/11/17 23:53:30 NOTICE:     1.245 MiB / 1.245 MiB, 100%, 637.355 KiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-formal62-c/20261117T062207Z
