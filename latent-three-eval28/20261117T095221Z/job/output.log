@@ -307,3 +307,14 @@
 2026/11/17 12:55:09 NOTICE:    89.359 KiB / 89.359 KiB, 100%, 89.296 KiB/s, ETA 0s
 2026/11/17 12:55:11 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
 [colab_job] saved to Drive: p2drive:opd_runs/latent-three-eval28/20261117T095221Z
+[publish] 35 files (48.74 MB), 9 left out, 0 strings redacted -> results:latent-three-eval28/20261117T095221Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent-three-eval28/20261117T095221Z
+{"event": "eval_batch_done", "model": "base-r1", "suite": "logic_dev", "done": 200, "total": 200, "response_tokens": 54760, "seconds": 178.15320895399964, "peak_allocated_bytes": 23880464896}
+{"event": "eval_suite_done", "model": "base-r1", "suite": "logic_dev", "count": 200, "summary": {"model": {"model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B", "revision": "ad9f0ae0864d7fbcd1cd905e3c6c5b069cc8b562"}, "cap": 8192, "batch_size": 64, "support": 151665, "torch": "2.8.0+cu128", "transformers": "4.57.6", "decoding": "HF BF16 greedy; repetition_penalty=1.0; common support", "prompt_contract_sha256": "4f531ef0a625868c3c822b045ec170fd4634971631488e34421a5ae179452e8f", "suite_sha256": {"logic_dev": "da749325bfdc8bf816b92542f7735ef2cb7b360d11fb55f3e72311cd100b5edb"}, "count": 200, "truncated": 93, "mean_generated_tokens": 4504.33, "data_sha256": "da749325bfdc8bf816b92542f7735ef2cb7b360d11fb55f3e72311cd100b5edb", "unclosed_thinking": 93, "empty_final": 93, "accuracy": 0.045, "mean_verifier_score": 0.05238332118055555}}
+P2_EVAL28_GENERATION_COMPLETE
+[colab_job] command exited with status 0; saving results
+2026/11/17 12:57:01 NOTICE:    30.604 KiB / 30.604 KiB, 100%, 30.599 KiB/s, ETA 0s
+2026/11/17 12:57:05 NOTICE:     8.206 MiB / 8.206 MiB, 100%, 4.100 MiB/s, ETA 0s
+2026/11/17 12:57:08 NOTICE:    90.262 KiB / 90.262 KiB, 100%, 90.164 KiB/s, ETA 0s
+2026/11/17 12:57:10 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+[colab_job] saved to Drive: p2drive:opd_runs/latent-three-eval28/20261117T095221Z

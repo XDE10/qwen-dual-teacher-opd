@@ -1,0 +1,18 @@
+{
+  "checkpoint_manifest_sha256": "b52e94769768898f965a196c600a9baaa54ffe7b25e2d45d3e9994e94462a47f",
+  "checkpoint_step": 28,
+  "cap": 8192,
+  "batch_size": 64,
+  "counts": {
+    "math_dev": 256,
+    "code_dev": 200,
+    "logic_dev": 200
+  },
+  "reused_base_domains": [
+    "math_dev",
+    "code_dev"
+  ],
+  "generated_checkpoint_responses": 656,
+  "generated_new_base_responses": 200,
+  "time": 1794920217.0696673
+}
