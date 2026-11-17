@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent-three-eval28",
   "stamp": "20261117T095221Z",
-  "published_utc": "2026-11-17T10:56:34Z",
+  "published_utc": "2026-11-17T11:01:58Z",
   "job": {
     "state": "running"
   },
@@ -167,13 +167,13 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 10545,
-      "sha256": "38d97a4fb4e6be4563c950ffb80fa2075c9691df09ce96556f780a50a20c335f"
+      "bytes": 11188,
+      "sha256": "734eec1fba9356a2390f969ad2d6eef637c8b728ff99bcfe01fceb5c333effcf"
     },
     {
       "path": "telemetry/gpu_samples.csv",
-      "bytes": 31755,
-      "sha256": "ea6e7d728b5bcb8f11cd20c18f375846e8e24daac772aad133ccd2f1d9e1e244"
+      "bytes": 34485,
+      "sha256": "cb165f2a203baba48b4216677046abb1cfbc96097c41e5cbba063f2ce458f421"
     }
   ],
   "redacted_strings": 0,
