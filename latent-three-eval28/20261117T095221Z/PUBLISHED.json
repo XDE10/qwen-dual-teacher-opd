@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent-three-eval28",
   "stamp": "20261117T095221Z",
-  "published_utc": "2026-11-17T11:28:51Z",
+  "published_utc": "2026-11-17T11:34:16Z",
   "job": {
     "state": "running"
   },
@@ -146,14 +146,14 @@
       "sha256": "e0d2f11b6518a6056e6e733199c7411513d18b9a5d53b1ef8290dc547674ff87"
     },
     {
+      "path": "eval/latent-28/batches/math_dev/0003.json",
+      "bytes": 5904526,
+      "sha256": "cb58e6544612bd2c74c3d3bb7a62a1693c971ecb79ee7d54ae602310475305be"
+    },
+    {
       "path": "eval/latent-28/code_dev.candidates.jsonl",
       "bytes": 245742,
       "sha256": "9d0d83f511c27766953c68067c36033aec3bf0eb1cb3595105594774c7d70b0a"
-    },
-    {
-      "path": "eval/latent-28/code_dev.jsonl",
-      "bytes": 9688410,
-      "sha256": "c36ac645f6b45719502ce1e0f1425f500bcac066a311858999e1269ead1a31fe"
     },
     {
       "path": "eval/latent-28/code_dev.summary.json",
@@ -164,6 +164,11 @@
       "path": "eval/latent-28/generation_identity.json",
       "bytes": 838,
       "sha256": "9bcefc8af79fabd70d4f0ef32ead844437350dd11c4760111eca98bdb30424bf"
+    },
+    {
+      "path": "eval/latent-28/math_dev.summary.json",
+      "bytes": 1119,
+      "sha256": "635d54fb25f177405b2a7ac1543fa8466b10abf7c0baa6245376c7d2574b39d0"
     },
     {
       "path": "eval/reference_base_protocol.json",
@@ -177,13 +182,13 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 15014,
-      "sha256": "340fb48a599a84dffa986ddf984075368a740a5cbe3195446006bd6d49d807eb"
+      "bytes": 17096,
+      "sha256": "d7917db339d16de37608275bbee0af9c346142516100fef64c5561ccaeaf45dc"
     },
     {
       "path": "telemetry/gpu_samples.csv",
-      "bytes": 48009,
-      "sha256": "31d3431291cdd3b18a99fb9bb3e30cf6913c69a8350449f3027a20ec5dee64b6"
+      "bytes": 50739,
+      "sha256": "844518fd3352569439b49fcf66743c131b15d63d2e40d6f02b81e53d67015592"
     }
   ],
   "redacted_strings": 0,
@@ -195,9 +200,17 @@
     {
       "path": "job/pid",
       "reason": "not a text result"
+    },
+    {
+      "path": "eval/latent-28/math_dev.jsonl",
+      "reason": "over the 50 MB total"
+    },
+    {
+      "path": "eval/latent-28/code_dev.jsonl",
+      "reason": "over the 50 MB total"
     }
   ],
-  "skipped_count": 2,
+  "skipped_count": 4,
   "limits_mb": {
     "per_file": 20,
     "total": 50
