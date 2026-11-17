@@ -1,0 +1,34 @@
+{
+  "name": "latent-three-eval28",
+  "command": [
+    "bash",
+    "/content/eval28_package/run_eval.sh"
+  ],
+  "cwd": "/content/project2",
+  "started_utc": "2026-11-17T09:52:21Z",
+  "stamp": "20261117T095221Z",
+  "save": [
+    [
+      "eval",
+      "/content/runs/latent_three_eval28_20261117/eval"
+    ],
+    [
+      "telemetry",
+      "/content/runs/latent_three_eval28_20261117/telemetry"
+    ],
+    [
+      "environment",
+      "/content/runs/latent_three_eval28_20261117/environment"
+    ]
+  ],
+  "drive": "p2drive:opd_runs",
+  "publish": true,
+  "sync_every_min": 5.0,
+  "drive_about": {
+    "total": 5497558138880,
+    "used": 63980183255,
+    "trashed": 0,
+    "other": 626975,
+    "free": 5433577328650
+  }
+}

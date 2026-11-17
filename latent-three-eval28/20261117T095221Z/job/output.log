@@ -1,0 +1,12 @@
+[colab_job] running: bash /content/eval28_package/run_eval.sh
+2026/11/17 09:52:46 NOTICE:     8.048 GiB / 19.861 GiB, 41%, 415.543 MiB/s, ETA 29s
+2026/11/17 09:53:06 NOTICE:    14.970 GiB / 19.861 GiB, 75%, 361.720 MiB/s, ETA 13s
+2026/11/17 09:53:26 NOTICE:    19.861 GiB / 19.861 GiB, 100%, 263.086 MiB/s, ETA 0s
+2026/11/17 09:53:39 NOTICE:    19.861 GiB / 19.861 GiB, 100%, 113.690 MiB/s, ETA 0s
+{"event": "eval_batch_start", "model": "latent-28", "suite": "code_dev", "batch": 1, "size": 64}
+[colab_job] periodic save (every 5 min)
+2026/11/17 09:57:29 NOTICE:     1.233 KiB / 1.233 KiB, 100%, 252 B/s, ETA 0s
+2026/11/17 09:57:39 NOTICE:     6.475 MiB / 6.475 MiB, 100%, 946.782 KiB/s, ETA 0s
+2026/11/17 09:57:43 NOTICE:     2.054 KiB / 2.054 KiB, 100%, 1.027 KiB/s, ETA 0s
+2026/11/17 09:57:50 NOTICE:    17.757 KiB / 17.757 KiB, 100%, 4.438 KiB/s, ETA 0s
+[colab_job] saved to Drive: p2drive:opd_runs/latent-three-eval28/20261117T095221Z
