@@ -1,0 +1,124 @@
+[colab_job] running: bash /content/formal_step62_package/run_formal62.sh 20261116T061609Z 24
+P2_RESTORE_START 24 mydrive:opd_runs/latent-three-formal62-checkpoints/20261116T061609Z
+2026/11/17 06:22:30 NOTICE:     7.646 GiB / 19.861 GiB, 38%, 392.458 MiB/s, ETA 31s
+2026/11/17 06:22:50 NOTICE:    14.175 GiB / 19.861 GiB, 71%, 339.436 MiB/s, ETA 17s
+2026/11/17 06:23:10 NOTICE:    19.861 GiB / 19.861 GiB, 100%, 290.875 MiB/s, ETA 0s
+2026/11/17 06:23:24 NOTICE:    19.861 GiB / 19.861 GiB, 100%, 110.478 MiB/s, ETA 0s
+P2_CHECKPOINT_LOCAL_VERIFIED 24 6527aed0aa7bdb42dbb08d3008bb7569e1d358adece7b842186d294074628238
+P2_RESTORE_VERIFIED 24
+P2_FORMAL_SEGMENT_START 25 26
+{"step": 25, "domain": "math", "phase": "rollout_start", "timestamp": 1794896742.4248338, "responses": 128, "token_weight": 0.8, "latent_weight": 0.19999999999999996, "teacher": {"model": "hbx/JustRL-DeepSeek-1.5B", "revision": "0637e4096c789c67f9eecbe8355e0bdeddede1c2"}, "allocated_bytes": 31988808192, "reserved_bytes": 32413581312}
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794896815.353516, "responses": 4, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 46424653824}
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794896887.729017, "responses": 8, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 48362422272}
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794897003.001257, "responses": 12, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 65097695232}
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794897063.541895, "responses": 16, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 65101889536}
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794897152.775654, "responses": 20, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 65101889536}
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794897211.05779, "responses": 24, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 65101889536}
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794897280.6921415, "responses": 28, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 65101889536}
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794897328.8998315, "responses": 32, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 65101889536}
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794897385.7095625, "responses": 36, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 65101889536}
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794897479.5116234, "responses": 40, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 65101889536}
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794897556.0650046, "responses": 44, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 65101889536}
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794897647.7348115, "responses": 48, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 65101889536}
+[colab_job] periodic save (every 20 min)
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794897737.4462106, "responses": 52, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 65101889536}
+2026/11/17 06:42:48 ERROR : child_pid: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:42:51 ERROR : output.log: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:42:51 ERROR : pid: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:42:51 ERROR : command.json: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:42:51 ERROR : Attempt 1/3 failed with 4 errors and: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:43:08 NOTICE:    63.779 KiB / 68.911 KiB, 93%, 1.208 KiB/s, ETA 4s
+2026/11/17 06:43:27 ERROR : child_pid: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:43:27 ERROR : output.log: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:43:27 ERROR : pid: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:43:28 ERROR : command.json: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:43:28 ERROR : Attempt 2/3 failed with 4 errors and: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794897816.3998456, "responses": 56, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 65101889536}
+2026/11/17 06:44:03 ERROR : pid: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:44:03 ERROR : child_pid: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:44:03 ERROR : output.log: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:44:08 NOTICE:   151.807 KiB / 152.920 KiB, 99%, 1.472 KiB/s, ETA 0s
+2026/11/17 06:44:08 ERROR : command.json: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:44:08 ERROR : Attempt 3/3 failed with 4 errors and: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:44:08 NOTICE:   152.920 KiB / 152.920 KiB, 100%, 1.472 KiB/s, ETA 0s
+2026/11/17 06:44:08 Failed to copy with 4 errors: last error was: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:44:43 ERROR : gpu_samples.csv: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:44:50 ERROR : restore_verified.json: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:44:53 ERROR : restore_from_drive.json: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:44:53 ERROR : Attempt 1/3 failed with 3 errors and: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794897898.249102, "responses": 60, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 65101889536}
+2026/11/17 06:45:09 NOTICE:   225.428 KiB / 241.052 KiB, 94%, 3.673 KiB/s, ETA 4s
+2026/11/17 06:45:26 ERROR : gpu_samples.csv: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:45:26 ERROR : restore_verified.json: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:45:29 ERROR : restore_from_drive.json: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:45:29 ERROR : Attempt 2/3 failed with 3 errors and: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:45:59 ERROR : restore_from_drive.json: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:46:02 ERROR : gpu_samples.csv: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:46:02 ERROR : restore_verified.json: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:46:02 ERROR : Attempt 3/3 failed with 3 errors and: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:46:02 NOTICE:   467.900 KiB / 467.900 KiB, 100%, 4.341 KiB/s, ETA 0s
+2026/11/17 06:46:02 Failed to copy with 3 errors: last error was: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794897969.6775987, "responses": 64, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 65101889536}
+2026/11/17 06:46:18 ERROR : gpu_samples.csv: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:46:18 ERROR : Attempt 1/3 failed with 1 errors and: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:46:34 ERROR : gpu_samples.csv: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:46:34 ERROR : Attempt 2/3 failed with 1 errors and: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:46:53 ERROR : gpu_samples.csv: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:46:53 ERROR : Attempt 3/3 failed with 1 errors and: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:46:53 NOTICE:   332.402 KiB / 332.402 KiB, 100%, 5.985 KiB/s, ETA 0s
+2026/11/17 06:46:53 Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794898040.6482894, "responses": 68, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 65101889536}
+2026/11/17 06:47:54 NOTICE:    10.261 KiB / 28.021 KiB, 37%, 128 B/s, ETA 2m21s (xfr#0/8)
+2026/11/17 06:48:01 ERROR : benchmarks.txt: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:48:01 ERROR : gpu.csv: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:48:01 ERROR : cpu-tests.txt: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:48:01 ERROR : imports.txt: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794898103.978045, "responses": 72, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 65101889536}
+2026/11/17 06:48:33 ERROR : torch.txt: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:48:33 ERROR : pip-check.txt: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:48:33 ERROR : nvidia-smi.txt: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:48:33 ERROR : pip-freeze.txt: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:48:33 ERROR : Attempt 1/3 failed with 8 errors and: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:48:54 NOTICE:   183.751 KiB / 201.391 KiB, 91%, 1.685 KiB/s, ETA 10s (xfr#0/8)
+2026/11/17 06:49:20 ERROR : gpu.csv: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:49:24 ERROR : benchmarks.txt: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:49:25 ERROR : cpu-tests.txt: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:49:29 ERROR : imports.txt: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794898176.4916499, "responses": 76, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 65101889536}
+2026/11/17 06:49:54 NOTICE:   324.072 KiB / 340.366 KiB, 95%, 3.071 KiB/s, ETA 5s
+2026/11/17 06:49:55 ERROR : nvidia-smi.txt: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:49:57 ERROR : pip-freeze.txt: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:49:57 ERROR : pip-check.txt: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:50:00 ERROR : torch.txt: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:50:00 ERROR : Attempt 2/3 failed with 8 errors and: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:50:36 ERROR : benchmarks.txt: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:50:36 ERROR : imports.txt: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:50:36 ERROR : cpu-tests.txt: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:50:38 ERROR : gpu.csv: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794898241.3935142, "responses": 80, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 65101889536}
+2026/11/17 06:50:54 NOTICE:   435.029 KiB / 451.323 KiB, 96%, 3.071 KiB/s, ETA 5s
+2026/11/17 06:51:22 ERROR : pip-check.txt: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:51:22 ERROR : torch.txt: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:51:22 ERROR : nvidia-smi.txt: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:51:22 ERROR : pip-freeze.txt: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:51:22 ERROR : Attempt 3/3 failed with 8 errors and: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:51:22 NOTICE:   532.793 KiB / 532.793 KiB, 100%, 3.071 KiB/s, ETA 0s
+2026/11/17 06:51:22 Failed to copy with 8 errors: last error was: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:51:40 ERROR : metrics.jsonl: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:51:40 ERROR : Attempt 1/3 failed with 1 errors and: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:51:57 ERROR : metrics.jsonl: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:51:57 ERROR : Attempt 2/3 failed with 1 errors and: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:52:15 ERROR : metrics.jsonl: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:52:15 ERROR : Attempt 3/3 failed with 1 errors and: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:52:15 NOTICE:     1.235 MiB / 1.235 MiB, 100%, 23.800 KiB/s, ETA 0s
+2026/11/17 06:52:15 Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:52:32 ERROR : phase_metrics.jsonl: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:52:32 ERROR : Attempt 1/3 failed with 1 errors and: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+{"step": 25, "domain": "math", "phase": "rollout_progress", "timestamp": 1794898354.5512714, "responses": 84, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 65101889536}
+2026/11/17 06:52:50 ERROR : phase_metrics.jsonl: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:52:50 ERROR : Attempt 2/3 failed with 1 errors and: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:53:07 ERROR : phase_metrics.jsonl: Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:53:07 ERROR : Attempt 3/3 failed with 1 errors and: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+2026/11/17 06:53:07 NOTICE:    20.901 MiB / 20.901 MiB, 100%, 428.157 KiB/s, ETA 0s
+2026/11/17 06:53:07 Failed to copy: googleapi: Error 403: User rate limit exceeded., userRateLimitExceeded
+[colab_job] Drive copy incomplete: job (rclone exit 1), evidence (rclone exit 1), telemetry (rclone exit 1), environment (rclone exit 1), metrics (rclone exit 1), phases (rclone exit 1); destination mydrive:opd_runs/latent-three-formal62-c/20261117T062207Z
