@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent-three-eval28",
   "stamp": "20261117T095221Z",
-  "published_utc": "2026-11-17T11:01:58Z",
+  "published_utc": "2026-11-17T11:07:21Z",
   "job": {
     "state": "running"
   },
@@ -136,6 +136,11 @@
       "sha256": "458bb70d80a84670ad134dfba7bb46fbfe22d47836c5f39cd3705317a93f139d"
     },
     {
+      "path": "eval/latent-28/batches/math_dev/0001.json",
+      "bytes": 4494851,
+      "sha256": "ef9489c4003f0af5e161b356ed4e517a721d64265dbeca96ebaf47f623432fcf"
+    },
+    {
       "path": "eval/latent-28/code_dev.candidates.jsonl",
       "bytes": 245742,
       "sha256": "9d0d83f511c27766953c68067c36033aec3bf0eb1cb3595105594774c7d70b0a"
@@ -167,13 +172,13 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 11188,
-      "sha256": "734eec1fba9356a2390f969ad2d6eef637c8b728ff99bcfe01fceb5c333effcf"
+      "bytes": 12137,
+      "sha256": "ee23fa35c791f68638f911d2687677c3d58eac1242734223f09b5f026971ef76"
     },
     {
       "path": "telemetry/gpu_samples.csv",
-      "bytes": 34485,
-      "sha256": "cb165f2a203baba48b4216677046abb1cfbc96097c41e5cbba063f2ce458f421"
+      "bytes": 37173,
+      "sha256": "b2ac26476da4a8dadec61316f436cc96ab4258085df129dcc41421237623f3e9"
     }
   ],
   "redacted_strings": 0,
