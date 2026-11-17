@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent-three-formal62-c",
   "stamp": "20261117T062207Z",
-  "published_utc": "2026-11-17T17:07:21Z",
+  "published_utc": "2026-11-17T17:27:41Z",
   "job": {
     "state": "running"
   },
@@ -141,14 +141,19 @@
       "sha256": "a6b710e9784e8cfee9f32346140f61a48acdb627f0a2ca4114fd45d62da1afa4"
     },
     {
+      "path": "evidence/checkpoint-36_drive_check.log",
+      "bytes": 283,
+      "sha256": "fd557b21b6aae54244b76e0828ee74cadbbac5df3af7fd28bdd6e068f065a539"
+    },
+    {
       "path": "evidence/checkpoint-36_verified.json",
-      "bytes": 2583,
-      "sha256": "08a50895f18fc9661b148b85ade9f1cd4a61ad4f8deae08c92a7971881bbd2bb"
+      "bytes": 2756,
+      "sha256": "8b51b21f6f0493d554b91fb04f897ed196389407d26f188ad5aa57fe86bda7d7"
     },
     {
       "path": "evidence/gpu_samples.csv",
-      "bytes": 322689,
-      "sha256": "71ecd06f54a60d8d1fe1f52abcf6434fb213468ccd8d47068048e0e769e520a9"
+      "bytes": 332757,
+      "sha256": "aebee509f8ccb812e714567ab625b9e0dd2a8938d02132030e51a86535fb643c"
     },
     {
       "path": "evidence/restore_from_drive.json",
@@ -167,8 +172,8 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 419295,
-      "sha256": "4a5db07a8d73bf821eab2946688b1ddba5af45e00cf673c401d17ae6785c4886"
+      "bytes": 424331,
+      "sha256": "5e407f40dc658faecc67ca6bae6c4351e86814ed2c0ef7464f4c6b23803e7e0b"
     },
     {
       "path": "metrics/metrics.jsonl",
@@ -177,13 +182,13 @@
     },
     {
       "path": "phases/phase_metrics.jsonl",
-      "bytes": 1093283,
-      "sha256": "69479a927118324572156fc8b3bf606d8c5e88d7fa3994e60342e2beae29bfff"
+      "bytes": 1096404,
+      "sha256": "20db00a35a9f7b4a79dc9c963cdf5b4441a906ee3c8e65b98fc134d0a671fa02"
     },
     {
       "path": "telemetry/gpu_samples.csv",
-      "bytes": 322689,
-      "sha256": "71ecd06f54a60d8d1fe1f52abcf6434fb213468ccd8d47068048e0e769e520a9"
+      "bytes": 332757,
+      "sha256": "aebee509f8ccb812e714567ab625b9e0dd2a8938d02132030e51a86535fb643c"
     }
   ],
   "redacted_strings": 0,
