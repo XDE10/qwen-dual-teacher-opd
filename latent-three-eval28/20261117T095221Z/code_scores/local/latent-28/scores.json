@@ -1,0 +1,37 @@
+{
+  "source": "/mnt/d/CodexArtifacts/qwen-dual-teacher-opd/eval_checkpoint28_20261117/download/eval/latent-28",
+  "ref": "origin/results",
+  "scored_utc": "2026-11-17T10:39:54Z",
+  "suites": {
+    "code_dev": {
+      "status": "scored",
+      "protocol": "internal-dev-review-v3",
+      "tasks": 200,
+      "passed": 97,
+      "blocked_after_review": 8,
+      "pass_rate": 0.485,
+      "pass_rate_excluding_blocked": 0.5052083333333334,
+      "by_interface": {
+        "function": {
+          "tasks": 100,
+          "passed": 70,
+          "blocked": 8
+        },
+        "stdin_stdout": {
+          "tasks": 100,
+          "passed": 27,
+          "blocked": 0
+        }
+      },
+      "status_counts": {
+        "passed": 97,
+        "mismatch": 80,
+        "execution_error": 3,
+        "unsupported_or_extraction_error": 12,
+        "blocked_after_review": 8
+      },
+      "image_id": "sha256:1d52838af602b4b5a831beb13a0e4d073280665ea7be7f69ce2382f29c5a613f",
+      "note": "internal dev with reviewed comparators; not official EvalPlus"
+    }
+  }
+}

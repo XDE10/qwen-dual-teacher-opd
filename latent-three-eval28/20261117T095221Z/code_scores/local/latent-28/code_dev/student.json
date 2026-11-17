@@ -1,0 +1,1031 @@
+{
+  "protocol": "internal-dev-review-v3",
+  "results": [
+    {
+      "sample_id": "ace/oss_19608",
+      "status": "passed",
+      "checked": 19
+    },
+    {
+      "sample_id": "ace/oss_10896",
+      "status": "passed",
+      "checked": 17
+    },
+    {
+      "sample_id": "ace/oss_6750",
+      "status": "passed",
+      "checked": 17
+    },
+    {
+      "sample_id": "ace/oss_5596",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_12874",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_6517",
+      "status": "passed",
+      "checked": 19
+    },
+    {
+      "sample_id": "ace/oss_11877",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_6404",
+      "status": "passed",
+      "checked": 19
+    },
+    {
+      "sample_id": "ace/oss_16071",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_12538",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_3751",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_4981",
+      "status": "passed",
+      "checked": 21
+    },
+    {
+      "sample_id": "ace/oss_11869",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_18660",
+      "status": "passed",
+      "checked": 17
+    },
+    {
+      "sample_id": "ace/oss_12017",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_8179",
+      "status": "passed",
+      "checked": 21
+    },
+    {
+      "sample_id": "ace/oss_6293",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_4319",
+      "status": "passed",
+      "checked": 17
+    },
+    {
+      "sample_id": "ace/oss_18865",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_12999",
+      "status": "mismatch",
+      "checked": 1
+    },
+    {
+      "sample_id": "ace/oss_7037",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_522",
+      "status": "passed",
+      "checked": 19
+    },
+    {
+      "sample_id": "ace/oss_15349",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_11473",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_14205",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_11186",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpory3nyi4/candidate.py\", line 28, in <module>\n    _opd_result = process_migration_models([])\n  File \"/tmp/tmpory3nyi4/candidate.py\", line 17, in process_migration_models\n    average_fields_per_model = total_fields / total_models\nZeroDivisionError: division by zero\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_18264",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_4083",
+      "status": "passed",
+      "checked": 19
+    },
+    {
+      "sample_id": "ace/oss_5441",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_12119",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_11132",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_3960",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_6195",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_5020",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_19601",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_9154",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_9269",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_5787",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_14146",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_12658",
+      "status": "passed",
+      "checked": 19
+    },
+    {
+      "sample_id": "ace/oss_13178",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_3921",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_3472",
+      "status": "passed",
+      "checked": 17
+    },
+    {
+      "sample_id": "ace/oss_15013",
+      "status": "passed",
+      "checked": 16
+    },
+    {
+      "sample_id": "ace/oss_11697",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_13072",
+      "status": "passed",
+      "checked": 16
+    },
+    {
+      "sample_id": "ace/oss_18683",
+      "status": "passed",
+      "checked": 19
+    },
+    {
+      "sample_id": "ace/oss_4341",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_5030",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_18347",
+      "status": "mismatch",
+      "checked": 1
+    },
+    {
+      "sample_id": "ace/oss_13917",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_17578",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_11417",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_3463",
+      "status": "passed",
+      "checked": 17
+    },
+    {
+      "sample_id": "ace/oss_4447",
+      "status": "passed",
+      "checked": 17
+    },
+    {
+      "sample_id": "ace/oss_19153",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_12654",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_8286",
+      "status": "passed",
+      "checked": 16
+    },
+    {
+      "sample_id": "ace/oss_10148",
+      "status": "passed",
+      "checked": 19
+    },
+    {
+      "sample_id": "ace/oss_9324",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_12338",
+      "status": "passed",
+      "checked": 21
+    },
+    {
+      "sample_id": "ace/oss_2559",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26729",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19480",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26909",
+      "status": "passed",
+      "checked": 3
+    },
+    {
+      "sample_id": "code/vfc_19344",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26793",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_27169",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19536",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_119319",
+      "status": "passed",
+      "checked": 3
+    },
+    {
+      "sample_id": "code/vfc_27029",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26877",
+      "status": "passed",
+      "checked": 3
+    },
+    {
+      "sample_id": "code/vfc_27165",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_138940",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26857",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_27009",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26901",
+      "status": "passed",
+      "checked": 3
+    },
+    {
+      "sample_id": "code/vfc_19765",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19396",
+      "status": "passed",
+      "checked": 3
+    },
+    {
+      "sample_id": "code/vfc_19621",
+      "status": "passed",
+      "checked": 3
+    },
+    {
+      "sample_id": "code/vfc_19548",
+      "status": "passed",
+      "checked": 3
+    },
+    {
+      "sample_id": "code/vfc_26837",
+      "status": "passed",
+      "checked": 3
+    },
+    {
+      "sample_id": "code/vfc_134964",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19252",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19240",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19131",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_82885",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_18674",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_134078",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_83901",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26275",
+      "status": "passed",
+      "checked": 8
+    },
+    {
+      "sample_id": "code/vfc_73157",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_6190",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_17062",
+      "status": "passed",
+      "checked": 11
+    },
+    {
+      "sample_id": "code/vfc_5910",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_84853",
+      "status": "mismatch",
+      "checked": 6
+    },
+    {
+      "sample_id": "code/vfc_14818",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_14398",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_14094",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_13806",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_13638",
+      "status": "passed",
+      "checked": 27
+    },
+    {
+      "sample_id": "code/vfc_13302",
+      "status": "mismatch",
+      "checked": 3
+    },
+    {
+      "sample_id": "code/vfc_24223",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_24079",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_68561",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_67737",
+      "status": "passed",
+      "checked": 48
+    },
+    {
+      "sample_id": "code/vfc_144202",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_29313",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_124235",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_110451",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_5950",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmplpgil_4z/candidate.py\", line 9, in <module>\n    _opd_result = get_configuration({'DATABASE': {'host': 'localhost', 'port': 5432, 'username': 'test_user', 'password': 'test_password'}, 'API_KEY': 'test_api_key', 'DEBUG_MODE': True}, 'db_host')\n  File \"/tmp/tmplpgil_4z/candidate.py\", line 7, in get_configuration\n    return settings[key]\nKeyError: 'db_host'\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_106722",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_87647",
+      "status": "passed",
+      "checked": 6
+    },
+    {
+      "sample_id": "code/vfc_84613",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_6646",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_27081",
+      "status": "passed",
+      "checked": 3
+    },
+    {
+      "sample_id": "code/vfc_6378",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26519",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19280",
+      "status": "mismatch",
+      "checked": 2
+    },
+    {
+      "sample_id": "ace/oss_6095",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "code/vfc_18518",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_68433",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_1780",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "code/vfc_107316",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19508",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_18174",
+      "status": "passed",
+      "checked": 7
+    },
+    {
+      "sample_id": "code/vfc_85765",
+      "status": "passed",
+      "checked": 5
+    },
+    {
+      "sample_id": "code/vfc_99679",
+      "status": "passed",
+      "checked": 4
+    },
+    {
+      "sample_id": "code/vfc_19348",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_18906",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_6386",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_18162",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_6310",
+      "status": "mismatch",
+      "checked": 6
+    },
+    {
+      "sample_id": "code/vfc_17958",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26761",
+      "status": "passed",
+      "checked": 3
+    },
+    {
+      "sample_id": "ace/oss_6847",
+      "status": "mismatch",
+      "checked": 1
+    },
+    {
+      "sample_id": "ace/oss_9962",
+      "status": "passed",
+      "checked": 17
+    },
+    {
+      "sample_id": "code/vfc_18714",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_18754",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_18354",
+      "status": "passed",
+      "checked": 7
+    },
+    {
+      "sample_id": "code/vfc_19031",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_17762",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_140383",
+      "status": "passed",
+      "checked": 4
+    },
+    {
+      "sample_id": "ace/oss_4602",
+      "status": "passed",
+      "checked": 12
+    },
+    {
+      "sample_id": "code/vfc_26673",
+      "status": "passed",
+      "checked": 4
+    },
+    {
+      "sample_id": "code/vfc_6682",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_112082",
+      "status": "passed",
+      "checked": 6
+    },
+    {
+      "sample_id": "code/vfc_26929",
+      "status": "passed",
+      "checked": 3
+    },
+    {
+      "sample_id": "code/vfc_101769",
+      "status": "passed",
+      "checked": 4
+    },
+    {
+      "sample_id": "code/vfc_90134",
+      "status": "passed",
+      "checked": 5
+    },
+    {
+      "sample_id": "code/vfc_91621",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_6374",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_11960",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "code/vfc_93139",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_6666",
+      "status": "passed",
+      "checked": 16
+    },
+    {
+      "sample_id": "code/vfc_26953",
+      "status": "passed",
+      "checked": 3
+    },
+    {
+      "sample_id": "code/vfc_81921",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_18490",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_6470",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_139286",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26403",
+      "status": "passed",
+      "checked": 7
+    },
+    {
+      "sample_id": "code/vfc_18826",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_6582",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_117062",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_19456",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_124121",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_18350",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_16952",
+      "status": "passed",
+      "checked": 17
+    },
+    {
+      "sample_id": "code/vfc_6770",
+      "status": "mismatch",
+      "checked": 0
+    },
+    {
+      "sample_id": "code/vfc_26653",
+      "status": "mismatch",
+      "checked": 3
+    },
+    {
+      "sample_id": "ace/oss_16815",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_6765",
+      "status": "passed",
+      "checked": 17
+    },
+    {
+      "sample_id": "ace/oss_3274",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_19196",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_18621",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_13160",
+      "status": "passed",
+      "checked": 19
+    },
+    {
+      "sample_id": "ace/oss_1513",
+      "status": "passed",
+      "checked": 18
+    },
+    {
+      "sample_id": "ace/oss_18256",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_16138",
+      "status": "passed",
+      "checked": 20
+    },
+    {
+      "sample_id": "ace/oss_12879",
+      "status": "execution_error",
+      "detail": {
+        "ok": false,
+        "stdout": "",
+        "error": "Traceback (most recent call last):\n  File \"/tmp/tmpgrcbp0cb/candidate.py\", line 22, in <module>\n    _opd_result = manage_notes([('add', 'First note'), ('add', 'Second note'), ('modify', (0, 'Updated first note'))])\n  File \"/tmp/tmpgrcbp0cb/candidate.py\", line 11, in manage_notes\n    new_content = op[2]\nIndexError: tuple index out of range\n"
+      },
+      "checked": 0
+    },
+    {
+      "sample_id": "ace/oss_6260",
+      "status": "unsupported_or_extraction_error",
+      "error": "Expected one module-level entry point"
+    },
+    {
+      "sample_id": "ace/oss_12430",
+      "status": "unsupported_or_extraction_error",
+      "error": "Expected one module-level entry point"
+    },
+    {
+      "sample_id": "ace/oss_11766",
+      "status": "unsupported_or_extraction_error",
+      "error": "Expected one module-level entry point"
+    },
+    {
+      "sample_id": "ace/oss_11659",
+      "status": "blocked_after_review",
+      "error": "题面只要求更新 projects，未规定返回值；现有用例强制返回列表，不能排除原地修改并返回 None 的实现。"
+    },
+    {
+      "sample_id": "ace/oss_618",
+      "status": "blocked_after_review",
+      "error": "未规定配置字符串的键名、空白与布尔拼写；参考使用 true/false，不能把唯一参考文本视为唯一合法输出。"
+    },
+    {
+      "sample_id": "ace/oss_14495",
+      "status": "unsupported_or_extraction_error",
+      "error": "Expected one module-level entry point"
+    },
+    {
+      "sample_id": "ace/oss_11985",
+      "status": "blocked_after_review",
+      "error": "题面提到预定义扩展名表但只给示例，未封存正式 FILEUPLOAD_ALLOWED_EXTENSIONS 参数；不能用隐藏常量当完整规格。"
+    },
+    {
+      "sample_id": "ace/oss_16281",
+      "status": "blocked_after_review",
+      "error": "题面未规定 pose 请求嵌套形状及成功/失败响应 schema；参考的 {success: bool} 不能由题面唯一推出。"
+    },
+    {
+      "sample_id": "ace/oss_13256",
+      "status": "blocked_after_review",
+      "error": "题面未给服务器启动/错误消息的确切文本，固定字符串比较无法证明所有合法回复等价。"
+    },
+    {
+      "sample_id": "ace/oss_18795",
+      "status": "unsupported_or_extraction_error",
+      "error": "Expected one module-level entry point"
+    },
+    {
+      "sample_id": "ace/oss_2245",
+      "status": "unsupported_or_extraction_error",
+      "error": "Expected one module-level entry point"
+    },
+    {
+      "sample_id": "ace/oss_17515",
+      "status": "blocked_after_review",
+      "error": "只说 key-value pair 由逗号连接，没有明确键值分隔符、空白和键次序；参考字符串不唯一。"
+    },
+    {
+      "sample_id": "ace/oss_18226",
+      "status": "blocked_after_review",
+      "error": "文字说倒计时到 0，例子与参考不含 0；规格冲突，不能靠参考程序替题面裁决。"
+    },
+    {
+      "sample_id": "ace/oss_10109",
+      "status": "blocked_after_review",
+      "error": "题面要求 are_dicts_equal 与 update_dict 两个接口，但当前数据/评分只调用第一个；不能签发完整题意评测。"
+    },
+    {
+      "sample_id": "ace/oss_2477",
+      "status": "unsupported_or_extraction_error",
+      "error": "Expected one module-level entry point"
+    },
+    {
+      "sample_id": "code/vfc_129426",
+      "status": "unsupported_or_extraction_error",
+      "error": "unterminated string literal (detected at line 1) (<unknown>, line 1)"
+    },
+    {
+      "sample_id": "ace/oss_8225",
+      "status": "unsupported_or_extraction_error",
+      "error": "Expected one module-level entry point"
+    },
+    {
+      "sample_id": "ace/oss_14447",
+      "status": "unsupported_or_extraction_error",
+      "error": "invalid syntax (<unknown>, line 1)"
+    },
+    {
+      "sample_id": "ace/oss_18203",
+      "status": "unsupported_or_extraction_error",
+      "error": "Expected one module-level entry point"
+    },
+    {
+      "sample_id": "ace/oss_18139",
+      "status": "unsupported_or_extraction_error",
+      "error": "Expected one module-level entry point"
+    }
+  ],
+  "coverage": {
+    "total_tasks": 200,
+    "blocked_tasks": 8,
+    "passed_tasks": 97
+  },
+  "warning": "Source-test compatibility only; not official EvalPlus or proof of semantic completeness",
+  "mode": "student",
+  "data_sha256": "c7e111eade71c4482680cb21e89bf3164e6b01fdbd20895ff295ac11f449813f",
+  "image_id": "sha256:1d52838af602b4b5a831beb13a0e4d073280665ea7be7f69ce2382f29c5a613f",
+  "worker_sha256": "27ef781034dc836e67e2c127061e228a70424f3a572ce3f61e6c6bf954564ba2",
+  "source_compatibility_is_not_semantic_gold": true
+}
