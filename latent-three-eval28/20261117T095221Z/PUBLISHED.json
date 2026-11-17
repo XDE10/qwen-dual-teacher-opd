@@ -2,7 +2,7 @@
   "schema": "opd-results-v1",
   "name": "latent-three-eval28",
   "stamp": "20261117T095221Z",
-  "published_utc": "2026-11-17T12:49:51Z",
+  "published_utc": "2026-11-17T12:55:15Z",
   "job": {
     "state": "running"
   },
@@ -91,6 +91,11 @@
       "sha256": "df6c1084fcd8615edf3935b066cd74743378848319ccc0d3b05cbd7f788ed525"
     },
     {
+      "path": "eval/base-r1/batches/logic_dev/0002.json",
+      "bytes": 6055481,
+      "sha256": "ecff9f0dede9db61d3e71e86d738a987558de64420e311ad949eccbb6609874d"
+    },
+    {
       "path": "eval/base-r1/code_dev.candidates.jsonl",
       "bytes": 203688,
       "sha256": "904a3f9902d268d543988451f4e7a5df45c56ffb582f4eba8505ac3c934c6ede"
@@ -139,11 +144,6 @@
       "path": "eval/latent-28/batches/code_dev/0003.json",
       "bytes": 1134750,
       "sha256": "5ae2a3b4ffb45b128927414814937897f742201beb39dc1e41997911ed51c9fc"
-    },
-    {
-      "path": "eval/latent-28/batches/logic_dev/0000.json",
-      "bytes": 7018695,
-      "sha256": "5827ac324d5db71e7b607dd5c2dddf7d5a26b6af34709a24f5f93fc235e38b66"
     },
     {
       "path": "eval/latent-28/batches/logic_dev/0003.json",
@@ -207,13 +207,13 @@
     },
     {
       "path": "job/output.log",
-      "bytes": 29051,
-      "sha256": "6a9c7af2306d035583d62ba385351792afe3b8b137154ee3c9a3b3fdc669538a"
+      "bytes": 29997,
+      "sha256": "ed3bccc238ca799695a6a779772efd5eaafc574b0ca148e33cae9fbafb66bf7c"
     },
     {
       "path": "telemetry/gpu_samples.csv",
-      "bytes": 88816,
-      "sha256": "390889dbb3880bd7c2e5f527207c921b0b51b0e0c8566bb15208882fd9a285b1"
+      "bytes": 91546,
+      "sha256": "a6b037869cc86e796e2ca19ea9208cde393b92680001a0d148b4dfc449f501f6"
     }
   ],
   "redacted_strings": 0,
@@ -225,6 +225,10 @@
     {
       "path": "job/pid",
       "reason": "not a text result"
+    },
+    {
+      "path": "eval/latent-28/batches/logic_dev/0000.json",
+      "reason": "over the 50 MB total"
     },
     {
       "path": "eval/latent-28/batches/logic_dev/0002.json",
@@ -251,7 +255,7 @@
       "reason": "over the 50 MB total"
     }
   ],
-  "skipped_count": 8,
+  "skipped_count": 9,
   "limits_mb": {
     "per_file": 20,
     "total": 50
