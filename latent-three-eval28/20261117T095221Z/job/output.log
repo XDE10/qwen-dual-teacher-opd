@@ -18,3 +18,13 @@
 2026/11/17 10:03:06 NOTICE:     4.720 KiB / 4.720 KiB, 100%, 4.719 KiB/s, ETA 0s
 2026/11/17 10:03:08 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
 [colab_job] saved to Drive: p2drive:opd_runs/latent-three-eval28/20261117T095221Z
+[publish] 19 files (6.50 MB), 2 left out, 0 strings redacted -> results:latent-three-eval28/20261117T095221Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent-three-eval28/20261117T095221Z
+{"event": "eval_batch_done", "model": "latent-28", "suite": "code_dev", "done": 64, "total": 200, "response_tokens": 180218, "seconds": 786.5805551889999, "peak_allocated_bytes": 22276366848}
+{"event": "eval_batch_start", "model": "latent-28", "suite": "code_dev", "batch": 2, "size": 64}
+[colab_job] periodic save (every 5 min)
+2026/11/17 10:08:18 NOTICE:     2.077 KiB / 2.077 KiB, 100%, 2.076 KiB/s, ETA 0s
+2026/11/17 10:08:24 NOTICE:     3.126 MiB / 3.126 MiB, 100%, 800.234 KiB/s, ETA 0s
+2026/11/17 10:08:28 NOTICE:     7.345 KiB / 7.345 KiB, 100%, 7.344 KiB/s, ETA 0s
+2026/11/17 10:08:29 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+[colab_job] saved to Drive: p2drive:opd_runs/latent-three-eval28/20261117T095221Z
