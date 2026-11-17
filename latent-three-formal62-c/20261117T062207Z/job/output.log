@@ -581,3 +581,36 @@ P2_FORMAL_SEGMENT_START 27 28
 2026/11/17 08:40:18 NOTICE:    45.847 KiB / 45.847 KiB, 100%, 0 B/s, ETA -
 2026/11/17 08:40:20 NOTICE:   780.944 KiB / 780.944 KiB, 100%, 0 B/s, ETA -
 [colab_job] saved to Drive: mydrive:opd_runs/latent-three-formal62-c/20261117T062207Z
+[publish] 18 files (1.06 MB), 2 left out, 0 strings redacted -> results:latent-three-formal62-c/20261117T062207Z
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent-three-formal62-c/20261117T062207Z
+{"step": 27, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794904869.5577397, "responses": 20, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 44031803392}
+{"step": 27, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794904926.7159777, "responses": 24, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 44031803392}
+{"step": 27, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794904992.690422, "responses": 28, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 44031803392}
+{"step": 27, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794905025.6847358, "responses": 32, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 44031803392}
+{"step": 27, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794905079.351457, "responses": 36, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 44031803392}
+{"step": 27, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794905121.4121914, "responses": 40, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 44031803392}
+{"step": 27, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794905139.9708426, "responses": 44, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 44031803392}
+{"step": 27, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794905214.378934, "responses": 48, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 47737470976}
+{"step": 27, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794905273.227713, "responses": 52, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 47737470976}
+{"step": 27, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794905306.706153, "responses": 56, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 47737470976}
+{"step": 27, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794905360.5404572, "responses": 60, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 47737470976}
+{"step": 27, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794905414.655973, "responses": 64, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 47737470976}
+{"step": 27, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794905484.5593345, "responses": 68, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 47737470976}
+{"step": 27, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794905558.560524, "responses": 72, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 47737470976}
+{"step": 27, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794905581.4670343, "responses": 76, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 47737470976}
+{"step": 27, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794905612.13894, "responses": 80, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 47737470976}
+{"step": 27, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794905726.4447696, "responses": 84, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 64472743936}
+{"step": 27, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794905788.9011352, "responses": 88, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 64472743936}
+{"step": 27, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794905803.9339833, "responses": 92, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 64472743936}
+{"step": 27, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794905859.8191848, "responses": 96, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 64472743936}
+{"step": 27, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794905907.4662595, "responses": 100, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 64472743936}
+{"step": 27, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794905962.6506839, "responses": 104, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 64472743936}
+{"step": 27, "domain": "logic", "phase": "rollout_progress", "timestamp": 1794905978.5491552, "responses": 108, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 64472743936}
+[colab_job] periodic save (every 20 min)
+2026/11/17 09:00:27 NOTICE:    99.544 KiB / 99.544 KiB, 100%, 99.483 KiB/s, ETA 0s
+2026/11/17 09:00:28 NOTICE:    76.815 KiB / 76.815 KiB, 100%, 0 B/s, ETA -
+2026/11/17 09:00:30 NOTICE:    76.856 KiB / 76.856 KiB, 100%, 0 B/s, ETA -
+2026/11/17 09:00:31 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+2026/11/17 09:00:32 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+2026/11/17 09:00:33 NOTICE:   785.161 KiB / 785.161 KiB, 100%, 0 B/s, ETA -
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-formal62-c/20261117T062207Z
