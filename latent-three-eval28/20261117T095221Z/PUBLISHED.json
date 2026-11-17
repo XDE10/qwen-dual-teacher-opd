@@ -2,81 +2,187 @@
   "schema": "opd-results-v1",
   "name": "latent-three-eval28",
   "stamp": "20261117T095221Z",
-  "published_utc": "2026-11-17T10:43:28Z",
+  "published_utc": "2026-11-17T10:45:49Z",
   "job": {
-    "state": "not recorded"
+    "state": "running"
   },
   "publisher": {
-    "host": "XDE10",
-    "gpu": null,
+    "host": "8c2b39eb4f4b",
+    "gpu": [
+      "NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB"
+    ],
     "code": {
       "commit": "4dee8bfbc554a22461d4d347f4973fc7fb7a016e",
-      "branch": "main",
+      "branch": null,
       "modified_tracked_files": true
     }
   },
   "sources": [
     {
-      "label": "code_scores",
-      "path": "/mnt/d/CodexArtifacts/qwen-dual-teacher-opd/eval_checkpoint28_20261117/scores",
+      "label": "job",
+      "path": "/content/jobs/latent-three-eval28",
       "kind": "folder"
     },
     {
-      "label": "code_comparison",
-      "path": "/mnt/d/CodexArtifacts/qwen-dual-teacher-opd/eval_checkpoint28_20261117/code_dev_comparison.json",
-      "kind": "file"
+      "label": "eval",
+      "path": "/content/runs/latent_three_eval28_20261117/eval",
+      "kind": "folder"
+    },
+    {
+      "label": "telemetry",
+      "path": "/content/runs/latent_three_eval28_20261117/telemetry",
+      "kind": "folder"
+    },
+    {
+      "label": "environment",
+      "path": "/content/runs/latent_three_eval28_20261117/environment",
+      "kind": "folder"
     }
   ],
   "files": [
     {
-      "path": "code_comparison/code_dev_comparison.json",
-      "bytes": 622,
-      "sha256": "2e4f1bd2475af8df3b1d700dd6faecd97a3e8d47ffea188dd0087afb80c71111"
+      "path": "environment/benchmarks.txt",
+      "bytes": 170,
+      "sha256": "a2e04bf5436553834a1884d6531f356c96b453623314efb766603d0f0a64586b"
     },
     {
-      "path": "code_scores/local/base-r1/candidates/code_dev.candidates.jsonl",
+      "path": "environment/cpu-tests.txt",
+      "bytes": 1080,
+      "sha256": "9c5ecd9bbbacf701e5ce27104383b745f9151c1a82f30ad3143ead83fa1efcc7"
+    },
+    {
+      "path": "environment/gpu.csv",
+      "bytes": 127,
+      "sha256": "88b570a6b620db8484c1ef679f3b5396a5aaec74a9ad5efc87d1a8989776bfb7"
+    },
+    {
+      "path": "environment/imports.txt",
+      "bytes": 123,
+      "sha256": "b8908577547b46e8ca47243bc9465c4efa339d76cc2ff368bc57cd7d3f3e5ed3"
+    },
+    {
+      "path": "environment/nvidia-smi.txt",
+      "bytes": 1689,
+      "sha256": "df935f0418f3b5cabe83ac5d64757853cead094a18ea8d6e40e452fa8a2775e3"
+    },
+    {
+      "path": "environment/pip-check.txt",
+      "bytes": 551,
+      "sha256": "08f739009e1e747a032cf8aa12a8b4eb47ff7b3983f771b8ed9a84fd3ff2c3af"
+    },
+    {
+      "path": "environment/pip-freeze.txt",
+      "bytes": 14256,
+      "sha256": "ac431fa588173338ab220084b835c7e21fdf1dfbd7f4bb8628ef0441b594586b"
+    },
+    {
+      "path": "environment/torch.txt",
+      "bytes": 187,
+      "sha256": "10390988479132c59c445dc194422a55b343829c2d53274e041a18e078f47a6f"
+    },
+    {
+      "path": "eval/base-r1/code_dev.candidates.jsonl",
       "bytes": 203688,
       "sha256": "904a3f9902d268d543988451f4e7a5df45c56ffb582f4eba8505ac3c934c6ede"
     },
     {
-      "path": "code_scores/local/base-r1/code_dev/evaluate.log",
-      "bytes": 167,
-      "sha256": "8ec994a8f2457f18deb518390cc80c81f9c922072ce4e273b9777bb8258ba624"
+      "path": "eval/base-r1/code_dev.jsonl",
+      "bytes": 3534804,
+      "sha256": "c4e649362065933853e45b440f21f091de15ca674392a8a889d6e8ec76fb980b"
     },
     {
-      "path": "code_scores/local/base-r1/code_dev/student.json",
-      "bytes": 23100,
-      "sha256": "d9575f70b1c01e5c2e6dccae07085543eec208c77a25921a7e3a0945ee4a8c05"
+      "path": "eval/base-r1/code_dev.summary.json",
+      "bytes": 3292,
+      "sha256": "cbafa338b15c3dbc7e75c2556cb4e5e8cb00db00fee1cda397f5e167bf70b0b6"
     },
     {
-      "path": "code_scores/local/base-r1/scores.json",
-      "bytes": 1049,
-      "sha256": "f7ab4a5239ddd084c7bd2a4796716d2953f2e8e23390b098693a64c6735a2d0c"
+      "path": "eval/base-r1/math_dev.jsonl",
+      "bytes": 3039503,
+      "sha256": "def0f09d8163b17d3a102baa187b18b6eea557d73122c1705b099a61a974e261"
     },
     {
-      "path": "code_scores/local/latent-28/candidates/code_dev.candidates.jsonl",
+      "path": "eval/base-r1/math_dev.summary.json",
+      "bytes": 3367,
+      "sha256": "b4e7862f813508073f9dd4bc0ba689cf1d8b94d8bee82ff4ae0b850fdc72d172"
+    },
+    {
+      "path": "eval/checkpoint-28_verified.json",
+      "bytes": 3080,
+      "sha256": "c9b5975c2e1e310e2c083bfe5d2969c135931c47a7abd652e8f8ef78c5789652"
+    },
+    {
+      "path": "eval/latent-28/batches/code_dev/0000.json",
+      "bytes": 3277348,
+      "sha256": "33e01bd0ff225ed2c94dde1308c738696a09fd99d6bcfc7251de01b27272d2c0"
+    },
+    {
+      "path": "eval/latent-28/batches/code_dev/0001.json",
+      "bytes": 5334632,
+      "sha256": "766e2261c372922ab27f0bc3494c6dbcf541241de603a59ce4cdb3dc0a1f35dc"
+    },
+    {
+      "path": "eval/latent-28/batches/code_dev/0002.json",
+      "bytes": 8164268,
+      "sha256": "a12aecb281f57014b806ab3d1a9342059ed2687e9dea164a1dde865c3c70231a"
+    },
+    {
+      "path": "eval/latent-28/batches/code_dev/0003.json",
+      "bytes": 1134750,
+      "sha256": "5ae2a3b4ffb45b128927414814937897f742201beb39dc1e41997911ed51c9fc"
+    },
+    {
+      "path": "eval/latent-28/code_dev.candidates.jsonl",
       "bytes": 245742,
       "sha256": "9d0d83f511c27766953c68067c36033aec3bf0eb1cb3595105594774c7d70b0a"
     },
     {
-      "path": "code_scores/local/latent-28/code_dev/evaluate.log",
-      "bytes": 166,
-      "sha256": "b94936378af19e9e0dd53238aaabcce5d5f0507021df3450f1070d7d134817eb"
+      "path": "eval/latent-28/code_dev.jsonl",
+      "bytes": 9688410,
+      "sha256": "c36ac645f6b45719502ce1e0f1425f500bcac066a311858999e1269ead1a31fe"
     },
     {
-      "path": "code_scores/local/latent-28/code_dev/student.json",
-      "bytes": 22968,
-      "sha256": "f4dcd705f877b5809b5394d8a10f09acb4337e72bf82569a02b660802fa356c0"
+      "path": "eval/latent-28/code_dev.summary.json",
+      "bytes": 1043,
+      "sha256": "aa2c7f8f093df6dc819275a81d4320e699d85c9a9a5ad2d09b51d1355fcc5bad"
     },
     {
-      "path": "code_scores/local/latent-28/scores.json",
-      "bytes": 1055,
-      "sha256": "c60478450fa4453e96e90ec1b556a93d3c6526250f7ea32eca3f5cd2a41530d4"
+      "path": "eval/latent-28/generation_identity.json",
+      "bytes": 838,
+      "sha256": "9bcefc8af79fabd70d4f0ef32ead844437350dd11c4760111eca98bdb30424bf"
+    },
+    {
+      "path": "eval/reference_base_protocol.json",
+      "bytes": 922,
+      "sha256": "b5d4c1a2e0ffdf35e5af921199ff49e303ad06d296ad28cd16b7664b94689f70"
+    },
+    {
+      "path": "job/command.json",
+      "bytes": 718,
+      "sha256": "0149d919973cbeb67daa580666f5c3767dcaaea1ce78fb84ecd4d7970d5b451d"
+    },
+    {
+      "path": "job/output.log",
+      "bytes": 8958,
+      "sha256": "5cf46f7bb94cf246df9ca03d04679b2ccdfb3465bb0aa63bc56ee6f452c5537d"
+    },
+    {
+      "path": "telemetry/gpu_samples.csv",
+      "bytes": 26337,
+      "sha256": "7937898b3d6362d1ffb5d6eb2fe7f0518a2b3c182c302edf2812d9067c871172"
     }
   ],
   "redacted_strings": 0,
-  "skipped": [],
-  "skipped_count": 0,
+  "skipped": [
+    {
+      "path": "job/child_pid",
+      "reason": "not a text result"
+    },
+    {
+      "path": "job/pid",
+      "reason": "not a text result"
+    }
+  ],
+  "skipped_count": 2,
   "limits_mb": {
     "per_file": 20,
     "total": 50

@@ -1,0 +1,21 @@
+{
+  "eval_code_commit": "7d93c5d7e45841b5aa744b3fd89031d35b1eb34e",
+  "training_results_commit": "3b6ea99b76cc84898f11988fe828457a302de9b3",
+  "checkpoint_manifest_sha256": "38735bb8f55e45ba229e448fb4f95ceb8ae1d4bf93b9685b14bdb9752f6a1e4d",
+  "training_identity_sha256": "bff53edd704f2562b3661d468ea583d0dba3084c47f7f6c452ba8a810391685e",
+  "tokenizer_audit_sha256": "4e39dbfd4bef5c891fc1d691a7bcfaed71b650a667a14185474f2c5fac830c91",
+  "model": {
+    "model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+    "revision": "ad9f0ae0864d7fbcd1cd905e3c6c5b069cc8b562"
+  },
+  "torch": "2.8.0+cu128",
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "suites": [
+    "math_dev",
+    "code_dev"
+  ],
+  "generation": "HF BF16 greedy, common support, same R1 template",
+  "max_new_tokens": 8192,
+  "batch_size": 64,
+  "grading_text": "After the first closing think tag. Empty if no closing think tag. Raw output kept."
+}
