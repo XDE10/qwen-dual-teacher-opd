@@ -822,3 +822,47 @@ P2_FORMAL_SEGMENT_START 27 28
 2026/11/17 09:41:02 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
 2026/11/17 09:41:04 NOTICE:   821.796 KiB / 821.796 KiB, 100%, 0 B/s, ETA -
 [colab_job] saved to Drive: mydrive:opd_runs/latent-three-formal62-c/20261117T062207Z
+[publish] 18 files (1.20 MB), 2 left out, 0 strings redacted -> results:latent-three-formal62-c/20261117T062207Z
+{"step": 28, "domain": "math", "phase": "backward", "timestamp": 1794908465.2599394, "microbatch": 37, "total_microbatches": 39, "allocated_bytes": 39120691200, "reserved_bytes": 53078917120}
+{"step": 28, "domain": "math", "phase": "backward", "timestamp": 1794908469.3421814, "microbatch": 38, "total_microbatches": 39, "allocated_bytes": 39120691200, "reserved_bytes": 53078917120}
+[publish] pushed; https://github.com/XDE10/qwen-dual-teacher-opd/tree/results/latent-three-formal62-c/20261117T062207Z
+{"step": 28, "domain": "math", "phase": "backward", "timestamp": 1794908472.5025802, "microbatch": 39, "total_microbatches": 39, "allocated_bytes": 39120691200, "reserved_bytes": 53078917120}
+{"step": 28, "domain": "math", "phase": "optimizer_start", "timestamp": 1794908473.427987, "allocated_bytes": 39120691712, "reserved_bytes": 53078917120}
+{"step": 28, "domain": "math", "phase": "optimizer_step_returned", "timestamp": 1794908473.429573, "allocated_bytes": 39120691712, "reserved_bytes": 53078917120}
+{"step": 28, "domain": "math", "phase": "optimizer_done", "timestamp": 1794908473.4827604, "loss": -1.2425069853197783, "token_loss": -1.3805694757029414, "raw_rep_loss": 5.4978422213025624e-05, "reward_std": 0.07103536278009415, "gradient_norm": 10.447701454162598, "optimizer_updates": 1, "sample_ids": ["math/74364d0e-3841-48f7-bbde-767548367a8e", "math/44fa1acc-7d89-47a6-8aee-956f2db0eceb", "math/3b99683e-c469-45cb-b263-210f3a3916be", "math/fcfe02d1-af5c-4e17-b9ed-7db0ee0d8476", "math/d58f63c4-34eb-454e-ac16-d122cf9cae78", "math/f333331d-dc29-450f-b453-0c025b21736e", "math/cf04cb6a-1743-43fd-a0b6-9a4f3965379f", "math/a8c414e5-c522-49d6-a1af-2afcb37e3ddc", "math/a1d942d0-080a-4331-ac88-4e795039ddac", "math/17d906ac-015d-46fb-8099-5492f73ff74d", "math/5ac90380-7556-4c9e-95b8-274ebe666c77", "math/f92f1a66-01dc-4b08-b005-42903337f777", "math/1ddf4b2a-89fa-45b5-85ee-502e6fc630d1", "math/7384d376-5813-49e4-aaa6-8f526a729d01", "math/a6f09763-2ba7-4e33-bda7-497eb0a91d32", "math/f8f601b9-3faa-4535-b9fc-d87ab93e167e", "math/af06cdf7-1149-4b5b-8d07-3d458a6e315c", "math/e18034d9-3126-48d1-8d7b-143f47becb70", "math/4c677475-1461-4a47-8a96-02585f7b264a", "math/761b851c-55a1-49af-9c8d-a2bf4386c0df", "math/802683d2-df3b-4a02-9685-51e8bff60121", "math/e06f5546-3db2-458f-a2e3-d02ff1408b5e", "math/abed23a6-5c2e-4c07-832f-369e48e26348", "math/8ad82764-0ceb-405c-9bed-d9de864c273e", "math/8849b66d-e422-479a-8e95-b715fa24cc95", "math/569b7a54-7d5d-451c-a16b-5d5547ca0a1f", "math/b9cd1b41-93b6-4f2f-ba44-530ebb769ede", "math/a3020760-2c8a-4e47-8f40-a5b90e0e94c3", "math/8cba10eb-7d6b-4e60-891e-a9d8e76512f6", "math/c5a5e329-f906-420f-bd0e-6c886c465ed6", "math/630124db-1de7-453f-ab84-e7f022bc4e89", "math/f3d6f98d-644d-41da-b13a-c95fd9670da3"], "responses": 128, "allocator_retries": 0, "allocator_ooms": 0, "response_tokens": 641758, "truncated_responses": 0, "token_weight": 0.9, "latent_weight": 0.09999999999999998, "seconds": 2081.5361782519994, "peak_allocated_bytes": 48371991552, "peak_reserved_bytes": 53078917120, "allocated_bytes": 39120689664, "reserved_bytes": 53078917120}
+{"step": 28, "domain": "math", "phase": "checkpoint_start", "timestamp": 1794908473.4829652, "allocated_bytes": 39120689664, "reserved_bytes": 53078917120}
+{"step": 28, "domain": "math", "phase": "checkpoint_saved", "timestamp": 1794908538.6138601, "allocated_bytes": 39120689664, "reserved_bytes": 53078917120}
+P2_CHECKPOINT_LOCAL_VERIFIED 28 b52e94769768898f965a196c600a9baaa54ffe7b25e2d45d3e9994e94462a47f
+2026/11/17 09:42:57 NOTICE:     1.962 GiB / 19.861 GiB, 10%, 100.470 MiB/s, ETA 3m2s
+2026/11/17 09:43:17 NOTICE:     3.724 GiB / 19.861 GiB, 19%, 91.168 MiB/s, ETA 3m1s
+2026/11/17 09:43:37 NOTICE:     5.271 GiB / 19.861 GiB, 27%, 83.510 MiB/s, ETA 2m58s
+2026/11/17 09:43:57 NOTICE:     6.838 GiB / 19.861 GiB, 34%, 80.812 MiB/s, ETA 2m45s
+2026/11/17 09:44:17 NOTICE:     8.400 GiB / 19.861 GiB, 42%, 79.984 MiB/s, ETA 2m26s
+2026/11/17 09:44:37 NOTICE:     9.959 GiB / 19.861 GiB, 50%, 80.350 MiB/s, ETA 2m6s
+2026/11/17 09:44:57 NOTICE:    11.527 GiB / 19.861 GiB, 58%, 80.257 MiB/s, ETA 1m46s
+2026/11/17 09:45:17 NOTICE:    12.667 GiB / 19.861 GiB, 64%, 64.762 MiB/s, ETA 1m53s
+2026/11/17 09:45:37 NOTICE:    13.816 GiB / 19.861 GiB, 70%, 60.564 MiB/s, ETA 1m42s
+2026/11/17 09:45:57 NOTICE:    14.925 GiB / 19.861 GiB, 75%, 57.931 MiB/s, ETA 1m27s
+2026/11/17 09:46:17 NOTICE:    16.073 GiB / 19.861 GiB, 81%, 58.770 MiB/s, ETA 1m5s
+2026/11/17 09:46:37 NOTICE:    17.198 GiB / 19.861 GiB, 87%, 57.760 MiB/s, ETA 47s
+2026/11/17 09:46:57 NOTICE:    18.355 GiB / 19.861 GiB, 92%, 58.826 MiB/s, ETA 26s
+2026/11/17 09:47:17 NOTICE:    19.484 GiB / 19.861 GiB, 98%, 57.911 MiB/s, ETA 6s
+2026/11/17 09:47:24 NOTICE:    19.861 GiB / 19.861 GiB, 100%, 56.163 MiB/s, ETA 0s
+2026/11/17 09:47:43 NOTICE: Google drive root 'opd_runs/latent-three-formal62-checkpoints/20261116T061609Z/checkpoint-28': 0 differences found
+2026/11/17 09:47:43 NOTICE: Google drive root 'opd_runs/latent-three-formal62-checkpoints/20261116T061609Z/checkpoint-28': 8 matching files
+P2_CHECKPOINT_DRIVE_VERIFIED 28 mydrive:opd_runs/latent-three-formal62-checkpoints/20261116T061609Z/checkpoint-28
+P2_FORMAL_SEGMENT_START 29 30
+{"step": 29, "domain": "code", "phase": "rollout_start", "timestamp": 1794908900.5788043, "responses": 128, "token_weight": 0.9, "latent_weight": 0.09999999999999998, "teacher": {"model": "Fate-Zero/Archer2.0-Code-1.5B-Preview", "revision": "db1e1ff9f3c36f7177f3896358ce26edeb62ce56"}, "allocated_bytes": 31988808192, "reserved_bytes": 32413581312}
+{"step": 29, "domain": "code", "phase": "rollout_progress", "timestamp": 1794909045.01406, "responses": 4, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 77374423040}
+{"step": 29, "domain": "code", "phase": "rollout_progress", "timestamp": 1794909234.6667867, "responses": 8, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 99279175680}
+{"step": 29, "domain": "code", "phase": "rollout_progress", "timestamp": 1794909358.2132719, "responses": 12, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 99279175680}
+{"step": 29, "domain": "code", "phase": "rollout_progress", "timestamp": 1794909550.9941516, "responses": 16, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 41867542528}
+{"step": 29, "domain": "code", "phase": "rollout_progress", "timestamp": 1794909634.6211314, "responses": 20, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 41867542528}
+[colab_job] periodic save (every 20 min)
+2026/11/17 10:01:11 NOTICE:   144.756 KiB / 144.756 KiB, 100%, 0 B/s, ETA -
+2026/11/17 10:01:12 NOTICE:   109.703 KiB / 109.703 KiB, 100%, 109.621 KiB/s, ETA 0s
+2026/11/17 10:01:14 NOTICE:   106.419 KiB / 106.419 KiB, 100%, 106.329 KiB/s, ETA 0s
+2026/11/17 10:01:15 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+2026/11/17 10:01:17 NOTICE:    49.375 KiB / 49.375 KiB, 100%, 0 B/s, ETA -
+2026/11/17 10:01:18 NOTICE:   826.262 KiB / 826.262 KiB, 100%, 0 B/s, ETA -
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-formal62-c/20261117T062207Z
