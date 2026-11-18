@@ -1,0 +1,37 @@
+[colab_job] running: bash /content/formal_step62_package/run_formal60_handoff.sh 20261116T061609Z 58
+P2_RESTORE_START 58 mydrive:opd_runs/latent-three-formal62-checkpoints/20261116T061609Z
+2026/11/18 13:02:50 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+P2_CHECKPOINT_LOCAL_VERIFIED 58 9b79abf2e1a1bfd66fe9066dd06fa4cf882d86bf0f342616f2654997255682f1
+P2_RESTORE_VERIFIED 58
+P2_FORMAL_SEGMENT_START 59 60
+{"step": 59, "domain": "code", "phase": "rollout_start", "timestamp": 1795007020.2949858, "responses": 128, "token_weight": 1.0, "latent_weight": 0.0, "teacher": {"model": "Fate-Zero/Archer2.0-Code-1.5B-Preview", "revision": "db1e1ff9f3c36f7177f3896358ce26edeb62ce56"}, "allocated_bytes": 31988808192, "reserved_bytes": 32413581312}
+{"step": 59, "domain": "code", "phase": "rollout_progress", "timestamp": 1795007217.5935721, "responses": 4, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 100891885568}
+{"step": 59, "domain": "code", "phase": "rollout_progress", "timestamp": 1795007412.2663846, "responses": 8, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 100891885568}
+{"step": 59, "domain": "code", "phase": "rollout_progress", "timestamp": 1795007516.6262486, "responses": 12, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 100891885568}
+{"step": 59, "domain": "code", "phase": "rollout_progress", "timestamp": 1795007705.1618178, "responses": 16, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 100891885568}
+{"step": 59, "domain": "code", "phase": "rollout_progress", "timestamp": 1795007890.7514148, "responses": 20, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 100891885568}
+{"step": 59, "domain": "code", "phase": "rollout_progress", "timestamp": 1795007971.5624366, "responses": 24, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 100891885568}
+{"step": 59, "domain": "code", "phase": "rollout_progress", "timestamp": 1795008039.9266121, "responses": 28, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 100891885568}
+{"step": 59, "domain": "code", "phase": "rollout_progress", "timestamp": 1795008233.137579, "responses": 32, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 100891885568}
+{"step": 59, "domain": "code", "phase": "rollout_progress", "timestamp": 1795008364.3755813, "responses": 36, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 100891885568}
+{"step": 59, "domain": "code", "phase": "rollout_progress", "timestamp": 1795008479.4589856, "responses": 40, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 100891885568}
+{"step": 59, "domain": "code", "phase": "rollout_progress", "timestamp": 1795008672.2152197, "responses": 44, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 100982063104}
+{"step": 59, "domain": "code", "phase": "rollout_progress", "timestamp": 1795008716.6470342, "responses": 48, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 100982063104}
+{"step": 59, "domain": "code", "phase": "rollout_progress", "timestamp": 1795008894.994139, "responses": 52, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 100982063104}
+{"step": 59, "domain": "code", "phase": "rollout_progress", "timestamp": 1795009088.6331298, "responses": 56, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 100982063104}
+{"step": 59, "domain": "code", "phase": "rollout_progress", "timestamp": 1795009138.444232, "responses": 60, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 100982063104}
+{"step": 59, "domain": "code", "phase": "rollout_progress", "timestamp": 1795009225.7283053, "responses": 64, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 100982063104}
+{"step": 59, "domain": "code", "phase": "rollout_progress", "timestamp": 1795009420.9524643, "responses": 68, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 100982063104}
+{"step": 59, "domain": "code", "phase": "rollout_progress", "timestamp": 1795009605.9898102, "responses": 72, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 100982063104}
+{"step": 59, "domain": "code", "phase": "rollout_progress", "timestamp": 1795009800.7120955, "responses": 76, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 100982063104}
+{"step": 59, "domain": "code", "phase": "rollout_progress", "timestamp": 1795009837.5522172, "responses": 80, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 100982063104}
+{"step": 59, "domain": "code", "phase": "rollout_progress", "timestamp": 1795010033.6856081, "responses": 84, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 100982063104}
+{"step": 59, "domain": "code", "phase": "rollout_progress", "timestamp": 1795010229.089834, "responses": 88, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 100982063104}
+{"step": 59, "domain": "code", "phase": "rollout_progress", "timestamp": 1795010422.8782506, "responses": 92, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 100982063104}
+[colab_job] periodic save (every 60 min)
+2026/11/18 14:02:51 NOTICE:     5.997 KiB / 5.997 KiB, 100%, 2.998 KiB/s, ETA 0s
+2026/11/18 14:02:55 NOTICE:    41.604 KiB / 41.604 KiB, 100%, 20.808 KiB/s, ETA 0s
+2026/11/18 14:02:59 NOTICE:    17.760 KiB / 17.760 KiB, 100%, 8.878 KiB/s, ETA 0s
+2026/11/18 14:03:01 NOTICE:   101.853 KiB / 101.853 KiB, 100%, 101.764 KiB/s, ETA 0s
+2026/11/18 14:03:04 NOTICE:     1.677 MiB / 1.677 MiB, 100%, 1.675 MiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-formal60-c-handoff/20261118T130247Z

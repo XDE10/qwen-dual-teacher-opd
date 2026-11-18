@@ -1,0 +1,160 @@
+{
+  "schema": "opd-results-v1",
+  "name": "latent-three-formal60-c-handoff",
+  "stamp": "20261118T130247Z",
+  "published_utc": "2026-11-18T14:03:04Z",
+  "job": {
+    "state": "running"
+  },
+  "publisher": {
+    "host": "8b3d6a0c8ecd",
+    "gpu": [
+      "NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB"
+    ],
+    "code": {
+      "commit": "4dee8bfbc554a22461d4d347f4973fc7fb7a016e",
+      "branch": null,
+      "modified_tracked_files": true
+    }
+  },
+  "sources": [
+    {
+      "label": "job",
+      "path": "/content/jobs/latent-three-formal60-c-handoff",
+      "kind": "folder"
+    },
+    {
+      "label": "evidence",
+      "path": "/content/runs/latent_three_step34_scoring_memory_20261116/evidence62",
+      "kind": "folder"
+    },
+    {
+      "label": "environment",
+      "path": "/content/runs/latent_three_step34_scoring_memory_20261116/environment62",
+      "kind": "folder"
+    },
+    {
+      "label": "metrics",
+      "path": "/content/runs/latent_three_step34_scoring_memory_20261116/full/latent_mopd_three_latent/metrics.jsonl",
+      "kind": "file"
+    },
+    {
+      "label": "phases",
+      "path": "/content/runs/latent_three_step34_scoring_memory_20261116/full/latent_mopd_three_latent/phase_metrics.jsonl",
+      "kind": "file"
+    }
+  ],
+  "files": [
+    {
+      "path": "environment/benchmarks.txt",
+      "bytes": 170,
+      "sha256": "a2e04bf5436553834a1884d6531f356c96b453623314efb766603d0f0a64586b"
+    },
+    {
+      "path": "environment/cpu-tests.txt",
+      "bytes": 1081,
+      "sha256": "fa4c46bd3c3ac4cde866c64467448a963bd215fe184b93cf0d82612e9f0dabe4"
+    },
+    {
+      "path": "environment/gpu.csv",
+      "bytes": 127,
+      "sha256": "88b570a6b620db8484c1ef679f3b5396a5aaec74a9ad5efc87d1a8989776bfb7"
+    },
+    {
+      "path": "environment/imports.txt",
+      "bytes": 123,
+      "sha256": "b8908577547b46e8ca47243bc9465c4efa339d76cc2ff368bc57cd7d3f3e5ed3"
+    },
+    {
+      "path": "environment/nvidia-smi.txt",
+      "bytes": 1689,
+      "sha256": "bc03c86fa110aed8716930d236753fc4a140733019e1b2448f4803a2ac14560b"
+    },
+    {
+      "path": "environment/pip-check.txt",
+      "bytes": 551,
+      "sha256": "de95da9ba0bda7d3da5d98f3d408f0a7a45038072c090b6493bc58dca45f36ed"
+    },
+    {
+      "path": "environment/pip-freeze.txt",
+      "bytes": 14256,
+      "sha256": "ac431fa588173338ab220084b835c7e21fdf1dfbd7f4bb8628ef0441b594586b"
+    },
+    {
+      "path": "environment/torch.txt",
+      "bytes": 189,
+      "sha256": "7e59b7a952b5290b66b305dc9c7fc4eb7228cb83abef770dbc064a7c5f9affdd"
+    },
+    {
+      "path": "evidence/checkpoint-53_drive_check.log",
+      "bytes": 283,
+      "sha256": "3e39378cd9d42ac5f7e13ae816ac98bd4bbd7e03fb2ce0a987a387547cc8c46d"
+    },
+    {
+      "path": "evidence/checkpoint-53_verified.json",
+      "bytes": 2915,
+      "sha256": "170e3a6478f679148b62af887e833d3f077de831f68c7994127b56228b2cdedd"
+    },
+    {
+      "path": "evidence/checkpoint-58_drive_check.log",
+      "bytes": 283,
+      "sha256": "e8a97004c2effdc7658def0ce1def80385adf07ad76b7fdc7afd64ffe96d50f9"
+    },
+    {
+      "path": "evidence/checkpoint-58_verified.json",
+      "bytes": 3044,
+      "sha256": "9c1295498677daad84caaedbb683aaab0caf4514e881e02c2dd4ce90885bf60e"
+    },
+    {
+      "path": "evidence/gpu_samples.csv",
+      "bytes": 30247,
+      "sha256": "15111497e23ad0af4215f9925c8342ba2a20756a3d593aeb6d6632dfce93b527"
+    },
+    {
+      "path": "evidence/restore_from_drive.json",
+      "bytes": 3044,
+      "sha256": "9c1295498677daad84caaedbb683aaab0caf4514e881e02c2dd4ce90885bf60e"
+    },
+    {
+      "path": "evidence/restore_verified.json",
+      "bytes": 2871,
+      "sha256": "f2febe6cd20d600a1e0f897fa37fcc1215a03c44e6e164e0ba0e8bf7b40e6182"
+    },
+    {
+      "path": "job/command.json",
+      "bytes": 1031,
+      "sha256": "9862db793a6415ec6f46482efa98b149d0421dd6a8b82dc2565d88b2fd8d4b40"
+    },
+    {
+      "path": "job/output.log",
+      "bytes": 5602,
+      "sha256": "9ac795f4a4df90d5643352cfa8b3fc9435383bd07b881c6c19ab4869e1af9b1d"
+    },
+    {
+      "path": "metrics/metrics.jsonl",
+      "bytes": 104297,
+      "sha256": "fd9e153c2fbc546722bd70c9991e3fa37473a789821155dce71382d506ec33b4"
+    },
+    {
+      "path": "phases/phase_metrics.jsonl",
+      "bytes": 1758046,
+      "sha256": "c7f24293ecba97f2de3d83430f2b90fd9f41f09ecc716a672cb40207f4a2a7ad"
+    }
+  ],
+  "redacted_strings": 0,
+  "skipped": [
+    {
+      "path": "job/child_pid",
+      "reason": "not a text result"
+    },
+    {
+      "path": "job/pid",
+      "reason": "not a text result"
+    }
+  ],
+  "skipped_count": 2,
+  "limits_mb": {
+    "per_file": 20,
+    "total": 50
+  }
+}

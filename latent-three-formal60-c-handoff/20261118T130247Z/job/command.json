@@ -1,0 +1,40 @@
+{
+  "name": "latent-three-formal60-c-handoff",
+  "command": [
+    "bash",
+    "/content/formal_step62_package/run_formal60_handoff.sh",
+    "20261116T061609Z",
+    "58"
+  ],
+  "cwd": "/content/project2",
+  "started_utc": "2026-11-18T13:02:47Z",
+  "stamp": "20261118T130247Z",
+  "save": [
+    [
+      "evidence",
+      "/content/runs/latent_three_step34_scoring_memory_20261116/evidence62"
+    ],
+    [
+      "environment",
+      "/content/runs/latent_three_step34_scoring_memory_20261116/environment62"
+    ],
+    [
+      "metrics",
+      "/content/runs/latent_three_step34_scoring_memory_20261116/full/latent_mopd_three_latent/metrics.jsonl"
+    ],
+    [
+      "phases",
+      "/content/runs/latent_three_step34_scoring_memory_20261116/full/latent_mopd_three_latent/phase_metrics.jsonl"
+    ]
+  ],
+  "drive": "mydrive:opd_runs",
+  "publish": true,
+  "sync_every_min": 60.0,
+  "drive_about": {
+    "total": 5497558138880,
+    "used": 1501200380357,
+    "trashed": 3624607812,
+    "other": 24188451,
+    "free": 3996333570072
+  }
+}
