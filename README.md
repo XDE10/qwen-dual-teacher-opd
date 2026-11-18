@@ -1,5 +1,13 @@
 # 项目二：数学与代码双教师在线策略蒸馏
 
+## 当前进展：三教师 Latent-MOPD（2026-11-18）
+
+当前执行独立重建的 R1 三教师全参数训练。最近核对的正式断点为46步，第47步正在执行，目标仍为62步。checkpoint-28的同口径8K greedy dev为数学66.41%→68.75%、代码35.00%→48.50%、逻辑4.50%→22.50%。最终论文口径与80步续训尚未运行。
+
+入口见 [三教师实现](docs/latent_mopd_three.md)、[最新状态与证据](reports/latent_mopd_three_status_20261118/README.md)、[完整断点与延长训练](docs/latent_mopd_three_continuation.md)。本次入库训练器逐字匹配线上 `c68797a2…` 版本。正在运行的任务仍使用固定部署，不随main更新。
+
+以下OPD-v3及双教师R1记录保留历史模型、数据与结果身份。
+
 > 一句话定位：让 1.5B 学生模型在数学与代码两个领域，用自己的在线生成轨迹接受领域专业教师（数学 7B / 代码 7B）的 **token 级反向 KL** 监督，即 On-Policy Distillation（OPD），并比较领域收益、跨域遗忘与教师成本。
 
 **当前状态（2026-11-12，opd-v3 分支）**。完整实验报告与评测矩阵见 [reports/g4_opd_v3_experiments_20261112/README.md](reports/g4_opd_v3_experiments_20261112/README.md)；本地 Kiro IDE 交接说明见 [docs/handover/kiro_ide_onboarding.md](docs/handover/kiro_ide_onboarding.md)。
