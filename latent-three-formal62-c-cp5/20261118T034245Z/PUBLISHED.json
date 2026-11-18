@@ -1,0 +1,271 @@
+{
+  "schema": "opd-results-v1",
+  "name": "latent-three-formal62-c-cp5",
+  "stamp": "20261118T034245Z",
+  "published_utc": "2026-11-18T03:43:13Z",
+  "job": {
+    "state": "finished",
+    "exit_status": 1
+  },
+  "publisher": {
+    "host": "fed4ad4f8140",
+    "gpu": [
+      "NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB"
+    ],
+    "code": {
+      "commit": "4dee8bfbc554a22461d4d347f4973fc7fb7a016e",
+      "branch": null,
+      "modified_tracked_files": true
+    }
+  },
+  "sources": [
+    {
+      "label": "job",
+      "path": "/content/jobs/latent-three-formal62-c-cp5",
+      "kind": "folder"
+    },
+    {
+      "label": "evidence",
+      "path": "/content/runs/latent_three_step34_scoring_memory_20261116/evidence62",
+      "kind": "folder"
+    },
+    {
+      "label": "telemetry",
+      "path": "/content/runs/latent_three_step34_scoring_memory_20261116/evidence62/gpu_samples.csv",
+      "kind": "file"
+    },
+    {
+      "label": "environment",
+      "path": "/content/runs/latent_three_step34_scoring_memory_20261116/environment62",
+      "kind": "folder"
+    },
+    {
+      "label": "metrics",
+      "path": "/content/runs/latent_three_step34_scoring_memory_20261116/full/latent_mopd_three_latent/metrics.jsonl",
+      "kind": "file"
+    },
+    {
+      "label": "phases",
+      "path": "/content/runs/latent_three_step34_scoring_memory_20261116/full/latent_mopd_three_latent/phase_metrics.jsonl",
+      "kind": "file"
+    }
+  ],
+  "files": [
+    {
+      "path": "environment/benchmarks.txt",
+      "bytes": 170,
+      "sha256": "a2e04bf5436553834a1884d6531f356c96b453623314efb766603d0f0a64586b"
+    },
+    {
+      "path": "environment/cpu-tests.txt",
+      "bytes": 1081,
+      "sha256": "790260161fe569bc01407a92f41624eb0953b1934020d9c06d6838415063eb94"
+    },
+    {
+      "path": "environment/gpu.csv",
+      "bytes": 127,
+      "sha256": "88b570a6b620db8484c1ef679f3b5396a5aaec74a9ad5efc87d1a8989776bfb7"
+    },
+    {
+      "path": "environment/imports.txt",
+      "bytes": 123,
+      "sha256": "b8908577547b46e8ca47243bc9465c4efa339d76cc2ff368bc57cd7d3f3e5ed3"
+    },
+    {
+      "path": "environment/nvidia-smi.txt",
+      "bytes": 1689,
+      "sha256": "5632026d1ca7bcc1eaeb624f6d10182a29760f396599f98a0a9cac58e80bcb0a"
+    },
+    {
+      "path": "environment/pip-check.txt",
+      "bytes": 551,
+      "sha256": "08f739009e1e747a032cf8aa12a8b4eb47ff7b3983f771b8ed9a84fd3ff2c3af"
+    },
+    {
+      "path": "environment/pip-freeze.txt",
+      "bytes": 14256,
+      "sha256": "ac431fa588173338ab220084b835c7e21fdf1dfbd7f4bb8628ef0441b594586b"
+    },
+    {
+      "path": "environment/torch.txt",
+      "bytes": 189,
+      "sha256": "d7cfb13cd31f0edd9c37d804123bcc9003923ba13a00ea2c513827a40be20004"
+    },
+    {
+      "path": "evidence/checkpoint-26_drive_check.log",
+      "bytes": 283,
+      "sha256": "697c2f473cce17180a43d063025d1fc71bf33b134793bb7ab2e87a71dd5626ac"
+    },
+    {
+      "path": "evidence/checkpoint-26_verified.json",
+      "bytes": 2949,
+      "sha256": "63cdbb8caf2d8b21ec191d8d811a6b8a22ad7103b07b7670c7fe40855c09ec95"
+    },
+    {
+      "path": "evidence/checkpoint-28_drive_check.log",
+      "bytes": 283,
+      "sha256": "dafa026865d011127376a04884227b7fe556d5dcb9f4e31435846274b8ebff69"
+    },
+    {
+      "path": "evidence/checkpoint-28_verified.json",
+      "bytes": 3080,
+      "sha256": "c9b5975c2e1e310e2c083bfe5d2969c135931c47a7abd652e8f8ef78c5789652"
+    },
+    {
+      "path": "evidence/checkpoint-30_drive_check.log",
+      "bytes": 283,
+      "sha256": "35435bf0eeb9efaf139fa2c812ebf31bb169f0d5742308890f6a64e606bccc35"
+    },
+    {
+      "path": "evidence/checkpoint-30_verified.json",
+      "bytes": 2769,
+      "sha256": "2d74a9b2c5322f2425452cc06c7229fd4bdd056d26f2f3c0732c324f71e4c9ea"
+    },
+    {
+      "path": "evidence/checkpoint-32_drive_check.log",
+      "bytes": 283,
+      "sha256": "f8c813bd4022ec2faf00865ca851cc80798e992a4e94a116473c1e7159d886ea"
+    },
+    {
+      "path": "evidence/checkpoint-32_verified.json",
+      "bytes": 2916,
+      "sha256": "423aee900724c5fbdde3298d3542605c3f489715c5b785063dcda639caabbf22"
+    },
+    {
+      "path": "evidence/checkpoint-34_drive_check.log",
+      "bytes": 283,
+      "sha256": "0a0f6aa57244a1ae9f67094a8a334efff8f12dc0cb0e07789575ad75f32e4b52"
+    },
+    {
+      "path": "evidence/checkpoint-34_verified.json",
+      "bytes": 3043,
+      "sha256": "a6b710e9784e8cfee9f32346140f61a48acdb627f0a2ca4114fd45d62da1afa4"
+    },
+    {
+      "path": "evidence/checkpoint-36_drive_check.log",
+      "bytes": 283,
+      "sha256": "fd557b21b6aae54244b76e0828ee74cadbbac5df3af7fd28bdd6e068f065a539"
+    },
+    {
+      "path": "evidence/checkpoint-36_verified.json",
+      "bytes": 2756,
+      "sha256": "8b51b21f6f0493d554b91fb04f897ed196389407d26f188ad5aa57fe86bda7d7"
+    },
+    {
+      "path": "evidence/checkpoint-38_drive_check.log",
+      "bytes": 283,
+      "sha256": "29bc812cae317ac4ba6db62a0dfee24ec3b8e1b96abdb28a0f9802dd864806ca"
+    },
+    {
+      "path": "evidence/checkpoint-38_verified.json",
+      "bytes": 2915,
+      "sha256": "b19af5ad3ceb273dd634b622e0d7b3a6a9342aa4924af403431e2a91e320711f"
+    },
+    {
+      "path": "evidence/checkpoint-40_drive_check.log",
+      "bytes": 283,
+      "sha256": "90f7a7b58069da7339e3b5954b47723cbb3b1820beca9b8b5217f88f8a92da6f"
+    },
+    {
+      "path": "evidence/checkpoint-40_verified.json",
+      "bytes": 3040,
+      "sha256": "018dc008b66655725a0020ec6f8717e546582e018fb119931d1fc57e261aabc8"
+    },
+    {
+      "path": "evidence/checkpoint-42_drive_check.log",
+      "bytes": 283,
+      "sha256": "bb9541f38bf7f84238077d85130b88a25a22d733c06555d1726c5e43966e91a1"
+    },
+    {
+      "path": "evidence/checkpoint-42_verified.json",
+      "bytes": 2763,
+      "sha256": "bd14f67adf860923b636d771d80282ed32551ea13bd5fb64d35b792bd8a61ac8"
+    },
+    {
+      "path": "evidence/checkpoint-44_drive_check.log",
+      "bytes": 283,
+      "sha256": "f55335e2da84cde55a43c78b3a6e464347c13080cc2cc01b099d43435b9c7105"
+    },
+    {
+      "path": "evidence/checkpoint-44_verified.json",
+      "bytes": 2915,
+      "sha256": "ea48eed860998e6ca2eef644bdf1931dcade2d99922fd38268ddd5585e14d1c7"
+    },
+    {
+      "path": "evidence/checkpoint-46_drive_check.log",
+      "bytes": 283,
+      "sha256": "f734ca2035e73f2744f8db204f2b15b8adf4e89b30b8df98e2eefd4063579e46"
+    },
+    {
+      "path": "evidence/checkpoint-46_verified.json",
+      "bytes": 3045,
+      "sha256": "c6191f7f4d74dd4679fe79ffa6da7b9089a1d14cd4f9b3067ecb14c826fcaee5"
+    },
+    {
+      "path": "evidence/checkpoint-48_drive_check.log",
+      "bytes": 283,
+      "sha256": "95de4491c5191e1e35e084730fea3eb9e45a09b618c46dc26808b43eea63b9ce"
+    },
+    {
+      "path": "evidence/checkpoint-48_verified.json",
+      "bytes": 2748,
+      "sha256": "3daf6be8599d31bb57b0796cb4f05b9a57f437a231ba71645b222755f8af710f"
+    },
+    {
+      "path": "evidence/gpu_samples.csv",
+      "bytes": 641034,
+      "sha256": "989af408d1528e1c5235b89f0d02a229bdc934a25252df395444f0cb1718026e"
+    },
+    {
+      "path": "evidence/restore_from_drive.json",
+      "bytes": 2748,
+      "sha256": "3daf6be8599d31bb57b0796cb4f05b9a57f437a231ba71645b222755f8af710f"
+    },
+    {
+      "path": "evidence/restore_verified.json",
+      "bytes": 2596,
+      "sha256": "521fd76fb2ffcab8051e83bf9036b25708e290eeaa30cbb142ba9f6be4c1bc99"
+    },
+    {
+      "path": "job/command.json",
+      "bytes": 1142,
+      "sha256": "d70787455703a6d57b1dcff8e4b8b851a5d66bd0c3e047205167afd58f755c6c"
+    },
+    {
+      "path": "job/output.log",
+      "bytes": 1111,
+      "sha256": "f95fee971d3135504f654d65b7cb567e45a87550445d2ab2df444e4708474aa7"
+    },
+    {
+      "path": "metrics/metrics.jsonl",
+      "bytes": 86229,
+      "sha256": "59a6074ff2c3cdeca57cb4f5db147750f5cd91f3330456f2eb25d165d6c7df04"
+    },
+    {
+      "path": "phases/phase_metrics.jsonl",
+      "bytes": 1453115,
+      "sha256": "c75dd82b4d66d6edc9dbd2eecc525cbe56059d4dbdab72678477507a79d3dc4b"
+    },
+    {
+      "path": "telemetry/gpu_samples.csv",
+      "bytes": 641034,
+      "sha256": "989af408d1528e1c5235b89f0d02a229bdc934a25252df395444f0cb1718026e"
+    }
+  ],
+  "redacted_strings": 0,
+  "skipped": [
+    {
+      "path": "job/child_pid",
+      "reason": "not a text result"
+    },
+    {
+      "path": "job/pid",
+      "reason": "not a text result"
+    }
+  ],
+  "skipped_count": 2,
+  "limits_mb": {
+    "per_file": 20,
+    "total": 50
+  }
+}

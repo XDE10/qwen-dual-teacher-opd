@@ -1,0 +1,15 @@
+[colab_job] running: bash /content/formal_step62_package/run_formal62.sh 20261116T061609Z 48
+P2_RESTORE_START 48 mydrive:opd_runs/latent-three-formal62-checkpoints/20261116T061609Z
+2026/11/18 03:42:48 NOTICE:           0 B / 0 B, -, 0 B/s, ETA -
+Traceback (most recent call last):
+  File "/content/formal_step62_package/verify_formal_checkpoint.py", line 9, in <module>
+    from src.training import latent_mopd_three as trainer
+ModuleNotFoundError: No module named 'src'
+[colab_job] command exited with status 1; saving results
+2026/11/18 03:42:53 NOTICE:     1.645 KiB / 1.645 KiB, 100%, 842 B/s, ETA 0s
+2026/11/18 03:43:01 NOTICE:   668.557 KiB / 668.557 KiB, 100%, 110.616 KiB/s, ETA 0s
+2026/11/18 03:43:04 NOTICE:   625.938 KiB / 625.938 KiB, 100%, 625.765 KiB/s, ETA 0s
+2026/11/18 03:43:07 NOTICE:    17.760 KiB / 17.760 KiB, 100%, 8.875 KiB/s, ETA 0s
+2026/11/18 03:43:10 NOTICE:    84.208 KiB / 84.208 KiB, 100%, 84.164 KiB/s, ETA 0s
+2026/11/18 03:43:12 NOTICE:     1.386 MiB / 1.386 MiB, 100%, 1.385 MiB/s, ETA 0s
+[colab_job] saved to Drive: mydrive:opd_runs/latent-three-formal62-c-cp5/20261118T034245Z
