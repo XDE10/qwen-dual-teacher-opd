@@ -6,6 +6,7 @@ appended schedule into its new hard identity.
 """
 import argparse
 import copy
+import gc
 import hashlib
 import json
 from pathlib import Path
@@ -93,6 +94,16 @@ def derive_hard(parent_hard, child_hard, lineage, output, target=TARGET):
     return result
 
 
+def segment_stops(parent_step, stop, checkpoint_every):
+    """Fixed-budget save boundaries; validation scores never control this list."""
+    if checkpoint_every < 1 or stop <= parent_step:
+        raise ValueError('Expected a positive interval and an explicit later stop')
+    current = parent_step
+    while current < stop:
+        current = min((current // checkpoint_every + 1) * checkpoint_every, stop)
+        yield current
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--project-root',type=Path,default=Path('/content/project2'))
@@ -100,11 +111,14 @@ def main():
     parser.add_argument('--output-root',type=Path,default=Path('/content/runs/latent_three_extended80_20261118/full'))
     parser.add_argument('--target-step',type=int,default=TARGET)
     parser.add_argument('--stop-at-step',type=int)
+    parser.add_argument('--checkpoint-every',type=int,default=5)
     parser.add_argument('--model-drive',default='mydrive:models')
     parser.add_argument('--archive-root',default=DEFAULT_ARCHIVE)
     parser.add_argument('--plan-only',action='store_true')
     parser.add_argument('--plan-output',type=Path)
     args = parser.parse_args()
+    if args.checkpoint_every < 1:
+        parser.error('Checkpoint interval must be positive')
     root = args.project_root.resolve()
     manifest = root/'runs/latent_mopd_three/release_poolfix_20261115/manifest.json'
     plan = make_plan(manifest,args.target_step)
@@ -204,12 +218,28 @@ def main():
 
     trainer.build_identity = child_identity
     trainer.latest_resumable_checkpoint = resume_child_or_parent
+    completed = parent_step
+    if any(output.glob('checkpoint-*')):
+        expected = copy.deepcopy(current)
+        expected['hard']['config'].update(steps=args.target_step,output_dir=str(output.resolve()))
+        expected['hard'] = derive_hard(parent['hard'],expected['hard'],lineage,output,args.target_step)
+        _, resumed = original_latest(output,expected)
+        completed = resumed['step']
+        del resumed
+    if completed > stop:
+        raise ValueError('The derived run has already passed the requested stop')
     run_args = argparse.Namespace(variant='latent',manifest=manifest,output_root=args.output_root.resolve(),
                                   seed=42,steps=args.target_step,prompts=32,responses=4,rollout_batch=4,
                                   max_new_tokens=16384,model_drive=args.model_drive,resume=True,
-                                  stop_at_step=stop,checkpoint_every=2,keep_checkpoints=2)
-    trainer.run(run_args,tokenizer,tokenizer_path,audit,schedule,audit.parent)
-    archive(trainer,output,stop,Path(__file__),args.archive_root)
+                                  stop_at_step=stop,checkpoint_every=args.checkpoint_every,keep_checkpoints=2)
+    for boundary in segment_stops(completed,stop,args.checkpoint_every) if completed < stop else []:
+        run_args.stop_at_step = boundary
+        trainer.run(run_args,tokenizer,tokenizer_path,audit,schedule,audit.parent)
+        archive(trainer,output,boundary,Path(__file__),args.archive_root)
+        gc.collect()
+        trainer.torch.cuda.empty_cache()
+    if completed == stop:
+        archive(trainer,output,stop,Path(__file__),args.archive_root)
     print(json.dumps({'event':'continuation_segment_complete','step':stop,'parent_step':parent_step}),flush=True)
 
 

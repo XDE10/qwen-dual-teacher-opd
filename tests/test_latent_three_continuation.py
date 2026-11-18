@@ -125,6 +125,13 @@ class ContinuationTests(unittest.TestCase):
         self.assertFalse(before.intersection(extra))
         self.assertEqual(plan98[80]['domain'],'logic')
 
+    def test_fixed_save_boundaries_include_explicit_stop_without_early_stopping(self):
+        self.assertEqual(list(extension.segment_stops(62,80,5)),[65,70,75,80])
+        self.assertEqual(list(extension.segment_stops(62,71,5)),[65,70,71])
+        self.assertEqual(list(extension.segment_stops(80,98,5)),[85,90,95,98])
+        self.assertEqual(list(extension.segment_stops(70,80,5)),[75,80])
+        with self.assertRaises(ValueError):list(extension.segment_stops(80,98,0))
+
 
 class Step:
     def __init__(self,value): self.value=value
