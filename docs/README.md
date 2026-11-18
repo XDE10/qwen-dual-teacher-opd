@@ -4,6 +4,8 @@
 
 ## 三个子目录
 
+当前三教师 R1 路线先读 [状态报告](../reports/latent_mopd_three_status_20261118/README.md)、[实现](latent_mopd_three.md)、[完整断点与延长训练](latent_mopd_three_continuation.md) 及 [最终评测规格](latent_mopd_three_final_evaluation.md)。`reviews/` 和根目录的6Pro审查提示词保留为2026-11-12至15日的历史审查材料，其中的状态不是实时结果。
+
 | 子目录 | 内容 | 性质 |
 | --- | --- | --- |
 | [plan/](plan/README.md) | 3 篇 2026-10 冻结的项目二历史文档：详细实施方案、OPD 提示词与张量接口契约、共用规范；`plan/sources/` 为上游参考源码快照 | **历史**：内部链接与路径指向重排前目录，可能失效 |

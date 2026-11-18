@@ -61,3 +61,10 @@ desktop.ini
 *.orig
 .idea/
 .vscode/
+
+# Local agent scratch work and third-party paper attachments; source indexes
+# and checksums remain reviewable in reports/.
+.agents/
+reports/argon_latent_mopd_papers_20261115.zip
+reports/argon_latent_mopd_audit_20261115/*.zip
+reports/argon_latent_mopd_audit_20261115/papers/*.pdf

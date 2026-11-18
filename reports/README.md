@@ -6,6 +6,9 @@
 
 | 路径 | 内容 | 性质 |
 | --- | --- | --- |
+| [`latent_mopd_three_status_20261118/`](latent_mopd_three_status_20261118/README.md) | 三教师正式任务快照、checkpoint-28三域dev、数学重复诊断、源码身份与后续端点保留 | **当前三教师状态**；派生80步GPU恢复未运行 |
+| `latent_mopd_three_teacher_reproduction_plan_20261114.md` | 三教师独立复现的早期设计与审查问题 | **历史方案** |
+| `argon_latent_mopd_audit_20261115/` | 原始论文附件的来源索引及SHA256；PDF与ZIP在本地附件和归档中保留，不纳入Git | **来源线索**；占位文本不代表完整审计报告 |
 | `code_training_repair_20261025_v4/` | **当前 v4 发布验收证据**：准入决策、来源核验、受保护文件、执行/测试日志、发布摘要、沙箱环境、被拒绝候选 | **当前验收证据** |
 | `project2_release_v5_20261108/` | v5 候选审计：全部 5456 条 prompt 的预算复核、decontamination_v5 命中证据、补题统计、筛除历史说明与批准步骤（`README.md`、`audit.json`） | **当前审计**（v5 已批准） |
 | `g4_first_session_20261109/` | 第一次上卡（Colab G4）：环境、2 步 smoke 的耗时与显存、教师适配度探针的 KL 矩阵，以及据此做的配置改动；原始文件在 `results` 分支 | **GPU 实测记录**（只到 smoke 与探针） |

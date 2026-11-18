@@ -6,6 +6,16 @@
 
 ## 0. opd-v3 / v5 数据 / 评测 v3 / 预热与探针 / Colab / 本地打分（16，当前）
 
+## 当前补充：三教师 Latent-MOPD
+
+`prepare_latent_mopd_three.py` 构建待审候选和受负责人决定约束的发布；`evaluate_latent_mopd_three_dev.py` 只生成冻结三域dev输出，代码评分仍交本地Docker。训练入口为 `python -m src.training.latent_mopd_three`，固定身份与当前运行见 [状态报告](../reports/latent_mopd_three_status_20261118/README.md)。
+
+`continue_latent_mopd_three.py` 使用独立派生身份，从完整父断点延长到显式目标，默认62→80，并支持80→98。`archive_latent_three_checkpoint.py` 在终点归档权重、优化器、RNG、源码、环境与历史，Drive检查和回执读回通过后才报告成功。二者尚未进行80步GPU验收，命令与边界见 [续训说明](../docs/latent_mopd_three_continuation.md)。
+
+`colab_latent_three_{probes,formal,switch}.sh`、`migrate_latent_three_checkpoint.py` 和 `probe_latent_three_*.py` 保留早期短跑、显存与恢复验证入口；其中部分绑定历史断点与源文件哈希。原始checkpoint-1词表修复要求 `5993d35e…` 的历史训练器，当前训练器是 `c68797a2…`，不能直接复用旧迁移命令。正在运行的正式监督与部署继续使用已封存的任务包。
+
+以下入口表保留OPD-v3历史分类，数量为当时快照。
+
 | 文件 | 说明 |
 | --- | --- |
 | `train_project2_opd_v3.py` | opd-v3 训练入口（MOPD 式混合批次双教师）；配置 `configs/project2_opd_v3_*.json`；`--stop-at-step N` 在第 N 步存 checkpoint 后停下，`--resume-from latest` 从最新的有效 checkpoint 继续；训练时给数学 rollout 打分（遥测）；设计见 `docs/opd_v3_mopd.md` |
