@@ -6901,3 +6901,12 @@
 {"step": 46, "domain": "math", "phase": "checkpoint_saved", "timestamp": 1794966219.8538816, "allocated_bytes": 39115166208, "reserved_bytes": 50365202432}
 {"step": 47, "domain": "code", "phase": "rollout_start", "timestamp": 1794966595.4881284, "responses": 128, "token_weight": 1.0, "latent_weight": 0.0, "teacher": {"model": "Fate-Zero/Archer2.0-Code-1.5B-Preview", "revision": "db1e1ff9f3c36f7177f3896358ce26edeb62ce56"}, "allocated_bytes": 31988808192, "reserved_bytes": 32413581312}
 {"step": 47, "domain": "code", "phase": "rollout_progress", "timestamp": 1794966788.5497115, "responses": 4, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 43568332800}
+{"step": 47, "domain": "code", "phase": "rollout_progress", "timestamp": 1794966948.4937296, "responses": 8, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 43568332800}
+{"step": 47, "domain": "code", "phase": "rollout_progress", "timestamp": 1794967140.2862802, "responses": 12, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 43568332800}
+{"step": 47, "domain": "code", "phase": "rollout_progress", "timestamp": 1794967286.867506, "responses": 16, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 43568332800}
+{"step": 47, "domain": "code", "phase": "rollout_progress", "timestamp": 1794967394.7672236, "responses": 20, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 43624955904}
+{"step": 47, "domain": "code", "phase": "rollout_progress", "timestamp": 1794967584.5996723, "responses": 24, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 43624955904}
+{"step": 47, "domain": "code", "phase": "rollout_progress", "timestamp": 1794967606.791989, "responses": 28, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 43652218880}
+{"step": 47, "domain": "code", "phase": "rollout_progress", "timestamp": 1794967802.4537542, "responses": 32, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 47836037120}
+{"step": 47, "domain": "code", "phase": "rollout_progress", "timestamp": 1794967993.7166052, "responses": 36, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 47836037120}
+{"step": 47, "domain": "code", "phase": "rollout_progress", "timestamp": 1794968096.4168653, "responses": 40, "total": 128, "allocated_bytes": 31997327872, "reserved_bytes": 47836037120}
