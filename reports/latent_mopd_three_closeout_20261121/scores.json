@@ -1,0 +1,313 @@
+{
+  "checkpoint_step": 70,
+  "checkpoint_manifest_sha256": "b2f1de0ea4498d489126ccfd987949f4d0ac3d569743c83b9a099105599a1c72",
+  "paper": "https://arxiv.org/html/2610.02381v1#S4.T1",
+  "reference_origin": "published Base and same-family last-3 at step 62",
+  "dev": {
+    "small_per_task": 32,
+    "small_per_checkpoint": {
+      "60": {
+        "correct": {
+          "math_dev": 30,
+          "logic_dev": 20,
+          "code_dev": 20
+        },
+        "truncated": {
+          "math_dev": 2,
+          "code_dev": 8,
+          "logic_dev": 3
+        },
+        "macro_pct": 72.91666666666667
+      },
+      "70": {
+        "correct": {
+          "math_dev": 30,
+          "logic_dev": 20,
+          "code_dev": 20
+        },
+        "truncated": {
+          "math_dev": 1,
+          "code_dev": 8,
+          "logic_dev": 2
+        },
+        "macro_pct": 72.91666666666667
+      },
+      "80": {
+        "correct": {
+          "math_dev": 30,
+          "logic_dev": 18,
+          "code_dev": 18
+        },
+        "truncated": {
+          "math_dev": 2,
+          "code_dev": 8,
+          "logic_dev": 4
+        },
+        "macro_pct": 68.75
+      }
+    },
+    "math_256_reviewed": {
+      "n": 256,
+      "correct": {
+        "60": 211,
+        "70": 224
+      },
+      "truncated": {
+        "60": 34,
+        "70": 20
+      },
+      "only60": 11,
+      "only70": 24,
+      "delta_70_minus_60_pp": 5.078125,
+      "paired_bootstrap95_pp": [
+        0.78125,
+        9.375
+      ],
+      "mcnemar_exact_two_sided_p": 0.04095959151163697
+    },
+    "math_both_finished": {
+      "n": 215,
+      "correct": {
+        "60": 204,
+        "70": 206
+      },
+      "truncated": {
+        "60": 0,
+        "70": 0
+      },
+      "only60": 4,
+      "only70": 6,
+      "delta_70_minus_60_pp": 0.9302325581395349,
+      "paired_bootstrap95_pp": [
+        -1.8604651162790697,
+        3.7209302325581395
+      ],
+      "mcnemar_exact_two_sided_p": 0.75390625
+    },
+    "code_logic_128": {
+      "code_dev": {
+        "n": 128,
+        "correct_60": 73,
+        "correct_70": 72,
+        "only_60": 13,
+        "only_70": 12,
+        "delta_70_minus_60_pp": -0.78125,
+        "paired_bootstrap95_pp": [
+          -8.59375,
+          7.03125
+        ],
+        "truncated_60": 38,
+        "truncated_70": 37
+      },
+      "logic_dev": {
+        "n": 128,
+        "correct_60": 83,
+        "correct_70": 81,
+        "only_60": 15,
+        "only_70": 13,
+        "delta_70_minus_60_pp": -1.5625,
+        "paired_bootstrap95_pp": [
+          -9.375,
+          6.25
+        ],
+        "truncated_60": 14,
+        "truncated_70": 9
+      }
+    }
+  },
+  "benchmarks": {
+    "aime24": {
+      "paper_base_pct": 29.2,
+      "paper_62_pct": 50.8,
+      "local_70_original_pct": 50.416666666666664,
+      "local_70_review_pct": 50.416666666666664,
+      "scored_questions": 30,
+      "scored_answers": 480,
+      "generated_answers": 480,
+      "truncated_answers": 5,
+      "local_original_sampling": {
+        "n": 30,
+        "samples": 16,
+        "temperature": 0.7,
+        "max_tokens": 31744,
+        "top_p": 0.95
+      }
+    },
+    "aime25": {
+      "paper_base_pct": 21.9,
+      "paper_62_pct": 36.9,
+      "local_70_original_pct": 36.875,
+      "local_70_review_pct": 37.083333333333336,
+      "scored_questions": 30,
+      "scored_answers": 480,
+      "generated_answers": 480,
+      "truncated_answers": 3,
+      "local_original_sampling": {
+        "n": 30,
+        "samples": 16,
+        "temperature": 0.6,
+        "max_tokens": 31744,
+        "top_p": 0.95
+      }
+    },
+    "minerva": {
+      "paper_base_pct": 29.9,
+      "paper_62_pct": 36.3,
+      "local_70_original_pct": 38.60294117647059,
+      "local_70_review_pct": 39.154411764705884,
+      "scored_questions": 272,
+      "scored_answers": 1088,
+      "generated_answers": 1088,
+      "truncated_answers": 1,
+      "local_original_sampling": {
+        "n": 272,
+        "samples": 4,
+        "temperature": 0.7,
+        "max_tokens": 31744,
+        "top_p": 0.95
+      }
+    },
+    "lcb_easy": {
+      "paper_base_pct": 51.1,
+      "paper_62_pct": 73.1,
+      "local_70_original_pct": 70.8955223880597,
+      "local_70_review_pct": 70.8955223880597,
+      "scored_questions": 67,
+      "scored_answers": 268,
+      "generated_answers": 660,
+      "truncated_answers": 62,
+      "diagnostic_retest": {
+        "correct": 196,
+        "n": 268,
+        "score_pct": 73.13432835820896,
+        "protocol": "same scored 67 problems and official tests; clearer submission prompt"
+      },
+      "local_original_sampling": {
+        "n": 165,
+        "samples": 4,
+        "temperature": 0.6,
+        "max_tokens": 16384,
+        "top_p": 0.95
+      }
+    },
+    "mbpp": {
+      "paper_base_pct": 54.4,
+      "paper_62_pct": 65.7,
+      "local_70_original_pct": 16.402116402116402,
+      "local_70_review_pct": 24.206349206349206,
+      "scored_questions": 378,
+      "scored_answers": 756,
+      "generated_answers": 756,
+      "truncated_answers": 28,
+      "diagnostic_retest": {
+        "correct": 536,
+        "n": 756,
+        "score_pct": 70.8994708994709,
+        "protocol": "reasoning prompt and complete function extraction, EvalPlus 0.3.1"
+      },
+      "local_original_sampling": {
+        "n": 378,
+        "samples": 2,
+        "temperature": 0.7,
+        "max_tokens": 16384,
+        "top_p": 0.95
+      }
+    },
+    "mbpp_plus": {
+      "paper_base_pct": 45.2,
+      "paper_62_pct": 55.7,
+      "local_70_original_pct": 14.55026455026455,
+      "local_70_review_pct": 20.37037037037037,
+      "scored_questions": 378,
+      "scored_answers": 756,
+      "generated_answers": 756,
+      "truncated_answers": 28,
+      "diagnostic_retest": {
+        "correct": 443,
+        "n": 756,
+        "score_pct": 58.597883597883595,
+        "protocol": "reasoning prompt and complete function extraction, EvalPlus 0.3.1"
+      },
+      "local_original_sampling": {
+        "n": 378,
+        "samples": 2,
+        "temperature": 0.7,
+        "max_tokens": 16384,
+        "top_p": 0.95
+      }
+    },
+    "bbh": {
+      "paper_base_pct": 39.9,
+      "paper_62_pct": 66.3,
+      "local_70_original_pct": 68.14814814814815,
+      "local_70_review_pct": 68.14814814814815,
+      "scored_questions": 1080,
+      "scored_answers": 1080,
+      "generated_answers": 1080,
+      "truncated_answers": 15,
+      "local_original_sampling": {
+        "n": 1080,
+        "samples": 1,
+        "temperature": 0.7,
+        "max_tokens": 8192,
+        "top_p": 0.95
+      }
+    },
+    "musr": {
+      "paper_base_pct": 46.4,
+      "paper_62_pct": 52.4,
+      "local_70_original_pct": 50.4,
+      "local_70_review_pct": 50.4,
+      "scored_questions": 750,
+      "scored_answers": 750,
+      "generated_answers": 750,
+      "truncated_answers": 1,
+      "diagnostic_retest": {
+        "correct": 383,
+        "n": 750,
+        "score_pct": 51.06666666666667,
+        "protocol": "one generation per item, 250 object placements use belief tracking and explicit label recovery"
+      },
+      "local_original_sampling": {
+        "n": 750,
+        "samples": 1,
+        "temperature": 0.7,
+        "max_tokens": 8192,
+        "top_p": 0.95
+      }
+    },
+    "gym": {
+      "paper_base_pct": 24.6,
+      "paper_62_pct": 52.4,
+      "local_70_original_pct": 70.5240789185716,
+      "local_70_review_pct": 70.85813297262567,
+      "scored_questions": 925,
+      "scored_answers": 925,
+      "generated_answers": 925,
+      "truncated_answers": 2,
+      "local_fixture": {
+        "scored_questions": 925,
+        "full_credit_n": 621,
+        "full_credit_pct": 67.13513513513513,
+        "partial_credit_pp": 3.388943783436475,
+        "protocol": "local reconstruction, authors question manifest unavailable"
+      },
+      "local_original_sampling": {
+        "n": 925,
+        "samples": 1,
+        "temperature": 0.7,
+        "max_tokens": 16384,
+        "top_p": 0.95
+      }
+    }
+  },
+  "source_receipts_sha256": {
+    "comparison_step70_paper_base.json": "0106af8e5fa20efb81771c0ac05e5ecb0aebe04fcee0c7199119debf7a7eff0c",
+    "comparison_60_70_80.json": "04358662ca31bb7dfb94eed98c0a488baf0a7d8abd1d7bbcfa96a961177d07df",
+    "math_comparison_reviewed.json": "288e19496d37adf14177e5d66129524bb7f00afa64c35e68aa454b9aab24fdf6",
+    "comparison_60_70_code_logic_n128.json": "fb20445d7e774f65d46c204038e957b9fe1c11748dbffb6957d9f6e338b33443",
+    "comparison.json": "9e3c7be1db7752c0803671adc6866557444b8ba4fe5deb75efabcfb19b672434",
+    "gym_audit.json": "249db0cbb273817c8cd12a9869e686b4c21cca86bc6e21eaffc184464293b64c",
+    "summary.json": "dd38264cf4ac9f7825466cf61de62e049f35b1eebfdc75c792afdc51711d0c81"
+  }
+}

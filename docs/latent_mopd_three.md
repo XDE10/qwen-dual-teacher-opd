@@ -4,7 +4,7 @@
 
 原作者的训练批次与提示词未公开。本实现从 DAPO-Math-17k、OpenCodeReasoning 和 Reasoning Gym 0.1.19 独立构建候选。DAPO 保留原始 Answer 行指令，代码使用题面，逻辑使用包内默认的 `<answer>` 指令。逻辑任务表和种子是本次重建的选择。数据排序由样本 ID 的固定哈希确定，训练中按清单顺序读取。学生 tokenizer 被传入 `enable_thinking=False`，固定模板仍会渲染末尾的 `<think>` 前缀。Rollout 与候选 log-prob 的归一化均使用审计通过的 151,665 个 token ID。
 
-当前部署与中期结果见 [2026-11-18 状态报告](../reports/latent_mopd_three_status_20261118/README.md)，后续恢复见 [完整断点与延长训练](latent_mopd_three_continuation.md)。历史短跑与早期迁移命令的运行身份可能与当前断点不同；恢复正式任务时必须使用其封存版本。
+阶段部署与中期结果见 [2026-11-18 状态报告](../reports/latent_mopd_three_status_20261118/README.md)。开发集选型与 70 步结果见 [收尾报告](../reports/latent_mopd_three_closeout_20261121/README.md)，恢复流程见 [断点与派生续训](latent_mopd_three_continuation.md)。历史短跑与早期迁移命令的运行身份可能与当前断点不同；恢复正式任务时必须使用其封存版本。
 
 - [主论文，Table 1 与附录 A/C](https://arxiv.org/html/2610.02381v1)
 - [公开独立复现的提示词与长度过滤，附录 B](https://arxiv.org/html/2611.02746v2#A2)
@@ -51,13 +51,13 @@ python -m src.training.latent_mopd_three token \
 
 ## 三域 dev 对照
 
-GPU 环境另装 `reasoning-gym==0.1.19` 后执行。Base 省略 `--checkpoint`。逻辑评分读取冻结题面、参考答案和 verifier 元数据，避免生成器在不同 Python 进程里产出不同实例。代码候选传回 WSL 后用 `scripts.score_code_local_v3` 和 Docker 评分。论文 Table 1 的整套最终评测尚需独立验证。
+GPU 环境另装 `reasoning-gym==0.1.19` 后执行。Base 省略 `--checkpoint`。逻辑评分读取冻结题面、参考答案和 verifier 元数据，避免生成器在不同 Python 进程里产出不同实例。代码候选传回 WSL 后用 `scripts.score_code_local_v3` 和 Docker 评分。[最终评测](latent_mopd_three_final_evaluation.md)记录与开发集不同的采样和判分口径。
 
-指定 `--checkpoint` 时，入口先校验封存文件清单、学生权重及全部分片，再开始加载模型和生成。评测只读模型，优化器文件的字节校验留在续训入口。
+先把 `checkpoint` 设为已核对的模型路径。指定 `--checkpoint` 时，入口先校验封存文件清单、学生权重及全部分片，再开始加载模型和生成。评测只读模型，优化器文件的字节校验留在续训入口。
 
 ```bash
 python -m scripts.evaluate_latent_mopd_three_dev \
   --manifest /content/p2_latent_three_release/manifest.json \
-  --checkpoint /content/runs/latent_mopd_three_latent/checkpoint-62 \
+  --checkpoint "$checkpoint" \
   --output-dir /content/runs/latent_mopd_three_dev/latent
 ```
