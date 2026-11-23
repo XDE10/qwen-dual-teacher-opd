@@ -2,6 +2,28 @@
 
 开发集用来选 checkpoint。对 60、70、80 步先做固定小样本筛选，再扩充 60 与 70 的配对样本。70 步用于最终九项评测，依据见[收尾报告](../reports/latent_mopd_three_closeout_20261121/README.md)。
 
+## 运行开发集
+
+准备 [CUDA 环境与批准数据](latent_mopd_three.md)。把 `checkpoint` 指向封存断点的目录，其中应有 `student/` 和 `checkpoint_manifest.json`。省略 `--checkpoint` 可生成 Base 对照。输出目录由程序创建，重跑时用新的目录名。
+
+```bash
+checkpoint=runs/formal/latent_mopd_three_latent/checkpoint-62
+python -m scripts.evaluate_latent_mopd_three_dev \
+  --manifest runs/latent_mopd_three/release/manifest.json \
+  --checkpoint "$checkpoint" --output-dir runs/dev/step62
+```
+
+数学和逻辑成绩从各自的 `*.summary.json` 读取。代码先产生 `code_dev.candidates.jsonl`，在有 Docker 的 Linux/WSL2 环境从仓库根目录判分。下面用与历史沙箱同系列的 Python 镜像，评测结果会记录实际使用的镜像 ID。
+
+```bash
+docker pull python:3.8-slim-bookworm
+code_image=$(docker image inspect --format '{{.Id}}' python:3.8-slim-bookworm)
+python -m scripts.score_code_local_v3 runs/dev/step62 \
+  --suites code_dev --code-image "$code_image" --scores-root runs/scores --no-fetch
+```
+
+这条命令使用仓库的代码 dev 和与之绑定的判题注册表。输出目录含 `scores.json`。独立的 MBPP/HumanEval EvalPlus 判题入口和镜像定义见 [判题器](../scripts/evaluate_evalplus_v2.py) 与 [Dockerfile](../scripts/docker/evalplus-0.3.1.Dockerfile)。
+
 ## 论文参考和本地 70 步
 
 论文的 Base 和同家族 last-3 62 步取[表 1](https://arxiv.org/html/2610.02381v1#S4.T1)。本地 70 步使用同一份已校验学生权重，按[附录 A](https://arxiv.org/html/2610.02381v1#A)披露的生成与判分口径组织评测。原始分、补回明确答案后的分和改提示重测的分分别记录。

@@ -5,12 +5,14 @@ import json
 from functools import lru_cache
 from pathlib import Path
 
-from scripts.generate_eval_v3 import RELEASE, hf_generate
 from scripts.prepare_latent_mopd_three import GYM_VERSION, json_rows, write_rows
 from src.evaluation.eval_v3 import grade_math, render, suite_rows, summarize
+from src.evaluation.generate import hf_generate
 from src.teachers.opd_contract import load_contract
 from src.training.latent_mopd_three import STUDENT, SUPPORT, render_prefix, tokenizer_audit, verify_checkpoint_files
 from src.training.runtime_v2 import read, sha, write
+
+RELEASE = 'data/project2_release_v5_20261108/release/manifest.json'
 
 
 def final_response(text):
