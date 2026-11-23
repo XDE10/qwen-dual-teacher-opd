@@ -20,4 +20,4 @@ python -m pytest -q tests/test_latent_three_continuation.py
 
 ## 本项目怎样用
 
-三教师运行在 Colab 经历重连与冷恢复，开发评测获得了 60、70、80 步的推理快照。选中的 70 步权重用于最终评测。推理快照可评测的事实和某个端点能恢复完整优化器是两项不同证据。运行归档按端点保留，实际恢复记录见[阶段报告](https://github.com/XDE10/qwen-dual-teacher-opd/blob/61f021c1aad6d31415b2de4f905153363f11374b/reports/latent_mopd_three_status_20261118/README.md)和[收尾结果](../reports/latent_mopd_three_closeout_20261121/README.md)。
+三教师运行在 Colab 经历重连与冷恢复，开发评测获得了 60、70、80 步的推理快照。选中的 70 步权重用于最终评测。推理快照可评测的事实和某个端点能恢复完整优化器是两项不同证据。运行归档按端点保留，实际恢复记录见[阶段报告](https://github.com/XDE10/qwen-three-teacher-latent-mopd/blob/61f021c1aad6d31415b2de4f905153363f11374b/reports/latent_mopd_three_status_20261118/README.md)和[收尾结果](../reports/latent_mopd_three_closeout_20261121/README.md)。

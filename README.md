@@ -9,8 +9,8 @@
 在 Linux 或 Windows WSL2 上使用 **Python 3.12**。也可解压 GitHub 的 Download ZIP，在解压目录从 `python3.12 -m venv` 开始。安装依赖需要联网。
 
 ```bash
-git clone --depth 1 https://github.com/XDE10/qwen-dual-teacher-opd.git
-cd qwen-dual-teacher-opd
+git clone --depth 1 https://github.com/XDE10/qwen-three-teacher-latent-mopd.git
+cd qwen-three-teacher-latent-mopd
 
 python3.12 -m venv .venv
 source .venv/bin/activate
