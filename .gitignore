@@ -11,6 +11,7 @@ htmlcov/
 
 # Environments
 .venv/
+.venv-*/
 venv/
 env/
 
@@ -27,9 +28,12 @@ checkpoints/
 *.pt
 *.pth
 
-# Third-party benchmark files restored on demand and sha256-verified by
-# scripts/restore_official_benchmarks.py (pinned in inventory_before_reorg.json)
+# Third-party benchmarks restored and verified by scripts/restore_official_benchmarks.py
 data/code_benchmarks/official/*.jsonl
+
+# Local project history snapshots
+/archive/
+/archives/
 
 # Credentials. They live outside the repository (~/.config/opd/, ~/.config/rclone/, /content/ on the
 # VM); these patterns only stop an accidental copy from being committed.
@@ -45,8 +49,6 @@ rclone.conf
 
 # Local logs and OS/editor noise
 *.log
-!reports/**/*.log
-!docs/handover/**/*.log
 .DS_Store
 Thumbs.db
 desktop.ini

@@ -1,4 +1,4 @@
-"""Docker-only runtime commands. Historical environment metadata is read-only."""
+"""Docker-only runtime commands for the internal code dev scorer."""
 import json
 from pathlib import Path
 import shutil
@@ -7,7 +7,7 @@ import subprocess
 from src.training.runtime_v2 import sha, write
 
 ROOT = Path(__file__).resolve().parents[2]
-HISTORY = ROOT / 'reports/code_v2_sandbox_environment.json'
+DEFAULT_IMAGE = 'sha256:3b0c23d092b8ff94262fd3518cf8250c4b1d65c014d6090eea3b23383145201e'
 
 
 def docker_binary():
@@ -17,9 +17,8 @@ def docker_binary():
 
 
 def environment(worker=None, image=None, record_path=None):
-    historical = json.loads(HISTORY.read_text(encoding='utf-8'))
     worker = Path(worker or ROOT / 'scripts/code_sandbox_worker.py').resolve()
-    image = image or historical['image_id']
+    image = image or DEFAULT_IMAGE
     if not image.startswith('sha256:'):
         raise ValueError('Pin Docker image by digest/ID')
     command = [docker_binary(), 'run', '--rm', '-i', '--network', 'none', '--read-only',

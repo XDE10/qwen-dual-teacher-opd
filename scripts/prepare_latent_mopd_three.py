@@ -9,7 +9,7 @@ from collections import Counter
 from pathlib import Path
 
 from src.data.decontamination_v5 import ProtectedIndex, strip_code_boilerplate, words
-from src.data.release_v5 import OFFICIAL_CODE
+from src.evaluation.benchmark_inputs import OFFICIAL_CODE
 from src.training.latent_mopd_three import (
     DOMAINS, MAX_PROMPT, PROMPTS, STEPS, STUDENT, build_schedule, render_prefix,
 )

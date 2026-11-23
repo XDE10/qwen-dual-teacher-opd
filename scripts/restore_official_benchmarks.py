@@ -1,33 +1,16 @@
-"""Restore the official EvalPlus files deleted in the 2026-11-08 reorg, sha256-verified.
-
-The expected bytes are pinned by docs/migration/inventory_before_reorg.json. A
-file is written only when its decompressed size and sha256 match exactly.
-Verified on 2026-11-08: both release assets below reproduce the pinned digests.
-
-  python -m scripts.restore_official_benchmarks              # download from GitHub
-  python -m scripts.restore_official_benchmarks --source-dir D:/copies   # offline copy
-"""
+"""Download and verify the pinned EvalPlus files used in overlap checks."""
 import argparse
 import gzip
 import hashlib
-import json
 import time
 import urllib.request
 from pathlib import Path
 
-from src.data.release_v5 import OFFICIAL_CODE
+from src.evaluation.benchmark_inputs import OFFICIAL_CODE
 
 URLS = {'humanevalplus': 'https://github.com/evalplus/humanevalplus_release/releases/download/v0.1.10/HumanEvalPlus.jsonl.gz',
         'mbppplus': 'https://github.com/evalplus/mbppplus_release/releases/download/v0.2.0/MbppPlus.jsonl.gz'}
-INVENTORY = Path('docs/migration/inventory_before_reorg.json')
-
-
-def pinned(path):
-    """(bytes, sha256) recorded for ``path`` before the reorg."""
-    files = json.loads(INVENTORY.read_text(encoding='utf-8'))
-    files = files.get('files', files)
-    size, digest = files[path]
-    return size, digest
+SIZES = {'humanevalplus': 7714666, 'mbppplus': 2592369}
 
 
 def fetch(url, attempts=4):
@@ -47,9 +30,7 @@ def main():
     args = parser.parse_args()
     for name, meta in OFFICIAL_CODE.items():
         target = Path(meta['path'])
-        size, digest = pinned(meta['path'])
-        if digest != meta['sha256']:
-            raise ValueError('Inventory and code pin disagree for ' + meta['path'])
+        size, digest = SIZES[name], meta['sha256']
         if target.exists() and hashlib.sha256(target.read_bytes()).hexdigest() == digest:
             print(f'{target}: already present and verified')
             continue

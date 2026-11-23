@@ -1,22 +1,5 @@
 #!/usr/bin/env python3
-"""Score the code candidates of a GPU evaluation in the local Docker sandbox (WSL2), then optionally publish.
-
-  python3 scripts/score_code_local_v3.py session2/20261109T104721Z/runs/eval/d0 \
-      --evalplus-image sha256:... --publish --credentials ~/.config/opd/gh_credentials
-
-Each argument names a folder of <suite>.candidates.jsonl files written by scripts/generate_eval_v3.py on the
-GPU: a path on the results branch (read with git, after `git fetch origin results`), or a local folder.
-  * code_dev: internal dev, 200 tasks, reviewed comparators (scripts/evaluate_code_v2.py, sandbox image from
-    reports/code_v2_sandbox_environment.json unless --code-image is given);
-  * humanevalplus / mbppplus: official EvalPlus v0.3.1 (scripts/evaluate_evalplus_v2.py); needs an image built
-    from scripts/docker/evalplus-0.3.1.Dockerfile (--evalplus-image, $OPD_EVALPLUS_IMAGE, or the ID saved in
-    ~/.config/opd/evalplus_image). Without one, these two suites are skipped and reported as such.
-Candidate code runs only inside Docker (no network, read-only, unprivileged). A missing Docker daemon or image
-stops the run; nothing falls back to executing on the host. Results go to <scores-root>/<task>-<stamp>/<model>/
-(default ~/opd_scores), with scores.json summarizing every suite. --publish pushes that folder (text files) to
-the results branch as code_scores/<task>-<stamp>-<model>/. Internal dev scores and official EvalPlus scores
-are reported separately and are never merged. Run from any directory; Python 3.9+, stdlib only.
-"""
+"""Score local dev candidates or supported EvalPlus suites in Docker."""
 import argparse
 import json
 import os
@@ -27,9 +10,11 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+from src.data.code_sandbox_v2 import DEFAULT_IMAGE
+
 ROOT = Path(__file__).resolve().parents[1]
 CODE_DEV = 'data/project2_release_v5_20261108/release/project2_code_dev.jsonl'
-REGISTRY = 'reports/handover_20261024_v3/reviewed_comparators.json'
+REGISTRY = 'data/evaluation/reviewed_comparators.json'
 OFFICIAL = {'humanevalplus': ('humaneval', 'data/code_benchmarks/official/HumanEvalPlus-v0.1.10.jsonl'),
             'mbppplus': ('mbpp', 'data/code_benchmarks/official/MbppPlus-v0.2.0.jsonl')}
 SUITES = ('code_dev', 'humanevalplus', 'mbppplus')
@@ -64,12 +49,8 @@ def docker_ready(images):
     for label, image in images.items():
         if image and run([docker, 'image', 'inspect', image], timeout=60).returncode:
             raise ScoreError(f'{label} image {image} is not present locally (images are never pulled implicitly); '
-                             'see docs/handover/kiro_ide_onboarding.md')
+                             'see docs/latent_mopd_three_final_evaluation.md')
     return info.stdout.strip()
-
-
-def historical_code_image():
-    return json.loads((ROOT / 'reports/code_v2_sandbox_environment.json').read_text(encoding='utf-8'))['image_id']
 
 
 def image_from_file(name):
@@ -216,7 +197,7 @@ def main(argv=None):
     wants_official = [s for s in a.suites if s in OFFICIAL]
     if wants_official and not a.evalplus_image:
         say('no --evalplus-image: humanevalplus and mbppplus are skipped (build scripts/docker/evalplus-0.3.1.Dockerfile)')
-    images = {'code sandbox': a.code_image or historical_code_image() if 'code_dev' in a.suites else None,
+    images = {'code sandbox': a.code_image or DEFAULT_IMAGE if 'code_dev' in a.suites else None,
               'EvalPlus': a.evalplus_image if wants_official else None}
     try:
         say(f'Docker server {docker_ready(images)}; images present')

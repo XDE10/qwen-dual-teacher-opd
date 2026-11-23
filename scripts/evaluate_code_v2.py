@@ -8,12 +8,12 @@ from src.training.runtime_v2 import sha, write
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument('--data', default='data/portable_release/project2_code_dev.jsonl')
+    p.add_argument('--data', default='data/project2_release_v5_20261108/release/project2_code_dev.jsonl')
     p.add_argument('--output-dir', default='reports/handover_20261024_v2/code_evaluation')
     p.add_argument('--mode', choices=['registry', 'reference-selfcheck', 'student'], required=True)
     p.add_argument('--candidates')
     p.add_argument('--registry')
-    p.add_argument('--image-id', help='sandbox image ID (sha256:...); default: reports/code_v2_sandbox_environment.json')
+    p.add_argument('--image-id', help='sandbox image ID (sha256:...); pass the locally inspected image ID')
     a = p.parse_args()
     out = Path(a.output_dir)
     out.mkdir(parents=True, exist_ok=True)

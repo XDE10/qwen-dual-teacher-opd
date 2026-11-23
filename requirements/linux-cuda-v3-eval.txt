@@ -1,4 +1,0 @@
-# Optional fast evaluation engine for scripts/generate_eval_v3.py (falls back to HF without it).
-# vLLM 0.10.2 requires torch==2.8.0. Its PyPI wheel is a CUDA 12.8 build. NOT GPU-VERIFIED here.
-# Install into the same environment only after linux-cuda-v3.txt, then re-run `pip check`.
-vllm==0.10.2
